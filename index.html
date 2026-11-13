@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <meta name="description" content="Acompanhe diferenças em normas relevantes para o estudo do INSS.">
+  <meta name="description" content="Acompanhe alterações legislativas e treine questões de Certo ou Errado para o INSS.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
@@ -13,36 +13,103 @@
   <header class="topbar">
     <a class="brand" href="./">
       <span class="brand-mark">R</span>
-      <span><strong>Radar Legislativo</strong><small>INSS · acompanhamento de normas</small></span>
+      <span><strong>Radar Legislativo</strong><small>INSS · legislação e treino</small></span>
     </a>
     <button id="notification-button" class="bell-button" aria-label="Abrir alterações recentes" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
       <span id="notification-badge" class="badge hidden">0</span>
     </button>
   </header>
-  <main class="page-shell">
+
+  <nav class="main-nav" aria-label="Navegação principal">
+    <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
+    <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
+  </nav>
+
+  <main id="radar-view" class="page-shell">
     <section class="intro">
       <div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>O que mudou na legislação?</h1><p class="subtitle">Diferenças detectadas nas normas acompanhadas para o estudo do INSS.</p></div>
-      <div class="status-pill" id="system-status"><span class="status-dot"></span><span>Carregando dados</span></div>
+      <div class="intro-actions">
+        <div class="status-pill" id="system-status"><span class="status-dot"></span><span>Carregando dados</span></div>
+        <a id="manual-check-button" class="primary-button" href="https://github.com/Pablopinheiroo/inss-legislacao-viva/actions/workflows/monitorar-legislacao.yml" target="_blank" rel="noopener noreferrer">Verificar atualizações ↗</a>
+      </div>
     </section>
+
+    <p class="manual-check-note">Para consultar agora, abra o GitHub e clique em <strong>Run workflow</strong>. A verificação diária continua ativa; esta opção permite iniciar outra execução quando quiser.</p>
+
     <section class="stats-grid" aria-label="Resumo do monitoramento">
       <article class="stat-card"><span class="stat-label">Alterações registradas</span><strong id="stat-changes">—</strong><small>no histórico</small></article>
       <article class="stat-card"><span class="stat-label">Normas acompanhadas</span><strong id="stat-laws">—</strong><small>fontes cadastradas</small></article>
       <article class="stat-card"><span class="stat-label">Última verificação</span><strong id="stat-check" class="stat-date">Aguardando</strong><small id="stat-check-note">A primeira execução ainda não ocorreu</small></article>
     </section>
+
     <section class="toolbar">
       <label class="search-box"><span class="sr-only">Buscar por norma ou artigo</span><input id="search-input" type="search" placeholder="Buscar norma ou artigo..."></label>
       <label class="select-wrap"><span class="sr-only">Filtrar por tipo</span><select id="type-filter"><option value="todos">Todos os tipos</option><option value="alterado">Artigos alterados</option><option value="incluido">Artigos incluídos</option><option value="nao_encontrado">Artigos não localizados</option><option value="possivelmente_revogado">Possíveis revogações</option><option value="texto_integral_alterado">Texto integral</option></select></label>
       <label class="select-wrap"><span class="sr-only">Filtrar por situação</span><select id="study-filter"><option value="todos">Todas as situações</option><option value="nao-estudado">Não estudado</option><option value="revisando">Revisando</option><option value="estudado">Estudado</option></select></label>
     </section>
-    <section class="section-heading"><div><h2>Histórico de alterações</h2><p id="results-caption">Carregando histórico...</p></div><button id="refresh-button" class="text-button" type="button">Atualizar painel ↻</button></section>
+
+    <section class="section-heading"><div><h2>Histórico de alterações</h2><p id="results-caption">Carregando histórico...</p></div><button id="refresh-button" class="text-button" type="button">Recarregar painel ↻</button></section>
     <section id="change-list" class="change-list" aria-live="polite"><div class="empty-state"><h3>Carregando informações</h3><p>Consultando o arquivo de monitoramento.</p></div></section>
     <section class="sources-section"><div class="section-heading"><div><h2>Normas acompanhadas</h2><p>Fontes públicas oficiais cadastradas no projeto.</p></div></div><div id="law-list" class="law-grid"></div></section>
     <footer class="footer-note"><strong>Confirme sempre na fonte oficial.</strong><span>O painel compara capturas de texto. Ele não determina sozinho a data de publicação, a vigência ou o alcance jurídico da mudança.</span></footer>
   </main>
+
+  <main id="quiz-view" class="page-shell hidden">
+    <section class="intro quiz-intro">
+      <div><p class="eyebrow">MODO DE ESTUDO · ESTILO CEBRASPE</p><h1>Treinar Certo ou Errado</h1><p class="subtitle">Leia o item, marque C ou E e confira a explicação junto do dispositivo legal.</p></div>
+      <div class="quiz-config">
+        <label class="select-wrap"><span>Matéria</span><select id="quiz-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Questões</span><select id="quiz-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
+        <button id="start-quiz" class="primary-button" type="button" disabled>Começar treino</button>
+      </div>
+    </section>
+    <p id="question-count-note" class="manual-check-note">Carregando banco de questões...</p>
+
+    <section id="quiz-card" class="quiz-card hidden" aria-live="polite">
+      <div class="quiz-card-top"><span id="quiz-category-label" class="quiz-chip"></span><span id="quiz-progress" class="quiz-progress"></span></div>
+      <div class="quiz-law-line"><strong id="quiz-law"></strong><span id="quiz-article"></span></div>
+      <p id="quiz-statement" class="quiz-statement"></p>
+      <div class="answer-buttons">
+        <button id="answer-true" class="answer-button" type="button" aria-pressed="false">Certo</button>
+        <button id="answer-false" class="answer-button" type="button" aria-pressed="false">Errado</button>
+      </div>
+      <button id="submit-answer" class="primary-button submit-answer" type="button" disabled>Confirmar resposta</button>
+
+      <section id="answer-feedback" class="answer-feedback hidden">
+        <div id="feedback-result" class="feedback-result"></div>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+        <details class="law-excerpt">
+          <summary>Ver texto literal da legislação</summary>
+          <pre id="feedback-literal"></pre>
+        </details>
+        <div class="feedback-bottom"><a id="feedback-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><button id="next-question" class="primary-button" type="button">Próxima questão →</button></div>
+      </section>
+    </section>
+
+    <section id="quiz-welcome" class="empty-state quiz-welcome">
+      <h3>Seu treino começa aqui</h3>
+      <p>Escolha a matéria e a quantidade de itens. As questões são embaralhadas e cada resposta mostra o gabarito, a justificativa e o trecho da lei usado como referência.</p>
+    </section>
+
+    <section id="quiz-summary" class="quiz-summary hidden">
+      <p class="eyebrow">RESULTADO DO TREINO</p>
+      <h2 id="quiz-score"></h2>
+      <p id="quiz-score-note"></p>
+      <div id="quiz-mistakes" class="quiz-mistakes"></div>
+      <div class="summary-actions">
+        <button id="retry-mistakes" class="secondary-button hidden" type="button">Treinar somente as erradas</button>
+        <button id="restart-quiz" class="primary-button" type="button">Novo treino ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Treino de fixação.</strong><span>Este é um banco inicial de itens autorais vinculados a dispositivos legais. Confira sempre a redação consolidada na fonte oficial e no edital vigente.</span></footer>
+  </main>
+
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
     <section class="drawer"><div class="drawer-head"><div><p class="eyebrow">CENTRAL DE AVISOS</p><h2 id="drawer-title">Alterações recentes</h2></div><button id="close-drawer" class="close-button" aria-label="Fechar">×</button></div><p class="drawer-copy">As novidades aparecem aqui quando o monitor identifica diferenças nas fontes acompanhadas.</p><div id="drawer-content"></div></section>
   </div>
+
   <template id="change-template">
     <article class="change-card">
       <div class="card-top"><span class="change-type"></span><span class="detected-date"></span></div>
