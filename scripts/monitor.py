@@ -20,7 +20,7 @@ SNAPSHOTS = DATA / "snapshots"
 LAWS_FILE = DATA / "laws.json"
 OUTPUT_FILE = DATA / "legislacao.json"
 USER_AGENT = "RadarLegislativoINSS/0.1 (monitoramento educacional)"
-ARTICLE_RE = re.compile(r"^\\s*Art(?:igo)?\\.?\\s*(\\d+)\\s*(?:[º°o])?\\s*(?:-\\s*([A-Z]))?.*$", re.IGNORECASE)
+ARTICLE_RE = re.compile(r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:[º°o])?\s*(?:-\s*([A-Z]))?.*$", re.IGNORECASE)
 
 
 def now_utc() -> str:
@@ -33,11 +33,11 @@ def digest(text: str) -> str:
 
 def normalize(text: str) -> str:
     lines = []
-    for raw in text.replace("\\xa0", " ").replace("\\u200b", "").splitlines():
-        line = re.sub(r"[ \\t\\r\\f\\v]+", " ", raw).strip()
+    for raw in text.replace("\xa0", " ").replace("\u200b", "").splitlines():
+        line = re.sub(r"[ \t\r\f\v]+", " ", raw).strip()
         if line:
             lines.append(line)
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def fetch_text(url: str) -> str:
@@ -53,7 +53,7 @@ def fetch_text(url: str) -> str:
     for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header", "del", "s", "strike"]):
         tag.decompose()
     main = soup.find("main") or soup.find(id="conteudo") or soup.find(id="content") or soup.body or soup
-    text = normalize(main.get_text("\\n", strip=True))
+    text = normalize(main.get_text("\n", strip=True))
     if len(text) < 350:
         raise ValueError("A página retornou pouco texto; captura considerada incompleta.")
     return text
@@ -71,7 +71,7 @@ def split_articles(text: str) -> dict[str, str]:
             articles.setdefault(current, []).append(line.strip())
         elif current:
             articles[current].append(line.strip())
-    return {key: normalize("\\n".join(value)) for key, value in articles.items() if normalize("\\n".join(value))}
+    return {key: normalize("\n".join(value)) for key, value in articles.items() if normalize("\n".join(value))}
 
 
 def make_snapshot(text: str, law: dict[str, Any]) -> dict[str, Any]:
@@ -102,12 +102,12 @@ def load_json(path: Path, default: Any) -> Any:
 def save_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temporary.replace(path)
 
 
 def article_order(value: str) -> tuple[int, str]:
-    match = re.search(r"(\\d+)(?:-([A-Z]))?", value)
+    match = re.search(r"(\d+)(?:-([A-Z]))?", value)
     return (int(match.group(1)) if match else 10**9, match.group(2) if match and match.group(2) else "")
 
 
