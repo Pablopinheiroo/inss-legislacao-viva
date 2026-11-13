@@ -117,6 +117,7 @@ def make_change(law: dict[str, Any], article: str, kind: str, old: str, new: str
         "alterado": "O texto do dispositivo está diferente da última captura válida.",
         "incluido": "O dispositivo apareceu na captura atual e não constava na captura anterior.",
         "nao_encontrado": "O dispositivo não foi localizado na captura atual. Isso não confirma revogação.",
+        "possivelmente_revogado": "A captura atual contém indicação de revogação. Confira o ato oficial e sua vigência.",
         "texto_integral_alterado": "A página mudou, mas o monitor não conseguiu separar os dispositivos com segurança.",
     }
     return {
@@ -154,7 +155,7 @@ def compare(law: dict[str, Any], previous: dict[str, Any] | None,
         new = new_articles.get(article, "")
         if old == new:
             continue
-        kind = "incluido" if not old else "nao_encontrado" if not new else "alterado"
+        kind = "incluido" if not old else "nao_encontrado" if not new else "possivelmente_revogado" if re.search(r"\brevogad[oa]\b", new, re.IGNORECASE) else "alterado"
         changes.append(make_change(law, article, kind, old, new, detected))
     return changes
 
