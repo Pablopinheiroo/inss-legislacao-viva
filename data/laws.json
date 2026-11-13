@@ -2,7 +2,7 @@
   {
     "id": "constituicao-1988",
     "title": "Constituição da República Federativa do Brasil de 1988",
-    "short_title": "Constituição Federal — arts. 5º a 17, 37 a 41 e 194 a 204",
+    "short_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
     "category": "Constituição",
     "url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html",
     "source_name": "Câmara dos Deputados — Legislação Informatizada",
@@ -428,7 +428,7 @@
     "short_title": "IN 128/2022 — Normas e rotinas do INSS",
     "category": "Instrução Normativa",
     "url": "https://portalin.inss.gov.br/in/540",
-    "source_name": "INSS — Normas Interativas",
+    "source_name": "INSS — histórico oficial de alterações",
     "edital_item": "14.2.3 — Instrução Normativa nº 128/2022",
     "enabled": true,
     "fetch_urls": [
@@ -436,6 +436,6 @@
       "https://portalin.inss.gov.br/in/540"
     ],
     "monitor_mode": "index",
-    "monitor_note": "O monitor usa o histórico oficial de alterações do INSS, pois o texto interativo bloqueia consultas automáticas em GitHub Actions."
+    "monitor_note": "Monitoramento do histórico de atos modificadores; não compara o texto artigo por artigo."
   }
 ]
