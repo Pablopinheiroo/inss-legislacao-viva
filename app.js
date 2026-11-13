@@ -26,6 +26,7 @@ function typeLabel(type) {
     alterado: "ARTIGO ALTERADO",
     incluido: "ARTIGO INCLUÍDO",
     nao_encontrado: "ARTIGO NÃO LOCALIZADO",
+    possivelmente_revogado: "POSSÍVEL REVOGAÇÃO",
     texto_integral_alterado: "TEXTO INTEGRAL DIFERENTE"
   })[type] || "DIFERENÇA DETECTADA";
 }
