@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "description": "Banco inicial de itens autorais de Certo/Errado vinculados a dispositivos e textos de fontes oficiais.",
+  "source_snapshot_date": "2026-11-13",
+  "questions": [
+    {
+      "id": "8213-art1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 1º",
+      "statement": "A Previdência Social, independentemente de contribuição, tem por finalidade assegurar aos seus beneficiários os meios indispensáveis de manutenção nas situações previstas em lei.",
+      "answer": false,
+      "explanation": "Errado. A Lei 8.213/1991 diz expressamente que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao texto do artigo.",
+      "literal_text": "Art. 1º A Previdência Social, mediante contribuição, tem por fim assegurar aos seus beneficiários meios indispensáveis de manutenção, por motivo de incapacidade, desemprego involuntário, idade avançada, tempo de serviço, encargos familiares e prisão ou morte daqueles de quem dependiam economicamente.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "8213-art2-02",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 2º, inciso II",
+      "statement": "A Previdência Social deve observar a uniformidade e a equivalência dos benefícios e serviços às populações urbanas e rurais.",
+      "answer": true,
+      "explanation": "Certo. O inciso II prevê justamente a uniformidade e a equivalência dos benefícios e serviços destinados às populações urbanas e rurais.",
+      "literal_text": "II - uniformidade e equivalência dos benefícios e serviços às populações urbanas e rurais,",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "8213-art2-06",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 2º, inciso VI",
+      "statement": "O valor da renda mensal dos benefícios substitutos do salário de contribuição ou do rendimento do trabalho do segurado poderá ser inferior ao salário-mínimo.",
+      "answer": false,
+      "explanation": "Errado. A lei estabelece o contrário: o valor não pode ser inferior ao salário-mínimo.",
+      "literal_text": "VI - valor da renda mensal dos benefícios substitutos do salário-de-contribuição ou do rendimento do trabalho do segurado não inferior ao do salário-mínimo;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "8213-art2-08",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 2º, inciso VIII",
+      "statement": "A gestão administrativa da Previdência Social possui caráter democrático e descentralizado, com participação do governo e da comunidade, especialmente de trabalhadores em atividade, empregadores e aposentados.",
+      "answer": true,
+      "explanation": "Certo. O inciso VIII traz o caráter democrático e descentralizado da gestão e indica os grupos que participam dela.",
+      "literal_text": "VIII - caráter democrático e descentralizado da gestão administrativa, com a participação do governo e da comunidade, em especial de trabalhadores em atividade, empregadores e aposentados.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "8212-art1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 1º",
+      "statement": "A Seguridade Social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar os direitos relativos à saúde, à previdência e à assistência social.",
+      "answer": true,
+      "explanation": "Certo. O artigo apresenta a Seguridade Social como um conjunto integrado de ações e cita as três áreas: saúde, previdência e assistência social.",
+      "literal_text": "Art. 1º A Seguridade Social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+    },
+    {
+      "id": "8212-art3-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 3º",
+      "statement": "A Lei 8.212/1991 inclui o desemprego involuntário entre os motivos que podem levar à necessidade de manutenção assegurada pela Previdência Social.",
+      "answer": true,
+      "explanation": "Certo. O artigo 3º menciona expressamente o desemprego involuntário, ao lado de incapacidade, idade avançada, tempo de serviço, encargos de família, reclusão ou morte.",
+      "literal_text": "Art. 3º A Previdência Social tem por fim assegurar aos seus beneficiários meios indispensáveis de manutenção, por motivo de incapacidade, idade avançada, tempo de serviço, desemprego involuntário, encargos de família e reclusão ou morte daqueles de quem dependiam economicamente.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+    },
+    {
+      "id": "8212-art4-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 4º",
+      "statement": "A assistência social atende às necessidades básicas previstas em lei independentemente de contribuição à Seguridade Social.",
+      "answer": true,
+      "explanation": "Certo. O art. 4º afirma expressamente que a assistência social é prestada independentemente de contribuição à Seguridade Social.",
+      "literal_text": "Art. 4º A Assistência Social é a política social que provê o atendimento das necessidades básicas, traduzidas em proteção à família, à maternidade, à infância, à adolescência, à velhice e à pessoa portadora de deficiência, independentemente de contribuição à Seguridade Social.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+    },
+    {
+      "id": "loas-art1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 1º",
+      "statement": "A assistência social é uma Política de Seguridade Social contributiva, destinada a garantir o atendimento das necessidades básicas.",
+      "answer": false,
+      "explanation": "Errado. A LOAS define a assistência social como uma política de Seguridade Social não contributiva.",
+      "literal_text": "Art. 1º A assistência social, direito do cidadão e dever do Estado, é Política de Seguridade Social não contributiva, que provê os mínimos sociais, realizada através de um conjunto integrado de ações de iniciativa pública e da sociedade, para garantir o atendimento às necessidades básicas.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "loas-art4-03",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 4º, inciso III",
+      "statement": "A assistência social deve respeitar a dignidade e a autonomia do cidadão, vedando qualquer comprovação vexatória de necessidade.",
+      "answer": true,
+      "explanation": "Certo. O inciso III protege a dignidade, a autonomia e o direito a serviços de qualidade, além de vedar comprovação vexatória de necessidade.",
+      "literal_text": "III - respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "loas-art4-04",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 4º, inciso IV",
+      "statement": "A assistência social assegura igualdade de direitos no acesso ao atendimento, admitindo discriminação de natureza regional entre populações urbanas e rurais.",
+      "answer": false,
+      "explanation": "Errado. A lei determina acesso sem discriminação de qualquer natureza e garante equivalência às populações urbanas e rurais.",
+      "literal_text": "IV - igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza, garantindo-se equivalência às populações urbanas e rurais;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "8112-art2-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 2º",
+      "statement": "Para os efeitos da Lei 8.112/1990, servidor é a pessoa legalmente investida em cargo público.",
+      "answer": true,
+      "explanation": "Certo. Essa é a definição expressa de servidor apresentada pelo art. 2º da Lei 8.112/1990.",
+      "literal_text": "Art. 2º Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "8112-art3-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 3º",
+      "statement": "Na Lei 8.112/1990, cargo público é o conjunto de direitos e vantagens que podem ser concedidos a um servidor.",
+      "answer": false,
+      "explanation": "Errado. Cargo público é definido como conjunto de atribuições e responsabilidades previstas na estrutura organizacional, e não como conjunto de direitos e vantagens.",
+      "literal_text": "Art. 3º Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "8112-art4-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 4º",
+      "statement": "A prestação de serviços gratuitos é permitida como regra na Administração Pública Federal, salvo as hipóteses previstas em lei.",
+      "answer": false,
+      "explanation": "Errado. A regra é a proibição da prestação de serviços gratuitos; a lei ressalva apenas os casos previstos em lei.",
+      "literal_text": "Art. 4º É proibida a prestação de serviços gratuitos, salvo os casos previstos em lei.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "cf-art6-01",
+      "category": "Direito Constitucional",
+      "law_title": "Constituição Federal de 1988",
+      "article": "Art. 6º",
+      "statement": "A previdência social integra o rol de direitos sociais previstos no art. 6º da Constituição Federal.",
+      "answer": true,
+      "explanation": "Certo. A previdência social aparece expressamente no rol de direitos sociais do art. 6º.",
+      "literal_text": "Art. 6º São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados, na forma desta Constituição.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+    },
+    {
+      "id": "etica-art3-01",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 3º",
+      "statement": "A Comissão de Ética Pública será integrada por sete brasileiros e seus membros poderão ser reconduzidos uma única vez.",
+      "answer": true,
+      "explanation": "Certo. O art. 3º prevê sete integrantes e permite uma única recondução. O dispositivo também estabelece mandato de três anos, não coincidente.",
+      "literal_text": "Art. 3º A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "etica-art3-02",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 3º",
+      "statement": "Os membros da Comissão de Ética Pública podem ser reconduzidos duas vezes, pois o Decreto 6.029/2007 não limita o número de reconduções.",
+      "answer": false,
+      "explanation": "Errado. O decreto permite uma única recondução, e não duas.",
+      "literal_text": "Art. 3º A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "etica-art12-01",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 12, § 3º",
+      "statement": "Se forem juntados novos elementos de prova após a manifestação inicial do investigado, ele deverá ser notificado para apresentar nova manifestação no prazo de dez dias.",
+      "answer": true,
+      "explanation": "Certo. O § 3º prevê nova manifestação em dez dias quando forem juntados novos elementos de prova após a manifestação inicial.",
+      "literal_text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "etica-art12-02",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 12",
+      "statement": "O investigado será notificado para manifestar-se por escrito no prazo de quinze dias.",
+      "answer": false,
+      "explanation": "Errado. O prazo previsto no caput do art. 12 é de dez dias, não quinze.",
+      "literal_text": "Art. 12. O processo de apuração de prática de ato em desrespeito ao preceituado no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal será instaurado, de ofício ou em razão de denúncia fundamentada, respeitando-se, sempre, as garantias do contraditório e da ampla defesa, pela Comissão de Ética Pública ou Comissões de Ética de que tratam o incisos II e III do art. 2º, conforme o caso, que notificará o investigado para manifestar-se, por escrito, no prazo de dez dias.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    }
+  ]
+}
