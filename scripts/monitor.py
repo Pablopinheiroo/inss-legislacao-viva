@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import re
 import sys
@@ -13,6 +14,7 @@ from typing import Any
 
 import requests
 from bs4 import BeautifulSoup
+from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -41,22 +43,43 @@ def normalize(text: str) -> str:
 
 
 def fetch_text(url: str) -> str:
-    response = requests.get(
-        url,
-        headers={"User-Agent": USER_AGENT, "Accept-Language": "pt-BR,pt;q=0.9"},
-        timeout=45,
-    )
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
+        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Cache-Control": "no-cache",
+    }
+    response = requests.get(url, headers=headers, timeout=45)
     response.raise_for_status()
-    if not response.encoding or response.encoding.lower() == "iso-8859-1":
-        response.encoding = response.apparent_encoding or "utf-8"
-    soup = BeautifulSoup(response.text, "html.parser")
-    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header", "del", "s", "strike"]):
-        tag.decompose()
-    main = soup.find("main") or soup.find(id="conteudo") or soup.find(id="content") or soup.body or soup
-    text = normalize(main.get_text("\n", strip=True))
+
+    content_type = response.headers.get("Content-Type", "").lower()
+    is_pdf = url.lower().endswith(".pdf") or "application/pdf" in content_type or response.content.startswith(b"%PDF")
+    if is_pdf:
+        reader = PdfReader(io.BytesIO(response.content))
+        text = normalize("\n".join(page.extract_text() or "" for page in reader.pages))
+    else:
+        if not response.encoding or response.encoding.lower() == "iso-8859-1":
+            response.encoding = response.apparent_encoding or "utf-8"
+        soup = BeautifulSoup(response.text, "html.parser")
+        for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header", "del", "s", "strike"]):
+            tag.decompose()
+        main = soup.find("main") or soup.find(id="conteudo") or soup.find(id="content") or soup.body or soup
+        text = normalize(main.get_text("\n", strip=True))
+
     if len(text) < 350:
-        raise ValueError("A página retornou pouco texto; captura considerada incompleta.")
+        raise ValueError("A fonte retornou pouco texto; captura considerada incompleta.")
     return text
+
+
+def fetch_law_text(law: dict[str, Any]) -> tuple[str, str]:
+    urls = law.get("fetch_urls") or [law["url"]]
+    failures = []
+    for url in urls:
+        try:
+            return fetch_text(url), url
+        except Exception as exc:
+            failures.append(url + " -> " + type(exc).__name__ + ": " + str(exc))
+    raise RuntimeError("Nenhuma fonte configurada respondeu: " + " | ".join(failures))
 
 
 def split_articles(text: str) -> dict[str, str]:
@@ -74,15 +97,16 @@ def split_articles(text: str) -> dict[str, str]:
     return {key: normalize("\n".join(value)) for key, value in articles.items() if normalize("\n".join(value))}
 
 
-def make_snapshot(text: str, law: dict[str, Any]) -> dict[str, Any]:
+def make_snapshot(text: str, law: dict[str, Any], source_url_used: str) -> dict[str, Any]:
     articles = split_articles(text)
     allow = law.get("include_articles")
     if allow:
         accepted = set(allow)
         articles = {key: value for key, value in articles.items() if key in accepted}
-    mode = "artigos" if len(articles) >= 2 else "documento"
+    mode = law.get("monitor_mode", "texto") if law.get("monitor_mode") == "index" else ("artigos" if len(articles) >= 2 else "documento")
     return {
         "document_hash": digest(text),
+        "source_url_used": source_url_used,
         "parser_mode": mode,
         "article_count": len(articles),
         "articles": articles,
@@ -120,6 +144,9 @@ def make_change(law: dict[str, Any], article: str, kind: str, old: str, new: str
         "possivelmente_revogado": "A captura atual contém indicação de revogação. Confira o ato oficial e sua vigência.",
         "texto_integral_alterado": "A página mudou, mas o monitor não conseguiu separar os dispositivos com segurança.",
     }
+    summary = labels[kind]
+    if law.get("monitor_mode") == "index" and kind == "texto_integral_alterado":
+        summary = "O histórico oficial de alterações da IN 128 mudou. Consulte a lista de atos modificadores e confira o texto consolidado no portal do INSS."
     return {
         "id": unique,
         "law_id": law["id"],
@@ -133,8 +160,9 @@ def make_change(law: dict[str, Any], article: str, kind: str, old: str, new: str
         "effective_date": None,
         "old_text": old,
         "new_text": new,
-        "summary": labels[kind],
+        "summary": summary,
         "source_url": law["url"],
+        "evidence_url": law.get("source_url_used", law["url"]),
         "review_required": True,
         "date_note": "Data de detecção pelo monitor. Publicação e vigência precisam ser conferidas no ato oficial.",
     }
@@ -174,8 +202,8 @@ def run() -> int:
         snapshot_path = SNAPSHOTS / (law["id"] + ".json")
         previous_snapshot = load_json(snapshot_path, None)
         try:
-            text = fetch_text(law["url"])
-            current = make_snapshot(text, law)
+            text, source_url_used = fetch_law_text(law)
+            current = make_snapshot(text, law, source_url_used)
             changes = compare(law, previous_snapshot, current, detected)
             all_changes.extend(changes)
             save_json(snapshot_path, current)
@@ -184,7 +212,8 @@ def run() -> int:
                 "id": law["id"], "title": law["title"], "short_title": law["short_title"],
                 "category": law["category"], "url": law["url"], "source_name": law.get("source_name", "Fonte oficial"),
                 "last_checked": detected, "article_count": current["article_count"],
-                "parser_mode": current["parser_mode"], "new_changes_detected": len(changes), "error": None,
+                "parser_mode": current["parser_mode"], "source_url_used": source_url_used,
+                "new_changes_detected": len(changes), "error": None,
             })
             print("OK: " + law["short_title"] + " — " + str(len(changes)) + " diferença(s)")
         except Exception as exc:
@@ -196,6 +225,7 @@ def run() -> int:
                 "last_checked": None,
                 "article_count": previous_snapshot.get("article_count", 0) if previous_snapshot else 0,
                 "parser_mode": previous_snapshot.get("parser_mode", "indisponivel") if previous_snapshot else "indisponivel",
+                "source_url_used": previous_snapshot.get("source_url_used") if previous_snapshot else None,
                 "new_changes_detected": 0, "error": message,
             })
             print("ERRO: " + law["short_title"] + " — " + message, file=sys.stderr)
