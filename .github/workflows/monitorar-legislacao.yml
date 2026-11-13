@@ -1,6 +1,14 @@
 name: Monitorar legislação
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/laws.json"
+      - "scripts/**"
+      - "requirements.txt"
+      - ".github/workflows/monitorar-legislacao.yml"
   workflow_dispatch:
   schedule:
     # 06:17 no horário de Brasília (UTC-3). O GitHub pode atrasar a execução.
