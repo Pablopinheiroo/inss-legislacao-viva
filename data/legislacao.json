@@ -1,11 +1,229 @@
 {
   "schema_version": 1,
-  "generated_at": null,
-  "last_check_attempt": null,
+  "generated_at": "2026-11-13T23:35:05Z",
+  "last_check_attempt": "2026-11-13T23:35:05Z",
   "last_successful_check": null,
-  "status": "aguardando_primeira_verificacao",
-  "summary": "A primeira verificação ainda não foi executada. Ela criará a linha de base para comparar alterações futuras.",
-  "laws": [],
+  "status": "erro",
+  "summary": "Nenhuma fonte pôde ser consultada. As capturas anteriores foram preservadas.",
+  "laws": [
+    {
+      "id": "constituicao-1988",
+      "title": "Constituição da República Federativa do Brasil de 1988",
+      "short_title": "Constituição Federal — arts. 194 a 204",
+      "category": "Constituição",
+      "url": "https://www4.planalto.gov.br/legislacao/legis-federal/constituicao",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lei-8212-1991",
+      "title": "Lei nº 8.212, de 24 de julho de 1991",
+      "short_title": "Lei 8.212/1991 — Custeio",
+      "category": "Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lei-8213-1991",
+      "title": "Lei nº 8.213, de 24 de julho de 1991",
+      "short_title": "Lei 8.213/1991 — Benefícios",
+      "category": "Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "decreto-3048-1999",
+      "title": "Decreto nº 3.048, de 6 de maio de 1999",
+      "short_title": "Decreto 3.048/1999 — Regulamento da Previdência",
+      "category": "Decreto",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lei-8742-1993",
+      "title": "Lei nº 8.742, de 7 de dezembro de 1993",
+      "short_title": "Lei 8.742/1993 — LOAS",
+      "category": "Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "ec-103-2019",
+      "title": "Emenda Constitucional nº 103, de 12 de novembro de 2019",
+      "short_title": "EC 103/2019 — Reforma da Previdência",
+      "category": "Emenda Constitucional",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lc-142-2013",
+      "title": "Lei Complementar nº 142, de 8 de maio de 2013",
+      "short_title": "LC 142/2013 — Pessoa com deficiência",
+      "category": "Lei Complementar",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lei-9796-1999",
+      "title": "Lei nº 9.796, de 5 de maio de 1999",
+      "short_title": "Lei 9.796/1999 — Compensação previdenciária",
+      "category": "Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "decreto-6214-2007",
+      "title": "Decreto nº 6.214, de 26 de setembro de 2007",
+      "short_title": "Decreto 6.214/2007 — BPC",
+      "category": "Decreto",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "decreto-10188-2019",
+      "title": "Decreto nº 10.188, de 20 de dezembro de 2019",
+      "short_title": "Decreto 10.188/2019 — Compensação previdenciária",
+      "category": "Decreto",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "lei-14176-2021",
+      "title": "Lei nº 14.176, de 22 de junho de 2021",
+      "short_title": "Lei 14.176/2021 — Auxílio-inclusão e BPC",
+      "category": "Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+      "source_name": "Planalto",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "id": "in-128-2022",
+      "title": "Instrução Normativa PRES/INSS nº 128, de 28 de março de 2022",
+      "short_title": "IN 128/2022 — Normas e rotinas do INSS",
+      "category": "Instrução Normativa",
+      "url": "https://portalin.inss.gov.br/in/540",
+      "source_name": "Portal INSS — Normas Interativas",
+      "last_checked": null,
+      "article_count": 0,
+      "parser_mode": "indisponivel",
+      "new_changes_detected": 0,
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://portalin.inss.gov.br/in/540"
+    }
+  ],
   "changes": [],
-  "errors": []
+  "errors": [
+    {
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição da República Federativa do Brasil de 1988",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei nº 8.212, de 24 de julho de 1991",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei nº 8.213, de 24 de julho de 1991",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "decreto-3048-1999",
+      "law_title": "Decreto nº 3.048, de 6 de maio de 1999",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei nº 8.742, de 7 de dezembro de 1993",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "ec-103-2019",
+      "law_title": "Emenda Constitucional nº 103, de 12 de novembro de 2019",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lc-142-2013",
+      "law_title": "Lei Complementar nº 142, de 8 de maio de 2013",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lei-9796-1999",
+      "law_title": "Lei nº 9.796, de 5 de maio de 1999",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto nº 6.214, de 26 de setembro de 2007",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "decreto-10188-2019",
+      "law_title": "Decreto nº 10.188, de 20 de dezembro de 2019",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "lei-14176-2021",
+      "law_title": "Lei nº 14.176, de 22 de junho de 2021",
+      "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "law_id": "in-128-2022",
+      "law_title": "Instrução Normativa PRES/INSS nº 128, de 28 de março de 2022",
+      "message": "HTTPError: 403 Client Error: Forbidden for url: https://portalin.inss.gov.br/in/540"
+    }
+  ]
 }
