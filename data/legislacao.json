@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "last_check_attempt": null,
+  "last_successful_check": null,
+  "status": "aguardando_primeira_verificacao",
+  "summary": "A primeira verificação ainda não foi executada. Ela criará a linha de base para comparar alterações futuras.",
+  "laws": [],
+  "changes": [],
+  "errors": []
+}
