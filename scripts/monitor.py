@@ -97,7 +97,7 @@ def split_articles(text: str) -> dict[str, str]:
     return {key: normalize("\n".join(value)) for key, value in articles.items() if normalize("\n".join(value))}
 
 
-def make_snapshot(text: str, law: dict[str, Any], source_url_used: str) -> dict[str, Any]:
+def make_snapshot(text: str, law: dict[str, Any], source_url_used: str | None = None) -> dict[str, Any]:
     articles = split_articles(text)
     allow = law.get("include_articles")
     if allow:
@@ -106,7 +106,7 @@ def make_snapshot(text: str, law: dict[str, Any], source_url_used: str) -> dict[
     mode = law.get("monitor_mode", "texto") if law.get("monitor_mode") == "index" else ("artigos" if len(articles) >= 2 else "documento")
     return {
         "document_hash": digest(text),
-        "source_url_used": source_url_used,
+        "source_url_used": source_url_used or law["url"],
         "parser_mode": mode,
         "article_count": len(articles),
         "articles": articles,
@@ -204,7 +204,8 @@ def run() -> int:
         try:
             text, source_url_used = fetch_law_text(law)
             current = make_snapshot(text, law, source_url_used)
-            changes = compare(law, previous_snapshot, current, detected)
+            law_with_source = {**law, "source_url_used": source_url_used}
+            changes = compare(law_with_source, previous_snapshot, current, detected)
             all_changes.extend(changes)
             save_json(snapshot_path, current)
             success_count += 1
