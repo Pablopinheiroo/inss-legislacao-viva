@@ -80,3 +80,15 @@ Depois execute:
 ## Licença
 
 MIT. O projeto aponta para textos oficiais e registra diferenças para fins de estudo.
+
+## Treino de questões Certo/Errado
+
+A aba **Treinar C/E** oferece um banco inicial de itens autorais no estilo Certo ou Errado. Cada questão informa a matéria, a norma e o artigo; depois da resposta, mostra o gabarito, uma explicação, o trecho literal usado como referência e o link da fonte oficial. É possível escolher a matéria e fazer sessões de 5, 10 ou todas as questões disponíveis.
+
+O banco atual é inicial e não cobre integralmente as 27 normas. As questões devem ser ampliadas e revisadas à medida que o catálogo de leis for auditado. A redação usada como referência deve sempre ser conferida na versão consolidada oficial.
+
+## Verificação manual pelo próprio site
+
+O botão **Verificar atualizações** abre a tela do workflow no GitHub Actions. Na página que abrir, clique em **Run workflow** e confirme em **Run workflow** novamente. Isso inicia uma consulta manual fora do horário da rotina diária. Quando a execução terminar e os dados forem publicados, use **Recarregar painel** para buscar os dados mais recentes no site.
+
+O site é estático e não guarda token de acesso do GitHub. Por segurança, o botão encaminha para a confirmação autenticada do próprio GitHub em vez de tentar disparar a execução diretamente pelo navegador.
