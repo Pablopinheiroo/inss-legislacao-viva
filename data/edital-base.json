@@ -15,7 +15,8 @@
   "constitutional_topics": [
     "Constituição Federal: direitos e garantias fundamentais, direitos individuais e coletivos, direitos sociais, nacionalidade e cidadania.",
     "Constituição Federal: Administração Pública, arts. 37 a 41.",
-    "Constituição Federal: Seguridade Social, arts. 194 a 204."
+    "Constituição Federal: Seguridade Social, arts. 194 a 204.",
+    "Constituição Federal: art. 149 (contribuições sociais) e art. 193 (ordem social), como dispositivos de apoio à leitura dos temas de financiamento e Seguridade Social."
   ],
   "monitored_norms_count": 27,
   "notes": [
@@ -25,5 +26,38 @@
   ],
   "informatica_amendment": "O tópico 3 de Noções de Informática mudou para aplicativos Microsoft Office (não LibreOffice). Essa matéria não é lei seca e por isso não foi cadastrada no monitor legislativo.",
   "cutoff_rule": "Itens 13.32 e 13.33: alterações legislativas com vigência até a publicação do edital poderiam ser cobradas mesmo se não estivessem no item 14; alterações posteriores, em regra, não seriam cobradas, salvo se listadas no item 14. Este projeto acompanha textos vigentes atuais e deve permitir a revisão quando sair novo edital.",
-  "syllabus_basis": "Item 14.2.2: ética, direitos fundamentais/Constituição, Administração Pública, Lei 8.112, Lei 8.429 e Lei 9.784. Item 14.2.3: conhecimentos específicos de Seguridade Social e Previdência, incluindo leis especiais, LOAS/BPC, seguro-defeso, RPPS, EC 103, LC 142, Leis 8.212 e 8.213, Decreto 3.048 e IN 128."
+  "syllabus_basis": "Item 14.2.2: ética, direitos fundamentais/Constituição, Administração Pública, Lei 8.112, Lei 8.429 e Lei 9.784. Item 14.2.3: conhecimentos específicos de Seguridade Social e Previdência, incluindo leis especiais, LOAS/BPC, seguro-defeso, RPPS, EC 103, LC 142, Leis 8.212 e 8.213, Decreto 3.048 e IN 128.",
+  "constitutional_articles_monitored": [
+    "Art. 5",
+    "Art. 6",
+    "Art. 7",
+    "Art. 8",
+    "Art. 9",
+    "Art. 10",
+    "Art. 11",
+    "Art. 12",
+    "Art. 13",
+    "Art. 14",
+    "Art. 15",
+    "Art. 16",
+    "Art. 17",
+    "Art. 37",
+    "Art. 38",
+    "Art. 39",
+    "Art. 40",
+    "Art. 41",
+    "Art. 149",
+    "Art. 193",
+    "Art. 194",
+    "Art. 195",
+    "Art. 196",
+    "Art. 197",
+    "Art. 198",
+    "Art. 199",
+    "Art. 200",
+    "Art. 201",
+    "Art. 202",
+    "Art. 203",
+    "Art. 204"
+  ]
 }
