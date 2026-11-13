@@ -35,11 +35,18 @@ A primeira execução cria a linha de base. Ela não cria alertas retroativos. A
 
 A rotina automática está programada para 09:17 UTC (06:17 no horário de Brasília). O GitHub pode atrasar ou deixar de executar uma agenda em períodos de alta demanda. Em repositórios públicos, agendas também podem ser desativadas após 60 dias sem atividade no repositório.
 
-## Normas iniciais
+## Base no edital de 2022
 
-A seleção inicial inclui Constituição Federal (dispositivos previdenciários), Leis 8.212/1991 e 8.213/1991, Decreto 3.048/1999, LOAS, EC 103/2019, LC 142/2013, Lei 9.796/1999, Decretos 6.214/2007 e 10.188/2019, Lei 14.176/2021 e IN PRES/INSS 128/2022.
+O catálogo foi conferido com o Edital nº 1 - INSS, de 12 de setembro de 2022, para Técnico do Seguro Social, alterado pelo Edital PRES/INSS nº 2, de 14 de setembro de 2022. O item 14.2.3 reúne o conteúdo específico; o item 14.2.2 inclui normas de Ética, Direito Constitucional e Direito Administrativo.
 
-A seleção é uma base de trabalho, não uma afirmação de que todas essas normas serão cobradas no próximo edital. A lista pode ser ajustada em data/laws.json.
+O projeto acompanha 27 textos normativos expressamente citados nesses conteúdos: Constituição Federal (somente os artigos pertinentes), dois decretos de Ética, três leis de Administração Pública, doze normas de Previdência/Assistência Social e regimes próprios, além de atos sobre benefícios especiais e seguro-defeso. A relação, o enquadramento por item e o endereço do edital ficam em data/laws.json e data/edital-base.json.
+
+Fontes oficiais do edital:
+- [Página de editais de 2022 do INSS](https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/edital/2022)
+- [Edital no Diário Oficial da União](https://www.in.gov.br/en/web/dou/-/edital-n-1-inss-de-12-de-setembro-de-2022-429587147)
+- [PDF do Cebraspe](https://cdn.cebraspe.org.br/concursos/inss_22/arquivos/ED_1_INSS_22_ABERTURA.PDF)
+
+A seleção é a base do edital de 2022, não uma afirmação de que todas as normas serão cobradas no próximo concurso. Quando houver novo edital, o catálogo deve ser revisado.
 
 ## Limites importantes
 
