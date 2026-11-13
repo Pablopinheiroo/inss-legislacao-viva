@@ -46,5 +46,6 @@ jobs:
             echo "Nenhuma mudança nos dados para salvar."
           else
             git commit -m "Atualiza monitoramento da legislação"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
