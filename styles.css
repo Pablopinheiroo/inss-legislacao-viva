@@ -66,3 +66,7 @@
   .quiz-config{display:grid;grid-template-columns:1fr 1fr}
   .quiz-config .primary-button{grid-column:1/-1;width:100%}
 }
+
+/* Ajustes de tipografia dos novos controles */
+.nav-tab{font-family:inherit;font-size:12px;font-weight:600}
+.primary-button,.secondary-button{font-family:inherit;font-size:12px;font-weight:700}
