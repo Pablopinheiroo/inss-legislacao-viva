@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Acompanhe diferenças em normas relevantes para o estudo do INSS.">
+  <title>Radar Legislativo INSS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand-mark">R</span>
+      <span><strong>Radar Legislativo</strong><small>INSS · acompanhamento de normas</small></span>
+    </a>
+    <button id="notification-button" class="bell-button" aria-label="Abrir alterações recentes" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+      <span id="notification-badge" class="badge hidden">0</span>
+    </button>
+  </header>
+  <main class="page-shell">
+    <section class="intro">
+      <div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>O que mudou na legislação?</h1><p class="subtitle">Diferenças detectadas nas normas acompanhadas para o estudo do INSS.</p></div>
+      <div class="status-pill" id="system-status"><span class="status-dot"></span><span>Carregando dados</span></div>
+    </section>
+    <section class="stats-grid" aria-label="Resumo do monitoramento">
+      <article class="stat-card"><span class="stat-label">Alterações registradas</span><strong id="stat-changes">—</strong><small>no histórico</small></article>
+      <article class="stat-card"><span class="stat-label">Normas acompanhadas</span><strong id="stat-laws">—</strong><small>fontes cadastradas</small></article>
+      <article class="stat-card"><span class="stat-label">Última verificação</span><strong id="stat-check" class="stat-date">Aguardando</strong><small id="stat-check-note">A primeira execução ainda não ocorreu</small></article>
+    </section>
+    <section class="toolbar">
+      <label class="search-box"><span class="sr-only">Buscar por norma ou artigo</span><input id="search-input" type="search" placeholder="Buscar norma ou artigo..."></label>
+      <label class="select-wrap"><span class="sr-only">Filtrar por tipo</span><select id="type-filter"><option value="todos">Todos os tipos</option><option value="alterado">Artigos alterados</option><option value="incluido">Artigos incluídos</option><option value="nao_encontrado">Artigos não localizados</option><option value="texto_integral_alterado">Texto integral</option></select></label>
+      <label class="select-wrap"><span class="sr-only">Filtrar por situação</span><select id="study-filter"><option value="todos">Todas as situações</option><option value="nao-estudado">Não estudado</option><option value="revisando">Revisando</option><option value="estudado">Estudado</option></select></label>
+    </section>
+    <section class="section-heading"><div><h2>Histórico de alterações</h2><p id="results-caption">Carregando histórico...</p></div><button id="refresh-button" class="text-button" type="button">Atualizar painel ↻</button></section>
+    <section id="change-list" class="change-list" aria-live="polite"><div class="empty-state"><h3>Carregando informações</h3><p>Consultando o arquivo de monitoramento.</p></div></section>
+    <section class="sources-section"><div class="section-heading"><div><h2>Normas acompanhadas</h2><p>Fontes públicas oficiais cadastradas no projeto.</p></div></div><div id="law-list" class="law-grid"></div></section>
+    <footer class="footer-note"><strong>Confirme sempre na fonte oficial.</strong><span>O painel compara capturas de texto. Ele não determina sozinho a data de publicação, a vigência ou o alcance jurídico da mudança.</span></footer>
+  </main>
+  <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <section class="drawer"><div class="drawer-head"><div><p class="eyebrow">CENTRAL DE AVISOS</p><h2 id="drawer-title">Alterações recentes</h2></div><button id="close-drawer" class="close-button" aria-label="Fechar">×</button></div><p class="drawer-copy">As novidades aparecem aqui quando o monitor identifica diferenças nas fontes acompanhadas.</p><div id="drawer-content"></div></section>
+  </div>
+  <template id="change-template">
+    <article class="change-card">
+      <div class="card-top"><span class="change-type"></span><span class="detected-date"></span></div>
+      <h3 class="law-name"></h3><div class="article-label"></div><p class="change-summary"></p>
+      <div class="diff-grid"><div class="diff-panel old-panel"><span>ANTES</span><pre class="old-text"></pre></div><div class="diff-panel new-panel"><span>AGORA</span><pre class="new-text"></pre></div></div>
+      <div class="card-bottom"><a class="source-link" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><label class="study-control"><span>Situação</span><select class="study-select"><option value="nao-estudado">Não estudado</option><option value="revisando">Revisando</option><option value="estudado">Estudado</option></select></label></div>
+      <p class="date-note"></p>
+    </article>
+  </template>
+</body>
+</html>
