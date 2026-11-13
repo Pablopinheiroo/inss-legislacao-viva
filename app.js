@@ -108,7 +108,7 @@ function renderLaws() {
     const title = document.createElement("span");
     title.textContent = law.short_title || law.title;
     const status = document.createElement("small");
-    status.textContent = law.error ? "falha na consulta" : law.last_checked ? "consultada" : "aguardando";
+    status.textContent = law.error ? "falha na consulta" : law.parser_mode === "index" ? "histórico de alterações" : law.last_checked ? "texto consultado" : "aguardando";
     link.append(title, status);
     list.append(link);
   });
