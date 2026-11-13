@@ -1,8 +1,11 @@
 const DATA_URL = "data/legislacao.json";
+const QUESTIONS_URL = "data/questoes.json";
 const LAST_SEEN_KEY = "radarLegislativo.lastSeen";
 const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
 let allChanges = [];
+let questionBank = [];
+let quizState = { questions: [], index: 0, selected: null, answers: [] };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -163,6 +166,150 @@ async function loadDashboard() {
     console.error(error);
   }
 }
+
+// -------------------- Modo de treino Certo/Errado --------------------
+function shuffle(items) {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+async function loadQuestionBank() {
+  const note = $("#question-count-note");
+  try {
+    const response = await fetch(QUESTIONS_URL + "?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    questionBank = Array.isArray(data.questions) ? data.questions : [];
+    const categories = [...new Set(questionBank.map(item => item.category))].sort((a,b) => a.localeCompare(b, "pt-BR"));
+    categories.forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      $("#quiz-category").append(option);
+    });
+    note.textContent = questionBank.length + " itens disponíveis no banco inicial. As questões são embaralhadas a cada treino.";
+    $("#start-quiz").disabled = questionBank.length === 0;
+  } catch (error) {
+    note.textContent = "Não foi possível carregar o banco de questões. Recarregue o site e tente novamente.";
+    console.error(error);
+  }
+}
+function selectedPool() {
+  const category = $("#quiz-category").value;
+  return questionBank.filter(item => category === "todas" || item.category === category);
+}
+function startQuiz(onlyItems = null) {
+  const pool = onlyItems || selectedPool();
+  if (!pool.length) {
+    $("#question-count-note").textContent = "Não há questões disponíveis para essa seleção.";
+    return;
+  }
+  const requested = $("#quiz-length").value === "todas" ? pool.length : Number($("#quiz-length").value);
+  const items = shuffle(pool).slice(0, Math.min(requested, pool.length));
+  quizState = { questions: items, index: 0, selected: null, answers: [] };
+  $("#quiz-welcome").classList.add("hidden");
+  $("#quiz-summary").classList.add("hidden");
+  $("#quiz-card").classList.remove("hidden");
+  showQuestion();
+}
+function showQuestion() {
+  const item = quizState.questions[quizState.index];
+  quizState.selected = null;
+  $("#quiz-category-label").textContent = item.category;
+  $("#quiz-progress").textContent = "Questão " + (quizState.index + 1) + " de " + quizState.questions.length;
+  $("#quiz-law").textContent = item.law_title;
+  $("#quiz-article").textContent = item.article;
+  $("#quiz-statement").textContent = item.statement;
+  $("#answer-true").classList.remove("selected");
+  $("#answer-false").classList.remove("selected");
+  $("#answer-true").setAttribute("aria-pressed", "false");
+  $("#answer-false").setAttribute("aria-pressed", "false");
+  $("#submit-answer").disabled = true;
+  $("#answer-feedback").classList.add("hidden");
+  $("#next-question").textContent = quizState.index === quizState.questions.length - 1 ? "Ver resultado →" : "Próxima questão →";
+}
+function chooseAnswer(value) {
+  if ($("#answer-feedback").classList.contains("hidden") === false) return;
+  quizState.selected = value;
+  $("#answer-true").classList.toggle("selected", value === true);
+  $("#answer-false").classList.toggle("selected", value === false);
+  $("#answer-true").setAttribute("aria-pressed", String(value === true));
+  $("#answer-false").setAttribute("aria-pressed", String(value === false));
+  $("#submit-answer").disabled = false;
+}
+function submitAnswer() {
+  if (quizState.selected === null) return;
+  const item = quizState.questions[quizState.index];
+  const correct = quizState.selected === item.answer;
+  quizState.answers.push({ item, chosen: quizState.selected, correct });
+  $("#feedback-result").textContent = correct ? "Você acertou! ✓" : "Você errou. ✕";
+  $("#feedback-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
+  $("#feedback-explanation").textContent = item.explanation;
+  $("#feedback-literal").textContent = item.literal_text;
+  $("#feedback-source").href = item.source_url;
+  $("#answer-feedback").classList.remove("hidden");
+  $("#submit-answer").disabled = true;
+  $("#answer-true").disabled = true;
+  $("#answer-false").disabled = true;
+}
+function showQuizSummary() {
+  $("#quiz-card").classList.add("hidden");
+  $("#quiz-summary").classList.remove("hidden");
+  const total = quizState.questions.length;
+  const correct = quizState.answers.filter(answer => answer.correct).length;
+  const wrong = total - correct;
+  const percentage = Math.round((correct / total) * 100);
+  $("#quiz-score").textContent = correct + " de " + total + " acertos";
+  $("#quiz-score-note").textContent = "Aproveitamento: " + percentage + "%. " + (wrong === 0 ? "Excelente! Você acertou todos os itens." : "Revise os dispositivos das questões que errou.");
+  const mistakes = quizState.answers.filter(answer => !answer.correct);
+  const box = $("#quiz-mistakes");
+  box.replaceChildren();
+  if (!mistakes.length) {
+    box.textContent = "Nenhuma questão errada neste treino.";
+  } else {
+    const heading = document.createElement("h3");
+    heading.textContent = "Pontos para revisar";
+    const list = document.createElement("div");
+    list.className = "mistake-list";
+    mistakes.forEach(answer => {
+      const row = document.createElement("div");
+      row.className = "mistake-row";
+      const strong = document.createElement("strong");
+      const detail = document.createElement("span");
+      strong.textContent = answer.item.law_title + " · " + answer.item.article;
+      detail.textContent = "Sua resposta: " + (answer.chosen ? "Certo" : "Errado") + " · Gabarito: " + (answer.item.answer ? "Certo" : "Errado");
+      row.append(strong, detail);
+      list.append(row);
+    });
+    box.append(heading, list);
+  }
+  $("#retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+}
+function nextQuestion() {
+  if (quizState.index >= quizState.questions.length - 1) {
+    showQuizSummary();
+    return;
+  }
+  quizState.index += 1;
+  $("#answer-true").disabled = false;
+  $("#answer-false").disabled = false;
+  showQuestion();
+}
+function showView(view) {
+  const quiz = view === "quiz";
+  $("#radar-view").classList.toggle("hidden", quiz);
+  $("#quiz-view").classList.toggle("hidden", !quiz);
+  $("#tab-radar").classList.toggle("active", !quiz);
+  $("#tab-quiz").classList.toggle("active", quiz);
+  $("#tab-radar").toggleAttribute("aria-current", !quiz);
+  $("#tab-quiz").toggleAttribute("aria-current", quiz);
+  if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 $("#notification-button").addEventListener("click", openDrawer);
 $("#close-drawer").addEventListener("click", closeDrawer);
 $("#notification-drawer").addEventListener("click", event => { if (event.target.id === "notification-drawer") closeDrawer(); });
@@ -170,5 +317,22 @@ $("#refresh-button").addEventListener("click", loadDashboard);
 $("#search-input").addEventListener("input", renderChanges);
 $("#type-filter").addEventListener("change", renderChanges);
 $("#study-filter").addEventListener("change", renderChanges);
+$("#tab-radar").addEventListener("click", () => showView("radar"));
+$("#tab-quiz").addEventListener("click", () => showView("quiz"));
+$("#start-quiz").addEventListener("click", () => startQuiz());
+$("#answer-true").addEventListener("click", () => chooseAnswer(true));
+$("#answer-false").addEventListener("click", () => chooseAnswer(false));
+$("#submit-answer").addEventListener("click", submitAnswer);
+$("#next-question").addEventListener("click", nextQuestion);
+$("#restart-quiz").addEventListener("click", () => {
+  $("#quiz-summary").classList.add("hidden");
+  $("#quiz-welcome").classList.remove("hidden");
+  startQuiz();
+});
+$("#retry-mistakes").addEventListener("click", () => {
+  const mistakes = quizState.answers.filter(answer => !answer.correct).map(answer => answer.item);
+  startQuiz(mistakes);
+});
 document.addEventListener("keydown", event => { if (event.key === "Escape") closeDrawer(); });
 loadDashboard();
+loadQuestionBank();
