@@ -25,6 +25,8 @@
       "Art. 39",
       "Art. 40",
       "Art. 41",
+      "Art. 149",
+      "Art. 193",
       "Art. 194",
       "Art. 195",
       "Art. 196",
@@ -70,7 +72,7 @@
     "edital_item": "14.2.2 — Ética no Serviço Público",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     ],
     "monitor_mode": "texto"
