@@ -217,6 +217,8 @@ function startQuiz(onlyItems = null) {
 }
 function showQuestion() {
   const item = quizState.questions[quizState.index];
+  $("#answer-true").disabled = false;
+  $("#answer-false").disabled = false;
   quizState.selected = null;
   $("#quiz-category-label").textContent = item.category;
   $("#quiz-progress").textContent = "Questão " + (quizState.index + 1) + " de " + quizState.questions.length;
@@ -304,8 +306,13 @@ function showView(view) {
   $("#quiz-view").classList.toggle("hidden", !quiz);
   $("#tab-radar").classList.toggle("active", !quiz);
   $("#tab-quiz").classList.toggle("active", quiz);
-  $("#tab-radar").toggleAttribute("aria-current", !quiz);
-  $("#tab-quiz").toggleAttribute("aria-current", quiz);
+  if (quiz) {
+    $("#tab-radar").removeAttribute("aria-current");
+    $("#tab-quiz").setAttribute("aria-current", "page");
+  } else {
+    $("#tab-quiz").removeAttribute("aria-current");
+    $("#tab-radar").setAttribute("aria-current", "page");
+  }
   if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
