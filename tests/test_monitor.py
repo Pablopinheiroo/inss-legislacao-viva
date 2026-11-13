@@ -16,13 +16,13 @@ class MonitorTests(unittest.TestCase):
 
     def test_initial_snapshot_is_baseline(self):
         law = {"id": "x", "title": "Lei X", "short_title": "Lei X", "category": "Lei", "url": "https://example.org"}
-        current = make_snapshot("Art. 1º Novo texto.\nArt. 2º Segundo.", law)
+        current = make_snapshot("Art. 1º Novo texto.\nArt. 2º Segundo.", law, law["url"])
         self.assertEqual(compare(law, None, current, "2026-11-13T00:00:00Z"), [])
 
     def test_article_change_is_detected(self):
         law = {"id": "x", "title": "Lei X", "short_title": "Lei X", "category": "Lei", "url": "https://example.org"}
-        old = make_snapshot("Art. 1º Texto antigo.\nArt. 2º Mantido.", law)
-        new = make_snapshot("Art. 1º Texto novo.\nArt. 2º Mantido.", law)
+        old = make_snapshot("Art. 1º Texto antigo.\nArt. 2º Mantido.", law, law["url"])
+        new = make_snapshot("Art. 1º Texto novo.\nArt. 2º Mantido.", law, law["url"])
         changes = compare(law, old, new, "2026-11-13T00:00:00Z")
         self.assertEqual(len(changes), 1)
         self.assertEqual(changes[0]["article"], "Art. 1")
