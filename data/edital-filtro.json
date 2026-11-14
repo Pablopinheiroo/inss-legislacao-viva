@@ -855,6 +855,7 @@
         "Art. 3",
         "Art. 5",
         "Art. 10",
+        "Art. 11",
         "Art. 12",
         "Art. 13",
         "Art. 14",
@@ -882,8 +883,7 @@
         "Art. 45-A",
         "Art. 88"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "filter": "Seguridade Social, segurados, empresa/empregador doméstico, financiamento, salário de contribuição, arrecadação/recolhimento, débitos e prescrição"
     },
     "lei-8213-1991": {
       "include_articles": [
@@ -1358,6 +1358,10 @@
     {
       "norm": "Decreto 1.171/1994",
       "action": "Art. 3º de vigência retirado do estudo; Anexo do Código de Ética separado em entrada própria. Menções expressas a itens revogados pelo Decreto 6.029 foram limpas."
+    },
+    {
+      "norm": "Lei 8.212/1991",
+      "action": "Separado o art. 11 do art. 10, pois a captura antiga havia mesclado os dois. O art. 11 foi mantido por enumerar as receitas da Seguridade Social e as contribuições sociais."
     }
   ],
   "decreto6214_status": {
