@@ -342,7 +342,7 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
     return components
 
 
-BR_DATE_RE = r"(\d{1,2})[./](\d{1,2})[./](\d{4})"
+BR_DATE_RE = r"(\d{1,2})(?:º|°)?[./](\d{1,2})[./](\d{4})"
 
 
 def _iso_date(match: re.Match[str] | None) -> str | None:
