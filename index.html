@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-16">
-  <script defer src="app.js?v=20261114-19"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-17">
+  <script defer src="app.js?v=20261114-20"></script>
 </head>
 <body>
   <header class="topbar">
@@ -30,6 +30,7 @@
     <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
     <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
     <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
+    <button id="tab-review" class="nav-tab" type="button">Revisão</button>
     <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
   </nav>
 
@@ -160,6 +161,7 @@
               </div>
               <div class="law-current-actions">
                 <button id="law-favorite-article" class="secondary-button" type="button" disabled>☆ Favoritar artigo</button>
+                <button id="law-mark-difficult" class="secondary-button" type="button" disabled>Marcar como difícil</button>
                 <button id="law-mark-studied" class="primary-button" type="button" disabled>Marcar como estudado</button>
               </div>
             </div>
@@ -707,6 +709,55 @@
     </footer>
   </main>
 
+
+  <main id="review-view" class="page-shell hidden">
+    <section class="intro central-review-intro">
+      <div>
+        <p class="eyebrow">ACOMPANHAMENTO DO APRENDIZADO</p>
+        <h1>Revisão</h1>
+        <p class="subtitle">Um só lugar para retomar erros, dúvidas, artigos difíceis, cartões e alterações da legislação.</p>
+      </div>
+      <div class="central-review-top-actions">
+        <button id="central-review-start-due" class="primary-button" type="button" disabled>Revisar pendentes</button>
+        <button id="central-review-start-all" class="secondary-button" type="button" disabled>Iniciar revisão geral</button>
+      </div>
+    </section>
+
+    <section class="central-review-session-panel">
+      <div><span class="eyebrow">SESSÃO DE REVISÃO</span><p id="central-review-session-note">Carregando a fila de conteúdos...</p></div>
+      <div class="central-review-session-actions">
+        <button id="central-review-next" class="primary-button hidden" type="button">Próximo conteúdo da sessão →</button>
+        <button id="central-review-stop-session" class="secondary-button hidden" type="button">Encerrar sessão</button>
+      </div>
+    </section>
+
+    <section class="central-review-stats" aria-label="Resumo da central de revisão">
+      <article class="central-review-stat"><span>Revisões vencidas</span><strong id="central-review-due">—</strong></article>
+      <article class="central-review-stat"><span>Conteúdos pendentes</span><strong id="central-review-pending">—</strong></article>
+      <article class="central-review-stat"><span>Domínio consolidado</span><strong id="central-review-mastered">—</strong></article>
+    </section>
+
+    <section class="central-review-filters" aria-label="Filtrar conteúdos da revisão">
+      <label><span>Matéria</span><select id="central-review-category"><option value="todos">Todas as matérias</option></select></label>
+      <label><span>Assunto</span><select id="central-review-topic"><option value="todos">Todos os assuntos</option></select></label>
+      <label><span>Norma</span><select id="central-review-law"><option value="todos">Todas as normas</option></select></label>
+      <label><span>Artigo</span><select id="central-review-article"><option value="todos">Todos os artigos</option></select></label>
+      <label class="central-review-search"><span>Buscar conteúdo</span><input id="central-review-search" type="search" placeholder="Digite um assunto, norma ou artigo..."></label>
+    </section>
+
+    <section class="section-heading central-review-list-heading">
+      <div><h2>Fila de revisão</h2><p id="central-review-visible-count">Carregando itens...</p></div>
+      <span class="central-review-priority-note">Mais erros primeiro · depois, os que venceram há mais tempo</span>
+    </section>
+    <section id="central-review-list" class="central-review-list" aria-live="polite">
+      <div class="empty-state"><h3>Montando sua fila</h3><p>Reunindo os conteúdos registrados pelos modos de estudo.</p></div>
+    </section>
+
+    <footer class="footer-note">
+      <strong>Os erros continuam ligados aos jogos de origem.</strong>
+      <span>Ao revisar, cada conteúdo abre o modo em que foi criado, preservando o gabarito e a conferência legal. Os intervalos são atualizados pelos acertos nesse modo. Marcar como dominado retira o item da fila ativa. Os registros ficam salvos neste navegador e não são sincronizados entre aparelhos.</span>
+    </footer>
+  </main>
 
   <main id="memory-view" class="page-shell hidden">
     <section class="intro">
