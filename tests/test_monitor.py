@@ -1,6 +1,14 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import Mock, patch
 
+from scripts import monitor
 from scripts.monitor import (
+    SourceFetchError,
+    fetch_law_text,
+    fetch_text_with_diagnostics,
     baseline_must_be_rebuilt,
     compare,
     extract_event_dates,
@@ -244,6 +252,187 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(len(changes), 1)
         self.assertEqual(changes[0]["change_type"], "nao_encontrado")
         self.assertEqual(changes[0]["legal_effect_status"], "situacao_juridica_nao_confirmada")
+
+
+
+    @staticmethod
+    def mock_response(status=200, body="", url="https://example.org/lei", headers=None):
+        response = Mock()
+        response.status_code = status
+        response.text = body
+        response.url = url
+        response.headers = headers or {"Content-Type": "text/html; charset=utf-8"}
+        response.content = body.encode("utf-8")
+        response.encoding = "utf-8"
+        response.apparent_encoding = "utf-8"
+        return response
+
+    def test_http_403_is_recorded_as_access_denied_without_retry(self):
+        response = self.mock_response(403, "Acesso negado")
+        with patch("scripts.monitor.requests.get", return_value=response) as get, \
+             patch("scripts.monitor.time.sleep") as sleep:
+            with self.assertRaises(SourceFetchError) as raised:
+                fetch_text_with_diagnostics("https://example.org/lei")
+
+        self.assertEqual(raised.exception.failure_type, "access_denied")
+        self.assertEqual(raised.exception.attempts[0]["http_status"], 403)
+        self.assertEqual(raised.exception.attempts[0]["outcome"], "error")
+        get.assert_called_once()
+        sleep.assert_not_called()
+
+    def test_http_429_retries_and_preserves_rate_limit_diagnostics(self):
+        response = self.mock_response(429, "Too many requests", headers={
+            "Content-Type": "text/html",
+            "Retry-After": "2",
+        })
+        with patch("scripts.monitor.requests.get", return_value=response) as get, \
+             patch("scripts.monitor.time.sleep") as sleep:
+            with self.assertRaises(SourceFetchError) as raised:
+                fetch_text_with_diagnostics("https://example.org/lei")
+
+        self.assertEqual(raised.exception.failure_type, "rate_limited")
+        self.assertEqual(len(raised.exception.attempts), 3)
+        self.assertTrue(all(item["http_status"] == 429 for item in raised.exception.attempts))
+        self.assertEqual(raised.exception.retry_after_seconds, 2)
+        self.assertEqual(get.call_count, 3)
+        self.assertEqual(sleep.call_count, 2)
+
+    def test_http_503_is_retried_but_never_returned_as_legal_text(self):
+        response = self.mock_response(503, "Service temporarily unavailable")
+        with patch("scripts.monitor.requests.get", return_value=response) as get, \
+             patch("scripts.monitor.time.sleep"):
+            with self.assertRaises(SourceFetchError) as raised:
+                fetch_text_with_diagnostics("https://example.org/lei")
+
+        self.assertEqual(raised.exception.failure_type, "server_error")
+        self.assertEqual(get.call_count, 3)
+        self.assertTrue(all(item["outcome"] == "error" for item in raised.exception.attempts))
+
+    def test_http_200_cloudflare_challenge_is_not_accepted_as_law(self):
+        challenge = (
+            "<html><head><title>Just a moment...</title></head><body>"
+            + ("Checking your browser. Verify that you are human. " * 20)
+            + "</body></html>"
+        )
+        response = self.mock_response(200, challenge)
+        with patch("scripts.monitor.requests.get", return_value=response):
+            with self.assertRaises(SourceFetchError) as raised:
+                fetch_text_with_diagnostics("https://example.org/lei")
+
+        self.assertEqual(raised.exception.failure_type, "blocked_page")
+        self.assertEqual(raised.exception.attempts[0]["http_status"], 200)
+
+    def test_fetch_uses_backup_after_primary_source_is_blocked(self):
+        primary = "https://primary.example.org/lei"
+        backup = "https://backup.example.org/lei"
+        law = {
+            "id": "lei-12345-2020",
+            "title": "Lei nº 12.345/2020",
+            "category": "Lei",
+            "url": primary,
+            "fetch_urls": [primary, backup],
+        }
+        legal_text = (
+            "LEI Nº 12.345, DE 1º DE JANEIRO DE 2020.\n"
+            + ("Texto oficial da norma com conteúdo suficiente para a captura. " * 12)
+        )
+        blocked = SourceFetchError(
+            "403 bloqueado",
+            "access_denied",
+            [{
+                "url": primary, "attempt": 1, "outcome": "error",
+                "failure_type": "access_denied", "http_status": 403,
+                "detail": "Acesso negado",
+            }],
+        )
+        backup_attempt = [{
+            "url": backup, "attempt": 1, "outcome": "success",
+            "failure_type": None, "http_status": 200,
+            "detail": "Conteúdo recebido e interpretado.",
+        }]
+        with patch(
+            "scripts.monitor.fetch_text_with_diagnostics",
+            side_effect=[blocked, (legal_text, backup_attempt)],
+        ):
+            text, used_url, diagnostic = fetch_law_text(law)
+
+        self.assertIn("LEI Nº 12.345", text)
+        self.assertEqual(used_url, backup)
+        self.assertEqual(diagnostic["source_status"], "fallback_used")
+        self.assertEqual(diagnostic["source_failure_count"], 1)
+        self.assertEqual(diagnostic["source_attempts"][0]["http_status"], 403)
+
+    def test_query_failure_preserves_previous_snapshot_and_does_not_create_removal_alert(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            data_dir = Path(temporary) / "data"
+            snapshots_dir = data_dir / "snapshots"
+            snapshots_dir.mkdir(parents=True)
+            laws_file = data_dir / "laws.json"
+            output_file = data_dir / "legislacao.json"
+            law_id = "lei-12345-2020"
+            previous_snapshot = {
+                "snapshot_version": 3,
+                "captured_at": "2026-11-13T09:00:00Z",
+                "source_url_used": "https://example.org/lei",
+                "parser_mode": "artigos",
+                "snapshot_scope": "all_detected_articles",
+                "article_count": 1,
+                "articles": {"Art. 1": "Art. 1º Texto vigente."},
+            }
+            previous_history = [{
+                "id": "historico-anterior",
+                "law_id": law_id,
+                "article": "Art. 9",
+                "change_type": "alterado",
+                "detected_at": "2026-11-10T09:00:00Z",
+            }]
+            laws_file.write_text(json.dumps([{
+                "id": law_id,
+                "title": "Lei de teste",
+                "short_title": "Lei de teste",
+                "category": "Lei",
+                "url": "https://example.org/lei",
+            }]), encoding="utf-8")
+            output_file.write_text(json.dumps({
+                "monitor_version": 3,
+                "last_successful_check": "2026-11-13T09:00:00Z",
+                "changes": previous_history,
+            }), encoding="utf-8")
+            snapshot_file = snapshots_dir / (law_id + ".json")
+            snapshot_file.write_text(json.dumps(previous_snapshot), encoding="utf-8")
+
+            blocked_error = SourceFetchError(
+                "HTTP 429 rate_limited",
+                "rate_limited",
+                [{
+                    "url": "https://example.org/lei",
+                    "attempt": 1,
+                    "outcome": "error",
+                    "failure_type": "rate_limited",
+                    "http_status": 429,
+                    "retry_after_seconds": 120,
+                    "detail": "Muitas consultas",
+                }],
+            )
+            with patch.object(monitor, "LAWS_FILE", laws_file), \
+                 patch.object(monitor, "OUTPUT_FILE", output_file), \
+                 patch.object(monitor, "SNAPSHOTS", snapshots_dir), \
+                 patch.object(monitor, "fetch_law_text", side_effect=blocked_error), \
+                 patch.object(monitor.time, "sleep"):
+                result = monitor.run()
+
+            saved_snapshot = json.loads(snapshot_file.read_text(encoding="utf-8"))
+            saved_output = json.loads(output_file.read_text(encoding="utf-8"))
+            self.assertEqual(result, 1)
+            self.assertEqual(saved_snapshot, previous_snapshot)
+            self.assertEqual(saved_output["changes"], previous_history)
+            self.assertEqual(saved_output["laws"][0]["source_status"], "rate_limited")
+            self.assertEqual(saved_output["laws"][0]["source_failure_type"], "rate_limited")
+            self.assertEqual(saved_output["laws"][0]["retry_after_seconds"], 120)
+            self.assertEqual(saved_output["laws"][0]["new_changes_detected"], 0)
+            self.assertEqual(saved_output["status"], "erro")
+            self.assertEqual(saved_output["last_successful_check"], "2026-11-13T09:00:00Z")
+            self.assertEqual(saved_output["errors"][0]["failure_type"], "rate_limited")
 
 
 
