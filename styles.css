@@ -1340,3 +1340,25 @@
  .section-nav{padding-left:9px;padding-right:9px}
  .study-overview-card>span,.performance-overview-grid>article>span{font-size:9px}
 }
+
+
+/* Backup local: painel recolhido para manter a tela inicial limpa */
+.study-data-details{margin:26px 0 8px;border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden}
+.study-data-details>summary{padding:15px 17px;color:#4b5e7b;font-size:11px;font-weight:800;cursor:pointer;list-style:none}
+.study-data-details>summary::-webkit-details-marker{display:none}
+.study-data-details>summary:after{content:"＋";float:right;color:#6c82a7;font-size:14px}
+.study-data-details[open]>summary:after{content:"−"}
+.study-data-details-body{padding:0 17px 16px;border-top:1px solid #edf0f5}
+.study-data-details-body>p:first-child{margin:13px 0;color:#78869a;font-size:10px;line-height:1.6}
+.study-data-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.study-data-actions button{min-height:37px;padding:8px 13px;font-size:10px}
+.data-save-status,.backup-operation-status{margin:8px 0 0;color:#3f7657;font-size:9px;line-height:1.5}
+.data-save-status.is-error,.backup-operation-status.is-error{color:#b04b40}
+.study-data-note{display:block;margin-top:9px;color:#929daf;font-size:9px;line-height:1.55}
+@media(max-width:600px){
+ .study-data-details{margin-top:20px}
+ .study-data-details>summary{padding:14px}
+ .study-data-details-body{padding:0 13px 14px}
+ .study-data-actions{display:grid;grid-template-columns:1fr}
+ .study-data-actions button{width:100%}
+}
