@@ -4354,6 +4354,8 @@ function renderSimuladoQuestion(){
   if(!item)return;
   const index=simulatorState.index,total=simulatorState.questions.length,response=simulatorState.responses[index];
   $("#simulado-progress-label").textContent="Questão "+(index+1)+" de "+total;
+  const typeLabel=$("#simulado-type-label");
+  if(typeLabel)typeLabel.textContent=simulatorState.type==="quick"?"SIMULADO RÁPIDO · 20 QUESTÕES":"SIMULADO · 10 QUESTÕES";
   $("#simulado-progress-fill").style.width=((index+1)/total*100)+"%";
   $("#simulado-progress-fill").parentElement.setAttribute("aria-valuemax",String(total));
   $("#simulado-progress-fill").parentElement.setAttribute("aria-valuenow",String(index+1));
@@ -5897,7 +5899,7 @@ $("#simulado-clear-answer").addEventListener("click",clearSimuladoAnswer);
 $("#simulado-previous").addEventListener("click",()=>moveSimuladoQuestion(-1));
 $("#simulado-next").addEventListener("click",()=>moveSimuladoQuestion(1));
 $("#simulado-finish").addEventListener("click",finishSimulado);
-$("#simulado-restart").addEventListener("click",startSimulado);
+$("#simulado-restart").addEventListener("click",()=>startSimulado({quick:simulatorState.type==="quick"}));
 
 initializeAchievements();
 
