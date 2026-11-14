@@ -192,6 +192,16 @@
             <span class="sr-only">Filtrar por matéria</span>
             <select id="law-library-category"><option value="todas">Todas as matérias</option></select>
           </label>
+          <label class="law-library-category">
+            <span class="sr-only">Filtrar por prioridade do edital</span>
+            <select id="law-library-priority">
+              <option value="todas">Todas as prioridades</option>
+              <option value="1">Prioridade 1 — máxima</option>
+              <option value="2">Prioridade 2 — alta</option>
+              <option value="3">Prioridade 3 — complementar</option>
+            </select>
+          </label>
+          <p class="law-priority-help">Prioridades organizam a ordem de estudo conforme os assuntos do edital de 2022. Não representam pesos oficiais por lei.</p>
           <div id="law-library-list" class="law-library-list" aria-live="polite">
             <p class="law-library-loading">Carregando as normas...</p>
           </div>
