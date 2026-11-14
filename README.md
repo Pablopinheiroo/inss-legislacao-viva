@@ -149,7 +149,7 @@ A aba **Memorização ativa** reúne cartões por artigo a partir das perguntas 
 
 O estudante recebe uma pergunta ou um tema, tenta explicar o conteúdo sem consultar e depois revela o texto integral do artigo para comparar. A avaliação é feita pelo próprio estudante; o site não finge corrigir uma resposta livre.
 
-As opções **Esqueci**, **Lembrei em parte** e **Lembrei bem** organizam a próxima revisão em 10 minutos, 1 dia ou um intervalo crescente (3, 6, 12 dias e assim por diante, limitado a 30 dias). O progresso fica no armazenamento local do navegador, sem conta, servidor ou sincronização entre dispositivos. O modo não envia lembretes: os cartões aparecem como pendentes quando o site é aberto.
+As opções **Esqueci**, **Lembrei em parte** e **Lembrei bem** organizam a próxima revisão em 10 minutos, 1 dia ou um intervalo crescente (3, 6, 12 dias e assim por diante, limitado a 30 dias). O progresso continua no armazenamento local do navegador, sem conta ou servidor. Agora é possível exportar um backup em JSON e importá-lo em outro navegador ou dispositivo. O modo não envia lembretes: os cartões aparecem como pendentes quando o site é aberto.
 
 
 ## Precisão do histórico de alterações
@@ -205,3 +205,14 @@ Cada cartão da biblioteca também exibe o número e o nome da norma, a data e h
 A Constituição aparece somente com o recorte de artigos selecionados no catálogo. A IN 128/2022, por enquanto, aparece como índice de atos modificadores: o arquivo acompanhado não oferece a redação consolidada separada em artigos e, por isso, o leitor avisa que é necessário abrir a fonte oficial. Normas cuja consulta mais recente falhou continuam usando a última captura válida e exibem um aviso.
 
 As marcações de estudo e os favoritos ficam no armazenamento local do navegador. Não exigem conta, mas também não são sincronizados entre dispositivos. O texto exibido é a captura do monitor, não uma garantia de consolidação jurídica integral; quando a auditoria indicar publicação original ou acompanhamento por índice, confira a fonte oficial antes de usar o conteúdo como redação vigente.
+
+
+## Salvamento, privacidade e backup do progresso
+
+O progresso pessoal é salvo no próprio navegador, usando \`localStorage\` e a mesma origem do GitHub Pages. A atualização dos arquivos do site não apaga esses dados: os identificadores de armazenamento são mantidos estáveis. Os registros de jogos, revisões, sessões, favoritos, artigos estudados, XP e conquistas passam por uma camada central em \`data-storage.js\`.
+
+Na área **Estudar**, abra **Backup e segurança dos dados** para exportar ou importar um arquivo JSON. O backup reúne os dados pessoais do navegador, mas não inclui uma partida que esteja em andamento. Antes de importar, o site baixa uma cópia do progresso que está no navegador; depois, restaura o arquivo escolhido.
+
+O arquivo de backup não é criptografado. Guarde-o em local privado e não o publique no GitHub nem o envie junto com o código do projeto. O site não pede senha, token ou chave de acesso para salvar o progresso.
+
+**Limite importante:** GitHub Pages é hospedagem estática. O backup manual permite transportar dados entre navegadores e dispositivos, mas não cria sincronização automática. Uma sincronização futura exigiria um serviço externo com autenticação e avaliação própria de segurança.
