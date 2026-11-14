@@ -1151,8 +1151,10 @@ function toggleLegalArticleStudied() {
   if (!legalSelectedLaw || !legalSelectedArticle) return;
   const key = legalArticleKey(legalSelectedLaw.id, legalSelectedArticle);
   const studied=legalStudiedSet(),dates=loadLegalStudiedDates();
-  if(studied.has(key)){studied.delete(key);delete dates[key];}
+  const wasStudied=studied.has(key);
+  if(wasStudied){studied.delete(key);delete dates[key];}
   else{studied.add(key);dates[key]=new Date().toISOString();}
+  recordActivityArticleStudy(legalSelectedLaw,legalSelectedArticle,!wasStudied);
   writeLegalStorage(LEGAL_STUDIED_KEY,studied);
   saveLegalStudiedDates(dates);
   renderLegalArticlePicker();
@@ -1235,6 +1237,7 @@ function startLegalTraining(items, title) {
     return;
   }
   legalTrainingState = { items, index: 0, title: title || "Treinamento", selected: null };
+  beginActivitySession("legalTraining",{law_id:legalSelectedLaw?.id,law_title:legalSelectedLaw?.short_title||legalSelectedLaw?.title,article:legalSelectedArticle,category:legalSelectedLaw?legalLawMatter(legalSelectedLaw):"Direito Previdenciário"});
   panel.classList.remove("hidden");
   renderLegalTrainingItem();
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1296,6 +1299,7 @@ function answerLegalTrainingCE(value) {
   legalTrainingState.selected = value;
   const correct = value === item.answer;
   recordLegalTrainingCEReview(item,value);
+  recordActivityAnswer("legalTraining",activityLegalTrainingItem(item),item.prompt,value?"Certo":"Errado",correct,item.answer?"Certo":"Errado",correct?"correct":"incorrect");
   $("#law-training-true").disabled = true;
   $("#law-training-false").disabled = true;
   $("#law-training-true").classList.toggle("selected", value === true);
@@ -1313,6 +1317,8 @@ function answerLegalTrainingCE(value) {
 function revealLegalTrainingRecall() {
   const item = legalTrainingState.items[legalTrainingState.index];
   if (!item || item.kind !== "recall") return;
+  const freeResponse=$("#law-training-recall").value.trim();
+  recordActivityAnswer("legalTraining",activityLegalTrainingItem(item),item.prompt,freeResponse||"Revelou sem registrar resposta",null,item.answerText||item.sourceText,"self_assessed",{self_assessed:true});
   renderLegalTrainingAnswer(
     item,
     item.answerTitle || "Conferência",
@@ -1351,6 +1357,8 @@ function checkLegalTrainingCloze() {
   if (!item || item.kind !== "cloze") return;
   const inputs = [...$("#law-training-cloze").querySelectorAll("input")];
   recordLegalTrainingClozeReview(item,inputs);
+  inputs.forEach(input=>{const blank=item.blanks[Number(input.dataset.index)];if(blank){const ok=normalizeAnswer(input.value)===normalizeAnswer(blank.value);
+    recordActivityAnswer("legalTraining",activityLegalTrainingItem(item),item.prompt+" · Lacuna "+(Number(input.dataset.index)+1),input.value,ok,blank.value,ok?"correct":"incorrect",{blank_index:Number(input.dataset.index)+1});}});
   let correct = 0;
   inputs.forEach(input => {
     const expected = item.blanks[Number(input.dataset.index)].value;
@@ -1382,6 +1390,7 @@ function nextLegalTrainingItem() {
   if (legalTrainingState.index + 1 >= legalTrainingState.items.length) {
     $("#law-training-panel").classList.add("hidden");
     legalTrainingState = { items: [], index: 0, title: "", selected: null };
+    finishActivitySession("completed");
     $("#law-current-article").scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
@@ -1957,6 +1966,7 @@ function renderClozeText(text,blanks,difficulty) {
 }
 function renderClozeExercise(current,difficulty,customBlanks=null) {
   clozeCurrent=current;
+  ensureActivitySession("cloze",current);
   clozeBlanks=customBlanks||buildClozeForText(current.text,difficulty);
   clozeAnswered=0;
   $("#next-cloze").textContent=current.sourceType==="review"?"Próxima revisão →":"Outro trecho ↻";
@@ -2081,6 +2091,7 @@ function nextClozeReviewItem() {
     $("#cloze-card").classList.add("hidden");$("#cloze-welcome").classList.remove("hidden");
     $("#cloze-note").textContent="Revisão encerrada por enquanto. Os erros que ainda precisam de reforço permanecem salvos para a próxima sessão.";
     clozeCurrent=null;clozeBlanks=[];renderClozeReviewOverview();
+    finishActivitySession("completed");
     return;
   }
   clozeReviewSessionSeen.add(next.id);
@@ -2126,6 +2137,7 @@ function checkCloze() {
   inputs.forEach(input=>{
     const index=Number(input.dataset.index),blank=clozeBlanks[index],response=input.value||"";
     const isCorrect=normalizeAnswer(response)===normalizeAnswer(blank.value);
+    recordActivityAnswer("cloze",{...clozeCurrent,topic:clozeCurrent.device_label||"Texto legal"},currentClozePrompt(clozeCurrent,blank),response,isCorrect,blank.value,isCorrect?"correct":"incorrect",{blank_index:index+1});
     if(isCorrect)correct++;else errors++;
     input.disabled=true;input.classList.toggle("correct",isCorrect);input.classList.toggle("incorrect",!isCorrect);
     const correction=input.nextElementSibling;
@@ -2311,6 +2323,7 @@ function startFindErrorGame(onlyItems=null,options={}){
   const pool=onlyItems||selectedFindErrorPool();if(!pool.length){$("#error-count-note").textContent="Não há itens disponíveis para essa seleção.";return;}
   const size=onlyItems?pool.length:($("#error-length").value==="todas"?pool.length:Number($("#error-length").value));
   findErrorState={questions:shuffle(pool).slice(0,Math.min(size,pool.length)),index:0,answers:[],tries:0,resolved:false,reviewMode:Boolean(options.reviewMode),reviewFailed:false};
+  beginActivitySession("error",findErrorState.questions[0]||{});
   $("#error-welcome").classList.add("hidden");$("#error-summary").classList.add("hidden");$("#error-card").classList.remove("hidden");showFindErrorQuestion();
 }
 function showFindErrorQuestion(){
@@ -2332,6 +2345,9 @@ function showFindErrorQuestion(){
 function chooseFindErrorSegment(index,button){
   if(findErrorState.resolved||button.disabled)return;
   const item=findErrorState.questions[findErrorState.index];findErrorState.tries++;
+  const selectedSegment=String(item.segments[index]||"").trim();
+  const foundCorrect=index===item.wrong_segment_index;
+  recordActivityAnswer("error",item,(item.segments||[]).join(""),selectedSegment,foundCorrect,item.segments?.[item.wrong_segment_index]||item.correct_phrase,foundCorrect?"correct":"incorrect",{attempt_number:findErrorState.tries});
   if(index!==item.wrong_segment_index){
     button.disabled=true;button.classList.add("is-tried");
     if(!findErrorState.reviewFailed){recordFindErrorReviewMiss(item,index,findErrorState.reviewMode);findErrorState.reviewFailed=true;}
@@ -2372,6 +2388,7 @@ function showFindErrorSummary(){
     list.append(heading,rows);
   }
   $("#error-retry-misses").classList.toggle("hidden",repeated.length===0);renderFindErrorReviewOverview();
+  finishActivitySession("completed");
 }
 
 
@@ -2573,6 +2590,7 @@ function startArticleGame(onlyItems = null, options = {}) {
   const requested = $("#article-length").value === "todas" ? pool.length : Number($("#article-length").value);
   const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
   articleGameState = { questions: items, index: 0, selected: null, answers: [], reviewMode: Boolean(options.reviewMode), reviewFailed: false };
+  beginActivitySession("article",items[0]||{});
   $("#article-welcome").classList.add("hidden");
   $("#article-summary").classList.add("hidden");
   $("#article-card").classList.remove("hidden");
@@ -2617,6 +2635,9 @@ function submitArticleAnswer() {
   if (!articleGameState.selected) return;
   const item = articleGameState.questions[articleGameState.index];
   const correct = articleGameState.selected === item.answer_article_key;
+  const chosenOptionForHistory=item.options.find(option=>option.article_key===articleGameState.selected);
+  const answerOptionForHistory=item.options.find(option=>option.article_key===item.answer_article_key);
+  recordActivityAnswer("article",item,item.question,chosenOptionForHistory?.label||articleGameState.selected,correct,answerOptionForHistory?.label||item.answer_article_key,correct?"correct":"incorrect");
   articleGameState.answers.push({ item, chosen: articleGameState.selected, correct });
   if (!correct) {
     recordArticleReviewMiss(item, articleGameState.selected, articleGameState.reviewMode);
@@ -2688,6 +2709,7 @@ function showArticleSummary() {
   }
   $("#article-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
   renderArticleReviewOverview();
+  finishActivitySession("completed");
 }
 
 // -------------------- Modo de treino Certo/Errado --------------------
@@ -2824,6 +2846,7 @@ function startQuiz(onlyItems=null,options={}) {
     ?pool.length:Number($("#quiz-length").value);
   const items=shuffle(pool).slice(0,Math.min(requested,pool.length));
   quizState={questions:items,index:0,selected:null,answers:[],reviewMode:Boolean(options.reviewMode)};
+  beginActivitySession("quiz",items[0]||{});
   $("#quiz-welcome").classList.add("hidden");
   $("#quiz-summary").classList.add("hidden");
   $("#quiz-card").classList.remove("hidden");
@@ -2869,6 +2892,7 @@ function submitAnswer() {
   if(quizState.selected===null)return;
   const item=quizState.questions[quizState.index],chosen=quizState.selected,unknown=chosen==="unknown";
   const correct=!unknown&&chosen===item.answer;
+  recordActivityAnswer("quiz",item,item.statement,unknown?"Não sei":chosen?"Certo":"Errado",unknown?null:correct,item.answer?"Certo":"Errado",unknown?"unknown":correct?"correct":"incorrect",{unknown});
   quizState.answers.push({item,chosen,correct,unknown});
   if(!correct)recordCEReviewMiss(item,chosen,quizState.reviewMode);
   else if(quizState.reviewMode)recordCEReviewSuccess(item);
@@ -2926,6 +2950,7 @@ function showQuizSummary() {
   }
   $("#retry-mistakes").classList.toggle("hidden",mistakes.length===0);
   renderCEReviewOverview();
+  finishActivitySession("completed");
 }
 function nextQuestion() {
   if(quizState.index>=quizState.questions.length-1){showQuizSummary();return;}
@@ -3124,6 +3149,7 @@ function startMultiCEGame(onlyGroups=null){
   const amount=value==="todas"?pool.length:Number(value);
   const selected=onlyGroups?shuffle(pool):shuffle(pool).slice(0,Math.min(amount,pool.length));
   multiCEState={groups:selected,articleIndex:0,statementIndex:0,selected:null,answers:[]};
+  beginActivitySession("multiCE",selected[0]||{});
   $("#multi-ce-welcome").classList.add("hidden");
   $("#multi-ce-summary").classList.add("hidden");
   $("#multi-ce-card").classList.remove("hidden");
@@ -3176,6 +3202,7 @@ function submitMultiCEAnswer(){
   const group=multiCEState.groups[multiCEState.articleIndex];
   const item=group.statements[multiCEState.statementIndex];
   const correct=multiCEState.selected===item.answer;
+  recordActivityAnswer("multiCE",{...group,article:group.article_label,topic:group.topic},item.prompt,multiCEState.selected?"Certo":"Errado",correct,item.answer?"Certo":"Errado",correct?"correct":"incorrect");
   multiCEState.answers.push({group,item,chosen:multiCEState.selected,correct});
   if(!correct){
     recordCEReviewMiss({
@@ -3267,6 +3294,7 @@ function showMultiCESummary(){
   }
   const failedIds=new Set(mistakes.map(a=>a.group.id));
   $("#multi-ce-retry-mistakes").classList.toggle("hidden",failedIds.size===0);
+  finishActivitySession("completed");
 }
 
 
@@ -3536,6 +3564,7 @@ function startBeforeAfterGame(items=null,options={}) {
   const amount=Array.isArray(items)||options.reviewMode?pool.length:length==="todas"?pool.length:Math.min(Number(length)||5,pool.length);
   beforeAfterState={questions:shuffle(pool).slice(0,amount).map(prepareBeforeAfterQuestion),
     index:0,selected:null,answers:[],answered:false,changeQuestion:null,changeSelected:null,changeAnswered:false,reviewMode:Boolean(options.reviewMode)};
+  beginActivitySession("beforeAfter",beforeAfterState.questions[0]?.change||{});
   $("#before-after-welcome").classList.add("hidden");$("#before-after-summary").classList.add("hidden");$("#before-after-card").classList.remove("hidden");
   renderBeforeAfterQuestion();
 }
@@ -3575,6 +3604,8 @@ function confirmBeforeAfterAnswer() {
   if(beforeAfterState.selected===null||beforeAfterState.answered)return;
   const question=beforeAfterState.questions[beforeAfterState.index],change=question.change;
   const correct=beforeAfterState.selected===question.correctIndex;
+  const chosenVersion=question.options[beforeAfterState.selected];
+  recordActivityAnswer("beforeAfter",change,"Qual versão corresponde à captura mais recente?",(beforeAfterState.selected===0?"Versão A: ":"Versão B: ")+(chosenVersion?.text||""),correct,"Versão atual",correct?"correct":"incorrect",{stage:"identificar versão"});
   beforeAfterState.answered=true;
   [...$("#before-after-options").children].forEach(button=>button.disabled=true);
   $("#before-after-submit").disabled=true;
@@ -3613,6 +3644,8 @@ function chooseBeforeAfterChangeAnswer(index) {
   const question=beforeAfterState.changeQuestion,selected=question.options[index];
   if(!selected)return;
   const correct=selected.key===question.correctKey;
+  const change=beforeAfterState.questions[beforeAfterState.index].change;
+  recordActivityAnswer("beforeAfter",change,"Qual tipo de alteração ocorreu?",selected.label,correct,question.options.find(option=>option.key===question.correctKey)?.label,correct?"correct":"incorrect",{stage:"classificar alteração"});
   beforeAfterState.changeSelected=index;beforeAfterState.changeAnswered=true;
   [...$("#before-after-change-options").children].forEach((button,i)=>{
     button.disabled=true;button.classList.toggle("is-correct",question.options[i].key===question.correctKey);
@@ -3620,7 +3653,6 @@ function chooseBeforeAfterChangeAnswer(index) {
   });
   $("#before-after-change-feedback").textContent=(correct?"✓ Correto. ":"✕ Resposta correta: ")+question.options.find(option=>option.key===question.correctKey).label+" "+question.explanation;
   $("#before-after-change-feedback").className="before-after-change-feedback "+(correct?"correct":"incorrect");
-  const change=beforeAfterState.questions[beforeAfterState.index].change;
   const versionCorrect=beforeAfterState.selected===beforeAfterState.questions[beforeAfterState.index].correctIndex;
   const complete=versionCorrect&&correct;
   beforeAfterState.answers.push({item:change,correct:complete,version_correct:versionCorrect,change_correct:correct});
@@ -3655,6 +3687,7 @@ function showBeforeAfterSummary() {
     const note=document.createElement("p");note.textContent="Muito bem! Você identificou as versões e compreendeu as alterações deste treino.";box.append(note);
   }
   $("#before-after-retry-mistakes").classList.toggle("hidden",mistakes.length===0);
+  finishActivitySession("completed");
 }
 function startBeforeAfterReviewSession() {
   const now=Date.now();
@@ -4096,6 +4129,7 @@ function startMemorySession(onlyCards = null) {
   const length = $("#memory-length").value;
   const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
   const selected = onlyCards ? pool : pool.slice(0, amount);
+  beginActivitySession("memory",selected[0]||{});
   memoryState = {
     cards: selected.map(card => ({
       ...card,
@@ -4188,6 +4222,11 @@ function rateMemoryCard(rating) {
   };
   saveMemoryProgress(progress);
   recordDifficultArticleMemoryRating(card,rating);
+  const memoryResponse=$("#memory-recall").value.trim();
+  const memoryRatingLabel=rating==="good"?"Lembrei bem":rating==="hard"?"Lembrei em parte":"Esqueci";
+  recordActivityAnswer("memory",card,card.currentPrompt?.text||"Lembre o conteúdo do cartão.",memoryRatingLabel,
+    rating==="good"?true:rating==="again"?false:null,card.custom_answer||card.literal_text||"Conferência do cartão",
+    rating==="good"?"correct":rating==="again"?"incorrect":"partial",{self_assessed:true,free_response:memoryResponse,rating});
   memoryState.ratings.push({ card, rating, next_due: progress[card.id].next_due });
   renderMemoryOverview();
 
@@ -4227,9 +4266,11 @@ function showMemorySummary() {
   });
   $("#memory-retry-again").classList.toggle("hidden", again.length === 0);
   renderMemoryOverview();
+  finishActivitySession("completed");
 }
 
 function showView(view) {
+  if(activityCurrentSession&&activityCurrentSession.status==="active"&&!activitySessionMatchesView(activityCurrentSession.mode,view))finishActivitySession("interrupted");
   const quiz = view === "quiz";
   const cloze = view === "cloze";
   const findError = view === "find-error";
@@ -4238,6 +4279,7 @@ function showView(view) {
   const beforeAfter = view === "before-after";
   const memory = view === "memory";
   const review = view === "review";
+  const history = view === "history";
   const radar = view === "radar";
   const law = view === "law";
   $("#radar-view").classList.toggle("hidden", !radar);
@@ -4250,6 +4292,7 @@ function showView(view) {
   $("#before-after-view").classList.toggle("hidden", !beforeAfter);
   $("#memory-view").classList.toggle("hidden", !memory);
   $("#review-view").classList.toggle("hidden", !review);
+  $("#history-view").classList.toggle("hidden", !history);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-law").classList.toggle("active", law);
   $("#tab-quiz").classList.toggle("active", quiz);
@@ -4260,7 +4303,8 @@ function showView(view) {
   $("#tab-before-after").classList.toggle("active", beforeAfter);
   $("#tab-memory").classList.toggle("active", memory);
   $("#tab-review").classList.toggle("active", review);
-  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review] ].forEach(([id, active]) => {
+  $("#tab-history").classList.toggle("active", history);
+  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -4273,6 +4317,7 @@ function showView(view) {
   else if (beforeAfter) $("#before-after-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (memory) $("#memory-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (review) $("#review-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (history) $("#history-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -4346,7 +4391,7 @@ $("#law-training-false").addEventListener("click", () => answerLegalTrainingCE(f
 $("#law-training-reveal").addEventListener("click", revealLegalTrainingRecall);
 $("#law-training-check").addEventListener("click", checkLegalTrainingCloze);
 $("#law-training-next").addEventListener("click", nextLegalTrainingItem);
-$("#law-training-close").addEventListener("click", () => $("#law-training-panel").classList.add("hidden"));
+$("#law-training-close").addEventListener("click", () => { $("#law-training-panel").classList.add("hidden"); finishActivitySession("interrupted"); });
 document.addEventListener("selectionchange", queueLegalExcerptSelectionUpdate);
 $("#law-selection-toolbar").addEventListener("mousedown", event => event.preventDefault());
 $("#law-train-selection").addEventListener("click", trainSelectedLegalExcerpt);
@@ -4361,9 +4406,9 @@ document.addEventListener("selectionchange", updateClozeSelectionToolbar);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
 $("#next-cloze").addEventListener("click", () => {
-  if (clozeCurrent && clozeCurrent.sourceType === "selection") showView("law");
+  if (clozeCurrent && clozeCurrent.sourceType === "manual-selection") { finishActivitySession("completed"); showView("law"); }
   else if (clozeCurrent && clozeCurrent.sourceType === "review") nextClozeReviewItem();
-  else startCloze();
+  else { finishActivitySession("completed"); startCloze(); }
 });
 $("#start-error").addEventListener("click", () => startFindErrorGame());
 $("#error-category").addEventListener("change", updateFindErrorFilters);
@@ -4722,3 +4767,330 @@ function recordLegalTrainingClozeReview(item,inputs){
     }else recordClozeReviewError(current,blank,input.value||"");
   });
 }
+
+
+const ACTIVITY_EVENTS_KEY="radarLegislativo.activityEvents.v1";
+const ACTIVITY_SESSIONS_KEY="radarLegislativo.activitySessions.v1";
+const ACTIVITY_ACTIVE_SESSION_KEY="radarLegislativo.activityActiveSession.v1";
+const ACTIVITY_EVENT_LIMIT=6000;
+const ACTIVITY_SESSION_LIMIT=500;
+let activityCurrentSession=null;
+
+function loadActivityEvents(){
+  try{const value=JSON.parse(localStorage.getItem(ACTIVITY_EVENTS_KEY)||"[]");return Array.isArray(value)?value:[];}
+  catch(_){return [];}
+}
+function saveActivityEvents(events){
+  try{localStorage.setItem(ACTIVITY_EVENTS_KEY,JSON.stringify(events.slice(-ACTIVITY_EVENT_LIMIT)));return true;}
+  catch(error){console.warn("Não foi possível salvar o histórico de atividades:",error);return false;}
+}
+function loadActivitySessions(){
+  try{const value=JSON.parse(localStorage.getItem(ACTIVITY_SESSIONS_KEY)||"[]");return Array.isArray(value)?value:[];}
+  catch(_){return [];}
+}
+function saveActivitySessions(sessions){
+  try{localStorage.setItem(ACTIVITY_SESSIONS_KEY,JSON.stringify(sessions.slice(-ACTIVITY_SESSION_LIMIT)));return true;}
+  catch(error){console.warn("Não foi possível salvar as sessões de estudo:",error);return false;}
+}
+function activityModeInfo(mode){
+  return ({
+    quiz:{label:"Treinar C/E",view:"quiz"},cloze:{label:"Completar Lei Seca",view:"cloze"},
+    error:{label:"Encontre o erro",view:"find-error"},article:{label:"Descubra o artigo",view:"article"},
+    multiCE:{label:"Várias afirmações",view:"multi-ce"},beforeAfter:{label:"Antes e depois",view:"before-after"},
+    memory:{label:"Memorização ativa",view:"memory"},legalTraining:{label:"Treino na Biblioteca Lei Seca",view:"law"},
+    leiSeca:{label:"Lei Seca · Biblioteca",view:"law"}
+  })[mode]||{label:String(mode||"Estudo"),view:""};
+}
+function activityContextFor(item={},fallback={}){
+  const lawId=item.law_id||fallback.law_id||"";
+  const law=legalLaws.find(entry=>entry.id===lawId);
+  return {
+    category:item.category||fallback.category||(law?legalLawMatter(law):"Outras matérias"),
+    topic:item.topic||fallback.topic||"",
+    law_id:lawId,
+    law_title:item.law_title||item.law_short_title||fallback.law_title||law?.short_title||law?.title||"",
+    article:item.article||item.article_key||item.answer_article_key||fallback.article||"",
+    source_url:item.source_url||item.sourceUrl||fallback.source_url||""
+  };
+}
+function activitySessionMatchesView(mode,view){
+  return activityModeInfo(mode).view===view;
+}
+function beginActivitySession(mode,context={}){
+  if(activityCurrentSession&&activityCurrentSession.status==="active")finishActivitySession("interrupted");
+  const info=activityModeInfo(mode),meta=activityContextFor(context);
+  const id=Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,9);
+  activityCurrentSession={
+    id,mode,mode_label:info.label,started_at:new Date().toISOString(),ended_at:null,status:"active",
+    answers_total:0,correct_count:0,incorrect_count:0,unknown_count:0,partial_count:0,
+    self_assessed_count:0,activity_count:0,categories:meta.category?[meta.category]:[],
+    topics:meta.topic?[meta.topic]:[],law_ids:meta.law_id?[meta.law_id]:[],
+    law_titles:meta.law_title?[meta.law_title]:[],articles:meta.article?[meta.article]:[],
+    last_activity_at:new Date().toISOString()
+  };
+  try{localStorage.setItem(ACTIVITY_ACTIVE_SESSION_KEY,id);}catch(_){}
+  const sessions=loadActivitySessions();sessions.push({...activityCurrentSession});saveActivitySessions(sessions);
+  return activityCurrentSession;
+}
+function ensureActivitySession(mode,context={}){
+  if(activityCurrentSession&&activityCurrentSession.status==="active"&&activityCurrentSession.mode===mode)return activityCurrentSession;
+  return beginActivitySession(mode,context);
+}
+function updateActivitySession(event){
+  if(!activityCurrentSession||activityCurrentSession.status!=="active")return;
+  const session=activityCurrentSession;
+  session.activity_count=(Number(session.activity_count)||0)+1;
+  session.last_activity_at=event.occurred_at;
+  if(event.event_type==="answer"){
+    session.answers_total=(Number(session.answers_total)||0)+1;
+    if(event.outcome==="correct")session.correct_count++;
+    else if(event.outcome==="incorrect")session.incorrect_count++;
+    else if(event.outcome==="unknown")session.unknown_count++;
+    else if(event.outcome==="partial")session.partial_count++;
+    else if(event.outcome==="self_assessed")session.self_assessed_count++;
+  }
+  [["categories",event.category],["topics",event.topic],["law_ids",event.law_id],["law_titles",event.law_title],["articles",event.article]].forEach(([key,value])=>{
+    if(value&&!session[key].includes(value))session[key].push(value);
+  });
+  const sessions=loadActivitySessions(),index=sessions.findIndex(item=>item.id===session.id);
+  if(index>=0)sessions[index]={...session};
+  else sessions.push({...session});
+  saveActivitySessions(sessions);
+}
+function finishActivitySession(status="completed"){
+  if(!activityCurrentSession||activityCurrentSession.status!=="active")return;
+  activityCurrentSession.status=status;
+  activityCurrentSession.ended_at=new Date().toISOString();
+  const sessions=loadActivitySessions(),index=sessions.findIndex(item=>item.id===activityCurrentSession.id);
+  if(index>=0)sessions[index]={...activityCurrentSession};else sessions.push({...activityCurrentSession});
+  saveActivitySessions(sessions);
+  try{if(localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
+  activityCurrentSession=null;
+  if($("#history-view")&&!$("#history-view").classList.contains("hidden"))renderActivityHistory();
+}
+function recordActivityAnswer(mode,item,prompt,chosen,correct,expected,outcome,extra={}){
+  ensureActivitySession(mode,item||{});
+  const meta=activityContextFor(item||{});
+  const status=outcome||(correct===true?"correct":correct===false?"incorrect":"self_assessed");
+  const event={
+    id:Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8),
+    event_type:"answer",session_id:activityCurrentSession.id,occurred_at:new Date().toISOString(),
+    mode,mode_label:activityModeInfo(mode).label,
+    question_id:item.id||"",prompt:String(prompt||item.question||item.statement||item.prompt||"").slice(0,900),
+    chosen_response:String(chosen??"").slice(0,600),expected_response:String(expected??"").slice(0,600),
+    correct:typeof correct==="boolean"?correct:null,outcome:status,
+    category:meta.category,topic:meta.topic,law_id:meta.law_id,law_title:meta.law_title,
+    article:meta.article,source_url:meta.source_url,extra
+  };
+  const events=loadActivityEvents();events.push(event);saveActivityEvents(events);
+  updateActivitySession(event);
+  if($("#history-view")&&!$("#history-view").classList.contains("hidden"))renderActivityHistory();
+  return event;
+}
+function recordActivityArticleStudy(law,article,isStudied){
+  const context={law_id:law?.id,law_title:law?.short_title||law?.title,category:legalLawMatter(law||{}),article};
+  beginActivitySession("leiSeca",context);
+  const event={
+    id:Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8),
+    event_type:"article_status",session_id:activityCurrentSession.id,occurred_at:new Date().toISOString(),
+    mode:"leiSeca",mode_label:activityModeInfo("leiSeca").label,
+    question_id:"",prompt:(isStudied?"Artigo marcado como estudado: ":"Artigo desmarcado como estudado: ")+article,
+    chosen_response:isStudied?"Marcado como estudado":"Marcado como não estudado",
+    expected_response:"",correct:null,outcome:isStudied?"studied":"unmarked",
+    category:context.category,topic:"Leitura e estudo da legislação",
+    law_id:law?.id||"",law_title:context.law_title,article,
+    source_url:law?.url||"",extra:{is_studied:Boolean(isStudied)}
+  };
+  const events=loadActivityEvents();events.push(event);saveActivityEvents(events);updateActivitySession(event);
+  finishActivitySession("completed");
+}
+function currentClozePrompt(current,blank){
+  const source=String(current?.text||"");
+  return source.slice(0,blank.start)+"________"+source.slice(blank.end);
+}
+function activityLegalTrainingItem(item){
+  return {...item,law_id:legalSelectedLaw?.id||"",law_title:legalSelectedLaw?.short_title||legalSelectedLaw?.title||"",
+    article:legalSelectedArticle||"",article_key:legalSelectedArticle||"",
+    category:legalSelectedLaw?legalLawMatter(legalSelectedLaw):"Direito Previdenciário",
+    topic:item.kindLabel||"Treinamento da Lei Seca",source_url:item.sourceUrl||legalSnapshot?.source_url_used||legalSelectedLaw?.url||""};
+}
+function recoverInterruptedActivitySession(){
+  let activeId="";
+  try{activeId=localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)||"";}catch(_){}
+  if(!activeId)return;
+  const sessions=loadActivitySessions(),index=sessions.findIndex(item=>item.id===activeId&&item.status==="active");
+  if(index>=0){sessions[index]={...sessions[index],status:"interrupted",ended_at:new Date().toISOString()};saveActivitySessions(sessions);}
+  try{localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
+}
+function syncLegacyLegalStudyEvents(){
+  const studied=legalStudiedSet(),dates=loadLegalStudiedDates(),events=loadActivityEvents();
+  const existing=new Set(events.filter(item=>item.event_type==="article_status"&&item.outcome==="studied").map(item=>item.law_id+"::"+item.article));
+  let changed=false;
+  studied.forEach(key=>{
+    if(existing.has(key))return;
+    const [lawId,article]=key.split("::"),law=legalLaws.find(item=>item.id===lawId),date=dates[key]||null;
+    events.push({
+      id:"legacy-study::"+key,event_type:"article_status",session_id:"",occurred_at:date,
+      mode:"leiSeca",mode_label:"Lei Seca · Biblioteca",question_id:"",
+      prompt:"Artigo já marcado como estudado: "+article,chosen_response:"Marcado como estudado",
+      expected_response:"",correct:null,outcome:"studied",category:law?legalLawMatter(law):"Outras matérias",
+      topic:"Leitura e estudo da legislação",law_id:lawId,law_title:law?.short_title||law?.title||lawId,
+      article,source_url:law?.url||"",extra:{is_studied:true,legacy_import:true}
+    });
+    existing.add(key);changed=true;
+  });
+  if(changed)saveActivityEvents(events);
+}
+function historyDate(value){
+  if(!value)return "Data não registrada";
+  return formatDate(value);
+}
+function historyOutcomeLabel(event){
+  if(event.event_type==="article_status")return event.outcome==="studied"?"Artigo estudado":"Estudo desmarcado";
+  return ({correct:"Acertou",incorrect:"Errou",unknown:"Não sei",partial:"Lembrou em parte",self_assessed:"Autoavaliação"})[event.outcome]||"Registrado";
+}
+function createHistoryActivityCard(event){
+  const card=document.createElement("article");card.className="history-card";
+  const head=document.createElement("div");head.className="history-card-head";
+  const mode=document.createElement("span");mode.className="history-mode-tag";mode.textContent=event.mode_label||activityModeInfo(event.mode).label;
+  const result=document.createElement("span");result.className="history-result-tag "+(event.outcome||"");
+  result.textContent=historyOutcomeLabel(event);head.append(mode,result);
+  const title=document.createElement("h3");title.textContent=event.prompt||"Atividade registrada";
+  const meta=document.createElement("p");meta.className="history-card-meta";
+  meta.textContent=[historyDate(event.occurred_at),event.category,event.topic,event.law_title,event.article].filter(Boolean).join(" · ");
+  card.append(head,title,meta);
+  if(event.event_type==="answer"){
+    const detail=document.createElement("p");detail.className="history-card-detail";
+    detail.textContent="Resposta escolhida: "+(event.chosen_response||"Não registrada")+
+      (event.expected_response?" · Resposta de referência: "+event.expected_response:"");
+    card.append(detail);
+  }
+  if(event.source_url){
+    const actions=document.createElement("div");actions.className="history-card-actions";
+    const link=document.createElement("a");link.className="secondary-button";link.href=event.source_url;link.target="_blank";link.rel="noopener noreferrer";
+    link.textContent="Consultar fonte ↗";actions.append(link);card.append(actions);
+  }
+  return card;
+}
+function createHistorySessionCard(session){
+  const card=document.createElement("article");card.className="history-card history-session-card";
+  const content=document.createElement("div"),title=document.createElement("strong"),detail=document.createElement("span");
+  title.textContent=session.mode_label||activityModeInfo(session.mode).label;
+  const resultSummary=(session.answers_total||0)+" resposta(s) · "+(session.correct_count||0)+" acerto(s) · "+(session.incorrect_count||0)+" erro(s)"
+    +(session.unknown_count?" · "+session.unknown_count+" “Não sei”":"")
+    +(session.partial_count?" · "+session.partial_count+" parcial(is)":"");
+  const studySummary=(session.categories||[]).join(", ")+(session.topics?.length?" · "+session.topics.join(", "):"");
+  detail.textContent=historyDate(session.started_at)+" · "+resultSummary+(studySummary?" · "+studySummary:"");
+  content.append(title,detail);
+  const status=document.createElement("span");status.className="history-session-status "+(session.status||"");
+  status.textContent=session.status==="completed"?"Concluída":session.status==="interrupted"?"Interrompida":session.status==="active"?"Em andamento":"Registrada";
+  card.append(content,status);return card;
+}
+function fillHistorySelect(selector,label,values){
+  const select=$(selector),previous=select.value||"todos";
+  select.replaceChildren(new Option(label,"todos"));
+  values.forEach(value=>select.append(new Option(value,value)));
+  if([...select.options].some(option=>option.value===previous))select.value=previous;
+}
+function renderHistoryUnstudiedArticles(){
+  const list=$("#history-unstudied-list");if(!list)return;
+  const studied=legalStudiedSet(),query=normalizeAnswer($("#history-unstudied-search").value||"");
+  const articles=[];
+  legalLaws.forEach(law=>{
+    const snapshot=memorySourceSnapshots.get(law.id);
+    const entries=snapshot?.articles&&typeof snapshot.articles==="object"?Object.entries(snapshot.articles):[];
+    entries.forEach(([article,text])=>{
+      if(typeof text!=="string"||!text.trim()||studied.has(legalArticleKey(law.id,article)))return;
+      const item={law_id:law.id,law_title:law.short_title||law.title,category:legalLawMatter(law),article,text};
+      if(query&&!normalizeAnswer([item.law_title,item.category,article].join(" ")).includes(query))return;
+      articles.push(item);
+    });
+  });
+  articles.sort((a,b)=>a.category.localeCompare(b.category,"pt-BR")||a.law_title.localeCompare(b.law_title,"pt-BR")||compareLegalArticles(a.article,b.article));
+  $("#history-unstudied-count").textContent=String(articles.length);
+  $("#history-unstudied-note").textContent=articles.length
+    ?"Artigos disponíveis nas capturas que ainda não estão marcados como estudados."
+    :"Não há artigos pendentes nesta busca ou as capturas não possuem outros artigos disponíveis.";
+  list.replaceChildren();
+  if(!articles.length){const empty=document.createElement("p");empty.className="empty-state";empty.textContent="Nenhum artigo não estudado encontrado nesta seleção.";list.append(empty);return;}
+  articles.slice(0,60).forEach(item=>{
+    const card=document.createElement("article");card.className="history-card history-unstudied-card";
+    const content=document.createElement("div");content.className="history-card-content";
+    const title=document.createElement("h3");title.textContent=item.law_title+" · "+item.article;
+    const meta=document.createElement("p");meta.className="history-card-meta";meta.textContent=item.category;
+    content.append(title,meta);
+    const button=document.createElement("button");button.type="button";button.className="secondary-button";button.textContent="Abrir artigo";
+    button.addEventListener("click",()=>openHistoryArticle(item.law_id,item.article));
+    card.append(content,button);list.append(card);
+  });
+  if(articles.length>60){const note=document.createElement("p");note.className="history-results-count";note.textContent="Mostrando 60 de "+articles.length+" artigos. Use a busca para localizar os demais.";list.append(note);}
+}
+async function openHistoryArticle(lawId,article){
+  try{
+    await loadLegalLaw(lawId);
+    if(!legalEntries.some(([key])=>key===article)){
+      $("#history-unstudied-note").textContent="Esse artigo não está presente na captura atual. A lista será atualizada.";
+      return;
+    }
+    legalSelectedArticle=article;$("#law-article-select").value=article;renderLegalArticlePicker();showView("law");
+  }catch(error){console.warn("Não foi possível abrir o artigo a partir do histórico:",error);}
+}
+function renderActivityHistory(){
+  const list=$("#history-activity-list");if(!list)return;
+  const events=loadActivityEvents().sort((a,b)=>(new Date(b.occurred_at||0).getTime()||0)-(new Date(a.occurred_at||0).getTime()||0));
+  const sessions=loadActivitySessions().sort((a,b)=>new Date(b.started_at||0)-new Date(a.started_at||0));
+  const answers=events.filter(event=>event.event_type==="answer");
+  const correct=answers.filter(event=>event.outcome==="correct").length;
+  const incorrect=answers.filter(event=>event.outcome==="incorrect").length;
+  const denominator=correct+incorrect;
+  const studied=legalStudiedSet();
+  const topics=new Set(events.filter(event=>event.topic).map(event=>(event.category||"")+"::"+event.topic));
+  $("#history-total-answers").textContent=String(answers.length);
+  $("#history-accuracy").textContent=denominator?Math.round(correct/denominator*100)+"%":"—";
+  $("#history-session-count").textContent=String(sessions.length);
+  $("#history-studied-count").textContent=String(studied.size);
+  $("#history-topic-count").textContent=String(topics.size);
+  const recent=$("#history-recent-list");recent.replaceChildren();
+  const recentEvents=events.filter(event=>event.event_type==="answer"||(event.event_type==="article_status"&&event.outcome==="studied")).slice(0,8);
+  if(!recentEvents.length){const empty=document.createElement("p");empty.className="empty-state";empty.textContent="As atividades aparecerão aqui depois que você responder às questões ou marcar artigos como estudados.";recent.append(empty);}
+  else recentEvents.forEach(event=>recent.append(createHistoryActivityCard(event)));
+
+  const mode=$("#history-mode-filter").value||"todos",category=$("#history-category-filter").value||"todos";
+  const query=normalizeAnswer($("#history-query").value||"");
+  fillHistorySelect("#history-mode-filter","Todos os modos",[...new Set(events.map(event=>event.mode_label||activityModeInfo(event.mode).label))].sort((a,b)=>a.localeCompare(b,"pt-BR")));
+  fillHistorySelect("#history-category-filter","Todas as matérias",[...new Set(events.map(event=>event.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"pt-BR")));
+  const filtered=events.filter(event=>
+    (mode==="todos"||(event.mode_label||activityModeInfo(event.mode).label)===mode)&&
+    (category==="todos"||event.category===category)&&
+    (!query||normalizeAnswer([event.prompt,event.chosen_response,event.expected_response,event.topic,event.law_title,event.article].join(" ")).includes(query))
+  );
+  $("#history-results-count").textContent=filtered.length+" atividade(s) encontrada(s)";
+  list.replaceChildren();
+  if(!filtered.length){const empty=document.createElement("p");empty.className="empty-state";empty.textContent=events.length?"Nenhuma atividade corresponde aos filtros.":"Ainda não há respostas salvas.";list.append(empty);}
+  else filtered.slice(0,100).forEach(event=>list.append(createHistoryActivityCard(event)));
+  if(filtered.length>100){const note=document.createElement("p");note.className="history-results-count";note.textContent="Mostrando as 100 atividades mais recentes de "+filtered.length+" encontradas.";list.append(note);}
+
+  const sessionList=$("#history-session-list");sessionList.replaceChildren();
+  if(!sessions.length){const empty=document.createElement("p");empty.className="empty-state";empty.textContent="As sessões aparecerão aqui quando você iniciar um treinamento.";sessionList.append(empty);}
+  else sessions.slice(0,30).forEach(session=>sessionList.append(createHistorySessionCard(session)));
+  renderHistoryUnstudiedArticles();
+}
+function initializeActivityHistory(){
+  recoverInterruptedActivitySession();
+  syncLegacyLegalStudyEvents();
+}
+$("#tab-history").addEventListener("click",async()=>{
+  renderActivityHistory();showView("history");
+  try{await ensureMemorySourceSnapshots();renderActivityHistory();}
+  catch(error){$("#history-unstudied-note").textContent="Não foi possível carregar todas as capturas. Os demais registros do histórico continuam disponíveis.";}
+});
+$("#history-refresh").addEventListener("click",async()=>{
+  try{await ensureMemorySourceSnapshots();}catch(_){}
+  syncLegacyLegalStudyEvents();renderActivityHistory();
+});
+$("#history-mode-filter").addEventListener("change",renderActivityHistory);
+$("#history-category-filter").addEventListener("change",renderActivityHistory);
+$("#history-query").addEventListener("input",renderActivityHistory);
+$("#history-unstudied-search").addEventListener("input",renderHistoryUnstudiedArticles);
+$("#tab-history").setAttribute("aria-label","Abrir histórico de estudo");
+initializeActivityHistory();
