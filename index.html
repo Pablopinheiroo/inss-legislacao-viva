@@ -346,26 +346,40 @@
   <main id="simulado-view" class="page-shell hidden">
     <section class="intro simulado-intro">
       <div>
-        <p class="eyebrow">TREINAMENTO · 10 QUESTÕES</p>
+        <p class="eyebrow">TREINAMENTO · CERTO OU ERRADO</p>
         <h1>Simulados</h1>
-        <p class="subtitle">Faça um treino no estilo Certo ou Errado, responda no seu ritmo e confira o resultado somente ao finalizar.</p>
+        <p class="subtitle">Escolha entre o simulado tradicional, sem cronômetro, e o simulado rápido, com tempo para responder.</p>
       </div>
-      <div class="simulado-mode-note"><strong>Sem limite de tempo</strong><span>Você pode pausar, voltar às questões anteriores e revisar suas marcações antes de finalizar.</span></div>
+      <div class="simulado-mode-note"><strong>Dois formatos de treinamento</strong><span>Ambos permitem navegar pelas questões, alterar respostas e conferir a correção completa ao finalizar.</span></div>
     </section>
 
     <p id="simulado-bank-note" class="manual-check-note">Carregando banco de questões para os simulados...</p>
 
-    <section id="simulado-welcome" class="empty-state simulado-welcome">
-      <span class="simulado-welcome-icon">10</span>
-      <h2>Seu simulado está pronto para começar</h2>
-      <p>Serão selecionadas 10 questões aleatórias do banco disponível. Você poderá navegar entre elas, alterar respostas e deixar alguma em branco.</p>
-      <button id="start-simulado" class="primary-button" type="button" disabled>Iniciar simulado</button>
+    <section id="simulado-welcome" class="simulado-welcome">
+      <div class="simulado-mode-picker">
+        <article class="simulado-mode-card">
+          <span class="simulado-welcome-icon">10</span>
+          <div><p class="eyebrow">SEM CRONÔMETRO</p><h2>Simulado tradicional</h2>
+            <p>10 questões aleatórias. Faça no seu ritmo, navegue livremente e finalize quando estiver pronto.</p></div>
+          <button id="start-simulado" class="primary-button" type="button" disabled>Iniciar simulado</button>
+        </article>
+        <article class="simulado-mode-card simulado-mode-card-quick">
+          <span class="simulado-welcome-icon">20</span>
+          <div><p class="eyebrow">COM CRONÔMETRO</p><h2>Simulado rápido</h2>
+            <p>20 questões aleatórias com 20 minutos no total, em média 1 minuto por questão. O simulado termina automaticamente quando o tempo acabar.</p></div>
+          <button id="start-simulado-rapido" class="primary-button" type="button" disabled>Iniciar simulado rápido</button>
+        </article>
+      </div>
+      <p class="simulado-mode-footnote">Você pode finalizar antecipadamente o simulado rápido. Questões deixadas em branco serão contabilizadas como não respondidas.</p>
     </section>
 
     <section id="simulado-card" class="simulado-card hidden" aria-live="polite">
       <div class="simulado-card-top">
-        <span class="simulado-chip">SIMULADO · CERTO OU ERRADO</span>
-        <strong id="simulado-progress-label">Questão 1 de 10</strong>
+        <span id="simulado-type-label" class="simulado-chip">SIMULADO · 10 QUESTÕES</span>
+        <div class="simulado-card-top-right">
+          <span id="simulado-timer-wrap" class="simulado-timer-wrap hidden"><small>Tempo restante</small><strong id="simulado-timer">20:00</strong></span>
+          <strong id="simulado-progress-label">Questão 1 de 10</strong>
+        </div>
       </div>
       <div class="simulado-progress-track" role="progressbar" aria-label="Progresso de navegação do simulado" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
         <span id="simulado-progress-fill"></span>
@@ -413,7 +427,7 @@
       </div>
     </section>
 
-    <footer class="footer-note"><strong>Treino sem cronômetro.</strong><span>O simulado usa questões do banco C/E disponível no Radar Legislativo. O resultado é exibido somente depois da finalização; questões erradas são enviadas à Central de revisão.</span></footer>
+    <footer class="footer-note"><strong>Dois formatos de treinamento.</strong><span>O tradicional tem 10 questões sem limite de tempo. O rápido tem 20 questões e cronômetro de 20 minutos. Nos dois formatos, o resultado completo aparece após a finalização e as questões erradas são enviadas à Central de revisão.</span></footer>
   </main>
 
   <main id="cloze-view" class="page-shell hidden">
