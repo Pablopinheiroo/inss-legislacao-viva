@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "description": "Banco inicial de itens autorais de Certo/Errado vinculados à matéria, ao assunto, à norma e ao artigo. Cada item contém trechos literais que fundamentam o gabarito; itens errados identificam a expressão incorreta.",
-  "source_snapshot_date": "2026-11-13",
+  "source_snapshot_date": "2026-11-14",
   "questions": [
     {
       "id": "8213-art1-01",
@@ -322,6 +322,42 @@
         "no prazo de dez dias"
       ],
       "wrong_expression": "quinze dias"
+    },
+    {
+      "id": "cf-art37-01",
+      "category": "Direito Constitucional",
+      "law_title": "Constituição Federal — Administração Pública",
+      "article": "Art. 37, caput",
+      "statement": "A administração pública direta e indireta deve observar apenas os princípios da legalidade, moralidade, publicidade e eficiência, sem a impessoalidade.",
+      "answer": false,
+      "explanation": "Errado. O caput do art. 37 inclui expressamente a impessoalidade entre os princípios que regem a Administração Pública.",
+      "literal_text": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "law_id": "constituicao-1988",
+      "article_key": "Art. 37",
+      "topic": "Princípios da Administração Pública",
+      "supporting_excerpts": [
+        "legalidade, impessoalidade, moralidade, publicidade e eficiência"
+      ],
+      "wrong_expression": "apenas os princípios da legalidade, moralidade, publicidade e eficiência, sem a impessoalidade"
+    },
+    {
+      "id": "8112-art5-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores Públicos",
+      "article": "Art. 5º, inciso V",
+      "statement": "Para a investidura em cargo público federal, a Lei 8.112/1990 exige idade mínima de 21 anos.",
+      "answer": false,
+      "explanation": "Errado. Um dos requisitos básicos previstos no art. 5º da Lei 8.112/1990 é ter idade mínima de 18 anos.",
+      "literal_text": "V - a idade mínima de dezoito anos;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 5",
+      "topic": "Requisitos para investidura em cargo público",
+      "supporting_excerpts": [
+        "idade mínima de dezoito anos"
+      ],
+      "wrong_expression": "21 anos"
     }
   ]
 }
