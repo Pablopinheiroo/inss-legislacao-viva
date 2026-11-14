@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "description": "Banco inicial de itens autorais de Certo/Errado vinculados a dispositivos e textos de fontes oficiais.",
+  "schema_version": 2,
+  "description": "Banco inicial de itens autorais de Certo/Errado vinculados à matéria, ao assunto, à norma e ao artigo. Cada item contém trechos literais que fundamentam o gabarito; itens errados identificam a expressão incorreta.",
   "source_snapshot_date": "2026-11-13",
   "questions": [
     {
@@ -12,7 +12,14 @@
       "answer": false,
       "explanation": "Errado. A Lei 8.213/1991 diz expressamente que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao texto do artigo.",
       "literal_text": "Art. 1º A Previdência Social, mediante contribuição, tem por fim assegurar aos seus beneficiários meios indispensáveis de manutenção, por motivo de incapacidade, desemprego involuntário, idade avançada, tempo de serviço, encargos familiares e prisão ou morte daqueles de quem dependiam economicamente.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 1",
+      "topic": "Finalidade e cobertura da Previdência Social",
+      "supporting_excerpts": [
+        "mediante contribuição"
+      ],
+      "wrong_expression": "independentemente de contribuição"
     },
     {
       "id": "8213-art2-02",
@@ -23,7 +30,13 @@
       "answer": true,
       "explanation": "Certo. O inciso II prevê justamente a uniformidade e a equivalência dos benefícios e serviços destinados às populações urbanas e rurais.",
       "literal_text": "II - uniformidade e equivalência dos benefícios e serviços às populações urbanas e rurais,",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 2",
+      "topic": "Princípios da Previdência Social",
+      "supporting_excerpts": [
+        "uniformidade e equivalência dos benefícios e serviços às populações urbanas e rurais"
+      ]
     },
     {
       "id": "8213-art2-06",
@@ -34,7 +47,14 @@
       "answer": false,
       "explanation": "Errado. A lei estabelece o contrário: o valor não pode ser inferior ao salário-mínimo.",
       "literal_text": "VI - valor da renda mensal dos benefícios substitutos do salário-de-contribuição ou do rendimento do trabalho do segurado não inferior ao do salário-mínimo;",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 2",
+      "topic": "Princípios da Previdência Social",
+      "supporting_excerpts": [
+        "não inferior ao do salário-mínimo"
+      ],
+      "wrong_expression": "poderá ser inferior ao salário-mínimo"
     },
     {
       "id": "8213-art2-08",
@@ -45,7 +65,14 @@
       "answer": true,
       "explanation": "Certo. O inciso VIII traz o caráter democrático e descentralizado da gestão e indica os grupos que participam dela.",
       "literal_text": "VIII - caráter democrático e descentralizado da gestão administrativa, com a participação do governo e da comunidade, em especial de trabalhadores em atividade, empregadores e aposentados.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 2",
+      "topic": "Princípios da Previdência Social",
+      "supporting_excerpts": [
+        "caráter democrático e descentralizado da gestão administrativa",
+        "com a participação do governo e da comunidade"
+      ]
     },
     {
       "id": "8212-art1-01",
@@ -56,7 +83,14 @@
       "answer": true,
       "explanation": "Certo. O artigo apresenta a Seguridade Social como um conjunto integrado de ações e cita as três áreas: saúde, previdência e assistência social.",
       "literal_text": "Art. 1º A Seguridade Social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 1",
+      "topic": "Conceito e abrangência da Seguridade Social",
+      "supporting_excerpts": [
+        "conjunto integrado de ações",
+        "saúde, à previdência e à assistência social"
+      ]
     },
     {
       "id": "8212-art3-01",
@@ -67,7 +101,13 @@
       "answer": true,
       "explanation": "Certo. O artigo 3º menciona expressamente o desemprego involuntário, ao lado de incapacidade, idade avançada, tempo de serviço, encargos de família, reclusão ou morte.",
       "literal_text": "Art. 3º A Previdência Social tem por fim assegurar aos seus beneficiários meios indispensáveis de manutenção, por motivo de incapacidade, idade avançada, tempo de serviço, desemprego involuntário, encargos de família e reclusão ou morte daqueles de quem dependiam economicamente.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 3",
+      "topic": "Finalidade e cobertura da Previdência Social",
+      "supporting_excerpts": [
+        "desemprego involuntário"
+      ]
     },
     {
       "id": "8212-art4-01",
@@ -78,7 +118,13 @@
       "answer": true,
       "explanation": "Certo. O art. 4º afirma expressamente que a assistência social é prestada independentemente de contribuição à Seguridade Social.",
       "literal_text": "Art. 4º A Assistência Social é a política social que provê o atendimento das necessidades básicas, traduzidas em proteção à família, à maternidade, à infância, à adolescência, à velhice e à pessoa portadora de deficiência, independentemente de contribuição à Seguridade Social.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 4",
+      "topic": "Natureza e princípios da Assistência Social",
+      "supporting_excerpts": [
+        "independentemente de contribuição à Seguridade Social"
+      ]
     },
     {
       "id": "loas-art1-01",
@@ -89,7 +135,14 @@
       "answer": false,
       "explanation": "Errado. A LOAS define a assistência social como uma política de Seguridade Social não contributiva.",
       "literal_text": "Art. 1º A assistência social, direito do cidadão e dever do Estado, é Política de Seguridade Social não contributiva, que provê os mínimos sociais, realizada através de um conjunto integrado de ações de iniciativa pública e da sociedade, para garantir o atendimento às necessidades básicas.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 1",
+      "topic": "Natureza e princípios da Assistência Social",
+      "supporting_excerpts": [
+        "não contributiva"
+      ],
+      "wrong_expression": "contributiva"
     },
     {
       "id": "loas-art4-03",
@@ -100,7 +153,14 @@
       "answer": true,
       "explanation": "Certo. O inciso III protege a dignidade, a autonomia e o direito a serviços de qualidade, além de vedar comprovação vexatória de necessidade.",
       "literal_text": "III - respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade;",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 4",
+      "topic": "Natureza e princípios da Assistência Social",
+      "supporting_excerpts": [
+        "respeito à dignidade do cidadão, à sua autonomia",
+        "vedando-se qualquer comprovação vexatória de necessidade"
+      ]
     },
     {
       "id": "loas-art4-04",
@@ -111,7 +171,15 @@
       "answer": false,
       "explanation": "Errado. A lei determina acesso sem discriminação de qualquer natureza e garante equivalência às populações urbanas e rurais.",
       "literal_text": "IV - igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza, garantindo-se equivalência às populações urbanas e rurais;",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 4",
+      "topic": "Natureza e princípios da Assistência Social",
+      "supporting_excerpts": [
+        "sem discriminação de qualquer natureza",
+        "garantindo-se equivalência às populações urbanas e rurais"
+      ],
+      "wrong_expression": "admitindo discriminação de natureza regional"
     },
     {
       "id": "8112-art2-01",
@@ -122,7 +190,13 @@
       "answer": true,
       "explanation": "Certo. Essa é a definição expressa de servidor apresentada pelo art. 2º da Lei 8.112/1990.",
       "literal_text": "Art. 2º Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 2",
+      "topic": "Servidor e cargo público",
+      "supporting_excerpts": [
+        "servidor é a pessoa legalmente investida em cargo público"
+      ]
     },
     {
       "id": "8112-art3-01",
@@ -133,7 +207,14 @@
       "answer": false,
       "explanation": "Errado. Cargo público é definido como conjunto de atribuições e responsabilidades previstas na estrutura organizacional, e não como conjunto de direitos e vantagens.",
       "literal_text": "Art. 3º Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 3",
+      "topic": "Servidor e cargo público",
+      "supporting_excerpts": [
+        "conjunto de atribuições e responsabilidades"
+      ],
+      "wrong_expression": "conjunto de direitos e vantagens"
     },
     {
       "id": "8112-art4-01",
@@ -144,7 +225,14 @@
       "answer": false,
       "explanation": "Errado. A regra é a proibição da prestação de serviços gratuitos; a lei ressalva apenas os casos previstos em lei.",
       "literal_text": "Art. 4º É proibida a prestação de serviços gratuitos, salvo os casos previstos em lei.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 4",
+      "topic": "Prestação de serviços gratuitos",
+      "supporting_excerpts": [
+        "É proibida a prestação de serviços gratuitos"
+      ],
+      "wrong_expression": "é permitida como regra"
     },
     {
       "id": "cf-art6-01",
@@ -155,7 +243,13 @@
       "answer": true,
       "explanation": "Certo. A previdência social aparece expressamente no rol de direitos sociais do art. 6º.",
       "literal_text": "Art. 6º São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados, na forma desta Constituição.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html",
+      "law_id": "constituicao-1988",
+      "article_key": "Art. 6",
+      "topic": "Direitos sociais na Constituição",
+      "supporting_excerpts": [
+        "a previdência social"
+      ]
     },
     {
       "id": "etica-art3-01",
@@ -166,7 +260,14 @@
       "answer": true,
       "explanation": "Certo. O art. 3º prevê sete integrantes e permite uma única recondução. O dispositivo também estabelece mandato de três anos, não coincidente.",
       "literal_text": "Art. 3º A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 3",
+      "topic": "Composição e mandato da Comissão de Ética Pública",
+      "supporting_excerpts": [
+        "sete brasileiros",
+        "permitida uma única recondução"
+      ]
     },
     {
       "id": "etica-art3-02",
@@ -177,7 +278,14 @@
       "answer": false,
       "explanation": "Errado. O decreto permite uma única recondução, e não duas.",
       "literal_text": "Art. 3º A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 3",
+      "topic": "Composição e mandato da Comissão de Ética Pública",
+      "supporting_excerpts": [
+        "permitida uma única recondução"
+      ],
+      "wrong_expression": "duas vezes"
     },
     {
       "id": "etica-art12-01",
@@ -188,7 +296,14 @@
       "answer": true,
       "explanation": "Certo. O § 3º prevê nova manifestação em dez dias quando forem juntados novos elementos de prova após a manifestação inicial.",
       "literal_text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 12",
+      "topic": "Processo de apuração ética e prazo de defesa",
+      "supporting_excerpts": [
+        "novos elementos de prova",
+        "no prazo de dez dias"
+      ]
     },
     {
       "id": "etica-art12-02",
@@ -199,7 +314,14 @@
       "answer": false,
       "explanation": "Errado. O prazo previsto no caput do art. 12 é de dez dias, não quinze.",
       "literal_text": "Art. 12. O processo de apuração de prática de ato em desrespeito ao preceituado no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal será instaurado, de ofício ou em razão de denúncia fundamentada, respeitando-se, sempre, as garantias do contraditório e da ampla defesa, pela Comissão de Ética Pública ou Comissões de Ética de que tratam o incisos II e III do art. 2º, conforme o caso, que notificará o investigado para manifestar-se, por escrito, no prazo de dez dias.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 12",
+      "topic": "Processo de apuração ética e prazo de defesa",
+      "supporting_excerpts": [
+        "no prazo de dez dias"
+      ],
+      "wrong_expression": "quinze dias"
     }
   ]
 }
