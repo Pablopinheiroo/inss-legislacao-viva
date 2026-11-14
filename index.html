@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-18">
-  <script defer src="app.js?v=20261114-23"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-19">
+  <script defer src="app.js?v=20261114-24"></script>
 </head>
 <body>
   <header class="topbar">
@@ -15,6 +15,13 @@
       <span class="brand-mark">R</span>
       <span><strong>Radar Legislativo</strong><small>INSS · legislação e treino</small></span>
     </a>
+    <div id="xp-widget" class="xp-widget" aria-label="Seu nível e experiência">
+      <div class="xp-widget-top">
+        <span class="xp-level-badge">NÍVEL <strong id="xp-level">1</strong></span>
+        <div class="xp-widget-values"><strong id="xp-total">0 XP</strong><small id="xp-progress-label">0 / 100 XP para o nível 2</small></div>
+      </div>
+      <div class="xp-progress-track" role="progressbar" aria-label="Progresso até o próximo nível" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="xp-progress-fill"></span></div>
+    </div>
     <button id="notification-button" class="bell-button" aria-label="Abrir alterações recentes" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
       <span id="notification-badge" class="badge hidden">0</span>
