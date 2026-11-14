@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-26">
-  <script defer src="app.js?v=20261114-40"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-27">
+  <script defer src="app.js?v=20261114-41"></script>
 </head>
 <body>
   <header class="topbar">
@@ -287,6 +287,7 @@
         <label class="select-wrap"><span>Assunto</span><select id="quiz-topic"><option value="todas">Todos os assuntos</option></select></label>
         <label class="select-wrap"><span>Norma</span><select id="quiz-law-filter"><option value="todas">Todas as normas</option></select></label>
         <label class="select-wrap"><span>Artigo</span><select id="quiz-article-filter"><option value="todas">Todos os artigos</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="quiz-difficulty"><option value="todas">Todos os níveis</option><option value="facil">Fácil</option><option value="media">Média</option><option value="dificil">Difícil</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="quiz-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-quiz" class="primary-button" type="button" disabled>Começar treino</button>
       </div>
@@ -526,6 +527,8 @@
       <div class="quiz-config error-config">
         <label class="select-wrap"><span>Matéria</span><select id="error-category"><option value="todas">Todas as matérias</option></select></label>
         <label class="select-wrap"><span>Tipo de conteúdo</span><select id="error-type"><option value="todas">Todos os tipos</option><option value="prazo">Prazos</option><option value="percentual">Percentuais e frações</option><option value="requisito">Requisitos</option><option value="excecao">Exceções</option></select></label>
+        <label class="select-wrap"><span>Assunto</span><select id="error-topic"><option value="todas">Todos os assuntos</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="error-difficulty"><option value="todas">Todos os níveis</option><option value="facil">Fácil</option><option value="media">Média</option><option value="dificil">Difícil</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="error-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-error" class="primary-button" type="button" disabled>Começar jogo</button>
       </div>
@@ -602,6 +605,8 @@
         <label class="select-wrap"><span>Matéria</span><select id="article-category"><option value="todas">Todas as matérias</option></select></label>
         <label class="select-wrap"><span>Norma específica</span><select id="article-law-filter"><option value="todas">Todas as normas</option></select></label>
         <label class="select-wrap"><span>Situação dos artigos</span><select id="article-study-filter"><option value="todos">Todos os artigos</option><option value="estudados">Somente estudados</option></select></label>
+        <label class="select-wrap"><span>Assunto</span><select id="article-topic"><option value="todas">Todos os assuntos</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="article-difficulty"><option value="todas">Todos os níveis</option><option value="facil">Fácil</option><option value="media">Média</option><option value="dificil">Difícil</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="article-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-article" class="primary-button" type="button" disabled>Começar jogo</button>
       </div>
@@ -675,6 +680,8 @@
       <div class="quiz-config multi-ce-config">
         <label class="select-wrap"><span>Matéria</span><select id="multi-ce-category"><option value="todas">Todas as matérias</option></select></label>
         <label class="select-wrap"><span>Norma específica</span><select id="multi-ce-law-filter"><option value="todas">Todas as normas</option></select></label>
+        <label class="select-wrap"><span>Assunto</span><select id="multi-ce-topic-filter"><option value="todas">Todos os assuntos</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="multi-ce-difficulty"><option value="todas">Todos os níveis</option><option value="facil">Fácil</option><option value="media">Média</option><option value="dificil">Difícil</option></select></label>
         <label class="select-wrap"><span>Artigos por treino</span><select id="multi-ce-length"><option value="3">3 artigos</option><option value="5" selected>5 artigos</option><option value="todas">Todos disponíveis</option></select></label>
         <button id="start-multi-ce" class="primary-button" type="button" disabled>Começar treino</button>
       </div>
