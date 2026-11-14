@@ -168,6 +168,10 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("paragrafo:1/inciso:I/alinea:a/item:1", parts)
         self.assertIn("paragrafo:2", parts)
         self.assertEqual(parts["paragrafo:1/inciso:I/alinea:a"]["device_label"], "alínea a")
+        self.assertEqual(parts["paragrafo:1"]["text"], "§ 1º Texto do parágrafo.")
+        self.assertEqual(parts["paragrafo:1/inciso:I"]["text"], "I - Texto do inciso.")
+        self.assertEqual(parts["paragrafo:1/inciso:I/alinea:a"]["text"], "a) Texto da alínea.")
+        self.assertEqual(parts["paragrafo:1/inciso:I/alinea:a/item:1"]["text"], "1. Texto do item.")
 
     def test_compare_reports_only_the_changed_subdevice(self):
         law = {

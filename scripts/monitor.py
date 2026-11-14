@@ -23,8 +23,8 @@ DATA = ROOT / "data"
 SNAPSHOTS = DATA / "snapshots"
 LAWS_FILE = DATA / "laws.json"
 OUTPUT_FILE = DATA / "legislacao.json"
-SNAPSHOT_VERSION = 3
-MONITOR_VERSION = 3
+SNAPSHOT_VERSION = 4
+MONITOR_VERSION = 4
 
 # A inicial maiúscula é intencional: referências como "art. 6º da EC..." não
 # podem ser confundidas com o início de um dispositivo.
@@ -581,8 +581,6 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
                 key = "paragrafo:" + str(int(number))
                 label = "§ " + str(int(number)) + "º"
             start_component(1, "paragrafo", key, label, line)
-            if body:
-                current_lines.append(body)
             continue
 
         inciso = inciso_re.match(line)
@@ -590,8 +588,6 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
             roman, body = inciso.groups()
             roman = roman.upper()
             start_component(2, "inciso", "inciso:" + roman, "inciso " + roman, line)
-            if body:
-                current_lines.append(body)
             continue
 
         alinea = alinea_re.match(line)
@@ -599,8 +595,6 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
             letter, body = alinea.groups()
             letter = letter.lower()
             start_component(3, "alinea", "alinea:" + letter, "alínea " + letter, line)
-            if body:
-                current_lines.append(body)
             continue
 
         item = item_re.match(line)
@@ -608,8 +602,6 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
             number, body = item.groups()
             number = str(int(number))
             start_component(4, "item", "item:" + number, "item " + number, line)
-            if body:
-                current_lines.append(body)
             continue
 
         current_lines.append(line)
