@@ -580,6 +580,7 @@ async function loadLegalLaw(lawId) {
         ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
         : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
       $("#law-favorite-article").disabled = true;
+      $("#law-mark-difficult").disabled = true;
       $("#law-memory-create").disabled = true;
       $("#law-memory-create-panel").classList.add("hidden");
       $("#law-mark-studied").disabled = true;
@@ -641,6 +642,7 @@ function renderLegalArticlePicker() {
     };
     $("#law-article-text").textContent = emptyMessages[mode] || "Não há artigos disponíveis nesta lista.";
     $("#law-favorite-article").disabled = true;
+    $("#law-mark-difficult").disabled = true;
     $("#law-mark-studied").disabled = true;
     $("#law-components-details").hidden = true;
     $("#law-train-article").disabled = true;
@@ -700,6 +702,10 @@ function renderLegalArticle() {
 
   $("#law-favorite-article").disabled = false;
   $("#law-favorite-article").textContent = favorites.has(articleKey) ? "★ Artigo favorito" : "☆ Favoritar artigo";
+  const difficultEntry=loadDifficultArticleQueue()[articleKey];
+  $("#law-mark-difficult").disabled=false;
+  $("#law-mark-difficult").textContent=difficultEntry&&difficultEntry.status!=="mastered"?"✓ Conteúdo difícil (na revisão)":"Marcar como difícil";
+  $("#law-mark-difficult").setAttribute("aria-pressed",String(Boolean(difficultEntry&&difficultEntry.status!=="mastered")));
   $("#law-favorite-article").setAttribute("aria-pressed", String(favorites.has(articleKey)));
   $("#law-mark-studied").disabled = false;
   $("#law-mark-studied").textContent = isStudied ? "Marcar como não estudado" : "Marcar como estudado";
@@ -4169,9 +4175,11 @@ function rateMemoryCard(rating) {
     interval_days: intervalDays,
     next_due: new Date(dueTime).toISOString(),
     last_reviewed: new Date(now).toISOString(),
-    last_rating: rating
+    last_rating: rating,
+    mastered: false
   };
   saveMemoryProgress(progress);
+  recordDifficultArticleMemoryRating(card,rating);
   memoryState.ratings.push({ card, rating, next_due: progress[card.id].next_due });
   renderMemoryOverview();
 
@@ -4221,6 +4229,7 @@ function showView(view) {
   const multiCE = view === "multi-ce";
   const beforeAfter = view === "before-after";
   const memory = view === "memory";
+  const review = view === "review";
   const radar = view === "radar";
   const law = view === "law";
   $("#radar-view").classList.toggle("hidden", !radar);
@@ -4232,6 +4241,7 @@ function showView(view) {
   $("#multi-ce-view").classList.toggle("hidden", !multiCE);
   $("#before-after-view").classList.toggle("hidden", !beforeAfter);
   $("#memory-view").classList.toggle("hidden", !memory);
+  $("#review-view").classList.toggle("hidden", !review);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-law").classList.toggle("active", law);
   $("#tab-quiz").classList.toggle("active", quiz);
@@ -4241,7 +4251,8 @@ function showView(view) {
   $("#tab-multi-ce").classList.toggle("active", multiCE);
   $("#tab-before-after").classList.toggle("active", beforeAfter);
   $("#tab-memory").classList.toggle("active", memory);
-  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory] ].forEach(([id, active]) => {
+  $("#tab-review").classList.toggle("active", review);
+  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -4253,6 +4264,7 @@ function showView(view) {
   else if (multiCE) $("#multi-ce-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (beforeAfter) $("#before-after-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (memory) $("#memory-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (review) $("#review-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -4412,3 +4424,238 @@ loadClozeLaws();
 loadLegalLibrary();
 loadFindErrorBank();
 Promise.all([loadArticleGameBank(), loadMultiCEBank()]).then(buildMemoryDeck);
+
+
+
+/* -------------------- Central de revisão unificada -------------------- */
+const DIFFICULT_ARTICLE_REVIEW_KEY="radarLegislativo.difficultArticles.v1";
+let centralReviewSession={active:false,keys:[],index:0,title:""};
+let centralReviewEntriesCache=[];
+
+function loadDifficultArticleQueue(){
+  try{const value=JSON.parse(localStorage.getItem(DIFFICULT_ARTICLE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  catch(_){return {};}
+}
+function saveDifficultArticleQueue(queue){
+  try{localStorage.setItem(DIFFICULT_ARTICLE_REVIEW_KEY,JSON.stringify(queue));}
+  catch(error){console.warn("Não foi possível salvar artigos difíceis:",error);}
+}
+function toggleLegalArticleDifficulty(){
+  if(!legalSelectedLaw||!legalSelectedArticle||!legalSnapshot)return;
+  const key=legalArticleKey(legalSelectedLaw.id,legalSelectedArticle),queue=loadDifficultArticleQueue();
+  if(queue[key]&&queue[key].status!=="mastered")delete queue[key];
+  else{
+    const now=new Date().toISOString();
+    queue[key]={id:key,law_id:legalSelectedLaw.id,law_title:legalSelectedLaw.short_title||legalSelectedLaw.title,
+      category:legalLawMatter(legalSelectedLaw),article_key:legalSelectedArticle,article:legalSelectedArticle,
+      literal_text:legalSnapshot.articles?.[legalSelectedArticle]||$("#law-article-text").textContent||"",
+      source_url:legalSnapshot.source_url_used||legalSelectedLaw.url||"",first_marked_at:now,last_marked_at:now,
+      misses:0,correct_reviews:0,next_due:now,status:"pending"};
+  }
+  saveDifficultArticleQueue(queue);renderLegalArticle();renderCentralReview();
+}
+function recordDifficultArticleMemoryRating(card,rating){
+  if(!card?.law_id||!card?.article_key)return;
+  const key=legalArticleKey(card.law_id,card.article_key),queue=loadDifficultArticleQueue(),old=queue[key];
+  if(!old||old.status==="mastered")return;
+  const now=Date.now();let correct=Number(old.correct_reviews)||0,misses=Number(old.misses)||0,nextDue=now,status="pending";
+  if(rating==="good"){correct++;if(correct>=3){status="mastered";nextDue=null;}else nextDue=now+(correct===1?1:3)*86400000;}
+  else if(rating==="hard"){correct=0;nextDue=now+86400000;}
+  else{correct=0;misses++;nextDue=now+10*60*1000;}
+  queue[key]={...old,misses,correct_reviews:correct,last_rating:rating,last_reviewed_at:new Date(now).toISOString(),
+    next_due:nextDue?new Date(nextDue).toISOString():null,status};saveDifficultArticleQueue(queue);
+}
+function centralReviewDueAt(value){if(!value)return 0;const t=new Date(value).getTime();return Number.isFinite(t)?t:0;}
+function centralReviewSourceLabel(source){
+  return ({ce:"Certo ou Errado",cloze:"Completar Lei Seca",error:"Encontre o erro",article:"Descubra o artigo",
+    beforeAfter:"Antes e depois",difficulty:"Artigo com dificuldade",memory:"Memorização ativa"})[source]||"Revisão";
+}
+function centralReviewTopic(item,source){
+  if(source==="ce")return item.topic||(item.multi_ce?"Várias afirmações":"Questões Certo ou Errado");
+  if(source==="cloze")return item.device_label||"Texto da Lei Seca";
+  if(source==="error")return findErrorTypeLabel(item.question_type);
+  if(source==="article")return item.topic||"Identificação de artigo";
+  if(source==="beforeAfter")return "Alterações legislativas";
+  if(source==="difficulty")return "Artigos marcados com dificuldade";
+  if(source==="memory")return item.source_type==="change"?"Alterações legislativas":item.source_type==="manual"?"Cartões pessoais":"Memorização ativa";
+  return "Outros assuntos";
+}
+function makeCentralReviewEntry(source,id,native,item,opts={}){
+  const lawId=item.law_id||native.law_id||"",article=item.article||item.article_key||item.answer_article_key||native.article||native.article_key||"";
+  const law=legalLaws.find(x=>x.id===lawId),lawTitle=item.law_title||item.law_short_title||native.law_title||law?.short_title||law?.title||"Norma não identificada";
+  const misses=Number(native.misses??native.error_count??0)||0,correct=Number(native.correct_reviews??0)||0,nextDue=native.next_due||null;
+  const due=native.status!=="mastered"&&centralReviewDueAt(nextDue)<=Date.now();
+  const description=opts.description||item.question||item.statement||item.prompt||item.summary||"Conteúdo salvo para revisão.";
+  return {key:source+"::"+id,source,source_label:centralReviewSourceLabel(source),native_id:id,native,item,law_id:lawId,
+    law_title:lawTitle,category:item.category||(law?legalLawMatter(law):"Outras matérias"),topic:centralReviewTopic(item,source),
+    article:String(article||"Artigo não identificado"),title:opts.title||description,description,
+    misses,correct_reviews:correct,next_due:nextDue,due,status:native.status==="mastered"?"mastered":"pending",
+    source_url:item.source_url||native.source_url||"",
+    last_response:native.last_response==="nao_sei"?"Última resposta: Não sei":native.last_response==="errado"?"Última resposta: Errado":"",
+    available:opts.available!==false,priority:misses*10+(due?2:0)-correct};
+}
+function collectCentralReviewData(){
+  const entries=[];let mastered=0;
+  const add=(source,queue,mapper)=>Object.entries(queue).forEach(([id,native])=>{
+    if(!native||typeof native!=="object")return;if(native.status==="mastered"){mastered++;return;}
+    const entry=mapper(id,native);if(entry)entries.push(entry);
+  });
+  add("ce",loadCEReviewQueue(),(id,native)=>{
+    const item=native.item||{};return makeCentralReviewEntry("ce",id,native,item,{title:item.statement||item.prompt||"Questão Certo ou Errado",
+      description:item.explanation||item.statement||"",available:Boolean(item.statement||item.prompt)});
+  });
+  add("cloze",loadClozeReviewQueue(),(id,native)=>{
+    if(!native.blank||!native.text)return null;const item={...native,id,article:native.article,law_id:native.law_id,law_title:native.law_title};
+    return makeCentralReviewEntry("cloze",id,native,item,{title:"Complete o trecho: "+(native.blank.value||"lacuna da lei"),
+      description:native.text,available:Boolean(native.blank.value&&native.text)});
+  });
+  const errors=new Map(findErrorItems.map(x=>[x.id,x]));
+  add("error",loadFindErrorReviewQueue(),(id,native)=>{
+    const saved=native.item||{},item=errors.get(saved.id)||saved;
+    return makeCentralReviewEntry("error",id,native,item,{title:(item.segments||[]).join(""),
+      description:item.explanation||item.correct_phrase||"Identifique a expressão incorreta.",available:errors.has(saved.id)});
+  });
+  const articles=new Map(articleQuestions.map(x=>[x.id,x]));
+  add("article",loadArticleReviewQueue(),(id,native)=>{
+    const saved=native.item||{},item=articles.get(saved.id)||saved;
+    return makeCentralReviewEntry("article",id,native,item,{title:item.question||"Identifique o artigo correto",
+      description:item.question||"Identifique o artigo correspondente.",available:articles.has(saved.id)});
+  });
+  const changes=new Map(beforeAfterAvailable.map(x=>[beforeAfterChangeId(x),x]));
+  add("beforeAfter",loadBeforeAfterReviewQueue(),(id,native)=>{
+    const saved=native.item||{},item=changes.get(id)||saved;
+    return makeCentralReviewEntry("beforeAfter",id,native,item,{title:item.summary||"Compare a redação anterior com a atual.",
+      description:item.summary||"Identifique a redação atual e o tipo de alteração.",available:changes.has(id)});
+  });
+  add("difficulty",loadDifficultArticleQueue(),(id,native)=>{
+    const item={...native,article:native.article_key||native.article};
+    const available=Boolean(native.literal_text||memoryCards.some(c=>c.law_id===native.law_id&&c.article_key===native.article_key));
+    return makeCentralReviewEntry("difficulty",id,native,item,{title:"Reforce "+(native.article_key||native.article||"este artigo"),
+      description:"Artigo marcado manualmente como conteúdo de dificuldade.",available});
+  });
+  const progress=loadMemoryProgress();
+  memoryCards.forEach(card=>{
+    const saved=progress[card.id];if(!saved||!(Number(saved.review_count)>0))return;
+    if(saved.mastered){mastered++;return;}
+    const native={...saved,status:"pending",misses:saved.last_rating==="again"?1:0};
+    entries.push(makeCentralReviewEntry("memory",card.id,native,card,{
+      title:card.prompts?.[0]?.text||"Lembre o conteúdo deste cartão.",
+      description:card.source_type==="change"?card.change_summary||"Revisão de alteração legislativa.":card.custom_answer||card.literal_text||"Cartão de memorização ativa.",
+      available:Boolean(card.literal_text&&card.prompts?.length)}));
+  });
+  entries.sort((a,b)=>b.priority-a.priority||centralReviewDueAt(a.next_due)-centralReviewDueAt(b.next_due)||a.law_title.localeCompare(b.law_title,"pt-BR"));
+  return {entries,mastered};
+}
+function fillCentralReviewSelect(selector,label,values){
+  const node=$(selector);if(!node)return;const previous=node.value||"todos";node.replaceChildren(new Option(label,"todos"));
+  values.forEach(o=>typeof o==="string"?node.append(new Option(o,o)):node.append(new Option(o.label,o.value)));
+  if([...node.options].some(o=>o.value===previous))node.value=previous;
+}
+function centralReviewFilteredEntries(entries=centralReviewEntriesCache){
+  const category=$("#central-review-category").value||"todos",topic=$("#central-review-topic").value||"todos";
+  const law=$("#central-review-law").value||"todos",article=$("#central-review-article").value||"todos",query=normalizeAnswer($("#central-review-search").value||"");
+  return entries.filter(e=>(category==="todos"||e.category===category)&&(topic==="todos"||e.topic===topic)
+    &&(law==="todos"||e.law_id===law)&&(article==="todos"||e.article===article)
+    &&(!query||normalizeAnswer([e.title,e.description,e.law_title,e.article,e.topic].join(" ")).includes(query)));
+}
+function refreshCentralReviewFilters(entries){
+  fillCentralReviewSelect("#central-review-category","Todas as matérias",[...new Set(entries.map(e=>e.category))].sort((a,b)=>a.localeCompare(b,"pt-BR")));
+  fillCentralReviewSelect("#central-review-topic","Todos os assuntos",[...new Set(entries.map(e=>e.topic))].sort((a,b)=>a.localeCompare(b,"pt-BR")));
+  const laws=[...new Map(entries.filter(e=>e.law_id).map(e=>[e.law_id,e.law_title])).entries()].sort((a,b)=>a[1].localeCompare(b[1],"pt-BR")).map(([value,label])=>({value,label}));
+  fillCentralReviewSelect("#central-review-law","Todas as normas",laws);
+  fillCentralReviewSelect("#central-review-article","Todos os artigos",[...new Set(entries.map(e=>e.article))].sort((a,b)=>a.localeCompare(b,"pt-BR",{numeric:true})));
+}
+function createCentralReviewCard(entry){
+  const card=document.createElement("article");card.className="central-review-card";
+  const head=document.createElement("div");head.className="central-review-card-head";
+  const source=document.createElement("span");source.className="central-review-source";source.textContent=entry.source_label;
+  const due=document.createElement("span");due.className="central-review-due"+(entry.due?" is-due":"");due.textContent=entry.due?"Revisão vencida":"Próxima: "+formatDate(entry.next_due);head.append(source,due);
+  const title=document.createElement("h3");title.textContent=entry.title;
+  const meta=document.createElement("p");meta.className="central-review-meta";meta.textContent=[entry.category,entry.topic,entry.law_title,entry.article].filter(Boolean).join(" · ");
+  const desc=document.createElement("p");desc.className="central-review-description";desc.textContent=entry.description.length>260?entry.description.slice(0,257)+"…":entry.description;
+  const metrics=document.createElement("div");metrics.className="central-review-metrics";
+  const miss=document.createElement("span");miss.textContent=entry.misses+" erro(s)";const correct=document.createElement("span");correct.textContent=entry.correct_reviews+"/3 acertos na revisão";metrics.append(miss,correct);
+  if(entry.last_response){const last=document.createElement("span");last.textContent=entry.last_response;metrics.append(last);}
+  const actions=document.createElement("div");actions.className="central-review-card-actions";
+  const review=document.createElement("button");review.type="button";review.className="primary-button";review.textContent=entry.due?"Revisar agora":"Antecipar revisão";review.disabled=!entry.available;review.addEventListener("click",()=>startCentralReviewEntry(entry));
+  const mastered=document.createElement("button");mastered.type="button";mastered.className="secondary-button";mastered.textContent="Marcar como dominado";mastered.addEventListener("click",()=>markCentralReviewMastered(entry));actions.append(review,mastered);
+  if(!entry.available){const note=document.createElement("span");note.className="central-review-unavailable";note.textContent="Questão suspensa: não está disponível no banco/captura atual.";actions.append(note);}
+  card.append(head,title,meta,desc,metrics,actions);return card;
+}
+function renderCentralReview(){
+  const list=$("#central-review-list");if(!list)return;const data=collectCentralReviewData();centralReviewEntriesCache=data.entries;refreshCentralReviewFilters(data.entries);
+  const filtered=centralReviewFilteredEntries(data.entries),due=data.entries.filter(e=>e.due).length;
+  $("#central-review-due").textContent=String(due);$("#central-review-pending").textContent=String(data.entries.length);$("#central-review-mastered").textContent=String(data.mastered);
+  $("#central-review-visible-count").textContent=filtered.length+" de "+data.entries.length+" conteúdos ativos";
+  $("#central-review-start-due").disabled=due===0;$("#central-review-start-all").disabled=data.entries.length===0;
+  $("#central-review-start-due").textContent=due?"Revisar pendentes ("+due+")":"Nenhuma revisão vencida";
+  $("#central-review-start-all").textContent=data.entries.length?"Iniciar revisão geral ("+data.entries.length+")":"Fila vazia";
+  if(centralReviewSession.active){
+    $("#central-review-session-note").textContent="Sessão em andamento: conteúdo "+(centralReviewSession.index+1)+" de "+centralReviewSession.keys.length+". Depois de responder, volte aqui para avançar.";
+    $("#central-review-next").classList.remove("hidden");$("#central-review-next").disabled=centralReviewSession.index>=centralReviewSession.keys.length;
+    $("#central-review-next").textContent=centralReviewSession.index>=centralReviewSession.keys.length?"Sessão concluída":"Próximo conteúdo da sessão →";$("#central-review-stop-session").classList.remove("hidden");
+  }else{$("#central-review-session-note").textContent="A fila reúne erros, itens marcados como “Não sei”, artigos difíceis, cartões e alterações legislativas.";$("#central-review-next").classList.add("hidden");$("#central-review-stop-session").classList.add("hidden");}
+  list.replaceChildren();
+  if(!filtered.length){const empty=document.createElement("div");empty.className="empty-state";const title=document.createElement("h3"),message=document.createElement("p");
+    title.textContent=data.entries.length?"Nenhum conteúdo corresponde aos filtros":"Sua fila de revisão está vazia";
+    message.textContent=data.entries.length?"Altere os filtros para localizar outros conteúdos.":"Quando você errar, marcar “Não sei” ou sinalizar um artigo como difícil, ele aparecerá aqui. Alterações confirmadas também entram automaticamente.";
+    empty.append(title,message);list.append(empty);return;}
+  filtered.forEach(e=>list.append(createCentralReviewCard(e)));
+}
+function centralReviewBatch(dueOnly){
+  renderCentralReview();const entries=centralReviewFilteredEntries().filter(e=>e.available&&(!dueOnly||e.due));
+  if(!entries.length){$("#central-review-session-note").textContent=dueOnly?"Não há conteúdos vencidos nesta seleção.":"Não há conteúdos disponíveis para iniciar a revisão geral.";return;}
+  centralReviewSession={active:true,keys:entries.map(e=>e.key),index:0,title:dueOnly?"Revisão dos pendentes":"Revisão geral"};startCentralReviewCurrent();
+}
+function startCentralReviewCurrent(){
+  const key=centralReviewSession.keys[centralReviewSession.index],entry=centralReviewEntriesCache.find(e=>e.key===key);
+  if(!entry){renderCentralReview();return;}renderCentralReview();startCentralReviewEntry(entry);
+}
+function nextCentralReviewSessionItem(){
+  if(!centralReviewSession.active)return;centralReviewSession.index++;
+  if(centralReviewSession.index>=centralReviewSession.keys.length){centralReviewSession={active:false,keys:[],index:0,title:""};renderCentralReview();$("#central-review-session-note").textContent="Sessão concluída. Os intervalos foram atualizados pelos jogos.";return;}
+  startCentralReviewCurrent();
+}
+function stopCentralReviewSession(){centralReviewSession={active:false,keys:[],index:0,title:""};renderCentralReview();}
+function startCentralReviewEntry(entry){
+  if(!entry||!entry.available)return;
+  if(entry.source==="ce"){const item=questionBank.find(q=>q.id===entry.native.item?.id)||entry.item;if(!item.statement&&!item.prompt)return;showView("quiz");startQuiz([item],{reviewMode:true,fullPool:true});return;}
+  if(entry.source==="cloze"){const item=entry.native;clozeReviewSessionSeen=new Set([entry.native_id]);showView("cloze");
+    renderClozeExercise({article:item.article,text:item.text,fullText:item.fullText||item.text,sourceType:"review",review_id:entry.native_id,law_id:item.law_id,law_title:item.law_title,source_url:item.source_url,device_label:item.device_label},"dificil",[item.blank]);return;}
+  if(entry.source==="error"){const id=entry.native.item?.id,item=findErrorItems.find(x=>x.id===id);if(!item)return;showView("find-error");startFindErrorGame([item],{reviewMode:true});return;}
+  if(entry.source==="article"){const id=entry.native.item?.id,item=articleQuestions.find(x=>x.id===id);if(!item)return;showView("article");startArticleGame([item],{reviewMode:true});return;}
+  if(entry.source==="beforeAfter"){const change=beforeAfterAvailable.find(x=>beforeAfterChangeId(x)===entry.native_id);if(!change)return;showView("before-after");startBeforeAfterGame([change],{reviewMode:true});return;}
+  if(entry.source==="difficulty"||entry.source==="memory"){
+    const open=async()=>{
+      if(!memorySourceSnapshotsLoaded)await ensureMemorySourceSnapshots();
+      let card=entry.source==="memory"?memoryCards.find(x=>x.id===entry.native_id):memoryCards.find(x=>x.source_type==="legal"&&x.law_id===entry.law_id&&x.article_key===entry.item.article_key);
+      if(!card&&entry.source==="difficulty"){
+        const snapshot=memorySourceSnapshots.get(entry.law_id),law=legalLaws.find(x=>x.id===entry.law_id),key=entry.item.article_key,literal=snapshot?.articles?.[key]||entry.item.literal_text||"";
+        if(literal)card={id:entry.law_id+"::"+key,law_id:entry.law_id,article_key:key,law_title:entry.law_title,article_label:entry.article,category:entry.category,
+          source_url:snapshot?.source_url_used||entry.item.source_url||law?.url||"",literal_text:literal,prompts:[{text:"Explique, sem consultar, a regra principal prevista em "+entry.article+".",type:"artigo"}],source_type:"legal"};
+      }
+      if(!card){$("#central-review-session-note").textContent="Não foi possível localizar o cartão ou o texto atual deste artigo.";return;}showView("memory");startMemorySession([card]);
+    };open();return;
+  }
+}
+function markCentralReviewMastered(entry){
+  if(!entry)return;const now=new Date().toISOString();
+  const update=(key,id)=>{let queue={};try{queue=JSON.parse(localStorage.getItem(key)||"{}");}catch(_){}
+    if(queue[id]){queue[id]={...queue[id],status:"mastered",next_due:null,mastered_at:now,mastered_by_user:true};localStorage.setItem(key,JSON.stringify(queue));}};
+  if(entry.source==="ce")update(CE_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="cloze")update(CLOZE_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="error")update(ERROR_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="article")update(ARTICLE_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="beforeAfter")update(BEFORE_AFTER_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="difficulty")update(DIFFICULT_ARTICLE_REVIEW_KEY,entry.native_id);
+  else if(entry.source==="memory"){const progress=loadMemoryProgress();progress[entry.native_id]={...(progress[entry.native_id]||{}),mastered:true,next_due:null,mastered_at:now};saveMemoryProgress(progress);}
+  renderCentralReview();renderCEReviewOverview();renderClozeReviewOverview();renderFindErrorReviewOverview();renderArticleReviewOverview();renderBeforeAfterReviewOverview();renderMemoryOverview();
+}
+$("#tab-review").addEventListener("click",()=>{renderCentralReview();showView("review");ensureMemorySourceSnapshots().then(renderCentralReview);});
+["#central-review-category","#central-review-topic","#central-review-law","#central-review-article"].forEach(selector=>$(selector).addEventListener("change",renderCentralReview));
+$("#central-review-search").addEventListener("input",renderCentralReview);
+$("#central-review-start-due").addEventListener("click",()=>centralReviewBatch(true));
+$("#central-review-start-all").addEventListener("click",()=>centralReviewBatch(false));
+$("#central-review-next").addEventListener("click",nextCentralReviewSessionItem);
+$("#central-review-stop-session").addEventListener("click",stopCentralReviewSession);
+$("#law-mark-difficult").addEventListener("click",toggleLegalArticleDifficulty);
