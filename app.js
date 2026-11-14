@@ -28,12 +28,14 @@ let articleGameState = { questions: [], index: 0, selected: null, answers: [], r
 let multiCEGroups = [];
 let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
 let beforeAfterAvailable = [];
-let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
+let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false, changeQuestion: null, changeSelected: null, changeAnswered: false, reviewMode: false };
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
 const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
 const CLOZE_REVIEW_KEY = "radarLegislativo.clozeReview.v1";
 const ERROR_REVIEW_KEY = "radarLegislativo.errorReview.v1";
 const ARTICLE_REVIEW_KEY = "radarLegislativo.articleReview.v1";
+const BEFORE_AFTER_REVIEW_KEY = "radarLegislativo.beforeAfterReview.v1";
+const LEGAL_STUDIED_AT_KEY = "radarLegislativo.leiSeca.studiedAt.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
@@ -270,6 +272,16 @@ function writeLegalStorage(key, values) {
 }
 function legalStudiedSet() { return readLegalStorage(LEGAL_STUDIED_KEY); }
 function legalFavoritesSet() { return readLegalStorage(LEGAL_FAVORITES_KEY); }
+function loadLegalStudiedDates() {
+  try {
+    const value=JSON.parse(localStorage.getItem(LEGAL_STUDIED_AT_KEY)||"{}");
+    return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
+  } catch (_) { return {}; }
+}
+function saveLegalStudiedDates(value) {
+  try { localStorage.setItem(LEGAL_STUDIED_AT_KEY,JSON.stringify(value)); }
+  catch(error){console.warn("Não foi possível salvar a data do estudo:",error);}
+}
 function legalArticleKey(lawId, article) {
   return lawId + "::" + article;
 }
@@ -1121,10 +1133,11 @@ function toggleLegalArticleFavorite() {
 function toggleLegalArticleStudied() {
   if (!legalSelectedLaw || !legalSelectedArticle) return;
   const key = legalArticleKey(legalSelectedLaw.id, legalSelectedArticle);
-  const studied = legalStudiedSet();
-  if (studied.has(key)) studied.delete(key);
-  else studied.add(key);
-  writeLegalStorage(LEGAL_STUDIED_KEY, studied);
+  const studied=legalStudiedSet(),dates=loadLegalStudiedDates();
+  if(studied.has(key)){studied.delete(key);delete dates[key];}
+  else{studied.add(key);dates[key]=new Date().toISOString();}
+  writeLegalStorage(LEGAL_STUDIED_KEY,studied);
+  saveLegalStudiedDates(dates);
   renderLegalArticlePicker();
 }
 function stepLegalArticle(direction) {
@@ -2982,6 +2995,7 @@ async function startQuizForLegalArticle() {
 }
 // -------------------- Modo Várias afirmações sobre o mesmo artigo --------------------
 function multiCECategoryForLaw(lawId) {
+  if (lawId === "constituicao-1988" || lawId === "ec-103-2019") return "Direito Constitucional";
   if (lawId === "decreto-6029-2007" || lawId === "decreto-1171-1994") return "Ética";
   if (lawId === "lei-8112-1990" || lawId === "lei-9784-1999" || lawId === "lei-8429-1992") return "Direito Administrativo";
   return "Direito Previdenciário";
@@ -3033,18 +3047,28 @@ async function loadMultiCEBank() {
       return true;
     });
     const select=$("#multi-ce-category");
+    const priorCategory=select.value||"todas";
     select.replaceChildren();
-    const all=document.createElement("option");
-    all.value="todas";all.textContent="Todas as matérias";select.append(all);
-    [...new Set(multiCEGroups.map(g=>g.category))].sort((a,b)=>a.localeCompare(b,"pt-BR")).forEach(category=>{
-      const option=document.createElement("option");
-      option.value=category;option.textContent=category;select.append(option);
-    });
-    $("#start-multi-ce").disabled=multiCEGroups.length===0;
-    const capture=newest?" Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
-    note.textContent=multiCEGroups.length+" artigos disponíveis, com "+multiCEGroups.reduce((n,g)=>n+g.statements.length,0)+" afirmações."+capture+
+    select.append(new Option("Todas as matérias","todas"));
+    [...new Set(multiCEGroups.map(group=>group.category))].sort((a,b)=>a.localeCompare(b,"pt-BR"))
+      .forEach(category=>select.append(new Option(category,category)));
+    if([...select.options].some(option=>option.value===priorCategory))select.value=priorCategory;
+
+    const lawSelect=$("#multi-ce-law-filter");
+    const priorLaw=lawSelect.value||"todas";
+    lawSelect.replaceChildren();
+    lawSelect.append(new Option("Todas as normas","todas"));
+    [...new Map(multiCEGroups.map(group=>[group.law_id,group.law_title])).entries()]
+      .sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"))
+      .forEach(([id,title])=>lawSelect.append(new Option(title,id)));
+    if([...lawSelect.options].some(option=>option.value===priorLaw))lawSelect.value=priorLaw;
+    const capture=newest?"Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
+    $("#multi-ce-count-note").dataset.captureNote=capture;
+    updateMultiCEFilters();
+    const allStatements=multiCEGroups.reduce((sum,group)=>sum+group.statements.length,0);
+    $("#multi-ce-count-note").textContent=multiCEGroups.length+" artigos disponíveis, com "+allStatements+" afirmações. "+capture+
       (suspended?" "+suspended+" conjunto(s) suspenso(s) por incompatibilidade com a captura.":" Todos os conjuntos passaram pela conferência.");
-    if(!multiCEGroups.length)note.textContent+=" Atualize as capturas legais e tente novamente.";
+    if(!multiCEGroups.length)$("#multi-ce-count-note").textContent+=" Atualize as capturas legais e tente novamente.";
   }catch(error){
     multiCEGroups=[];
     $("#start-multi-ce").disabled=true;
@@ -3054,7 +3078,19 @@ async function loadMultiCEBank() {
 }
 function selectedMultiCEPool(){
   const category=$("#multi-ce-category").value;
-  return multiCEGroups.filter(group=>category==="todas"||group.category===category);
+  const lawId=$("#multi-ce-law-filter").value;
+  return multiCEGroups.filter(group=>
+    (category==="todas"||group.category===category)&&
+    (lawId==="todas"||group.law_id===lawId)
+  );
+}
+function updateMultiCEFilters(){
+  const pool=selectedMultiCEPool();
+  $("#start-multi-ce").disabled=pool.length===0;
+  const total=pool.reduce((sum,group)=>sum+group.statements.length,0);
+  const capture=$("#multi-ce-count-note").dataset.captureNote||"";
+  $("#multi-ce-count-note").textContent=pool.length+" artigo(s) nesta seleção, com "+total+" afirmação(ões). "+capture;
+  if(!pool.length)$("#multi-ce-count-note").textContent+=" Não há artigos para esses filtros.";
 }
 function startMultiCEGame(onlyGroups=null){
   const pool=onlyGroups||selectedMultiCEPool();
@@ -3082,7 +3118,11 @@ function showMultiCEStatement(){
   $("#multi-ce-law").textContent=group.law_title;
   $("#multi-ce-article-label").textContent=group.article_label;
   $("#multi-ce-topic").textContent=group.topic;
-  $("#multi-ce-article-text").textContent=group.literal_text;
+  renderTextWithHighlights($("#multi-ce-article-text"),group.literal_text,[item.validation_phrase],"multi-ce-legal-highlight");
+  $("#multi-ce-article-capture").textContent=group.snapshot_captured_at
+    ?"Texto da captura de "+formatDate(group.snapshot_captured_at)+"."
+    :"Texto da captura salva no projeto.";
+  $("#multi-ce-article-source").href=group.source_url||"#";
   $("#multi-ce-prompt").textContent=item.prompt;
   $("#multi-ce-true").disabled=false;
   $("#multi-ce-false").disabled=false;
@@ -3115,6 +3155,18 @@ function submitMultiCEAnswer(){
   const item=group.statements[multiCEState.statementIndex];
   const correct=multiCEState.selected===item.answer;
   multiCEState.answers.push({group,item,chosen:multiCEState.selected,correct});
+  if(!correct){
+    recordCEReviewMiss({
+      id:"multi-ce::"+group.id+"::"+item.id,
+      statement:item.prompt,answer:item.answer,explanation:item.explanation,
+      wrong_expression:"",
+      supporting_excerpts:[item.validation_phrase],
+      literal_text:group.literal_text,source_url:group.source_url,
+      law_id:group.law_id,law_title:group.law_title,
+      article:group.article_key,article_key:group.article_key,
+      category:group.category,topic:group.topic,multi_ce:true
+    },multiCEState.selected,false);
+  }
   $("#multi-ce-result").textContent=correct?"Você acertou! ✓":"Você errou. ✕";
   $("#multi-ce-result").className="feedback-result "+(correct?"correct":"incorrect");
   $("#multi-ce-explanation").textContent=item.explanation;
@@ -3197,222 +3249,399 @@ function showMultiCESummary(){
 
 
 // -------------------- Antes e depois das alterações --------------------
+
 function beforeAfterCategoryForChange(change) {
-  const id = change.law_id || "";
-  if (id === "constituicao-1988" || id === "ec-103-2019") return "Direito Constitucional";
-  if (id === "decreto-6029-2007" || id === "decreto-1171-1994") return "Ética";
-  if (id === "lei-8112-1990" || id === "lei-9784-1999" || id === "lei-8429-1992") return "Direito Administrativo";
+  const id=change.law_id||"";
+  if(id==="constituicao-1988"||id==="ec-103-2019")return "Direito Constitucional";
+  if(id==="decreto-6029-2007"||id==="decreto-1171-1994")return "Ética";
+  if(id==="lei-8112-1990"||id==="lei-9784-1999"||id==="lei-8429-1992")return "Direito Administrativo";
   return "Direito Previdenciário";
 }
-
-function beforeAfterText(change, version) {
-  if (version === "old") {
-    return change.old_text || (
-      change.change_type === "incluido"
-        ? "Este artigo não aparecia na captura anterior."
-        : "Não havia texto anterior disponível para comparação."
-    );
-  }
-  return change.new_text || (
-    change.change_type === "nao_encontrado"
-      ? "Este artigo não foi localizado na captura atual."
-      : "Não havia texto deste artigo na captura atual."
-  );
+function beforeAfterText(change,version) {
+  if(version==="old")return change.old_text||(change.change_type==="incluido"
+    ?"Este artigo não aparecia na captura anterior."
+    :"Não havia texto anterior disponível para comparação.");
+  return change.new_text||"Não havia texto deste artigo na captura atual.";
 }
-
-function prepareBeforeAfterBank() {
-  beforeAfterAvailable = allChanges.filter(change =>
-    change.change_type !== "texto_integral_alterado" &&
-    Boolean(change.article) &&
-    Boolean(change.old_text || change.new_text || change.change_type === "incluido" || change.change_type === "nao_encontrado")
-  );
-
-  const select = $("#before-after-category");
-  if (!select) return;
-  select.replaceChildren();
-  const all = document.createElement("option");
-  all.value = "todas";
-  all.textContent = "Todas as matérias";
-  select.append(all);
-
-  [...new Set(beforeAfterAvailable.map(beforeAfterCategoryForChange))]
-    .sort((a, b) => a.localeCompare(b, "pt-BR"))
-    .forEach(category => {
-      const option = document.createElement("option");
-      option.value = category;
-      option.textContent = category;
-      select.append(option);
-    });
-
-  $("#start-before-after").disabled = beforeAfterAvailable.length === 0;
-  const note = $("#before-after-count-note");
-  const checked = dashboardData && Array.isArray(dashboardData.laws)
-    ? dashboardData.laws.filter(law => !law.error && law.last_checked).length
-    : 0;
-
-  if (beforeAfterAvailable.length) {
-    note.textContent = beforeAfterAvailable.length + " alteração(ões) de artigos disponíveis. Cada rodada usa textos registrados pelo monitor, sem criar exemplos fictícios.";
-  } else if (allChanges.length) {
-    note.textContent = "Há " + allChanges.length + " registro(s) no Radar, mas nenhum é uma comparação artigo por artigo. Consulte as mudanças de texto integral diretamente no Radar.";
-  } else if (dashboardData && dashboardData.status === "ok") {
-    note.textContent = "Nenhuma alteração artigo por artigo foi registrada até agora. A última verificação consultou " + checked + " fontes sem detectar diferenças. Quando surgir uma alteração, ela aparecerá aqui automaticamente.";
-  } else if (dashboardData && dashboardData.status === "parcial") {
-    note.textContent = "A última verificação foi parcial. Não há comparações artigo por artigo disponíveis neste momento; confira o estado das fontes no Radar.";
-  } else {
-    note.textContent = "O histórico ainda não está disponível. Recarregue o painel depois que o monitoramento concluir uma verificação.";
+function loadBeforeAfterReviewQueue() {
+  try {
+    const value=JSON.parse(localStorage.getItem(BEFORE_AFTER_REVIEW_KEY)||"{}");
+    return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
+  } catch(_){return {};}
+}
+function saveBeforeAfterReviewQueue(queue) {
+  try{localStorage.setItem(BEFORE_AFTER_REVIEW_KEY,JSON.stringify(queue));}
+  catch(error){
+    console.warn("Não foi possível salvar a revisão Antes e depois:",error);
+    const note=$("#before-after-review-note");
+    if(note)note.textContent="O navegador não permitiu salvar a revisão das alterações.";
   }
 }
-
-function prepareBeforeAfterQuestion(change) {
-  const options = shuffle([
-    { version: "old", text: beforeAfterText(change, "old") },
-    { version: "new", text: beforeAfterText(change, "new") }
-  ]);
+function beforeAfterChangeId(change) {
+  return String(change.id||[
+    change.law_id||"norma",change.article||"artigo",change.detected_at||"",
+    change.change_type||"",change.old_text||"",change.new_text||""
+  ].join("::"));
+}
+function loadBeforeAfterStudyInfo(change) {
+  const key=legalArticleKey(change.law_id||"",change.article||"");
+  if(!legalStudiedSet().has(key))return {
+    status:"not_marked",studied_at:null,reference_at:null,
+    label:"Este artigo não está marcado como estudado na Biblioteca Lei Seca."
+  };
+  const studiedAt=loadLegalStudiedDates()[key]||null;
+  if(!studiedAt)return {
+    status:"unknown",studied_at:null,reference_at:null,
+    label:"O artigo já estava marcado como estudado, mas a data não foi registrada. Não é possível confirmar se você o estudou antes da alteração."
+  };
+  const referenceValue=change.publication_date||change.detected_at||null;
+  const referenceType=change.publication_date?"publicação informada":"detecção pelo monitor";
+  if(!referenceValue)return {
+    status:"unknown",studied_at:studiedAt,reference_at:null,
+    label:"A data do estudo foi registrada, mas não há data de publicação ou detecção para comparar."
+  };
+  const studiedDay=String(studiedAt).slice(0,10),referenceDay=String(referenceValue).slice(0,10);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(studiedDay)||!/^\d{4}-\d{2}-\d{2}$/.test(referenceDay))return {
+    status:"unknown",studied_at:studiedAt,reference_at:referenceValue,
+    label:"Não foi possível comparar as datas do estudo e da alteração."
+  };
+  const dateLabel=referenceDay.split("-").reverse().join("/");
+  const effective=change.effective_date
+    ?" Vigência informada: "+String(change.effective_date).split("-").reverse().join("/")+".":"";
+  if(studiedDay<referenceDay)return {
+    status:"before",studied_at:studiedAt,reference_at:referenceValue,
+    label:"Sim. Você marcou o artigo como estudado em "+formatDate(studiedAt)+", antes da "+referenceType+" ("+dateLabel+")."+effective
+  };
+  if(studiedDay>referenceDay)return {
+    status:"after",studied_at:studiedAt,reference_at:referenceValue,
+    label:"Não. Você marcou o artigo como estudado em "+formatDate(studiedAt)+", depois da "+referenceType+" ("+dateLabel+")."+effective
+  };
   return {
-    change,
-    category: beforeAfterCategoryForChange(change),
-    options,
-    correctIndex: options.findIndex(option => option.version === "new")
+    status:"same_day",studied_at:studiedAt,reference_at:referenceValue,
+    label:"As datas coincidem ("+dateLabel+"). Não é possível afirmar a ordem dentro do mesmo dia."+effective
   };
 }
-
-function startBeforeAfterGame(items = null) {
-  let pool = Array.isArray(items) ? [...items] : [...beforeAfterAvailable];
-  if (!Array.isArray(items)) {
-    const category = $("#before-after-category").value;
-    if (category !== "todas") pool = pool.filter(change => beforeAfterCategoryForChange(change) === category);
+function syncBeforeAfterReviewQueue() {
+  const queue=loadBeforeAfterReviewQueue();
+  let changed=false;
+  beforeAfterAvailable.forEach(change=>{
+    const id=beforeAfterChangeId(change);
+    if(!queue[id]){
+      queue[id]={
+        id,
+        item:{
+          id,law_id:change.law_id,law_title:change.law_short_title||change.law_title||"Norma",
+          article:change.article,change_type:change.change_type,summary:change.summary||"",
+          old_text:change.old_text||"",new_text:change.new_text||"",source_url:change.source_url||"",
+          detected_at:change.detected_at||"",publication_date:change.publication_date||"",effective_date:change.effective_date||""
+        },
+        study_info:loadBeforeAfterStudyInfo(change),
+        first_queued_at:new Date().toISOString(),misses:0,correct_reviews:0,
+        next_due:new Date().toISOString(),status:"pending"
+      };
+      changed=true;
+    }
+    change._review_id=id;
+    change.study_info=queue[id].study_info||loadBeforeAfterStudyInfo(change);
+  });
+  if(changed)saveBeforeAfterReviewQueue(queue);
+  renderBeforeAfterReviewOverview();
+}
+function beforeAfterReviewPendingEntries() {
+  return Object.values(loadBeforeAfterReviewQueue()).filter(entry=>
+    entry&&entry.status!=="mastered"&&entry.item&&entry.item.id
+  );
+}
+function renderBeforeAfterReviewOverview() {
+  const all=Object.values(loadBeforeAfterReviewQueue());
+  const pending=all.filter(entry=>entry&&entry.status!=="mastered"&&entry.item);
+  const now=Date.now();
+  const due=pending.filter(entry=>{
+    const time=new Date(entry.next_due||0).getTime();return !Number.isFinite(time)||time<=now;
+  });
+  const current=new Map(beforeAfterAvailable.map(change=>[beforeAfterChangeId(change),change]));
+  const ready=due.filter(entry=>current.has(entry.id));
+  const mastered=all.filter(entry=>entry&&entry.status==="mastered").length;
+  const dueNode=$("#before-after-review-due"),pendingNode=$("#before-after-review-pending");
+  const masteredNode=$("#before-after-review-mastered"),button=$("#before-after-review-start");
+  const note=$("#before-after-review-note");
+  if(!dueNode||!pendingNode||!masteredNode||!button||!note)return;
+  dueNode.textContent=String(due.length);
+  pendingNode.textContent=String(pending.length);
+  masteredNode.textContent=String(mastered);
+  button.disabled=ready.length===0;
+  button.textContent=ready.length?"Revisar alterações agora ("+ready.length+")":"Nenhuma alteração vencida para revisar";
+  if(!pending.length)note.textContent="Quando o monitor detectar uma alteração confirmada em artigo, ela será colocada automaticamente nesta fila.";
+  else if(ready.length)note.textContent=ready.length+" alteração(ões) pronta(s) para revisar. Três acertos em revisões espaçadas retiram o item da fila ativa.";
+  else note.textContent=pending.length+" alteração(ões) em acompanhamento. A próxima revisão ainda não venceu ou o registro não está disponível na captura atual.";
+}
+function recordBeforeAfterMiss(change) {
+  const queue=loadBeforeAfterReviewQueue(),id=beforeAfterChangeId(change),old=queue[id];
+  if(!old)return;
+  const now=Date.now();
+  queue[id]={...old,misses:(Number(old.misses)||0)+1,correct_reviews:0,
+    last_missed_at:new Date(now).toISOString(),next_due:new Date(now).toISOString(),status:"pending"};
+  saveBeforeAfterReviewQueue(queue);renderBeforeAfterReviewOverview();
+}
+function recordBeforeAfterSuccess(change) {
+  const queue=loadBeforeAfterReviewQueue(),id=beforeAfterChangeId(change),old=queue[id];
+  if(!old||old.status==="mastered")return;
+  const now=Date.now(),correct=(Number(old.correct_reviews)||0)+1,mastered=correct>=3;
+  const days=correct===1?1:3;
+  queue[id]={...old,correct_reviews:correct,last_correct_at:new Date(now).toISOString(),
+    next_due:mastered?null:new Date(now+days*86400000).toISOString(),status:mastered?"mastered":"pending"};
+  saveBeforeAfterReviewQueue(queue);renderBeforeAfterReviewOverview();
+}
+function beforeAfterDiffTokens(text) {
+  return String(text||"").match(/\s+|[^\s]+/gu)||[];
+}
+function normalizeBeforeAfterDiffToken(token) {
+  return /^\s+$/u.test(token)?" ":normalizeAnswer(token);
+}
+function buildBeforeAfterDiff(oldText,newText) {
+  const a=beforeAfterDiffTokens(oldText),b=beforeAfterDiffTokens(newText);
+  const oldMarks=a.map(text=>({text,kind:"same"})),newMarks=b.map(text=>({text,kind:"same"}));
+  const equal=(left,right)=>normalizeBeforeAfterDiffToken(left)===normalizeBeforeAfterDiffToken(right);
+  let prefix=0;
+  while(prefix<a.length&&prefix<b.length&&equal(a[prefix],b[prefix]))prefix++;
+  let suffix=0;
+  while(suffix<a.length-prefix&&suffix<b.length-prefix&&equal(a[a.length-1-suffix],b[b.length-1-suffix]))suffix++;
+  const aEnd=a.length-suffix,bEnd=b.length-suffix,n=aEnd-prefix,m=bEnd-prefix,ops=[];
+  for(let i=0;i<prefix;i++)ops.push({type:"same",a:i,b:i});
+  if(n===0)for(let j=prefix;j<bEnd;j++)ops.push({type:"add",b:j});
+  else if(m===0)for(let i=prefix;i<aEnd;i++)ops.push({type:"del",a:i});
+  else if((n+1)*(m+1)<=1800000) {
+    const cols=m+1,dp=new Uint32Array((n+1)*cols);
+    for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--){
+      const index=i*cols+j;
+      dp[index]=equal(a[prefix+i],b[prefix+j])?1+dp[(i+1)*cols+j+1]:Math.max(dp[(i+1)*cols+j],dp[i*cols+j+1]);
+    }
+    let i=0,j=0;
+    while(i<n&&j<m){
+      if(equal(a[prefix+i],b[prefix+j])){ops.push({type:"same",a:prefix+i,b:prefix+j});i++;j++;}
+      else if(dp[(i+1)*cols+j]>=dp[i*cols+j+1]){ops.push({type:"del",a:prefix+i});i++;}
+      else{ops.push({type:"add",b:prefix+j});j++;}
+    }
+    while(i<n){ops.push({type:"del",a:prefix+i});i++;}
+    while(j<m){ops.push({type:"add",b:prefix+j});j++;}
+  }else{
+    for(let i=prefix;i<aEnd;i++)ops.push({type:"del",a:i});
+    for(let j=prefix;j<bEnd;j++)ops.push({type:"add",b:j});
   }
-  if (!pool.length) return;
-
-  const length = $("#before-after-length").value;
-  const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
-  beforeAfterState = {
-    questions: shuffle(pool).slice(0, amount).map(prepareBeforeAfterQuestion),
-    index: 0,
-    selected: null,
-    answers: [],
-    answered: false
-  };
-  $("#before-after-welcome").classList.add("hidden");
-  $("#before-after-summary").classList.add("hidden");
-  $("#before-after-card").classList.remove("hidden");
+  for(let i=0;i<suffix;i++)ops.push({type:"same",a:aEnd+i,b:bEnd+i});
+  let cursor=0,added=0,removed=0,modified=0;
+  while(cursor<ops.length){
+    if(ops[cursor].type==="same"){cursor++;continue;}
+    const run=[];
+    while(cursor<ops.length&&ops[cursor].type!=="same")run.push(ops[cursor++]);
+    const deleted=run.filter(op=>op.type==="del"),inserted=run.filter(op=>op.type==="add");
+    const paired=Math.min(deleted.length,inserted.length);
+    for(let i=0;i<paired;i++){oldMarks[deleted[i].a].kind="modified";newMarks[inserted[i].b].kind="modified";modified++;}
+    deleted.slice(paired).forEach(op=>{oldMarks[op.a].kind="removed";removed++;});
+    inserted.slice(paired).forEach(op=>{newMarks[op.b].kind="added";added++;});
+  }
+  return {oldMarks,newMarks,added,removed,modified};
+}
+function appendBeforeAfterDiffText(container,parts) {
+  container.replaceChildren();
+  parts.forEach(part=>{
+    if(!part.text)return;
+    if(part.kind==="same")container.append(document.createTextNode(part.text));
+    else{
+      const mark=document.createElement("mark");mark.className="diff-"+part.kind;
+      mark.textContent=part.text;container.append(mark);
+    }
+  });
+}
+function classifyBeforeAfterChange(change,diff) {
+  if(change.change_type==="incluido"&&!change.old_text)return "article_added";
+  const add=diff.added>0,remove=diff.removed>0,modify=diff.modified>0;
+  if((add&&remove)||(add&&modify)||(remove&&modify))return "mixed";
+  if(add)return "added";
+  if(remove)return "removed";
+  if(modify)return "modified";
+  return "not_isolated";
+}
+const BEFORE_AFTER_CHANGE_TYPES=[
+  {key:"article_added",label:"O artigo inteiro foi incluído na captura atual."},
+  {key:"added",label:"Foram acrescentados trechos, sem retirada de texto."},
+  {key:"removed",label:"Foram retirados trechos, sem acréscimo."},
+  {key:"modified",label:"Trechos da redação foram substituídos ou modificados."},
+  {key:"mixed",label:"Houve acréscimos, retiradas ou modificações combinadas."},
+  {key:"not_isolated",label:"A diferença registrada não permitiu separar com segurança os trechos alterados."}
+];
+function buildBeforeAfterChangeOptions(key) {
+  const correct=BEFORE_AFTER_CHANGE_TYPES.find(option=>option.key===key)||BEFORE_AFTER_CHANGE_TYPES.find(option=>option.key==="not_isolated");
+  return shuffle([correct,...shuffle(BEFORE_AFTER_CHANGE_TYPES.filter(option=>option.key!==correct.key)).slice(0,3)]);
+}
+function prepareBeforeAfterBank() {
+  beforeAfterAvailable=allChanges.filter(change=>
+    Boolean(change.article)&&
+    ((change.change_type==="alterado"&&change.old_text&&change.new_text)||
+      (change.change_type==="incluido"&&change.new_text))
+  );
+  const select=$("#before-after-category");
+  if(!select)return;
+  const previous=select.value||"todas";
+  select.replaceChildren();select.append(new Option("Todas as matérias","todas"));
+  [...new Set(beforeAfterAvailable.map(beforeAfterCategoryForChange))]
+    .sort((a,b)=>a.localeCompare(b,"pt-BR"))
+    .forEach(category=>select.append(new Option(category,category)));
+  if([...select.options].some(option=>option.value===previous))select.value=previous;
+  $("#start-before-after").disabled=beforeAfterAvailable.length===0;
+  syncBeforeAfterReviewQueue();
+  const note=$("#before-after-count-note");
+  const checked=dashboardData&&Array.isArray(dashboardData.laws)?dashboardData.laws.filter(law=>!law.error&&law.last_checked).length:0;
+  if(beforeAfterAvailable.length)note.textContent=beforeAfterAvailable.length+" alteração(ões) confirmada(s) em artigos disponíveis. Os trechos acrescentados, retirados e modificados serão destacados.";
+  else if(allChanges.length)note.textContent="Há "+allChanges.length+" registro(s) no Radar, mas nenhum é uma comparação confirmada de texto anterior e atual de artigo. Ausências na captura não são tratadas como revogações.";
+  else if(dashboardData&&dashboardData.status==="ok")note.textContent="Nenhuma alteração artigo por artigo foi registrada. A última verificação consultou "+checked+" fontes sem detectar diferenças. Quando surgir uma alteração confirmada, ela entrará automaticamente na fila de revisão.";
+  else if(dashboardData&&dashboardData.status==="parcial")note.textContent="A última verificação foi parcial. Ainda não há comparação de artigo confirmada; confira o estado das fontes no Radar.";
+  else note.textContent="O histórico ainda não está disponível. Recarregue o painel depois que o monitoramento concluir uma verificação.";
+}
+function prepareBeforeAfterQuestion(change) {
+  const options=shuffle([{version:"old",text:beforeAfterText(change,"old")},{version:"new",text:beforeAfterText(change,"new")}]);
+  return {change,category:beforeAfterCategoryForChange(change),options,correctIndex:options.findIndex(option=>option.version==="new")};
+}
+function startBeforeAfterGame(items=null,options={}) {
+  let pool=Array.isArray(items)?[...items]:[...beforeAfterAvailable];
+  if(!Array.isArray(items)){
+    const category=$("#before-after-category").value;
+    if(category!=="todas")pool=pool.filter(change=>beforeAfterCategoryForChange(change)===category);
+  }
+  if(!pool.length)return;
+  const length=$("#before-after-length").value;
+  const amount=Array.isArray(items)||options.reviewMode?pool.length:length==="todas"?pool.length:Math.min(Number(length)||5,pool.length);
+  beforeAfterState={questions:shuffle(pool).slice(0,amount).map(prepareBeforeAfterQuestion),
+    index:0,selected:null,answers:[],answered:false,changeQuestion:null,changeSelected:null,changeAnswered:false,reviewMode:Boolean(options.reviewMode)};
+  $("#before-after-welcome").classList.add("hidden");$("#before-after-summary").classList.add("hidden");$("#before-after-card").classList.remove("hidden");
   renderBeforeAfterQuestion();
 }
-
 function renderBeforeAfterQuestion() {
-  const question = beforeAfterState.questions[beforeAfterState.index];
-  if (!question) return;
-  beforeAfterState.selected = null;
-  beforeAfterState.answered = false;
-  $("#before-after-category-label").textContent = question.category;
-  $("#before-after-progress").textContent = "Alteração " + (beforeAfterState.index + 1) + " de " + beforeAfterState.questions.length;
-  $("#before-after-law").textContent = question.change.law_short_title || question.change.law_title || "Norma";
-  $("#before-after-article").textContent = question.change.article || "Dispositivo";
-  $("#before-after-prompt").textContent = "Qual das duas versões corresponde à captura mais recente da fonte oficial?";
+  const question=beforeAfterState.questions[beforeAfterState.index];
+  if(!question)return;
+  beforeAfterState.selected=null;beforeAfterState.answered=false;
+  beforeAfterState.changeQuestion=null;beforeAfterState.changeSelected=null;beforeAfterState.changeAnswered=false;
+  const change=question.change;
+  $("#before-after-category-label").textContent=question.category;
+  $("#before-after-progress").textContent="Alteração "+(beforeAfterState.index+1)+" de "+beforeAfterState.questions.length;
+  $("#before-after-law").textContent=change.law_short_title||change.law_title||"Norma";
+  $("#before-after-article").textContent=change.article||"Dispositivo";
+  $("#before-after-study-status").textContent=change.study_info?.label||loadBeforeAfterReviewQueue()[beforeAfterChangeId(change)]?.study_info?.label||"A situação de estudo deste artigo ainda não foi registrada.";
+  $("#before-after-prompt").textContent="Qual das duas versões corresponde à captura mais recente da fonte oficial?";
   $("#before-after-options").replaceChildren();
-
-  question.options.forEach((option, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "before-after-option";
-    button.setAttribute("aria-pressed", "false");
-    const label = document.createElement("strong");
-    label.textContent = "VERSÃO " + (index === 0 ? "A" : "B");
-    const text = document.createElement("pre");
-    text.textContent = option.text;
-    button.append(label, text);
-    button.addEventListener("click", () => {
-      if (beforeAfterState.answered) return;
-      beforeAfterState.selected = index;
-      [...$("#before-after-options").children].forEach((child, childIndex) => {
-        child.classList.toggle("is-selected", childIndex === index);
-        child.setAttribute("aria-pressed", childIndex === index ? "true" : "false");
+  question.options.forEach((option,index)=>{
+    const button=document.createElement("button");button.type="button";button.className="before-after-option";button.setAttribute("aria-pressed","false");
+    const label=document.createElement("strong");label.textContent="VERSÃO "+(index===0?"A":"B");
+    const pre=document.createElement("pre");pre.textContent=option.text;
+    button.append(label,pre);
+    button.addEventListener("click",()=>{
+      if(beforeAfterState.answered)return;
+      beforeAfterState.selected=index;
+      [...$("#before-after-options").children].forEach((child,childIndex)=>{
+        child.classList.toggle("is-selected",childIndex===index);child.setAttribute("aria-pressed",childIndex===index?"true":"false");
       });
-      $("#before-after-submit").disabled = false;
+      $("#before-after-submit").disabled=false;
     });
     $("#before-after-options").append(button);
   });
-
-  $("#before-after-submit").disabled = true;
-  $("#before-after-feedback").classList.add("hidden");
-  $("#before-after-next").textContent = beforeAfterState.index + 1 < beforeAfterState.questions.length
-    ? "Próxima alteração →"
-    : "Ver resultado →";
+  $("#before-after-submit").disabled=true;$("#before-after-feedback").classList.add("hidden");
+  $("#before-after-change-question").classList.add("hidden");$("#before-after-next").disabled=true;
+  $("#before-after-next").textContent=beforeAfterState.index+1<beforeAfterState.questions.length?"Próxima alteração →":"Ver resultado →";
 }
-
 function confirmBeforeAfterAnswer() {
-  if (beforeAfterState.selected === null || beforeAfterState.answered) return;
-  const question = beforeAfterState.questions[beforeAfterState.index];
-  const change = question.change;
-  const correct = beforeAfterState.selected === question.correctIndex;
-  beforeAfterState.answered = true;
-  beforeAfterState.answers.push({ item: change, correct });
-
-  [...$("#before-after-options").children].forEach(button => { button.disabled = true; });
-  $("#before-after-submit").disabled = true;
-  $("#before-after-result").textContent = correct
-    ? "✓ Você identificou a versão mais recente."
-    : "✕ A versão mais recente era a outra opção.";
-  $("#before-after-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
-  $("#before-after-explanation").textContent =
-    (change.summary || "O monitor registrou uma diferença entre duas capturas.")
-    + " A versão atual é a que aparece na captura mais recente; isso não substitui a conferência da publicação e da vigência do ato.";
-
-  const comparison = $("#before-after-comparison");
-  comparison.replaceChildren();
+  if(beforeAfterState.selected===null||beforeAfterState.answered)return;
+  const question=beforeAfterState.questions[beforeAfterState.index],change=question.change;
+  const correct=beforeAfterState.selected===question.correctIndex;
+  beforeAfterState.answered=true;
+  [...$("#before-after-options").children].forEach(button=>button.disabled=true);
+  $("#before-after-submit").disabled=true;
+  $("#before-after-result").textContent=correct?"✓ Você identificou a versão mais recente.":"✕ A versão mais recente era a outra opção.";
+  $("#before-after-result").className="feedback-result "+(correct?"correct":"incorrect");
+  $("#before-after-explanation").textContent=(change.summary||"O monitor registrou uma diferença entre duas capturas.")+" A data de detecção não substitui a conferência da publicação e da vigência do ato.";
+  const diff=buildBeforeAfterDiff(change.old_text||"",change.new_text||"");
+  const comparison=$("#before-after-comparison");comparison.replaceChildren();
   [
-    { title: "ANTES · CAPTURA ANTERIOR", text: beforeAfterText(change, "old"), className: "diff-panel old-panel" },
-    { title: "AGORA · CAPTURA MAIS RECENTE", text: beforeAfterText(change, "new"), className: "diff-panel new-panel" }
-  ].forEach(panelData => {
-    const panel = document.createElement("div");
-    panel.className = panelData.className;
-    const title = document.createElement("span");
-    title.textContent = panelData.title;
-    const text = document.createElement("pre");
-    text.textContent = panelData.text;
-    panel.append(title, text);
-    comparison.append(panel);
+    {title:"ANTES · CAPTURA ANTERIOR",parts:diff.oldMarks,cls:"diff-panel old-panel",plain:beforeAfterText(change,"old")},
+    {title:"DEPOIS · CAPTURA ATUALIZADA",parts:diff.newMarks,cls:"diff-panel new-panel",plain:beforeAfterText(change,"new")}
+  ].forEach(data=>{
+    const panel=document.createElement("div");panel.className=data.cls;
+    const title=document.createElement("span");title.textContent=data.title;
+    const pre=document.createElement("pre");
+    if(data.parts.some(part=>part.kind!=="same"))appendBeforeAfterDiffText(pre,data.parts);else pre.textContent=data.plain;
+    panel.append(title,pre);comparison.append(panel);
   });
-  $("#before-after-source").href = change.source_url || "https://www.gov.br/";
+  const kind=classifyBeforeAfterChange(change,diff),choices=buildBeforeAfterChangeOptions(kind);
+  beforeAfterState.changeQuestion={options:choices,correctKey:kind,
+    explanation:"Verde indica acréscimo; vermelho indica retirada; amarelo indica trecho modificado. "+diff.added+" trecho(s) acrescentado(s), "+diff.removed+" retirado(s) e "+diff.modified+" modificado(s)."};
+  $("#before-after-change-prompt").textContent="Analisando as duas redações: o que aconteceu com o texto deste artigo?";
+  $("#before-after-change-options").replaceChildren();
+  choices.forEach((choice,index)=>{
+    const button=document.createElement("button");button.type="button";button.className="before-after-change-option";
+    button.textContent=choice.label;button.addEventListener("click",()=>chooseBeforeAfterChangeAnswer(index));
+    $("#before-after-change-options").append(button);
+  });
+  $("#before-after-change-feedback").classList.add("hidden");
+  $("#before-after-change-question").classList.remove("hidden");
+  $("#before-after-source").href=change.source_url||"https://www.gov.br/";
   $("#before-after-feedback").classList.remove("hidden");
 }
-
+function chooseBeforeAfterChangeAnswer(index) {
+  if(beforeAfterState.changeAnswered||!beforeAfterState.changeQuestion)return;
+  const question=beforeAfterState.changeQuestion,selected=question.options[index];
+  if(!selected)return;
+  const correct=selected.key===question.correctKey;
+  beforeAfterState.changeSelected=index;beforeAfterState.changeAnswered=true;
+  [...$("#before-after-change-options").children].forEach((button,i)=>{
+    button.disabled=true;button.classList.toggle("is-correct",question.options[i].key===question.correctKey);
+    button.classList.toggle("is-wrong",i===index&&!correct);
+  });
+  $("#before-after-change-feedback").textContent=(correct?"✓ Correto. ":"✕ Resposta correta: ")+question.options.find(option=>option.key===question.correctKey).label+" "+question.explanation;
+  $("#before-after-change-feedback").className="before-after-change-feedback "+(correct?"correct":"incorrect");
+  const change=beforeAfterState.questions[beforeAfterState.index].change;
+  const versionCorrect=beforeAfterState.selected===beforeAfterState.questions[beforeAfterState.index].correctIndex;
+  const complete=versionCorrect&&correct;
+  beforeAfterState.answers.push({item:change,correct:complete,version_correct:versionCorrect,change_correct:correct});
+  if(complete)recordBeforeAfterSuccess(change);else recordBeforeAfterMiss(change);
+  $("#before-after-next").disabled=false;
+}
 function nextBeforeAfterQuestion() {
-  if (beforeAfterState.index + 1 < beforeAfterState.questions.length) {
-    beforeAfterState.index += 1;
-    renderBeforeAfterQuestion();
-    return;
-  }
+  if(!beforeAfterState.changeAnswered)return;
+  if(beforeAfterState.index+1<beforeAfterState.questions.length){beforeAfterState.index++;renderBeforeAfterQuestion();return;}
   showBeforeAfterSummary();
 }
-
 function showBeforeAfterSummary() {
-  $("#before-after-card").classList.add("hidden");
-  $("#before-after-summary").classList.remove("hidden");
-  const total = beforeAfterState.answers.length;
-  const correct = beforeAfterState.answers.filter(answer => answer.correct).length;
-  const percent = total ? Math.round(correct / total * 100) : 0;
-  const mistakes = beforeAfterState.answers.filter(answer => !answer.correct);
-  $("#before-after-score").textContent = correct + " de " + total + " acerto(s) · " + percent + "%";
-  $("#before-after-score-note").textContent = total + " alteração(ões) revisada(s). Confira novamente as que você errou.";
-  const box = $("#before-after-mistakes");
-  box.replaceChildren();
-  if (mistakes.length) {
-    const title = document.createElement("h3");
-    title.textContent = "Alterações para revisar";
-    const list = document.createElement("ul");
-    mistakes.forEach(answer => {
-      const item = document.createElement("li");
-      item.textContent = (answer.item.law_short_title || answer.item.law_title || "Norma") + " · " + (answer.item.article || "Dispositivo");
-      list.append(item);
+  $("#before-after-card").classList.add("hidden");$("#before-after-summary").classList.remove("hidden");
+  const total=beforeAfterState.answers.length,versions=beforeAfterState.answers.filter(a=>a.version_correct).length;
+  const analyses=beforeAfterState.answers.filter(a=>a.change_correct).length,complete=beforeAfterState.answers.filter(a=>a.correct).length;
+  const percent=total?Math.round(complete/total*100):0,mistakes=beforeAfterState.answers.filter(a=>!a.correct);
+  $("#before-after-score").textContent=complete+" de "+total+" análises completas · "+percent+"%";
+  $("#before-after-score-note").textContent="Versão atual identificada: "+versions+"/"+total+". Tipo de alteração identificado: "+analyses+"/"+total+".";
+  const box=$("#before-after-mistakes");box.replaceChildren();
+  if(mistakes.length){
+    const title=document.createElement("h3");title.textContent="Alterações para revisar";
+    const list=document.createElement("ul");
+    mistakes.forEach(answer=>{
+      const li=document.createElement("li"),parts=[];
+      if(!answer.version_correct)parts.push("não identificou a versão atual");
+      if(!answer.change_correct)parts.push("não identificou o tipo de alteração");
+      li.textContent=(answer.item.law_short_title||answer.item.law_title||"Norma")+" · "+(answer.item.article||"Dispositivo")+" — "+parts.join("; ")+".";
+      list.append(li);
     });
-    box.append(title, list);
-  } else {
-    const note = document.createElement("p");
-    note.textContent = "Muito bem! Você identificou todas as versões atuais deste treino.";
-    box.append(note);
+    box.append(title,list);
+  }else{
+    const note=document.createElement("p");note.textContent="Muito bem! Você identificou as versões e compreendeu as alterações deste treino.";box.append(note);
   }
-  $("#before-after-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+  $("#before-after-retry-mistakes").classList.toggle("hidden",mistakes.length===0);
+}
+function startBeforeAfterReviewSession() {
+  const now=Date.now();
+  const due=beforeAfterReviewPendingEntries().filter(entry=>{
+    const time=new Date(entry.next_due||0).getTime();return !Number.isFinite(time)||time<=now;
+  });
+  const current=new Map(beforeAfterAvailable.map(change=>[beforeAfterChangeId(change),change]));
+  const ready=due.map(entry=>current.get(entry.id)).filter(Boolean);
+  if(!ready.length){renderBeforeAfterReviewOverview();return;}
+  startBeforeAfterGame(ready,{reviewMode:true});
 }
 
 
@@ -3844,6 +4073,8 @@ $("#article-retry-mistakes").addEventListener("click", () => {
   startArticleGame(misses);
 });
 $("#start-multi-ce").addEventListener("click", () => startMultiCEGame());
+$("#multi-ce-category").addEventListener("change", updateMultiCEFilters);
+$("#multi-ce-law-filter").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
 $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
 $("#multi-ce-article-toggle").addEventListener("click", () => {
