@@ -4178,6 +4178,7 @@ function rateMemoryCard(rating) {
 
   progress[card.id] = {
     review_count: (Number(previous.review_count) || 0) + 1,
+    misses: (Number(previous.misses) || 0) + (rating === "again" ? 1 : 0),
     repetitions: rating === "good" ? previousRepetitions + 1 : 0,
     interval_days: intervalDays,
     next_due: new Date(dueTime).toISOString(),
@@ -4544,7 +4545,7 @@ function collectCentralReviewData(){
   memoryCards.forEach(card=>{
     const saved=progress[card.id];if(!saved||!(Number(saved.review_count)>0))return;
     if(saved.mastered){mastered++;return;}
-    const native={...saved,status:"pending",misses:saved.last_rating==="again"?1:0};
+    const native={...saved,status:"pending",misses:Number(saved.misses)||0,correct_reviews:Number(saved.repetitions)||0};
     entries.push(makeCentralReviewEntry("memory",card.id,native,card,{
       title:card.prompts?.[0]?.text||"Lembre o conteúdo deste cartão.",
       description:card.source_type==="change"?card.change_summary||"Revisão de alteração legislativa.":card.custom_answer||card.literal_text||"Cartão de memorização ativa.",
