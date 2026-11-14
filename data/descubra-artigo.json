@@ -1858,5 +1858,5 @@
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
   "source_sync_status": "capturas_anteriores; recaptura_planalto_pendente",
-  "source_provenance_note": "source_url registra a origem real da captura que serviu de base ao item; preferred_source_url é o endereço oficial preferencial do Planalto/Portal IN. O item só será considerado sincronizado com a fonte preferencial após nova captura e validação de hash."
+  "source_provenance_note": "source_url é a origem real da captura usada quando o item foi criado; preferred_source_url indica a fonte oficial preferencial. Capturas ainda não sincronizadas ficam identificadas separadamente."
 }
