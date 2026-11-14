@@ -16,6 +16,7 @@ from scripts.monitor import (
     split_article_components,
     split_articles,
     validate_law_identity,
+    validate_snapshot_continuity,
 )
 
 
@@ -433,6 +434,110 @@ class MonitorTests(unittest.TestCase):
             self.assertEqual(saved_output["status"], "erro")
             self.assertEqual(saved_output["last_successful_check"], "2026-11-13T09:00:00Z")
             self.assertEqual(saved_output["errors"][0]["failure_type"], "rate_limited")
+
+
+
+    def test_sudden_article_count_drop_is_rejected_as_incomplete_response(self):
+        law = {
+            "id": "lei-teste-5",
+            "title": "Lei de teste",
+            "short_title": "Lei de teste",
+            "category": "Lei",
+            "url": "https://example.org/lei",
+        }
+        previous_articles = {
+            "Art. " + str(number): "Art. " + str(number) + "º Texto " + str(number) + "."
+            for number in range(1, 11)
+        }
+        previous = {
+            "snapshot_version": 3,
+            "source_url_used": law["url"],
+            "parser_mode": "artigos",
+            "snapshot_scope": "all_detected_articles",
+            "article_count": len(previous_articles),
+            "articles": previous_articles,
+        }
+        current = make_snapshot(
+            "Art. 1º Apenas um artigo apareceu na resposta.",
+            law,
+            law["url"],
+        )
+        with self.assertRaises(SourceFetchError) as raised:
+            validate_snapshot_continuity(previous, current)
+
+        self.assertEqual(raised.exception.failure_type, "incomplete_response")
+        self.assertIn("queda brusca", str(raised.exception))
+        self.assertEqual(raised.exception.attempts[0]["failure_type"], "incomplete_response")
+
+    def test_run_preserves_snapshot_when_response_contains_only_a_fragment(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            data_dir = Path(temporary) / "data"
+            snapshots_dir = data_dir / "snapshots"
+            snapshots_dir.mkdir(parents=True)
+            laws_file = data_dir / "laws.json"
+            output_file = data_dir / "legislacao.json"
+            law_id = "lei-teste-6"
+            source_url = "https://example.org/lei"
+            previous_articles = {
+                "Art. " + str(number): "Art. " + str(number) + "º Texto original."
+                for number in range(1, 11)
+            }
+            previous_snapshot = {
+                "snapshot_version": 3,
+                "captured_at": "2026-11-13T09:00:00Z",
+                "source_url_used": source_url,
+                "parser_mode": "artigos",
+                "snapshot_scope": "all_detected_articles",
+                "article_count": 10,
+                "articles": previous_articles,
+            }
+            previous_history = [{"id": "alerta-preservado", "change_type": "alterado"}]
+            laws_file.write_text(json.dumps([{
+                "id": law_id,
+                "title": "Lei de teste",
+                "short_title": "Lei de teste",
+                "category": "Lei",
+                "url": source_url,
+            }]), encoding="utf-8")
+            output_file.write_text(json.dumps({
+                "monitor_version": 3,
+                "last_successful_check": "2026-11-13T09:00:00Z",
+                "changes": previous_history,
+            }), encoding="utf-8")
+            snapshot_file = snapshots_dir / (law_id + ".json")
+            snapshot_file.write_text(json.dumps(previous_snapshot), encoding="utf-8")
+
+            fake_diagnostics = {
+                "source_status": "ok",
+                "source_attempts": [{
+                    "url": source_url, "attempt": 1, "outcome": "success",
+                    "http_status": 200, "failure_type": None,
+                    "detail": "Resposta HTTP recebida.",
+                }],
+                "source_failure_count": 0,
+                "source_failure_type": None,
+                "retry_after_seconds": None,
+            }
+            with patch.object(monitor, "LAWS_FILE", laws_file), \
+                 patch.object(monitor, "OUTPUT_FILE", output_file), \
+                 patch.object(monitor, "SNAPSHOTS", snapshots_dir), \
+                 patch.object(
+                     monitor,
+                     "fetch_law_text",
+                     return_value=("Art. 1º Fragmento da página.", source_url, fake_diagnostics),
+                 ), \
+                 patch.object(monitor.time, "sleep"):
+                result = monitor.run()
+
+            saved_snapshot = json.loads(snapshot_file.read_text(encoding="utf-8"))
+            saved_output = json.loads(output_file.read_text(encoding="utf-8"))
+            self.assertEqual(result, 1)
+            self.assertEqual(saved_snapshot, previous_snapshot)
+            self.assertEqual(saved_output["changes"], previous_history)
+            self.assertEqual(saved_output["laws"][0]["source_status"], "invalid_response")
+            self.assertEqual(saved_output["laws"][0]["source_failure_type"], "incomplete_response")
+            self.assertEqual(saved_output["laws"][0]["new_changes_detected"], 0)
+            self.assertEqual(saved_output["status"], "erro")
 
 
 
