@@ -454,7 +454,7 @@ class MonitorTests(unittest.TestCase):
             for number in range(1, 11)
         }
         previous = {
-            "snapshot_version": 3,
+            "snapshot_version": monitor.SNAPSHOT_VERSION,
             "source_url_used": law["url"],
             "parser_mode": "artigos",
             "snapshot_scope": "all_detected_articles",
@@ -487,7 +487,7 @@ class MonitorTests(unittest.TestCase):
                 for number in range(1, 11)
             }
             previous_snapshot = {
-                "snapshot_version": 3,
+                "snapshot_version": monitor.SNAPSHOT_VERSION,
                 "captured_at": "2026-11-13T09:00:00Z",
                 "source_url_used": source_url,
                 "parser_mode": "artigos",
