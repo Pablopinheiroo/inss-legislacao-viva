@@ -234,6 +234,7 @@ async function loadDashboard() {
     renderChanges();
     renderLaws();
     if (legalLaws.length) renderLegalLibrary();
+    if (legalSelectedLaw && legalSnapshot && legalSelectedArticle) renderLegalArticle();
   } catch (error) {
     $("#system-status").className = "status-pill error";
     $("#system-status span:last-child").textContent = "Dados indisponíveis";
@@ -485,6 +486,7 @@ function renderLegalLibrary() {
 async function loadLegalLaw(lawId) {
   const law = legalLaws.find(item => item.id === lawId);
   if (!law) return;
+  clearLegalExcerptSelection();
   legalSelectedLaw = law;
   legalSnapshot = null;
   legalEntries = [];
@@ -1062,6 +1064,8 @@ function selectableLegalTextRoot(node) {
   return element && element.closest ? element.closest(".legal-selectable-text") : null;
 }
 function clearLegalExcerptSelection() {
+  clearTimeout(legalSelectionTimer);
+  legalSelectionTimer = null;
   selectedLegalExcerpt = null;
   const toolbar = $("#law-selection-toolbar");
   if (toolbar) toolbar.classList.add("hidden");
@@ -1070,11 +1074,19 @@ function clearLegalExcerptSelection() {
 }
 function updateLegalExcerptSelection() {
   const selection = window.getSelection && window.getSelection();
-  if (!selection || selection.isCollapsed || !legalSelectedLaw || !legalSelectedArticle) return;
-  if ($("#law-view").classList.contains("hidden")) return;
+  if (!selection || selection.isCollapsed) return;
+  if (!legalSelectedLaw || !legalSelectedArticle || $("#law-view").classList.contains("hidden")) {
+    selectedLegalExcerpt = null;
+    $("#law-selection-toolbar").classList.add("hidden");
+    return;
+  }
   const anchorRoot = selectableLegalTextRoot(selection.anchorNode);
   const focusRoot = selectableLegalTextRoot(selection.focusNode);
-  if (!anchorRoot || anchorRoot !== focusRoot) return;
+  if (!anchorRoot || anchorRoot !== focusRoot) {
+    selectedLegalExcerpt = null;
+    $("#law-selection-toolbar").classList.add("hidden");
+    return;
+  }
 
   const text = selection.toString().replace(/\u00a0/g, " ").trim();
   if (!text) return;
@@ -1103,6 +1115,12 @@ function trainSelectedLegalExcerpt() {
   if (!blanks.length) {
     $("#cloze-note").textContent =
       "O trecho selecionado é curto ou não contém palavras adequadas para criar lacunas. Selecione um trecho um pouco maior.";
+    $("#cloze-card").classList.add("hidden");
+    $("#cloze-welcome").classList.remove("hidden");
+    selectedLegalExcerpt = null;
+    $("#law-selection-toolbar").classList.add("hidden");
+    const selection = window.getSelection && window.getSelection();
+    if (selection && selection.rangeCount) selection.removeAllRanges();
     showView("cloze");
     return;
   }
@@ -1117,6 +1135,7 @@ function trainSelectedLegalExcerpt() {
   $("#cloze-law-label").textContent = excerpt.lawTitle;
   $("#cloze-article-label").textContent = "Trecho selecionado · " + excerpt.article;
   $("#cloze-original-text").textContent = excerpt.text;
+  $("#cloze-original").querySelector("summary").textContent = "Mostrar trecho original selecionado";
   $("#cloze-original").open = false;
   $("#cloze-source").href = excerpt.sourceUrl;
   $("#cloze-note").textContent =
@@ -1295,6 +1314,7 @@ function startCloze() {
   $("#cloze-law-label").textContent = clozeSnapshot.law.short_title || clozeSnapshot.law.title;
   $("#cloze-article-label").textContent = article;
   $("#cloze-original-text").textContent = text;
+  $("#cloze-original").querySelector("summary").textContent = "Mostrar texto completo do artigo";
   $("#cloze-original").open = false;
   $("#cloze-feedback").classList.add("hidden");
   $("#check-cloze").classList.remove("hidden");
