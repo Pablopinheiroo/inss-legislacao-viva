@@ -4036,6 +4036,7 @@ function saveMemoryCardFromLibrary() {
 
 function memoryDueAt(card, progress) {
   const entry = progress[card.id];
+  if (entry && entry.mastered) return Number.POSITIVE_INFINITY;
   if (!entry || !entry.next_due) return 0;
   const value = new Date(entry.next_due).getTime();
   return Number.isFinite(value) ? value : 0;
