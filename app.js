@@ -1295,6 +1295,7 @@ function answerLegalTrainingCE(value) {
   if (!item || item.kind !== "ce" || legalTrainingState.selected !== null) return;
   legalTrainingState.selected = value;
   const correct = value === item.answer;
+  recordLegalTrainingCEReview(item,value);
   $("#law-training-true").disabled = true;
   $("#law-training-false").disabled = true;
   $("#law-training-true").classList.toggle("selected", value === true);
@@ -1349,6 +1350,7 @@ function checkLegalTrainingCloze() {
   const item = legalTrainingState.items[legalTrainingState.index];
   if (!item || item.kind !== "cloze") return;
   const inputs = [...$("#law-training-cloze").querySelectorAll("input")];
+  recordLegalTrainingClozeReview(item,inputs);
   let correct = 0;
   inputs.forEach(input => {
     const expected = item.blanks[Number(input.dataset.index)].value;
@@ -4659,3 +4661,46 @@ $("#central-review-start-all").addEventListener("click",()=>centralReviewBatch(f
 $("#central-review-next").addEventListener("click",nextCentralReviewSessionItem);
 $("#central-review-stop-session").addEventListener("click",stopCentralReviewSession);
 $("#law-mark-difficult").addEventListener("click",toggleLegalArticleDifficulty);
+
+
+
+function legalTrainingReviewItem(item){
+  const law=legalSelectedLaw,article=legalSelectedArticle;
+  const match=questionBank.find(q=>q.law_id===law?.id&&normalizeAnswer(q.statement)===normalizeAnswer(item.prompt)
+    &&legalTrainingArticleMatches(q.article||q.article_key,article));
+  let id=match?.id||"";
+  if(!id){
+    for(const group of multiCEGroups){
+      if(group.law_id!==law?.id||!legalTrainingArticleMatches(group.article_key,article))continue;
+      const statement=(group.statements||[]).find(x=>normalizeAnswer(x.prompt)===normalizeAnswer(item.prompt));
+      if(statement){id="multi-ce::"+group.id+"::"+statement.id;break;}
+    }
+  }
+  if(!id)id="library-training::"+(law?.id||"norma")+"::"+article+"::"+normalizeAnswer(item.prompt).slice(0,100);
+  return {id,category:legalLawMatter(law||{}),law_id:law?.id||"",law_title:law?.short_title||law?.title||"Norma",
+    article,article_key:article,topic:item.kindLabel||"Treinamento na Biblioteca",statement:item.prompt,
+    answer:item.answer,explanation:item.explanation||"",literal_text:item.sourceText||item.literalText||"",
+    source_url:item.sourceUrl||legalSnapshot?.source_url_used||law?.url||""};
+}
+function recordLegalTrainingCEReview(item,chosen){
+  const reviewItem=legalTrainingReviewItem(item);
+  if(chosen!==reviewItem.answer)recordCEReviewMiss(reviewItem,chosen,false);
+  else{
+    const existing=loadCEReviewQueue()[reviewItem.id];
+    if(existing&&existing.status!=="mastered")recordCEReviewSuccess(reviewItem);
+  }
+}
+function recordLegalTrainingClozeReview(item,inputs){
+  const current={sourceType:"catalog",law_id:legalSelectedLaw?.id||"",law_title:legalSelectedLaw?.short_title||legalSelectedLaw?.title||"Lei Seca",
+    article:legalSelectedArticle||"",text:item.text,fullText:item.text,source_url:item.sourceUrl||legalSnapshot?.source_url_used||"",
+    device_label:item.kindLabel||"Trecho da Biblioteca"};
+  const queue=loadClozeReviewQueue();
+  inputs.forEach(input=>{
+    const index=Number(input.dataset.index),blank=item.blanks[index];
+    if(!blank)return;
+    const id=[current.law_id||"norma",current.article||"artigo",current.device_label||"",blank.start,normalizeAnswer(blank.value)].join("::");
+    if(normalizeAnswer(input.value||"")===normalizeAnswer(blank.value)){
+      if(queue[id]&&queue[id].status==="pending")recordClozeReviewSuccess(id);
+    }else recordClozeReviewError(current,blank,input.value||"");
+  });
+}
