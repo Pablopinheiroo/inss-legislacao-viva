@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "description": "Banco autoral do modo Descubra o artigo. Cada gabarito é ligado a um artigo existente no snapshot da norma e possui uma frase-âncora validada para impedir a oferta de itens incompatíveis com a captura atual.",
+  "source_snapshot_date": "2026-11-14T00:52:03Z",
+  "questions": [
+    {
+      "id": "desc-9784-02",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo reúne os princípios que devem orientar a Administração Pública no processo administrativo, como legalidade, finalidade, motivação, razoabilidade e eficiência?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "legalidade finalidade motivacao razoabilidade proporcionalidade moralidade ampla defesa contraditorio seguranca juridica interesse publico e eficiencia",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        }
+      ],
+      "explanation": "O art. 2º da Lei 9.784/1999 apresenta os princípios da Administração Pública e critérios que devem ser observados nos processos administrativos."
+    },
+    {
+      "id": "desc-9784-03",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Uma pessoa participa de um processo administrativo e tem direito de acompanhar sua tramitação, consultar os autos, obter cópias e conhecer as decisões. Em qual artigo estão esses direitos?",
+      "answer_article_key": "Art. 3",
+      "validation_phrase": "ter ciencia da tramitacao dos processos administrativos",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        }
+      ],
+      "explanation": "O art. 3º trata dos direitos do administrado perante a Administração, incluindo ciência da tramitação, vista dos autos e apresentação de documentos."
+    },
+    {
+      "id": "desc-9784-04",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Um interessado deve expor os fatos verdadeiros, agir com lealdade e boa-fé e colaborar para esclarecer os fatos. Qual artigo lista esses deveres?",
+      "answer_article_key": "Art. 4",
+      "validation_phrase": "expor os fatos conforme a verdade",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        }
+      ],
+      "explanation": "O art. 4º da Lei 9.784/1999 lista os deveres do administrado perante a Administração."
+    },
+    {
+      "id": "desc-9784-05",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo estabelece que o processo administrativo pode começar por iniciativa da própria Administração ou a pedido de um interessado?",
+      "answer_article_key": "Art. 5",
+      "validation_phrase": "processo administrativo pode iniciar se de oficio ou a pedido de interessado",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        }
+      ],
+      "explanation": "O art. 5º disciplina o início do processo administrativo e prevê as duas formas: de ofício ou a pedido do interessado."
+    },
+    {
+      "id": "desc-8429-02",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8429-1992",
+      "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei de Improbidade Administrativa define quem é considerado agente público para os efeitos dessa lei?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "agente publico o agente politico o servidor publico",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 9",
+          "label": "Art. 9º"
+        },
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        }
+      ],
+      "explanation": "O art. 2º define agente público de forma ampla, abrangendo agente político, servidor público e outras pessoas que exerçam mandato, cargo, emprego ou função nas entidades indicadas."
+    },
+    {
+      "id": "desc-8429-09",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8429-1992",
+      "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+      "question": "Um agente obtém vantagem patrimonial indevida em razão do exercício do cargo ou da função, mediante conduta dolosa. Qual artigo trata do enriquecimento ilícito?",
+      "answer_article_key": "Art. 9",
+      "validation_phrase": "improbidade administrativa importando em enriquecimento ilicito",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 9",
+          "label": "Art. 9º"
+        },
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        }
+      ],
+      "explanation": "O art. 9º trata dos atos de improbidade administrativa que importam enriquecimento ilícito."
+    },
+    {
+      "id": "desc-8429-10",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8429-1992",
+      "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+      "question": "Uma conduta dolosa provoca perda patrimonial, desvio ou apropriação de bens ou valores públicos, com prejuízo efetivo e comprovado. Qual artigo trata dessa hipótese?",
+      "answer_article_key": "Art. 10",
+      "validation_phrase": "ato de improbidade administrativa que causa lesao ao erario",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 9",
+          "label": "Art. 9º"
+        },
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        }
+      ],
+      "explanation": "O art. 10 trata dos atos de improbidade administrativa que causam lesão ao erário."
+    },
+    {
+      "id": "desc-8429-11",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8429-1992",
+      "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+      "question": "Qual artigo trata dos atos de improbidade que atentam contra os princípios da Administração Pública, mediante ação ou omissão dolosa que viole deveres de honestidade, imparcialidade e legalidade?",
+      "answer_article_key": "Art. 11",
+      "validation_phrase": "atenta contra os principios da administracao publica",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 9",
+          "label": "Art. 9º"
+        },
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        }
+      ],
+      "explanation": "O art. 11 trata dos atos de improbidade que atentam contra os princípios da Administração Pública."
+    },
+    {
+      "id": "desc-6029-03",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "question": "Qual artigo define a composição da Comissão de Ética Pública, prevendo sete brasileiros, mandato de três anos e uma única recondução?",
+      "answer_article_key": "Art. 3",
+      "validation_phrase": "integrada por sete brasileiros",
+      "options": [
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 3º do Decreto 6.029/2007 estabelece a composição da Comissão de Ética Pública, o mandato de seus integrantes e a possibilidade de uma única recondução."
+    },
+    {
+      "id": "desc-6029-05",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "question": "Qual artigo estabelece que cada Comissão de Ética será integrada por três membros titulares e três suplentes?",
+      "answer_article_key": "Art. 5",
+      "validation_phrase": "tres membros titulares e tres suplentes",
+      "options": [
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 5º trata da composição das Comissões de Ética dos órgãos e entidades, com três titulares e três suplentes."
+    },
+    {
+      "id": "desc-6029-07",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "question": "Qual artigo enumera as competências das Comissões de Ética, incluindo atuação consultiva, aplicação do Código de Ética e apuração de condutas?",
+      "answer_article_key": "Art. 7",
+      "validation_phrase": "atuar como instancia consultiva de dirigentes e servidores",
+      "options": [
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 7º reúne as competências das Comissões de Ética de que tratam os incisos II e III do art. 2º."
+    },
+    {
+      "id": "desc-6029-12",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "question": "Qual artigo disciplina o processo de apuração de possível falta ética e prevê prazo de dez dias para manifestação escrita do investigado?",
+      "answer_article_key": "Art. 12",
+      "validation_phrase": "notificara o investigado para manifestar se por escrito no prazo de dez dias",
+      "options": [
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 12 disciplina a apuração de conduta ética, assegura contraditório e ampla defesa e prevê manifestação escrita em dez dias."
+    },
+    {
+      "id": "desc-8213-01",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo apresenta a finalidade da Previdência Social e relaciona situações como incapacidade, desemprego involuntário, idade avançada e morte?",
+      "answer_article_key": "Art. 1",
+      "validation_phrase": "previdencia social mediante contribuicao tem por fim assegurar",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 1º apresenta a finalidade da Previdência Social e deixa claro que ela atua mediante contribuição."
+    },
+    {
+      "id": "desc-8213-02",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo reúne princípios e objetivos da Previdência Social, como universalidade de participação e uniformidade e equivalência para populações urbanas e rurais?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "uniformidade e equivalencia dos beneficios e servicos as populacoes urbanas e rurais",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 2º da Lei 8.213/1991 enumera princípios e objetivos da Previdência Social."
+    },
+    {
+      "id": "desc-8213-03",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo institui o Conselho Nacional de Previdência Social e apresenta a composição com representantes do governo e da sociedade civil?",
+      "answer_article_key": "Art. 3",
+      "validation_phrase": "fica instituido o conselho nacional de previdencia social",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 3º institui o CNPS e estabelece sua composição, incluindo representantes do Governo Federal e da sociedade civil."
+    },
+    {
+      "id": "desc-8213-12",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo trata da exclusão do RGPS do servidor civil ocupante de cargo efetivo ou do militar que esteja amparado por regime próprio de previdência social?",
+      "answer_article_key": "Art. 12",
+      "validation_phrase": "sao excluidos do regime geral de previdencia social",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        }
+      ],
+      "explanation": "O art. 12 estabelece a exclusão do RGPS para as pessoas nele indicadas, desde que amparadas por regime próprio, e trata também do exercício concomitante de atividades."
+    },
+    {
+      "id": "desc-8212-01",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo define a Seguridade Social como conjunto integrado de ações dos poderes públicos e da sociedade, voltado à saúde, à previdência e à assistência social?",
+      "answer_article_key": "Art. 1",
+      "validation_phrase": "seguridade social compreende um conjunto integrado de acoes",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        }
+      ],
+      "explanation": "O art. 1º define a Seguridade Social e apresenta seus princípios e diretrizes no parágrafo único."
+    },
+    {
+      "id": "desc-8212-02",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.212/1991 trata da saúde como direito de todos e dever do Estado, com acesso universal e igualitário?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "a saude e direito de todos e dever do estado",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        }
+      ],
+      "explanation": "O art. 2º da Lei 8.212/1991 trata da saúde e apresenta seus princípios e diretrizes."
+    },
+    {
+      "id": "desc-8212-03",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.212/1991 apresenta a finalidade da Previdência Social e lista situações protegidas, como incapacidade, idade avançada, desemprego involuntário e reclusão?",
+      "answer_article_key": "Art. 3",
+      "validation_phrase": "previdencia social tem por fim assegurar aos seus beneficiarios",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        }
+      ],
+      "explanation": "O art. 3º apresenta a finalidade da Previdência Social e os princípios e diretrizes de sua organização."
+    },
+    {
+      "id": "desc-8212-04",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo define a Assistência Social como política que atende necessidades básicas independentemente de contribuição à Seguridade Social?",
+      "answer_article_key": "Art. 4",
+      "validation_phrase": "independentemente de contribuicao a seguridade social",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        }
+      ],
+      "explanation": "O art. 4º da Lei 8.212/1991 define a Assistência Social e apresenta diretrizes para sua organização."
+    },
+    {
+      "id": "desc-loas-01",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo da LOAS define a assistência social como direito do cidadão, dever do Estado e Política de Seguridade Social não contributiva?",
+      "answer_article_key": "Art. 1",
+      "validation_phrase": "politica de seguridade social nao contributiva",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        }
+      ],
+      "explanation": "O art. 1º apresenta o conceito legal da assistência social na LOAS."
+    },
+    {
+      "id": "desc-loas-02",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo da LOAS enumera os objetivos da assistência social, incluindo proteção social, vigilância socioassistencial e defesa de direitos?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "vigilancia socioassistencial",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        }
+      ],
+      "explanation": "O art. 2º da LOAS enumera os objetivos da assistência social."
+    },
+    {
+      "id": "desc-loas-04",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo da LOAS apresenta princípios como supremacia das necessidades sociais, universalização dos direitos e respeito à dignidade do cidadão?",
+      "answer_article_key": "Art. 4",
+      "validation_phrase": "supremacia do atendimento as necessidades sociais sobre as exigencias de rentabilidade economica",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        }
+      ],
+      "explanation": "O art. 4º enumera os princípios que regem a assistência social."
+    },
+    {
+      "id": "desc-loas-20",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo da LOAS trata do Benefício de Prestação Continuada, com garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais que atendam aos requisitos legais?",
+      "answer_article_key": "Art. 20",
+      "validation_phrase": "beneficio de prestacao continuada e a garantia de um salario minimo mensal",
+      "options": [
+        {
+          "article_key": "Art. 1",
+          "label": "Art. 1º"
+        },
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 4",
+          "label": "Art. 4º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        }
+      ],
+      "explanation": "O art. 20 disciplina o BPC, incluindo os requisitos pessoais e familiares previstos em lei."
+    },
+    {
+      "id": "desc-8112-02",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.112/1990 define servidor como a pessoa legalmente investida em cargo público?",
+      "answer_article_key": "Art. 2",
+      "validation_phrase": "servidor e a pessoa legalmente investida em cargo publico",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        }
+      ],
+      "explanation": "O art. 2º contém a definição legal de servidor para os efeitos da Lei 8.112/1990."
+    },
+    {
+      "id": "desc-8112-03",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.112/1990 define cargo público como conjunto de atribuições e responsabilidades previstas na estrutura organizacional?",
+      "answer_article_key": "Art. 3",
+      "validation_phrase": "conjunto de atribuicoes e responsabilidades previstas na estrutura organizacional",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 8",
+          "label": "Art. 8º"
+        }
+      ],
+      "explanation": "O art. 3º define cargo público e ainda dispõe, em seu parágrafo único, sobre criação, denominação, vencimento e provimento dos cargos."
+    },
+    {
+      "id": "desc-8112-05",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo enumera requisitos básicos para investidura em cargo público, como nacionalidade brasileira, direitos políticos, escolaridade e idade mínima?",
+      "answer_article_key": "Art. 5",
+      "validation_phrase": "requisitos basicos para investidura em cargo publico",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 8",
+          "label": "Art. 8º"
+        }
+      ],
+      "explanation": "O art. 5º reúne os requisitos básicos para investidura em cargo público e prevê outras regras nos parágrafos."
+    },
+    {
+      "id": "desc-8112-07",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.112/1990 estabelece o momento em que ocorre a investidura em cargo público?",
+      "answer_article_key": "Art. 7",
+      "validation_phrase": "investidura em cargo publico ocorrera com a posse",
+      "options": [
+        {
+          "article_key": "Art. 2",
+          "label": "Art. 2º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 8",
+          "label": "Art. 8º"
+        }
+      ],
+      "explanation": "O art. 7º determina que a investidura em cargo público ocorre com a posse."
+    },
+    {
+      "id": "desc-8112-08",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo da Lei 8.112/1990 lista as formas de provimento de cargo público, como nomeação, promoção, readaptação, reversão, aproveitamento, reintegração e recondução?",
+      "answer_article_key": "Art. 8",
+      "validation_phrase": "sao formas de provimento de cargo publico",
+      "options": [
+        {
+          "article_key": "Art. 3",
+          "label": "Art. 3º"
+        },
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        },
+        {
+          "article_key": "Art. 8",
+          "label": "Art. 8º"
+        }
+      ],
+      "explanation": "O art. 8º enumera as formas de provimento de cargo público. Algumas formas anteriormente previstas aparecem como revogadas na redação atual."
+    }
+  ]
+}
