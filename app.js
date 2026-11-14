@@ -362,6 +362,7 @@ async function loadLegalLibrary() {
     const catalog = await response.json();
     // A biblioteca mostra o cadastro completo, inclusive normas com monitoramento pausado.
     legalLaws = Array.isArray(catalog) ? catalog : [];
+    if(typeof syncLegacyLegalStudyEvents==="function")syncLegacyLegalStudyEvents();
     const matters = [...new Set(legalLaws.map(legalLawMatter))]
       .sort((a, b) => a.localeCompare(b, "pt-BR"));
     const matterSelect = $("#law-library-category");
@@ -4924,11 +4925,21 @@ function recoverInterruptedActivitySession(){
 }
 function syncLegacyLegalStudyEvents(){
   const studied=legalStudiedSet(),dates=loadLegalStudiedDates(),events=loadActivityEvents();
-  const existing=new Set(events.filter(item=>item.event_type==="article_status"&&item.outcome==="studied").map(item=>item.law_id+"::"+item.article));
+  const existing=new Map(events.filter(item=>item.event_type==="article_status"&&item.outcome==="studied").map(item=>[item.law_id+"::"+item.article,item]));
   let changed=false;
   studied.forEach(key=>{
-    if(existing.has(key))return;
     const [lawId,article]=key.split("::"),law=legalLaws.find(item=>item.id===lawId),date=dates[key]||null;
+    const previous=existing.get(key);
+    if(previous){
+      if(law&&previous.extra?.legacy_import){
+        previous.category=legalLawMatter(law);
+        previous.law_title=law.short_title||law.title||lawId;
+        previous.source_url=law.url||previous.source_url||"";
+        if(!previous.occurred_at&&date)previous.occurred_at=date;
+        changed=true;
+      }
+      return;
+    }
     events.push({
       id:"legacy-study::"+key,event_type:"article_status",session_id:"",occurred_at:date,
       mode:"leiSeca",mode_label:"Lei Seca · Biblioteca",question_id:"",
@@ -4937,7 +4948,7 @@ function syncLegacyLegalStudyEvents(){
       topic:"Leitura e estudo da legislação",law_id:lawId,law_title:law?.short_title||law?.title||lawId,
       article,source_url:law?.url||"",extra:{is_studied:true,legacy_import:true}
     });
-    existing.add(key);changed=true;
+    existing.set(key,events[events.length-1]);changed=true;
   });
   if(changed)saveActivityEvents(events);
 }
@@ -5081,7 +5092,7 @@ function initializeActivityHistory(){
 }
 $("#tab-history").addEventListener("click",async()=>{
   renderActivityHistory();showView("history");
-  try{await ensureMemorySourceSnapshots();renderActivityHistory();}
+  try{await ensureMemorySourceSnapshots();syncLegacyLegalStudyEvents();renderActivityHistory();}
   catch(error){$("#history-unstudied-note").textContent="Não foi possível carregar todas as capturas. Os demais registros do histórico continuam disponíveis.";}
 });
 $("#history-refresh").addEventListener("click",async()=>{
