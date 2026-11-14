@@ -9,6 +9,7 @@ const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
 let allChanges = [];
 let questionBank = [];
+let questionSuspendedCount = 0;
 let clozeLaws = [];
 let clozeSnapshot = null;
 let clozeCurrent = null;
@@ -2237,8 +2238,11 @@ async function loadFindErrorBank() {
       const valid=Array.isArray(item.segments)&&item.segments.length>=3&&Number.isInteger(item.wrong_segment_index)
         &&item.wrong_segment_index>=0&&item.wrong_segment_index<item.segments.length
         &&item.segments.every(part=>typeof part==="string")
-        &&["prazo","percentual","requisito","excecao"].includes(item.question_type);
-      if(!text||!valid){findErrorSuspendedCount++;return false;}
+        &&["prazo","percentual","requisito","excecao"].includes(item.question_type)
+        &&item.topic&&item.difficulty;
+      if(!text||!valid||!questionMatchesCurrentArticle(item,snapshot,item.article_key,[item.correct_phrase])){
+        findErrorSuspendedCount++;return false;
+      }
       const expected=normalizeLegalForMatch(item.correct_phrase),current=normalizeLegalForMatch(text);
       if(!expected||!current.includes(expected)){findErrorSuspendedCount++;return false;}
       item.literal_text=text;item.snapshot_captured_at=snapshot.captured_at||null;
@@ -2252,6 +2256,10 @@ async function loadFindErrorBank() {
       const option=document.createElement("option");option.value=value;option.textContent=value;category.append(option);
     });
     if([...category.options].some(option=>option.value===previous))category.value=previous;
+    const topicSelect=$("#error-topic"),previousTopic=topicSelect.value||"todas";
+    const topics=[...new Set(findErrorItems.map(item=>item.topic).filter(Boolean))]
+      .sort((a,b)=>a.localeCompare(b,"pt-BR"));
+    setQuizSelectOptions("#error-topic",topics.map(value=>({value,label:value})),"Todos os assuntos",previousTopic);
     findErrorCaptureNote=newest?" Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
     updateFindErrorFilters();renderFindErrorReviewOverview();
     if(!$("#review-view").classList.contains("hidden"))renderCentralReview();
@@ -2263,14 +2271,20 @@ async function loadFindErrorBank() {
 }
 function selectedFindErrorPool(){
   const category=$("#error-category").value,type=$("#error-type").value;
-  return findErrorItems.filter(item=>(category==="todas"||item.category===category)&&(type==="todas"||item.question_type===type));
+  const topic=$("#error-topic").value||"todas",difficulty=$("#error-difficulty").value||"todas";
+  return findErrorItems.filter(item=>(category==="todas"||item.category===category)
+    &&(type==="todas"||item.question_type===type)
+    &&(topic==="todas"||item.topic===topic)
+    &&(difficulty==="todas"||item.difficulty===difficulty));
 }
 function updateFindErrorFilters(){
   const pool=selectedFindErrorPool();$("#start-error").disabled=pool.length===0;
   const counts=["prazo","percentual","requisito","excecao"].map(type=>pool.filter(item=>item.question_type===type).length);
   const summary=counts.map((n,i)=>["prazos","percentuais/frações","requisitos","exceções"][i]+": "+n).join(" · ");
   const note=$("#error-count-note");
-  note.textContent=pool.length+" item(ns) nesta seleção. "+summary+"."+findErrorCaptureNote
+  note.textContent=pool.length+" item(ns) nesta seleção. "+summary+"."
+    +($("#error-topic").value!=="todas"?" Assunto: "+$("#error-topic").selectedOptions[0]?.textContent+".":"")
+    +($("#error-difficulty").value!=="todas"?" Dificuldade: "+$("#error-difficulty").selectedOptions[0]?.textContent+".":"")+findErrorCaptureNote
     +(findErrorSuspendedCount?" "+findErrorSuspendedCount+" item(ns) suspensos por incompatibilidade com o texto legal atual.":" Todos os itens disponíveis passaram pela conferência da redação correta.");
   if(!findErrorItems.length)note.textContent+=" Faça uma nova verificação das normas e tente novamente.";
 }
@@ -2363,7 +2377,8 @@ function chooseFindErrorSegment(index,button){
   $("#error-result").textContent=findErrorState.tries===1?"Erro encontrado de primeira! ✓":"Você encontrou o erro! ✓";
   $("#error-result").className="feedback-result correct";
   $("#error-wrong-phrase").textContent=item.segments[index].trim();$("#error-correct-phrase").textContent=item.correct_phrase;
-  $("#error-explanation").textContent=item.explanation;
+  $("#error-explanation").textContent=item.explanation+
+    (item.source_snapshot_date?"\nVersão da captura oficial usada: "+item.source_snapshot_date.split("-").reverse().join("/")+".":"");
   renderFindErrorLegalHighlight($("#error-literal"),item.literal_text,item.correct_phrase);
   $("#error-source").href=item.source_url;$("#error-solution").classList.remove("hidden");
   $("#next-error-question").textContent=findErrorState.index===findErrorState.questions.length-1?"Ver resultado →":"Próxima questão →";
@@ -2423,7 +2438,9 @@ async function loadArticleGameBank() {
       const articles = snapshot && snapshot.articles;
       const targetText = articles && articles[item.answer_article_key];
       const anchor = normalizeLegalForMatch(item.validation_phrase || "");
-      if (!targetText || !anchor || !normalizeLegalForMatch(targetText).includes(anchor)) {
+      if (!targetText || !anchor || !normalizeLegalForMatch(targetText).includes(anchor)
+        || !item.topic || !item.difficulty
+        || !questionMatchesCurrentArticle(item,snapshot,item.answer_article_key,[item.validation_phrase])) {
         suspended += 1;
         return false;
       }
@@ -2464,6 +2481,10 @@ async function loadArticleGameBank() {
       .sort((a,b) => a[1].localeCompare(b[1], "pt-BR"))
       .forEach(([id, title]) => lawSelect.append(new Option(title, id)));
     if ([...lawSelect.options].some(option => option.value === previousLaw)) lawSelect.value = previousLaw;
+    const topicSelect=$("#article-topic"),previousTopic=topicSelect.value||"todas";
+    const topics=[...new Set(articleQuestions.map(item=>item.topic).filter(Boolean))]
+      .sort((a,b)=>a.localeCompare(b,"pt-BR"));
+    setQuizSelectOptions("#article-topic",topics.map(value=>({value,label:value})),"Todos os assuntos",previousTopic);
     articleCaptureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
     articleSuspendedCount = suspended;
     updateArticleGameFilters();
@@ -2480,11 +2501,14 @@ async function loadArticleGameBank() {
 function selectedArticlePool() {
   const category = $("#article-category").value;
   const lawId = $("#article-law-filter").value;
+  const topic=$("#article-topic").value||"todas",difficulty=$("#article-difficulty").value||"todas";
   const onlyStudied = $("#article-study-filter").value === "estudados";
   const studied = onlyStudied ? legalStudiedSet() : null;
   return articleQuestions.filter(item =>
     (category === "todas" || item.category === category) &&
     (lawId === "todas" || item.law_id === lawId) &&
+    (topic==="todas"||item.topic===topic) &&
+    (difficulty==="todas"||item.difficulty===difficulty) &&
     (!onlyStudied || studied.has(legalArticleKey(item.law_id, item.answer_article_key)))
   );
 }
@@ -2493,6 +2517,8 @@ function updateArticleGameFilters() {
   $("#start-article").disabled = pool.length === 0;
   const onlyStudied = $("#article-study-filter").value === "estudados";
   let message = pool.length + " questão(ões) disponível(is) nesta seleção, de " + articleQuestions.length + " validada(s).";
+  if($("#article-topic").value!=="todas")message+=" Assunto: "+$("#article-topic").selectedOptions[0]?.textContent+".";
+  if($("#article-difficulty").value!=="todas")message+=" Dificuldade: "+$("#article-difficulty").selectedOptions[0]?.textContent+".";
   if (articleCaptureNote) message += articleCaptureNote;
   if (articleSuspendedCount) message += " " + articleSuspendedCount + " questão(ões) suspensa(s) por incompatibilidade com a captura atual.";
   if (!pool.length && onlyStudied) message += " Nenhuma questão corresponde aos artigos marcados como estudados. Na aba Lei Seca, abra a norma e marque os artigos estudados.";
@@ -2654,7 +2680,8 @@ function submitArticleAnswer() {
   $("#article-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
   $("#article-answer-line").textContent = "Artigo correto: " + (answerOption ? answerOption.label : item.answer_article_key) +
     (correct ? "." : " · Sua escolha: " + (selectedOption ? selectedOption.label : item.answer_article_key) + ".");
-  $("#article-explanation").textContent = item.explanation;
+  $("#article-explanation").textContent = item.explanation+
+    (item.source_snapshot_date?"\nVersão da captura oficial usada: "+item.source_snapshot_date.split("-").reverse().join("/")+".":"");
   $("#article-literal").textContent = item.literal_text;
   $("#article-literal-details").open = true;
   $("#article-source").href = item.source_url;
@@ -2724,15 +2751,58 @@ function shuffle(items) {
   }
   return result;
 }
+function questionArticleFingerprint(value){
+  let hash=2166136261;
+  for(const character of String(value||"")){
+    hash=Math.imul(hash^character.codePointAt(0),16777619)>>>0;
+  }
+  return hash.toString(16).padStart(8,"0");
+}
+function questionMatchesCurrentArticle(item,snapshot,articleKey,anchors=[]){
+  const article=snapshot&&snapshot.articles&&snapshot.articles[articleKey];
+  if(!article||!item||!item.source_article_hash)return false;
+  const reference=String(item.legal_reference||"").trim();
+  const explanation=String(item.explanation||"");
+  if(!reference||!explanation.includes("Fundamento legal: "+reference+"."))return false;
+  if(item.source_url!==snapshot.source_url_used)return false;
+  if(item.source_article_hash!==questionArticleFingerprint(article))return false;
+  const phrases=anchors.filter(Boolean);
+  return phrases.length>0&&phrases.every(phrase=>
+    normalizeLegalForMatch(article).includes(normalizeLegalForMatch(phrase))
+  );
+}
 async function loadQuestionBank() {
   const note = $("#question-count-note");
   try {
     const response = await fetch(QUESTIONS_URL + "?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const data = await response.json();
-    questionBank = Array.isArray(data.questions) ? data.questions : [];
+    const bank = Array.isArray(data.questions) ? data.questions : [];
+    const lawIds=[...new Set(bank.map(item=>item.law_id).filter(Boolean))];
+    const pairs=await Promise.all(lawIds.map(async id=>{
+      try{
+        const res=await fetch("data/snapshots/"+encodeURIComponent(id)+".json?v="+Date.now(),{cache:"no-store"});
+        if(!res.ok)throw new Error("HTTP "+res.status);
+        return [id,await res.json()];
+      }catch(error){
+        console.warn("Snapshot indisponível para o banco C/E:",id,error);
+        return [id,null];
+      }
+    }));
+    const snapshots=Object.fromEntries(pairs);
+    questionSuspendedCount=0;
+    questionBank=bank.filter(item=>{
+      const snapshot=snapshots[item.law_id];
+      const anchors=Array.isArray(item.supporting_excerpts)?item.supporting_excerpts:[];
+      const valid=Boolean(item.id&&item.statement&&typeof item.answer==="boolean"&&
+        item.category&&item.topic&&item.difficulty&&
+        questionMatchesCurrentArticle(item,snapshot,item.article_key,anchors));
+      if(!valid)questionSuspendedCount++;
+      return valid;
+    });
     updateQuizFilters();
-    note.textContent = questionBank.length + " itens disponíveis no banco inicial. Use os filtros para escolher matéria, assunto, norma e artigo.";
+    note.textContent = questionBank.length + " questões validadas disponíveis. Filtros: matéria, assunto, norma, artigo e dificuldade."
+      +(questionSuspendedCount?" "+questionSuspendedCount+" item(ns) suspensos por falta de fundamento, fonte ou divergência do artigo atual.":" Todos os itens passaram pela conferência automática.");
     const simulatorNote=$("#simulado-bank-note");
     if(simulatorNote)simulatorNote.textContent=questionBank.length>=60
       ?questionBank.length+" questões disponíveis. Os três formatos estão liberados: 10, 20 e 60 questões."
@@ -2805,19 +2875,23 @@ function updateQuizFilters() {
   if($("#quiz-topic").value!=="todas")chosen.push($("#quiz-topic").selectedOptions[0]?.textContent);
   if($("#quiz-law-filter").value!=="todas")chosen.push($("#quiz-law-filter").selectedOptions[0]?.textContent);
   if($("#quiz-article-filter").value!=="todas")chosen.push($("#quiz-article-filter").value);
+  if($("#quiz-difficulty").value!=="todas")chosen.push("Dificuldade: "+$("#quiz-difficulty").selectedOptions[0]?.textContent);
   $("#question-count-note").textContent=pool.length+" item(ns) nesta seleção."
-    +(chosen.length?" Filtros: "+chosen.join(" · ")+".":" O banco inicial pode ser ampliado com novos itens.");
+    +(chosen.length?" Filtros: "+chosen.join(" · ")+".":"")
+    +(questionSuspendedCount?" "+questionSuspendedCount+" questão(ões) suspensa(s) até nova conferência jurídica.":"");
 }
 function selectedPool() {
   const category=$("#quiz-category").value;
   const topic=$("#quiz-topic").value;
   const law=$("#quiz-law-filter").value;
   const article=$("#quiz-article-filter").value;
+  const difficulty=$("#quiz-difficulty").value||"todas";
   return questionBank.filter(item=>
     (category==="todas"||item.category===category)
     &&(topic==="todas"||item.topic===topic)
     &&(law==="todas"||item.law_id===law)
     &&(article==="todas"||item.article_key===article)
+    &&(difficulty==="todas"||item.difficulty===difficulty)
   );
 }
 function renderTextWithHighlights(element,text,phrases,className="quiz-highlight") {
@@ -2918,7 +2992,8 @@ function submitAnswer() {
     ?"Você marcou “Não sei”. Gabarito: "+(item.answer?"Certo.":"Errado.")
     :correct?"Você acertou! ✓":"Você errou. ✕";
   $("#feedback-result").className="feedback-result "+(unknown?"unknown":correct?"correct":"incorrect");
-  $("#feedback-explanation").textContent=item.explanation||"";
+  $("#feedback-explanation").textContent=(item.explanation||"")+
+    (item.source_snapshot_date?"\nVersão da captura oficial usada: "+item.source_snapshot_date.split("-").reverse().join("/")+".":"");
 
   const wrong=item.answer===false?(item.wrong_expression||""):"";
   renderTextWithHighlights($("#quiz-statement"),item.statement,wrong?[wrong]:[]);
@@ -3093,12 +3168,14 @@ async function loadMultiCEBank() {
         return false;
       }
       const normalizedArticle=normalizeLegalForMatch(article);
-      const valid=group.statements.every(item=>
-        typeof item.answer==="boolean" &&
-        item.explanation &&
-        normalizeLegalForMatch(item.validation_phrase||"") &&
-        normalizedArticle.includes(normalizeLegalForMatch(item.validation_phrase))
-      );
+      const valid=Boolean(group.category&&group.topic&&group.difficulty&&
+        group.source_article_hash===questionArticleFingerprint(article)&&
+        group.source_url===snapshot.source_url_used&&
+        group.statements.every(item=>
+          typeof item.answer==="boolean"&&item.difficulty&&item.legal_reference&&
+          questionMatchesCurrentArticle(item,snapshot,group.article_key,[item.validation_phrase])&&
+          normalizedArticle.includes(normalizeLegalForMatch(item.validation_phrase))
+        ));
       if(!valid){
         suspended++;
         return false;
@@ -3126,6 +3203,10 @@ async function loadMultiCEBank() {
       .sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"))
       .forEach(([id,title])=>lawSelect.append(new Option(title,id)));
     if([...lawSelect.options].some(option=>option.value===priorLaw))lawSelect.value=priorLaw;
+    const topicSelect=$("#multi-ce-topic"),priorTopic=topicSelect.value||"todas";
+    const topics=[...new Set(multiCEGroups.map(group=>group.topic).filter(Boolean))]
+      .sort((a,b)=>a.localeCompare(b,"pt-BR"));
+    setQuizSelectOptions("#multi-ce-topic",topics.map(value=>({value,label:value})),"Todos os assuntos",priorTopic);
     const capture=newest?"Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
     $("#multi-ce-count-note").dataset.captureNote=capture;
     updateMultiCEFilters();
@@ -3143,17 +3224,23 @@ async function loadMultiCEBank() {
 function selectedMultiCEPool(){
   const category=$("#multi-ce-category").value;
   const lawId=$("#multi-ce-law-filter").value;
+  const topic=$("#multi-ce-topic").value||"todas",difficulty=$("#multi-ce-difficulty").value||"todas";
   return multiCEGroups.filter(group=>
     (category==="todas"||group.category===category)&&
-    (lawId==="todas"||group.law_id===lawId)
-  );
+    (lawId==="todas"||group.law_id===lawId)&&
+    (topic==="todas"||group.topic===topic)
+  ).map(group=>({...group,statements:group.statements.filter(item=>
+    difficulty==="todas"||item.difficulty===difficulty
+  )})).filter(group=>group.statements.length>0);
 }
 function updateMultiCEFilters(){
   const pool=selectedMultiCEPool();
   $("#start-multi-ce").disabled=pool.length===0;
   const total=pool.reduce((sum,group)=>sum+group.statements.length,0);
   const capture=$("#multi-ce-count-note").dataset.captureNote||"";
-  $("#multi-ce-count-note").textContent=pool.length+" artigo(s) nesta seleção, com "+total+" afirmação(ões). "+capture;
+  const difficulty=$("#multi-ce-difficulty").value||"todas";
+  $("#multi-ce-count-note").textContent=pool.length+" artigo(s) nesta seleção, com "+total+" afirmação(ões). "
+    +(difficulty!=="todas"?"Dificuldade: "+$("#multi-ce-difficulty").selectedOptions[0]?.textContent+". ":"")+capture;
   if(!pool.length)$("#multi-ce-count-note").textContent+=" Não há artigos para esses filtros.";
 }
 function startMultiCEGame(onlyGroups=null,options={}){
@@ -3235,7 +3322,8 @@ function submitMultiCEAnswer(){
   }
   $("#multi-ce-result").textContent=correct?"Você acertou! ✓":"Você errou. ✕";
   $("#multi-ce-result").className="feedback-result "+(correct?"correct":"incorrect");
-  $("#multi-ce-explanation").textContent=item.explanation;
+  $("#multi-ce-explanation").textContent=item.explanation+
+    (group.source_snapshot_date?"\nVersão da captura oficial usada: "+group.source_snapshot_date.split("-").reverse().join("/")+".":"");
   const correction=$("#multi-ce-correction");
   if(!item.answer&&item.correction){
     correction.textContent="Ajuste importante: "+item.correction;
@@ -3628,7 +3716,9 @@ function confirmBeforeAfterAnswer() {
   $("#before-after-submit").disabled=true;
   $("#before-after-result").textContent=correct?"✓ Você identificou a versão mais recente.":"✕ A versão mais recente era a outra opção.";
   $("#before-after-result").className="feedback-result "+(correct?"correct":"incorrect");
-  $("#before-after-explanation").textContent=(change.summary||"O monitor registrou uma diferença entre duas capturas.")+" A data de detecção não substitui a conferência da publicação e da vigência do ato.";
+  $("#before-after-explanation").textContent=(change.summary||"O monitor registrou uma diferença entre duas capturas.")+
+    " Fundamento legal: "+(change.article||"dispositivo identificado")+" da "+(change.law_short_title||change.law_title||"norma indicada")+
+    ". A data de detecção não substitui a conferência da publicação e da vigência do ato.";
   const diff=buildBeforeAfterDiff(change.old_text||"",change.new_text||"");
   const comparison=$("#before-after-comparison");comparison.replaceChildren();
   [
@@ -4439,7 +4529,8 @@ function createSimuladoResultCard(item,response,index){
   answer.textContent="Sua resposta: "+(blank?"Não respondeu":response.chosen?"Certo":"Errado")
     +" · Gabarito: "+(item.answer?"Certo":"Errado");
   const explanation=document.createElement("p");explanation.className="simulado-result-explanation";
-  explanation.textContent=item.explanation||"Não há comentário cadastrado para esta questão.";
+  explanation.textContent=(item.explanation||"Não há comentário cadastrado para esta questão.")+
+    (item.source_snapshot_date?" Versão da captura oficial: "+item.source_snapshot_date.split("-").reverse().join("/")+".":"");
   card.append(head,law,statement,answer,explanation);
   if(item.source_url){
     const link=document.createElement("a");link.href=item.source_url;link.target="_blank";link.rel="noopener noreferrer";
@@ -4749,6 +4840,8 @@ $("#next-cloze").addEventListener("click", () => {
 $("#start-error").addEventListener("click", () => startFindErrorGame());
 $("#error-category").addEventListener("change", updateFindErrorFilters);
 $("#error-type").addEventListener("change", updateFindErrorFilters);
+$("#error-topic").addEventListener("change", updateFindErrorFilters);
+$("#error-difficulty").addEventListener("change", updateFindErrorFilters);
 $("#error-review-start").addEventListener("click", startFindErrorReviewSession);
 $("#next-error-question").addEventListener("click", nextFindErrorQuestion);
 $("#restart-error").addEventListener("click", () => startFindErrorGame());
@@ -4760,6 +4853,8 @@ $("#start-article").addEventListener("click", () => startArticleGame());
 $("#article-category").addEventListener("change", updateArticleGameFilters);
 $("#article-law-filter").addEventListener("change", updateArticleGameFilters);
 $("#article-study-filter").addEventListener("change", updateArticleGameFilters);
+$("#article-topic").addEventListener("change", updateArticleGameFilters);
+$("#article-difficulty").addEventListener("change", updateArticleGameFilters);
 $("#article-review-start").addEventListener("click", startArticleReviewSession);
 $("#submit-article").addEventListener("click", submitArticleAnswer);
 $("#next-article").addEventListener("click", nextArticleQuestion);
@@ -4771,6 +4866,8 @@ $("#article-retry-mistakes").addEventListener("click", () => {
 $("#start-multi-ce").addEventListener("click", () => startMultiCEGame());
 $("#multi-ce-category").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-law-filter").addEventListener("change", updateMultiCEFilters);
+$("#multi-ce-topic").addEventListener("change", updateMultiCEFilters);
+$("#multi-ce-difficulty").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
 $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
 $("#multi-ce-article-toggle").addEventListener("click", () => {
@@ -4788,7 +4885,7 @@ $("#multi-ce-retry-mistakes").addEventListener("click", () => {
   const failed = new Set(multiCEState.answers.filter(answer => !answer.correct).map(answer => answer.group.id));
   startMultiCEGame(multiCEGroups.filter(group => failed.has(group.id)),{reviewMode:true});
 });
-["#quiz-category","#quiz-topic","#quiz-law-filter","#quiz-article-filter"].forEach(selector => {
+["#quiz-category","#quiz-topic","#quiz-law-filter","#quiz-article-filter","#quiz-difficulty"].forEach(selector => {
   $(selector).addEventListener("change", updateQuizFilters);
 });
 $("#start-quiz").addEventListener("click", () => startQuiz());
