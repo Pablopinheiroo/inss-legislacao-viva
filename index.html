@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-9">
-  <script defer src="app.js?v=20261114-13"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-10">
+  <script defer src="app.js?v=20261114-14"></script>
 </head>
 <body>
   <header class="topbar">
@@ -204,6 +204,7 @@
               <p id="law-reader-capture-note"></p>
               <div class="law-article-training-buttons">
                 <button id="law-train-article" class="text-button" type="button">Gerar questões deste artigo</button>
+                <button id="law-train-quiz" class="text-button" type="button" disabled>Treinar C/E deste artigo</button>
                 <button id="law-train-facts" class="text-button" type="button">Identificar prazos, requisitos e exceções</button>
               </div>
             </div>
@@ -255,8 +256,11 @@
   <main id="quiz-view" class="page-shell hidden">
     <section class="intro quiz-intro">
       <div><p class="eyebrow">MODO DE ESTUDO · ESTILO CEBRASPE</p><h1>Treinar Certo ou Errado</h1><p class="subtitle">Leia o item, marque C ou E e confira a explicação junto do dispositivo legal.</p></div>
-      <div class="quiz-config">
+      <div class="quiz-config ce-quiz-config">
         <label class="select-wrap"><span>Matéria</span><select id="quiz-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Assunto</span><select id="quiz-topic"><option value="todas">Todos os assuntos</option></select></label>
+        <label class="select-wrap"><span>Norma</span><select id="quiz-law-filter"><option value="todas">Todas as normas</option></select></label>
+        <label class="select-wrap"><span>Artigo</span><select id="quiz-article-filter"><option value="todas">Todos os artigos</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="quiz-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-quiz" class="primary-button" type="button" disabled>Começar treino</button>
       </div>
@@ -270,14 +274,23 @@
       <div class="answer-buttons">
         <button id="answer-true" class="answer-button" type="button" aria-pressed="false">Certo</button>
         <button id="answer-false" class="answer-button" type="button" aria-pressed="false">Errado</button>
+        <button id="answer-unknown" class="answer-button answer-unknown" type="button" aria-pressed="false">Não sei</button>
       </div>
       <button id="submit-answer" class="primary-button submit-answer" type="button" disabled>Confirmar resposta</button>
 
       <section id="answer-feedback" class="answer-feedback hidden">
         <div id="feedback-result" class="feedback-result"></div>
         <p id="feedback-explanation" class="feedback-explanation"></p>
+        <div id="feedback-wrong-block" class="feedback-highlight-card hidden">
+          <strong>Expressão que tornou a afirmação errada</strong>
+          <p id="feedback-wrong-expression"></p>
+        </div>
+        <div id="feedback-support-block" class="feedback-highlight-card hidden">
+          <strong>Trecho(s) exato(s) que fundamentam o gabarito</strong>
+          <p id="feedback-supporting-excerpt"></p>
+        </div>
         <details class="law-excerpt">
-          <summary>Ver texto literal da legislação</summary>
+          <summary>Ver texto literal da legislação — trecho relevante destacado</summary>
           <pre id="feedback-literal"></pre>
         </details>
         <div class="feedback-bottom"><a id="feedback-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><button id="next-question" class="primary-button" type="button">Próxima questão →</button></div>
@@ -286,7 +299,7 @@
 
     <section id="quiz-welcome" class="empty-state quiz-welcome">
       <h3>Seu treino começa aqui</h3>
-      <p>Escolha a matéria e a quantidade de itens. As questões são embaralhadas e cada resposta mostra o gabarito, a justificativa e o trecho da lei usado como referência.</p>
+      <p>Escolha matéria, assunto, norma e artigo. Além de Certo e Errado, você pode marcar “Não sei”. Depois da resposta, veja a expressão decisiva e os trechos exatos da lei que fundamentam o gabarito.</p>
     </section>
 
     <section id="quiz-summary" class="quiz-summary hidden">
@@ -599,6 +612,22 @@
         <label class="select-wrap"><span>Matéria</span><select id="memory-category"><option value="todas">Todas as matérias</option></select></label>
         <label class="select-wrap"><span>Cartões</span><select id="memory-length"><option value="5">5 cartões</option><option value="10" selected>10 cartões</option><option value="todas">Todos disponíveis</option></select></label>
         <button id="start-memory" class="primary-button" type="button" disabled>Começar revisão</button>
+      </div>
+    </section>
+
+    <section id="ce-review-center" class="ce-review-center" aria-label="Central de revisão das questões Certo ou Errado">
+      <div class="ce-review-copy">
+        <span class="eyebrow">CENTRAL DE REVISÃO · CERTO OU ERRADO</span>
+        <h2>Revise os erros e as questões em que marcou “Não sei”</h2>
+        <p id="ce-review-note">As questões que você errar serão guardadas aqui para revisão espaçada.</p>
+      </div>
+      <div class="ce-review-actions">
+        <div class="ce-review-metrics">
+          <div><strong id="ce-review-due">0</strong><span>prontas agora</span></div>
+          <div><strong id="ce-review-pending">0</strong><span>em acompanhamento</span></div>
+          <div><strong id="ce-review-mastered">0</strong><span>já dominadas</span></div>
+        </div>
+        <button id="ce-review-start" class="primary-button" type="button" disabled>Revisar erros agora</button>
       </div>
     </section>
 
