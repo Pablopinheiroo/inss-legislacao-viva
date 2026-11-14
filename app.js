@@ -1867,15 +1867,16 @@ function buildClozePassageBlanks(text) {
       candidates.push({start:match.index+left,end:match.index+left+trimmed.length,value:trimmed,type:"segment"});
   }
   if(candidates.length<2) {
+    const commaCandidates=[];
     const commaPattern=/[^,;.!?]+[,;!?]?/g;
     while((match=commaPattern.exec(text))!==null) {
       const raw=match[0],trimmed=raw.trim(),left=raw.indexOf(trimmed);
       const words=trimmed.split(/\s+/).filter(Boolean);
       if(trimmed.length>=45&&words.length>=7) {
-        const candidate={start:match.index+left,end:match.index+left+trimmed.length,value:trimmed,type:"segment"};
-        if(!candidates.some(item=>item.start===candidate.start))candidates.push(candidate);
+        commaCandidates.push({start:match.index+left,end:match.index+left+trimmed.length,value:trimmed,type:"segment"});
       }
     }
+    if(commaCandidates.length>=2)candidates.splice(0,candidates.length,...commaCandidates);
   }
   const amount=candidates.length>=3?3:Math.min(2,candidates.length);
   return shuffle(candidates).slice(0,amount).sort((a,b)=>a.start-b.start);
