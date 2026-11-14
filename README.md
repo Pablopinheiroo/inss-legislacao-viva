@@ -164,3 +164,23 @@ A classificação separa três fatos diferentes:
 As datas de publicação e de entrada em vigor só são preenchidas quando a fonte traz uma indicação textual clara. A data de assinatura ou a data que aparece na referência de uma lei alteradora não é tratada automaticamente como data de publicação ou de vigência. Quando não há informação suficiente, o campo permanece vazio em vez de receber uma data presumida.
 
 A mudança do parser exige uma nova captura-base das fontes. Na primeira execução com a versão 3, as capturas anteriores são substituídas por novas bases estruturadas, sem gerar alertas artificiais por causa da mudança técnica. O histórico de alertas já existente é preservado.
+
+
+## Proteção contra falhas, bloqueios e limites de acesso
+
+O monitor não transforma falha HTTP, timeout, bloqueio de robô, página de verificação ou limite de consultas em artigo revogado ou removido. Em uma falha, o snapshot válido anterior é preservado, nenhum alerta de alteração é criado para aquela fonte e o painel informa a situação da consulta.
+
+As consultas agora guardam diagnóstico por tentativa: endereço consultado, código HTTP quando disponível, tipo de falha, quantidade de tentativas e indicação de Retry-After. Respostas temporariamente limitadas (HTTP 429) e erros de servidor (HTTP 5xx) recebem novas tentativas controladas. A configuração respeita um limite curto de espera para não prender o workflow; depois disso, o monitor tenta outra fonte cadastrada, quando houver. Se nenhuma fonte funcionar, registra a falha e mantém os dados anteriores.
+
+O painel diferencia:
+- **Limite de acesso:** a fonte respondeu HTTP 429 ou indicou limite de consultas.
+- **Acesso bloqueado:** a fonte recusou o acesso (por exemplo, HTTP 403) ou apresentou uma tela de proteção/verificação.
+- **Fonte indisponível:** houve timeout, falha de rede ou erro temporário do servidor.
+- **Resposta inválida:** o conteúdo recebido não pôde ser interpretado ou não passou na validação da norma.
+- **Fonte alternativa usada:** a fonte principal falhou, mas outra fonte cadastrada respondeu corretamente.
+
+### Acionamento manual sem abrir o GitHub
+
+Foi avaliada a possibilidade de iniciar o monitor diretamente pela página. O projeto usa GitHub Pages, que entrega arquivos estáticos ao navegador. O disparo de um workflow workflow_dispatch exige autenticação com permissão para executar Actions. Um token colocado no JavaScript ou no HTML ficaria visível a qualquer visitante e permitiria disparos não autorizados.
+
+Portanto, sem um serviço intermediário autenticado, não há uma forma segura de o site público iniciar a execução por conta própria. Isso poderia ser feito com um serviço externo (por exemplo, um Worker ou uma função de servidor) que guardasse a credencial fora do navegador, mas essa alternativa foi deixada de fora para manter o projeto sem servidor adicional e sem outro serviço para administrar. Por enquanto, o botão abre o workflow no GitHub; basta clicar em **Run workflow**. O botão **Recarregar painel** continua apenas carregando os dados publicados.
