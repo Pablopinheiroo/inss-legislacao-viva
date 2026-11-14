@@ -1697,6 +1697,7 @@ async function trainCurrentLegalArticle() {
   if (!clozeLaws.length) await loadClozeLaws();
   const lawSelect = $("#cloze-law");
   lawSelect.value = legalSelectedLaw.id;
+  $("#cloze-content-type").value = "artigo";
   await loadClozeSnapshot();
   const matchingEntry = clozeSnapshot && clozeSnapshot.entries.find(([article]) => article === legalSelectedArticle);
   if (!matchingEntry) {
