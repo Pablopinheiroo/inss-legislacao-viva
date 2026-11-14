@@ -1262,7 +1262,19 @@
       "data/descubra-artigo.json": 6,
       "data/afirmacoes-por-artigo.json": 5
     },
-    "note": "Bancos reprocessados a partir da versão original para restaurar itens pertinentes que estavam fora do filtro por erro na lista de artigos. Somente gabaritos vinculados a artigos do recorte foram mantidos."
+    "note": "A lista ativa foi filtrada pelo artigo-resposta; no modo Descubra o Artigo também foram removidos itens cujas alternativas incluíam artigos fora do programa. source_url guarda a proveniência da captura original, enquanto preferred_source_url aponta para o Planalto/Portal IN.",
+    "active_counts": {
+      "data/questoes.json": 152,
+      "data/encontre-erro.json": 66,
+      "data/descubra-artigo.json": 43,
+      "data/afirmacoes-por-artigo.json": 43
+    },
+    "removed_counts_from_original_baseline": {
+      "data/questoes.json": 17,
+      "data/encontre-erro.json": 8,
+      "data/descubra-artigo.json": 22,
+      "data/afirmacoes-por-artigo.json": 5
+    }
   },
   "scope_items": [
     "14.2.3"
