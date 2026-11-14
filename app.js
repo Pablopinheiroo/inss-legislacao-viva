@@ -4884,7 +4884,7 @@ function recordActivityAnswer(mode,item,prompt,chosen,correct,expected,outcome,e
     mode,mode_label:activityModeInfo(mode).label,
     question_id:item.id||"",prompt:String(prompt||item.question||item.statement||item.prompt||"").slice(0,900),
     chosen_response:String(chosen??"").slice(0,600),expected_response:String(expected??"").slice(0,600),
-    correct:typeof correct==="boolean"?correct:null,outcome:status,
+    correct:typeof correct==="boolean"?correct:null,outcome:status,review_mode:Boolean(activityCurrentSession.review_mode),
     category:meta.category,topic:meta.topic,law_id:meta.law_id,law_title:meta.law_title,
     article:meta.article,source_url:meta.source_url,extra
   };
@@ -5062,6 +5062,150 @@ async function openHistoryArticle(lawId,article){
     legalSelectedArticle=article;$("#law-article-select").value=article;renderLegalArticlePicker();showView("law");
   }catch(error){console.warn("Não foi possível abrir o artigo a partir do histórico:",error);}
 }
+/* -------------------- Domínio por assunto -------------------- */
+const DOMAIN_MIN_DIFFICULTY_ANSWERS=5;
+const DOMAIN_MIN_MASTERY_ANSWERS=10;
+const DOMAIN_MIN_MASTERY_QUESTIONS=5;
+const DOMAIN_MIN_MASTERY_SESSIONS=2;
+function getSubjectDomainSummaries(){
+  const events=loadActivityEvents();
+  const sessions=loadActivitySessions();
+  const sessionById=new Map(sessions.map(session=>[session.id,session]));
+  const latestAttempts=new Map();
+  events.forEach(event=>{
+    if(event.event_type!=="answer"||(event.outcome!=="correct"&&event.outcome!=="incorrect"))return;
+    const law=legalLaws.find(entry=>entry.id===event.law_id);
+    const category=String(event.category||law?.matter||"Outras matérias").trim()||"Outras matérias";
+    const topic=String(event.topic||law?.subject||"Assunto não classificado").trim()||"Assunto não classificado";
+    const extra=event.extra&&typeof event.extra==="object"?event.extra:{};
+    const promptKey=normalizeAnswer(String(event.prompt||""));
+    const questionKey=normalizeAnswer([
+      event.question_id||promptKey||event.id,
+      promptKey,
+      extra.blank_index?"lacuna:"+extra.blank_index:"",
+      extra.stage||""
+    ].join("::"))||String(event.id);
+    const sessionId=event.session_id||"";
+    // Tentativas repetidas do mesmo item dentro da mesma sessão contam como uma questão.
+    // A última resposta válida da sessão representa o resultado final daquele exercício.
+    const attemptKey=sessionId?sessionId+"::"+questionKey:String(event.id);
+    const occurredAt=new Date(event.occurred_at||0).getTime()||0;
+    const session=sessionId?sessionById.get(sessionId):null;
+    const reviewMode=typeof event.review_mode==="boolean"
+      ?event.review_mode:Boolean(session&&session.review_mode)||event.mode==="memory";
+    const normalized={event,category,topic,questionKey,sessionId,occurredAt,reviewMode};
+    const previous=latestAttempts.get(attemptKey);
+    if(!previous||occurredAt>=previous.occurredAt)latestAttempts.set(attemptKey,normalized);
+  });
+  const grouped=new Map();
+  [...latestAttempts.values()].forEach(attempt=>{
+    const key=normalizeAnswer(attempt.category)+"::"+normalizeAnswer(attempt.topic);
+    if(!grouped.has(key))grouped.set(key,{
+      key,category:attempt.category,topic:attempt.topic,attempts:[],
+      distinctQuestions:new Set(),sessions:new Set(),reviewAttempts:0,reviewCorrect:0
+    });
+    const group=grouped.get(key);
+    group.attempts.push(attempt);
+    group.distinctQuestions.add(attempt.questionKey);
+    if(attempt.sessionId)group.sessions.add(attempt.sessionId);
+    if(attempt.reviewMode){group.reviewAttempts++;if(attempt.event.outcome==="correct")group.reviewCorrect++;}
+  });
+  return [...grouped.values()].map(group=>{
+    const total=group.attempts.length;
+    const correct=group.attempts.filter(item=>item.event.outcome==="correct").length;
+    const incorrect=total-correct;
+    const accuracy=total?Math.round(correct/total*100):0;
+    const distinctQuestions=group.distinctQuestions.size;
+    const sessionCount=group.sessions.size;
+    const mastered=total>=DOMAIN_MIN_MASTERY_ANSWERS
+      &&distinctQuestions>=DOMAIN_MIN_MASTERY_QUESTIONS
+      &&sessionCount>=DOMAIN_MIN_MASTERY_SESSIONS&&accuracy>=80;
+    const difficult=!mastered&&total>=DOMAIN_MIN_DIFFICULTY_ANSWERS
+      &&distinctQuestions>=3&&accuracy<=60;
+    const status=mastered?"Dominado":difficult?"Maior dificuldade":
+      total<DOMAIN_MIN_DIFFICULTY_ANSWERS||distinctQuestions<3?"Poucos dados":
+      accuracy>=80?"Em consolidação":"Em desenvolvimento";
+    return {
+      key:group.key,category:group.category,topic:group.topic,total,correct,incorrect,accuracy,
+      distinctQuestions,sessionCount,reviewAttempts:group.reviewAttempts,reviewCorrect:group.reviewCorrect,
+      mastered,difficult,status
+    };
+  }).sort((a,b)=>{
+    if(a.difficult!==b.difficult)return a.difficult?-1:1;
+    if(a.mastered!==b.mastered)return a.mastered?1:-1;
+    return a.accuracy-b.accuracy||b.total-a.total||a.topic.localeCompare(b.topic,"pt-BR");
+  });
+}
+function createDomainHighlightRow(summary){
+  const row=document.createElement("div");row.className="domain-highlight-row";
+  const copy=document.createElement("div");copy.className="domain-highlight-copy";
+  const title=document.createElement("strong");title.textContent=summary.topic;
+  const note=document.createElement("small");note.textContent=summary.category+" · "+summary.total+" respostas avaliadas";
+  copy.append(title,note);
+  const score=document.createElement("span");score.className="domain-highlight-score";score.textContent=summary.accuracy+"%";
+  row.append(copy,score);return row;
+}
+function createSubjectDomainCard(summary){
+  const card=document.createElement("article");card.className="domain-card";
+  const head=document.createElement("div");head.className="domain-card-head";
+  const heading=document.createElement("div");heading.className="domain-card-heading";
+  const category=document.createElement("small");category.textContent=summary.category;
+  const title=document.createElement("h3");title.textContent=summary.topic;
+  heading.append(category,title);
+  const status=document.createElement("span");status.className="domain-status "+(
+    summary.mastered?"is-mastered":summary.difficult?"is-difficult":
+    summary.status==="Poucos dados"?"is-limited":"is-progress"
+  );status.textContent=summary.status;
+  head.append(heading,status);
+  const progressLine=document.createElement("div");progressLine.className="domain-progress-line";
+  const percentage=document.createElement("strong");percentage.textContent=summary.accuracy+"%";
+  const bar=document.createElement("div");bar.className="domain-progress-track";
+  bar.setAttribute("role","progressbar");bar.setAttribute("aria-label","Aproveitamento em "+summary.topic);
+  bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax","100");bar.setAttribute("aria-valuenow",String(summary.accuracy));
+  const fill=document.createElement("span");fill.style.width=summary.accuracy+"%";bar.append(fill);
+  progressLine.append(percentage,bar);
+  const metrics=document.createElement("p");metrics.className="domain-card-metrics";
+  metrics.textContent=summary.correct+" acertos · "+summary.incorrect+" erros · "+summary.total+" respostas avaliadas";
+  const detail=document.createElement("p");detail.className="domain-card-detail";
+  detail.textContent=summary.distinctQuestions+" questões diferentes · "+summary.sessionCount+" sessões";
+  const review=document.createElement("p");review.className="domain-card-review";
+  review.textContent=summary.reviewAttempts
+    ?"Revisões posteriores: "+summary.reviewCorrect+" de "+summary.reviewAttempts+" acertos."
+    :"Ainda sem respostas registradas em revisões posteriores.";
+  card.append(head,progressLine,metrics,detail,review);return card;
+}
+function renderSubjectDomain(){
+  const summaries=getSubjectDomainSummaries();
+  const hard=summaries.filter(item=>item.difficult).slice(0,3);
+  const mastered=summaries.filter(item=>item.mastered);
+  const hardList=$("#domain-hardest-list"),masteredList=$("#domain-mastered-list"),allList=$("#domain-all-list");
+  if(!hardList||!masteredList||!allList)return;
+  $("#domain-subject-count").textContent=String(summaries.length);
+  $("#domain-mastered-count").textContent=String(mastered.length);
+  $("#domain-difficult-count").textContent=String(summaries.filter(item=>item.difficult).length);
+  hardList.replaceChildren();masteredList.replaceChildren();allList.replaceChildren();
+  if(hard.length)hard.forEach(item=>hardList.append(createDomainHighlightRow(item)));
+  else{
+    const empty=document.createElement("p");empty.className="domain-empty";
+    empty.textContent=summaries.some(item=>item.total>=DOMAIN_MIN_DIFFICULTY_ANSWERS)
+      ?"Nenhum assunto atingiu o critério de maior dificuldade (até 60% em pelo menos 5 respostas e 3 questões diferentes)."
+      :"Ainda faltam respostas para apontar assuntos com maior dificuldade.";
+    hardList.append(empty);
+  }
+  if(mastered.length)mastered.slice(0,6).forEach(item=>masteredList.append(createDomainHighlightRow(item)));
+  else{
+    const empty=document.createElement("p");empty.className="domain-empty";
+    empty.textContent="Nenhum assunto foi consolidado ainda. O sistema exige pelo menos 10 respostas, 5 questões diferentes, 2 sessões e 80% de acertos.";
+    masteredList.append(empty);
+  }
+  if(!summaries.length){
+    const empty=document.createElement("p");empty.className="empty-state";
+    empty.textContent="Seu domínio por assunto aparecerá depois que você responder a questões. A leitura ou marcação de artigos, sozinha, não é usada como prova de domínio.";
+    allList.append(empty);return;
+  }
+  summaries.forEach(item=>allList.append(createSubjectDomainCard(item)));
+}
+
 function renderActivityHistory(){
   const list=$("#history-activity-list");if(!list)return;
   const events=loadActivityEvents().sort((a,b)=>(new Date(b.occurred_at||0).getTime()||0)-(new Date(a.occurred_at||0).getTime()||0));
@@ -5071,6 +5215,7 @@ function renderActivityHistory(){
   const incorrect=answers.filter(event=>event.outcome==="incorrect").length;
   const denominator=correct+incorrect;
   const studied=legalStudiedSet();
+  renderSubjectDomain();
   const topics=new Set(events.filter(event=>event.topic).map(event=>(event.category||"")+"::"+event.topic));
   $("#history-total-answers").textContent=String(answers.length);
   $("#history-accuracy").textContent=denominator?Math.round(correct/denominator*100)+"%":"—";
