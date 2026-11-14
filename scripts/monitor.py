@@ -505,7 +505,10 @@ def make_change(
     device_label = component.get("device_label", article)
     evidence_text = new or old
     dates = extract_event_dates(evidence_text)
-    explicitly_revoked = bool(re.search(r"\brevogad[oa]s?\b", new, re.IGNORECASE))
+    explicitly_revoked = (
+        device_type not in {"artigo", "texto_integral"}
+        and bool(re.search(r"\brevogad[oa]s?\b", new, re.IGNORECASE))
+    )
 
     if explicitly_revoked:
         legal_effect_status = (
