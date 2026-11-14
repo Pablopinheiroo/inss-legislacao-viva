@@ -118,3 +118,10 @@ O banco inicial contém 13 itens. Antes de liberar uma questão, o site consulta
 A aba **Descubra o artigo** apresenta uma descrição de um assunto previsto na norma e pede que o estudante escolha, entre quatro números, o artigo correspondente. Após a resposta, mostra o gabarito, a explicação, o texto literal do artigo e o link da fonte oficial. O jogo permite filtrar por matéria e escolher sessões de 5, 10 ou todos os itens disponíveis.
 
 O banco inicial possui 29 questões de sete normas: Lei 9.784/1999, Lei 8.429/1992, Decreto 6.029/2007, Lei 8.213/1991, Lei 8.212/1991, LOAS e Lei 8.112/1990. Antes de liberar cada questão, o site confere se o artigo correto, a frase de referência e as quatro alternativas existem nas capturas salvas. Itens incompatíveis com a captura atual são suspensos automaticamente. Essa validação técnica não substitui a revisão jurídica da descrição da questão.
+
+
+## Modo de jogo Várias afirmações
+
+A aba **Várias afirmações** reúne dois ou mais itens de Certo ou Errado sobre um mesmo artigo. O estudante pode ler o dispositivo completo, responder cada afirmação, conferir o gabarito e a justificativa e só depois avançar para outro artigo. Ao final, o painel mostra o resultado geral, o desempenho por artigo e permite repetir os artigos em que houve erros.
+
+O banco inicial contém 16 artigos e 46 afirmações, extraídos de seis normas. O site verifica cada frase-âncora no snapshot mais recente do artigo antes de liberar o conjunto. Se o texto ou alguma referência não corresponder à captura salva, o conjunto inteiro é suspenso até revisão.
