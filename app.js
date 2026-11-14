@@ -1006,7 +1006,7 @@ function showMultiCEStatement(){
   $("#multi-ce-submit").disabled=true;
   $("#multi-ce-feedback").classList.add("hidden");
   $("#multi-ce-correction").classList.add("hidden");
-  $("#multi-ce-article-panel").classList.add("hidden");
+  $("#multi-ce-article-panel").hidden=true;
   $("#multi-ce-article-toggle").textContent="Ler artigo antes de responder";
   $("#multi-ce-article-toggle").setAttribute("aria-expanded","false");
   $("#multi-ce-next").textContent=multiCEState.statementIndex<group.statements.length-1
@@ -1704,9 +1704,10 @@ $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false))
 $("#multi-ce-article-toggle").addEventListener("click", () => {
   const panel=$("#multi-ce-article-panel");
   const opening=panel.classList.contains("hidden");
-  panel.classList.toggle("hidden",!opening);
+  panel.hidden=!opening;
   $("#multi-ce-article-toggle").textContent=opening?"Fechar artigo":"Ler artigo antes de responder";
   $("#multi-ce-article-toggle").setAttribute("aria-expanded",String(opening));
+  if(opening) panel.scrollIntoView({behavior:"smooth",block:"nearest"});
 });
 $("#multi-ce-submit").addEventListener("click", submitMultiCEAnswer);
 $("#multi-ce-next").addEventListener("click", nextMultiCEStatement);
