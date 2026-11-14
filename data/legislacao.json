@@ -690,7 +690,8 @@
       "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
       "preferred_source_name": "Planalto — texto compilado",
       "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "source_sync_status": "texto_compilado_pendente_de_captura_limpa",
+      "study_blocked": true
     },
     {
       "id": "lei-9796-1999",
@@ -978,7 +979,8 @@
       "preferred_source_url": "https://portalin.inss.gov.br/in/540",
       "preferred_source_name": "Portal IN oficial do INSS — texto com histórico de alterações",
       "preferred_source_status": "confirmado_com_alerta_de_redacoes_riscadas",
-      "source_sync_status": "texto_integral_nao_importado"
+      "source_sync_status": "texto_integral_nao_importado",
+      "study_blocked": true
     },
     {
       "id": "decreto-lei-2848-1940",
@@ -1013,7 +1015,8 @@
       "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
       "preferred_source_name": "Planalto — Código Penal compilado",
       "preferred_source_status": "confirmado_por_indice_oficial",
-      "source_sync_status": "captura_direta_pendente"
+      "source_sync_status": "captura_direta_pendente",
+      "study_blocked": true
     }
   ],
   "changes": [],
