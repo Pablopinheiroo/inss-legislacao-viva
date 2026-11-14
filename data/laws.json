@@ -50,7 +50,11 @@
     "require_all_articles": true,
     "snapshot_scope": "selected_articles",
     "matter": "Direito Constitucional",
-    "subject": "Constituição Federal: direitos fundamentais, Administração Pública e Seguridade Social"
+    "subject": "Constituição Federal: direitos fundamentais, Administração Pública e Seguridade Social",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Abrange direitos fundamentais, Administração Pública e Seguridade Social. A prioridade máxima é por recortes temáticos do edital, não pela Constituição inteira.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-1171-1994",
@@ -67,7 +71,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Ética no Serviço Público",
-    "subject": "Ética e conduta do servidor público"
+    "subject": "Ética e conduta do servidor público",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Código de Ética do servidor público, expressamente indicado no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-6029-2007",
@@ -84,7 +92,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Ética no Serviço Público",
-    "subject": "Sistema de gestão da ética no Poder Executivo Federal"
+    "subject": "Sistema de gestão da ética no Poder Executivo Federal",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Sistema de Gestão da Ética, expressamente indicado no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8112-1990",
@@ -101,7 +113,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Administrativo",
-    "subject": "Regime jurídico dos servidores públicos federais"
+    "subject": "Regime jurídico dos servidores públicos federais",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Regime jurídico dos servidores: conteúdo explícito de Direito Administrativo, com vários tópicos do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8429-1992",
@@ -118,7 +134,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Administrativo",
-    "subject": "Improbidade administrativa"
+    "subject": "Improbidade administrativa",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Improbidade e responsabilização administrativa, expressamente indicada no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-9784-1999",
@@ -135,7 +155,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Administrativo",
-    "subject": "Processo administrativo federal"
+    "subject": "Processo administrativo federal",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Processo administrativo federal, expressamente previsto como lei específica no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-7070-1982",
@@ -152,7 +176,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial da Talidomida: tópico específico do edital, mas de alcance mais restrito que o núcleo do RGPS.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-7986-1989",
@@ -168,7 +196,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial dos seringueiros: tópico específico do edital, com conteúdo delimitado.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8059-1990",
@@ -185,7 +217,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial de ex-combatente: tópico específico do edital, com conteúdo delimitado.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-9422-1996",
@@ -202,7 +238,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial às vítimas de hemodiálise de Caruaru: tópico específico do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-9425-1996",
@@ -219,7 +259,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão vitalícia às vítimas do Césio 137: tópico específico do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-10559-2002",
@@ -236,7 +280,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Aposentadoria e pensão excepcional ao anistiado político: tópico específico do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-11520-2007",
@@ -253,7 +301,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial às pessoas atingidas pela hanseníase: tópico específico do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-13985-2020",
@@ -269,7 +321,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Benefícios e pensões especiais"
+    "subject": "Benefícios e pensões especiais",
+    "study_priority": 3,
+    "priority_label": "Complementar",
+    "priority_reason": "Pensão especial destinada a crianças com síndrome congênita do Zika: tópico específico do edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-10779-2003",
@@ -286,7 +342,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Seguro-defeso"
+    "subject": "Seguro-defeso",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Seguro-defeso, tema e lei expressamente indicados no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-8424-2015",
@@ -303,7 +363,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Seguro-defeso"
+    "subject": "Seguro-defeso",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Regulamento do seguro-defeso, expressamente indicado no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8742-1993",
@@ -320,7 +384,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "LOAS, BPC e auxílio-inclusão"
+    "subject": "LOAS, BPC e auxílio-inclusão",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "LOAS, BPC e auxílio-inclusão, conteúdo expressamente previsto no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-14176-2021",
@@ -337,7 +405,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "LOAS, BPC e auxílio-inclusão"
+    "subject": "LOAS, BPC e auxílio-inclusão",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Alterações ligadas ao BPC e ao auxílio-inclusão. Estudar seus efeitos na LOAS consolidada; não tratar a lei alteradora como substituta da LOAS.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-6214-2007",
@@ -354,7 +426,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "LOAS, BPC e auxílio-inclusão"
+    "subject": "LOAS, BPC e auxílio-inclusão",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Regulamentação do BPC, expressamente indicada no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-9796-1999",
@@ -371,7 +447,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "RPPS, contagem recíproca e compensação previdenciária"
+    "subject": "RPPS, contagem recíproca e compensação previdenciária",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Compensação previdenciária e contagem recíproca, expressamente indicadas no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-10188-2019",
@@ -387,7 +467,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "RPPS, contagem recíproca e compensação previdenciária"
+    "subject": "RPPS, contagem recíproca e compensação previdenciária",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Regulamenta a compensação previdenciária, expressamente indicado no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "ec-103-2019",
@@ -404,7 +488,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Reforma da Previdência e regras de transição"
+    "subject": "Reforma da Previdência e regras de transição",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Reforma da Previdência, expressamente indicada e transversal às regras previdenciárias.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lc-142-2013",
@@ -420,7 +508,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Aposentadoria da pessoa com deficiência"
+    "subject": "Aposentadoria da pessoa com deficiência",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "Aposentadoria da pessoa com deficiência, expressamente indicada no edital.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8212-1991",
@@ -437,7 +529,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "Custeio e financiamento da Seguridade Social"
+    "subject": "Custeio e financiamento da Seguridade Social",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Custeio e financiamento da Seguridade Social, com cobrança expressa no item 14.2.3.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "lei-8213-1991",
@@ -454,7 +550,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "RGPS e benefícios previdenciários"
+    "subject": "RGPS e benefícios previdenciários",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Base expressa do RGPS e dos benefícios; alta densidade de conteúdo específico do cargo.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "decreto-3048-1999",
@@ -471,7 +571,11 @@
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
-    "subject": "RGPS e benefícios previdenciários"
+    "subject": "RGPS e benefícios previdenciários",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Regulamento amplo do RGPS, expressamente indicado no edital e relacionado aos principais assuntos previdenciários.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   },
   {
     "id": "in-128-2022",
@@ -492,6 +596,10 @@
     "source_note": "Acompanhamento pelo histórico oficial de atos modificadores, sem extração artigo por artigo.",
     "snapshot_scope": "official_change_index",
     "matter": "Direito Previdenciário",
-    "subject": "Regras e procedimentos administrativos do INSS"
+    "subject": "Regras e procedimentos administrativos do INSS",
+    "study_priority": 1,
+    "priority_label": "Norma central",
+    "priority_reason": "Norma expressamente indicada no edital; estudar apenas dispositivos relacionados às rotinas e aos temas do programa, após obter texto consolidado confiável.",
+    "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca."
   }
 ]
