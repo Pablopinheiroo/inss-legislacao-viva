@@ -7,7 +7,7 @@
       "id": "8213-art1",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 1",
       "article_label": "Art. 1º",
       "topic": "Finalidade da Previdência Social",
@@ -18,7 +18,7 @@
           "answer": true,
           "validation_phrase": "mediante contribuição",
           "explanation": "Certo. O art. 1º afirma expressamente que a Previdência Social atua mediante contribuição. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -34,7 +34,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-a1-2",
@@ -43,7 +44,7 @@
           "validation_phrase": "desemprego involuntário",
           "explanation": "Errado. O dispositivo também menciona desemprego involuntário, tempo de serviço, encargos familiares e prisão ou morte de quem o beneficiário dependia economicamente. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
           "correction": "O artigo inclui desemprego involuntário, tempo de serviço, encargos familiares e prisão ou morte.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -59,7 +60,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-a1-3",
@@ -67,7 +69,7 @@
           "answer": true,
           "validation_phrase": "prisão ou morte daqueles de quem dependiam economicamente",
           "explanation": "Certo. Essa situação aparece expressamente na parte final do art. 1º. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -83,7 +85,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -97,13 +100,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art2",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 2",
       "article_label": "Art. 2º",
       "topic": "Princípios e objetivos da Previdência Social",
@@ -114,7 +118,7 @@
           "answer": true,
           "validation_phrase": "universalidade de participação nos planos previdenciários",
           "explanation": "Certo. A universalidade de participação aparece no inciso I do art. 2º. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -130,7 +134,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-a2-2",
@@ -139,7 +144,7 @@
           "validation_phrase": "populações urbanas e rurais",
           "explanation": "Errado. O inciso II contempla tanto as populações urbanas quanto as rurais. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
           "correction": "O inciso II menciona as populações urbanas e rurais.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -155,7 +160,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-a2-3",
@@ -163,7 +169,7 @@
           "answer": true,
           "validation_phrase": "não inferior ao do salário-mínimo",
           "explanation": "Certo. É a regra expressa no inciso VI do art. 2º. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -179,7 +185,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-a2-4",
@@ -188,7 +195,7 @@
           "validation_phrase": "caráter democrático e descentralizado da gestão administrativa",
           "explanation": "Errado. O inciso VIII prevê gestão democrática e descentralizada, com participação do governo e da comunidade. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
           "correction": "A gestão é democrática e descentralizada e conta com participação do governo e da comunidade.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -204,7 +211,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -218,13 +226,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8212-art1",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 1",
       "article_label": "Art. 1º",
       "topic": "Conceito e diretrizes da Seguridade Social",
@@ -235,7 +244,7 @@
           "answer": true,
           "validation_phrase": "conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade",
           "explanation": "Certo. Essa é a definição que abre o art. 1º da Lei 8.212/1991. Fundamento legal: Art. 1º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -251,7 +260,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-a1-2",
@@ -260,7 +270,7 @@
           "validation_phrase": "saúde, à previdência e à assistência social",
           "explanation": "Errado. O texto menciona as três áreas: saúde, previdência e assistência social. Fundamento legal: Art. 1º da Lei nº 8.212/1991.",
           "correction": "A assistência social também integra a Seguridade Social.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -276,7 +286,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-a1-3",
@@ -284,7 +295,7 @@
           "answer": true,
           "validation_phrase": "universalidade da cobertura e do atendimento",
           "explanation": "Certo. As diretrizes aparecem no parágrafo único do art. 1º; entre elas estão universalidade e diversidade da base de financiamento. Fundamento legal: Art. 1º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -300,7 +311,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -314,13 +326,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "8212-art3",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 3",
       "article_label": "Art. 3º",
       "topic": "Finalidade e organização da Previdência Social",
@@ -331,7 +344,7 @@
           "answer": true,
           "validation_phrase": "incapacidade, idade avançada, tempo de serviço, desemprego involuntário",
           "explanation": "Certo. O art. 3º enumera esses eventos, além de encargos familiares e reclusão ou morte. Fundamento legal: Art. 3º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -347,7 +360,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-a3-2",
@@ -356,7 +370,7 @@
           "validation_phrase": "universalidade de participação nos planos previdenciários, mediante contribuição",
           "explanation": "Errado. A alínea a do parágrafo único prevê participação nos planos previdenciários mediante contribuição. Fundamento legal: Art. 3º da Lei nº 8.212/1991.",
           "correction": "O texto exige contribuição para a participação nos planos previdenciários.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -372,7 +386,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-a3-3",
@@ -380,7 +395,7 @@
           "answer": true,
           "validation_phrase": "previdência complementar facultativa, custeada por contribuição adicional",
           "explanation": "Certo. A previsão está na alínea e do parágrafo único do art. 3º. Fundamento legal: Art. 3º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -396,7 +411,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -410,13 +426,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "loas-art1",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 1",
       "article_label": "Art. 1º",
       "topic": "Conceito de Assistência Social",
@@ -427,7 +444,7 @@
           "answer": true,
           "validation_phrase": "direito do cidadão e dever do Estado",
           "explanation": "Certo. A LOAS inicia sua definição com essa afirmação. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -443,7 +460,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a1-2",
@@ -452,7 +470,7 @@
           "validation_phrase": "Política de Seguridade Social não contributiva",
           "explanation": "Errado. A LOAS classifica a assistência social como não contributiva. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
           "correction": "A expressão correta é “não contributiva”.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -468,7 +486,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a1-3",
@@ -476,7 +495,7 @@
           "answer": true,
           "validation_phrase": "conjunto integrado de ações de iniciativa pública e da sociedade",
           "explanation": "Certo. Essa previsão aparece na parte final do art. 1º. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -492,7 +511,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -506,13 +526,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "loas-art2",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 2",
       "article_label": "Art. 2º",
       "topic": "Objetivos da Assistência Social",
@@ -523,7 +544,7 @@
           "answer": true,
           "validation_phrase": "a proteção social",
           "explanation": "Certo. A proteção social aparece no inciso I do art. 2º. Fundamento legal: Art. 2º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -539,7 +560,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a2-2",
@@ -547,7 +569,7 @@
           "answer": true,
           "validation_phrase": "vigilância socioassistencial, que visa a analisar territorialmente a capacidade protetiva das famílias",
           "explanation": "Certo. Essa é a finalidade indicada no inciso II. Fundamento legal: Art. 2º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -563,7 +585,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a2-3",
@@ -572,7 +595,7 @@
           "validation_phrase": "a defesa de direitos",
           "explanation": "Errado. A defesa de direitos é expressamente indicada no inciso III do art. 2º. Fundamento legal: Art. 2º da Lei nº 8.742/1993.",
           "correction": "A defesa de direitos é o terceiro objetivo previsto no art. 2º.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -588,7 +611,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -602,13 +626,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "loas-art4",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 4",
       "article_label": "Art. 4º",
       "topic": "Princípios da Assistência Social",
@@ -619,7 +644,7 @@
           "answer": true,
           "validation_phrase": "supremacia do atendimento às necessidades sociais sobre as exigências de rentabilidade econômica",
           "explanation": "Certo. É o princípio previsto no inciso I do art. 4º. Fundamento legal: Art. 4º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -635,7 +660,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a4-2",
@@ -644,7 +670,7 @@
           "validation_phrase": "vedando-se qualquer comprovação vexatória de necessidade",
           "explanation": "Errado. O inciso III veda qualquer comprovação vexatória de necessidade. Fundamento legal: Art. 4º da Lei nº 8.742/1993.",
           "correction": "A lei expressamente proíbe comprovação vexatória.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -660,7 +686,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a4-3",
@@ -668,7 +695,7 @@
           "answer": true,
           "validation_phrase": "igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza",
           "explanation": "Certo. Essa regra está no inciso IV do art. 4º. Fundamento legal: Art. 4º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -684,7 +711,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -698,13 +726,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "loas-art20",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 20",
       "article_label": "Art. 20",
       "topic": "Benefício de Prestação Continuada",
@@ -715,7 +744,7 @@
           "answer": true,
           "validation_phrase": "um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais",
           "explanation": "Certo. O caput do art. 20 define o valor e os grupos que podem receber o BPC, observados os demais requisitos. Fundamento legal: Art. 20º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -731,7 +760,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a20-2",
@@ -740,7 +770,7 @@
           "validation_phrase": "impedimento de longo prazo",
           "explanation": "Errado. O § 2º exige impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, em interação com uma ou mais barreiras. Fundamento legal: Art. 20º da Lei nº 8.742/1993.",
           "correction": "A lei exige impedimento de longo prazo, não de curto prazo.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -756,7 +786,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-a20-3",
@@ -765,7 +796,7 @@
           "validation_phrase": "os irmãos solteiros",
           "explanation": "Errado. O § 1º inclui os irmãos solteiros, e não os irmãos casados. Fundamento legal: Art. 20º da Lei nº 8.742/1993.",
           "correction": "O texto do § 1º se refere aos irmãos solteiros.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -781,7 +812,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -795,13 +827,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "8112-art5",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 5",
       "article_label": "Art. 5º",
       "topic": "Requisitos para investidura em cargo público",
@@ -812,7 +845,7 @@
           "answer": true,
           "validation_phrase": "a nacionalidade brasileira",
           "explanation": "Certo. A nacionalidade brasileira aparece no inciso I do art. 5º. Fundamento legal: Art. 5º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -828,7 +861,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-a5-2",
@@ -837,7 +871,7 @@
           "validation_phrase": "idade mínima de dezoito anos",
           "explanation": "Errado. O inciso V estabelece idade mínima de dezoito anos. Fundamento legal: Art. 5º da Lei nº 8.112/1990.",
           "correction": "A idade mínima prevista no inciso V é de 18 anos.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -853,7 +887,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-a5-3",
@@ -861,7 +896,7 @@
           "answer": true,
           "validation_phrase": "aptidão física e mental",
           "explanation": "Certo. É o requisito indicado no inciso VI. Fundamento legal: Art. 5º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -877,7 +912,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -891,13 +927,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "9784-art2",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 2",
       "article_label": "Art. 2º",
       "topic": "Princípios do processo administrativo",
@@ -908,7 +945,7 @@
           "answer": true,
           "validation_phrase": "legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade",
           "explanation": "Certo. O caput do art. 2º lista esses princípios, além de ampla defesa, contraditório, segurança jurídica, interesse público e eficiência. Fundamento legal: Art. 2º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -924,7 +961,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-a2-2",
@@ -933,7 +971,7 @@
           "validation_phrase": "vedada a promoção pessoal de agentes ou autoridades",
           "explanation": "Errado. O inciso III do parágrafo único veda a promoção pessoal de agentes ou autoridades. Fundamento legal: Art. 2º da Lei nº 9.784/1999.",
           "correction": "O critério legal é a objetividade no atendimento do interesse público, vedada a promoção pessoal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -949,7 +987,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-a2-3",
@@ -957,7 +996,7 @@
           "answer": true,
           "validation_phrase": "impulsão, de ofício, do processo administrativo",
           "explanation": "Certo. Esse critério está no inciso XII do parágrafo único. Fundamento legal: Art. 2º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -973,7 +1012,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -987,13 +1027,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art3",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 3",
       "article_label": "Art. 3º",
       "topic": "Direitos do administrado",
@@ -1004,7 +1045,7 @@
           "answer": true,
           "validation_phrase": "ter ciência da tramitação dos processos administrativos",
           "explanation": "Certo. O direito está previsto no inciso II do art. 3º. Fundamento legal: Art. 3º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1020,7 +1061,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-a3-2",
@@ -1029,7 +1071,7 @@
           "validation_phrase": "antes da decisão",
           "explanation": "Errado. O inciso III permite formular alegações e apresentar documentos antes da decisão. Fundamento legal: Art. 3º da Lei nº 9.784/1999.",
           "correction": "A apresentação deve ocorrer antes da decisão.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1045,7 +1087,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-a3-3",
@@ -1053,7 +1096,7 @@
           "answer": true,
           "validation_phrase": "facultativamente, por advogado, salvo quando obrigatória a representação",
           "explanation": "Certo. Essa é a regra do inciso IV do art. 3º. Fundamento legal: Art. 3º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1069,7 +1112,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -1083,13 +1127,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "6029-art3",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "article_key": "Art. 3",
       "article_label": "Art. 3º",
       "topic": "Comissão de Ética Pública",
@@ -1100,7 +1145,7 @@
           "answer": true,
           "validation_phrase": "integrada por sete brasileiros",
           "explanation": "Certo. O caput do art. 3º prevê sete integrantes. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1116,7 +1161,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         },
         {
           "id": "6029-a3-2",
@@ -1125,7 +1171,7 @@
           "validation_phrase": "mandatos de três anos",
           "explanation": "Errado. O Decreto 6.029/2007 prevê mandatos de três anos, não coincidentes. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
           "correction": "O prazo correto é de três anos.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1141,7 +1187,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         },
         {
           "id": "6029-a3-3",
@@ -1149,7 +1196,7 @@
           "answer": true,
           "validation_phrase": "permitida uma única recondução",
           "explanation": "Certo. A possibilidade de uma única recondução está expressa no caput do art. 3º. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1165,7 +1212,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         }
       ],
       "category": "Ética",
@@ -1179,13 +1227,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "6029-art12",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "article_key": "Art. 12",
       "article_label": "Art. 12",
       "topic": "Apuração de conduta ética",
@@ -1196,7 +1245,7 @@
           "answer": true,
           "validation_phrase": "respeitando-se, sempre, as garantias do contraditório e da ampla defesa",
           "explanation": "Certo. O caput do art. 12 determina a observância dessas garantias. Fundamento legal: Art. 12º da Decreto nº 6.029/2007.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1212,7 +1261,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         },
         {
           "id": "6029-a12-2",
@@ -1221,7 +1271,7 @@
           "validation_phrase": "no prazo de dez dias",
           "explanation": "Errado. O caput do art. 12 prevê prazo de dez dias para manifestação escrita. Fundamento legal: Art. 12º da Decreto nº 6.029/2007.",
           "correction": "O prazo previsto é de dez dias.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1237,7 +1287,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         },
         {
           "id": "6029-a12-3",
@@ -1245,7 +1296,7 @@
           "answer": true,
           "validation_phrase": "nova manifestação, no prazo de dez dias",
           "explanation": "Certo. Essa regra está prevista no § 3º do art. 12. Fundamento legal: Art. 12º da Decreto nº 6.029/2007.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1261,7 +1312,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "decreto-6029-2007",
-          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
         }
       ],
       "category": "Ética",
@@ -1275,13 +1327,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "8213-art11",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 11",
       "article_label": "Art. 11º",
       "topic": "Segurados obrigatórios do RGPS",
@@ -1292,7 +1345,7 @@
           "answer": true,
           "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
           "explanation": "Certo. O art. 11 apresenta as categorias de pessoas físicas enquadradas como seguradas obrigatórias. Fundamento legal: Art. 11º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1308,7 +1361,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art11-2",
@@ -1317,7 +1371,7 @@
           "validation_phrase": "em caráter não eventual",
           "explanation": "Errado. A alínea exige serviço em caráter não eventual, além de subordinação e remuneração. Fundamento legal: Art. 11º da Lei nº 8.213/1991.",
           "correction": "O serviço deve ser prestado em caráter não eventual, sob subordinação e mediante remuneração.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1333,7 +1387,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1347,13 +1402,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art15",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 15",
       "article_label": "Art. 15º",
       "topic": "Manutenção da qualidade de segurado",
@@ -1364,7 +1420,7 @@
           "answer": true,
           "validation_phrase": "até 6 (seis) meses após a cessação das contribuições, o segurado facultativo",
           "explanation": "Certo. O inciso VI prevê até seis meses para o segurado facultativo. Fundamento legal: Art. 15º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1380,7 +1436,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art15-2",
@@ -1389,7 +1446,7 @@
           "validation_phrase": "até 6 (seis) meses após a cessação das contribuições, o segurado facultativo",
           "explanation": "Errado. Para o segurado facultativo, o prazo é de seis meses. Fundamento legal: Art. 15º da Lei nº 8.213/1991.",
           "correction": "Para o segurado facultativo, o prazo é de até seis meses.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1405,7 +1462,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1419,13 +1477,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art25",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 25",
       "article_label": "Art. 25º",
       "topic": "Períodos de carência",
@@ -1436,7 +1495,7 @@
           "answer": true,
           "validation_phrase": "auxílio-reclusão: 24 (vinte e quatro) contribuições mensais",
           "explanation": "Certo. O inciso IV prevê vinte e quatro contribuições mensais para o auxílio-reclusão. Fundamento legal: Art. 25º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1452,7 +1511,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art25-2",
@@ -1461,7 +1521,7 @@
           "validation_phrase": "auxílio-reclusão: 24 (vinte e quatro) contribuições mensais",
           "explanation": "Errado. A carência prevista no inciso IV é de vinte e quatro contribuições. Fundamento legal: Art. 25º da Lei nº 8.213/1991.",
           "correction": "A carência do auxílio-reclusão é de vinte e quatro contribuições mensais.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1477,7 +1537,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1491,13 +1552,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art26",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 26",
       "article_label": "Art. 26º",
       "topic": "Prestações que independem de carência",
@@ -1508,7 +1570,7 @@
           "answer": true,
           "validation_phrase": "pensão por morte, salário-família e auxílio-acidente",
           "explanation": "Certo. O inciso I inclui a pensão por morte entre as prestações que independem de carência. Fundamento legal: Art. 26º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1524,7 +1586,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art26-2",
@@ -1533,7 +1596,7 @@
           "validation_phrase": "pensão por morte, salário-família e auxílio-acidente",
           "explanation": "Errado. O inciso I também inclui o auxílio-acidente entre as prestações que independem de carência. Fundamento legal: Art. 26º da Lei nº 8.213/1991.",
           "correction": "O auxílio-acidente independe de carência.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1549,7 +1612,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1563,13 +1627,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art74",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 74",
       "article_label": "Art. 74º",
       "topic": "Termo inicial da pensão por morte",
@@ -1580,7 +1645,7 @@
           "answer": true,
           "validation_phrase": "em até 180 (cento e oitenta) dias após o óbito, para os filhos menores de 16 (dezesseis) anos",
           "explanation": "Certo. O inciso I prevê cento e oitenta dias para filhos menores de dezesseis anos. Fundamento legal: Art. 74º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1596,7 +1661,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art74-2",
@@ -1605,7 +1671,7 @@
           "validation_phrase": "em até 90 (noventa) dias após o óbito, para os demais dependentes",
           "explanation": "Errado. Para os demais dependentes, o prazo é de noventa dias. Fundamento legal: Art. 74º da Lei nº 8.213/1991.",
           "correction": "Para os demais dependentes, o prazo é de noventa dias após o óbito.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1621,7 +1687,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1635,13 +1702,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8213-art86",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "article_key": "Art. 86",
       "article_label": "Art. 86º",
       "topic": "Auxílio-acidente",
@@ -1652,7 +1720,7 @@
           "answer": true,
           "validation_phrase": "corresponderá a cinquenta por cento do salário-de-benefício",
           "explanation": "Certo. O § 1º fixa o auxílio-acidente em cinquenta por cento do salário-de-benefício. Fundamento legal: Art. 86º da Lei nº 8.213/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1668,7 +1736,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         },
         {
           "id": "8213-art86-2",
@@ -1677,7 +1746,7 @@
           "validation_phrase": "corresponderá a cinquenta por cento do salário-de-benefício",
           "explanation": "Errado. O percentual do § 1º é cinquenta por cento. Fundamento legal: Art. 86º da Lei nº 8.213/1991.",
           "correction": "O auxílio-acidente corresponde a cinquenta por cento do salário-de-benefício.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1693,7 +1762,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8213-1991",
-          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1707,13 +1777,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "8212-art12",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 12",
       "article_label": "Art. 12º",
       "topic": "Segurados obrigatórios no custeio",
@@ -1724,7 +1795,7 @@
           "answer": true,
           "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
           "explanation": "Certo. O art. 12 apresenta as categorias de segurados obrigatórios. Fundamento legal: Art. 12º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1740,7 +1811,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-art12-2",
@@ -1749,7 +1821,7 @@
           "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
           "explanation": "Errado. O segurado facultativo não é segurado obrigatório; sua filiação é facultativa. Fundamento legal: Art. 12º da Lei nº 8.212/1991.",
           "correction": "O art. 12 trata dos segurados obrigatórios; o facultativo é tratado separadamente.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1765,7 +1837,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1779,13 +1852,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "8212-art15",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 15",
       "article_label": "Art. 15º",
       "topic": "Conceito de empresa e empregador doméstico",
@@ -1796,7 +1870,7 @@
           "answer": true,
           "validation_phrase": "com fins lucrativos ou não",
           "explanation": "Certo. O inciso I inclui empresa com fins lucrativos ou não. Fundamento legal: Art. 15º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1812,7 +1886,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-art15-2",
@@ -1821,7 +1896,7 @@
           "validation_phrase": "sem finalidade lucrativa, empregado doméstico",
           "explanation": "Errado. O inciso II exige ausência de finalidade lucrativa. Fundamento legal: Art. 15º da Lei nº 8.212/1991.",
           "correction": "O empregador doméstico admite empregado doméstico sem finalidade lucrativa.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1837,7 +1912,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1851,13 +1927,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "8212-art22",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 22",
       "article_label": "Art. 22º",
       "topic": "Contribuição a cargo da empresa",
@@ -1868,7 +1945,7 @@
           "answer": true,
           "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
           "explanation": "Certo. O inciso I estabelece vinte por cento sobre as remunerações previstas no texto. Fundamento legal: Art. 22º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1884,7 +1961,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-art22-2",
@@ -1893,7 +1971,7 @@
           "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
           "explanation": "Errado. O percentual do inciso I é vinte por cento. Fundamento legal: Art. 22º da Lei nº 8.212/1991.",
           "correction": "O percentual previsto no art. 22, I, é vinte por cento.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1909,7 +1987,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1923,13 +2002,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "8212-art28",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 28",
       "article_label": "Art. 28º",
       "topic": "Salário-de-contribuição",
@@ -1940,7 +2020,7 @@
           "answer": true,
           "validation_phrase": "a totalidade dos rendimentos pagos, devidos ou creditados a qualquer título",
           "explanation": "Certo. O inciso I utiliza a totalidade dos rendimentos indicados na lei. Fundamento legal: Art. 28º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1956,7 +2036,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-art28-2",
@@ -1965,7 +2046,7 @@
           "validation_phrase": "os ganhos habituais sob a forma de utilidades",
           "explanation": "Errado. O inciso I inclui esses ganhos habituais. Fundamento legal: Art. 28º da Lei nº 8.212/1991.",
           "correction": "Os ganhos habituais sob a forma de utilidades integram o salário-de-contribuição.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1981,7 +2062,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1995,13 +2077,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "8212-art30",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "article_key": "Art. 30",
       "article_label": "Art. 30º",
       "topic": "Arrecadação e recolhimento",
@@ -2012,7 +2095,7 @@
           "answer": true,
           "validation_phrase": "arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço, descontando-as da respectiva remuneração",
           "explanation": "Certo. A alínea a do inciso I atribui essa obrigação à empresa. Fundamento legal: Art. 30º da Lei nº 8.212/1991.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2028,7 +2111,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         },
         {
           "id": "8212-art30-2",
@@ -2037,7 +2121,7 @@
           "validation_phrase": "arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço",
           "explanation": "Errado. A alínea a do inciso I atribui à empresa a arrecadação e o desconto. Fundamento legal: Art. 30º da Lei nº 8.212/1991.",
           "correction": "A empresa arrecada e desconta as contribuições dos empregados e trabalhadores avulsos a seu serviço.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2053,7 +2137,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8212-1991",
-          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2067,13 +2152,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "loas-art21",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 21",
       "article_label": "Art. 21º",
       "topic": "Revisão do BPC",
@@ -2084,7 +2170,7 @@
           "answer": true,
           "validation_phrase": "deve ser revisto a cada 2 (dois) anos",
           "explanation": "Certo. O caput do art. 21 prevê revisão a cada dois anos. Fundamento legal: Art. 21º da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2100,7 +2186,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-art21-2",
@@ -2109,7 +2196,7 @@
           "validation_phrase": "deve ser revisto a cada 2 (dois) anos",
           "explanation": "Errado. O prazo do art. 21 é de dois anos. Fundamento legal: Art. 21º da Lei nº 8.742/1993.",
           "correction": "A revisão prevista no art. 21 ocorre a cada dois anos.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2125,7 +2212,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2139,13 +2227,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "loas-art21a",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 21-A",
       "article_label": "Art. 21-A",
       "topic": "Atividade remunerada e BPC",
@@ -2156,7 +2245,7 @@
           "answer": true,
           "validation_phrase": "será suspenso pelo órgão concedente quando a pessoa com deficiência exercer atividade remunerada",
           "explanation": "Certo. O caput do art. 21-A prevê a suspensão nessa hipótese. Fundamento legal: Art. 21-A da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2172,7 +2261,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-art21a-2",
@@ -2181,7 +2271,7 @@
           "validation_phrase": "a contratação de pessoa com deficiência como aprendiz não acarreta a suspensão",
           "explanation": "Errado. O § 2º determina que a contratação como aprendiz não acarreta a suspensão, respeitado o limite legal. Fundamento legal: Art. 21-A da Lei nº 8.742/1993.",
           "correction": "A contratação como aprendiz não suspende o BPC; o recebimento concomitante fica limitado a dois anos.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2197,7 +2287,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2211,13 +2302,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "loas-art21b",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "article_key": "Art. 21-B",
       "article_label": "Art. 21-B",
       "topic": "Regularização do CadÚnico",
@@ -2228,7 +2320,7 @@
           "answer": true,
           "validation_phrase": "45 (quarenta e cinco) dias para Municípios de pequeno porte",
           "explanation": "Certo. O inciso I prevê quarenta e cinco dias para municípios de pequeno porte. Fundamento legal: Art. 21-B da Lei nº 8.742/1993.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2244,7 +2336,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         },
         {
           "id": "loas-art21b-2",
@@ -2253,7 +2346,7 @@
           "validation_phrase": "90 (noventa) dias para Municípios de médio e grande porte ou metrópole",
           "explanation": "Errado. O inciso II prevê noventa dias para esses municípios. Fundamento legal: Art. 21-B da Lei nº 8.742/1993.",
           "correction": "Nessas localidades, o prazo é de noventa dias.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2269,7 +2362,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8742-1993",
-          "law_title": "Lei 8.742/1993 — LOAS"
+          "law_title": "Lei 8.742/1993 — LOAS",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2283,13 +2377,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "8112-art13",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 13",
       "article_label": "Art. 13º",
       "topic": "Posse em cargo público",
@@ -2300,7 +2395,7 @@
           "answer": true,
           "validation_phrase": "A posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
           "explanation": "Certo. O § 1º fixa trinta dias, ressalvadas as regras de contagem em caso de impedimento legal. Fundamento legal: Art. 13º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2316,7 +2411,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-art13-2",
@@ -2325,7 +2421,7 @@
           "validation_phrase": "A posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
           "explanation": "Errado. O prazo de quinze dias é ligado ao exercício; para a posse, o art. 13 prevê trinta dias. Fundamento legal: Art. 13º da Lei nº 8.112/1990.",
           "correction": "O prazo geral para a posse é de trinta dias.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2341,7 +2437,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2355,13 +2452,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "8112-art15",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 15",
       "article_label": "Art. 15º",
       "topic": "Exercício no cargo público",
@@ -2372,7 +2470,7 @@
           "answer": true,
           "validation_phrase": "É de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício, contados da data da posse",
           "explanation": "Certo. O § 1º estabelece quinze dias a partir da posse. Fundamento legal: Art. 15º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2388,7 +2486,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-art15-2",
@@ -2397,7 +2496,7 @@
           "validation_phrase": "É de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício",
           "explanation": "Errado. O prazo previsto no § 1º é de quinze dias. Fundamento legal: Art. 15º da Lei nº 8.112/1990.",
           "correction": "O prazo para entrar em exercício é de quinze dias, contados da posse.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2413,7 +2512,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2427,13 +2527,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "8112-art19",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 19",
       "article_label": "Art. 19º",
       "topic": "Jornada de trabalho",
@@ -2444,7 +2545,7 @@
           "answer": true,
           "validation_phrase": "duração máxima do trabalho semanal de quarenta horas e observados os limites mínimo e máximo de seis horas e oito horas diárias",
           "explanation": "Certo. O caput prevê quarenta horas semanais e os limites diários de seis a oito horas, ressalvadas as leis especiais. Fundamento legal: Art. 19º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2460,7 +2561,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-art19-2",
@@ -2469,7 +2571,7 @@
           "validation_phrase": "duração máxima do trabalho semanal de quarenta horas",
           "explanation": "Errado. O limite máximo geral é quarenta horas semanais. Fundamento legal: Art. 19º da Lei nº 8.112/1990.",
           "correction": "O limite máximo geral é de quarenta horas semanais.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2485,7 +2587,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2499,13 +2602,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "8112-art116",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 116",
       "article_label": "Art. 116º",
       "topic": "Deveres do servidor",
@@ -2516,7 +2620,7 @@
           "answer": true,
           "validation_phrase": "cumprir as ordens superiores, exceto quando manifestamente ilegais",
           "explanation": "Certo. O inciso IV prevê o cumprimento das ordens superiores, com essa exceção. Fundamento legal: Art. 116º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2532,7 +2636,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-art116-2",
@@ -2541,7 +2646,7 @@
           "validation_phrase": "exceto quando manifestamente ilegais",
           "explanation": "Errado. O inciso IV excepciona expressamente as ordens manifestamente ilegais. Fundamento legal: Art. 116º da Lei nº 8.112/1990.",
           "correction": "O servidor não deve cumprir ordens superiores manifestamente ilegais.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2557,7 +2662,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2571,13 +2677,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "8112-art117",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "article_key": "Art. 117",
       "article_label": "Art. 117º",
       "topic": "Proibições ao servidor",
@@ -2588,7 +2695,7 @@
           "answer": true,
           "validation_phrase": "parente até o segundo grau civil",
           "explanation": "Certo. A proibição está no inciso VIII do art. 117. Fundamento legal: Art. 117º da Lei nº 8.112/1990.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2604,7 +2711,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         },
         {
           "id": "8112-art117-2",
@@ -2613,7 +2721,7 @@
           "validation_phrase": "parente até o segundo grau civil",
           "explanation": "Errado. O texto alcança parentes até o segundo grau civil. Fundamento legal: Art. 117º da Lei nº 8.112/1990.",
           "correction": "A redação do inciso VIII menciona parentes até o segundo grau civil.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2629,7 +2737,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-8112-1990",
-          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2643,13 +2752,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "9784-art18",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 18",
       "article_label": "Art. 18º",
       "topic": "Impedimento no processo administrativo",
@@ -2660,7 +2770,7 @@
           "answer": true,
           "validation_phrase": "tenha interesse direto ou indireto na matéria",
           "explanation": "Certo. Essa é a hipótese prevista no inciso I do art. 18. Fundamento legal: Art. 18º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2676,7 +2786,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art18-2",
@@ -2685,7 +2796,7 @@
           "validation_phrase": "parente e afins até o terceiro grau",
           "explanation": "Errado. O inciso II menciona cônjuge, companheiro ou parente e afins até o terceiro grau. Fundamento legal: Art. 18º da Lei nº 9.784/1999.",
           "correction": "O inciso II menciona parentes e afins até o terceiro grau.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2701,7 +2812,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2715,13 +2827,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art24",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 24",
       "article_label": "Art. 24º",
       "topic": "Prazo geral para prática de atos",
@@ -2732,7 +2845,7 @@
           "answer": true,
           "validation_phrase": "devem ser praticados no prazo de cinco dias",
           "explanation": "Certo. O art. 24 fixa cinco dias como prazo geral, salvo motivo de força maior. Fundamento legal: Art. 24º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2748,7 +2861,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art24-2",
@@ -2757,7 +2871,7 @@
           "validation_phrase": "prazo de cinco dias",
           "explanation": "Errado. O prazo geral é de cinco dias e pode ser dilatado até o dobro mediante justificação comprovada. Fundamento legal: Art. 24º da Lei nº 9.784/1999.",
           "correction": "O prazo geral é de cinco dias, podendo ser dilatado até o dobro mediante justificação comprovada.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2773,7 +2887,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2787,13 +2902,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art26",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 26",
       "article_label": "Art. 26º",
       "topic": "Intimação do interessado",
@@ -2804,7 +2920,7 @@
           "answer": true,
           "validation_phrase": "antecedência mínima de três dias úteis",
           "explanation": "Certo. O § 2º prevê antecedência mínima de três dias úteis. Fundamento legal: Art. 26º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2820,7 +2936,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art26-2",
@@ -2829,7 +2946,7 @@
           "validation_phrase": "antecedência mínima de três dias úteis",
           "explanation": "Errado. O art. 26 especifica dias úteis, e não corridos. Fundamento legal: Art. 26º da Lei nº 9.784/1999.",
           "correction": "A antecedência mínima é de três dias úteis.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2845,7 +2962,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2859,13 +2977,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art49",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 49",
       "article_label": "Art. 49º",
       "topic": "Prazo para decisão administrativa",
@@ -2876,7 +2995,7 @@
           "answer": true,
           "validation_phrase": "prazo de até trinta dias para decidir",
           "explanation": "Certo. O art. 49 prevê até trinta dias, com possibilidade de prorrogação expressamente motivada. Fundamento legal: Art. 49º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2892,7 +3011,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art49-2",
@@ -2901,7 +3021,7 @@
           "validation_phrase": "prorrogação por igual período expressamente motivada",
           "explanation": "Errado. O prazo é de até trinta dias e a prorrogação por igual período exige motivação expressa. Fundamento legal: Art. 49º da Lei nº 9.784/1999.",
           "correction": "O prazo é de trinta dias, prorrogável por igual período com motivação expressa.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2917,7 +3037,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -2931,13 +3052,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art50",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 50",
       "article_label": "Art. 50º",
       "topic": "Motivação dos atos administrativos",
@@ -2948,7 +3070,7 @@
           "answer": true,
           "validation_phrase": "neguem, limitem ou afetem direitos ou interesses",
           "explanation": "Certo. O inciso I exige motivação nessa hipótese. Fundamento legal: Art. 50º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2964,7 +3086,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art50-2",
@@ -2973,7 +3096,7 @@
           "validation_phrase": "decidam recursos administrativos",
           "explanation": "Errado. O inciso V inclui as decisões de recursos administrativos entre os atos que devem ser motivados. Fundamento legal: Art. 50º da Lei nº 9.784/1999.",
           "correction": "As decisões de recursos administrativos devem ser motivadas.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -2989,7 +3112,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -3003,13 +3127,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "9784-art59",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "article_key": "Art. 59",
       "article_label": "Art. 59º",
       "topic": "Prazo de recurso administrativo",
@@ -3020,7 +3145,7 @@
           "answer": true,
           "validation_phrase": "é de dez dias o prazo para interposição de recurso administrativo",
           "explanation": "Certo. O caput estabelece dez dias como regra geral. Fundamento legal: Art. 59º da Lei nº 9.784/1999.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -3036,7 +3161,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         },
         {
           "id": "9784-art59-2",
@@ -3045,7 +3171,7 @@
           "validation_phrase": "é de dez dias o prazo para interposição de recurso administrativo",
           "explanation": "Errado. O prazo geral do art. 59 é de dez dias. Fundamento legal: Art. 59º da Lei nº 9.784/1999.",
           "correction": "O prazo geral é de dez dias, salvo disposição legal específica.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -3061,7 +3187,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "lei-9784-1999",
-          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
         }
       ],
       "category": "Direito Administrativo",
@@ -3075,13 +3202,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "cf-art37",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "article_key": "Art. 37",
       "article_label": "Art. 37º",
       "topic": "Princípios da Administração Pública",
@@ -3092,7 +3220,7 @@
           "answer": true,
           "validation_phrase": "princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência",
           "explanation": "Certo. O caput do art. 37 apresenta os cinco princípios expressos. Fundamento legal: Art. 37º da Constituição Federal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3108,7 +3236,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         },
         {
           "id": "cf-art37-2",
@@ -3117,7 +3246,7 @@
           "validation_phrase": "depende de aprovação prévia em concurso público",
           "explanation": "Errado. O inciso II exige concurso, ressalvadas as nomeações para cargos em comissão de livre nomeação e exoneração. Fundamento legal: Art. 37º da Constituição Federal.",
           "correction": "A regra é a aprovação prévia em concurso público, com a exceção constitucional dos cargos em comissão.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3133,7 +3262,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         }
       ],
       "category": "Direito Constitucional",
@@ -3147,13 +3277,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "cf-art194",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "article_key": "Art. 194",
       "article_label": "Art. 194º",
       "topic": "Conceito de Seguridade Social",
@@ -3164,7 +3295,7 @@
           "answer": true,
           "validation_phrase": "direitos relativos à saúde, à previdência e à assistência social",
           "explanation": "Certo. O caput do art. 194 abrange essas três áreas. Fundamento legal: Art. 194º da Constituição Federal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3180,7 +3311,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         },
         {
           "id": "cf-art194-2",
@@ -3189,7 +3321,7 @@
           "validation_phrase": "direitos relativos à saúde, à previdência e à assistência social",
           "explanation": "Errado. A saúde também integra expressamente a Seguridade Social. Fundamento legal: Art. 194º da Constituição Federal.",
           "correction": "A Seguridade Social compreende saúde, Previdência Social e assistência social.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3205,7 +3337,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         }
       ],
       "category": "Direito Constitucional",
@@ -3219,13 +3352,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "cf-art195",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "article_key": "Art. 195",
       "article_label": "Art. 195º",
       "topic": "Financiamento da Seguridade Social",
@@ -3236,7 +3370,7 @@
           "answer": true,
           "validation_phrase": "financiada por toda a sociedade, de forma direta e indireta",
           "explanation": "Certo. Essa é a regra inicial do caput do art. 195. Fundamento legal: Art. 195º da Constituição Federal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3252,7 +3386,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         },
         {
           "id": "cf-art195-2",
@@ -3261,7 +3396,7 @@
           "validation_phrase": "financiada por toda a sociedade, de forma direta e indireta",
           "explanation": "Errado. O art. 195 prevê financiamento por toda a sociedade e enumera diversas fontes. Fundamento legal: Art. 195º da Constituição Federal.",
           "correction": "O financiamento é de toda a sociedade, direta e indiretamente, e conta com diversas fontes.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3277,7 +3412,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         }
       ],
       "category": "Direito Constitucional",
@@ -3291,13 +3427,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "cf-art201",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "article_key": "Art. 201",
       "article_label": "Art. 201º",
       "topic": "Organização do RGPS",
@@ -3308,7 +3445,7 @@
           "answer": true,
           "validation_phrase": "de caráter contributivo e de filiação obrigatória",
           "explanation": "Certo. O caput do art. 201 estabelece o caráter contributivo e a filiação obrigatória. Fundamento legal: Art. 201º da Constituição Federal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3324,7 +3461,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         },
         {
           "id": "cf-art201-2",
@@ -3333,7 +3471,7 @@
           "validation_phrase": "de caráter contributivo e de filiação obrigatória",
           "explanation": "Errado. O caput estabelece filiação obrigatória ao RGPS, observadas as regras legais de enquadramento. Fundamento legal: Art. 201º da Constituição Federal.",
           "correction": "O RGPS tem filiação obrigatória para quem se enquadra nas hipóteses legais.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3349,7 +3487,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         }
       ],
       "category": "Direito Constitucional",
@@ -3363,13 +3502,14 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "cf-art203",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "article_key": "Art. 203",
       "article_label": "Art. 203º",
       "topic": "Objetivos da assistência social",
@@ -3380,7 +3520,7 @@
           "answer": true,
           "validation_phrase": "independentemente de contribuição à seguridade social",
           "explanation": "Certo. O caput do art. 203 expressa o caráter não contributivo da assistência social. Fundamento legal: Art. 203º da Constituição Federal.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3396,7 +3536,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         },
         {
           "id": "cf-art203-2",
@@ -3405,7 +3546,7 @@
           "validation_phrase": "independentemente de contribuição à seguridade social",
           "explanation": "Errado. O art. 203 determina que a assistência social seja prestada independentemente de contribuição. Fundamento legal: Art. 203º da Constituição Federal.",
           "correction": "A assistência social independe de contribuição à Seguridade Social.",
-          "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
           "source_snapshot_date": "2026-11-14",
           "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
           "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
@@ -3421,7 +3562,8 @@
           "validation_status": "validated",
           "validation_method": "frase_ancora_no_artigo_atual",
           "law_id": "constituicao-1988",
-          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+          "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
         }
       ],
       "category": "Direito Constitucional",
@@ -3435,7 +3577,8 @@
       "difficulty": "media",
       "difficulty_basis": "Grupo com afirmações de níveis variados; o filtro é aplicado por afirmação.",
       "validation_status": "validated",
-      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual"
+      "validation_method": "frases_ancora_de_todas_as_afirmacoes_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     }
   ],
   "total_articles": 43,
@@ -3444,5 +3587,6 @@
   "validation_policy": "Todas as afirmações do grupo precisam ter fundamento legal, frase-âncora e versão atual compatível com a captura do artigo.",
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
-  "source_sync_status": "snapshot_anterior_ainda_nao_sincronizado"
+  "source_sync_status": "capturas_anteriores; recaptura_planalto_pendente",
+  "source_provenance_note": "source_url registra a origem real da captura que serviu de base ao item; preferred_source_url é o endereço oficial preferencial do Planalto/Portal IN. O item só será considerado sincronizado com a fonte preferencial após nova captura e validação de hash."
 }
