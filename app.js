@@ -5477,8 +5477,9 @@ function getAchievementMetrics(){
   const weekStart=achievementWeekStart(new Date());
   const weekStartKey=achievementDateKey(weekStart);
   const weekEvents=events.filter(event=>achievementDateKey(event.occurred_at)>=weekStartKey&&achievementDateKey(event.occurred_at)<=todayKey);
-  const weekAnswers=weekEvents.filter(event=>event.event_type==="answer").length;
-  const weekReviews=weekEvents.filter(event=>event.event_type==="answer"&&(event.review_mode===true||event.mode==="memory")).length;
+  const weekAnswerEvents=answers.filter(event=>achievementDateKey(event.occurred_at)>=weekStartKey&&achievementDateKey(event.occurred_at)<=todayKey);
+  const weekAnswers=weekAnswerEvents.length;
+  const weekReviews=weekAnswerEvents.filter(event=>event.review_mode===true||event.mode==="memory").length;
   const weekArticles=new Set(weekEvents.filter(event=>event.event_type==="article_status").map(event=>(event.law_id||"norma")+"::"+(event.article||"artigo"))).size;
   const today=days.get(todayKey)||{answers:0,articles:new Set(),activities:0};
   const todayProgress=today.answers+today.articles.size;
