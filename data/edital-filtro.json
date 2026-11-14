@@ -175,7 +175,7 @@
       "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
     }
   ],
-  "article_level_status": "Filtro aplicado por correspondência temática com o edital nas normas cadastradas, para os artigos identificados. A IN 128 está bloqueada até importar e limpar o texto integral.",
+  "article_level_status": "Filtro por artigo aplicado às 27 normas cadastradas; artigos fora do edital foram retirados da leitura ativa e dos bancos de treino. A IN 128 continua bloqueada até texto integral limpo.",
   "generated_at": "2026-11-14",
   "source_policy": {
     "primary": "Usar exclusivamente fonte oficial. Preferir texto compilado/consolidado do Planalto. Quando a norma não tiver consolidação disponível, usar o texto oficial do Planalto. Para a IN 128/2022, usar o Portal IN oficial do INSS.",
@@ -713,7 +713,14 @@
         "Art. 20-B",
         "Art. 21",
         "Art. 21-A",
-        "Art. 21-B"
+        "Art. 21-B",
+        "Art. 26-A",
+        "Art. 26-B",
+        "Art. 26-C",
+        "Art. 26-D",
+        "Art. 26-E",
+        "Art. 26-F",
+        "Art. 26-G"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
       "blocked": false
@@ -1226,5 +1233,15 @@
       "filter": "apenas dispositivos correspondentes ao edital",
       "blocked": true
     }
+  },
+  "question_bank_filter": {
+    "filtered": true,
+    "removed_counts": {
+      "data/questoes.json": 17,
+      "data/encontre-erro.json": 8,
+      "data/descubra-artigo.json": 6,
+      "data/afirmacoes-por-artigo.json": 5
+    },
+    "note": "Bancos reprocessados a partir da versão original para restaurar itens pertinentes que estavam fora do filtro por erro na lista de artigos. Somente gabaritos vinculados a artigos do recorte foram mantidos."
   }
 }
