@@ -1696,5 +1696,35 @@
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15"
+  },
+  {
+    "id": "decreto-lei-2848-1940",
+    "title": "Decreto-Lei nº 2.848, de 7 de dezembro de 1940",
+    "short_title": "Código Penal — crimes contra a Seguridade Social",
+    "category": "Decreto-Lei",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "source_name": "Planalto — Código Penal compilado",
+    "edital_item": "14.2.3 — item 7: Crimes contra a Seguridade Social",
+    "enabled": true,
+    "fetch_urls": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+    ],
+    "monitor_mode": "texto",
+    "matter": "Direito Previdenciário",
+    "subject": "Crimes contra a Seguridade Social",
+    "study_priority": 2,
+    "priority_label": "Alta",
+    "priority_reason": "O edital inclui expressamente crimes contra a Seguridade Social. O recorte fica limitado à apropriação indébita previdenciária (art. 168-A) e à sonegação de contribuição previdenciária (art. 337-A).",
+    "priority_basis": "Edital INSS 2022, item 14.2.3, tópico 7.",
+    "include_articles": [
+      "Art. 168-A",
+      "Art. 337-A"
+    ],
+    "snapshot_scope": "selected_articles",
+    "require_all_articles": true,
+    "source_verification_status": "confirmado_por_indice_oficial",
+    "source_sync_status": "captura_direta_pendente",
+    "study_blocked": true,
+    "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta."
   }
 ]
