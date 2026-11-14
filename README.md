@@ -168,7 +168,7 @@ A mudança do parser exige uma nova captura-base das fontes. Na primeira execuç
 
 ## Proteção contra falhas, bloqueios e limites de acesso
 
-O monitor não transforma falha HTTP, timeout, bloqueio de robô, página de verificação ou limite de consultas em artigo revogado ou removido. Em uma falha, o snapshot válido anterior é preservado, nenhum alerta de alteração é criado para aquela fonte e o painel informa a situação da consulta.
+O monitor não transforma falha HTTP, timeout, bloqueio de robô, página de verificação ou limite de consultas em artigo revogado ou removido. Em uma falha, o snapshot válido anterior é preservado, nenhum alerta de alteração é criado para aquela fonte e o painel informa a situação da consulta. O monitor também compara a quantidade de artigos com a captura anterior: se a mesma fonte passar a devolver uma fração muito menor dos artigos ou deixar de apresentar a estrutura de artigos, a nova captura é rejeitada como possivelmente incompleta.
 
 As consultas agora guardam diagnóstico por tentativa: endereço consultado, código HTTP quando disponível, tipo de falha, quantidade de tentativas e indicação de Retry-After. Respostas temporariamente limitadas (HTTP 429) e erros de servidor (HTTP 5xx) recebem novas tentativas controladas. A configuração respeita um limite curto de espera para não prender o workflow; depois disso, o monitor tenta outra fonte cadastrada, quando houver. Se nenhuma fonte funcionar, registra a falha e mantém os dados anteriores.
 
