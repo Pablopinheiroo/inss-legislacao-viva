@@ -348,9 +348,9 @@
       <div>
         <p class="eyebrow">TREINAMENTO · CERTO OU ERRADO</p>
         <h1>Simulados</h1>
-        <p class="subtitle">Escolha entre o simulado tradicional, sem cronômetro, e o simulado rápido, com tempo para responder.</p>
+        <p class="subtitle">Escolha o tamanho do simulado e o ritmo de treinamento. No completo, configure também a penalização aplicada às respostas erradas.</p>
       </div>
-      <div class="simulado-mode-note"><strong>Dois formatos de treinamento</strong><span>Ambos permitem navegar pelas questões, alterar respostas e conferir a correção completa ao finalizar.</span></div>
+      <div class="simulado-mode-note"><strong>Três formatos de treinamento</strong><span>Você pode navegar pelas questões, alterar respostas, deixar itens em branco e conferir a correção completa ao finalizar.</span></div>
     </section>
 
     <p id="simulado-bank-note" class="manual-check-note">Carregando banco de questões para os simulados...</p>
@@ -368,6 +368,20 @@
           <div><p class="eyebrow">COM CRONÔMETRO</p><h2>Simulado rápido</h2>
             <p>20 questões aleatórias com 20 minutos no total, em média 1 minuto por questão. O simulado termina automaticamente quando o tempo acabar.</p></div>
           <button id="start-simulado-rapido" class="primary-button" type="button" disabled>Iniciar simulado rápido</button>
+        </article>
+        <article class="simulado-mode-card simulado-mode-card-complete">
+          <span class="simulado-welcome-icon">60</span>
+          <div><p class="eyebrow">PROVA COMPLETA · 120 MINUTOS</p><h2>Simulado completo</h2>
+            <p>60 questões aleatórias, com duas horas para responder. Questões em branco valem zero e não impedem a finalização.</p></div>
+          <label class="simulado-penalty-label" for="simulado-complete-penalty">Desconto por questão errada</label>
+          <select id="simulado-complete-penalty" class="simulado-penalty-select">
+            <option value="1" selected>−1 ponto · um erro anula um acerto</option>
+            <option value="0.5">−0,5 ponto por erro</option>
+            <option value="0.25">−0,25 ponto por erro</option>
+            <option value="0">Sem penalização por erro</option>
+          </select>
+          <small class="simulado-penalty-note">Cada acerto vale +1 ponto; cada questão em branco vale 0. A pontuação líquida pode ser negativa. Confira a regra do edital e ajuste antes de iniciar.</small>
+          <button id="start-simulado-completo" class="primary-button" type="button" disabled>Iniciar simulado completo</button>
         </article>
       </div>
       <p class="simulado-mode-footnote">Você pode finalizar antecipadamente o simulado rápido. Questões deixadas em branco serão contabilizadas como não respondidas.</p>
@@ -415,6 +429,7 @@
         <article><span>Acertos</span><strong id="simulado-stat-correct">0</strong></article>
         <article><span>Erros</span><strong id="simulado-stat-wrong">0</strong></article>
         <article><span>Em branco</span><strong id="simulado-stat-blank">0</strong></article>
+        <article><span>Pontuação líquida</span><strong id="simulado-stat-net-points">0 pts</strong></article>
         <article><span>Aproveitamento</span><strong id="simulado-stat-percent">0%</strong></article>
       </div>
       <div class="simulado-result-bar" role="progressbar" aria-label="Aproveitamento do simulado" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
@@ -427,7 +442,7 @@
       </div>
     </section>
 
-    <footer class="footer-note"><strong>Dois formatos de treinamento.</strong><span>O tradicional tem 10 questões sem limite de tempo. O rápido tem 20 questões e cronômetro de 20 minutos. Nos dois formatos, o resultado completo aparece após a finalização e as questões erradas são enviadas à Central de revisão.</span></footer>
+    <footer class="footer-note"><strong>Três formatos de treinamento.</strong><span>Tradicional: 10 questões, sem cronômetro. Rápido: 20 questões em 20 minutos. Completo: 60 questões em 120 minutos, com pontuação Cebraspe configurável. Nos três formatos, o resultado completo aparece após a finalização e as questões erradas são enviadas à Central de revisão.</span></footer>
   </main>
 
   <main id="cloze-view" class="page-shell hidden">
