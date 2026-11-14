@@ -62,24 +62,37 @@
     try { return root.localStorage.getItem(key); }
     catch (error) { notify(false, error); return null; }
   }
+  function readItemStrict(key) {
+    try { return root.localStorage.getItem(key); }
+    catch (error) {
+      notify(false, error);
+      throw new Error("O navegador não permitiu ler os dados locais. Nenhuma restauração foi iniciada.");
+    }
+  }
   function setItem(key, value) {
     try {
       root.localStorage.setItem(key, String(value));
       notify(true);
       return true;
-    } catch (error) { notify(false, error); return false; }
+    } catch (error) {
+      notify(false, error);
+      throw error;
+    }
   }
   function removeItem(key) {
     try {
       root.localStorage.removeItem(key);
       notify(true);
       return true;
-    } catch (error) { notify(false, error); return false; }
+    } catch (error) {
+      notify(false, error);
+      throw error;
+    }
   }
 
   function createBackup() {
     const storage = {};
-    STORAGE_KEYS.forEach(key => { storage[key] = getItem(key); });
+    STORAGE_KEYS.forEach(key => { storage[key] = readItemStrict(key); });
     return {
       format: BACKUP_FORMAT,
       schema_version: BACKUP_VERSION,
@@ -136,7 +149,7 @@
   function restoreBackup(input) {
     const backup = validateBackup(input);
     const previous = {};
-    STORAGE_KEYS.forEach(key => { previous[key] = getItem(key); });
+    STORAGE_KEYS.forEach(key => { previous[key] = readItemStrict(key); });
     const changed = [];
     try {
       for (const key of STORAGE_KEYS) {
@@ -157,9 +170,13 @@
     } catch (error) {
       let rollbackFailed = false;
       for (const key of changed.reverse()) {
-        const value = previous[key];
-        const restored = value === null ? removeItem(key) : setItem(key, value);
-        if (!restored) rollbackFailed = true;
+        try {
+          const value = previous[key];
+          const restored = value === null ? removeItem(key) : setItem(key, value);
+          if (!restored) rollbackFailed = true;
+        } catch (_) {
+          rollbackFailed = true;
+        }
       }
       const detail = rollbackFailed
         ? " A tentativa de retorno também encontrou uma falha de armazenamento; mantenha o arquivo de backup original."
