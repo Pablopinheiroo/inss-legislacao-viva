@@ -145,13 +145,12 @@
     "title": "Lei nº 7.986, de 28 de dezembro de 1989",
     "short_title": "Lei 7.986/1989 — Pensão especial dos seringueiros",
     "category": "Lei",
-    "url": "https://www2.camara.leg.br/legin/indef/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
     "source_name": "Câmara dos Deputados — Legislação Informatizada",
     "edital_item": "14.2.3 — Benefícios de legislação especial",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/indef/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
-      "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm"
+      "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf"
     ],
     "monitor_mode": "texto"
   },
@@ -235,13 +234,12 @@
     "title": "Lei nº 13.985, de 7 de abril de 2020",
     "short_title": "Lei 13.985/2020 — Pensão especial por síndrome congênita do Zika",
     "category": "Lei",
-    "url": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-norma-pl.html",
     "source_name": "Câmara dos Deputados — Legislação Informatizada",
     "edital_item": "14.2.3 — Benefícios de legislação especial",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-1-pl.html",
-      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm"
+      "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html"
     ],
     "monitor_mode": "texto"
   },
@@ -340,13 +338,12 @@
     "title": "Decreto nº 10.188, de 20 de dezembro de 2019",
     "short_title": "Decreto 10.188/2019 — Compensação previdenciária",
     "category": "Decreto",
-    "url": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
+    "url": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-norma-pe.html",
     "source_name": "Câmara dos Deputados — Legislação Informatizada",
     "edital_item": "14.2.3 — RPPS, contagem recíproca e compensação",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-1-pe.html",
-      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm"
+      "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html"
     ],
     "monitor_mode": "texto"
   },
@@ -370,13 +367,12 @@
     "title": "Lei Complementar nº 142, de 8 de maio de 2013",
     "short_title": "LC 142/2013 — Previdência da pessoa com deficiência",
     "category": "Lei Complementar",
-    "url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
+    "url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html",
     "source_name": "Câmara dos Deputados — Legislação Informatizada",
     "edital_item": "14.2.3 — Aposentadoria da pessoa com deficiência",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-1-pl.html",
-      "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
+      "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html"
     ],
     "monitor_mode": "texto"
   },
