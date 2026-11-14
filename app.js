@@ -114,10 +114,20 @@ function renderStatus(data) {
 function updateBadge() {
   const lastSeen = localStorage.getItem(LAST_SEEN_KEY);
   const lastSeenTime = lastSeen ? new Date(lastSeen).getTime() : 0;
-  const count = allChanges.filter(item => new Date(item.detected_at).getTime() > lastSeenTime).length;
+  const unread=allChanges.filter(item => new Date(item.detected_at).getTime() > lastSeenTime);
+  const count=unread.length;
+  const affected=getStudyAffectedChanges();
+  const affectedIds=new Set(affected.map(item=>item.id));
+  const unreadAffected=unread.filter(item=>affectedIds.has(item.id)).length;
   const badge = $("#notification-badge");
   badge.textContent = count > 99 ? "99+" : String(count);
   badge.classList.toggle("hidden", count === 0);
+  const indicator=$("#notification-study-indicator");
+  if(indicator)indicator.classList.toggle("hidden",unreadAffected===0);
+  const button=$("#notification-button");
+  button.setAttribute("aria-label",count
+    +" alteração(ões) nova(s); "+unreadAffected+" afeta(m) artigo(s) marcado(s) como estudado. Abrir avisos.");
+  button.classList.toggle("has-study-impact",unreadAffected>0);
 }
 function createChangeCard(change) {
   const node = $("#change-template").content.firstElementChild.cloneNode(true);
@@ -230,23 +240,55 @@ function renderLaws() {
 function renderDrawer() {
   const content = $("#drawer-content");
   content.replaceChildren();
-  const recent = allChanges.slice(0, 20);
-  if (!recent.length) {
-    const message = document.createElement("p");
-    message.className = "drawer-copy";
-    message.textContent = "Nenhuma alteração foi registrada até agora.";
+  const affected=getStudyAffectedChanges();
+  if(affected.length){
+    const section=document.createElement("section");section.className="drawer-study-impact";
+    const heading=document.createElement("div");heading.className="drawer-study-impact-heading";
+    const title=document.createElement("strong");title.textContent="Alterações em artigos estudados ("+affected.length+")";
+    const note=document.createElement("p");note.textContent="O monitor encontrou diferenças em artigos que você marcou como estudados na Biblioteca Lei Seca.";
+    heading.append(title,note);section.append(heading);
+    affected.slice(0,12).forEach(item=>{
+      const info=typeof loadBeforeAfterStudyInfo==="function"?loadBeforeAfterStudyInfo(item):null;
+      const row=document.createElement("article");row.className="drawer-impact-row";
+      const name=document.createElement("strong");
+      name.textContent=(item.law_short_title||item.law_title||"Norma")+" · "+(item.article||"Dispositivo");
+      const detail=document.createElement("span");
+      detail.textContent=typeLabel(item.change_type,item)+" · "+formatDate(item.detected_at);
+      const state=document.createElement("small");
+      state.className="drawer-impact-study-state";
+      state.textContent=info?.status==="before"?"Você estudou antes desta alteração.":
+        info?.status==="after"?"A marcação de estudo é posterior à data da alteração.":
+        info?.status==="same_day"?"Estudo e alteração têm a mesma data.":
+        "Artigo estudado; a ordem das datas não pôde ser confirmada.";
+      const action=document.createElement("button");action.type="button";action.className="drawer-impact-action";
+      action.textContent="Ver no Radar";action.addEventListener("click",()=>openChangeInRadar(item));
+      row.append(name,detail,state,action);section.append(row);
+    });
+    if(affected.length>12){
+      const more=document.createElement("p");more.className="drawer-copy";
+      more.textContent="Mostrando as 12 alterações mais recentes de "+affected.length+".";
+      section.append(more);
+    }
+    content.append(section);
+  }else{
+    const message=document.createElement("p");message.className="drawer-copy";
+    message.textContent="Nenhuma alteração recente afeta, neste momento, um artigo que você marcou como estudado.";
     content.append(message);
-    return;
   }
-  recent.forEach(item => {
-    const row = document.createElement("div");
-    row.className = "drawer-row";
-    const strong = document.createElement("strong");
-    const detail = document.createElement("span");
-    strong.textContent = (item.law_short_title || item.law_title) + " · " + (item.article || "Texto integral");
-    detail.textContent = typeLabel(item.change_type, item) + " · " + formatDate(item.detected_at);
-    row.append(strong, detail);
-    content.append(row);
+  const allHeading=document.createElement("div");allHeading.className="drawer-all-changes-heading";
+  allHeading.textContent="Todas as alterações recentes";content.append(allHeading);
+  const recent=allChanges.slice(0,20);
+  if(!recent.length){
+    const message=document.createElement("p");message.className="drawer-copy";
+    message.textContent="Nenhuma alteração foi registrada pelo monitor.";
+    content.append(message);return;
+  }
+  recent.forEach(item=>{
+    const row=document.createElement("div");row.className="drawer-row";
+    const strong=document.createElement("strong"),detail=document.createElement("span");
+    strong.textContent=(item.law_short_title||item.law_title)+" · "+(item.article||"Texto integral");
+    detail.textContent=typeLabel(item.change_type,item)+" · "+formatDate(item.detected_at);
+    row.append(strong,detail);content.append(row);
   });
 }
 function openDrawer() {
@@ -4728,6 +4770,96 @@ function finishSimulado(options={}){
   $("#simulado-result").classList.remove("hidden");
   $("#simulado-result").scrollIntoView({behavior:"smooth",block:"start"});
 }
+
+/* -------------------- Navegação por áreas principais -------------------- */
+function primaryAreaForView(view){
+  if(view==="study"||view==="review")return "estudar";
+  if(view==="law")return "lei-seca";
+  if(["quiz","simulado","cloze","find-error","article","multi-ce","before-after","memory"].includes(view))return "jogos";
+  if(view==="performance"||view==="history"||view==="achievements")return "desempenho";
+  return null;
+}
+function updatePrimaryNavigation(area){
+  const areas=["estudar","lei-seca","jogos","desempenho"];
+  areas.forEach(key=>{
+    const button=$("#area-"+key);
+    if(button){
+      const active=key===area;
+      button.classList.toggle("active",active);
+      if(active)button.setAttribute("aria-current","page");
+      else button.removeAttribute("aria-current");
+    }
+    const group=$("#subnav-"+key);
+    if(group)group.classList.toggle("hidden",key!==area);
+  });
+  const sectionNav=$("#section-nav");
+  if(sectionNav)sectionNav.classList.toggle("hidden",!area);
+}
+function renderStudyHome(){
+  const review=collectCentralReviewData();
+  const entries=Array.isArray(review?.entries)?review.entries:[];
+  const due=entries.filter(entry=>entry.due).length;
+  const sessions=loadActivitySessions().sort((a,b)=>
+    new Date(b.started_at||0)-new Date(a.started_at||0)
+  );
+  const answers=loadActivityEvents().filter(event=>event.event_type==="answer").length;
+  $("#study-pending-count").textContent=String(entries.length);
+  $("#study-due-count").textContent=String(due);
+  $("#study-session-count").textContent=String(sessions.length);
+  $("#study-answer-count").textContent=String(answers);
+  $("#study-start-due").disabled=due===0;
+  $("#study-start-due").textContent=due?"Começar revisão vencida ("+due+")":"Nenhuma revisão vencida";
+  const list=$("#study-recent-sessions");
+  list.replaceChildren();
+  if(!sessions.length){
+    const empty=document.createElement("p");empty.className="empty-state";
+    empty.textContent="Suas sessões de estudo aparecerão aqui depois do primeiro treino.";
+    list.append(empty);
+  }else{
+    sessions.slice(0,5).forEach(session=>{
+      const card=document.createElement("article");card.className="study-session-card";
+      const head=document.createElement("div");head.className="study-session-card-head";
+      const title=document.createElement("strong");title.textContent=session.mode_label||activityModeInfo(session.mode).label;
+      const status=document.createElement("span");
+      status.className="study-session-status "+(session.status==="completed"?"is-completed":session.status==="active"?"is-active":"");
+      status.textContent=session.status==="completed"?"Concluída":session.status==="active"?"Em andamento":"Interrompida";
+      head.append(title,status);
+      const detail=document.createElement("p");
+      const parts=[formatDate(session.started_at),Number(session.answers_total||0)+" questão(ões) respondida(s)"];
+      if(session.categories?.length)parts.push(session.categories.join(", "));
+      detail.textContent=parts.join(" · ");
+      card.append(head,detail);list.append(card);
+    });
+  }
+}
+function renderPerformanceHome(){
+  renderExperienceWidget();
+  const experience=loadExperienceData();
+  const events=loadActivityEvents();
+  const sessions=loadActivitySessions();
+  const achievements=loadAchievementState();
+  $("#performance-xp-total").textContent=String(experience.total_xp||0)+" XP";
+  $("#performance-answer-count").textContent=String(events.filter(event=>event.event_type==="answer").length);
+  $("#performance-session-count").textContent=String(sessions.length);
+  $("#performance-achievement-count").textContent=String(achievements.unlocked.length);
+}
+function openChangeInRadar(change){
+  closeDrawer();
+  showView("radar");
+  $("#search-input").value=[change.law_short_title||change.law_title||"",change.article||""].filter(Boolean).join(" ");
+  $("#type-filter").value="todos";
+  $("#study-filter").value="todos";
+  renderChanges();
+  $("#change-list").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function getStudyAffectedChanges(){
+  if(typeof legalStudiedSet!=="function")return [];
+  const studied=legalStudiedSet();
+  return allChanges.filter(change=>change&&change.law_id&&change.article&&
+    studied.has(legalArticleKey(change.law_id,change.article))
+  ).sort((a,b)=>(new Date(b.detected_at||0).getTime()||0)-(new Date(a.detected_at||0).getTime()||0));
+}
+
 function showView(view) {
   if(activityCurrentSession&&activityCurrentSession.status==="active"&&!activitySessionMatchesView(activityCurrentSession.mode,view))finishActivitySession("interrupted");
   const quiz = view === "quiz";
@@ -4741,6 +4873,8 @@ function showView(view) {
   const history = view === "history";
   const simulado = view === "simulado";
   const achievements = view === "achievements";
+  const study = view === "study";
+  const performance = view === "performance";
   const radar = view === "radar";
   const law = view === "law";
   $("#radar-view").classList.toggle("hidden", !radar);
@@ -4756,6 +4890,8 @@ function showView(view) {
   $("#history-view").classList.toggle("hidden", !history);
   $("#simulado-view").classList.toggle("hidden", !simulado);
   $("#achievements-view").classList.toggle("hidden", !achievements);
+  $("#study-view").classList.toggle("hidden", !study);
+  $("#performance-view").classList.toggle("hidden", !performance);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-law").classList.toggle("active", law);
   $("#tab-quiz").classList.toggle("active", quiz);
@@ -4769,6 +4905,8 @@ function showView(view) {
   $("#tab-history").classList.toggle("active", history);
   $("#tab-simulado").classList.toggle("active", simulado);
   $("#tab-achievements").classList.toggle("active", achievements);
+  $("#tab-radar").classList.toggle("active",radar);
+  updatePrimaryNavigation(primaryAreaForView(view));
   [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history], ["tab-simulado", simulado], ["tab-achievements", achievements] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
@@ -4785,6 +4923,8 @@ function showView(view) {
   else if (history) $("#history-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (simulado) $("#simulado-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (achievements) $("#achievements-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (study) $("#study-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (performance) $("#performance-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -4796,6 +4936,17 @@ $("#search-input").addEventListener("input", renderChanges);
 $("#type-filter").addEventListener("change", renderChanges);
 $("#study-filter").addEventListener("change", renderChanges);
 $("#tab-radar").addEventListener("click", () => showView("radar"));
+$("#area-estudar").addEventListener("click",()=>{renderStudyHome();showView("study");});
+$("#area-lei-seca").addEventListener("click",()=>showView("law"));
+$("#area-jogos").addEventListener("click",()=>showView("quiz"));
+$("#area-desempenho").addEventListener("click",()=>{renderPerformanceHome();showView("performance");});
+$("#study-open-review").addEventListener("click",()=>{renderCentralReview();showView("review");});
+$("#study-start-due").addEventListener("click",()=>{showView("review");renderCentralReview();centralReviewBatch(true);});
+$("#study-open-library").addEventListener("click",()=>showView("law"));
+$("#study-open-history").addEventListener("click",()=>{showView("history");renderActivityHistory();});
+$("#performance-open-history").addEventListener("click",()=>{showView("history");renderActivityHistory();});
+$("#performance-open-achievements").addEventListener("click",()=>{showView("achievements");refreshAchievementProgress();});
+
 $("#tab-law").addEventListener("click", () => showView("law"));
 $("#tab-quiz").addEventListener("click", () => showView("quiz"));
 $("#tab-cloze").addEventListener("click", () => showView("cloze"));
@@ -6165,4 +6316,7 @@ $("#simulado-restart").addEventListener("click",()=>{
 });
 
 initializeAchievements();
+renderStudyHome();
+renderPerformanceHome();
+showView("study");
 
