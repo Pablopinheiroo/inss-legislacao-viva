@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-17">
-  <script defer src="app.js?v=20261114-22"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-18">
+  <script defer src="app.js?v=20261114-23"></script>
 </head>
 <body>
   <header class="topbar">
@@ -31,6 +31,7 @@
     <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
     <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
     <button id="tab-review" class="nav-tab" type="button">Revisão</button>
+    <button id="tab-history" class="nav-tab" type="button">Histórico</button>
     <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
   </nav>
 
@@ -757,6 +758,45 @@
       <strong>Os erros continuam ligados aos jogos de origem.</strong>
       <span>Ao revisar, cada conteúdo abre o modo em que foi criado, preservando o gabarito e a conferência legal. Os intervalos são atualizados pelos acertos nesse modo. Marcar como dominado retira o item da fila ativa. Os registros ficam salvos neste navegador e não são sincronizados entre aparelhos.</span>
     </footer>
+  </main>
+
+  <main id="history-view" class="page-shell hidden">
+    <section class="intro history-intro">
+      <div><p class="eyebrow">ACOMPANHAMENTO DO ESTUDO</p><h1>Histórico</h1>
+        <p class="subtitle">Consulte o que estudou, as respostas que escolheu, seu desempenho e os artigos que ainda faltam estudar.</p></div>
+      <div class="history-intro-actions"><button id="history-refresh" class="secondary-button" type="button">Atualizar histórico</button></div>
+    </section>
+    <section class="history-stats" aria-label="Resumo do histórico">
+      <article class="history-stat"><span>Questões respondidas</span><strong id="history-total-answers">0</strong></article>
+      <article class="history-stat"><span>Aproveitamento</span><strong id="history-accuracy">—</strong></article>
+      <article class="history-stat"><span>Sessões registradas</span><strong id="history-session-count">0</strong></article>
+      <article class="history-stat"><span>Artigos estudados</span><strong id="history-studied-count">0</strong></article>
+      <article class="history-stat"><span>Assuntos trabalhados</span><strong id="history-topic-count">0</strong></article>
+    </section>
+    <section class="history-section">
+      <div class="section-heading"><div><h2>Últimos conteúdos estudados</h2><p>Questões respondidas e artigos marcados como estudados.</p></div></div>
+      <div id="history-recent-list" class="history-card-list"><p class="empty-state">Ainda não há atividades registradas.</p></div>
+    </section>
+    <section class="history-section">
+      <div class="section-heading"><div><h2>Artigos que ainda não foram estudados</h2><p id="history-unstudied-note">Consultando os artigos disponíveis nas capturas salvas.</p></div><strong id="history-unstudied-count">—</strong></div>
+      <label class="history-search-label"><span>Buscar artigo ou norma</span><input id="history-unstudied-search" type="search" placeholder="Digite o nome da norma ou artigo..."></label>
+      <div id="history-unstudied-list" class="history-card-list"><p class="empty-state">Carregando os artigos das normas...</p></div>
+    </section>
+    <section class="history-section">
+      <div class="section-heading"><div><h2>Consultar atividades</h2><p>Veja cada resposta, o resultado, a data e a origem do exercício.</p></div></div>
+      <div class="history-filters">
+        <label><span>Modo de treinamento</span><select id="history-mode-filter"><option value="todos">Todos os modos</option></select></label>
+        <label><span>Matéria</span><select id="history-category-filter"><option value="todos">Todas as matérias</option></select></label>
+        <label class="history-query"><span>Buscar no histórico</span><input id="history-query" type="search" placeholder="Assunto, questão, norma ou artigo..."></label>
+      </div>
+      <p id="history-results-count" class="history-results-count">0 atividades</p>
+      <div id="history-activity-list" class="history-card-list"><p class="empty-state">Ainda não há respostas salvas.</p></div>
+    </section>
+    <section class="history-section">
+      <div class="section-heading"><div><h2>Histórico de sessões</h2><p>Veja quando começou cada treino e como terminou.</p></div></div>
+      <div id="history-session-list" class="history-card-list"><p class="empty-state">Nenhuma sessão registrada.</p></div>
+    </section>
+    <footer class="footer-note"><strong>Seus registros ficam salvos neste navegador.</strong><span>O histórico começa a registrar as novas atividades a partir da publicação desta funcionalidade. As marcações de artigos estudados que já existiam na Biblioteca serão aproveitadas quando houver uma data salva. Os dados não são sincronizados automaticamente entre aparelhos.</span></footer>
   </main>
 
   <main id="memory-view" class="page-shell hidden">
