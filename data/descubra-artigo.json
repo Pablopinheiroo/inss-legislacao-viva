@@ -8,7 +8,7 @@
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo reúne os princípios que devem orientar a Administração Pública no processo administrativo, como legalidade, finalidade, motivação, razoabilidade e eficiência?",
       "answer_article_key": "Art. 2",
       "validation_phrase": "legalidade finalidade motivacao razoabilidade proporcionalidade moralidade ampla defesa contraditorio seguranca juridica interesse publico e eficiencia",
@@ -43,14 +43,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-03",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Uma pessoa participa de um processo administrativo e tem direito de acompanhar sua tramitação, consultar os autos, obter cópias e conhecer as decisões. Em qual artigo estão esses direitos?",
       "answer_article_key": "Art. 3",
       "validation_phrase": "ter ciencia da tramitacao dos processos administrativos",
@@ -85,14 +86,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-04",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Um interessado deve expor os fatos verdadeiros, agir com lealdade e boa-fé e colaborar para esclarecer os fatos. Qual artigo lista esses deveres?",
       "answer_article_key": "Art. 4",
       "validation_phrase": "expor os fatos conforme a verdade",
@@ -127,14 +129,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-05",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo estabelece que o processo administrativo pode começar por iniciativa da própria Administração ou a pedido de um interessado?",
       "answer_article_key": "Art. 5",
       "validation_phrase": "processo administrativo pode iniciar se de oficio ou a pedido de interessado",
@@ -169,14 +172,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-8429-02",
       "category": "Direito Administrativo",
       "law_id": "lei-8429-1992",
       "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
       "question": "Qual artigo da Lei de Improbidade Administrativa define quem é considerado agente público para os efeitos dessa lei?",
       "answer_article_key": "Art. 2",
       "validation_phrase": "agente publico o agente politico o servidor publico",
@@ -211,14 +215,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
     },
     {
       "id": "desc-8429-09",
       "category": "Direito Administrativo",
       "law_id": "lei-8429-1992",
       "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
       "question": "Um agente obtém vantagem patrimonial indevida em razão do exercício do cargo ou da função, mediante conduta dolosa. Qual artigo trata do enriquecimento ilícito?",
       "answer_article_key": "Art. 9",
       "validation_phrase": "improbidade administrativa importando em enriquecimento ilicito",
@@ -253,14 +258,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
     },
     {
       "id": "desc-8429-10",
       "category": "Direito Administrativo",
       "law_id": "lei-8429-1992",
       "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
       "question": "Uma conduta dolosa provoca perda patrimonial, desvio ou apropriação de bens ou valores públicos, com prejuízo efetivo e comprovado. Qual artigo trata dessa hipótese?",
       "answer_article_key": "Art. 10",
       "validation_phrase": "ato de improbidade administrativa que causa lesao ao erario",
@@ -295,14 +301,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
     },
     {
       "id": "desc-8429-11",
       "category": "Direito Administrativo",
       "law_id": "lei-8429-1992",
       "law_title": "Lei 8.429/1992 — Improbidade Administrativa",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
       "question": "Qual artigo trata dos atos de improbidade que atentam contra os princípios da Administração Pública, mediante ação ou omissão dolosa que viole deveres de honestidade, imparcialidade e legalidade?",
       "answer_article_key": "Art. 11",
       "validation_phrase": "atenta contra os principios da administracao publica",
@@ -337,14 +344,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
     },
     {
       "id": "desc-6029-03",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo define a composição da Comissão de Ética Pública, prevendo sete brasileiros, mandato de três anos e uma única recondução?",
       "answer_article_key": "Art. 3",
       "validation_phrase": "integrada por sete brasileiros",
@@ -379,14 +387,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "desc-6029-05",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo estabelece que cada Comissão de Ética será integrada por três membros titulares e três suplentes?",
       "answer_article_key": "Art. 5",
       "validation_phrase": "tres membros titulares e tres suplentes",
@@ -421,14 +430,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "desc-6029-07",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo enumera as competências das Comissões de Ética, incluindo atuação consultiva, aplicação do Código de Ética e apuração de condutas?",
       "answer_article_key": "Art. 7",
       "validation_phrase": "atuar como instancia consultiva de dirigentes e servidores",
@@ -463,14 +473,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "desc-6029-12",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo disciplina o processo de apuração de possível falta ética e prevê prazo de dez dias para manifestação escrita do investigado?",
       "answer_article_key": "Art. 12",
       "validation_phrase": "notificara o investigado para manifestar se por escrito no prazo de dez dias",
@@ -505,224 +516,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-01",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo apresenta a finalidade da Previdência Social e relaciona situações como incapacidade, desemprego involuntário, idade avançada e morte?",
-      "answer_article_key": "Art. 1",
-      "validation_phrase": "previdencia social mediante contribuicao tem por fim assegurar",
-      "options": [
-        {
-          "article_key": "Art. 1",
-          "label": "Art. 1º"
-        },
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 12",
-          "label": "Art. 12"
-        }
-      ],
-      "explanation": "O art. 1º apresenta a finalidade da Previdência Social e deixa claro que ela atua mediante contribuição. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "88e82669",
-      "article": "Art. 1º",
-      "article_key": "Art. 1",
-      "topic": "Finalidade da Previdência Social",
-      "legal_reference": "Art. 1º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-02",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo reúne princípios e objetivos da Previdência Social, como universalidade de participação e uniformidade e equivalência para populações urbanas e rurais?",
-      "answer_article_key": "Art. 2",
-      "validation_phrase": "uniformidade e equivalencia dos beneficios e servicos as populacoes urbanas e rurais",
-      "options": [
-        {
-          "article_key": "Art. 1",
-          "label": "Art. 1º"
-        },
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 12",
-          "label": "Art. 12"
-        }
-      ],
-      "explanation": "O art. 2º da Lei 8.213/1991 enumera princípios e objetivos da Previdência Social. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "9d3bf8f0",
-      "article": "Art. 2º",
-      "article_key": "Art. 2",
-      "topic": "Princípios e objetivos da Previdência Social",
-      "legal_reference": "Art. 2º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-12",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo trata da exclusão do RGPS do servidor civil ocupante de cargo efetivo ou do militar que esteja amparado por regime próprio de previdência social?",
-      "answer_article_key": "Art. 12",
-      "validation_phrase": "sao excluidos do regime geral de previdencia social",
-      "options": [
-        {
-          "article_key": "Art. 1",
-          "label": "Art. 1º"
-        },
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 12",
-          "label": "Art. 12"
-        }
-      ],
-      "explanation": "O art. 12 estabelece a exclusão do RGPS para as pessoas nele indicadas, desde que amparadas por regime próprio, e trata também do exercício concomitante de atividades. Fundamento legal: Art. 12º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "dabc3684",
-      "article": "Art. 12º",
-      "article_key": "Art. 12",
-      "topic": "Identificação do dispositivo legal",
-      "legal_reference": "Art. 12º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8212-01",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8212-1991",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
-      "question": "Qual artigo define a Seguridade Social como conjunto integrado de ações dos poderes públicos e da sociedade, voltado à saúde, à previdência e à assistência social?",
-      "answer_article_key": "Art. 1",
-      "validation_phrase": "seguridade social compreende um conjunto integrado de acoes",
-      "options": [
-        {
-          "article_key": "Art. 1",
-          "label": "Art. 1º"
-        },
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 4",
-          "label": "Art. 4º"
-        }
-      ],
-      "explanation": "O art. 1º define a Seguridade Social e apresenta seus princípios e diretrizes no parágrafo único. Fundamento legal: Art. 1º da Lei nº 8.212/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "ed639b73",
-      "article": "Art. 1º",
-      "article_key": "Art. 1",
-      "topic": "Conceito e diretrizes da Seguridade Social",
-      "legal_reference": "Art. 1º da Lei nº 8.212/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8212-03",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8212-1991",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
-      "question": "Qual artigo da Lei 8.212/1991 apresenta a finalidade da Previdência Social e lista situações protegidas, como incapacidade, idade avançada, desemprego involuntário e reclusão?",
-      "answer_article_key": "Art. 3",
-      "validation_phrase": "previdencia social tem por fim assegurar aos seus beneficiarios",
-      "options": [
-        {
-          "article_key": "Art. 1",
-          "label": "Art. 1º"
-        },
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 4",
-          "label": "Art. 4º"
-        }
-      ],
-      "explanation": "O art. 3º apresenta a finalidade da Previdência Social e os princípios e diretrizes de sua organização. Fundamento legal: Art. 3º da Lei nº 8.212/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "c9a70d90",
-      "article": "Art. 3º",
-      "article_key": "Art. 3",
-      "topic": "Finalidade e organização da Previdência Social",
-      "legal_reference": "Art. 3º da Lei nº 8.212/1991",
-      "difficulty": "dificil",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "desc-loas-01",
       "category": "Direito Previdenciário",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question": "Qual artigo da LOAS define a assistência social como direito do cidadão, dever do Estado e Política de Seguridade Social não contributiva?",
       "answer_article_key": "Art. 1",
       "validation_phrase": "politica de seguridade social nao contributiva",
@@ -757,14 +559,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "desc-loas-02",
       "category": "Direito Previdenciário",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question": "Qual artigo da LOAS enumera os objetivos da assistência social, incluindo proteção social, vigilância socioassistencial e defesa de direitos?",
       "answer_article_key": "Art. 2",
       "validation_phrase": "vigilancia socioassistencial",
@@ -799,14 +602,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "desc-loas-04",
       "category": "Direito Previdenciário",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question": "Qual artigo da LOAS apresenta princípios como supremacia das necessidades sociais, universalização dos direitos e respeito à dignidade do cidadão?",
       "answer_article_key": "Art. 4",
       "validation_phrase": "supremacia do atendimento as necessidades sociais sobre as exigencias de rentabilidade economica",
@@ -841,14 +645,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "desc-loas-20",
       "category": "Direito Previdenciário",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question": "Qual artigo da LOAS trata do Benefício de Prestação Continuada, com garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais que atendam aos requisitos legais?",
       "answer_article_key": "Art. 20",
       "validation_phrase": "beneficio de prestacao continuada e a garantia de um salario minimo mensal",
@@ -883,140 +688,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8112-05",
-      "category": "Direito Administrativo",
-      "law_id": "lei-8112-1990",
-      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
-      "question": "Qual artigo enumera requisitos básicos para investidura em cargo público, como nacionalidade brasileira, direitos políticos, escolaridade e idade mínima?",
-      "answer_article_key": "Art. 5",
-      "validation_phrase": "requisitos basicos para investidura em cargo publico",
-      "options": [
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 5",
-          "label": "Art. 5º"
-        },
-        {
-          "article_key": "Art. 8",
-          "label": "Art. 8º"
-        }
-      ],
-      "explanation": "O art. 5º reúne os requisitos básicos para investidura em cargo público e prevê outras regras nos parágrafos. Fundamento legal: Art. 5º da Lei nº 8.112/1990.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
-      "source_article_hash": "be184d59",
-      "article": "Art. 5º",
-      "article_key": "Art. 5",
-      "topic": "Requisitos para investidura em cargo público",
-      "legal_reference": "Art. 5º da Lei nº 8.112/1990",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8112-07",
-      "category": "Direito Administrativo",
-      "law_id": "lei-8112-1990",
-      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
-      "question": "Qual artigo da Lei 8.112/1990 estabelece o momento em que ocorre a investidura em cargo público?",
-      "answer_article_key": "Art. 7",
-      "validation_phrase": "investidura em cargo publico ocorrera com a posse",
-      "options": [
-        {
-          "article_key": "Art. 2",
-          "label": "Art. 2º"
-        },
-        {
-          "article_key": "Art. 5",
-          "label": "Art. 5º"
-        },
-        {
-          "article_key": "Art. 7",
-          "label": "Art. 7º"
-        },
-        {
-          "article_key": "Art. 8",
-          "label": "Art. 8º"
-        }
-      ],
-      "explanation": "O art. 7º determina que a investidura em cargo público ocorre com a posse. Fundamento legal: Art. 7º da Lei nº 8.112/1990.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
-      "source_article_hash": "21fade4a",
-      "article": "Art. 7º",
-      "article_key": "Art. 7",
-      "topic": "Identificação do dispositivo legal",
-      "legal_reference": "Art. 7º da Lei nº 8.112/1990",
-      "difficulty": "dificil",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8112-08",
-      "category": "Direito Administrativo",
-      "law_id": "lei-8112-1990",
-      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
-      "question": "Qual artigo da Lei 8.112/1990 lista as formas de provimento de cargo público, como nomeação, promoção, readaptação, reversão, aproveitamento, reintegração e recondução?",
-      "answer_article_key": "Art. 8",
-      "validation_phrase": "sao formas de provimento de cargo publico",
-      "options": [
-        {
-          "article_key": "Art. 3",
-          "label": "Art. 3º"
-        },
-        {
-          "article_key": "Art. 5",
-          "label": "Art. 5º"
-        },
-        {
-          "article_key": "Art. 7",
-          "label": "Art. 7º"
-        },
-        {
-          "article_key": "Art. 8",
-          "label": "Art. 8º"
-        }
-      ],
-      "explanation": "O art. 8º enumera as formas de provimento de cargo público. Algumas formas anteriormente previstas aparecem como revogadas na redação atual. Fundamento legal: Art. 8º da Lei nº 8.112/1990.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
-      "source_article_hash": "f1eed745",
-      "article": "Art. 8º",
-      "article_key": "Art. 8",
-      "topic": "Identificação do dispositivo legal",
-      "legal_reference": "Art. 8º da Lei nº 8.112/1990",
-      "difficulty": "dificil",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "desc-8213-13",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo trata da filiação do segurado facultativo ao RGPS mediante contribuição?",
       "answer_article_key": "Art. 13",
       "validation_phrase": "segurado facultativo o maior de 14 (quatorze) anos que se filiar ao Regime Geral de Previdência Social",
@@ -1051,14 +731,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-15",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo disciplina a manutenção da qualidade de segurado mesmo sem recolhimento de contribuições, estabelecendo os períodos de graça?",
       "answer_article_key": "Art. 15",
       "validation_phrase": "mantém a qualidade de segurado independentemente de contribuições",
@@ -1093,14 +774,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-16",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo lista as pessoas que podem ser dependentes do segurado no RGPS?",
       "answer_article_key": "Art. 16",
       "validation_phrase": "são beneficiários do Regime Geral de Previdência Social, na condição de dependentes do segurado",
@@ -1135,14 +817,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-25",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo reúne os períodos de carência exigidos para a concessão de prestações pecuniárias do RGPS?",
       "answer_article_key": "Art. 25",
       "validation_phrase": "a concessão das prestações pecuniárias do Regime Geral de Previdência Social depende dos seguintes períodos de carência",
@@ -1177,14 +860,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-26",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo enumera prestações cuja concessão independe de carência?",
       "answer_article_key": "Art. 26",
       "validation_phrase": "independe de carência a concessão das seguintes prestações",
@@ -1219,56 +903,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-42",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo define a incapacidade e a impossibilidade de reabilitação para atividade que garanta a subsistência como requisitos do benefício por incapacidade permanente?",
-      "answer_article_key": "Art. 42",
-      "validation_phrase": "for considerado incapaz e insusceptível de reabilitação para o exercício de atividade que lhe garanta a subsistência",
-      "options": [
-        {
-          "article_key": "Art. 41",
-          "label": "Art. 41º"
-        },
-        {
-          "article_key": "Art. 42",
-          "label": "Art. 42º"
-        },
-        {
-          "article_key": "Art. 43",
-          "label": "Art. 43º"
-        },
-        {
-          "article_key": "Art. 44",
-          "label": "Art. 44º"
-        }
-      ],
-      "explanation": "O art. 42 disciplina a aposentadoria por incapacidade permanente, usando na redação legal capturada a denominação histórica “aposentadoria por invalidez”. Fundamento legal: Art. 42º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "5475472f",
-      "article": "Art. 42º",
-      "article_key": "Art. 42",
-      "topic": "Identificação do dispositivo legal",
-      "legal_reference": "Art. 42º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-59",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo trata da incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos?",
       "answer_article_key": "Art. 59",
       "validation_phrase": "ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de 15 (quinze) dias consecutivos",
@@ -1303,14 +946,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8213-74",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Qual artigo estabelece os termos iniciais da pensão por morte, considerando a data do óbito, do requerimento ou da decisão judicial?",
       "answer_article_key": "Art. 74",
       "validation_phrase": "a pensão por morte será devida ao conjunto dos dependentes do segurado que falecer, aposentado ou não, a contar da data",
@@ -1345,98 +989,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-86",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo disciplina o auxílio-acidente como indenização quando, após a consolidação das lesões, há redução da capacidade para o trabalho habitual?",
-      "answer_article_key": "Art. 86",
-      "validation_phrase": "o auxílio-acidente será concedido, como indenização, ao segurado",
-      "options": [
-        {
-          "article_key": "Art. 85",
-          "label": "Art. 85º"
-        },
-        {
-          "article_key": "Art. 86",
-          "label": "Art. 86º"
-        },
-        {
-          "article_key": "Art. 87",
-          "label": "Art. 87º"
-        },
-        {
-          "article_key": "Art. 88",
-          "label": "Art. 88º"
-        }
-      ],
-      "explanation": "O art. 86 trata do auxílio-acidente e exige sequela consolidada que implique redução da capacidade para o trabalho habitualmente exercido. Fundamento legal: Art. 86º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "dc05da29",
-      "article": "Art. 86º",
-      "article_key": "Art. 86",
-      "topic": "Auxílio-acidente",
-      "legal_reference": "Art. 86º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8213-101",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8213-1991",
-      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "question": "Qual artigo prevê a obrigação do beneficiário de se submeter a exame médico, reabilitação profissional e tratamento, sob pena de suspensão?",
-      "answer_article_key": "Art. 101",
-      "validation_phrase": "estão obrigados, sob pena de suspensão do benefício, a submeter-se a",
-      "options": [
-        {
-          "article_key": "Art. 100",
-          "label": "Art. 100º"
-        },
-        {
-          "article_key": "Art. 101",
-          "label": "Art. 101º"
-        },
-        {
-          "article_key": "Art. 102",
-          "label": "Art. 102º"
-        },
-        {
-          "article_key": "Art. 103",
-          "label": "Art. 103º"
-        }
-      ],
-      "explanation": "O art. 101 reúne obrigações relacionadas à avaliação médica, à reabilitação profissional e ao tratamento gratuito, com as exceções legais. Fundamento legal: Art. 101º da Lei nº 8.213/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
-      "source_article_hash": "e1547aff",
-      "article": "Art. 101º",
-      "article_key": "Art. 101",
-      "topic": "Identificação do dispositivo legal",
-      "legal_reference": "Art. 101º da Lei nº 8.213/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-8212-12",
       "category": "Direito Previdenciário",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "question": "Qual artigo relaciona as pessoas físicas que são seguradas obrigatórias da Previdência Social?",
       "answer_article_key": "Art. 12",
       "validation_phrase": "são segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
@@ -1471,14 +1032,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "desc-8212-15",
       "category": "Direito Previdenciário",
       "law_id": "lei-8212-1991",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "question": "Qual artigo define o conceito previdenciário de empresa, abrangendo firma individual ou sociedade com ou sem fins lucrativos?",
       "answer_article_key": "Art. 15",
       "validation_phrase": "empresa - a firma individual ou sociedade que assume o risco de atividade econômica urbana ou rural, com fins lucrativos ou não",
@@ -1513,140 +1075,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8212-28",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8212-1991",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
-      "question": "Qual artigo define o salário-de-contribuição para as diferentes categorias de segurados?",
-      "answer_article_key": "Art. 28",
-      "validation_phrase": "entende-se por salário-de-contribuição",
-      "options": [
-        {
-          "article_key": "Art. 27",
-          "label": "Art. 27º"
-        },
-        {
-          "article_key": "Art. 28",
-          "label": "Art. 28º"
-        },
-        {
-          "article_key": "Art. 29",
-          "label": "Art. 29º"
-        },
-        {
-          "article_key": "Art. 30",
-          "label": "Art. 30º"
-        }
-      ],
-      "explanation": "O art. 28 apresenta o conceito de salário-de-contribuição e suas regras para empregado, trabalhador avulso, empregado doméstico, contribuinte individual e segurado facultativo. Fundamento legal: Art. 28º da Lei nº 8.212/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "59b42381",
-      "article": "Art. 28º",
-      "article_key": "Art. 28",
-      "topic": "Salário-de-contribuição",
-      "legal_reference": "Art. 28º da Lei nº 8.212/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-8212-30",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8212-1991",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
-      "question": "Qual artigo reúne normas sobre arrecadação e recolhimento das contribuições devidas à Seguridade Social?",
-      "answer_article_key": "Art. 30",
-      "validation_phrase": "a arrecadação e o recolhimento das contribuições ou de outras importâncias devidas à Seguridade Social obedecem às seguintes normas",
-      "options": [
-        {
-          "article_key": "Art. 28",
-          "label": "Art. 28º"
-        },
-        {
-          "article_key": "Art. 29",
-          "label": "Art. 29º"
-        },
-        {
-          "article_key": "Art. 30",
-          "label": "Art. 30º"
-        },
-        {
-          "article_key": "Art. 31",
-          "label": "Art. 31º"
-        }
-      ],
-      "explanation": "O art. 30 trata das obrigações de arrecadação e recolhimento, incluindo responsabilidades da empresa e prazos previstos em lei. Fundamento legal: Art. 30º da Lei nº 8.212/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "93b344df",
-      "article": "Art. 30º",
-      "article_key": "Art. 30",
-      "topic": "Arrecadação e recolhimento",
-      "legal_reference": "Art. 30º da Lei nº 8.212/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-loas-21",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8742-1993",
-      "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
-      "question": "Qual artigo determina que o BPC seja revisto periodicamente para avaliar a continuidade das condições que deram origem à concessão?",
-      "answer_article_key": "Art. 21",
-      "validation_phrase": "o benefício de prestação continuada deve ser revisto a cada 2 (dois) anos para avaliação da continuidade das condições que lhe deram origem",
-      "options": [
-        {
-          "article_key": "Art. 20",
-          "label": "Art. 20º"
-        },
-        {
-          "article_key": "Art. 21",
-          "label": "Art. 21º"
-        },
-        {
-          "article_key": "Art. 21-A",
-          "label": "Art. 21-A"
-        },
-        {
-          "article_key": "Art. 22",
-          "label": "Art. 22º"
-        }
-      ],
-      "explanation": "O art. 21 prevê revisão do BPC a cada dois anos e disciplina hipóteses de cessação ou cancelamento, sem afastar as exceções legais. Fundamento legal: Art. 21º da Lei nº 8.742/1993.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
-      "source_article_hash": "4c5b8cbb",
-      "article": "Art. 21º",
-      "article_key": "Art. 21",
-      "topic": "Revisão do BPC",
-      "legal_reference": "Art. 21º da Lei nº 8.742/1993",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "desc-loas-21a",
       "category": "Direito Previdenciário",
       "law_id": "lei-8742-1993",
       "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question": "Qual artigo prevê a suspensão do BPC quando a pessoa com deficiência exerce atividade remunerada, inclusive como MEI?",
       "answer_article_key": "Art. 21-A",
       "validation_phrase": "o benefício de prestação continuada será suspenso pelo órgão concedente quando a pessoa com deficiência exercer atividade remunerada, inclusive na condição de microempreendedor individual",
@@ -1681,56 +1118,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-loas-21b",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8742-1993",
-      "law_title": "Lei 8.742/1993 — LOAS",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
-      "question": "Qual artigo estabelece os prazos para regularização do CadÚnico por beneficiários do BPC que não estejam inscritos ou estejam com cadastro desatualizado?",
-      "answer_article_key": "Art. 21-B",
-      "validation_phrase": "os beneficiários do benefício de prestação continuada, quando não estiverem inscritos no CadÚnico ou quando estiverem com o cadastro desatualizado há mais de 24 (vinte e quatro) meses",
-      "options": [
-        {
-          "article_key": "Art. 21",
-          "label": "Art. 21º"
-        },
-        {
-          "article_key": "Art. 21-A",
-          "label": "Art. 21-A"
-        },
-        {
-          "article_key": "Art. 21-B",
-          "label": "Art. 21-B"
-        },
-        {
-          "article_key": "Art. 22",
-          "label": "Art. 22º"
-        }
-      ],
-      "explanation": "O art. 21-B estabelece prazos de regularização do CadÚnico contados da efetiva notificação, que variam conforme o porte do município. Fundamento legal: Art. 21-B da Lei nº 8.742/1993.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
-      "source_article_hash": "37c1cab1",
-      "article": "Art. 21-B",
-      "article_key": "Art. 21-B",
-      "topic": "Regularização do CadÚnico",
-      "legal_reference": "Art. 21-B da Lei nº 8.742/1993",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "desc-9784-18",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo aponta situações em que o servidor ou a autoridade fica impedido de atuar em um processo administrativo?",
       "answer_article_key": "Art. 18",
       "validation_phrase": "é impedido de atuar em processo administrativo o servidor ou autoridade que",
@@ -1765,14 +1161,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-24",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Na falta de prazo específico, qual artigo estabelece o prazo geral de cinco dias para a prática de atos no processo administrativo, admitindo dilatação justificada?",
       "answer_article_key": "Art. 24",
       "validation_phrase": "inexistindo disposição específica, os atos do órgão ou autoridade responsável pelo processo e dos administrados que dele participem devem ser praticados no prazo de cinco dias",
@@ -1807,14 +1204,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-26",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo trata da intimação do interessado e exige antecedência mínima de três dias úteis para a data de comparecimento?",
       "answer_article_key": "Art. 26",
       "validation_phrase": "a intimação observará a antecedência mínima de três dias úteis quanto à data de comparecimento",
@@ -1849,14 +1247,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-49",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo fixa o prazo para a Administração decidir após a conclusão da instrução do processo administrativo?",
       "answer_article_key": "Art. 49",
       "validation_phrase": "concluída a instrução de processo administrativo, a Administração tem o prazo de até trinta dias para decidir",
@@ -1891,14 +1290,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-50",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo exige que determinados atos administrativos sejam motivados com indicação dos fatos e dos fundamentos jurídicos?",
       "answer_article_key": "Art. 50",
       "validation_phrase": "os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos",
@@ -1933,14 +1333,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-9784-59",
       "category": "Direito Administrativo",
       "law_id": "lei-9784-1999",
       "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "question": "Qual artigo estabelece, como regra geral, o prazo de dez dias para interpor recurso administrativo?",
       "answer_article_key": "Art. 59",
       "validation_phrase": "salvo disposição legal específica, é de dez dias o prazo para interposição de recurso administrativo",
@@ -1975,14 +1376,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "desc-8112-13",
       "category": "Direito Administrativo",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question": "Qual artigo disciplina a posse no cargo público e estabelece, como regra, o prazo de trinta dias contado da publicação do ato de provimento?",
       "answer_article_key": "Art. 13",
       "validation_phrase": "a posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
@@ -2017,14 +1419,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "desc-8112-15",
       "category": "Direito Administrativo",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question": "Qual artigo define exercício como o efetivo desempenho das atribuições e prevê quinze dias para o servidor empossado entrar em exercício?",
       "answer_article_key": "Art. 15",
       "validation_phrase": "é de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício, contados da data da posse",
@@ -2059,14 +1462,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "desc-8112-19",
       "category": "Direito Administrativo",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question": "Qual artigo estabelece a jornada geral dos servidores, com limite máximo semanal de quarenta horas e limites diários de seis a oito horas?",
       "answer_article_key": "Art. 19",
       "validation_phrase": "duração máxima do trabalho semanal de quarenta horas e observados os limites mínimo e máximo de seis horas e oito horas diárias",
@@ -2101,14 +1505,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "desc-8112-116",
       "category": "Direito Administrativo",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question": "Qual artigo reúne os deveres funcionais do servidor público federal, como zelo, lealdade, observância das normas e urbanidade?",
       "answer_article_key": "Art. 116",
       "validation_phrase": "são deveres do servidor",
@@ -2143,14 +1548,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "desc-8112-117",
       "category": "Direito Administrativo",
       "law_id": "lei-8112-1990",
       "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question": "Qual artigo lista proibições impostas ao servidor, incluindo manter parente até o segundo grau sob sua chefia imediata em cargo ou função de confiança?",
       "answer_article_key": "Art. 117",
       "validation_phrase": "manter sob sua chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente até o segundo grau civil",
@@ -2185,14 +1591,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "desc-cf-37",
       "category": "Direito Constitucional",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question": "Qual artigo da Constituição apresenta os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência que regem a Administração Pública?",
       "answer_article_key": "Art. 37",
       "validation_phrase": "obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência",
@@ -2227,14 +1634,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "desc-cf-194",
       "category": "Direito Constitucional",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question": "Qual artigo constitucional define a Seguridade Social e apresenta seus objetivos, como universalidade da cobertura e do atendimento?",
       "answer_article_key": "Art. 194",
       "validation_phrase": "a seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade",
@@ -2269,14 +1677,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "desc-cf-201",
       "category": "Direito Constitucional",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question": "Qual artigo constitucional trata da organização da Previdência Social sob a forma do RGPS, de caráter contributivo e filiação obrigatória?",
       "answer_article_key": "Art. 201",
       "validation_phrase": "a previdência social será organizada sob a forma do Regime Geral de Previdência Social, de caráter contributivo e de filiação obrigatória",
@@ -2311,14 +1720,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "desc-cf-203",
       "category": "Direito Constitucional",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question": "Qual artigo constitucional estabelece que a assistência social será prestada a quem dela necessitar, independentemente de contribuição?",
       "answer_article_key": "Art. 203",
       "validation_phrase": "a assistência social será prestada a quem dela necessitar, independentemente de contribuição à seguridade social",
@@ -2353,14 +1763,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "desc-from-8213-art11",
       "category": "Direito Previdenciário",
       "law_id": "lei-8213-1991",
       "law_title": "Lei 8.213/1991 — Planos de Benefícios",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question": "Em qual artigo da Lei nº 8.213/1991 aparece a previsão: “São segurados obrigatórios da Previdência Social as seguintes pessoas físicas”?",
       "answer_article_key": "Art. 11",
       "article": "Art. 11º",
@@ -2395,56 +1806,15 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
       "validation_status": "validated",
-      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
-    },
-    {
-      "id": "desc-from-8212-art22",
-      "category": "Direito Previdenciário",
-      "law_id": "lei-8212-1991",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
-      "question": "Em qual artigo da Lei nº 8.212/1991 aparece a previsão: “vinte por cento sobre o total das remunerações pagas”?",
-      "answer_article_key": "Art. 22",
-      "article": "Art. 22º",
-      "article_key": "Art. 22",
-      "topic": "Contribuição a cargo da empresa",
-      "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
-      "options": [
-        {
-          "article_key": "Art. 22",
-          "label": "Art. 22º"
-        },
-        {
-          "article_key": "Art. 22-A",
-          "label": "Art. 22-A"
-        },
-        {
-          "article_key": "Art. 22-B",
-          "label": "Art. 22-B"
-        },
-        {
-          "article_key": "Art. 21",
-          "label": "Art. 21º"
-        }
-      ],
-      "explanation": "O trecho apresentado aparece no Art. 22º da norma. Fundamento legal: Art. 22º da Lei nº 8.212/1991.",
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "112725fc",
-      "legal_reference": "Art. 22º da Lei nº 8.212/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
-      "validation_status": "validated",
-      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
+      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "desc-from-cf-art195",
       "category": "Direito Constitucional",
       "law_id": "constituicao-1988",
       "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question": "Em qual artigo da Constituição Federal aparece a previsão: “financiada por toda a sociedade, de forma direta e indireta”?",
       "answer_article_key": "Art. 195",
       "article": "Art. 195º",
@@ -2479,12 +1849,14 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
       "validation_status": "validated",
-      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
+      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     }
   ],
   "generated_at": "2026-11-14",
   "validation_policy": "Questões liberadas apenas quando o artigo-gabarito, a frase-âncora, as alternativas e a versão do texto continuam compatíveis com a captura atual.",
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
-  "source_sync_status": "snapshot_anterior_ainda_nao_sincronizado"
+  "source_sync_status": "capturas_anteriores; recaptura_planalto_pendente",
+  "source_provenance_note": "source_url registra a origem real da captura que serviu de base ao item; preferred_source_url é o endereço oficial preferencial do Planalto/Portal IN. O item só será considerado sincronizado com a fonte preferencial após nova captura e validação de hash."
 }
