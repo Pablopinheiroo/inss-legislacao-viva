@@ -2324,7 +2324,7 @@ function startFindErrorGame(onlyItems=null,options={}){
   const pool=onlyItems||selectedFindErrorPool();if(!pool.length){$("#error-count-note").textContent="Não há itens disponíveis para essa seleção.";return;}
   const size=onlyItems?pool.length:($("#error-length").value==="todas"?pool.length:Number($("#error-length").value));
   findErrorState={questions:shuffle(pool).slice(0,Math.min(size,pool.length)),index:0,answers:[],tries:0,resolved:false,reviewMode:Boolean(options.reviewMode),reviewFailed:false};
-  beginActivitySession("error",findErrorState.questions[0]||{});
+  beginActivitySession("error",{...(findErrorState.questions[0]||{}),reviewMode:Boolean(options.reviewMode)});
   $("#error-welcome").classList.add("hidden");$("#error-summary").classList.add("hidden");$("#error-card").classList.remove("hidden");showFindErrorQuestion();
 }
 function showFindErrorQuestion(){
@@ -2591,7 +2591,7 @@ function startArticleGame(onlyItems = null, options = {}) {
   const requested = $("#article-length").value === "todas" ? pool.length : Number($("#article-length").value);
   const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
   articleGameState = { questions: items, index: 0, selected: null, answers: [], reviewMode: Boolean(options.reviewMode), reviewFailed: false };
-  beginActivitySession("article",items[0]||{});
+  beginActivitySession("article",{...(items[0]||{}),reviewMode:Boolean(options.reviewMode)});
   $("#article-welcome").classList.add("hidden");
   $("#article-summary").classList.add("hidden");
   $("#article-card").classList.remove("hidden");
@@ -2847,7 +2847,7 @@ function startQuiz(onlyItems=null,options={}) {
     ?pool.length:Number($("#quiz-length").value);
   const items=shuffle(pool).slice(0,Math.min(requested,pool.length));
   quizState={questions:items,index:0,selected:null,answers:[],reviewMode:Boolean(options.reviewMode)};
-  beginActivitySession("quiz",items[0]||{});
+  beginActivitySession("quiz",{...(items[0]||{}),reviewMode:Boolean(options.reviewMode)});
   $("#quiz-welcome").classList.add("hidden");
   $("#quiz-summary").classList.add("hidden");
   $("#quiz-card").classList.remove("hidden");
@@ -3140,7 +3140,7 @@ function updateMultiCEFilters(){
   $("#multi-ce-count-note").textContent=pool.length+" artigo(s) nesta seleção, com "+total+" afirmação(ões). "+capture;
   if(!pool.length)$("#multi-ce-count-note").textContent+=" Não há artigos para esses filtros.";
 }
-function startMultiCEGame(onlyGroups=null){
+function startMultiCEGame(onlyGroups=null,options={}){
   const pool=onlyGroups||selectedMultiCEPool();
   if(!pool.length){
     $("#multi-ce-count-note").textContent="Não há artigos disponíveis para essa seleção.";
@@ -3150,7 +3150,7 @@ function startMultiCEGame(onlyGroups=null){
   const amount=value==="todas"?pool.length:Number(value);
   const selected=onlyGroups?shuffle(pool):shuffle(pool).slice(0,Math.min(amount,pool.length));
   multiCEState={groups:selected,articleIndex:0,statementIndex:0,selected:null,answers:[]};
-  beginActivitySession("multiCE",selected[0]||{});
+  beginActivitySession("multiCE",{...(selected[0]||{}),reviewMode:Boolean(options.reviewMode)});
   $("#multi-ce-welcome").classList.add("hidden");
   $("#multi-ce-summary").classList.add("hidden");
   $("#multi-ce-card").classList.remove("hidden");
@@ -3565,7 +3565,7 @@ function startBeforeAfterGame(items=null,options={}) {
   const amount=Array.isArray(items)||options.reviewMode?pool.length:length==="todas"?pool.length:Math.min(Number(length)||5,pool.length);
   beforeAfterState={questions:shuffle(pool).slice(0,amount).map(prepareBeforeAfterQuestion),
     index:0,selected:null,answers:[],answered:false,changeQuestion:null,changeSelected:null,changeAnswered:false,reviewMode:Boolean(options.reviewMode)};
-  beginActivitySession("beforeAfter",beforeAfterState.questions[0]?.change||{});
+  beginActivitySession("beforeAfter",{...(beforeAfterState.questions[0]?.change||{}),reviewMode:Boolean(options.reviewMode)});
   $("#before-after-welcome").classList.add("hidden");$("#before-after-summary").classList.add("hidden");$("#before-after-card").classList.remove("hidden");
   renderBeforeAfterQuestion();
 }
@@ -4130,7 +4130,7 @@ function startMemorySession(onlyCards = null) {
   const length = $("#memory-length").value;
   const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
   const selected = onlyCards ? pool : pool.slice(0, amount);
-  beginActivitySession("memory",selected[0]||{});
+  beginActivitySession("memory",{...(selected[0]||{}),reviewMode:true});
   memoryState = {
     cards: selected.map(card => ({
       ...card,
@@ -4799,7 +4799,7 @@ function activityModeInfo(mode){
     error:{label:"Encontre o erro",view:"find-error"},article:{label:"Descubra o artigo",view:"article"},
     multiCE:{label:"Várias afirmações",view:"multi-ce"},beforeAfter:{label:"Antes e depois",view:"before-after"},
     memory:{label:"Memorização ativa",view:"memory"},legalTraining:{label:"Treino na Biblioteca Lei Seca",view:"law"},
-    leiSeca:{label:"Lei Seca · Biblioteca",view:"law"}
+    leiSeca:{label:"Lei Seca · Biblioteca",view:"law"},simulado:{label:"Simulado",view:"simulado"}
   })[mode]||{label:String(mode||"Estudo"),view:""};
 }
 function activityContextFor(item={},fallback={}){
@@ -4823,6 +4823,7 @@ function beginActivitySession(mode,context={}){
   const id=Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,9);
   activityCurrentSession={
     id,mode,mode_label:info.label,started_at:new Date().toISOString(),ended_at:null,status:"active",
+    review_mode:Boolean(context.reviewMode||context.sourceType==="review"||context.review_id||mode==="memory"),
     answers_total:0,correct_count:0,incorrect_count:0,unknown_count:0,partial_count:0,
     self_assessed_count:0,activity_count:0,categories:meta.category?[meta.category]:[],
     topics:meta.topic?[meta.topic]:[],law_ids:meta.law_id?[meta.law_id]:[],
@@ -4866,6 +4867,10 @@ function finishActivitySession(status="completed"){
   if(index>=0)sessions[index]={...activityCurrentSession};else sessions.push({...activityCurrentSession});
   saveActivitySessions(sessions);
   try{if(localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
+  if(status==="completed"&&activityCurrentSession.mode==="simulado"){
+    awardExperience(XP_REWARDS.simulatorCompletion,"simulado-concluido::"+activityCurrentSession.id,"Simulado concluído",
+      {session_id:activityCurrentSession.id,answers:activityCurrentSession.answers_total||0});
+  }
   activityCurrentSession=null;
   if($("#history-view")&&!$("#history-view").classList.contains("hidden"))renderActivityHistory();
 }
@@ -4885,6 +4890,13 @@ function recordActivityAnswer(mode,item,prompt,chosen,correct,expected,outcome,e
   };
   const events=loadActivityEvents();events.push(event);saveActivityEvents(events);
   updateActivitySession(event);
+  const errorAttemptNotSolved=mode==="error"&&status!=="correct";
+  if(!errorAttemptNotSolved){
+    const reviewBonus=activityCurrentSession.review_mode?XP_REWARDS.review:0;
+    awardExperience(XP_REWARDS.question+reviewBonus,"resposta::"+event.id,
+      activityCurrentSession.review_mode?"Questão respondida em revisão":"Questão respondida",
+      {mode,mode_label:event.mode_label,question_id:event.question_id,review_bonus:reviewBonus});
+  }
   if($("#history-view")&&!$("#history-view").classList.contains("hidden"))renderActivityHistory();
   return event;
 }
@@ -4903,6 +4915,10 @@ function recordActivityArticleStudy(law,article,isStudied){
     source_url:law?.url||"",extra:{is_studied:Boolean(isStudied)}
   };
   const events=loadActivityEvents();events.push(event);saveActivityEvents(events);updateActivitySession(event);
+  if(isStudied){
+    awardExperience(XP_REWARDS.article,"artigo-concluido::"+(law?.id||"norma")+"::"+article,"Artigo concluído",
+      {law_id:law?.id||"",law_title:context.law_title,article});
+  }
   finishActivitySession("completed");
 }
 function currentClozePrompt(current,blank){
@@ -5105,3 +5121,77 @@ $("#history-query").addEventListener("input",renderActivityHistory);
 $("#history-unstudied-search").addEventListener("input",renderHistoryUnstudiedArticles);
 $("#tab-history").setAttribute("aria-label","Abrir histórico de estudo");
 initializeActivityHistory();
+
+
+
+/* -------------------- Experiência (XP) e níveis -------------------- */
+const EXPERIENCE_STORAGE_KEY="radarLegislativo.experience.v1";
+const XP_REWARDS={question:5,article:10,review:3,simulatorCompletion:25};
+const XP_LEDGER_LIMIT=500;
+let experienceToastTimer=null;
+function loadExperienceData(){
+  try{
+    const value=JSON.parse(localStorage.getItem(EXPERIENCE_STORAGE_KEY)||"{}");
+    return value&&typeof value==="object"&&!Array.isArray(value)
+      ?{total_xp:Math.max(0,Number(value.total_xp)||0),awarded_ids:Array.isArray(value.awarded_ids)?value.awarded_ids:[],
+        ledger:Array.isArray(value.ledger)?value.ledger:[],updated_at:value.updated_at||null}
+      :{total_xp:0,awarded_ids:[],ledger:[],updated_at:null};
+  }catch(_){return {total_xp:0,awarded_ids:[],ledger:[],updated_at:null};}
+}
+function saveExperienceData(data){
+  try{localStorage.setItem(EXPERIENCE_STORAGE_KEY,JSON.stringify(data));return true;}
+  catch(error){console.warn("Não foi possível salvar os pontos de experiência:",error);return false;}
+}
+function xpRequiredForLevel(level){
+  const completed=Math.max(0,Math.floor(Number(level)||1)-1);
+  return 100*completed+25*completed*(completed-1);
+}
+function calculateExperienceLevel(totalXP){
+  const xp=Math.max(0,Number(totalXP)||0);let level=1;
+  while(level<10000&&xp>=xpRequiredForLevel(level+1))level++;
+  const start=xpRequiredForLevel(level),next=xpRequiredForLevel(level+1);
+  return {level,total_xp:xp,current_level_xp:xp-start,next_level_xp:next-start,
+    remaining_xp:Math.max(0,next-xp),progress_percent:next>start?Math.min(100,Math.round((xp-start)/(next-start)*100)):100,
+    next_level_total:next};
+}
+function showExperienceToast(amount,levelUp,newLevel,reason){
+  let toast=document.getElementById("xp-award-toast");if(toast)toast.remove();
+  toast=document.createElement("div");toast.id="xp-award-toast";toast.className="xp-award-toast";
+  toast.setAttribute("role","status");toast.setAttribute("aria-live","polite");
+  const badge=document.createElement("span");badge.className="xp-award-icon";badge.textContent=levelUp?"★":"+";
+  const body=document.createElement("span");body.className="xp-award-copy";
+  const title=document.createElement("strong");title.textContent=levelUp?"Novo nível alcançado!":"+"+amount+" XP";
+  const detail=document.createElement("small");detail.textContent=levelUp?"Você chegou ao nível "+newLevel+".":reason||"Experiência adicionada";
+  body.append(title,detail);toast.append(badge,body);document.body.append(toast);toast.classList.add("is-visible");
+  clearTimeout(experienceToastTimer);
+  experienceToastTimer=setTimeout(()=>{toast.classList.remove("is-visible");setTimeout(()=>toast.remove(),250);},2600);
+}
+function renderExperienceWidget(){
+  const levelNode=$("#xp-level"),totalNode=$("#xp-total"),labelNode=$("#xp-progress-label"),fill=$("#xp-progress-fill"),widget=$("#xp-widget");
+  if(!levelNode||!totalNode||!labelNode||!fill)return;
+  const data=loadExperienceData(),level=calculateExperienceLevel(data.total_xp);
+  levelNode.textContent=String(level.level);
+  totalNode.textContent=data.total_xp.toLocaleString("pt-BR")+" XP";
+  labelNode.textContent=level.current_level_xp+" / "+level.next_level_xp+" XP para o nível "+(level.level+1);
+  fill.style.width=level.progress_percent+"%";
+  const track=fill.parentElement;if(track)track.setAttribute("aria-valuenow",String(level.progress_percent));
+  if(widget)widget.setAttribute("aria-label","Nível "+level.level+". "+data.total_xp+" pontos de experiência. Faltam "+level.remaining_xp+" XP para o próximo nível.");
+}
+function awardExperience(amount,awardId,reason,details={}){
+  const points=Math.max(0,Math.floor(Number(amount)||0));if(!points||!awardId)return false;
+  const data=loadExperienceData();if(data.awarded_ids.includes(awardId))return false;
+  const previousLevel=calculateExperienceLevel(data.total_xp).level;
+  data.total_xp+=points;data.awarded_ids.push(awardId);
+  if(data.awarded_ids.length>20000)data.awarded_ids=data.awarded_ids.slice(-20000);
+  const record={id:awardId,amount:points,reason:String(reason||"Atividade concluída"),
+    occurred_at:new Date().toISOString(),total_after:data.total_xp,details};
+  data.ledger.push(record);if(data.ledger.length>XP_LEDGER_LIMIT)data.ledger=data.ledger.slice(-XP_LEDGER_LIMIT);
+  data.updated_at=record.occurred_at;if(!saveExperienceData(data))return false;
+  const nextLevel=calculateExperienceLevel(data.total_xp).level;renderExperienceWidget();
+  showExperienceToast(points,nextLevel>previousLevel,nextLevel,reason);return true;
+}
+function getExperienceSummary(){
+  const data=loadExperienceData(),level=calculateExperienceLevel(data.total_xp);
+  return {...level,awards:data.ledger,updated_at:data.updated_at};
+}
+renderExperienceWidget();
