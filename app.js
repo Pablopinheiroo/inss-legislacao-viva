@@ -393,6 +393,9 @@ async function loadLegalLaw(lawId) {
       $("#law-reader-warning").classList.remove("hidden");
     }
     const warningParts = [];
+    if (status && status.error) {
+      warningParts.push("A última consulta desta norma apresentou falha. O leitor está mostrando a última captura válida, de " + formatDate(snapshot.captured_at) + ". A falha não apagou o texto anterior.");
+    }
     if (law.source_note) warningParts.push(law.source_note);
     if (law.monitor_note) warningParts.push(law.monitor_note);
     if (snapshot.snapshot_scope === "selected_articles") {
@@ -616,7 +619,7 @@ function toggleLegalArticleFavorite() {
   if (favorites.has(key)) favorites.delete(key);
   else favorites.add(key);
   writeLegalStorage(LEGAL_FAVORITES_KEY, favorites);
-  renderLegalArticle();
+  renderLegalArticlePicker();
 }
 function toggleLegalArticleStudied() {
   if (!legalSelectedLaw || !legalSelectedArticle) return;
@@ -625,7 +628,7 @@ function toggleLegalArticleStudied() {
   if (studied.has(key)) studied.delete(key);
   else studied.add(key);
   writeLegalStorage(LEGAL_STUDIED_KEY, studied);
-  renderLegalArticle();
+  renderLegalArticlePicker();
 }
 function stepLegalArticle(direction) {
   if (!legalSelectedLaw || !legalEntries.length) return;
