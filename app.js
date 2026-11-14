@@ -360,8 +360,8 @@ function checkCloze() {
 // -------------------- Modo de jogo Encontre o erro --------------------
 function normalizeLegalForMatch(value) {
   return normalizeAnswer(value)
-    .replace(/[^\\p{L}\\p{N}%]+/gu, " ")
-    .replace(/\\s+/g, " ")
+    .replace(/[^\p{L}\p{N}%]+/gu, " ")
+    .replace(/\s+/g, " ")
     .trim();
 }
 async function loadFindErrorBank() {
