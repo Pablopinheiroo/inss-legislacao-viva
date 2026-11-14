@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -31,8 +31,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros\nO benefício a que se refere este artigo estende-se aos seringueiros\nque, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na\nregião Amazônica, contribuindo para o esforço de guerra.",
-        "normalized_text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros O benefício a que se refere este artigo estende-se aos seringueiros que, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na região Amazônica, contribuindo para o esforço de guerra."
+        "text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros\nque, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na\nregião Amazônica, contribuindo para o esforço de guerra.",
+        "normalized_text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros que, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na região Amazônica, contribuindo para o esforço de guerra."
       }
     },
     "Art. 2": {
@@ -56,22 +56,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á\nA comprovação da efetiva prestação de serviços a que alude o caput far-se-á\nperante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação\ndada pela Lei nº 9.711, de 20/11/1998)",
-        "normalized_text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á A comprovação da efetiva prestação de serviços a que alude o caput far-se-á perante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
+        "text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á\nperante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação\ndada pela Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á perante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado,\nCaberá à Defensoria Pública, por solicitação do interessado, quando necessitado,\npromover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou\noutras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)",
-        "normalized_text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado, Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado, promover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou outras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
+        "text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado,\npromover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou\noutras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado, promover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou outras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido\nO prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido\npela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)",
-        "normalized_text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido pela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)"
+        "text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido\npela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido pela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)"
       }
     },
     "Art. 4": {
@@ -95,8 +95,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de\nOs pagamentos de pensão especial iniciar-se-ão no prazo máximo de\n30 (trinta) dias após o reconhecimento do direito.",
-        "normalized_text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de 30 (trinta) dias após o reconhecimento do direito."
+        "text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de\n30 (trinta) dias após o reconhecimento do direito.",
+        "normalized_text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de 30 (trinta) dias após o reconhecimento do direito."
       }
     },
     "Art. 6": {

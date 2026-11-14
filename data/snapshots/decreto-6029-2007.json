@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -48,29 +48,29 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública;\nintegrar os órgãos, programas e ações relacionadas com a ética pública;",
-        "normalized_text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública; integrar os órgãos, programas e ações relacionadas com a ética pública;"
+        "text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública;",
+        "normalized_text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;\ncontribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;",
-        "normalized_text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública; contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;"
+        "text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;",
+        "normalized_text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;\npromover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;",
-        "normalized_text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública; promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;"
+        "text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;",
+        "normalized_text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro.\narticular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro.",
-        "normalized_text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro. articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro."
+        "text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro.",
+        "normalized_text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro."
       }
     },
     "Art. 2": {
@@ -85,22 +85,22 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;\na Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;",
-        "normalized_text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999; a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;"
+        "text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;",
+        "normalized_text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e\nas Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e",
-        "normalized_text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e"
+        "text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e",
+        "normalized_text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal.\nas demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal.",
-        "normalized_text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal. as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal."
+        "text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal.",
+        "normalized_text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal."
       }
     },
     "Art. 3": {
@@ -115,22 +115,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público.\nA atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público.",
-        "normalized_text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público. A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público."
+        "text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público.",
+        "normalized_text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão.\nO Presidente terá o voto de qualidade nas deliberações da Comissão.",
-        "normalized_text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão. O Presidente terá o voto de qualidade nas deliberações da Comissão."
+        "text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão.",
+        "normalized_text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação.\nOs mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação.",
-        "normalized_text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação. Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação."
+        "text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação.",
+        "normalized_text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação."
       }
     },
     "Art. 4": {
@@ -145,15 +145,15 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;\natuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;",
-        "normalized_text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública; atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;"
+        "text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;",
+        "normalized_text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:\nadministrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:",
-        "normalized_text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo: administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:"
+        "text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:",
+        "normalized_text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:"
       },
       "caput/inciso:II/alinea:a": {
         "device_type": "alinea",
@@ -180,29 +180,29 @@
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;\ndirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;",
-        "normalized_text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994; dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;"
+        "text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;",
+        "normalized_text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;\ncoordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;",
-        "normalized_text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal; coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;"
+        "text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;",
+        "normalized_text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;"
       },
       "caput/inciso:V": {
         "device_type": "inciso",
         "device_label": "inciso V",
         "device_path": "caput/inciso:V",
-        "text": "V - aprovar o seu regimento interno; e\naprovar o seu regimento interno; e",
-        "normalized_text": "V - aprovar o seu regimento interno; e aprovar o seu regimento interno; e"
+        "text": "V - aprovar o seu regimento interno; e",
+        "normalized_text": "V - aprovar o seu regimento interno; e"
       },
       "caput/inciso:VI": {
         "device_type": "inciso",
         "device_label": "inciso VI",
         "device_path": "caput/inciso:VI",
-        "text": "VI - escolher o seu Presidente.\nescolher o seu Presidente.",
-        "normalized_text": "VI - escolher o seu Presidente. escolher o seu Presidente."
+        "text": "VI - escolher o seu Presidente.",
+        "normalized_text": "VI - escolher o seu Presidente."
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",
@@ -233,15 +233,15 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;\nassegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;",
-        "normalized_text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano; assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;"
+        "text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;",
+        "normalized_text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública.\nconduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública.",
-        "normalized_text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública. conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública."
+        "text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública.",
+        "normalized_text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública."
       }
     },
     "Art. 7": {
@@ -256,15 +256,15 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;\natuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;",
-        "normalized_text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade; atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;"
+        "text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;",
+        "normalized_text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:\naplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:",
-        "normalized_text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo: aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:"
+        "text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:",
+        "normalized_text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:"
       },
       "caput/inciso:II/alinea:a": {
         "device_type": "alinea",
@@ -298,29 +298,29 @@
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e\nrepresentar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e",
-        "normalized_text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e"
+        "text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e",
+        "normalized_text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas.\nsupervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas.",
-        "normalized_text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas. supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas."
+        "text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas.",
+        "normalized_text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas."
       },
       "paragrafo:1": {
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições.\nCada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições.",
-        "normalized_text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições. Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições."
+        "text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições.",
+        "normalized_text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas.\nAs Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas.",
-        "normalized_text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas. As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas."
+        "text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas.",
+        "normalized_text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas."
       }
     },
     "Art. 8": {
@@ -335,29 +335,29 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - observar e fazer observar as normas de ética e disciplina;\nobservar e fazer observar as normas de ética e disciplina;",
-        "normalized_text": "I - observar e fazer observar as normas de ética e disciplina; observar e fazer observar as normas de ética e disciplina;"
+        "text": "I - observar e fazer observar as normas de ética e disciplina;",
+        "normalized_text": "I - observar e fazer observar as normas de ética e disciplina;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - constituir Comissão de Ética;\nconstituir Comissão de Ética;",
-        "normalized_text": "II - constituir Comissão de Ética; constituir Comissão de Ética;"
+        "text": "II - constituir Comissão de Ética;",
+        "normalized_text": "II - constituir Comissão de Ética;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e\ngarantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e",
-        "normalized_text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e"
+        "text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e",
+        "normalized_text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - atender com prioridade às solicitações da CEP.\natender com prioridade às solicitações da CEP.",
-        "normalized_text": "IV - atender com prioridade às solicitações da CEP. atender com prioridade às solicitações da CEP."
+        "text": "IV - atender com prioridade às solicitações da CEP.",
+        "normalized_text": "IV - atender com prioridade às solicitações da CEP."
       }
     },
     "Art. 9": {
@@ -388,22 +388,22 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - proteção à honra e à imagem da pessoa investigada;\nproteção à honra e à imagem da pessoa investigada;",
-        "normalized_text": "I - proteção à honra e à imagem da pessoa investigada; proteção à honra e à imagem da pessoa investigada;"
+        "text": "I - proteção à honra e à imagem da pessoa investigada;",
+        "normalized_text": "I - proteção à honra e à imagem da pessoa investigada;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e\nproteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e",
-        "normalized_text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e"
+        "text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e",
+        "normalized_text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto.\nindependência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto.",
-        "normalized_text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto. independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto."
+        "text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto.",
+        "normalized_text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto."
       }
     },
     "Art. 11": {
@@ -434,57 +434,57 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa.\nO investigado poderá produzir prova documental necessária à sua defesa.",
-        "normalized_text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa. O investigado poderá produzir prova documental necessária à sua defesa."
+        "text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa.",
+        "normalized_text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista.\nAs Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista.",
-        "normalized_text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista. As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista."
+        "text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista.",
+        "normalized_text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.\nNa hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.",
-        "normalized_text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias. Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias."
+        "text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.",
+        "normalized_text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias."
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada.\nConcluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada.",
-        "normalized_text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada. Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada."
+        "text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada.",
+        "normalized_text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada."
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:\nSe a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:",
-        "normalized_text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber: Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:"
+        "text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:",
+        "normalized_text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:"
       },
       "paragrafo:5/inciso:I": {
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "paragrafo:5/inciso:I",
-        "text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;\nencaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;",
-        "normalized_text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso; encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;"
+        "text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;",
+        "normalized_text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;"
       },
       "paragrafo:5/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "paragrafo:5/inciso:II",
-        "text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e\nencaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e",
-        "normalized_text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e"
+        "text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e",
+        "normalized_text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e"
       },
       "paragrafo:5/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "paragrafo:5/inciso:III",
-        "text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir.\nrecomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir.",
-        "normalized_text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir. recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir."
+        "text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir.",
+        "normalized_text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir."
       }
     },
     "Art. 13": {
@@ -499,22 +499,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados.\nConcluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados.",
-        "normalized_text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados. Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados."
+        "text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados.",
+        "normalized_text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda.\nNa hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda.",
-        "normalized_text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda. Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda."
+        "text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda.",
+        "normalized_text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados.\nPara resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados.",
-        "normalized_text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados. Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados."
+        "text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados.",
+        "normalized_text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados."
       }
     },
     "Art. 14": {
@@ -561,15 +561,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade.\nHavendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade.",
-        "normalized_text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade. Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade."
+        "text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade.",
+        "normalized_text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal.\nCumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal.",
-        "normalized_text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal. Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal."
+        "text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal.",
+        "normalized_text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal."
       }
     },
     "Art. 17": {
@@ -611,15 +611,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12.\nNa hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12.",
-        "normalized_text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12. Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12."
+        "text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12.",
+        "normalized_text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética.\nAs autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética.",
-        "normalized_text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética. As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética."
+        "text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética.",
+        "normalized_text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética."
       }
     },
     "Art. 21": {

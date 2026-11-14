@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -51,29 +51,29 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - aos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave;\naos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave;",
-        "normalized_text": "I - aos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave; aos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave;"
+        "text": "I - aos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave;",
+        "normalized_text": "I - aos 25 (vinte e cinco) anos de tempo de contribuição, se homem, e 20 (vinte) anos, se mulher, no caso de segurado com deficiência grave;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - aos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada;\naos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada;",
-        "normalized_text": "II - aos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada; aos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada;"
+        "text": "II - aos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada;",
+        "normalized_text": "II - aos 29 (vinte e nove) anos de tempo de contribuição, se homem, e 24 (vinte e quatro) anos, se mulher, no caso de segurado com deficiência moderada;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - aos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou\naos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou",
-        "normalized_text": "III - aos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou aos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou"
+        "text": "III - aos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou",
+        "normalized_text": "III - aos 33 (trinta e três) anos de tempo de contribuição, se homem, e 28 (vinte e oito) anos, se mulher, no caso de segurado com deficiência leve; ou"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - aos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período.\naos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período.",
-        "normalized_text": "IV - aos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período. aos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período."
+        "text": "IV - aos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período.",
+        "normalized_text": "IV - aos 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período."
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",
@@ -113,15 +113,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência.\nA existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência.",
-        "normalized_text": "§ 1º A existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência. A existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência."
+        "text": "§ 1º A existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência.",
+        "normalized_text": "§ 1º A existência de deficiência anterior à data da vigência desta Lei Complementar deverá ser certificada, inclusive quanto ao seu grau, por ocasião da primeira avaliação, sendo obrigatória a fixação da data provável do início da deficiência."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º A comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal.\nA comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal.",
-        "normalized_text": "§ 2º A comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal. A comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal."
+        "text": "§ 2º A comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal.",
+        "normalized_text": "§ 2º A comprovação de tempo de contribuição na condição de segurado com deficiência em período anterior à entrada em vigor desta Lei Complementar não será admitida por meio de prova exclusivamente testemunhal."
       }
     },
     "Art. 7": {
@@ -145,15 +145,15 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - 100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou\n100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou",
-        "normalized_text": "I - 100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou 100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou"
+        "text": "I - 100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou",
+        "normalized_text": "I - 100% (cem por cento), no caso da aposentadoria de que tratam os incisos I, II e III do art. 3º; ou"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - 70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade.\n70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade.",
-        "normalized_text": "II - 70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade. 70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade."
+        "text": "II - 70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade.",
+        "normalized_text": "II - 70% (setenta por cento) mais 1% (um por cento) do salário de benefício por grupo de 12 (doze) contribuições mensais até o máximo de 30% (trinta por cento), no caso de aposentadoria por idade."
       }
     },
     "Art. 9": {
@@ -168,36 +168,36 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - o fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado;\no fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado;",
-        "normalized_text": "I - o fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado; o fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado;"
+        "text": "I - o fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado;",
+        "normalized_text": "I - o fator previdenciário nas aposentadorias, se resultar em renda mensal de valor mais elevado;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - a contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente;\na contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente;",
-        "normalized_text": "II - a contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente; a contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente;"
+        "text": "II - a contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente;",
+        "normalized_text": "II - a contagem recíproca do tempo de contribuição na condição de segurado com deficiência relativo à filiação ao RGPS, ao regime próprio de previdência do servidor público ou a regime de previdência militar, devendo os regimes compensar-se financeiramente;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - as regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991;\nas regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991;",
-        "normalized_text": "III - as regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991; as regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991;"
+        "text": "III - as regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991;",
+        "normalized_text": "III - as regras de pagamento e de recolhimento das contribuições previdenciárias contidas na Lei nº 8.212, de 24 de julho de 1991;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - as demais normas relativas aos benefícios do RGPS;\nas demais normas relativas aos benefícios do RGPS;",
-        "normalized_text": "IV - as demais normas relativas aos benefícios do RGPS; as demais normas relativas aos benefícios do RGPS;"
+        "text": "IV - as demais normas relativas aos benefícios do RGPS;",
+        "normalized_text": "IV - as demais normas relativas aos benefícios do RGPS;"
       },
       "caput/inciso:V": {
         "device_type": "inciso",
         "device_label": "inciso V",
         "device_path": "caput/inciso:V",
-        "text": "V - a percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar.\na percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar.",
-        "normalized_text": "V - a percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar. a percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar."
+        "text": "V - a percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar.",
+        "normalized_text": "V - a percepção de qualquer outra espécie de aposentadoria estabelecida na Lei nº 8.213, de 24 de julho de 1991, que lhe seja mais vantajosa do que as opções apresentadas nesta Lei Complementar."
       }
     },
     "Art. 10": {

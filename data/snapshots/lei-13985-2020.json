@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -28,36 +28,36 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo.\nA pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo.",
-        "normalized_text": "§ 1º A pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo. A pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo."
+        "text": "§ 1º A pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo.",
+        "normalized_text": "§ 1º A pensão especial será mensal, vitalícia e intransferível e terá o valor de um salário mínimo."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º A pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993.\nA pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993.",
-        "normalized_text": "§ 2º A pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993. A pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993."
+        "text": "§ 2º A pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993.",
+        "normalized_text": "§ 2º A pensão especial não poderá ser acumulada com indenizações pagas pela União em razão de decisão judicial sobre os mesmos fatos ou com o BPC de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º O reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo.\nO reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo.",
-        "normalized_text": "§ 3º O reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo. O reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo."
+        "text": "§ 3º O reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo.",
+        "normalized_text": "§ 3º O reconhecimento da pensão especial ficará condicionado à desistência de ação judicial que tenha por objeto pedido idêntico sobre o qual versa o processo administrativo."
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º A pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão.\nA pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão.",
-        "normalized_text": "§ 4º A pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão. A pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão."
+        "text": "§ 4º A pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão.",
+        "normalized_text": "§ 4º A pensão especial será devida a partir do dia posterior à cessação do BPC ou dos benefícios referidos no § 2º deste artigo, que não poderão ser acumulados com a pensão."
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º A pensão especial não gerará direito a abono ou a pensão por morte.\nA pensão especial não gerará direito a abono ou a pensão por morte.",
-        "normalized_text": "§ 5º A pensão especial não gerará direito a abono ou a pensão por morte. A pensão especial não gerará direito a abono ou a pensão por morte."
+        "text": "§ 5º A pensão especial não gerará direito a abono ou a pensão por morte.",
+        "normalized_text": "§ 5º A pensão especial não gerará direito a abono ou a pensão por morte."
       }
     },
     "Art. 2": {
@@ -97,15 +97,15 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - a licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias;\na licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias;",
-        "normalized_text": "I - a licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias; a licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias;"
+        "text": "I - a licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias;",
+        "normalized_text": "I - a licença-maternidade de que trata o art. 392 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, será de 180 (cento e oitenta) dias;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - o salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias.\no salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias.",
-        "normalized_text": "II - o salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias. o salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias."
+        "text": "II - o salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias.",
+        "normalized_text": "II - o salário-maternidade de que trata o art. 71 da Lei nº 8.213, de 24 de julho de 1991, será devido por 180 (cento e oitenta) dias."
       }
     },
     "Art. 6": {

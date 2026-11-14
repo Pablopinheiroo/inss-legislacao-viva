@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -29,15 +29,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O valor da pensão especial, reajustável a cada ano posterior à\nO valor da pensão especial, reajustável a cada ano posterior à\ndata da concessão segundo o índice de Variação das Obrigações\nReajustáveis do Tesouro Nacional ORTN, será calculado, em função\ndos pontos indicadores da natureza e do grau da dependência\nresultante da deformidade física, à razão, cada um, de metade do\nmaior salário mínimo vigente no País.",
-        "normalized_text": "§ 1º O valor da pensão especial, reajustável a cada ano posterior à O valor da pensão especial, reajustável a cada ano posterior à data da concessão segundo o índice de Variação das Obrigações Reajustáveis do Tesouro Nacional ORTN, será calculado, em função dos pontos indicadores da natureza e do grau da dependência resultante da deformidade física, à razão, cada um, de metade do maior salário mínimo vigente no País."
+        "text": "§ 1º O valor da pensão especial, reajustável a cada ano posterior à\ndata da concessão segundo o índice de Variação das Obrigações\nReajustáveis do Tesouro Nacional ORTN, será calculado, em função\ndos pontos indicadores da natureza e do grau da dependência\nresultante da deformidade física, à razão, cada um, de metade do\nmaior salário mínimo vigente no País.",
+        "normalized_text": "§ 1º O valor da pensão especial, reajustável a cada ano posterior à data da concessão segundo o índice de Variação das Obrigações Reajustáveis do Tesouro Nacional ORTN, será calculado, em função dos pontos indicadores da natureza e do grau da dependência resultante da deformidade física, à razão, cada um, de metade do maior salário mínimo vigente no País."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Quanto à natureza, a dependência compreenderá a incapacidade\nQuanto à natureza, a dependência compreenderá a incapacidade\npara o trabalho, para a deambulação, para a higiene pessoal e para\na própria alimentação, atribuindo-se a cada uma 1 (um) ou 2 (dois)\npontos, respectivamente, conforme seja o seu grau parcial ou total.",
-        "normalized_text": "§ 2º Quanto à natureza, a dependência compreenderá a incapacidade Quanto à natureza, a dependência compreenderá a incapacidade para o trabalho, para a deambulação, para a higiene pessoal e para a própria alimentação, atribuindo-se a cada uma 1 (um) ou 2 (dois) pontos, respectivamente, conforme seja o seu grau parcial ou total."
+        "text": "§ 2º Quanto à natureza, a dependência compreenderá a incapacidade\npara o trabalho, para a deambulação, para a higiene pessoal e para\na própria alimentação, atribuindo-se a cada uma 1 (um) ou 2 (dois)\npontos, respectivamente, conforme seja o seu grau parcial ou total.",
+        "normalized_text": "§ 2º Quanto à natureza, a dependência compreenderá a incapacidade para o trabalho, para a deambulação, para a higiene pessoal e para a própria alimentação, atribuindo-se a cada uma 1 (um) ou 2 (dois) pontos, respectivamente, conforme seja o seu grau parcial ou total."
       }
     },
     "Art. 2": {
@@ -61,22 +61,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O benefício de que trata esta Lei é de natureza indenizatória,\nO benefício de que trata esta Lei é de natureza indenizatória,\nnão prejudicando eventuais benefícios de natureza previdenciária,\ne não poderá ser reduzido em razão de eventual aquisição de\ncapacidade laborativa ou de redução de incapacidade para o\ntrabalho, ocorridas após a sua concessão.\n(Parágrafo\núnico acrescido pela Lei nº 9.528, de 10/12/1997\ne\ntransformado\nem § 1º pela Medida Provisória nº 2.187-13, de 24/8/2001)",
-        "normalized_text": "§ 1º O benefício de que trata esta Lei é de natureza indenizatória, O benefício de que trata esta Lei é de natureza indenizatória, não prejudicando eventuais benefícios de natureza previdenciária, e não poderá ser reduzido em razão de eventual aquisição de capacidade laborativa ou de redução de incapacidade para o trabalho, ocorridas após a sua concessão. (Parágrafo único acrescido pela Lei nº 9.528, de 10/12/1997 e transformado em § 1º pela Medida Provisória nº 2.187-13, de 24/8/2001)"
+        "text": "§ 1º O benefício de que trata esta Lei é de natureza indenizatória,\nnão prejudicando eventuais benefícios de natureza previdenciária,\ne não poderá ser reduzido em razão de eventual aquisição de\ncapacidade laborativa ou de redução de incapacidade para o\ntrabalho, ocorridas após a sua concessão.\n(Parágrafo\núnico acrescido pela Lei nº 9.528, de 10/12/1997\ne\ntransformado\nem § 1º pela Medida Provisória nº 2.187-13, de 24/8/2001)",
+        "normalized_text": "§ 1º O benefício de que trata esta Lei é de natureza indenizatória, não prejudicando eventuais benefícios de natureza previdenciária, e não poderá ser reduzido em razão de eventual aquisição de capacidade laborativa ou de redução de incapacidade para o trabalho, ocorridas após a sua concessão. (Parágrafo único acrescido pela Lei nº 9.528, de 10/12/1997 e transformado em § 1º pela Medida Provisória nº 2.187-13, de 24/8/2001)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O beneficiário desta pensão especial, maior de trinta e cinco\nO beneficiário desta pensão especial, maior de trinta e cinco\nanos, que necessite de assistência permanente de outra pessoa e que\ntenha recebido pontuação superior ou igual a seis, conforme\nestabelecido no § 2º do art. 1º desta Lei, fará jus a um\nadicional de vinte e cinco por cento sobre o valor deste benefício.\n(Parágrafo\nacrescido pela Medida Provisória nº 2.187-13, de 24/8/2001)",
-        "normalized_text": "§ 2º O beneficiário desta pensão especial, maior de trinta e cinco O beneficiário desta pensão especial, maior de trinta e cinco anos, que necessite de assistência permanente de outra pessoa e que tenha recebido pontuação superior ou igual a seis, conforme estabelecido no § 2º do art. 1º desta Lei, fará jus a um adicional de vinte e cinco por cento sobre o valor deste benefício. (Parágrafo acrescido pela Medida Provisória nº 2.187-13, de 24/8/2001)"
+        "text": "§ 2º O beneficiário desta pensão especial, maior de trinta e cinco\nanos, que necessite de assistência permanente de outra pessoa e que\ntenha recebido pontuação superior ou igual a seis, conforme\nestabelecido no § 2º do art. 1º desta Lei, fará jus a um\nadicional de vinte e cinco por cento sobre o valor deste benefício.\n(Parágrafo\nacrescido pela Medida Provisória nº 2.187-13, de 24/8/2001)",
+        "normalized_text": "§ 2º O beneficiário desta pensão especial, maior de trinta e cinco anos, que necessite de assistência permanente de outra pessoa e que tenha recebido pontuação superior ou igual a seis, conforme estabelecido no § 2º do art. 1º desta Lei, fará jus a um adicional de vinte e cinco por cento sobre o valor deste benefício. (Parágrafo acrescido pela Medida Provisória nº 2.187-13, de 24/8/2001)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Sem prejuízo do adicional de que trata o § 2º, o beneficiário\nSem prejuízo do adicional de que trata o § 2º, o beneficiário\ndesta pensão especial fará jus a mais um adicional de trinta e\ncinco por cento sobre o valor do benefício, desde que comprove pelo\nmenos:\nI\n- vinte e cinco anos, se homem, e vinte anos, se mulher, de\ncontribuição para a Previdência Social;\nII\n- cinqüenta e cinco anos de idade, se homem, ou cinqüenta anos de\nidade, se mulher, e contar pelo menos quinze anos de contribuição\npara a Previdência Social.\n(Parágrafo\nacrescido pela Lei nº 10.877, de 4/6/2004)",
-        "normalized_text": "§ 3º Sem prejuízo do adicional de que trata o § 2º, o beneficiário Sem prejuízo do adicional de que trata o § 2º, o beneficiário desta pensão especial fará jus a mais um adicional de trinta e cinco por cento sobre o valor do benefício, desde que comprove pelo menos: I - vinte e cinco anos, se homem, e vinte anos, se mulher, de contribuição para a Previdência Social; II - cinqüenta e cinco anos de idade, se homem, ou cinqüenta anos de idade, se mulher, e contar pelo menos quinze anos de contribuição para a Previdência Social. (Parágrafo acrescido pela Lei nº 10.877, de 4/6/2004)"
+        "text": "§ 3º Sem prejuízo do adicional de que trata o § 2º, o beneficiário\ndesta pensão especial fará jus a mais um adicional de trinta e\ncinco por cento sobre o valor do benefício, desde que comprove pelo\nmenos:\nI\n- vinte e cinco anos, se homem, e vinte anos, se mulher, de\ncontribuição para a Previdência Social;\nII\n- cinqüenta e cinco anos de idade, se homem, ou cinqüenta anos de\nidade, se mulher, e contar pelo menos quinze anos de contribuição\npara a Previdência Social.\n(Parágrafo\nacrescido pela Lei nº 10.877, de 4/6/2004)",
+        "normalized_text": "§ 3º Sem prejuízo do adicional de que trata o § 2º, o beneficiário desta pensão especial fará jus a mais um adicional de trinta e cinco por cento sobre o valor do benefício, desde que comprove pelo menos: I - vinte e cinco anos, se homem, e vinte anos, se mulher, de contribuição para a Previdência Social; II - cinqüenta e cinco anos de idade, se homem, ou cinqüenta anos de idade, se mulher, e contar pelo menos quinze anos de contribuição para a Previdência Social. (Parágrafo acrescido pela Lei nº 10.877, de 4/6/2004)"
       }
     },
     "Art. 4": {
@@ -91,8 +91,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O Tesouro Nacional porá à disposição da Previdência\nO Tesouro Nacional porá à disposição da Previdência\nSocial, à conta de dotações próprias consignadas no Orçamento da\nUnião, os recursos necessários ao pagamento da pensão especial, em\ncotas trimestrais, de acordo com a programação financeira da União.",
-        "normalized_text": "Parágrafo único. O Tesouro Nacional porá à disposição da Previdência O Tesouro Nacional porá à disposição da Previdência Social, à conta de dotações próprias consignadas no Orçamento da União, os recursos necessários ao pagamento da pensão especial, em cotas trimestrais, de acordo com a programação financeira da União."
+        "text": "Parágrafo único. O Tesouro Nacional porá à disposição da Previdência\nSocial, à conta de dotações próprias consignadas no Orçamento da\nUnião, os recursos necessários ao pagamento da pensão especial, em\ncotas trimestrais, de acordo com a programação financeira da União.",
+        "normalized_text": "Parágrafo único. O Tesouro Nacional porá à disposição da Previdência Social, à conta de dotações próprias consignadas no Orçamento da União, os recursos necessários ao pagamento da pensão especial, em cotas trimestrais, de acordo com a programação financeira da União."
       }
     },
     "Art. 4-A": {
@@ -107,8 +107,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A documentação comprobatória da natureza dos valores de\nA documentação comprobatória da natureza dos valores de\nque trata o caput deste artigo, quando recebidos de fonte situada no\nexterior, deve ser traduzida por tradutor juramentado.\n(Artigo\nacrescido pela Lei nº 11.727, de 23/6/2008)",
-        "normalized_text": "Parágrafo único. A documentação comprobatória da natureza dos valores de A documentação comprobatória da natureza dos valores de que trata o caput deste artigo, quando recebidos de fonte situada no exterior, deve ser traduzida por tradutor juramentado. (Artigo acrescido pela Lei nº 11.727, de 23/6/2008)"
+        "text": "Parágrafo único. A documentação comprobatória da natureza dos valores de\nque trata o caput deste artigo, quando recebidos de fonte situada no\nexterior, deve ser traduzida por tradutor juramentado.\n(Artigo\nacrescido pela Lei nº 11.727, de 23/6/2008)",
+        "normalized_text": "Parágrafo único. A documentação comprobatória da natureza dos valores de que trata o caput deste artigo, quando recebidos de fonte situada no exterior, deve ser traduzida por tradutor juramentado. (Artigo acrescido pela Lei nº 11.727, de 23/6/2008)"
       }
     },
     "Art. 5": {

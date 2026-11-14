@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -69,22 +69,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O Benefício de Prestação Continuada integra a proteção\nO Benefício de Prestação Continuada integra a proteção\nsocial básica no âmbito do Sistema Único de Assistência Social -\nSUAS, instituído pelo Ministério do Desenvolvimento Social e\nAgrário, em consonância com o estabelecido pela Política Nacional\nde Assistência Social - PNAS.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 1º O Benefício de Prestação Continuada integra a proteção O Benefício de Prestação Continuada integra a proteção social básica no âmbito do Sistema Único de Assistência Social - SUAS, instituído pelo Ministério do Desenvolvimento Social e Agrário, em consonância com o estabelecido pela Política Nacional de Assistência Social - PNAS. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 1º O Benefício de Prestação Continuada integra a proteção\nsocial básica no âmbito do Sistema Único de Assistência Social -\nSUAS, instituído pelo Ministério do Desenvolvimento Social e\nAgrário, em consonância com o estabelecido pela Política Nacional\nde Assistência Social - PNAS.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 1º O Benefício de Prestação Continuada integra a proteção social básica no âmbito do Sistema Único de Assistência Social - SUAS, instituído pelo Ministério do Desenvolvimento Social e Agrário, em consonância com o estabelecido pela Política Nacional de Assistência Social - PNAS. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O Benefício de Prestação Continuada é constitutivo da PNAS e\nO Benefício de Prestação Continuada é constitutivo da PNAS e\nintegrado às demais políticas setoriais, e visa ao enfrentamento da\npobreza, à garantia da proteção social, ao provimento de condições\npara atender contingências sociais e à universalização dos\ndireitos sociais, nos moldes definidos no parágrafo único do art.\n2º da Lei nº 8.742, de 1993.",
-        "normalized_text": "§ 2º O Benefício de Prestação Continuada é constitutivo da PNAS e O Benefício de Prestação Continuada é constitutivo da PNAS e integrado às demais políticas setoriais, e visa ao enfrentamento da pobreza, à garantia da proteção social, ao provimento de condições para atender contingências sociais e à universalização dos direitos sociais, nos moldes definidos no parágrafo único do art. 2º da Lei nº 8.742, de 1993."
+        "text": "§ 2º O Benefício de Prestação Continuada é constitutivo da PNAS e\nintegrado às demais políticas setoriais, e visa ao enfrentamento da\npobreza, à garantia da proteção social, ao provimento de condições\npara atender contingências sociais e à universalização dos\ndireitos sociais, nos moldes definidos no parágrafo único do art.\n2º da Lei nº 8.742, de 1993.",
+        "normalized_text": "§ 2º O Benefício de Prestação Continuada é constitutivo da PNAS e integrado às demais políticas setoriais, e visa ao enfrentamento da pobreza, à garantia da proteção social, ao provimento de condições para atender contingências sociais e à universalização dos direitos sociais, nos moldes definidos no parágrafo único do art. 2º da Lei nº 8.742, de 1993."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º A plena atenção à pessoa com deficiência e ao idoso\nA plena atenção à pessoa com deficiência e ao idoso\nbeneficiário do Benefício de Prestação Continuada exige que os\ngestores da assistência social mantenham ação integrada às demais\nações das políticas setoriais nacional, estaduais, municipais e do\nDistrito Federal, principalmente no campo da saúde, segurança\nalimentar, habitação e educação.",
-        "normalized_text": "§ 3º A plena atenção à pessoa com deficiência e ao idoso A plena atenção à pessoa com deficiência e ao idoso beneficiário do Benefício de Prestação Continuada exige que os gestores da assistência social mantenham ação integrada às demais ações das políticas setoriais nacional, estaduais, municipais e do Distrito Federal, principalmente no campo da saúde, segurança alimentar, habitação e educação."
+        "text": "§ 3º A plena atenção à pessoa com deficiência e ao idoso\nbeneficiário do Benefício de Prestação Continuada exige que os\ngestores da assistência social mantenham ação integrada às demais\nações das políticas setoriais nacional, estaduais, municipais e do\nDistrito Federal, principalmente no campo da saúde, segurança\nalimentar, habitação e educação.",
+        "normalized_text": "§ 3º A plena atenção à pessoa com deficiência e ao idoso beneficiário do Benefício de Prestação Continuada exige que os gestores da assistência social mantenham ação integrada às demais ações das políticas setoriais nacional, estaduais, municipais e do Distrito Federal, principalmente no campo da saúde, segurança alimentar, habitação e educação."
       }
     },
     "Art. 2": {
@@ -117,22 +117,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Para fins de reconhecimento do direito ao Benefício de Prestação\nPara fins de reconhecimento do direito ao Benefício de Prestação\nContinuada às crianças e adolescentes menores de dezesseis anos de\nidade, deve ser avaliada a existência da deficiência e o seu\nimpacto na limitação do desempenho de atividade e restrição da\nparticipação social, compatível com a idade.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "§ 1º Para fins de reconhecimento do direito ao Benefício de Prestação Para fins de reconhecimento do direito ao Benefício de Prestação Continuada às crianças e adolescentes menores de dezesseis anos de idade, deve ser avaliada a existência da deficiência e o seu impacto na limitação do desempenho de atividade e restrição da participação social, compatível com a idade. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "§ 1º Para fins de reconhecimento do direito ao Benefício de Prestação\nContinuada às crianças e adolescentes menores de dezesseis anos de\nidade, deve ser avaliada a existência da deficiência e o seu\nimpacto na limitação do desempenho de atividade e restrição da\nparticipação social, compatível com a idade.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "§ 1º Para fins de reconhecimento do direito ao Benefício de Prestação Continuada às crianças e adolescentes menores de dezesseis anos de idade, deve ser avaliada a existência da deficiência e o seu impacto na limitação do desempenho de atividade e restrição da participação social, compatível com a idade. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Para fins do disposto no inciso VI do\nPara fins do disposto no inciso VI do\ncaput\n,\nnão serão computados como renda mensal bruta familiar:\n(“Caput”\ndo parágrafo com redação dada pelo Decreto nº 7.617, de\n17/11/2011)\nI\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nII\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nIII\n- bolsas de estágio supervisionado;\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)\nIV\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nV\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nVI\n- rendimentos decorrentes de contrato de aprendizagem.\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)\nVII\n- os valores recebidos a título de auxílio financeiro temporário\nou de indenização por danos, ambos em decorrência de rompimento e\ncolapso de barragens;\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nVIII\n- o Benefício de Prestação Continuada concedido a outra pessoa\nidosa ou pessoa com deficiência;\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nIX\n- o benefício previdenciário no valor de até um salário mínimo\nconcedido a pessoa idosa acima de sessenta e cinco anos de idade ou a\npessoa com deficiência; e\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nX\n- o valor do auxílio-inclusão e da remuneração do beneficiário\ndo auxílio-inclusão percebidos por um membro da família,\nexclusivamente para fins de manutenção do Benefício de Prestação\nContinuada concedido anteriormente a outra pessoa do mesmo grupo\nfamiliar.\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 2º Para fins do disposto no inciso VI do Para fins do disposto no inciso VI do caput , não serão computados como renda mensal bruta familiar: (“Caput” do parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011) I - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) II - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) III - bolsas de estágio supervisionado; (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) IV - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) V - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) VI - rendimentos decorrentes de contrato de aprendizagem. (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) VII - os valores recebidos a título de auxílio financeiro temporário ou de indenização por danos, ambos em decorrência de rompimento e colapso de barragens; (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) VIII - o Benefício de Prestação Continuada concedido a outra pessoa idosa ou pessoa com deficiência; (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) IX - o benefício previdenciário no valor de até um salário mínimo concedido a pessoa idosa acima de sessenta e cinco anos de idade ou a pessoa com deficiência; e (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) X - o valor do auxílio-inclusão e da remuneração do beneficiário do auxílio-inclusão percebidos por um membro da família, exclusivamente para fins de manutenção do Benefício de Prestação Continuada concedido anteriormente a outra pessoa do mesmo grupo familiar. (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 2º Para fins do disposto no inciso VI do\ncaput\n,\nnão serão computados como renda mensal bruta familiar:\n(“Caput”\ndo parágrafo com redação dada pelo Decreto nº 7.617, de\n17/11/2011)\nI\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nII\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nIII\n- bolsas de estágio supervisionado;\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)\nIV\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nV\n-\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011\n,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nVI\n- rendimentos decorrentes de contrato de aprendizagem.\n(Inciso\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)\nVII\n- os valores recebidos a título de auxílio financeiro temporário\nou de indenização por danos, ambos em decorrência de rompimento e\ncolapso de barragens;\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nVIII\n- o Benefício de Prestação Continuada concedido a outra pessoa\nidosa ou pessoa com deficiência;\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nIX\n- o benefício previdenciário no valor de até um salário mínimo\nconcedido a pessoa idosa acima de sessenta e cinco anos de idade ou a\npessoa com deficiência; e\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nX\n- o valor do auxílio-inclusão e da remuneração do beneficiário\ndo auxílio-inclusão percebidos por um membro da família,\nexclusivamente para fins de manutenção do Benefício de Prestação\nContinuada concedido anteriormente a outra pessoa do mesmo grupo\nfamiliar.\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 2º Para fins do disposto no inciso VI do caput , não serão computados como renda mensal bruta familiar: (“Caput” do parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011) I - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) II - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) III - bolsas de estágio supervisionado; (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) IV - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) V - (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011 , e revogado pelo Decreto nº 12.534, de 25/6/2025) VI - rendimentos decorrentes de contrato de aprendizagem. (Inciso acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) VII - os valores recebidos a título de auxílio financeiro temporário ou de indenização por danos, ambos em decorrência de rompimento e colapso de barragens; (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) VIII - o Benefício de Prestação Continuada concedido a outra pessoa idosa ou pessoa com deficiência; (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) IX - o benefício previdenciário no valor de até um salário mínimo concedido a pessoa idosa acima de sessenta e cinco anos de idade ou a pessoa com deficiência; e (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025) X - o valor do auxílio-inclusão e da remuneração do beneficiário do auxílio-inclusão percebidos por um membro da família, exclusivamente para fins de manutenção do Benefício de Prestação Continuada concedido anteriormente a outra pessoa do mesmo grupo familiar. (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Considera-se impedimento de longo prazo aquele que produza\nConsidera-se impedimento de longo prazo aquele que produza\nefeitos pelo prazo mínimo de dois anos.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008,\ncom\nredação dada pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "§ 3º Considera-se impedimento de longo prazo aquele que produza Considera-se impedimento de longo prazo aquele que produza efeitos pelo prazo mínimo de dois anos. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008, com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "§ 3º Considera-se impedimento de longo prazo aquele que produza\nefeitos pelo prazo mínimo de dois anos.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008,\ncom\nredação dada pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "§ 3º Considera-se impedimento de longo prazo aquele que produza efeitos pelo prazo mínimo de dois anos. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008, com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
       }
     },
     "Art. 5": {
@@ -147,8 +147,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A acumulação do benefício com a remuneração advinda do\nA acumulação do benefício com a remuneração advinda do\ncontrato de aprendizagem pela pessoa com deficiência é limitada ao\nprazo máximo de dois anos.\n(Parágrafo\núnico acrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "Parágrafo único. A acumulação do benefício com a remuneração advinda do A acumulação do benefício com a remuneração advinda do contrato de aprendizagem pela pessoa com deficiência é limitada ao prazo máximo de dois anos. (Parágrafo único acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "Parágrafo único. A acumulação do benefício com a remuneração advinda do\ncontrato de aprendizagem pela pessoa com deficiência é limitada ao\nprazo máximo de dois anos.\n(Parágrafo\núnico acrescido pelo Decreto nº 7.617, de 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "Parágrafo único. A acumulação do benefício com a remuneração advinda do contrato de aprendizagem pela pessoa com deficiência é limitada ao prazo máximo de dois anos. (Parágrafo único acrescido pelo Decreto nº 7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       }
     },
     "Art. 6": {
@@ -181,22 +181,22 @@
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - renda mensal bruta familiar,\nrenda mensal bruta familiar,\ndividida pelo número de seus integrantes, igual ou inferior a um\nquarto do salário mínimo; e\n(Inciso\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "II - renda mensal bruta familiar, renda mensal bruta familiar, dividida pelo número de seus integrantes, igual ou inferior a um quarto do salário mínimo; e (Inciso com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "II - renda mensal bruta familiar,\ndividida pelo número de seus integrantes, igual ou inferior a um\nquarto do salário mínimo; e\n(Inciso\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "II - renda mensal bruta familiar, dividida pelo número de seus integrantes, igual ou inferior a um quarto do salário mínimo; e (Inciso com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - que não recebe outro benefício no\nque não recebe outro benefício no\nâmbito da Seguridade Social ou de outro regime, inclusive o\nseguro-desemprego, exceto os da assistência médica e da pensão\nespecial de natureza indenizatória, e as transferências de renda de\nque tratam o art. 6º, parágrafo único, e o art. 203,\ncaput\n,\ninciso VI, da Constituição, e o art. 1º,\ncaput\ne § 1º, da\nLei nº 10.835, de 8 de janeiro de 2004.\n(Inciso\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "III - que não recebe outro benefício no que não recebe outro benefício no âmbito da Seguridade Social ou de outro regime, inclusive o seguro-desemprego, exceto os da assistência médica e da pensão especial de natureza indenizatória, e as transferências de renda de que tratam o art. 6º, parágrafo único, e o art. 203, caput , inciso VI, da Constituição, e o art. 1º, caput e § 1º, da Lei nº 10.835, de 8 de janeiro de 2004. (Inciso com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "III - que não recebe outro benefício no\nâmbito da Seguridade Social ou de outro regime, inclusive o\nseguro-desemprego, exceto os da assistência médica e da pensão\nespecial de natureza indenizatória, e as transferências de renda de\nque tratam o art. 6º, parágrafo único, e o art. 203,\ncaput\n,\ninciso VI, da Constituição, e o art. 1º,\ncaput\ne § 1º, da\nLei nº 10.835, de 8 de janeiro de 2004.\n(Inciso\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "III - que não recebe outro benefício no âmbito da Seguridade Social ou de outro regime, inclusive o seguro-desemprego, exceto os da assistência médica e da pensão especial de natureza indenizatória, e as transferências de renda de que tratam o art. 6º, parágrafo único, e o art. 203, caput , inciso VI, da Constituição, e o art. 1º, caput e § 1º, da Lei nº 10.835, de 8 de janeiro de 2004. (Inciso com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá\nA comprovação da condição prevista no inciso III poderá\nser feita mediante declaração do idoso ou, no caso de sua\nincapacidade para os atos da vida civil, do seu curador.",
-        "normalized_text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá A comprovação da condição prevista no inciso III poderá ser feita mediante declaração do idoso ou, no caso de sua incapacidade para os atos da vida civil, do seu curador."
+        "text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá\nser feita mediante declaração do idoso ou, no caso de sua\nincapacidade para os atos da vida civil, do seu curador.",
+        "normalized_text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá ser feita mediante declaração do idoso ou, no caso de sua incapacidade para os atos da vida civil, do seu curador."
       }
     },
     "Art. 9": {
@@ -211,8 +211,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá\nA comprovação da condição prevista no inciso III poderá\nser feita mediante declaração da pessoa com deficiência ou, no\ncaso de sua incapacidade para os atos da vida civil, do seu curador\nou tutor.",
-        "normalized_text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá A comprovação da condição prevista no inciso III poderá ser feita mediante declaração da pessoa com deficiência ou, no caso de sua incapacidade para os atos da vida civil, do seu curador ou tutor."
+        "text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá\nser feita mediante declaração da pessoa com deficiência ou, no\ncaso de sua incapacidade para os atos da vida civil, do seu curador\nou tutor.",
+        "normalized_text": "Parágrafo único. A comprovação da condição prevista no inciso III poderá ser feita mediante declaração da pessoa com deficiência ou, no caso de sua incapacidade para os atos da vida civil, do seu curador ou tutor."
       }
     },
     "Art. 10": {
@@ -227,8 +227,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. As crianças e os adolescentes menores de dezesseis anos\nAs crianças e os adolescentes menores de dezesseis anos\npoderão apresentar apenas a certidão de nascimento para fins da\nidentificação de que trata o\ncaput\n.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "Parágrafo único. As crianças e os adolescentes menores de dezesseis anos As crianças e os adolescentes menores de dezesseis anos poderão apresentar apenas a certidão de nascimento para fins da identificação de que trata o caput . (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "Parágrafo único. As crianças e os adolescentes menores de dezesseis anos\npoderão apresentar apenas a certidão de nascimento para fins da\nidentificação de que trata o\ncaput\n.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "Parágrafo único. As crianças e os adolescentes menores de dezesseis anos poderão apresentar apenas a certidão de nascimento para fins da identificação de que trata o caput . (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       }
     },
     "Art. 11": {
@@ -252,15 +252,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O beneficiário que não realizar a inscrição ou atualização\nO beneficiário que não realizar a inscrição ou atualização\nno CadÚnico terá seu benefício suspenso após encerrado o prazo\nestabelecido na legislação.\n(Parágrafo\ncom redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 1º O beneficiário que não realizar a inscrição ou atualização O beneficiário que não realizar a inscrição ou atualização no CadÚnico terá seu benefício suspenso após encerrado o prazo estabelecido na legislação. (Parágrafo com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 1º O beneficiário que não realizar a inscrição ou atualização\nno CadÚnico terá seu benefício suspenso após encerrado o prazo\nestabelecido na legislação.\n(Parágrafo\ncom redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 1º O beneficiário que não realizar a inscrição ou atualização no CadÚnico terá seu benefício suspenso após encerrado o prazo estabelecido na legislação. (Parágrafo com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O benefício será concedido ou mantido apenas quando o\nO benefício será concedido ou mantido apenas quando o\ninteressado estiver inscrito no CadÚnico e com o as informações\natualizadas há, no máximo, vinte e quatro meses, observado o\ndisposto no art. 2º da Lei nº 15.077, de 27 de dezembro de 2024, e\no registro familiar atender a todos os requisitos previstos no\nDecreto nº 11.016, de 29 de março de 2022.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 2º O benefício será concedido ou mantido apenas quando o O benefício será concedido ou mantido apenas quando o interessado estiver inscrito no CadÚnico e com o as informações atualizadas há, no máximo, vinte e quatro meses, observado o disposto no art. 2º da Lei nº 15.077, de 27 de dezembro de 2024, e o registro familiar atender a todos os requisitos previstos no Decreto nº 11.016, de 29 de março de 2022. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 2º O benefício será concedido ou mantido apenas quando o\ninteressado estiver inscrito no CadÚnico e com o as informações\natualizadas há, no máximo, vinte e quatro meses, observado o\ndisposto no art. 2º da Lei nº 15.077, de 27 de dezembro de 2024, e\no registro familiar atender a todos os requisitos previstos no\nDecreto nº 11.016, de 29 de março de 2022.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 2º O benefício será concedido ou mantido apenas quando o interessado estiver inscrito no CadÚnico e com o as informações atualizadas há, no máximo, vinte e quatro meses, observado o disposto no art. 2º da Lei nº 15.077, de 27 de dezembro de 2024, e o registro familiar atender a todos os requisitos previstos no Decreto nº 11.016, de 29 de março de 2022. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       }
     },
     "Art. 13": {
@@ -275,64 +275,64 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º do art. 15, o requerente ratificará as informações\ndo art. 15, o requerente ratificará as informações\ndeclaradas no CadÚnico, ficando sujeito às penas previstas em lei\nno caso de omissão de informação ou de declaração falsa.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 1º do art. 15, o requerente ratificará as informações do art. 15, o requerente ratificará as informações declaradas no CadÚnico, ficando sujeito às penas previstas em lei no caso de omissão de informação ou de declaração falsa. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 1º do art. 15, o requerente ratificará as informações\ndeclaradas no CadÚnico, ficando sujeito às penas previstas em lei\nno caso de omissão de informação ou de declaração falsa.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 1º do art. 15, o requerente ratificará as informações declaradas no CadÚnico, ficando sujeito às penas previstas em lei no caso de omissão de informação ou de declaração falsa. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:1/item:11": {
         "device_type": "item",
         "device_label": "item 11",
         "device_path": "paragrafo:1/item:11",
-        "text": "11.016, de 29 de março de 2022.\n016, de 29 de março de 2022.\n(Parágrafo\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "11.016, de 29 de março de 2022. 016, de 29 de março de 2022. (Parágrafo com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "11.016, de 29 de março de 2022.\n(Parágrafo\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "11.016, de 29 de março de 2022. (Parágrafo com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Por ocasião do requerimento do benefício, conforme disposto no\nPor ocasião do requerimento do benefício, conforme disposto no",
-        "normalized_text": "§ 2º Por ocasião do requerimento do benefício, conforme disposto no Por ocasião do requerimento do benefício, conforme disposto no"
+        "text": "§ 2º Por ocasião do requerimento do benefício, conforme disposto no",
+        "normalized_text": "§ 2º Por ocasião do requerimento do benefício, conforme disposto no"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Na análise do requerimento do benefício, o INSS confrontará as\nNa análise do requerimento do benefício, o INSS confrontará as\ninformações do CadÚnico, referentes à renda, com outros cadastros\nou bases de dados de órgãos da administração pública\ndisponíveis, prevalecendo as informações que indiquem maior renda\nse comparadas àquelas declaradas no CadÚnico.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 3º Na análise do requerimento do benefício, o INSS confrontará as Na análise do requerimento do benefício, o INSS confrontará as informações do CadÚnico, referentes à renda, com outros cadastros ou bases de dados de órgãos da administração pública disponíveis, prevalecendo as informações que indiquem maior renda se comparadas àquelas declaradas no CadÚnico. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 3º Na análise do requerimento do benefício, o INSS confrontará as\ninformações do CadÚnico, referentes à renda, com outros cadastros\nou bases de dados de órgãos da administração pública\ndisponíveis, prevalecendo as informações que indiquem maior renda\nse comparadas àquelas declaradas no CadÚnico.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 3º Na análise do requerimento do benefício, o INSS confrontará as informações do CadÚnico, referentes à renda, com outros cadastros ou bases de dados de órgãos da administração pública disponíveis, prevalecendo as informações que indiquem maior renda se comparadas àquelas declaradas no CadÚnico. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º Compete ao INSS e aos órgãos autorizados pelo Ministério do\nCompete ao INSS e aos órgãos autorizados pelo Ministério do\nDesenvolvimento Social e Agrário, quando necessário, verificar\njunto a outras instituições, inclusive de previdência, a\nexistência de benefício ou de renda em nome do requerente ou\nbeneficiário e dos integrantes da família.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 4º Compete ao INSS e aos órgãos autorizados pelo Ministério do Compete ao INSS e aos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário, quando necessário, verificar junto a outras instituições, inclusive de previdência, a existência de benefício ou de renda em nome do requerente ou beneficiário e dos integrantes da família. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 4º Compete ao INSS e aos órgãos autorizados pelo Ministério do\nDesenvolvimento Social e Agrário, quando necessário, verificar\njunto a outras instituições, inclusive de previdência, a\nexistência de benefício ou de renda em nome do requerente ou\nbeneficiário e dos integrantes da família.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 4º Compete ao INSS e aos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário, quando necessário, verificar junto a outras instituições, inclusive de previdência, a existência de benefício ou de renda em nome do requerente ou beneficiário e dos integrantes da família. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º Na hipótese de as informações do CadÚnico serem insuficientes\nNa hipótese de as informações do CadÚnico serem insuficientes\npara a análise conclusiva do benefício, o INSS:\n(“Caput”\ndo parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016,\npublicado no DOU de 8/7/2016, em vigor 120 dias após a publicaç)\nI\n– comunicará o interessado, o qual deverá atualizar seu cadastro\njunto ao órgão local responsável pelo CadÚnico no prazo de trinta\ndias;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nII\n– concluirá a análise após decorrido o prazo de que trata o\ninciso I; e\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIII\n- no caso de o cadastro não ser atualizado no prazo de que trata o\ninciso I, indeferirá a solicitação para receber o benefício.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 5º Na hipótese de as informações do CadÚnico serem insuficientes Na hipótese de as informações do CadÚnico serem insuficientes para a análise conclusiva do benefício, o INSS: (“Caput” do parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicaç) I – comunicará o interessado, o qual deverá atualizar seu cadastro junto ao órgão local responsável pelo CadÚnico no prazo de trinta dias; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) II – concluirá a análise após decorrido o prazo de que trata o inciso I; e (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) III - no caso de o cadastro não ser atualizado no prazo de que trata o inciso I, indeferirá a solicitação para receber o benefício. (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 5º Na hipótese de as informações do CadÚnico serem insuficientes\npara a análise conclusiva do benefício, o INSS:\n(“Caput”\ndo parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016,\npublicado no DOU de 8/7/2016, em vigor 120 dias após a publicaç)\nI\n– comunicará o interessado, o qual deverá atualizar seu cadastro\njunto ao órgão local responsável pelo CadÚnico no prazo de trinta\ndias;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nII\n– concluirá a análise após decorrido o prazo de que trata o\ninciso I; e\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIII\n- no caso de o cadastro não ser atualizado no prazo de que trata o\ninciso I, indeferirá a solicitação para receber o benefício.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 5º Na hipótese de as informações do CadÚnico serem insuficientes para a análise conclusiva do benefício, o INSS: (“Caput” do parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicaç) I – comunicará o interessado, o qual deverá atualizar seu cadastro junto ao órgão local responsável pelo CadÚnico no prazo de trinta dias; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) II – concluirá a análise após decorrido o prazo de que trata o inciso I; e (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) III - no caso de o cadastro não ser atualizado no prazo de que trata o inciso I, indeferirá a solicitação para receber o benefício. (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º, aquela que se estabelece entre o requerente em situação de\n, aquela que se estabelece entre o requerente em situação de\nrua e as pessoas indicadas pelo próprio requerente como pertencentes\nao seu ciclo de convívio que podem facilmente localizá-lo.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008)",
-        "normalized_text": "§ 6º, aquela que se estabelece entre o requerente em situação de , aquela que se estabelece entre o requerente em situação de rua e as pessoas indicadas pelo próprio requerente como pertencentes ao seu ciclo de convívio que podem facilmente localizá-lo. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008)"
+        "text": "§ 6º, aquela que se estabelece entre o requerente em situação de\nrua e as pessoas indicadas pelo próprio requerente como pertencentes\nao seu ciclo de convívio que podem facilmente localizá-lo.\n(Parágrafo\nacrescido pelo Decreto nº 6.564, de 19/9/2008)",
+        "normalized_text": "§ 6º, aquela que se estabelece entre o requerente em situação de rua e as pessoas indicadas pelo próprio requerente como pertencentes ao seu ciclo de convívio que podem facilmente localizá-lo. (Parágrafo acrescido pelo Decreto nº 6.564, de 19/9/2008)"
       },
       "paragrafo:7": {
         "device_type": "paragrafo",
         "device_label": "§ 7º",
         "device_path": "paragrafo:7",
-        "text": "§ 7º Será considerado família do requerente em situação de rua as\nSerá considerado família do requerente em situação de rua as\npessoas elencadas no inciso V do art. 4º, desde que convivam com o\nrequerente na mesma situação, devendo, neste caso, ser relacionadas\nna Declaração da Composição e Renda Familiar.",
-        "normalized_text": "§ 7º Será considerado família do requerente em situação de rua as Será considerado família do requerente em situação de rua as pessoas elencadas no inciso V do art. 4º, desde que convivam com o requerente na mesma situação, devendo, neste caso, ser relacionadas na Declaração da Composição e Renda Familiar."
+        "text": "§ 7º Será considerado família do requerente em situação de rua as\npessoas elencadas no inciso V do art. 4º, desde que convivam com o\nrequerente na mesma situação, devendo, neste caso, ser relacionadas\nna Declaração da Composição e Renda Familiar.",
+        "normalized_text": "§ 7º Será considerado família do requerente em situação de rua as pessoas elencadas no inciso V do art. 4º, desde que convivam com o requerente na mesma situação, devendo, neste caso, ser relacionadas na Declaração da Composição e Renda Familiar."
       },
       "paragrafo:8": {
         "device_type": "paragrafo",
         "device_label": "§ 8º",
         "device_path": "paragrafo:8",
-        "text": "§ 8º Entende-se por relação de proximidade, para fins do disposto no\nEntende-se por relação de proximidade, para fins do disposto no",
-        "normalized_text": "§ 8º Entende-se por relação de proximidade, para fins do disposto no Entende-se por relação de proximidade, para fins do disposto no"
+        "text": "§ 8º Entende-se por relação de proximidade, para fins do disposto no",
+        "normalized_text": "§ 8º Entende-se por relação de proximidade, para fins do disposto no"
       }
     },
     "Art. 14": {
@@ -347,22 +347,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Os formulários utilizados para o requerimento do benefício\nOs formulários utilizados para o requerimento do benefício\nserão disponibilizados, por meio dos sítios eletrônicos:\n(Parágrafo\núnico transformado em §1º e com redação dada pelo Decreto nº",
-        "normalized_text": "§ 1º Os formulários utilizados para o requerimento do benefício Os formulários utilizados para o requerimento do benefício serão disponibilizados, por meio dos sítios eletrônicos: (Parágrafo único transformado em §1º e com redação dada pelo Decreto nº"
+        "text": "§ 1º Os formulários utilizados para o requerimento do benefício\nserão disponibilizados, por meio dos sítios eletrônicos:\n(Parágrafo\núnico transformado em §1º e com redação dada pelo Decreto nº",
+        "normalized_text": "§ 1º Os formulários utilizados para o requerimento do benefício serão disponibilizados, por meio dos sítios eletrônicos: (Parágrafo único transformado em §1º e com redação dada pelo Decreto nº"
       },
       "paragrafo:1/item:8": {
         "device_type": "item",
         "device_label": "item 8",
         "device_path": "paragrafo:1/item:8",
-        "text": "8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias\n805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias\napós a publicação)\nI\n- do Ministério do Desenvolvimento Social e Agrário;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nII\n- do INSS; ou\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIII\n- dos órgãos autorizados pelo Ministério do Desenvolvimento Social\ne Agrário ou pelo INSS.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias 805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) I - do Ministério do Desenvolvimento Social e Agrário; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) II - do INSS; ou (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) III - dos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário ou pelo INSS. (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias\napós a publicação)\nI\n- do Ministério do Desenvolvimento Social e Agrário;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nII\n- do INSS; ou\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIII\n- dos órgãos autorizados pelo Ministério do Desenvolvimento Social\ne Agrário ou pelo INSS.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) I - do Ministério do Desenvolvimento Social e Agrário; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) II - do INSS; ou (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) III - dos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário ou pelo INSS. (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Os formulários a que se refere o § 1º deverão ser\nOs formulários a que se refere o § 1º deverão ser\ndisponibilizados de forma acessível, nos termos estabelecidos pelo\nDecreto nº 5.296, de 2 de dezembro de 2004.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 2º Os formulários a que se refere o § 1º deverão ser Os formulários a que se refere o § 1º deverão ser disponibilizados de forma acessível, nos termos estabelecidos pelo Decreto nº 5.296, de 2 de dezembro de 2004. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 2º Os formulários a que se refere o § 1º deverão ser\ndisponibilizados de forma acessível, nos termos estabelecidos pelo\nDecreto nº 5.296, de 2 de dezembro de 2004.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 2º Os formulários a que se refere o § 1º deverão ser disponibilizados de forma acessível, nos termos estabelecidos pelo Decreto nº 5.296, de 2 de dezembro de 2004. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       }
     },
     "Art. 15": {
@@ -377,43 +377,43 @@
         "device_type": "item",
         "device_label": "item 15",
         "device_path": "caput/item:15",
-        "text": "15.077, de 27 de dezembro de 2024.\n077, de 27 de dezembro de 2024.\n(“Caput”\ndo artigo com redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "15.077, de 27 de dezembro de 2024. 077, de 27 de dezembro de 2024. (“Caput” do artigo com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "15.077, de 27 de dezembro de 2024.\n(“Caput”\ndo artigo com redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "15.077, de 27 de dezembro de 2024. (“Caput” do artigo com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:1": {
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O requerimento do benefício deverá ser realizado por meio dos\nO requerimento do benefício deverá ser realizado por meio dos\ncanais de atendimento da Previdência Social ou de outros canais\ndefinidos em ato do Ministro de Estado do Desenvolvimento Social.\n(Parágrafo\ncom redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 1º O requerimento do benefício deverá ser realizado por meio dos O requerimento do benefício deverá ser realizado por meio dos canais de atendimento da Previdência Social ou de outros canais definidos em ato do Ministro de Estado do Desenvolvimento Social. (Parágrafo com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 1º O requerimento do benefício deverá ser realizado por meio dos\ncanais de atendimento da Previdência Social ou de outros canais\ndefinidos em ato do Ministro de Estado do Desenvolvimento Social.\n(Parágrafo\ncom redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 1º O requerimento do benefício deverá ser realizado por meio dos canais de atendimento da Previdência Social ou de outros canais definidos em ato do Ministro de Estado do Desenvolvimento Social. (Parágrafo com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Na hipótese de não ser o requerente alfabetizado ou de estar\nNa hipótese de não ser o requerente alfabetizado ou de estar\nimpossibilitado para assinar o pedido, será admitida a aposição da\nimpressão digital na presença de funcionário do órgão recebedor\ndo requerimento.",
-        "normalized_text": "§ 2º Na hipótese de não ser o requerente alfabetizado ou de estar Na hipótese de não ser o requerente alfabetizado ou de estar impossibilitado para assinar o pedido, será admitida a aposição da impressão digital na presença de funcionário do órgão recebedor do requerimento."
+        "text": "§ 2º Na hipótese de não ser o requerente alfabetizado ou de estar\nimpossibilitado para assinar o pedido, será admitida a aposição da\nimpressão digital na presença de funcionário do órgão recebedor\ndo requerimento.",
+        "normalized_text": "§ 2º Na hipótese de não ser o requerente alfabetizado ou de estar impossibilitado para assinar o pedido, será admitida a aposição da impressão digital na presença de funcionário do órgão recebedor do requerimento."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º A existência de formulário próprio não impedirá que seja\nA existência de formulário próprio não impedirá que seja\naceito qualquer requerimento pleiteando o beneficio, desde que nele\nconstem os dados imprescindíveis ao seu processamento.",
-        "normalized_text": "§ 3º A existência de formulário próprio não impedirá que seja A existência de formulário próprio não impedirá que seja aceito qualquer requerimento pleiteando o beneficio, desde que nele constem os dados imprescindíveis ao seu processamento."
+        "text": "§ 3º A existência de formulário próprio não impedirá que seja\naceito qualquer requerimento pleiteando o beneficio, desde que nele\nconstem os dados imprescindíveis ao seu processamento.",
+        "normalized_text": "§ 3º A existência de formulário próprio não impedirá que seja aceito qualquer requerimento pleiteando o beneficio, desde que nele constem os dados imprescindíveis ao seu processamento."
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º A apresentação de documentação incompleta não constitui\nA apresentação de documentação incompleta não constitui\nmotivo de recusa liminar do requerimento do benefício.",
-        "normalized_text": "§ 4º A apresentação de documentação incompleta não constitui A apresentação de documentação incompleta não constitui motivo de recusa liminar do requerimento do benefício."
+        "text": "§ 4º A apresentação de documentação incompleta não constitui\nmotivo de recusa liminar do requerimento do benefício.",
+        "normalized_text": "§ 4º A apresentação de documentação incompleta não constitui motivo de recusa liminar do requerimento do benefício."
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º Na hipótese de ser verificado que a renda familiar mensal\nNa hipótese de ser verificado que a renda familiar mensal\nper\ncapita\nnão atende\naos requisitos de concessão do benefício, o pedido deverá ser\nindeferido pelo INSS, sendo desnecessária a avaliação da\ndeficiência.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 5º Na hipótese de ser verificado que a renda familiar mensal Na hipótese de ser verificado que a renda familiar mensal per capita não atende aos requisitos de concessão do benefício, o pedido deverá ser indeferido pelo INSS, sendo desnecessária a avaliação da deficiência. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 5º Na hipótese de ser verificado que a renda familiar mensal\nper\ncapita\nnão atende\naos requisitos de concessão do benefício, o pedido deverá ser\nindeferido pelo INSS, sendo desnecessária a avaliação da\ndeficiência.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 5º Na hipótese de ser verificado que a renda familiar mensal per capita não atende aos requisitos de concessão do benefício, o pedido deverá ser indeferido pelo INSS, sendo desnecessária a avaliação da deficiência. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       }
     },
     "Art. 16": {
@@ -428,113 +428,113 @@
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "caput/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       },
       "paragrafo:1": {
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Caso o requerente ou beneficiário necessite de acompanhante, a\nCaso o requerente ou beneficiário necessite de acompanhante, a\nviagem deste deverá ser autorizada pelo INSS, aplicando-se o\ndisposto no\ncaput\n.",
-        "normalized_text": "§ 1º Caso o requerente ou beneficiário necessite de acompanhante, a Caso o requerente ou beneficiário necessite de acompanhante, a viagem deste deverá ser autorizada pelo INSS, aplicando-se o disposto no caput ."
+        "text": "§ 1º Caso o requerente ou beneficiário necessite de acompanhante, a\nviagem deste deverá ser autorizada pelo INSS, aplicando-se o\ndisposto no\ncaput\n.",
+        "normalized_text": "§ 1º Caso o requerente ou beneficiário necessite de acompanhante, a viagem deste deverá ser autorizada pelo INSS, aplicando-se o disposto no caput ."
       },
       "paragrafo:1/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:1/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O valor da diária paga ao requerente ou beneficiário e seu\nO valor da diária paga ao requerente ou beneficiário e seu\nacompanhante será igual ao valor da diária concedida aos\nbeneficiários do Regime Geral de Previdência Social.",
-        "normalized_text": "§ 2º O valor da diária paga ao requerente ou beneficiário e seu O valor da diária paga ao requerente ou beneficiário e seu acompanhante será igual ao valor da diária concedida aos beneficiários do Regime Geral de Previdência Social."
+        "text": "§ 2º O valor da diária paga ao requerente ou beneficiário e seu\nacompanhante será igual ao valor da diária concedida aos\nbeneficiários do Regime Geral de Previdência Social.",
+        "normalized_text": "§ 2º O valor da diária paga ao requerente ou beneficiário e seu acompanhante será igual ao valor da diária concedida aos beneficiários do Regime Geral de Previdência Social."
       },
       "paragrafo:2/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:2/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Caso o requerente ou beneficiário esteja impossibilitado de se\nCaso o requerente ou beneficiário esteja impossibilitado de se\napresentar no local de realização da avaliação da deficiência e\ndo grau de impedimento a que se refere o\ncaput\n,\nos profissionais deverão deslocar-se até o interessado.\n(Parágrafo\ncom redação dada pelo Decreto nº",
-        "normalized_text": "§ 3º Caso o requerente ou beneficiário esteja impossibilitado de se Caso o requerente ou beneficiário esteja impossibilitado de se apresentar no local de realização da avaliação da deficiência e do grau de impedimento a que se refere o caput , os profissionais deverão deslocar-se até o interessado. (Parágrafo com redação dada pelo Decreto nº"
+        "text": "§ 3º Caso o requerente ou beneficiário esteja impossibilitado de se\napresentar no local de realização da avaliação da deficiência e\ndo grau de impedimento a que se refere o\ncaput\n,\nos profissionais deverão deslocar-se até o interessado.\n(Parágrafo\ncom redação dada pelo Decreto nº",
+        "normalized_text": "§ 3º Caso o requerente ou beneficiário esteja impossibilitado de se apresentar no local de realização da avaliação da deficiência e do grau de impedimento a que se refere o caput , os profissionais deverão deslocar-se até o interessado. (Parágrafo com redação dada pelo Decreto nº"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º O Ministério do Desenvolvimento Social e Agrário e o INSS\nO Ministério do Desenvolvimento Social e Agrário e o INSS\ngarantirão as condições necessárias para a realização da\navaliação social e da avaliação médica necessárias ao Benefício\nde Prestação Continuada.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 4º O Ministério do Desenvolvimento Social e Agrário e o INSS O Ministério do Desenvolvimento Social e Agrário e o INSS garantirão as condições necessárias para a realização da avaliação social e da avaliação médica necessárias ao Benefício de Prestação Continuada. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 4º O Ministério do Desenvolvimento Social e Agrário e o INSS\ngarantirão as condições necessárias para a realização da\navaliação social e da avaliação médica necessárias ao Benefício\nde Prestação Continuada.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 4º O Ministério do Desenvolvimento Social e Agrário e o INSS garantirão as condições necessárias para a realização da avaliação social e da avaliação médica necessárias ao Benefício de Prestação Continuada. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º A avaliação da deficiência e do grau de impedimento tem por\nA avaliação da deficiência e do grau de impedimento tem por\nobjetivo:\nI\n- comprovar a existência de impedimentos de longo prazo de natureza\nfísica, mental, intelectual ou sensorial; e\nII\n- aferir o grau de restrição para a participação plena e efetiva\nda pessoa com deficiência na sociedade, decorrente da interação\ndos impedimentos a que se refere o inciso I com barreiras diversas.\n(Parágrafo\nacrescido pelo Decreto nº",
-        "normalized_text": "§ 5º A avaliação da deficiência e do grau de impedimento tem por A avaliação da deficiência e do grau de impedimento tem por objetivo: I - comprovar a existência de impedimentos de longo prazo de natureza física, mental, intelectual ou sensorial; e II - aferir o grau de restrição para a participação plena e efetiva da pessoa com deficiência na sociedade, decorrente da interação dos impedimentos a que se refere o inciso I com barreiras diversas. (Parágrafo acrescido pelo Decreto nº"
+        "text": "§ 5º A avaliação da deficiência e do grau de impedimento tem por\nobjetivo:\nI\n- comprovar a existência de impedimentos de longo prazo de natureza\nfísica, mental, intelectual ou sensorial; e\nII\n- aferir o grau de restrição para a participação plena e efetiva\nda pessoa com deficiência na sociedade, decorrente da interação\ndos impedimentos a que se refere o inciso I com barreiras diversas.\n(Parágrafo\nacrescido pelo Decreto nº",
+        "normalized_text": "§ 5º A avaliação da deficiência e do grau de impedimento tem por objetivo: I - comprovar a existência de impedimentos de longo prazo de natureza física, mental, intelectual ou sensorial; e II - aferir o grau de restrição para a participação plena e efetiva da pessoa com deficiência na sociedade, decorrente da interação dos impedimentos a que se refere o inciso I com barreiras diversas. (Parágrafo acrescido pelo Decreto nº"
       },
       "paragrafo:5/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:5/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º Na hipótese de não ser possível prever a duração dos\nNa hipótese de não ser possível prever a duração dos\nimpedimentos a que se refere o inciso I do § 5º, mas existir a\npossibilidade de que se estendam por longo prazo, o benefício poderá\nser concedido, conforme o disposto em ato do Ministro de Estado do\nDesenvolvimento Social.\n(Parágrafo\nacrescido pelo Decreto nº",
-        "normalized_text": "§ 6º Na hipótese de não ser possível prever a duração dos Na hipótese de não ser possível prever a duração dos impedimentos a que se refere o inciso I do § 5º, mas existir a possibilidade de que se estendam por longo prazo, o benefício poderá ser concedido, conforme o disposto em ato do Ministro de Estado do Desenvolvimento Social. (Parágrafo acrescido pelo Decreto nº"
+        "text": "§ 6º Na hipótese de não ser possível prever a duração dos\nimpedimentos a que se refere o inciso I do § 5º, mas existir a\npossibilidade de que se estendam por longo prazo, o benefício poderá\nser concedido, conforme o disposto em ato do Ministro de Estado do\nDesenvolvimento Social.\n(Parágrafo\nacrescido pelo Decreto nº",
+        "normalized_text": "§ 6º Na hipótese de não ser possível prever a duração dos impedimentos a que se refere o inciso I do § 5º, mas existir a possibilidade de que se estendam por longo prazo, o benefício poderá ser concedido, conforme o disposto em ato do Ministro de Estado do Desenvolvimento Social. (Parágrafo acrescido pelo Decreto nº"
       },
       "paragrafo:6/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:6/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "7.617, 617, de 17/11/2011, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "7.617,\nde 17/11/2011,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "7.617, de 17/11/2011, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:7": {
         "device_type": "paragrafo",
         "device_label": "§ 7º",
         "device_path": "paragrafo:7",
-        "text": "§ 7º Na hipótese do benefício concedido nos termos do disposto no §\nNa hipótese do benefício concedido nos termos do disposto no §\n6º, os beneficiários deverão ser prioritariamente submetidos a\nnovas avaliações da deficiência.\n(Parágrafo\nacrescido pelo Decreto nº",
-        "normalized_text": "§ 7º Na hipótese do benefício concedido nos termos do disposto no § Na hipótese do benefício concedido nos termos do disposto no § 6º, os beneficiários deverão ser prioritariamente submetidos a novas avaliações da deficiência. (Parágrafo acrescido pelo Decreto nº"
+        "text": "§ 7º Na hipótese do benefício concedido nos termos do disposto no §\n6º, os beneficiários deverão ser prioritariamente submetidos a\nnovas avaliações da deficiência.\n(Parágrafo\nacrescido pelo Decreto nº",
+        "normalized_text": "§ 7º Na hipótese do benefício concedido nos termos do disposto no § 6º, os beneficiários deverão ser prioritariamente submetidos a novas avaliações da deficiência. (Parágrafo acrescido pelo Decreto nº"
       },
       "paragrafo:7/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:7/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "7.617, 617, de 17/11/2011, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "7.617,\nde 17/11/2011,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "7.617, de 17/11/2011, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:8": {
         "device_type": "paragrafo",
         "device_label": "§ 8º",
         "device_path": "paragrafo:8",
-        "text": "§ 8º A avaliação da deficiência e do grau de impedimento observará\nA avaliação da deficiência e do grau de impedimento observará\nos instrumentos de que trata o § 2º do art. 2º da Lei nº 13.146,\nde 6 de julho de 2015, a partir de sua criação, permitindo\ninclusive que outras políticas para pessoas com deficiência se\nbeneficiem das informações.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 8º A avaliação da deficiência e do grau de impedimento observará A avaliação da deficiência e do grau de impedimento observará os instrumentos de que trata o § 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015, a partir de sua criação, permitindo inclusive que outras políticas para pessoas com deficiência se beneficiem das informações. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 8º A avaliação da deficiência e do grau de impedimento observará\nos instrumentos de que trata o § 2º do art. 2º da Lei nº 13.146,\nde 6 de julho de 2015, a partir de sua criação, permitindo\ninclusive que outras políticas para pessoas com deficiência se\nbeneficiem das informações.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 8º A avaliação da deficiência e do grau de impedimento observará os instrumentos de que trata o § 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015, a partir de sua criação, permitindo inclusive que outras políticas para pessoas com deficiência se beneficiem das informações. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:9": {
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata\nSem prejuízo do compartilhamento das informações de que trata\no § 8º, o acesso à avaliação da deficiência e do grau de\nimpedimento, com a finalidade de permitir que outras políticas para\npessoas com deficiência dela se beneficiem, dependerá de prévio\nconsentimento do titular da informação.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
-        "normalized_text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata Sem prejuízo do compartilhamento das informações de que trata o § 8º, o acesso à avaliação da deficiência e do grau de impedimento, com a finalidade de permitir que outras políticas para pessoas com deficiência dela se beneficiem, dependerá de prévio consentimento do titular da informação. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
+        "text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata\no § 8º, o acesso à avaliação da deficiência e do grau de\nimpedimento, com a finalidade de permitir que outras políticas para\npessoas com deficiência dela se beneficiem, dependerá de prévio\nconsentimento do titular da informação.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
+        "normalized_text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata o § 8º, o acesso à avaliação da deficiência e do grau de impedimento, com a finalidade de permitir que outras políticas para pessoas com deficiência dela se beneficiem, dependerá de prévio consentimento do titular da informação. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
       },
       "paragrafo:9/item:10": {
         "device_type": "item",
         "device_label": "item 10",
         "device_path": "paragrafo:9/item:10",
-        "text": "10. O consentimento de acesso à avaliação poderá ser manifestado\nO consentimento de acesso à avaliação poderá ser manifestado\nno momento da prestação das referidas informações ou quando do\nrequerimento de acesso à política pública.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
-        "normalized_text": "10. O consentimento de acesso à avaliação poderá ser manifestado O consentimento de acesso à avaliação poderá ser manifestado no momento da prestação das referidas informações ou quando do requerimento de acesso à política pública. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
+        "text": "10. O consentimento de acesso à avaliação poderá ser manifestado\nno momento da prestação das referidas informações ou quando do\nrequerimento de acesso à política pública.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
+        "normalized_text": "10. O consentimento de acesso à avaliação poderá ser manifestado no momento da prestação das referidas informações ou quando do requerimento de acesso à política pública. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
       },
       "paragrafo:9/item:11": {
         "device_type": "item",
@@ -547,15 +547,15 @@
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:9/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       },
       "paragrafo:3/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:3/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011)"
       }
     },
     "Art. 18": {
@@ -595,29 +595,29 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Para fins de atualização dos valores pagos em atraso, serão\nPara fins de atualização dos valores pagos em atraso, serão\naplicados os mesmos critérios adotados pela legislação\nprevidenciária.\n(Parágrafo\núnico com redação dada pelo Decreto nº",
-        "normalized_text": "§ 1º Para fins de atualização dos valores pagos em atraso, serão Para fins de atualização dos valores pagos em atraso, serão aplicados os mesmos critérios adotados pela legislação previdenciária. (Parágrafo único com redação dada pelo Decreto nº"
+        "text": "§ 1º Para fins de atualização dos valores pagos em atraso, serão\naplicados os mesmos critérios adotados pela legislação\nprevidenciária.\n(Parágrafo\núnico com redação dada pelo Decreto nº",
+        "normalized_text": "§ 1º Para fins de atualização dos valores pagos em atraso, serão aplicados os mesmos critérios adotados pela legislação previdenciária. (Parágrafo único com redação dada pelo Decreto nº"
       },
       "paragrafo:1/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:1/item:7",
-        "text": "7.617,\n617,\nde 17/11/201,\ne\ntransformado em §1º pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "7.617, 617, de 17/11/201, e transformado em §1º pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "7.617,\nde 17/11/201,\ne\ntransformado em §1º pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "7.617, de 17/11/201, e transformado em §1º pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Caracterizará desistência do requerimento o não cumprimento,\nCaracterizará desistência do requerimento o não cumprimento,\nem até trinta dias, da exigência de:\nI\n- inscrição ou regularização no CPF;\nII\n- inscrição ou atualização no CadÚnico; ou\nIII\n- efetivação do registro biométrico, observadas as exceções\nprevistas em ato do Poder Executivo federal.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 2º Caracterizará desistência do requerimento o não cumprimento, Caracterizará desistência do requerimento o não cumprimento, em até trinta dias, da exigência de: I - inscrição ou regularização no CPF; II - inscrição ou atualização no CadÚnico; ou III - efetivação do registro biométrico, observadas as exceções previstas em ato do Poder Executivo federal. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 2º Caracterizará desistência do requerimento o não cumprimento,\nem até trinta dias, da exigência de:\nI\n- inscrição ou regularização no CPF;\nII\n- inscrição ou atualização no CadÚnico; ou\nIII\n- efetivação do registro biométrico, observadas as exceções\nprevistas em ato do Poder Executivo federal.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 2º Caracterizará desistência do requerimento o não cumprimento, em até trinta dias, da exigência de: I - inscrição ou regularização no CPF; II - inscrição ou atualização no CadÚnico; ou III - efetivação do registro biométrico, observadas as exceções previstas em ato do Poder Executivo federal. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º A análise do requerimento cessará imediatamente quando ficar\nA análise do requerimento cessará imediatamente quando ficar\ncaracterizada a desistência, e caberá ao interessado realizar novo\nrequerimento.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 3º A análise do requerimento cessará imediatamente quando ficar A análise do requerimento cessará imediatamente quando ficar caracterizada a desistência, e caberá ao interessado realizar novo requerimento. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 3º A análise do requerimento cessará imediatamente quando ficar\ncaracterizada a desistência, e caberá ao interessado realizar novo\nrequerimento.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 3º A análise do requerimento cessará imediatamente quando ficar caracterizada a desistência, e caberá ao interessado realizar novo requerimento. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       }
     },
     "Art. 21": {
@@ -650,8 +650,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O valor do resíduo não recebido em vida pelo beneficiário\nO valor do resíduo não recebido em vida pelo beneficiário\nserá pago aos seus herdeiros ou sucessores, na forma da lei civil.",
-        "normalized_text": "Parágrafo único. O valor do resíduo não recebido em vida pelo beneficiário O valor do resíduo não recebido em vida pelo beneficiário será pago aos seus herdeiros ou sucessores, na forma da lei civil."
+        "text": "Parágrafo único. O valor do resíduo não recebido em vida pelo beneficiário\nserá pago aos seus herdeiros ou sucessores, na forma da lei civil.",
+        "normalized_text": "Parágrafo único. O valor do resíduo não recebido em vida pelo beneficiário será pago aos seus herdeiros ou sucessores, na forma da lei civil."
       }
     },
     "Art. 24": {
@@ -702,15 +702,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O instrumento de procuração poderá ser outorgado em formulário\nO instrumento de procuração poderá ser outorgado em formulário\npróprio do INSS, mediante comprovação do motivo da ausência do\nbeneficiário, e sua validade deverá ser renovada a cada doze meses.",
-        "normalized_text": "§ 1º O instrumento de procuração poderá ser outorgado em formulário O instrumento de procuração poderá ser outorgado em formulário próprio do INSS, mediante comprovação do motivo da ausência do beneficiário, e sua validade deverá ser renovada a cada doze meses."
+        "text": "§ 1º O instrumento de procuração poderá ser outorgado em formulário\npróprio do INSS, mediante comprovação do motivo da ausência do\nbeneficiário, e sua validade deverá ser renovada a cada doze meses.",
+        "normalized_text": "§ 1º O instrumento de procuração poderá ser outorgado em formulário próprio do INSS, mediante comprovação do motivo da ausência do beneficiário, e sua validade deverá ser renovada a cada doze meses."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O procurador, o tutor ou o curador do beneficiário deverá\nO procurador, o tutor ou o curador do beneficiário deverá\nfirmar, perante o INSS ou outros órgãos autorizados pelo Ministério\ndo Desenvolvimento Social e Agrário, termo de responsabilidade\nmediante o qual se comprometa a comunicar qualquer evento que possa\nanular a procuração, a tutela ou a curatela, principalmente o óbito\ndo outorgante, sob pena de incorrer nas sanções criminais e civis\ncabíveis.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)\nArt. 29 Na hipótese de haver indícios de inidoneidade acerca do\ninstrumento de procuração apresentado para o recebimento do\nBenefício de Prestação Continuada ou do procurador, tanto o INSS\nquanto qualquer um dos órgãos autorizados pelo Ministério do\nDesenvolvimento Social e Agrário poderão recusá-los, sem prejuízo\ndas providências que se fizerem necessárias para a apuração da\nresponsabilidade e para a aplicação das sanções criminais e civis\ncabíveis.\n(Artigo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 2º O procurador, o tutor ou o curador do beneficiário deverá O procurador, o tutor ou o curador do beneficiário deverá firmar, perante o INSS ou outros órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário, termo de responsabilidade mediante o qual se comprometa a comunicar qualquer evento que possa anular a procuração, a tutela ou a curatela, principalmente o óbito do outorgante, sob pena de incorrer nas sanções criminais e civis cabíveis. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) Art. 29 Na hipótese de haver indícios de inidoneidade acerca do instrumento de procuração apresentado para o recebimento do Benefício de Prestação Continuada ou do procurador, tanto o INSS quanto qualquer um dos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário poderão recusá-los, sem prejuízo das providências que se fizerem necessárias para a apuração da responsabilidade e para a aplicação das sanções criminais e civis cabíveis. (Artigo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 2º O procurador, o tutor ou o curador do beneficiário deverá\nfirmar, perante o INSS ou outros órgãos autorizados pelo Ministério\ndo Desenvolvimento Social e Agrário, termo de responsabilidade\nmediante o qual se comprometa a comunicar qualquer evento que possa\nanular a procuração, a tutela ou a curatela, principalmente o óbito\ndo outorgante, sob pena de incorrer nas sanções criminais e civis\ncabíveis.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)\nArt. 29 Na hipótese de haver indícios de inidoneidade acerca do\ninstrumento de procuração apresentado para o recebimento do\nBenefício de Prestação Continuada ou do procurador, tanto o INSS\nquanto qualquer um dos órgãos autorizados pelo Ministério do\nDesenvolvimento Social e Agrário poderão recusá-los, sem prejuízo\ndas providências que se fizerem necessárias para a apuração da\nresponsabilidade e para a aplicação das sanções criminais e civis\ncabíveis.\n(Artigo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 2º O procurador, o tutor ou o curador do beneficiário deverá firmar, perante o INSS ou outros órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário, termo de responsabilidade mediante o qual se comprometa a comunicar qualquer evento que possa anular a procuração, a tutela ou a curatela, principalmente o óbito do outorgante, sob pena de incorrer nas sanções criminais e civis cabíveis. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) Art. 29 Na hipótese de haver indícios de inidoneidade acerca do instrumento de procuração apresentado para o recebimento do Benefício de Prestação Continuada ou do procurador, tanto o INSS quanto qualquer um dos órgãos autorizados pelo Ministério do Desenvolvimento Social e Agrário poderão recusá-los, sem prejuízo das providências que se fizerem necessárias para a apuração da responsabilidade e para a aplicação das sanções criminais e civis cabíveis. (Artigo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       }
     },
     "Art. 30": {
@@ -734,8 +734,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Nas demais disposições relativas à procuração\nNas demais disposições relativas à procuração\nobservar-se-á, subsidiariamente, o Código Civil.\nArt. 32 No caso de transferência do beneficiário de uma localidade para\noutra, o procurador fica obrigado a apresentar novo instrumento de\nmandato na localidade de destino.",
-        "normalized_text": "Parágrafo único. Nas demais disposições relativas à procuração Nas demais disposições relativas à procuração observar-se-á, subsidiariamente, o Código Civil. Art. 32 No caso de transferência do beneficiário de uma localidade para outra, o procurador fica obrigado a apresentar novo instrumento de mandato na localidade de destino."
+        "text": "Parágrafo único. Nas demais disposições relativas à procuração\nobservar-se-á, subsidiariamente, o Código Civil.\nArt. 32 No caso de transferência do beneficiário de uma localidade para\noutra, o procurador fica obrigado a apresentar novo instrumento de\nmandato na localidade de destino.",
+        "normalized_text": "Parágrafo único. Nas demais disposições relativas à procuração observar-se-á, subsidiariamente, o Código Civil. Art. 32 No caso de transferência do beneficiário de uma localidade para outra, o procurador fica obrigado a apresentar novo instrumento de mandato na localidade de destino."
       }
     },
     "Art. 33": {
@@ -768,29 +768,29 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O período a que se refere o\nO período a que se refere o\ncaput\npoderá ser prorrogado por iguais períodos, desde que comprovado o\nandamento do processo legal de tutela ou curatela.",
-        "normalized_text": "§ 1º O período a que se refere o O período a que se refere o caput poderá ser prorrogado por iguais períodos, desde que comprovado o andamento do processo legal de tutela ou curatela."
+        "text": "§ 1º O período a que se refere o\ncaput\npoderá ser prorrogado por iguais períodos, desde que comprovado o\nandamento do processo legal de tutela ou curatela.",
+        "normalized_text": "§ 1º O período a que se refere o caput poderá ser prorrogado por iguais períodos, desde que comprovado o andamento do processo legal de tutela ou curatela."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O tutor ou curador poderá outorgar procuração a terceiro com\nO tutor ou curador poderá outorgar procuração a terceiro com\npoderes para receber o benefício e, nesta hipótese,\nobrigatoriamente, a procuração será outorgada mediante instrumento\npúblico.",
-        "normalized_text": "§ 2º O tutor ou curador poderá outorgar procuração a terceiro com O tutor ou curador poderá outorgar procuração a terceiro com poderes para receber o benefício e, nesta hipótese, obrigatoriamente, a procuração será outorgada mediante instrumento público."
+        "text": "§ 2º O tutor ou curador poderá outorgar procuração a terceiro com\npoderes para receber o benefício e, nesta hipótese,\nobrigatoriamente, a procuração será outorgada mediante instrumento\npúblico.",
+        "normalized_text": "§ 2º O tutor ou curador poderá outorgar procuração a terceiro com poderes para receber o benefício e, nesta hipótese, obrigatoriamente, a procuração será outorgada mediante instrumento público."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º A procuração não isenta o tutor ou curador da condição\nA procuração não isenta o tutor ou curador da condição\noriginal de mandatário titular da tutela ou curatela.\nArt.\n35-A. O beneficiário, ou seu representante legal, deve informar ao\nINSS alterações dos dados cadastrais correspondentes à mudança de\nnome, endereço e estado civil, a fruição de qualquer benefício no\nâmbito da Seguridade Social ou de outro regime, a sua admissão em\nemprego ou a percepção de renda de qualquer natureza elencada no\ninciso VI do\ncaput\ndo art. 4º.\n(“Caput”\ndo artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "§ 3º A procuração não isenta o tutor ou curador da condição A procuração não isenta o tutor ou curador da condição original de mandatário titular da tutela ou curatela. Art. 35-A. O beneficiário, ou seu representante legal, deve informar ao INSS alterações dos dados cadastrais correspondentes à mudança de nome, endereço e estado civil, a fruição de qualquer benefício no âmbito da Seguridade Social ou de outro regime, a sua admissão em emprego ou a percepção de renda de qualquer natureza elencada no inciso VI do caput do art. 4º. (“Caput” do artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "§ 3º A procuração não isenta o tutor ou curador da condição\noriginal de mandatário titular da tutela ou curatela.\nArt.\n35-A. O beneficiário, ou seu representante legal, deve informar ao\nINSS alterações dos dados cadastrais correspondentes à mudança de\nnome, endereço e estado civil, a fruição de qualquer benefício no\nâmbito da Seguridade Social ou de outro regime, a sua admissão em\nemprego ou a percepção de renda de qualquer natureza elencada no\ninciso VI do\ncaput\ndo art. 4º.\n(“Caput”\ndo artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "§ 3º A procuração não isenta o tutor ou curador da condição original de mandatário titular da tutela ou curatela. Art. 35-A. O beneficiário, ou seu representante legal, deve informar ao INSS alterações dos dados cadastrais correspondentes à mudança de nome, endereço e estado civil, a fruição de qualquer benefício no âmbito da Seguridade Social ou de outro regime, a sua admissão em emprego ou a percepção de renda de qualquer natureza elencada no inciso VI do caput do art. 4º. (“Caput” do artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)"
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O INSS deverá ser informado pelo representante legal ou pelo\nO INSS deverá ser informado pelo representante legal ou pelo\nprocurador sobre a propositura de ação judicial relativa à\nausência ou à morte presumida do beneficiário.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)\nSeção\nIII\nDo\nIndeferimento",
-        "normalized_text": "Parágrafo único. O INSS deverá ser informado pelo representante legal ou pelo O INSS deverá ser informado pelo representante legal ou pelo procurador sobre a propositura de ação judicial relativa à ausência ou à morte presumida do beneficiário. (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) Seção III Do Indeferimento"
+        "text": "Parágrafo único. O INSS deverá ser informado pelo representante legal ou pelo\nprocurador sobre a propositura de ação judicial relativa à\nausência ou à morte presumida do beneficiário.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)\nSeção\nIII\nDo\nIndeferimento",
+        "normalized_text": "Parágrafo único. O INSS deverá ser informado pelo representante legal ou pelo procurador sobre a propositura de ação judicial relativa à ausência ou à morte presumida do beneficiário. (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) Seção III Do Indeferimento"
       }
     },
     "Art. 36": {
@@ -805,15 +805,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Do indeferimento do benefício caberá recurso à Junta de\nDo indeferimento do benefício caberá recurso à Junta de\nRecursos do Conselho de Recursos da Previdência Social, no prazo de\ntrinta dias, a contar do recebimento da comunicação.",
-        "normalized_text": "§ 1º Do indeferimento do benefício caberá recurso à Junta de Do indeferimento do benefício caberá recurso à Junta de Recursos do Conselho de Recursos da Previdência Social, no prazo de trinta dias, a contar do recebimento da comunicação."
+        "text": "§ 1º Do indeferimento do benefício caberá recurso à Junta de\nRecursos do Conselho de Recursos da Previdência Social, no prazo de\ntrinta dias, a contar do recebimento da comunicação.",
+        "normalized_text": "§ 1º Do indeferimento do benefício caberá recurso à Junta de Recursos do Conselho de Recursos da Previdência Social, no prazo de trinta dias, a contar do recebimento da comunicação."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º A situação prevista no art. 24 também não constitui motivo\nA situação prevista no art. 24 também não constitui motivo\npara o indeferimento do benefício.\nCAPÍTULO\nIII\nDA GESTÃO",
-        "normalized_text": "§ 2º A situação prevista no art. 24 também não constitui motivo A situação prevista no art. 24 também não constitui motivo para o indeferimento do benefício. CAPÍTULO III DA GESTÃO"
+        "text": "§ 2º A situação prevista no art. 24 também não constitui motivo\npara o indeferimento do benefício.\nCAPÍTULO\nIII\nDA GESTÃO",
+        "normalized_text": "§ 2º A situação prevista no art. 24 também não constitui motivo para o indeferimento do benefício. CAPÍTULO III DA GESTÃO"
       }
     },
     "Art. 37": {
@@ -828,29 +828,29 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O acompanhamento do beneficiário e de sua família visa a\nO acompanhamento do beneficiário e de sua família visa a\nfavorecer-lhes a obtenção de aquisições materiais, sociais,\nsocieducativas, socioculturais para suprir as necessidades de\nsubsistência, desenvolver capacidades e talentos para a convivência\nfamiliar e comunitária, o protagonismo e a autonomia.",
-        "normalized_text": "§ 1º O acompanhamento do beneficiário e de sua família visa a O acompanhamento do beneficiário e de sua família visa a favorecer-lhes a obtenção de aquisições materiais, sociais, socieducativas, socioculturais para suprir as necessidades de subsistência, desenvolver capacidades e talentos para a convivência familiar e comunitária, o protagonismo e a autonomia."
+        "text": "§ 1º O acompanhamento do beneficiário e de sua família visa a\nfavorecer-lhes a obtenção de aquisições materiais, sociais,\nsocieducativas, socioculturais para suprir as necessidades de\nsubsistência, desenvolver capacidades e talentos para a convivência\nfamiliar e comunitária, o protagonismo e a autonomia.",
+        "normalized_text": "§ 1º O acompanhamento do beneficiário e de sua família visa a favorecer-lhes a obtenção de aquisições materiais, sociais, socieducativas, socioculturais para suprir as necessidades de subsistência, desenvolver capacidades e talentos para a convivência familiar e comunitária, o protagonismo e a autonomia."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Para fins de cumprimento do disposto no\nPara fins de cumprimento do disposto no\ncaput\n,\no acompanhamento deverá abranger as pessoas que vivem sob o mesmo\nteto com o beneficiário e que com este mantém vínculo parental,\nconjugal, genético ou de afinidade.",
-        "normalized_text": "§ 2º Para fins de cumprimento do disposto no Para fins de cumprimento do disposto no caput , o acompanhamento deverá abranger as pessoas que vivem sob o mesmo teto com o beneficiário e que com este mantém vínculo parental, conjugal, genético ou de afinidade."
+        "text": "§ 2º Para fins de cumprimento do disposto no\ncaput\n,\no acompanhamento deverá abranger as pessoas que vivem sob o mesmo\nteto com o beneficiário e que com este mantém vínculo parental,\nconjugal, genético ou de afinidade.",
+        "normalized_text": "§ 2º Para fins de cumprimento do disposto no caput , o acompanhamento deverá abranger as pessoas que vivem sob o mesmo teto com o beneficiário e que com este mantém vínculo parental, conjugal, genético ou de afinidade."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Para o cumprimento do disposto no\nPara o cumprimento do disposto no\ncaput\ne para subsidiar os processos de concessão e de revisão bienal do\nbenefício, os beneficiários e suas famílias deverão ser\ncadastrados no CadÚnico, observada a legislação aplicável.\n(Parágrafo\nacrescido pelo Decreto nº",
-        "normalized_text": "§ 3º Para o cumprimento do disposto no Para o cumprimento do disposto no caput e para subsidiar os processos de concessão e de revisão bienal do benefício, os beneficiários e suas famílias deverão ser cadastrados no CadÚnico, observada a legislação aplicável. (Parágrafo acrescido pelo Decreto nº"
+        "text": "§ 3º Para o cumprimento do disposto no\ncaput\ne para subsidiar os processos de concessão e de revisão bienal do\nbenefício, os beneficiários e suas famílias deverão ser\ncadastrados no CadÚnico, observada a legislação aplicável.\n(Parágrafo\nacrescido pelo Decreto nº",
+        "normalized_text": "§ 3º Para o cumprimento do disposto no caput e para subsidiar os processos de concessão e de revisão bienal do benefício, os beneficiários e suas famílias deverão ser cadastrados no CadÚnico, observada a legislação aplicável. (Parágrafo acrescido pelo Decreto nº"
       },
       "paragrafo:3/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:3/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "7.617, 617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "7.617,\nde 17/11/2011,\ncom\nredação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU\nde 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "7.617, de 17/11/2011, com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       }
     },
     "Art. 38": {
@@ -874,8 +874,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A análise das defesas a que se refere o inciso VI do\nA análise das defesas a que se refere o inciso VI do\ncaput\ndeve observar o disposto no Capítulo XI da Lei nº 9.784, de 29 de\njaneiro de 1999.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "Parágrafo único. A análise das defesas a que se refere o inciso VI do A análise das defesas a que se refere o inciso VI do caput deve observar o disposto no Capítulo XI da Lei nº 9.784, de 29 de janeiro de 1999. (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "Parágrafo único. A análise das defesas a que se refere o inciso VI do\ncaput\ndeve observar o disposto no Capítulo XI da Lei nº 9.784, de 29 de\njaneiro de 1999.\n(Parágrafo\núnico acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no\nDOU de 9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "Parágrafo único. A análise das defesas a que se refere o inciso VI do caput deve observar o disposto no Capítulo XI da Lei nº 9.784, de 29 de janeiro de 1999. (Parágrafo único acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       }
     },
     "Art. 40": {
@@ -899,29 +899,29 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O Programa Nacional de Monitoramento e Avaliação do Benefício\nO Programa Nacional de Monitoramento e Avaliação do Benefício\nde Prestação Continuada, baseado em um conjunto de indicadores e de\nseus respectivos índices, compreende:\nI\n- o monitoramento da incidência dos beneficiários e dos requerentes\npor município brasileiro e no Distrito Federal;\nII\n- o tratamento do conjunto dos beneficiários como uma população\ncom graus de risco e vulnerabilidade social variados, estratificada a\npartir das características do ciclo de vida do requerente, sua\nfamília e da região onde vive;\nIII\n- o desenvolvimento de estudos intersetoriais que caracterizem\ncomportamentos da população beneficiária por análises\ngeo-demográficas, índices de mortalidade, morbidade, entre outros,\nnos quais se inclui a tipologia das famílias dos beneficiários e\ndas instituições em que eventualmente viva ou conviva;\nIV\n- a instituição e manutenção de banco de dados sobre os processos\ndesenvolvidos pelos gestores dos estados, do Distrito Federal e dos\nmunicípios para inclusão do beneficiário ao SUAS e demais\npolíticas setoriais;\nV\n- a promoção de estudos e pesquisas sobre os critérios de acesso,\nimplementação do Benefício de Prestação Continuada e impacto do\nbenefício na redução da pobreza e das desigualdades sociais;\nVI\n- a organização e manutenção de um sistema de informações sobre\no Benefício de Prestação Continuada, com vistas ao planejamento,\ndesenvolvimento e avaliação das ações; e\nVII\n- a realização de estudos longitudinais dos beneficiários do\nBenefício de Prestação Continuada.",
-        "normalized_text": "§ 1º O Programa Nacional de Monitoramento e Avaliação do Benefício O Programa Nacional de Monitoramento e Avaliação do Benefício de Prestação Continuada, baseado em um conjunto de indicadores e de seus respectivos índices, compreende: I - o monitoramento da incidência dos beneficiários e dos requerentes por município brasileiro e no Distrito Federal; II - o tratamento do conjunto dos beneficiários como uma população com graus de risco e vulnerabilidade social variados, estratificada a partir das características do ciclo de vida do requerente, sua família e da região onde vive; III - o desenvolvimento de estudos intersetoriais que caracterizem comportamentos da população beneficiária por análises geo-demográficas, índices de mortalidade, morbidade, entre outros, nos quais se inclui a tipologia das famílias dos beneficiários e das instituições em que eventualmente viva ou conviva; IV - a instituição e manutenção de banco de dados sobre os processos desenvolvidos pelos gestores dos estados, do Distrito Federal e dos municípios para inclusão do beneficiário ao SUAS e demais políticas setoriais; V - a promoção de estudos e pesquisas sobre os critérios de acesso, implementação do Benefício de Prestação Continuada e impacto do benefício na redução da pobreza e das desigualdades sociais; VI - a organização e manutenção de um sistema de informações sobre o Benefício de Prestação Continuada, com vistas ao planejamento, desenvolvimento e avaliação das ações; e VII - a realização de estudos longitudinais dos beneficiários do Benefício de Prestação Continuada."
+        "text": "§ 1º O Programa Nacional de Monitoramento e Avaliação do Benefício\nde Prestação Continuada, baseado em um conjunto de indicadores e de\nseus respectivos índices, compreende:\nI\n- o monitoramento da incidência dos beneficiários e dos requerentes\npor município brasileiro e no Distrito Federal;\nII\n- o tratamento do conjunto dos beneficiários como uma população\ncom graus de risco e vulnerabilidade social variados, estratificada a\npartir das características do ciclo de vida do requerente, sua\nfamília e da região onde vive;\nIII\n- o desenvolvimento de estudos intersetoriais que caracterizem\ncomportamentos da população beneficiária por análises\ngeo-demográficas, índices de mortalidade, morbidade, entre outros,\nnos quais se inclui a tipologia das famílias dos beneficiários e\ndas instituições em que eventualmente viva ou conviva;\nIV\n- a instituição e manutenção de banco de dados sobre os processos\ndesenvolvidos pelos gestores dos estados, do Distrito Federal e dos\nmunicípios para inclusão do beneficiário ao SUAS e demais\npolíticas setoriais;\nV\n- a promoção de estudos e pesquisas sobre os critérios de acesso,\nimplementação do Benefício de Prestação Continuada e impacto do\nbenefício na redução da pobreza e das desigualdades sociais;\nVI\n- a organização e manutenção de um sistema de informações sobre\no Benefício de Prestação Continuada, com vistas ao planejamento,\ndesenvolvimento e avaliação das ações; e\nVII\n- a realização de estudos longitudinais dos beneficiários do\nBenefício de Prestação Continuada.",
+        "normalized_text": "§ 1º O Programa Nacional de Monitoramento e Avaliação do Benefício de Prestação Continuada, baseado em um conjunto de indicadores e de seus respectivos índices, compreende: I - o monitoramento da incidência dos beneficiários e dos requerentes por município brasileiro e no Distrito Federal; II - o tratamento do conjunto dos beneficiários como uma população com graus de risco e vulnerabilidade social variados, estratificada a partir das características do ciclo de vida do requerente, sua família e da região onde vive; III - o desenvolvimento de estudos intersetoriais que caracterizem comportamentos da população beneficiária por análises geo-demográficas, índices de mortalidade, morbidade, entre outros, nos quais se inclui a tipologia das famílias dos beneficiários e das instituições em que eventualmente viva ou conviva; IV - a instituição e manutenção de banco de dados sobre os processos desenvolvidos pelos gestores dos estados, do Distrito Federal e dos municípios para inclusão do beneficiário ao SUAS e demais políticas setoriais; V - a promoção de estudos e pesquisas sobre os critérios de acesso, implementação do Benefício de Prestação Continuada e impacto do benefício na redução da pobreza e das desigualdades sociais; VI - a organização e manutenção de um sistema de informações sobre o Benefício de Prestação Continuada, com vistas ao planejamento, desenvolvimento e avaliação das ações; e VII - a realização de estudos longitudinais dos beneficiários do Benefício de Prestação Continuada."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º As despesas decorrentes da implementação do Programa a que se\nAs despesas decorrentes da implementação do Programa a que se\nrefere o\ncaput\ncorrerão com as dotações orçamentárias consignadas ao Ministério\ndo Desenvolvimento Social e Agrário.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 2º As despesas decorrentes da implementação do Programa a que se As despesas decorrentes da implementação do Programa a que se refere o caput correrão com as dotações orçamentárias consignadas ao Ministério do Desenvolvimento Social e Agrário. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 2º As despesas decorrentes da implementação do Programa a que se\nrefere o\ncaput\ncorrerão com as dotações orçamentárias consignadas ao Ministério\ndo Desenvolvimento Social e Agrário.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no\nDOU de 8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 2º As despesas decorrentes da implementação do Programa a que se refere o caput correrão com as dotações orçamentárias consignadas ao Ministério do Desenvolvimento Social e Agrário. (Parágrafo com redação dada pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º O Ministério do Desenvolvimento Social e Agrário e o INSS\nO Ministério do Desenvolvimento Social e Agrário e o INSS\ndeverão integrar suas bases de dados quanto às informações que\ncompõem a base de dados do CadÚnico e compartilhá-las com o\nCadastro-Inclusão, instituído pelo art. 92 da Lei nº 13.146, de 6\nde julho de 2015, quando se tratar de informação referente a pessoa\ncom deficiência.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 3º O Ministério do Desenvolvimento Social e Agrário e o INSS O Ministério do Desenvolvimento Social e Agrário e o INSS deverão integrar suas bases de dados quanto às informações que compõem a base de dados do CadÚnico e compartilhá-las com o Cadastro-Inclusão, instituído pelo art. 92 da Lei nº 13.146, de 6 de julho de 2015, quando se tratar de informação referente a pessoa com deficiência. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 3º O Ministério do Desenvolvimento Social e Agrário e o INSS\ndeverão integrar suas bases de dados quanto às informações que\ncompõem a base de dados do CadÚnico e compartilhá-las com o\nCadastro-Inclusão, instituído pelo art. 92 da Lei nº 13.146, de 6\nde julho de 2015, quando se tratar de informação referente a pessoa\ncom deficiência.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
+        "normalized_text": "§ 3º O Ministério do Desenvolvimento Social e Agrário e o INSS deverão integrar suas bases de dados quanto às informações que compõem a base de dados do CadÚnico e compartilhá-las com o Cadastro-Inclusão, instituído pelo art. 92 da Lei nº 13.146, de 6 de julho de 2015, quando se tratar de informação referente a pessoa com deficiência. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º Até que esteja concluída a integração das bases de dados de\nAté que esteja concluída a integração das bases de dados de\nque trata o § 3º, o Ministério do Desenvolvimento Social e Agrário\ndeverá fornecer ao INSS, mensalmente, as informações do CadÚnico\nnecessárias à concessão e à manutenção do Benefício de\nPrestação Continuada, em especial aquelas relativas à composição\ndo grupo familiar, à renda de todos os integrantes.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nArt.\n41-A. A gestão e a operacionalização do Benefício de Prestação\nContinuada serão acompanhadas e monitoradas pelo Comitê\nIntersetorial de Assessoramento, instituído em ato do Ministro de\nEstado do Desenvolvimento e Assistência Social, Família e Combate à\nFome.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 4º Até que esteja concluída a integração das bases de dados de Até que esteja concluída a integração das bases de dados de que trata o § 3º, o Ministério do Desenvolvimento Social e Agrário deverá fornecer ao INSS, mensalmente, as informações do CadÚnico necessárias à concessão e à manutenção do Benefício de Prestação Continuada, em especial aquelas relativas à composição do grupo familiar, à renda de todos os integrantes. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) Art. 41-A. A gestão e a operacionalização do Benefício de Prestação Continuada serão acompanhadas e monitoradas pelo Comitê Intersetorial de Assessoramento, instituído em ato do Ministro de Estado do Desenvolvimento e Assistência Social, Família e Combate à Fome. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 4º Até que esteja concluída a integração das bases de dados de\nque trata o § 3º, o Ministério do Desenvolvimento Social e Agrário\ndeverá fornecer ao INSS, mensalmente, as informações do CadÚnico\nnecessárias à concessão e à manutenção do Benefício de\nPrestação Continuada, em especial aquelas relativas à composição\ndo grupo familiar, à renda de todos os integrantes.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nArt.\n41-A. A gestão e a operacionalização do Benefício de Prestação\nContinuada serão acompanhadas e monitoradas pelo Comitê\nIntersetorial de Assessoramento, instituído em ato do Ministro de\nEstado do Desenvolvimento e Assistência Social, Família e Combate à\nFome.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 4º Até que esteja concluída a integração das bases de dados de que trata o § 3º, o Ministério do Desenvolvimento Social e Agrário deverá fornecer ao INSS, mensalmente, as informações do CadÚnico necessárias à concessão e à manutenção do Benefício de Prestação Continuada, em especial aquelas relativas à composição do grupo familiar, à renda de todos os integrantes. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) Art. 41-A. A gestão e a operacionalização do Benefício de Prestação Continuada serão acompanhadas e monitoradas pelo Comitê Intersetorial de Assessoramento, instituído em ato do Ministro de Estado do Desenvolvimento e Assistência Social, Família e Combate à Fome. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       }
     },
     "Art. 42": {
@@ -936,15 +936,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A revisão de que trata o\nA revisão de que trata o\ncaput\nserá realizada pelo INSS por meio da utilização de cruzamento de\ninformações do beneficiário e de seus familiares existentes em\nregistros e bases de dados oficiais, na forma estabelecida em ato do\nMinistro de Estado do Desenvolvimento Social, e observará:\n(Parágrafo\núnico transformado em § 1º pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nI\n- o cadastramento ou a atualização cadastral no CadÚnico, conforme\no disposto no Decreto nº 11.016, de 29 de março de 2022;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)\nII\n- a confrontação de informações de cadastros de benefícios,\nemprego e renda ou outras bases de dados de órgãos da administração\npública disponíveis, referentes à renda do titular e de sua\nfamília;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nIII\n- o cruzamento de dados para fins de verificação de acúmulo do\nbenefício com outra renda no âmbito da Seguridade Social ou de\noutro regime, conforme vedação a que se refere o § 4º do art. 20\nda Lei nº 8.742, de 1993; e\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIV\n- as reavaliações da deficiência constatada anteriormente, quando\no beneficiário não tenha superado os requisitos de renda familiar\nmensal\nper capita\n.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nV\n- o registro biométrico do beneficiário ou de seu responsável\nlegal em uma das bases autorizadas para esse fim, nos termos do\ndisposto em ato do Poder Executivo federal, observadas as exceções\nprevistas.\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 1º A revisão de que trata o A revisão de que trata o caput será realizada pelo INSS por meio da utilização de cruzamento de informações do beneficiário e de seus familiares existentes em registros e bases de dados oficiais, na forma estabelecida em ato do Ministro de Estado do Desenvolvimento Social, e observará: (Parágrafo único transformado em § 1º pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) I - o cadastramento ou a atualização cadastral no CadÚnico, conforme o disposto no Decreto nº 11.016, de 29 de março de 2022; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, e com redação dada pelo Decreto nº 12.534, de 25/6/2025) II - a confrontação de informações de cadastros de benefícios, emprego e renda ou outras bases de dados de órgãos da administração pública disponíveis, referentes à renda do titular e de sua família; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) III - o cruzamento de dados para fins de verificação de acúmulo do benefício com outra renda no âmbito da Seguridade Social ou de outro regime, conforme vedação a que se refere o § 4º do art. 20 da Lei nº 8.742, de 1993; e (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) IV - as reavaliações da deficiência constatada anteriormente, quando o beneficiário não tenha superado os requisitos de renda familiar mensal per capita . (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) V - o registro biométrico do beneficiário ou de seu responsável legal em uma das bases autorizadas para esse fim, nos termos do disposto em ato do Poder Executivo federal, observadas as exceções previstas. (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 1º A revisão de que trata o\ncaput\nserá realizada pelo INSS por meio da utilização de cruzamento de\ninformações do beneficiário e de seus familiares existentes em\nregistros e bases de dados oficiais, na forma estabelecida em ato do\nMinistro de Estado do Desenvolvimento Social, e observará:\n(Parágrafo\núnico transformado em § 1º pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nI\n- o cadastramento ou a atualização cadastral no CadÚnico, conforme\no disposto no Decreto nº 11.016, de 29 de março de 2022;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)\nII\n- a confrontação de informações de cadastros de benefícios,\nemprego e renda ou outras bases de dados de órgãos da administração\npública disponíveis, referentes à renda do titular e de sua\nfamília;\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nIII\n- o cruzamento de dados para fins de verificação de acúmulo do\nbenefício com outra renda no âmbito da Seguridade Social ou de\noutro regime, conforme vedação a que se refere o § 4º do art. 20\nda Lei nº 8.742, de 1993; e\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\nIV\n- as reavaliações da deficiência constatada anteriormente, quando\no beneficiário não tenha superado os requisitos de renda familiar\nmensal\nper capita\n.\n(Inciso\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ncom\nredação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU\nde 9/8/2018, em vigor 30 dias após a publicação)\nV\n- o registro biométrico do beneficiário ou de seu responsável\nlegal em uma das bases autorizadas para esse fim, nos termos do\ndisposto em ato do Poder Executivo federal, observadas as exceções\nprevistas.\n(Inciso\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 1º A revisão de que trata o caput será realizada pelo INSS por meio da utilização de cruzamento de informações do beneficiário e de seus familiares existentes em registros e bases de dados oficiais, na forma estabelecida em ato do Ministro de Estado do Desenvolvimento Social, e observará: (Parágrafo único transformado em § 1º pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) I - o cadastramento ou a atualização cadastral no CadÚnico, conforme o disposto no Decreto nº 11.016, de 29 de março de 2022; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, e com redação dada pelo Decreto nº 12.534, de 25/6/2025) II - a confrontação de informações de cadastros de benefícios, emprego e renda ou outras bases de dados de órgãos da administração pública disponíveis, referentes à renda do titular e de sua família; (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) III - o cruzamento de dados para fins de verificação de acúmulo do benefício com outra renda no âmbito da Seguridade Social ou de outro regime, conforme vedação a que se refere o § 4º do art. 20 da Lei nº 8.742, de 1993; e (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) IV - as reavaliações da deficiência constatada anteriormente, quando o beneficiário não tenha superado os requisitos de renda familiar mensal per capita . (Inciso acrescido pelo Decreto nº 8.805, de 7/7/2016, com redação dada pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) V - o registro biométrico do beneficiário ou de seu responsável legal em uma das bases autorizadas para esse fim, nos termos do disposto em ato do Poder Executivo federal, observadas as exceções previstas. (Inciso acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Identificada a superação de condição para manutenção do\nIdentificada a superação de condição para manutenção do\nbenefício, após a atualização das informações junto ao\nCadÚnico, o INSS deverá suspender ou cessar o benefício, conforme\no caso.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 2º Identificada a superação de condição para manutenção do Identificada a superação de condição para manutenção do benefício, após a atualização das informações junto ao CadÚnico, o INSS deverá suspender ou cessar o benefício, conforme o caso. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 2º Identificada a superação de condição para manutenção do\nbenefício, após a atualização das informações junto ao\nCadÚnico, o INSS deverá suspender ou cessar o benefício, conforme\no caso.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 2º Identificada a superação de condição para manutenção do benefício, após a atualização das informações junto ao CadÚnico, o INSS deverá suspender ou cessar o benefício, conforme o caso. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
@@ -957,8 +957,8 @@
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º O Ministério do Desenvolvimento Social e o Ministério do\nO Ministério do Desenvolvimento Social e o Ministério do\nPlanejamento, Desenvolvimento e Gestão compartilharão as bases de\ndados nos termos do Decreto nº 8.789, de 29 de junho de 2016.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 4º O Ministério do Desenvolvimento Social e o Ministério do O Ministério do Desenvolvimento Social e o Ministério do Planejamento, Desenvolvimento e Gestão compartilharão as bases de dados nos termos do Decreto nº 8.789, de 29 de junho de 2016. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 4º O Ministério do Desenvolvimento Social e o Ministério do\nPlanejamento, Desenvolvimento e Gestão compartilharão as bases de\ndados nos termos do Decreto nº 8.789, de 29 de junho de 2016.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 4º O Ministério do Desenvolvimento Social e o Ministério do Planejamento, Desenvolvimento e Gestão compartilharão as bases de dados nos termos do Decreto nº 8.789, de 29 de junho de 2016. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
@@ -971,22 +971,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º A reavaliação médica e social da deficiência fica\nA reavaliação médica e social da deficiência fica\ncondicionada à conclusão da análise relativa à renda, decorrente\ndo procedimento disposto no inciso II do § 1º.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 6º A reavaliação médica e social da deficiência fica A reavaliação médica e social da deficiência fica condicionada à conclusão da análise relativa à renda, decorrente do procedimento disposto no inciso II do § 1º. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 6º A reavaliação médica e social da deficiência fica\ncondicionada à conclusão da análise relativa à renda, decorrente\ndo procedimento disposto no inciso II do § 1º.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 6º A reavaliação médica e social da deficiência fica condicionada à conclusão da análise relativa à renda, decorrente do procedimento disposto no inciso II do § 1º. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:7": {
         "device_type": "paragrafo",
         "device_label": "§ 7º",
         "device_path": "paragrafo:7",
-        "text": "§ 7º A reavaliação médica e social da deficiência poderá ser\nA reavaliação médica e social da deficiência poderá ser\npriorizada ou dispensada por ato do Ministro de Estado do\nDesenvolvimento Social, considerados o tipo e a gravidade do\nimpedimento, a idade do beneficiário e a duração do benefício.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 7º A reavaliação médica e social da deficiência poderá ser A reavaliação médica e social da deficiência poderá ser priorizada ou dispensada por ato do Ministro de Estado do Desenvolvimento Social, considerados o tipo e a gravidade do impedimento, a idade do beneficiário e a duração do benefício. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 7º A reavaliação médica e social da deficiência poderá ser\npriorizada ou dispensada por ato do Ministro de Estado do\nDesenvolvimento Social, considerados o tipo e a gravidade do\nimpedimento, a idade do beneficiário e a duração do benefício.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 7º A reavaliação médica e social da deficiência poderá ser priorizada ou dispensada por ato do Ministro de Estado do Desenvolvimento Social, considerados o tipo e a gravidade do impedimento, a idade do beneficiário e a duração do benefício. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:8": {
         "device_type": "paragrafo",
         "device_label": "§ 8º",
         "device_path": "paragrafo:8",
-        "text": "§ 8º O Ministro de Estado do Desenvolvimento Social editará ato\nO Ministro de Estado do Desenvolvimento Social editará ato\ncomplementar ao disposto neste artigo.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)\nCAPÍTULO V\nDA DEFESA\nDOS DIREITOS E DO CONTROLE SOCIAL",
-        "normalized_text": "§ 8º O Ministro de Estado do Desenvolvimento Social editará ato O Ministro de Estado do Desenvolvimento Social editará ato complementar ao disposto neste artigo. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) CAPÍTULO V DA DEFESA DOS DIREITOS E DO CONTROLE SOCIAL"
+        "text": "§ 8º O Ministro de Estado do Desenvolvimento Social editará ato\ncomplementar ao disposto neste artigo.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)\nCAPÍTULO V\nDA DEFESA\nDOS DIREITOS E DO CONTROLE SOCIAL",
+        "normalized_text": "§ 8º O Ministro de Estado do Desenvolvimento Social editará ato complementar ao disposto neste artigo. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação) CAPÍTULO V DA DEFESA DOS DIREITOS E DO CONTROLE SOCIAL"
       }
     },
     "Art. 43": {
@@ -1037,43 +1037,43 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A suspensão do pagamento do benefício consiste na interrupção\nA suspensão do pagamento do benefício consiste na interrupção\ndo envio do pagamento à rede bancária.",
-        "normalized_text": "§ 1º A suspensão do pagamento do benefício consiste na interrupção A suspensão do pagamento do benefício consiste na interrupção do envio do pagamento à rede bancária."
+        "text": "§ 1º A suspensão do pagamento do benefício consiste na interrupção\ndo envio do pagamento à rede bancária.",
+        "normalized_text": "§ 1º A suspensão do pagamento do benefício consiste na interrupção do envio do pagamento à rede bancária."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O motivo da suspensão será disponibilizado pelos canais de\nO motivo da suspensão será disponibilizado pelos canais de\natendimento do INSS para que o beneficiário, o seu responsável\nlegal ou o seu procurador possam consultar.",
-        "normalized_text": "§ 2º O motivo da suspensão será disponibilizado pelos canais de O motivo da suspensão será disponibilizado pelos canais de atendimento do INSS para que o beneficiário, o seu responsável legal ou o seu procurador possam consultar."
+        "text": "§ 2º O motivo da suspensão será disponibilizado pelos canais de\natendimento do INSS para que o beneficiário, o seu responsável\nlegal ou o seu procurador possam consultar.",
+        "normalized_text": "§ 2º O motivo da suspensão será disponibilizado pelos canais de atendimento do INSS para que o beneficiário, o seu responsável legal ou o seu procurador possam consultar."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Após a suspensão do benefício, o beneficiário, o seu\nApós a suspensão do benefício, o beneficiário, o seu\nresponsável legal ou o seu procurador terá o prazo:\nI\n- de trinta dias para:",
-        "normalized_text": "§ 3º Após a suspensão do benefício, o beneficiário, o seu Após a suspensão do benefício, o beneficiário, o seu responsável legal ou o seu procurador terá o prazo: I - de trinta dias para:"
+        "text": "§ 3º Após a suspensão do benefício, o beneficiário, o seu\nresponsável legal ou o seu procurador terá o prazo:\nI\n- de trinta dias para:",
+        "normalized_text": "§ 3º Após a suspensão do benefício, o beneficiário, o seu responsável legal ou o seu procurador terá o prazo: I - de trinta dias para:"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º Caso o beneficiário, o seu responsável legal ou o seu\nCaso o beneficiário, o seu responsável legal ou o seu\nprocurador apresente a defesa de que trata a alínea \"a\" do\ninciso I do § 3º, o valor do Benefício de Prestação Continuada\nserá reativado imediatamente.",
-        "normalized_text": "§ 4º Caso o beneficiário, o seu responsável legal ou o seu Caso o beneficiário, o seu responsável legal ou o seu procurador apresente a defesa de que trata a alínea \"a\" do inciso I do § 3º, o valor do Benefício de Prestação Continuada será reativado imediatamente."
+        "text": "§ 4º Caso o beneficiário, o seu responsável legal ou o seu\nprocurador apresente a defesa de que trata a alínea \"a\" do\ninciso I do § 3º, o valor do Benefício de Prestação Continuada\nserá reativado imediatamente.",
+        "normalized_text": "§ 4º Caso o beneficiário, o seu responsável legal ou o seu procurador apresente a defesa de que trata a alínea \"a\" do inciso I do § 3º, o valor do Benefício de Prestação Continuada será reativado imediatamente."
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º A reativação do crédito do benefício suspenso por ausência\nA reativação do crédito do benefício suspenso por ausência\nde saque, quando devida, ocorrerá em até setenta e duas horas após\na solicitação do beneficiário, seu responsável legal ou seu\nprocurador junto ao INSS, por intermédio dos canais de atendimento.",
-        "normalized_text": "§ 5º A reativação do crédito do benefício suspenso por ausência A reativação do crédito do benefício suspenso por ausência de saque, quando devida, ocorrerá em até setenta e duas horas após a solicitação do beneficiário, seu responsável legal ou seu procurador junto ao INSS, por intermédio dos canais de atendimento."
+        "text": "§ 5º A reativação do crédito do benefício suspenso por ausência\nde saque, quando devida, ocorrerá em até setenta e duas horas após\na solicitação do beneficiário, seu responsável legal ou seu\nprocurador junto ao INSS, por intermédio dos canais de atendimento.",
+        "normalized_text": "§ 5º A reativação do crédito do benefício suspenso por ausência de saque, quando devida, ocorrerá em até setenta e duas horas após a solicitação do beneficiário, seu responsável legal ou seu procurador junto ao INSS, por intermédio dos canais de atendimento."
       },
       "paragrafo:5/item:7": {
         "device_type": "item",
         "device_label": "item 7",
         "device_path": "paragrafo:5/item:7",
-        "text": "7.617,\n617,\nde 17/11/2011,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\n§§\n6º a 9º\n(Parágrafos\nacrescidos pelo Decreto nº 9.462, de 8/8/2018\n,\ne\nrevogados pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n47-A. O Benefício de Prestação Continuada será suspenso em\ncaráter especial quando a pessoa com deficiência exercer atividade\nremunerada, inclusive na condição de microempreendedor individual,\nmediante comprovação da relação trabalhista ou da atividade\nempreendedora.\n(“Caput”\ndo artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "7.617, 617, de 17/11/2011, e revogado pelo Decreto nº 12.534, de 25/6/2025) §§ 6º a 9º (Parágrafos acrescidos pelo Decreto nº 9.462, de 8/8/2018 , e revogados pelo Decreto nº 12.534, de 25/6/2025) Art. 47-A. O Benefício de Prestação Continuada será suspenso em caráter especial quando a pessoa com deficiência exercer atividade remunerada, inclusive na condição de microempreendedor individual, mediante comprovação da relação trabalhista ou da atividade empreendedora. (“Caput” do artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "7.617,\nde 17/11/2011,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\n§§\n6º a 9º\n(Parágrafos\nacrescidos pelo Decreto nº 9.462, de 8/8/2018\n,\ne\nrevogados pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n47-A. O Benefício de Prestação Continuada será suspenso em\ncaráter especial quando a pessoa com deficiência exercer atividade\nremunerada, inclusive na condição de microempreendedor individual,\nmediante comprovação da relação trabalhista ou da atividade\nempreendedora.\n(“Caput”\ndo artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "7.617, de 17/11/2011, e revogado pelo Decreto nº 12.534, de 25/6/2025) §§ 6º a 9º (Parágrafos acrescidos pelo Decreto nº 9.462, de 8/8/2018 , e revogados pelo Decreto nº 12.534, de 25/6/2025) Art. 47-A. O Benefício de Prestação Continuada será suspenso em caráter especial quando a pessoa com deficiência exercer atividade remunerada, inclusive na condição de microempreendedor individual, mediante comprovação da relação trabalhista ou da atividade empreendedora. (“Caput” do artigo acrescido pelo Decreto nº 7.617, de 17/11/2011)"
       },
       "paragrafo:5/item:1993": {
         "device_type": "item",
@@ -1107,8 +1107,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O benefício será mantido caso a defesa apresentada seja\nO benefício será mantido caso a defesa apresentada seja\nacatada.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n47-E. O benefício será suspenso quando:\nI\n- o beneficiário, o seu responsável legal ou o seu procurador for\nnotificado e não apresentar defesa;\nII\n- o beneficiário não entrar em contato com os canais de atendimento\ndo INSS ou os outros canais autorizados para esse fim no prazo de\ntrinta dias, contado da data do bloqueio de que trata o art. 47-C;\nIII\n- a ausência do beneficiário for informada pelo responsável legal\nou pelo procurador, na forma do disposto nos art. 22 a art. 25 da Lei\nnº 10.406, de 10 de janeiro de 2002 - Código Civil;\nIV\n- o beneficiário, o seu responsável legal ou o seu procurador não\nrealizar a inscrição ou a atualização do CadÚnico nos prazos\ndefinidos no art. 21-B da Lei nº 8.742, de 7 de dezembro de 1993;\nV\n- o beneficiário, o seu responsável legal ou o seu procurador não\nrealizar o agendamento da reavaliação da deficiência no prazo de\ntrinta dias após a ciência da notificação enviada para esse fim;\nVI\n- o beneficiário ou seu responsável legal não efetivarem o\nregistro biométrico em uma das bases de dados autorizadas para esse\nfim no prazo de noventa dias após a ciência da notificação\nenviada para esse fim; ou\nVII\n- o benefício pago por meio da modalidade de cartão magnético não\nfor sacado por mais de sessenta dias.",
-        "normalized_text": "Parágrafo único. O benefício será mantido caso a defesa apresentada seja O benefício será mantido caso a defesa apresentada seja acatada. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025) Art. 47-E. O benefício será suspenso quando: I - o beneficiário, o seu responsável legal ou o seu procurador for notificado e não apresentar defesa; II - o beneficiário não entrar em contato com os canais de atendimento do INSS ou os outros canais autorizados para esse fim no prazo de trinta dias, contado da data do bloqueio de que trata o art. 47-C; III - a ausência do beneficiário for informada pelo responsável legal ou pelo procurador, na forma do disposto nos art. 22 a art. 25 da Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil; IV - o beneficiário, o seu responsável legal ou o seu procurador não realizar a inscrição ou a atualização do CadÚnico nos prazos definidos no art. 21-B da Lei nº 8.742, de 7 de dezembro de 1993; V - o beneficiário, o seu responsável legal ou o seu procurador não realizar o agendamento da reavaliação da deficiência no prazo de trinta dias após a ciência da notificação enviada para esse fim; VI - o beneficiário ou seu responsável legal não efetivarem o registro biométrico em uma das bases de dados autorizadas para esse fim no prazo de noventa dias após a ciência da notificação enviada para esse fim; ou VII - o benefício pago por meio da modalidade de cartão magnético não for sacado por mais de sessenta dias."
+        "text": "Parágrafo único. O benefício será mantido caso a defesa apresentada seja\nacatada.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n47-E. O benefício será suspenso quando:\nI\n- o beneficiário, o seu responsável legal ou o seu procurador for\nnotificado e não apresentar defesa;\nII\n- o beneficiário não entrar em contato com os canais de atendimento\ndo INSS ou os outros canais autorizados para esse fim no prazo de\ntrinta dias, contado da data do bloqueio de que trata o art. 47-C;\nIII\n- a ausência do beneficiário for informada pelo responsável legal\nou pelo procurador, na forma do disposto nos art. 22 a art. 25 da Lei\nnº 10.406, de 10 de janeiro de 2002 - Código Civil;\nIV\n- o beneficiário, o seu responsável legal ou o seu procurador não\nrealizar a inscrição ou a atualização do CadÚnico nos prazos\ndefinidos no art. 21-B da Lei nº 8.742, de 7 de dezembro de 1993;\nV\n- o beneficiário, o seu responsável legal ou o seu procurador não\nrealizar o agendamento da reavaliação da deficiência no prazo de\ntrinta dias após a ciência da notificação enviada para esse fim;\nVI\n- o beneficiário ou seu responsável legal não efetivarem o\nregistro biométrico em uma das bases de dados autorizadas para esse\nfim no prazo de noventa dias após a ciência da notificação\nenviada para esse fim; ou\nVII\n- o benefício pago por meio da modalidade de cartão magnético não\nfor sacado por mais de sessenta dias.",
+        "normalized_text": "Parágrafo único. O benefício será mantido caso a defesa apresentada seja acatada. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025) Art. 47-E. O benefício será suspenso quando: I - o beneficiário, o seu responsável legal ou o seu procurador for notificado e não apresentar defesa; II - o beneficiário não entrar em contato com os canais de atendimento do INSS ou os outros canais autorizados para esse fim no prazo de trinta dias, contado da data do bloqueio de que trata o art. 47-C; III - a ausência do beneficiário for informada pelo responsável legal ou pelo procurador, na forma do disposto nos art. 22 a art. 25 da Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil; IV - o beneficiário, o seu responsável legal ou o seu procurador não realizar a inscrição ou a atualização do CadÚnico nos prazos definidos no art. 21-B da Lei nº 8.742, de 7 de dezembro de 1993; V - o beneficiário, o seu responsável legal ou o seu procurador não realizar o agendamento da reavaliação da deficiência no prazo de trinta dias após a ciência da notificação enviada para esse fim; VI - o beneficiário ou seu responsável legal não efetivarem o registro biométrico em uma das bases de dados autorizadas para esse fim no prazo de noventa dias após a ciência da notificação enviada para esse fim; ou VII - o benefício pago por meio da modalidade de cartão magnético não for sacado por mais de sessenta dias."
       },
       "paragrafo:3/alinea:a": {
         "device_type": "alinea",
@@ -1149,8 +1149,8 @@
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º A reativação do crédito do benefício de que trata o inciso II\nA reativação do crédito do benefício de que trata o inciso II\ndo § 3º, quando devida, implicará o pagamento de todos os valores\ndevidos durante o período em que a emissão do crédito esteve\nsuspensa, excetuados os períodos em que o benefício comprovadamente\nnão é devido.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 6º A reativação do crédito do benefício de que trata o inciso II A reativação do crédito do benefício de que trata o inciso II do § 3º, quando devida, implicará o pagamento de todos os valores devidos durante o período em que a emissão do crédito esteve suspensa, excetuados os períodos em que o benefício comprovadamente não é devido. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 6º A reativação do crédito do benefício de que trata o inciso II\ndo § 3º, quando devida, implicará o pagamento de todos os valores\ndevidos durante o período em que a emissão do crédito esteve\nsuspensa, excetuados os períodos em que o benefício comprovadamente\nnão é devido.\n(Artigo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 6º A reativação do crédito do benefício de que trata o inciso II do § 3º, quando devida, implicará o pagamento de todos os valores devidos durante o período em que a emissão do crédito esteve suspensa, excetuados os períodos em que o benefício comprovadamente não é devido. (Artigo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       }
     },
     "Art. 48": {
@@ -1193,50 +1193,50 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O representante legal ou o procurador são obrigados a informar\nO representante legal ou o procurador são obrigados a informar\nao INSS a ocorrência das situações a que se refere o inciso I do\ncaput\n.\n(Parágrafo\núnico transformado em § 1º, com redação dada pelo Decreto nº",
-        "normalized_text": "§ 1º O representante legal ou o procurador são obrigados a informar O representante legal ou o procurador são obrigados a informar ao INSS a ocorrência das situações a que se refere o inciso I do caput . (Parágrafo único transformado em § 1º, com redação dada pelo Decreto nº"
+        "text": "§ 1º O representante legal ou o procurador são obrigados a informar\nao INSS a ocorrência das situações a que se refere o inciso I do\ncaput\n.\n(Parágrafo\núnico transformado em § 1º, com redação dada pelo Decreto nº",
+        "normalized_text": "§ 1º O representante legal ou o procurador são obrigados a informar ao INSS a ocorrência das situações a que se refere o inciso I do caput . (Parágrafo único transformado em § 1º, com redação dada pelo Decreto nº"
       },
       "paragrafo:1/item:9": {
         "device_type": "item",
         "device_label": "item 9",
         "device_path": "paragrafo:1/item:9",
-        "text": "9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias\n462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias\napós a publicação)",
-        "normalized_text": "9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias 462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias\napós a publicação)",
+        "normalized_text": "9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O beneficiário, o seu responsável legal ou o seu procurador\nO beneficiário, o seu responsável legal ou o seu procurador\ndeverá ser comunicado sobre os motivos da cessação do benefício e\nsobre o prazo de trinta dias para a interposição de recurso junto\naos canais de atendimento do INSS ou a outros canais autorizados para\nesse fim.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 2º O beneficiário, o seu responsável legal ou o seu procurador O beneficiário, o seu responsável legal ou o seu procurador deverá ser comunicado sobre os motivos da cessação do benefício e sobre o prazo de trinta dias para a interposição de recurso junto aos canais de atendimento do INSS ou a outros canais autorizados para esse fim. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 2º O beneficiário, o seu responsável legal ou o seu procurador\ndeverá ser comunicado sobre os motivos da cessação do benefício e\nsobre o prazo de trinta dias para a interposição de recurso junto\naos canais de atendimento do INSS ou a outros canais autorizados para\nesse fim.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018,\ne\ncom redação dada pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 2º O beneficiário, o seu responsável legal ou o seu procurador deverá ser comunicado sobre os motivos da cessação do benefício e sobre o prazo de trinta dias para a interposição de recurso junto aos canais de atendimento do INSS ou a outros canais autorizados para esse fim. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, e com redação dada pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º O recurso interposto será analisado pelo Conselho de Recursos da\nO recurso interposto será analisado pelo Conselho de Recursos da\nPrevidência Social - CRPS.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 3º O recurso interposto será analisado pelo Conselho de Recursos da O recurso interposto será analisado pelo Conselho de Recursos da Previdência Social - CRPS. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 3º O recurso interposto será analisado pelo Conselho de Recursos da\nPrevidência Social - CRPS.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 3º O recurso interposto será analisado pelo Conselho de Recursos da Previdência Social - CRPS. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º A interposição de recurso não gera efeito suspensivo.\nA interposição de recurso não gera efeito suspensivo.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 4º A interposição de recurso não gera efeito suspensivo. A interposição de recurso não gera efeito suspensivo. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 4º A interposição de recurso não gera efeito suspensivo.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 4º A interposição de recurso não gera efeito suspensivo. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º O benefício será restabelecido caso o recurso interposto ao\nO benefício será restabelecido caso o recurso interposto ao\nCRPS seja provido, e serão devidos os valores desde a suspensão do\nbenefício, respeitado o teor da decisão.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
-        "normalized_text": "§ 5º O benefício será restabelecido caso o recurso interposto ao O benefício será restabelecido caso o recurso interposto ao CRPS seja provido, e serão devidos os valores desde a suspensão do benefício, respeitado o teor da decisão. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
+        "text": "§ 5º O benefício será restabelecido caso o recurso interposto ao\nCRPS seja provido, e serão devidos os valores desde a suspensão do\nbenefício, respeitado o teor da decisão.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)",
+        "normalized_text": "§ 5º O benefício será restabelecido caso o recurso interposto ao CRPS seja provido, e serão devidos os valores desde a suspensão do benefício, respeitado o teor da decisão. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025)"
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º Não caberá apresentação de novo recurso após a decisão do\nNão caberá apresentação de novo recurso após a decisão do\nCRP.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n48-A.\n(Artigo\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n48-B. Fica vedada a reativação de benefício cessado quando\nesgotadas todas as instâncias administrativas de recurso.\n(Artigo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
-        "normalized_text": "§ 6º Não caberá apresentação de novo recurso após a decisão do Não caberá apresentação de novo recurso após a decisão do CRP. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025) Art. 48-A. (Artigo acrescido pelo Decreto nº 7.617, de 17/11/2011, e revogado pelo Decreto nº 12.534, de 25/6/2025) Art. 48-B. Fica vedada a reativação de benefício cessado quando esgotadas todas as instâncias administrativas de recurso. (Artigo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
+        "text": "§ 6º Não caberá apresentação de novo recurso após a decisão do\nCRP.\n(Parágrafo\nacrescido pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n48-A.\n(Artigo\nacrescido pelo Decreto nº 7.617, de 17/11/2011,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nArt.\n48-B. Fica vedada a reativação de benefício cessado quando\nesgotadas todas as instâncias administrativas de recurso.\n(Artigo\nacrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de\n9/8/2018, em vigor 30 dias após a publicação)",
+        "normalized_text": "§ 6º Não caberá apresentação de novo recurso após a decisão do CRP. (Parágrafo acrescido pelo Decreto nº 12.534, de 25/6/2025) Art. 48-A. (Artigo acrescido pelo Decreto nº 7.617, de 17/11/2011, e revogado pelo Decreto nº 12.534, de 25/6/2025) Art. 48-B. Fica vedada a reativação de benefício cessado quando esgotadas todas as instâncias administrativas de recurso. (Artigo acrescido pelo Decreto nº 9.462, de 8/8/2018, publicado no DOU de 9/8/2018, em vigor 30 dias após a publicação)"
       }
     },
     "Art. 49": {
@@ -1251,22 +1251,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O montante indevidamente pago será corrigido pelo mesmo índice\nO montante indevidamente pago será corrigido pelo mesmo índice\nutilizado para a atualização mensal dos salários de contribuição\nutilizados para apuração dos benefícios do Regime Geral de\nPrevidência Social, e deverá ser restituído, sob pena de inscrição\nem Dívida Ativa e cobrança judicial.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "§ 1º O montante indevidamente pago será corrigido pelo mesmo índice O montante indevidamente pago será corrigido pelo mesmo índice utilizado para a atualização mensal dos salários de contribuição utilizados para apuração dos benefícios do Regime Geral de Previdência Social, e deverá ser restituído, sob pena de inscrição em Dívida Ativa e cobrança judicial. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "§ 1º O montante indevidamente pago será corrigido pelo mesmo índice\nutilizado para a atualização mensal dos salários de contribuição\nutilizados para apuração dos benefícios do Regime Geral de\nPrevidência Social, e deverá ser restituído, sob pena de inscrição\nem Dívida Ativa e cobrança judicial.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "§ 1º O montante indevidamente pago será corrigido pelo mesmo índice utilizado para a atualização mensal dos salários de contribuição utilizados para apuração dos benefícios do Regime Geral de Previdência Social, e deverá ser restituído, sob pena de inscrição em Dívida Ativa e cobrança judicial. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Na hipótese de o beneficiário permanecer com direito ao\nNa hipótese de o beneficiário permanecer com direito ao\nrecebimento do Benefício de Prestação Continuada ou estar em\nusufruto de outro benefício previdenciário regularmente concedido\npelo INSS, poderá devolver o valor indevido de forma parcelada,\natualizado nos moldes do § 1º, em tantas parcelas quantas forem\nnecessárias à liquidação do débito de valor equivalente a trinta\npor cento do valor do benefício em manutenção.",
-        "normalized_text": "§ 2º Na hipótese de o beneficiário permanecer com direito ao Na hipótese de o beneficiário permanecer com direito ao recebimento do Benefício de Prestação Continuada ou estar em usufruto de outro benefício previdenciário regularmente concedido pelo INSS, poderá devolver o valor indevido de forma parcelada, atualizado nos moldes do § 1º, em tantas parcelas quantas forem necessárias à liquidação do débito de valor equivalente a trinta por cento do valor do benefício em manutenção."
+        "text": "§ 2º Na hipótese de o beneficiário permanecer com direito ao\nrecebimento do Benefício de Prestação Continuada ou estar em\nusufruto de outro benefício previdenciário regularmente concedido\npelo INSS, poderá devolver o valor indevido de forma parcelada,\natualizado nos moldes do § 1º, em tantas parcelas quantas forem\nnecessárias à liquidação do débito de valor equivalente a trinta\npor cento do valor do benefício em manutenção.",
+        "normalized_text": "§ 2º Na hipótese de o beneficiário permanecer com direito ao recebimento do Benefício de Prestação Continuada ou estar em usufruto de outro benefício previdenciário regularmente concedido pelo INSS, poderá devolver o valor indevido de forma parcelada, atualizado nos moldes do § 1º, em tantas parcelas quantas forem necessárias à liquidação do débito de valor equivalente a trinta por cento do valor do benefício em manutenção."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º A restituição do valor devido deverá ser feita em única\nA restituição do valor devido deverá ser feita em única\nparcela, no prazo de sessenta dias contados da data da notificação,\nou mediante acordo de parcelamento, em até sessenta meses, na forma\ndo art. 244 do Regulamento da Previdência Social, aprovado pelo\nDecreto nº 3.048, de 1999, ressalvado o pagamento em consignação\nprevisto no § 2º.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
-        "normalized_text": "§ 3º A restituição do valor devido deverá ser feita em única A restituição do valor devido deverá ser feita em única parcela, no prazo de sessenta dias contados da data da notificação, ou mediante acordo de parcelamento, em até sessenta meses, na forma do art. 244 do Regulamento da Previdência Social, aprovado pelo Decreto nº 3.048, de 1999, ressalvado o pagamento em consignação previsto no § 2º. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
+        "text": "§ 3º A restituição do valor devido deverá ser feita em única\nparcela, no prazo de sessenta dias contados da data da notificação,\nou mediante acordo de parcelamento, em até sessenta meses, na forma\ndo art. 244 do Regulamento da Previdência Social, aprovado pelo\nDecreto nº 3.048, de 1999, ressalvado o pagamento em consignação\nprevisto no § 2º.\n(Parágrafo\ncom redação dada pelo Decreto nº 7.617, de 17/11/2011)",
+        "normalized_text": "§ 3º A restituição do valor devido deverá ser feita em única parcela, no prazo de sessenta dias contados da data da notificação, ou mediante acordo de parcelamento, em até sessenta meses, na forma do art. 244 do Regulamento da Previdência Social, aprovado pelo Decreto nº 3.048, de 1999, ressalvado o pagamento em consignação previsto no § 2º. (Parágrafo com redação dada pelo Decreto nº 7.617, de 17/11/2011)"
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
@@ -1279,15 +1279,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º O valor ressarcido será repassado pelo INSS ao Fundo Nacional de\nO valor ressarcido será repassado pelo INSS ao Fundo Nacional de\nAssistência Social.",
-        "normalized_text": "§ 5º O valor ressarcido será repassado pelo INSS ao Fundo Nacional de O valor ressarcido será repassado pelo INSS ao Fundo Nacional de Assistência Social."
+        "text": "§ 5º O valor ressarcido será repassado pelo INSS ao Fundo Nacional de\nAssistência Social.",
+        "normalized_text": "§ 5º O valor ressarcido será repassado pelo INSS ao Fundo Nacional de Assistência Social."
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º Em nenhuma hipótese serão consignados débitos originários de\nEm nenhuma hipótese serão consignados débitos originários de\nbenefícios previdenciários em Benefícios de Prestação\nContinuada.\n(Parágrafo\nacrescido pelo Decreto nº 7.617, de 17/11/2011)\nCAPÍTULOVII\nDAS\nDISPOSIÇÕES GERAIS E TRANSITÓRIAS",
-        "normalized_text": "§ 6º Em nenhuma hipótese serão consignados débitos originários de Em nenhuma hipótese serão consignados débitos originários de benefícios previdenciários em Benefícios de Prestação Continuada. (Parágrafo acrescido pelo Decreto nº 7.617, de 17/11/2011) CAPÍTULOVII DAS DISPOSIÇÕES GERAIS E TRANSITÓRIAS"
+        "text": "§ 6º Em nenhuma hipótese serão consignados débitos originários de\nbenefícios previdenciários em Benefícios de Prestação\nContinuada.\n(Parágrafo\nacrescido pelo Decreto nº 7.617, de 17/11/2011)\nCAPÍTULOVII\nDAS\nDISPOSIÇÕES GERAIS E TRANSITÓRIAS",
+        "normalized_text": "§ 6º Em nenhuma hipótese serão consignados débitos originários de benefícios previdenciários em Benefícios de Prestação Continuada. (Parágrafo acrescido pelo Decreto nº 7.617, de 17/11/2011) CAPÍTULOVII DAS DISPOSIÇÕES GERAIS E TRANSITÓRIAS"
       }
     },
     "Art. 50": {
@@ -1302,8 +1302,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A avaliação da deficiência e da incapacidade, até que se\nA avaliação da deficiência e da incapacidade, até que se\ncumpra o disposto no § 4º do art. 16, ficará restrita ao exame\nmédico pericial e laudo realizados pelos serviços de perícia\nmédica do INSS.\n(Artigo\ncom redação dada pelo Decreto nº 6.564, de 19/9/2008)",
-        "normalized_text": "Parágrafo único. A avaliação da deficiência e da incapacidade, até que se A avaliação da deficiência e da incapacidade, até que se cumpra o disposto no § 4º do art. 16, ficará restrita ao exame médico pericial e laudo realizados pelos serviços de perícia médica do INSS. (Artigo com redação dada pelo Decreto nº 6.564, de 19/9/2008)"
+        "text": "Parágrafo único. A avaliação da deficiência e da incapacidade, até que se\ncumpra o disposto no § 4º do art. 16, ficará restrita ao exame\nmédico pericial e laudo realizados pelos serviços de perícia\nmédica do INSS.\n(Artigo\ncom redação dada pelo Decreto nº 6.564, de 19/9/2008)",
+        "normalized_text": "Parágrafo único. A avaliação da deficiência e da incapacidade, até que se cumpra o disposto no § 4º do art. 16, ficará restrita ao exame médico pericial e laudo realizados pelos serviços de perícia médica do INSS. (Artigo com redação dada pelo Decreto nº 6.564, de 19/9/2008)"
       }
     }
   }

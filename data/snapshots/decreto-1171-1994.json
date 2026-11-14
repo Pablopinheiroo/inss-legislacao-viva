@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -34,8 +34,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. A constituição da Comissão de Ética será comunicada à\nA constituição da Comissão de Ética será comunicada à\nSecretaria da Administração Federal da Presidência da República,\ncom a indicação dos respectivos membros titulares e suplentes.",
-        "normalized_text": "Parágrafo único. A constituição da Comissão de Ética será comunicada à A constituição da Comissão de Ética será comunicada à Secretaria da Administração Federal da Presidência da República, com a indicação dos respectivos membros titulares e suplentes."
+        "text": "Parágrafo único. A constituição da Comissão de Ética será comunicada à\nSecretaria da Administração Federal da Presidência da República,\ncom a indicação dos respectivos membros titulares e suplentes.",
+        "normalized_text": "Parágrafo único. A constituição da Comissão de Ética será comunicada à Secretaria da Administração Federal da Presidência da República, com a indicação dos respectivos membros titulares e suplentes."
       }
     },
     "Art. 3": {

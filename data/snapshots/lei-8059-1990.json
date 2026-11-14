@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -55,64 +55,64 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;\npensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;",
-        "normalized_text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes; pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;"
+        "text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;",
+        "normalized_text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;\npensionista especial o ex-combatente ou dependentes, que percebam pensão especial;",
-        "normalized_text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial; pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;"
+        "text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;",
+        "normalized_text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - pensão-tronco a pensão especial integral;\npensão-tronco a pensão especial integral;",
-        "normalized_text": "III - pensão-tronco a pensão especial integral; pensão-tronco a pensão especial integral;"
+        "text": "III - pensão-tronco a pensão especial integral;",
+        "normalized_text": "III - pensão-tronco a pensão especial integral;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;\ncota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;",
-        "normalized_text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes; cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;"
+        "text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;",
+        "normalized_text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;"
       },
       "caput/inciso:V": {
         "device_type": "inciso",
         "device_label": "inciso V",
         "device_path": "caput/inciso:V",
-        "text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;\nviúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;",
-        "normalized_text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se; viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;"
+        "text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;",
+        "normalized_text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;"
       },
       "caput/inciso:VI": {
         "device_type": "inciso",
         "device_label": "inciso VI",
         "device_path": "caput/inciso:VI",
-        "text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;\nex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;",
-        "normalized_text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado; ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;"
+        "text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;",
+        "normalized_text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;"
       },
       "caput/inciso:VII": {
         "device_type": "inciso",
         "device_label": "inciso VII",
         "device_path": "caput/inciso:VII",
-        "text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;\ncompanheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;",
-        "normalized_text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável; companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;"
+        "text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;",
+        "normalized_text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;"
       },
       "caput/inciso:VIII": {
         "device_type": "inciso",
         "device_label": "inciso VIII",
         "device_path": "caput/inciso:VIII",
-        "text": "VIII - concessão originária a relativa ao ex-combatente;\nconcessão originária a relativa ao ex-combatente;",
-        "normalized_text": "VIII - concessão originária a relativa ao ex-combatente; concessão originária a relativa ao ex-combatente;"
+        "text": "VIII - concessão originária a relativa ao ex-combatente;",
+        "normalized_text": "VIII - concessão originária a relativa ao ex-combatente;"
       },
       "caput/inciso:IX": {
         "device_type": "inciso",
         "device_label": "inciso IX",
         "device_path": "caput/inciso:IX",
-        "text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito.\nreversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito.",
-        "normalized_text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito. reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito."
+        "text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito.",
+        "normalized_text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito."
       }
     },
     "Art. 3": {
@@ -136,15 +136,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes.\nO ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes.",
-        "normalized_text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes. O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes."
+        "text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes.",
+        "normalized_text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos.\nFica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos.",
-        "normalized_text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos. Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos."
+        "text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos.",
+        "normalized_text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos."
       }
     },
     "Art. 5": {
@@ -159,36 +159,36 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - a viúva;\na viúva;",
-        "normalized_text": "I - a viúva; a viúva;"
+        "text": "I - a viúva;",
+        "normalized_text": "I - a viúva;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - a companheira;\na companheira;",
-        "normalized_text": "II - a companheira; a companheira;"
+        "text": "II - a companheira;",
+        "normalized_text": "II - a companheira;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;\no filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;",
-        "normalized_text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos; o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;"
+        "text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;",
+        "normalized_text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - o pai e a mãe inválidos; e\no pai e a mãe inválidos; e",
-        "normalized_text": "IV - o pai e a mãe inválidos; e o pai e a mãe inválidos; e"
+        "text": "IV - o pai e a mãe inválidos; e",
+        "normalized_text": "IV - o pai e a mãe inválidos; e"
       },
       "caput/inciso:V": {
         "device_type": "inciso",
         "device_label": "inciso V",
         "device_path": "caput/inciso:V",
-        "text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos.\no irmão e a irmã, solteiros, menores de 21 anos ou inválidos.",
-        "normalized_text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos. o irmão e a irmã, solteiros, menores de 21 anos ou inválidos."
+        "text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos.",
+        "normalized_text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos."
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",
@@ -226,22 +226,22 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - por meio de certidões do registro civil;\npor meio de certidões do registro civil;",
-        "normalized_text": "I - por meio de certidões do registro civil; por meio de certidões do registro civil;"
+        "text": "I - por meio de certidões do registro civil;",
+        "normalized_text": "I - por meio de certidões do registro civil;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - por declaração expressa do ex-combatente, quando em vida;\npor declaração expressa do ex-combatente, quando em vida;",
-        "normalized_text": "II - por declaração expressa do ex-combatente, quando em vida; por declaração expressa do ex-combatente, quando em vida;"
+        "text": "II - por declaração expressa do ex-combatente, quando em vida;",
+        "normalized_text": "II - por declaração expressa do ex-combatente, quando em vida;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial.\npor qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial.",
-        "normalized_text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial. por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial."
+        "text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial.",
+        "normalized_text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial."
       }
     },
     "Art. 8": {
@@ -256,29 +256,29 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - à ex-esposa que não tenha direito a alimentos;\nà ex-esposa que não tenha direito a alimentos;",
-        "normalized_text": "I - à ex-esposa que não tenha direito a alimentos; à ex-esposa que não tenha direito a alimentos;"
+        "text": "I - à ex-esposa que não tenha direito a alimentos;",
+        "normalized_text": "I - à ex-esposa que não tenha direito a alimentos;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;\nà viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;",
-        "normalized_text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado; à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;"
+        "text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;",
+        "normalized_text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;\nà companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;",
-        "normalized_text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária; à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;"
+        "text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;",
+        "normalized_text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente.\nao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente.",
-        "normalized_text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente. ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente."
+        "text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente.",
+        "normalized_text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente."
       }
     },
     "Art. 9": {
@@ -293,22 +293,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Havendo excesso, este se destinará aos demais dependentes.\nHavendo excesso, este se destinará aos demais dependentes.",
-        "normalized_text": "§ 1º Havendo excesso, este se destinará aos demais dependentes. Havendo excesso, este se destinará aos demais dependentes."
+        "text": "§ 1º Havendo excesso, este se destinará aos demais dependentes.",
+        "normalized_text": "§ 1º Havendo excesso, este se destinará aos demais dependentes."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa.\nA falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa.",
-        "normalized_text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa. A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa."
+        "text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa.",
+        "normalized_text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias.\nO direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias.",
-        "normalized_text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias. O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias."
+        "text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias.",
+        "normalized_text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias."
       }
     },
     "Art. 10": {
@@ -350,15 +350,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União.\nO pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União.",
-        "normalized_text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União. O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União."
+        "text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União.",
+        "normalized_text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista.\nAs dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista.",
-        "normalized_text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista. As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista."
+        "text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista.",
+        "normalized_text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista."
       }
     },
     "Art. 14": {
@@ -373,29 +373,29 @@
         "device_type": "inciso",
         "device_label": "inciso I",
         "device_path": "caput/inciso:I",
-        "text": "I - pela morte do pensionista;\npela morte do pensionista;",
-        "normalized_text": "I - pela morte do pensionista; pela morte do pensionista;"
+        "text": "I - pela morte do pensionista;",
+        "normalized_text": "I - pela morte do pensionista;"
       },
       "caput/inciso:II": {
         "device_type": "inciso",
         "device_label": "inciso II",
         "device_path": "caput/inciso:II",
-        "text": "II - pelo casamento do pensionista;\npelo casamento do pensionista;",
-        "normalized_text": "II - pelo casamento do pensionista; pelo casamento do pensionista;"
+        "text": "II - pelo casamento do pensionista;",
+        "normalized_text": "II - pelo casamento do pensionista;"
       },
       "caput/inciso:III": {
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "caput/inciso:III",
-        "text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;\npara o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;",
-        "normalized_text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade; para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;"
+        "text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;",
+        "normalized_text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;"
       },
       "caput/inciso:IV": {
         "device_type": "inciso",
         "device_label": "inciso IV",
         "device_path": "caput/inciso:IV",
-        "text": "IV - para o pensionista inválido, pela cessação da invalidez.\npara o pensionista inválido, pela cessação da invalidez.",
-        "normalized_text": "IV - para o pensionista inválido, pela cessação da invalidez. para o pensionista inválido, pela cessação da invalidez."
+        "text": "IV - para o pensionista inválido, pela cessação da invalidez.",
+        "normalized_text": "IV - para o pensionista inválido, pela cessação da invalidez."
       },
       "paragrafo:unico": {
         "device_type": "paragrafo",

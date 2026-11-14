@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 3,
-  "captured_at": "2026-11-14T11:35:44Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-14T12:34:56Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -43,8 +43,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Aqueles que foram afastados em processos administrativos,\nAqueles que foram afastados em processos administrativos,\ninstalados com base na legislação de exceção, sem direito ao\ncontraditório e à própria defesa, e impedidos de conhecer os\nmotivos e fundamentos da decisão, serão reintegrados em seus\ncargos.\nCAPÍTULO II\nDA\nDECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO",
-        "normalized_text": "Parágrafo único. Aqueles que foram afastados em processos administrativos, Aqueles que foram afastados em processos administrativos, instalados com base na legislação de exceção, sem direito ao contraditório e à própria defesa, e impedidos de conhecer os motivos e fundamentos da decisão, serão reintegrados em seus cargos. CAPÍTULO II DA DECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO"
+        "text": "Parágrafo único. Aqueles que foram afastados em processos administrativos,\ninstalados com base na legislação de exceção, sem direito ao\ncontraditório e à própria defesa, e impedidos de conhecer os\nmotivos e fundamentos da decisão, serão reintegrados em seus\ncargos.\nCAPÍTULO II\nDA\nDECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO",
+        "normalized_text": "Parágrafo único. Aqueles que foram afastados em processos administrativos, instalados com base na legislação de exceção, sem direito ao contraditório e à própria defesa, e impedidos de conhecer os motivos e fundamentos da decisão, serão reintegrados em seus cargos. CAPÍTULO II DA DECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO"
       }
     },
     "Art. 2": {
@@ -59,15 +59,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido\nNo caso previsto no inciso XIII, o período de mandato exercido\ngratuitamente conta-se apenas para efeito de aposentadoria no serviço\npúblico e de previdência social.",
-        "normalized_text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido No caso previsto no inciso XIII, o período de mandato exercido gratuitamente conta-se apenas para efeito de aposentadoria no serviço público e de previdência social."
+        "text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido\ngratuitamente conta-se apenas para efeito de aposentadoria no serviço\npúblico e de previdência social.",
+        "normalized_text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido gratuitamente conta-se apenas para efeito de aposentadoria no serviço público e de previdência social."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração\nFica assegurado o direito de requerer a correspondente declaração\naos sucessores ou dependentes daquele que seria beneficiário da\ncondição de anistiado político.\nCAPÍTULO\nIII\nDA REPARAÇÃO\nECONÔMICA DE CARÁTER INDENIZATÓRIO",
-        "normalized_text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração Fica assegurado o direito de requerer a correspondente declaração aos sucessores ou dependentes daquele que seria beneficiário da condição de anistiado político. CAPÍTULO III DA REPARAÇÃO ECONÔMICA DE CARÁTER INDENIZATÓRIO"
+        "text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração\naos sucessores ou dependentes daquele que seria beneficiário da\ncondição de anistiado político.\nCAPÍTULO\nIII\nDA REPARAÇÃO\nECONÔMICA DE CARÁTER INDENIZATÓRIO",
+        "normalized_text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração aos sucessores ou dependentes daquele que seria beneficiário da condição de anistiado político. CAPÍTULO III DA REPARAÇÃO ECONÔMICA DE CARÁTER INDENIZATÓRIO"
       }
     },
     "Art. 3": {
@@ -82,15 +82,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º A reparação econômica em prestação única não é acumulável\nA reparação econômica em prestação única não é acumulável\ncom a reparação econômica em prestação mensal, permanente e\ncontinuada.",
-        "normalized_text": "§ 1º A reparação econômica em prestação única não é acumulável A reparação econômica em prestação única não é acumulável com a reparação econômica em prestação mensal, permanente e continuada."
+        "text": "§ 1º A reparação econômica em prestação única não é acumulável\ncom a reparação econômica em prestação mensal, permanente e\ncontinuada.",
+        "normalized_text": "§ 1º A reparação econômica em prestação única não é acumulável com a reparação econômica em prestação mensal, permanente e continuada."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º A reparação econômica, nas condições estabelecidas no\nA reparação econômica, nas condições estabelecidas no\ncaput\ndo art. 8º do Ato das Disposições Constitucionais Transitórias,\nserá concedida mediante portaria do Ministro de Estado da Justiça,\napós parecer favorável da Comissão de Anistia de que trata o art.\n12 desta Lei.\nSeção I\nDa\nReparação Econômica em Prestação Única",
-        "normalized_text": "§ 2º A reparação econômica, nas condições estabelecidas no A reparação econômica, nas condições estabelecidas no caput do art. 8º do Ato das Disposições Constitucionais Transitórias, será concedida mediante portaria do Ministro de Estado da Justiça, após parecer favorável da Comissão de Anistia de que trata o art. 12 desta Lei. Seção I Da Reparação Econômica em Prestação Única"
+        "text": "§ 2º A reparação econômica, nas condições estabelecidas no\ncaput\ndo art. 8º do Ato das Disposições Constitucionais Transitórias,\nserá concedida mediante portaria do Ministro de Estado da Justiça,\napós parecer favorável da Comissão de Anistia de que trata o art.\n12 desta Lei.\nSeção I\nDa\nReparação Econômica em Prestação Única",
+        "normalized_text": "§ 2º A reparação econômica, nas condições estabelecidas no caput do art. 8º do Ato das Disposições Constitucionais Transitórias, será concedida mediante portaria do Ministro de Estado da Justiça, após parecer favorável da Comissão de Anistia de que trata o art. 12 desta Lei. Seção I Da Reparação Econômica em Prestação Única"
       }
     },
     "Art. 4": {
@@ -105,15 +105,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo,\nPara o cálculo do pagamento mencionado no caput deste artigo,\nconsidera-se como um ano o período inferior a doze meses.",
-        "normalized_text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo, Para o cálculo do pagamento mencionado no caput deste artigo, considera-se como um ano o período inferior a doze meses."
+        "text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo,\nconsidera-se como um ano o período inferior a doze meses.",
+        "normalized_text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo, considera-se como um ano o período inferior a doze meses."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em\nEm nenhuma hipótese o valor da reparação econômica em\nprestação única será superior a R$ 100.000,00 (cem mil reais).\nSeção\nII\nDa\nReparação Econômica em Prestação Mensal, Permanente e Continuada",
-        "normalized_text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em Em nenhuma hipótese o valor da reparação econômica em prestação única será superior a R$ 100.000,00 (cem mil reais). Seção II Da Reparação Econômica em Prestação Mensal, Permanente e Continuada"
+        "text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em\nprestação única será superior a R$ 100.000,00 (cem mil reais).\nSeção\nII\nDa\nReparação Econômica em Prestação Mensal, Permanente e Continuada",
+        "normalized_text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em prestação única será superior a R$ 100.000,00 (cem mil reais). Seção II Da Reparação Econômica em Prestação Mensal, Permanente e Continuada"
       }
     },
     "Art. 5": {
@@ -137,43 +137,43 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º O valor da prestação mensal, permanente e continuada, será\nO valor da prestação mensal, permanente e continuada, será\nestabelecido conforme os elementos de prova oferecidos pelo\nrequerente, informações de órgãos oficiais, bem como de\nfundações, empresas públicas ou privadas, ou empresas mistas sob\ncontrole estatal, ordens, sindicatos ou conselhos profissionais a que\no anistiado político estava vinculado ao sofrer a punição, podendo\nser arbitrado até mesmo com base em pesquisa de mercado.",
-        "normalized_text": "§ 1º O valor da prestação mensal, permanente e continuada, será O valor da prestação mensal, permanente e continuada, será estabelecido conforme os elementos de prova oferecidos pelo requerente, informações de órgãos oficiais, bem como de fundações, empresas públicas ou privadas, ou empresas mistas sob controle estatal, ordens, sindicatos ou conselhos profissionais a que o anistiado político estava vinculado ao sofrer a punição, podendo ser arbitrado até mesmo com base em pesquisa de mercado."
+        "text": "§ 1º O valor da prestação mensal, permanente e continuada, será\nestabelecido conforme os elementos de prova oferecidos pelo\nrequerente, informações de órgãos oficiais, bem como de\nfundações, empresas públicas ou privadas, ou empresas mistas sob\ncontrole estatal, ordens, sindicatos ou conselhos profissionais a que\no anistiado político estava vinculado ao sofrer a punição, podendo\nser arbitrado até mesmo com base em pesquisa de mercado.",
+        "normalized_text": "§ 1º O valor da prestação mensal, permanente e continuada, será estabelecido conforme os elementos de prova oferecidos pelo requerente, informações de órgãos oficiais, bem como de fundações, empresas públicas ou privadas, ou empresas mistas sob controle estatal, ordens, sindicatos ou conselhos profissionais a que o anistiado político estava vinculado ao sofrer a punição, podendo ser arbitrado até mesmo com base em pesquisa de mercado."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo\nPara o cálculo do valor da prestação de que trata este artigo\nserão considerados os direitos e vantagens incorporados à situação\njurídica da categoria profissional a que pertencia o anistiado\npolítico, observado o disposto no § 4º deste artigo.",
-        "normalized_text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo Para o cálculo do valor da prestação de que trata este artigo serão considerados os direitos e vantagens incorporados à situação jurídica da categoria profissional a que pertencia o anistiado político, observado o disposto no § 4º deste artigo."
+        "text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo\nserão considerados os direitos e vantagens incorporados à situação\njurídica da categoria profissional a que pertencia o anistiado\npolítico, observado o disposto no § 4º deste artigo.",
+        "normalized_text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo serão considerados os direitos e vantagens incorporados à situação jurídica da categoria profissional a que pertencia o anistiado político, observado o disposto no § 4º deste artigo."
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º As promoções asseguradas ao anistiado político independerão\nAs promoções asseguradas ao anistiado político independerão\nde seu tempo de admissão ou incorporação de seu posto ou\ngraduação, sendo obedecidos os prazos de permanência em atividades\nprevistos nas leis e regulamentos vigentes, vedada a exigência de\nsatisfação das condições incompatíveis com a situação pessoal\ndo beneficiário.",
-        "normalized_text": "§ 3º As promoções asseguradas ao anistiado político independerão As promoções asseguradas ao anistiado político independerão de seu tempo de admissão ou incorporação de seu posto ou graduação, sendo obedecidos os prazos de permanência em atividades previstos nas leis e regulamentos vigentes, vedada a exigência de satisfação das condições incompatíveis com a situação pessoal do beneficiário."
+        "text": "§ 3º As promoções asseguradas ao anistiado político independerão\nde seu tempo de admissão ou incorporação de seu posto ou\ngraduação, sendo obedecidos os prazos de permanência em atividades\nprevistos nas leis e regulamentos vigentes, vedada a exigência de\nsatisfação das condições incompatíveis com a situação pessoal\ndo beneficiário.",
+        "normalized_text": "§ 3º As promoções asseguradas ao anistiado político independerão de seu tempo de admissão ou incorporação de seu posto ou graduação, sendo obedecidos os prazos de permanência em atividades previstos nas leis e regulamentos vigentes, vedada a exigência de satisfação das condições incompatíveis com a situação pessoal do beneficiário."
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação\nPara os efeitos desta Lei, considera-se paradigma a situação\nfuncional de maior frequência constatada entre os pares ou colegas\ncontemporâneos do anistiado que apresentavam o mesmo posicionamento\nno cargo, emprego ou posto quando da punição.",
-        "normalized_text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação Para os efeitos desta Lei, considera-se paradigma a situação funcional de maior frequência constatada entre os pares ou colegas contemporâneos do anistiado que apresentavam o mesmo posicionamento no cargo, emprego ou posto quando da punição."
+        "text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação\nfuncional de maior frequência constatada entre os pares ou colegas\ncontemporâneos do anistiado que apresentavam o mesmo posicionamento\nno cargo, emprego ou posto quando da punição.",
+        "normalized_text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação funcional de maior frequência constatada entre os pares ou colegas contemporâneos do anistiado que apresentavam o mesmo posicionamento no cargo, emprego ou posto quando da punição."
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até\nDesde que haja manifestação do beneficiário, no prazo de até\ndois anos a contar da entrada em vigor desta Lei, será revisto, pelo\nórgão competente, no prazo de até seis meses a contar da data do\nrequerimento, o valor da aposentadoria e da pensão excepcional,\nrelativa ao anistiado político, que tenha sido reduzido ou cancelado\nem virtude de critérios previdenciários ou estabelecido por ordens\nnormativas ou de serviço do Instituto Nacional do Seguro Social -\nINSS, respeitado o disposto no art. 7º desta Lei.",
-        "normalized_text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até Desde que haja manifestação do beneficiário, no prazo de até dois anos a contar da entrada em vigor desta Lei, será revisto, pelo órgão competente, no prazo de até seis meses a contar da data do requerimento, o valor da aposentadoria e da pensão excepcional, relativa ao anistiado político, que tenha sido reduzido ou cancelado em virtude de critérios previdenciários ou estabelecido por ordens normativas ou de serviço do Instituto Nacional do Seguro Social - INSS, respeitado o disposto no art. 7º desta Lei."
+        "text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até\ndois anos a contar da entrada em vigor desta Lei, será revisto, pelo\nórgão competente, no prazo de até seis meses a contar da data do\nrequerimento, o valor da aposentadoria e da pensão excepcional,\nrelativa ao anistiado político, que tenha sido reduzido ou cancelado\nem virtude de critérios previdenciários ou estabelecido por ordens\nnormativas ou de serviço do Instituto Nacional do Seguro Social -\nINSS, respeitado o disposto no art. 7º desta Lei.",
+        "normalized_text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até dois anos a contar da entrada em vigor desta Lei, será revisto, pelo órgão competente, no prazo de até seis meses a contar da data do requerimento, o valor da aposentadoria e da pensão excepcional, relativa ao anistiado político, que tenha sido reduzido ou cancelado em virtude de critérios previdenciários ou estabelecido por ordens normativas ou de serviço do Instituto Nacional do Seguro Social - INSS, respeitado o disposto no art. 7º desta Lei."
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
         "device_label": "§ 6º",
         "device_path": "paragrafo:6",
-        "text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar\nOs valores apurados nos termos deste artigo poderão gerar\nefeitos financeiros a partir de 5 de outubro de 1988, considerando-se\npara início da retroatividade e da prescrição quinquenal a data do\nprotocolo da petição ou requerimento inicial de anistia, de acordo\ncom os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de",
-        "normalized_text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar Os valores apurados nos termos deste artigo poderão gerar efeitos financeiros a partir de 5 de outubro de 1988, considerando-se para início da retroatividade e da prescrição quinquenal a data do protocolo da petição ou requerimento inicial de anistia, de acordo com os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de"
+        "text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar\nefeitos financeiros a partir de 5 de outubro de 1988, considerando-se\npara início da retroatividade e da prescrição quinquenal a data do\nprotocolo da petição ou requerimento inicial de anistia, de acordo\ncom os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de",
+        "normalized_text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar efeitos financeiros a partir de 5 de outubro de 1988, considerando-se para início da retroatividade e da prescrição quinquenal a data do protocolo da petição ou requerimento inicial de anistia, de acordo com os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de"
       },
       "paragrafo:6/item:1932": {
         "device_type": "item",
@@ -195,15 +195,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Se o anistiado político era, na data da punição,\nSe o anistiado político era, na data da punição,\ncomprovadamente remunerado por mais de uma atividade laboral, não\neventual, o valor da prestação mensal, permanente e continuada,\nserá igual à soma das remunerações a que tinha direito, até o\nlimite estabelecido no caput deste artigo, obedecidas as regras\nconstitucionais de não-acumulação de cargos, funções, empregos\nou proventos.",
-        "normalized_text": "§ 1º Se o anistiado político era, na data da punição, Se o anistiado político era, na data da punição, comprovadamente remunerado por mais de uma atividade laboral, não eventual, o valor da prestação mensal, permanente e continuada, será igual à soma das remunerações a que tinha direito, até o limite estabelecido no caput deste artigo, obedecidas as regras constitucionais de não-acumulação de cargos, funções, empregos ou proventos."
+        "text": "§ 1º Se o anistiado político era, na data da punição,\ncomprovadamente remunerado por mais de uma atividade laboral, não\neventual, o valor da prestação mensal, permanente e continuada,\nserá igual à soma das remunerações a que tinha direito, até o\nlimite estabelecido no caput deste artigo, obedecidas as regras\nconstitucionais de não-acumulação de cargos, funções, empregos\nou proventos.",
+        "normalized_text": "§ 1º Se o anistiado político era, na data da punição, comprovadamente remunerado por mais de uma atividade laboral, não eventual, o valor da prestação mensal, permanente e continuada, será igual à soma das remunerações a que tinha direito, até o limite estabelecido no caput deste artigo, obedecidas as regras constitucionais de não-acumulação de cargos, funções, empregos ou proventos."
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo,\nPara o cálculo da prestação mensal de que trata este artigo,\nserão asseguradas, na inatividade, na aposentadoria ou na reserva,\nas promoções ao cargo, emprego, posto ou graduação a que teria\ndireito se estivesse em serviço ativo.",
-        "normalized_text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo, Para o cálculo da prestação mensal de que trata este artigo, serão asseguradas, na inatividade, na aposentadoria ou na reserva, as promoções ao cargo, emprego, posto ou graduação a que teria direito se estivesse em serviço ativo."
+        "text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo,\nserão asseguradas, na inatividade, na aposentadoria ou na reserva,\nas promoções ao cargo, emprego, posto ou graduação a que teria\ndireito se estivesse em serviço ativo.",
+        "normalized_text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo, serão asseguradas, na inatividade, na aposentadoria ou na reserva, as promoções ao cargo, emprego, posto ou graduação a que teria direito se estivesse em serviço ativo."
       }
     },
     "Art. 8": {
@@ -227,8 +227,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Os valores pagos a título de indenização a anistiados\nOs valores pagos a título de indenização a anistiados\npolíticos são isentos do Imposto de Renda.\nCAPÍTULO IV\nDAS\nCOMPETÊNCIAS ADMINISTRATIVAS",
-        "normalized_text": "Parágrafo único. Os valores pagos a título de indenização a anistiados Os valores pagos a título de indenização a anistiados políticos são isentos do Imposto de Renda. CAPÍTULO IV DAS COMPETÊNCIAS ADMINISTRATIVAS"
+        "text": "Parágrafo único. Os valores pagos a título de indenização a anistiados\npolíticos são isentos do Imposto de Renda.\nCAPÍTULO IV\nDAS\nCOMPETÊNCIAS ADMINISTRATIVAS",
+        "normalized_text": "Parágrafo único. Os valores pagos a título de indenização a anistiados políticos são isentos do Imposto de Renda. CAPÍTULO IV DAS COMPETÊNCIAS ADMINISTRATIVAS"
       }
     },
     "Art. 10": {
@@ -252,8 +252,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a\nO anistiado político ou seu dependente poderá solicitar, a\nqualquer tempo, a revisão do valor da correspondente prestação\nmensal, permanente e continuada, toda vez que esta não esteja de\nacordo com os arts. 6º, 7º, 8º e 9º desta Lei.",
-        "normalized_text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a O anistiado político ou seu dependente poderá solicitar, a qualquer tempo, a revisão do valor da correspondente prestação mensal, permanente e continuada, toda vez que esta não esteja de acordo com os arts. 6º, 7º, 8º e 9º desta Lei."
+        "text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a\nqualquer tempo, a revisão do valor da correspondente prestação\nmensal, permanente e continuada, toda vez que esta não esteja de\nacordo com os arts. 6º, 7º, 8º e 9º desta Lei.",
+        "normalized_text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a qualquer tempo, a revisão do valor da correspondente prestação mensal, permanente e continuada, toda vez que esta não esteja de acordo com os arts. 6º, 7º, 8º e 9º desta Lei."
       }
     },
     "Art. 12": {
@@ -268,36 +268,36 @@
         "device_type": "paragrafo",
         "device_label": "§ 1º",
         "device_path": "paragrafo:1",
-        "text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de\nOs membros da Comissão de Anistia serão designados por meio de\nportaria do Ministro de Estado da Mulher, da Família e dos Direitos\nHumanos, e participarão da Comissão, entre outros, 1 (um)\nrepresentante do Ministério da Defesa, indicado pelo respectivo\nMinistro de Estado, e 1 (um) representante dos anistiados.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
-        "normalized_text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de Os membros da Comissão de Anistia serão designados por meio de portaria do Ministro de Estado da Mulher, da Família e dos Direitos Humanos, e participarão da Comissão, entre outros, 1 (um) representante do Ministério da Defesa, indicado pelo respectivo Ministro de Estado, e 1 (um) representante dos anistiados. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+        "text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de\nportaria do Ministro de Estado da Mulher, da Família e dos Direitos\nHumanos, e participarão da Comissão, entre outros, 1 (um)\nrepresentante do Ministério da Defesa, indicado pelo respectivo\nMinistro de Estado, e 1 (um) representante dos anistiados.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de portaria do Ministro de Estado da Mulher, da Família e dos Direitos Humanos, e participarão da Comissão, entre outros, 1 (um) representante do Ministério da Defesa, indicado pelo respectivo Ministro de Estado, e 1 (um) representante dos anistiados. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
       },
       "paragrafo:2": {
         "device_type": "paragrafo",
         "device_label": "§ 2º",
         "device_path": "paragrafo:2",
-        "text": "§ 2º O representante dos anistiados será indicado pelas respectivas\nO representante dos anistiados será indicado pelas respectivas\nassociações e designado conforme procedimento estabelecido pelo\nMinistro de Estado da Mulher, da Família e dos Direitos Humanos.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
-        "normalized_text": "§ 2º O representante dos anistiados será indicado pelas respectivas O representante dos anistiados será indicado pelas respectivas associações e designado conforme procedimento estabelecido pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+        "text": "§ 2º O representante dos anistiados será indicado pelas respectivas\nassociações e designado conforme procedimento estabelecido pelo\nMinistro de Estado da Mulher, da Família e dos Direitos Humanos.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 2º O representante dos anistiados será indicado pelas respectivas associações e designado conforme procedimento estabelecido pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
       },
       "paragrafo:3": {
         "device_type": "paragrafo",
         "device_label": "§ 3º",
         "device_path": "paragrafo:3",
-        "text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar\nPara os fins desta Lei, a Comissão de Anistia poderá realizar\ndiligências, requerer informações e documentos, ouvir testemunhas\ne emitir pareceres técnicos com o objetivo de instruir os processos\ne requerimentos, bem como arbitrar, com base nas provas obtidas, o\nvalor das indenizações previstas nos arts. 4º e 5º nos casos que\nnão for possível identificar o tempo exato de punição do\ninteressado.",
-        "normalized_text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar Para os fins desta Lei, a Comissão de Anistia poderá realizar diligências, requerer informações e documentos, ouvir testemunhas e emitir pareceres técnicos com o objetivo de instruir os processos e requerimentos, bem como arbitrar, com base nas provas obtidas, o valor das indenizações previstas nos arts. 4º e 5º nos casos que não for possível identificar o tempo exato de punição do interessado."
+        "text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar\ndiligências, requerer informações e documentos, ouvir testemunhas\ne emitir pareceres técnicos com o objetivo de instruir os processos\ne requerimentos, bem como arbitrar, com base nas provas obtidas, o\nvalor das indenizações previstas nos arts. 4º e 5º nos casos que\nnão for possível identificar o tempo exato de punição do\ninteressado.",
+        "normalized_text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar diligências, requerer informações e documentos, ouvir testemunhas e emitir pareceres técnicos com o objetivo de instruir os processos e requerimentos, bem como arbitrar, com base nas provas obtidas, o valor das indenizações previstas nos arts. 4º e 5º nos casos que não for possível identificar o tempo exato de punição do interessado."
       },
       "paragrafo:4": {
         "device_type": "paragrafo",
         "device_label": "§ 4º",
         "device_path": "paragrafo:4",
-        "text": "§ 4º As requisições e as decisões proferidas pelo Ministro de\nAs requisições e as decisões proferidas pelo Ministro de\nEstado da Mulher, da Família e dos Direitos Humanos nos processos de\nanistia política serão obrigatoriamente cumpridas no prazo de 60\n(sessenta) dias, por todos os órgãos da administração pública e\npor quaisquer outras entidades a que estejam dirigidas, ressalvada a\ndisponibilidade orçamentária.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
-        "normalized_text": "§ 4º As requisições e as decisões proferidas pelo Ministro de As requisições e as decisões proferidas pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos nos processos de anistia política serão obrigatoriamente cumpridas no prazo de 60 (sessenta) dias, por todos os órgãos da administração pública e por quaisquer outras entidades a que estejam dirigidas, ressalvada a disponibilidade orçamentária. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+        "text": "§ 4º As requisições e as decisões proferidas pelo Ministro de\nEstado da Mulher, da Família e dos Direitos Humanos nos processos de\nanistia política serão obrigatoriamente cumpridas no prazo de 60\n(sessenta) dias, por todos os órgãos da administração pública e\npor quaisquer outras entidades a que estejam dirigidas, ressalvada a\ndisponibilidade orçamentária.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 4º As requisições e as decisões proferidas pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos nos processos de anistia política serão obrigatoriamente cumpridas no prazo de 60 (sessenta) dias, por todos os órgãos da administração pública e por quaisquer outras entidades a que estejam dirigidas, ressalvada a disponibilidade orçamentária. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
       },
       "paragrafo:5": {
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a\nPara a finalidade de bem desempenhar suas atribuições legais, a\nComissão de Anistia poderá requisitar das empresas públicas,\nprivadas ou de economia mista, no período abrangido pela anistia, os\ndocumentos e registros funcionais do postulante à anistia que tenha\npertencido aos seus quadros funcionais, não podendo essas empresas\nrecusar-se à devida exibição dos referidos documentos, desde que\noficialmente solicitado por expediente administrativo da Comissão e\nrequisitar, quando julgar necessário, informações e assessoria das\nassociações dos anistiados.\nCAPÍTULO V\nDAS\nDISPOSIÇÕES GERAIS E FINAIS\nArt. 13 No caso de falecimento do anistiado político, o direito à\nreparação econômica transfere-se aos seus dependentes, observados\nos critérios fixados nos regimes jurídicos dos servidores civis e\nmilitares da União.",
-        "normalized_text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a Para a finalidade de bem desempenhar suas atribuições legais, a Comissão de Anistia poderá requisitar das empresas públicas, privadas ou de economia mista, no período abrangido pela anistia, os documentos e registros funcionais do postulante à anistia que tenha pertencido aos seus quadros funcionais, não podendo essas empresas recusar-se à devida exibição dos referidos documentos, desde que oficialmente solicitado por expediente administrativo da Comissão e requisitar, quando julgar necessário, informações e assessoria das associações dos anistiados. CAPÍTULO V DAS DISPOSIÇÕES GERAIS E FINAIS Art. 13 No caso de falecimento do anistiado político, o direito à reparação econômica transfere-se aos seus dependentes, observados os critérios fixados nos regimes jurídicos dos servidores civis e militares da União."
+        "text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a\nComissão de Anistia poderá requisitar das empresas públicas,\nprivadas ou de economia mista, no período abrangido pela anistia, os\ndocumentos e registros funcionais do postulante à anistia que tenha\npertencido aos seus quadros funcionais, não podendo essas empresas\nrecusar-se à devida exibição dos referidos documentos, desde que\noficialmente solicitado por expediente administrativo da Comissão e\nrequisitar, quando julgar necessário, informações e assessoria das\nassociações dos anistiados.\nCAPÍTULO V\nDAS\nDISPOSIÇÕES GERAIS E FINAIS\nArt. 13 No caso de falecimento do anistiado político, o direito à\nreparação econômica transfere-se aos seus dependentes, observados\nos critérios fixados nos regimes jurídicos dos servidores civis e\nmilitares da União.",
+        "normalized_text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a Comissão de Anistia poderá requisitar das empresas públicas, privadas ou de economia mista, no período abrangido pela anistia, os documentos e registros funcionais do postulante à anistia que tenha pertencido aos seus quadros funcionais, não podendo essas empresas recusar-se à devida exibição dos referidos documentos, desde que oficialmente solicitado por expediente administrativo da Comissão e requisitar, quando julgar necessário, informações e assessoria das associações dos anistiados. CAPÍTULO V DAS DISPOSIÇÕES GERAIS E FINAIS Art. 13 No caso de falecimento do anistiado político, o direito à reparação econômica transfere-se aos seus dependentes, observados os critérios fixados nos regimes jurídicos dos servidores civis e militares da União."
       }
     },
     "Art. 14": {
@@ -348,8 +348,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as\nTratando-se de anistias concedidas aos militares, as\nreintegrações e promoções, bem como as reparações econômicas,\nreconhecidas pela Comissão, serão efetuadas pelo Ministério da\nDefesa, no prazo de sessenta dias após a comunicação do Ministério\nda Justiça, à exceção dos casos especificados no art. 2º, inciso\nV, desta Lei.",
-        "normalized_text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as Tratando-se de anistias concedidas aos militares, as reintegrações e promoções, bem como as reparações econômicas, reconhecidas pela Comissão, serão efetuadas pelo Ministério da Defesa, no prazo de sessenta dias após a comunicação do Ministério da Justiça, à exceção dos casos especificados no art. 2º, inciso V, desta Lei."
+        "text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as\nreintegrações e promoções, bem como as reparações econômicas,\nreconhecidas pela Comissão, serão efetuadas pelo Ministério da\nDefesa, no prazo de sessenta dias após a comunicação do Ministério\nda Justiça, à exceção dos casos especificados no art. 2º, inciso\nV, desta Lei.",
+        "normalized_text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as reintegrações e promoções, bem como as reparações econômicas, reconhecidas pela Comissão, serão efetuadas pelo Ministério da Defesa, no prazo de sessenta dias após a comunicação do Ministério da Justiça, à exceção dos casos especificados no art. 2º, inciso V, desta Lei."
       }
     },
     "Art. 19": {
@@ -364,8 +364,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Os recursos necessários ao pagamento das reparações\nOs recursos necessários ao pagamento das reparações\neconômicas de caráter indenizatório terão rubrica própria no\nOrçamento Geral da União e serão determinados pelo Ministério da\nJustiça, com destinação específica para civis (Ministério do\nPlanejamento, Orçamento e Gestão) e militares (Ministério da\nDefesa).",
-        "normalized_text": "Parágrafo único. Os recursos necessários ao pagamento das reparações Os recursos necessários ao pagamento das reparações econômicas de caráter indenizatório terão rubrica própria no Orçamento Geral da União e serão determinados pelo Ministério da Justiça, com destinação específica para civis (Ministério do Planejamento, Orçamento e Gestão) e militares (Ministério da Defesa)."
+        "text": "Parágrafo único. Os recursos necessários ao pagamento das reparações\neconômicas de caráter indenizatório terão rubrica própria no\nOrçamento Geral da União e serão determinados pelo Ministério da\nJustiça, com destinação específica para civis (Ministério do\nPlanejamento, Orçamento e Gestão) e militares (Ministério da\nDefesa).",
+        "normalized_text": "Parágrafo único. Os recursos necessários ao pagamento das reparações econômicas de caráter indenizatório terão rubrica própria no Orçamento Geral da União e serão determinados pelo Ministério da Justiça, com destinação específica para civis (Ministério do Planejamento, Orçamento e Gestão) e militares (Ministério da Defesa)."
       }
     },
     "Art. 20": {
@@ -380,8 +380,8 @@
         "device_type": "paragrafo",
         "device_label": "Parágrafo único",
         "device_path": "paragrafo:unico",
-        "text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a\nPara efeito do cumprimento do disposto neste artigo, a\nAdvocacia-Geral da União e as Procuradorias Jurídicas das\nautarquias e fundações públicas federais ficam autorizadas a\ncelebrar transação nos processos movidos contra a União ou suas\nentidades.",
-        "normalized_text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a Para efeito do cumprimento do disposto neste artigo, a Advocacia-Geral da União e as Procuradorias Jurídicas das autarquias e fundações públicas federais ficam autorizadas a celebrar transação nos processos movidos contra a União ou suas entidades."
+        "text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a\nAdvocacia-Geral da União e as Procuradorias Jurídicas das\nautarquias e fundações públicas federais ficam autorizadas a\ncelebrar transação nos processos movidos contra a União ou suas\nentidades.",
+        "normalized_text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a Advocacia-Geral da União e as Procuradorias Jurídicas das autarquias e fundações públicas federais ficam autorizadas a celebrar transação nos processos movidos contra a União ou suas entidades."
       }
     },
     "Art. 21": {
@@ -405,8 +405,8 @@
         "device_type": "item",
         "device_label": "item 8",
         "device_path": "caput/item:8",
-        "text": "8.213, de 24 de julho de 1991.\n213, de 24 de julho de 1991.\nCongresso\nNacional, em 13 de novembro de 2002; 181º da Independência e 114º\nda República.\nSenador\nRAMEZ TEBET\nPresidente\nda Mesa do Congresso Nacional",
-        "normalized_text": "8.213, de 24 de julho de 1991. 213, de 24 de julho de 1991. Congresso Nacional, em 13 de novembro de 2002; 181º da Independência e 114º da República. Senador RAMEZ TEBET Presidente da Mesa do Congresso Nacional"
+        "text": "8.213, de 24 de julho de 1991.\nCongresso\nNacional, em 13 de novembro de 2002; 181º da Independência e 114º\nda República.\nSenador\nRAMEZ TEBET\nPresidente\nda Mesa do Congresso Nacional",
+        "normalized_text": "8.213, de 24 de julho de 1991. Congresso Nacional, em 13 de novembro de 2002; 181º da Independência e 114º da República. Senador RAMEZ TEBET Presidente da Mesa do Congresso Nacional"
       }
     }
   }
