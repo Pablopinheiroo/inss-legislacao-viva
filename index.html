@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-14">
-  <script defer src="app.js?v=20261114-18"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-15">
+  <script defer src="app.js?v=20261114-19"></script>
 </head>
 <body>
   <header class="topbar">
@@ -206,8 +206,22 @@
                 <button id="law-train-article" class="text-button" type="button">Gerar questões deste artigo</button>
                 <button id="law-train-quiz" class="text-button" type="button" disabled>Treinar C/E deste artigo</button>
                 <button id="law-train-facts" class="text-button" type="button">Identificar prazos, requisitos e exceções</button>
+                <button id="law-memory-create" class="text-button" type="button" disabled>Criar cartão de memorização</button>
               </div>
             </div>
+            <section id="law-memory-create-panel" class="memory-editor-panel hidden" aria-label="Criar cartão de memorização">
+              <div class="memory-editor-heading">
+                <div><span class="eyebrow">NOVO CARTÃO</span><h3>Criar cartão deste artigo</h3><p>A pergunta ficará na frente. Ao revelar, você verá sua resposta complementar e a redação da lei.</p></div>
+              </div>
+              <label for="law-memory-create-prompt">Pergunta ou comando para lembrar</label>
+              <textarea id="law-memory-create-prompt" rows="2" placeholder="Ex.: Quais são os requisitos para..."></textarea>
+              <label for="law-memory-create-answer">Resposta ou pontos que deseja memorizar (opcional)</label>
+              <textarea id="law-memory-create-answer" rows="3" placeholder="Escreva os pontos principais que devem aparecer na conferência..."></textarea>
+              <div class="memory-editor-actions">
+                <button id="law-memory-create-save" class="primary-button" type="button">Salvar cartão</button>
+                <button id="law-memory-create-cancel" class="secondary-button" type="button">Cancelar</button>
+              </div>
+            </section>
           </article>
           <section id="law-training-panel" class="law-training-panel hidden" aria-live="polite">
             <header class="law-training-header">
@@ -699,12 +713,14 @@
       <div>
         <p class="eyebrow">MODO DE ESTUDO · LEMBRANÇA ATIVA</p>
         <h1>Memorização ativa</h1>
-        <p class="subtitle">Tente lembrar o conteúdo sem consultar. Depois compare sua resposta com o texto da lei.</p>
+        <p class="subtitle">Tente lembrar antes de consultar. O baralho reúne artigos da biblioteca, cartões pessoais, favoritos e alterações legislativas confirmadas.</p>
       </div>
       <div class="quiz-config memory-config">
         <label class="select-wrap"><span>Matéria</span><select id="memory-category"><option value="todas">Todas as matérias</option></select></label>
-        <label class="select-wrap"><span>Cartões</span><select id="memory-length"><option value="5">5 cartões</option><option value="10" selected>10 cartões</option><option value="todas">Todos disponíveis</option></select></label>
+        <label class="select-wrap"><span>Cartões por sessão</span><select id="memory-length"><option value="5">5 cartões</option><option value="10" selected>10 cartões</option><option value="20">20 cartões</option><option value="todas">Todos disponíveis</option></select></label>
+        <label class="select-wrap"><span>Origem</span><select id="memory-source-filter"><option value="todas">Todos os cartões</option><option value="favoritos">Artigos favoritos</option><option value="alteracoes">Alterações legislativas</option><option value="personalizados">Meus cartões</option></select></label>
         <button id="start-memory" class="primary-button" type="button" disabled>Começar revisão</button>
+        <button id="memory-import-favorites" class="secondary-button" type="button">Criar cartões dos favoritos</button>
       </div>
     </section>
 
@@ -735,6 +751,7 @@
     <section id="memory-card" class="quiz-card memory-card hidden" aria-live="polite">
       <div class="quiz-card-top">
         <span id="memory-category-label" class="quiz-chip"></span>
+        <span id="memory-origin-tag" class="memory-origin-tag"></span>
         <span id="memory-progress" class="quiz-progress"></span>
       </div>
       <div class="quiz-law-line">
@@ -755,7 +772,18 @@
           <strong>Compare com o texto oficial salvo</strong>
           <p>Veja o que você escreveu e confira o artigo. A avaliação é sua: o sistema não corrige o texto digitado.</p>
         </div>
-        <div class="memory-literal-wrap">
+        <div id="memory-custom-answer-wrap" class="memory-custom-answer-wrap hidden">
+          <span class="memory-kicker">SUA RESPOSTA DE REFERÊNCIA</span>
+          <pre id="memory-custom-answer" class="memory-literal"></pre>
+        </div>
+        <section id="memory-change-comparison" class="memory-change-comparison hidden">
+          <p id="memory-change-summary"></p>
+          <div class="memory-change-columns">
+            <div><span>REDAÇÃO ANTERIOR</span><pre id="memory-previous-literal"></pre></div>
+            <div><span>REDAÇÃO ATUAL</span><pre id="memory-current-literal"></pre></div>
+          </div>
+        </section>
+        <div id="memory-literal-wrap" class="memory-literal-wrap">
           <span class="memory-kicker">TEXTO DO ARTIGO</span>
           <pre id="memory-literal" class="memory-literal"></pre>
         </div>
