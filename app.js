@@ -3,6 +3,7 @@ const QUESTIONS_URL = "data/questoes.json";
 const LAWS_URL = "data/laws.json";
 const ERROR_BANK_URL = "data/encontre-erro.json";
 const ARTICLE_BANK_URL = "data/descubra-artigo.json";
+const MULTI_CE_BANK_URL = "data/afirmacoes-por-artigo.json";
 const LAST_SEEN_KEY = "radarLegislativo.lastSeen";
 const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
@@ -18,6 +19,8 @@ let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
 let articleQuestions = [];
 let articleGameState = { questions: [], index: 0, selected: null, answers: [] };
+let multiCEGroups = [];
+let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -883,23 +886,240 @@ function nextQuestion() {
   $("#answer-false").disabled = false;
   showQuestion();
 }
+
+// -------------------- Modo Várias afirmações sobre o mesmo artigo --------------------
+function multiCECategoryForLaw(lawId) {
+  if (lawId === "decreto-6029-2007" || lawId === "decreto-1171-1994") return "Ética";
+  if (lawId === "lei-8112-1990" || lawId === "lei-9784-1999" || lawId === "lei-8429-1992") return "Direito Administrativo";
+  return "Direito Previdenciário";
+}
+async function loadMultiCEBank() {
+  const note=$("#multi-ce-count-note");
+  try {
+    const response=await fetch(MULTI_CE_BANK_URL+"?v="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("HTTP "+response.status);
+    const data=await response.json();
+    const bank=Array.isArray(data.article_sets)?data.article_sets:[];
+    const lawIds=[...new Set(bank.map(group=>group.law_id))];
+    const pairs=await Promise.all(lawIds.map(async id=>{
+      try{
+        const res=await fetch("data/snapshots/"+encodeURIComponent(id)+".json?v="+Date.now(),{cache:"no-store"});
+        if(!res.ok)throw new Error("HTTP "+res.status);
+        return [id,await res.json()];
+      }catch(error){
+        console.warn("Snapshot indisponível para Várias afirmações:",id,error);
+        return [id,null];
+      }
+    }));
+    const snapshots=Object.fromEntries(pairs);
+    let suspended=0;
+    let newest=0;
+    multiCEGroups=bank.filter(group=>{
+      const snapshot=snapshots[group.law_id];
+      const article=snapshot?.articles?.[group.article_key];
+      if(!article||!Array.isArray(group.statements)||group.statements.length<2){
+        suspended++;
+        return false;
+      }
+      const normalizedArticle=normalizeLegalForMatch(article);
+      const valid=group.statements.every(item=>
+        typeof item.answer==="boolean" &&
+        item.explanation &&
+        normalizeLegalForMatch(item.validation_phrase||"") &&
+        normalizedArticle.includes(normalizeLegalForMatch(item.validation_phrase))
+      );
+      if(!valid){
+        suspended++;
+        return false;
+      }
+      group.literal_text=article;
+      group.category=multiCECategoryForLaw(group.law_id);
+      group.snapshot_captured_at=snapshot.captured_at||null;
+      const stamp=snapshot.captured_at?new Date(snapshot.captured_at).getTime():0;
+      if(Number.isFinite(stamp))newest=Math.max(newest,stamp);
+      return true;
+    });
+    const select=$("#multi-ce-category");
+    select.replaceChildren();
+    const all=document.createElement("option");
+    all.value="todas";all.textContent="Todas as matérias";select.append(all);
+    [...new Set(multiCEGroups.map(g=>g.category))].sort((a,b)=>a.localeCompare(b,"pt-BR")).forEach(category=>{
+      const option=document.createElement("option");
+      option.value=category;option.textContent=category;select.append(option);
+    });
+    $("#start-multi-ce").disabled=multiCEGroups.length===0;
+    const capture=newest?" Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
+    note.textContent=multiCEGroups.length+" artigos disponíveis, com "+multiCEGroups.reduce((n,g)=>n+g.statements.length,0)+" afirmações."+capture+
+      (suspended?" "+suspended+" conjunto(s) suspenso(s) por incompatibilidade com a captura.":" Todos os conjuntos passaram pela conferência.");
+    if(!multiCEGroups.length)note.textContent+=" Atualize as capturas legais e tente novamente.";
+  }catch(error){
+    multiCEGroups=[];
+    $("#start-multi-ce").disabled=true;
+    note.textContent="Não foi possível carregar o banco ou conferir os textos legais. Recarregue o site e tente novamente.";
+    console.error(error);
+  }
+}
+function selectedMultiCEPool(){
+  const category=$("#multi-ce-category").value;
+  return multiCEGroups.filter(group=>category==="todas"||group.category===category);
+}
+function startMultiCEGame(onlyGroups=null){
+  const pool=onlyGroups||selectedMultiCEPool();
+  if(!pool.length){
+    $("#multi-ce-count-note").textContent="Não há artigos disponíveis para essa seleção.";
+    return;
+  }
+  const value=$("#multi-ce-length").value;
+  const amount=value==="todas"?pool.length:Number(value);
+  const selected=onlyGroups?shuffle(pool):shuffle(pool).slice(0,Math.min(amount,pool.length));
+  multiCEState={groups:selected,articleIndex:0,statementIndex:0,selected:null,answers:[]};
+  $("#multi-ce-welcome").classList.add("hidden");
+  $("#multi-ce-summary").classList.add("hidden");
+  $("#multi-ce-card").classList.remove("hidden");
+  showMultiCEStatement();
+}
+function showMultiCEStatement(){
+  const group=multiCEState.groups[multiCEState.articleIndex];
+  const item=group.statements[multiCEState.statementIndex];
+  multiCEState.selected=null;
+  $("#multi-ce-category-label").textContent=group.category;
+  $("#multi-ce-progress").textContent=
+    "Artigo "+(multiCEState.articleIndex+1)+" de "+multiCEState.groups.length+
+    " · Afirmação "+(multiCEState.statementIndex+1)+" de "+group.statements.length;
+  $("#multi-ce-law").textContent=group.law_title;
+  $("#multi-ce-article-label").textContent=group.article_label;
+  $("#multi-ce-topic").textContent=group.topic;
+  $("#multi-ce-article-text").textContent=group.literal_text;
+  $("#multi-ce-prompt").textContent=item.prompt;
+  $("#multi-ce-true").disabled=false;
+  $("#multi-ce-false").disabled=false;
+  $("#multi-ce-true").classList.remove("selected");
+  $("#multi-ce-false").classList.remove("selected");
+  $("#multi-ce-true").setAttribute("aria-pressed","false");
+  $("#multi-ce-false").setAttribute("aria-pressed","false");
+  $("#multi-ce-submit").disabled=true;
+  $("#multi-ce-feedback").classList.add("hidden");
+  $("#multi-ce-correction").classList.add("hidden");
+  $("#multi-ce-article-text").parentElement.open=false;
+  $("#multi-ce-next").textContent=multiCEState.statementIndex<group.statements.length-1
+    ?"Próxima afirmação →"
+    :multiCEState.articleIndex===multiCEState.groups.length-1?"Ver resultado →":"Próximo artigo →";
+}
+function chooseMultiCEAnswer(value){
+  if(!$("#multi-ce-feedback").classList.contains("hidden"))return;
+  multiCEState.selected=value;
+  $("#multi-ce-true").classList.toggle("selected",value===true);
+  $("#multi-ce-false").classList.toggle("selected",value===false);
+  $("#multi-ce-true").setAttribute("aria-pressed",String(value===true));
+  $("#multi-ce-false").setAttribute("aria-pressed",String(value===false));
+  $("#multi-ce-submit").disabled=false;
+}
+function submitMultiCEAnswer(){
+  if(multiCEState.selected===null)return;
+  const group=multiCEState.groups[multiCEState.articleIndex];
+  const item=group.statements[multiCEState.statementIndex];
+  const correct=multiCEState.selected===item.answer;
+  multiCEState.answers.push({group,item,chosen:multiCEState.selected,correct});
+  $("#multi-ce-result").textContent=correct?"Você acertou! ✓":"Você errou. ✕";
+  $("#multi-ce-result").className="feedback-result "+(correct?"correct":"incorrect");
+  $("#multi-ce-explanation").textContent=item.explanation;
+  const correction=$("#multi-ce-correction");
+  if(!item.answer&&item.correction){
+    correction.textContent="Ajuste importante: "+item.correction;
+    correction.classList.remove("hidden");
+  }else correction.classList.add("hidden");
+  $("#multi-ce-source").href=group.source_url;
+  $("#multi-ce-feedback").classList.remove("hidden");
+  $("#multi-ce-true").disabled=true;
+  $("#multi-ce-false").disabled=true;
+  $("#multi-ce-submit").disabled=true;
+}
+function nextMultiCEStatement(){
+  const group=multiCEState.groups[multiCEState.articleIndex];
+  if(multiCEState.statementIndex<group.statements.length-1){
+    multiCEState.statementIndex++;
+  }else if(multiCEState.articleIndex<multiCEState.groups.length-1){
+    multiCEState.articleIndex++;
+    multiCEState.statementIndex=0;
+  }else{
+    showMultiCESummary();
+    return;
+  }
+  showMultiCEStatement();
+}
+function showMultiCESummary(){
+  $("#multi-ce-card").classList.add("hidden");
+  $("#multi-ce-summary").classList.remove("hidden");
+  const total=multiCEState.answers.length;
+  const correct=multiCEState.answers.filter(a=>a.correct).length;
+  const percentage=total?Math.round(correct/total*100):0;
+  $("#multi-ce-score").textContent=correct+" de "+total+" afirmações corretas";
+  $("#multi-ce-score-note").textContent="Aproveitamento: "+percentage+"%. "+(correct===total?"Excelente! Você acertou tudo.":"Confira as justificativas e retome os artigos em que teve dificuldade.");
+  const breakdown=$("#multi-ce-breakdown");
+  breakdown.replaceChildren();
+  const heading=document.createElement("h3");
+  heading.textContent="Desempenho por artigo";
+  const rows=document.createElement("div");
+  rows.className="multi-ce-result-list";
+  multiCEState.groups.forEach(group=>{
+    const answers=multiCEState.answers.filter(a=>a.group.id===group.id);
+    const right=answers.filter(a=>a.correct).length;
+    const row=document.createElement("div");
+    row.className="multi-ce-result-row";
+    const name=document.createElement("strong");
+    const score=document.createElement("span");
+    name.textContent=group.law_title+" · "+group.article_label;
+    score.textContent=right+" de "+answers.length+" acertos";
+    row.append(name,score);
+    rows.append(row);
+  });
+  breakdown.append(heading,rows);
+  const mistakes=multiCEState.answers.filter(a=>!a.correct);
+  const mistakeBox=$("#multi-ce-mistakes");
+  mistakeBox.replaceChildren();
+  if(!mistakes.length){
+    mistakeBox.textContent="Nenhuma afirmação errada neste treino.";
+  }else{
+    const title=document.createElement("h3");
+    title.textContent="Afirmações para revisar";
+    const list=document.createElement("div");
+    list.className="mistake-list";
+    mistakes.forEach(answer=>{
+      const row=document.createElement("div");
+      row.className="mistake-row";
+      const prompt=document.createElement("strong");
+      const detail=document.createElement("span");
+      prompt.textContent=answer.group.article_label+" · "+answer.item.prompt;
+      detail.textContent="Sua resposta: "+(answer.chosen?"Certo":"Errado")+" · Gabarito: "+(answer.item.answer?"Certo":"Errado");
+      row.append(prompt,detail);
+      list.append(row);
+    });
+    mistakeBox.append(title,list);
+  }
+  const failedIds=new Set(mistakes.map(a=>a.group.id));
+  $("#multi-ce-retry-mistakes").classList.toggle("hidden",failedIds.size===0);
+}
+
 function showView(view) {
   const quiz = view === "quiz";
   const cloze = view === "cloze";
   const findError = view === "find-error";
   const article = view === "article";
+  const multiCE = view === "multi-ce";
   const radar = view === "radar";
   $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
   $("#cloze-view").classList.toggle("hidden", !cloze);
   $("#find-error-view").classList.toggle("hidden", !findError);
   $("#article-view").classList.toggle("hidden", !article);
+  $("#multi-ce-view").classList.toggle("hidden", !multiCE);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
   $("#tab-find-error").classList.toggle("active", findError);
   $("#tab-article").classList.toggle("active", article);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article] ].forEach(([id, active]) => {
+  $("#tab-multi-ce").classList.toggle("active", multiCE);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -907,6 +1127,7 @@ function showView(view) {
   else if (cloze) $("#cloze-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (findError) $("#find-error-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (article) $("#article-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (multiCE) $("#multi-ce-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -922,6 +1143,7 @@ $("#tab-quiz").addEventListener("click", () => showView("quiz"));
 $("#tab-cloze").addEventListener("click", () => showView("cloze"));
 $("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#tab-article").addEventListener("click", () => showView("article"));
+$("#tab-multi-ce").addEventListener("click", () => showView("multi-ce"));
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
@@ -940,6 +1162,16 @@ $("#restart-article").addEventListener("click", () => startArticleGame());
 $("#article-retry-mistakes").addEventListener("click", () => {
   const misses = articleGameState.answers.filter(answer => !answer.correct).map(answer => answer.item);
   startArticleGame(misses);
+});
+$("#start-multi-ce").addEventListener("click", () => startMultiCEGame());
+$("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
+$("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
+$("#multi-ce-submit").addEventListener("click", submitMultiCEAnswer);
+$("#multi-ce-next").addEventListener("click", nextMultiCEStatement);
+$("#multi-ce-restart").addEventListener("click", () => startMultiCEGame());
+$("#multi-ce-retry-mistakes").addEventListener("click", () => {
+  const failed = new Set(multiCEState.answers.filter(answer => !answer.correct).map(answer => answer.group.id));
+  startMultiCEGame(multiCEGroups.filter(group => failed.has(group.id)));
 });
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
@@ -961,3 +1193,4 @@ loadQuestionBank();
 loadClozeLaws();
 loadFindErrorBank();
 loadArticleGameBank();
+loadMultiCEBank();
