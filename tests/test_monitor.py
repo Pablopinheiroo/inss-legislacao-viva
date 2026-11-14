@@ -1,9 +1,26 @@
 import unittest
 
-from scripts.monitor import baseline_must_be_rebuilt, compare, make_snapshot, split_articles
+from scripts.monitor import baseline_must_be_rebuilt, compare, make_snapshot, split_articles, validate_law_identity
 
 
 class MonitorTests(unittest.TestCase):
+    def test_source_identity_accepts_formatted_law_number(self):
+        law = {"id": "lei-13985-2020"}
+        validate_law_identity(
+            "LEI Nº 13.985, DE 7 DE ABRIL DE 2020. Texto da lei.",
+            law,
+            "https://www2.camara.leg.br/lei.html",
+        )
+
+    def test_source_identity_rejects_generic_portal_homepage(self):
+        law = {"id": "lei-13985-2020"}
+        with self.assertRaises(ValueError):
+            validate_law_identity(
+                "Notícias do governo COP31 e agenda do presidente em 2026.",
+                law,
+                "https://www.planalto.gov.br/ccivil_03/lei/l13985.htm",
+            )
+
     def test_split_articles_and_paragraphs(self):
         result = split_articles("Lei teste\nArt. 1º Texto inicial.\n§ 1º Um parágrafo.\nArt. 2º Segundo artigo.")
         self.assertIn("Art. 1", result)
