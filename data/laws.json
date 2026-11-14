@@ -4,8 +4,8 @@
     "title": "Constituição da República Federativa do Brasil de 1988",
     "short_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
     "category": "Constituição",
-    "url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html",
-    "source_name": "Câmara dos Deputados — Legislação Informatizada",
+    "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+    "source_name": "Câmara dos Deputados — Constituição atualizada",
     "include_articles": [
       "Art. 5",
       "Art. 6",
@@ -42,10 +42,13 @@
     "edital_item": "14.2.2 e 14.2.3",
     "enabled": true,
     "fetch_urls": [
-      "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html",
-      "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html"
     ],
-    "monitor_mode": "texto"
+    "monitor_mode": "texto",
+    "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+    "source_note": "A captura guarda somente os arts. 5º a 17, 37 a 41, 149 e 193 a 204, usados como recorte do edital.",
+    "require_all_articles": true,
+    "snapshot_scope": "selected_articles"
   },
   {
     "id": "decreto-1171-1994",
@@ -436,6 +439,9 @@
       "https://portalin.inss.gov.br/in/540"
     ],
     "monitor_mode": "index",
-    "monitor_note": "Monitoramento do histórico de atos modificadores; não compara o texto artigo por artigo."
+    "monitor_note": "Monitoramento do histórico de atos modificadores; não compara o texto artigo por artigo.",
+    "source_revision": "Histórico oficial atualizado em 12/08/2026; última alteração listada: IN PRES/INSS nº 212/2026",
+    "source_note": "Acompanhamento pelo histórico oficial de atos modificadores, sem extração artigo por artigo.",
+    "snapshot_scope": "official_change_index"
   }
 ]
