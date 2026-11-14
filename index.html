@@ -58,7 +58,16 @@
 
     <section class="section-heading"><div><h2>Histórico de alterações</h2><p id="results-caption">Carregando histórico...</p></div><button id="refresh-button" class="text-button" type="button">Recarregar painel ↻</button></section>
     <section id="change-list" class="change-list" aria-live="polite"><div class="empty-state"><h3>Carregando informações</h3><p>Consultando o arquivo de monitoramento.</p></div></section>
-    <section class="sources-section"><div class="section-heading"><div><h2>Normas acompanhadas</h2><p>Fontes públicas oficiais cadastradas no projeto.</p></div></div><div id="law-list" class="law-grid"></div></section>
+    <section class="sources-section">
+      <div class="section-heading"><div><h2>Normas acompanhadas</h2><p>Fontes públicas oficiais cadastradas no projeto.</p></div></div>
+      <details class="tracked-laws-disclosure">
+        <summary>
+          <span>Exibir lista de normas</span>
+          <small id="tracked-laws-count">Carregando...</small>
+        </summary>
+        <div id="law-list" class="law-grid"></div>
+      </details>
+    </section>
     <footer class="footer-note"><strong>Confirme sempre na fonte oficial.</strong><span>O painel compara capturas de texto. Ele não determina sozinho a data de publicação, a vigência ou o alcance jurídico da mudança.</span></footer>
   </main>
 
@@ -123,6 +132,7 @@
               <select id="law-article-filter">
                 <option value="todos">Todos os artigos</option>
                 <option value="favoritos">Favoritos</option>
+                <option value="estudados">Estudados</option>
                 <option value="nao-estudados">Não estudados</option>
               </select>
             </label>
@@ -146,6 +156,7 @@
               <div>
                 <span class="law-current-kicker">TEXTO DA LEGISLAÇÃO</span>
                 <h3 id="law-current-article-title">Selecione um artigo</h3>
+                <span id="law-current-study-status" class="law-study-status hidden" role="status" aria-live="polite"></span>
               </div>
               <div class="law-current-actions">
                 <button id="law-favorite-article" class="secondary-button" type="button" disabled>☆ Favoritar artigo</button>

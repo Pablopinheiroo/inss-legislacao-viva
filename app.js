@@ -144,7 +144,10 @@ function renderChanges() {
 function renderLaws() {
   const list = $("#law-list");
   list.replaceChildren();
-  (dashboardData && dashboardData.laws ? dashboardData.laws : []).forEach(law => {
+  const trackedLaws = dashboardData && Array.isArray(dashboardData.laws) ? dashboardData.laws : [];
+  const trackedCount = $("#tracked-laws-count");
+  if (trackedCount) trackedCount.textContent = trackedLaws.length + (trackedLaws.length === 1 ? " norma" : " normas");
+  trackedLaws.forEach(law => {
     const link = document.createElement("a");
     link.className = "law-item";
     link.href = law.url;
@@ -566,6 +569,7 @@ function filteredLegalEntries() {
   return legalEntries.filter(([article]) => {
     const key = legalArticleKey(legalSelectedLaw.id, article);
     if (mode === "favoritos") return favorites.has(key);
+    if (mode === "estudados") return studied.has(key);
     if (mode === "nao-estudados") return !studied.has(key);
     return true;
   });
@@ -575,16 +579,25 @@ function renderLegalArticlePicker() {
   const select = $("#law-article-select");
   const entries = filteredLegalEntries();
   const previousValue = legalSelectedArticle;
+  const studied = legalStudiedSet();
+  const favorites = legalFavoritesSet();
+  const mode = $("#law-article-filter").value || "todos";
   select.replaceChildren();
+
   if (!entries.length) {
     select.append(new Option("Nenhum artigo nesta lista", ""));
     select.disabled = true;
     $("#law-previous-article").disabled = true;
     $("#law-next-article").disabled = true;
     $("#law-current-article-title").textContent = "Nenhum artigo para mostrar";
-    $("#law-article-text").textContent = $("#law-article-filter").value === "favoritos"
-      ? "Você ainda não favoritou artigos desta norma."
-      : "Todos os artigos desta norma já estão marcados como estudados.";
+    $("#law-current-study-status").textContent = "";
+    $("#law-current-study-status").className = "law-study-status hidden";
+    const emptyMessages = {
+      favoritos: "Você ainda não favoritou artigos desta norma.",
+      estudados: "Você ainda não marcou artigos desta norma como estudados.",
+      "nao-estudados": "Todos os artigos desta norma já estão marcados como estudados."
+    };
+    $("#law-article-text").textContent = emptyMessages[mode] || "Não há artigos disponíveis nesta lista.";
     $("#law-favorite-article").disabled = true;
     $("#law-mark-studied").disabled = true;
     $("#law-components-details").hidden = true;
@@ -592,7 +605,14 @@ function renderLegalArticlePicker() {
     $("#law-article-count").textContent = "0 artigos nesta lista";
     return;
   }
-  entries.forEach(([article]) => select.append(new Option(article, article)));
+
+  entries.forEach(([article]) => {
+    const key = legalArticleKey(legalSelectedLaw.id, article);
+    const labels = [article];
+    if (studied.has(key)) labels.push("✓ Estudado");
+    if (favorites.has(key)) labels.push("★ Favorito");
+    select.append(new Option(labels.join(" · "), article));
+  });
   select.disabled = false;
   const next = entries.some(([article]) => article === previousValue)
     ? previousValue
@@ -613,13 +633,25 @@ function renderLegalArticle() {
   const articleKey = legalArticleKey(legalSelectedLaw.id, article);
   const studied = legalStudiedSet();
   const favorites = legalFavoritesSet();
+  const isStudied = studied.has(articleKey);
   $("#law-current-article-title").textContent = article;
   $("#law-article-text").textContent = text;
+
+  const studyStatus = $("#law-current-study-status");
+  studyStatus.textContent = isStudied ? "✓ Artigo estudado" : "Ainda não estudado";
+  studyStatus.className = "law-study-status" + (isStudied ? " is-studied" : "");
+  studyStatus.title = isStudied
+    ? "Este artigo está marcado como estudado neste navegador."
+    : "Este artigo ainda não foi marcado como estudado neste navegador.";
+
   $("#law-favorite-article").disabled = false;
   $("#law-favorite-article").textContent = favorites.has(articleKey) ? "★ Artigo favorito" : "☆ Favoritar artigo";
+  $("#law-favorite-article").setAttribute("aria-pressed", String(favorites.has(articleKey)));
   $("#law-mark-studied").disabled = false;
-  $("#law-mark-studied").textContent = studied.has(articleKey) ? "✓ Estudado · desfazer" : "Marcar como estudado";
+  $("#law-mark-studied").textContent = isStudied ? "Marcar como não estudado" : "Marcar como estudado";
+  $("#law-mark-studied").setAttribute("aria-pressed", String(isStudied));
   $("#law-train-article").disabled = text.trim().length < 80;
+
   const components = legalSnapshot.components && legalSnapshot.components[article]
     ? Object.entries(legalSnapshot.components[article])
     : [];
@@ -630,13 +662,18 @@ function renderLegalArticle() {
   $("#law-components-details > summary").textContent =
     "Ver partes identificadas deste artigo (" + deviceCount + " dispositivos)";
   renderLegalComponents(components, article);
+
   const lawStatus = legalLawStatus(legalSelectedLaw.id);
   const captureDate = formatDate(legalSnapshot.captured_at);
   $("#law-reader-capture-note").textContent = "Captura consultada em " + captureDate
     + (lawStatus && lawStatus.source_status === "fallback_used" ? " · fonte alternativa usada" : "")
     + (lawStatus && lawStatus.source_status === "recovered" ? " · consulta recuperada após nova tentativa" : "");
-  $("#law-article-count").textContent = legalEntries.length + " artigos na norma";
   const visible = filteredLegalEntries();
+  const studiedCount = legalEntries.filter(([name]) =>
+    studied.has(legalArticleKey(legalSelectedLaw.id, name))
+  ).length;
+  $("#law-article-count").textContent = visible.length + " na lista · "
+    + studiedCount + "/" + legalEntries.length + " estudados";
   const index = visible.findIndex(([name]) => name === article);
   $("#law-previous-article").disabled = index <= 0;
   $("#law-next-article").disabled = index < 0 || index >= visible.length - 1;

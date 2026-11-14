@@ -484,3 +484,20 @@
   .law-device-jump{font-size:11px}
   .legal-article-text{padding:15px 13px;font-size:15.5px;line-height:1.85}
 }
+
+
+/* Lista de normas acompanhadas recolhida inicialmente. */
+.tracked-laws-disclosure{border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden}
+.tracked-laws-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:12px 15px;color:#38517e;font-size:11px;font-weight:750;cursor:pointer;list-style-position:inside}
+.tracked-laws-disclosure>summary::marker{color:#7890b8}
+.tracked-laws-disclosure>summary small{color:#8390a3;font-size:10px;font-weight:600}
+.tracked-laws-disclosure[open]>summary{border-bottom:1px solid var(--line);background:#f8faff}
+.tracked-laws-disclosure>.law-grid{padding:12px}
+.law-current-study-status-placeholder{display:block}
+.law-study-status{display:inline-flex;align-items:center;min-height:24px;margin-top:6px;padding:4px 9px;border:1px solid #e1e7f0;border-radius:999px;background:#f5f7fb;color:#6d7a8f;font-size:10px;font-weight:750}
+.law-study-status.is-studied{border-color:#bfe5d0;background:#effaf3;color:#237647}
+@media(max-width:760px){
+  .tracked-laws-disclosure>summary{min-height:46px;padding:11px 12px}
+  .tracked-laws-disclosure>.law-grid{padding:9px}
+  .law-study-status{font-size:10px}
+}
