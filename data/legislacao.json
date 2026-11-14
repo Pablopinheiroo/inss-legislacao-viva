@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-14T21:17:43.497Z",
+  "generated_at": "2026-11-14T12:00:00Z",
   "last_check_attempt": "2026-11-14T20:08:49Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
   "status": "parcial",
-  "summary": "Catálogo atualizado com fontes preferenciais oficiais do Planalto/Portal IN e recorte do edital. As capturas anteriores ainda aguardam sincronização direta e validação integral.",
+  "summary": "Fontes preferenciais oficiais definidas; capturas anteriores ainda aguardam sincronização integral. Código Penal incluído com captura parcial bloqueada.",
   "baseline_updated_count": 0,
   "laws": [
     {
@@ -979,6 +979,41 @@
       "preferred_source_name": "Portal IN oficial do INSS — texto com histórico de alterações",
       "preferred_source_status": "confirmado_com_alerta_de_redacoes_riscadas",
       "source_sync_status": "texto_integral_nao_importado"
+    },
+    {
+      "id": "decreto-lei-2848-1940",
+      "title": "Decreto-Lei nº 2.848, de 7 de dezembro de 1940",
+      "short_title": "Código Penal — crimes contra a Seguridade Social",
+      "category": "Decreto-Lei",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_name": "Planalto — Código Penal compilado",
+      "source_revision": "Texto compilado do Código Penal; trechos indexados pelo Planalto em 14/11/2026",
+      "last_checked": "2026-11-14T12:00:00Z",
+      "article_count": 2,
+      "parser_mode": "artigos",
+      "snapshot_scope": "selected_articles",
+      "baseline_updated": false,
+      "source_url_used": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_status": "partial",
+      "source_attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "attempt": 1,
+          "outcome": "partial",
+          "failure_type": "anti_bot",
+          "http_status": 403,
+          "detail": "Fonte oficial identificada, mas o acesso automatizado direto apresentou bloqueio; texto parcial verificado por trechos indexados."
+        }
+      ],
+      "source_failure_count": 1,
+      "source_failure_type": "anti_bot",
+      "retry_after_seconds": null,
+      "new_changes_detected": 0,
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "preferred_source_name": "Planalto — Código Penal compilado",
+      "preferred_source_status": "confirmado_por_indice_oficial",
+      "source_sync_status": "captura_direta_pendente"
     }
   ],
   "changes": [],
