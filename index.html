@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-8">
-  <script defer src="app.js?v=20261114-11"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-9">
+  <script defer src="app.js?v=20261114-12"></script>
 </head>
 <body>
   <header class="topbar">
@@ -179,6 +179,13 @@
                   <button id="law-components-collapse-all" class="text-button" type="button">Recolher todos</button>
                 </div>
               </div>
+              <div class="law-device-training-actions">
+                <p id="law-training-selection-status">Selecione parágrafos ou incisos para treinar somente esses dispositivos.</p>
+                <div>
+                  <button id="law-training-selected-paragraphs" class="secondary-button" type="button" disabled>Treinar parágrafos selecionados (0)</button>
+                  <button id="law-training-selected-incisos" class="secondary-button" type="button" disabled>Treinar incisos selecionados (0)</button>
+                </div>
+              </div>
               <nav id="law-device-navigation" class="law-device-navigation" aria-label="Navegar pelos dispositivos deste artigo"></nav>
               <div id="law-components-list" class="law-components-list"></div>
             </details>
@@ -195,9 +202,46 @@
             </div>
             <div class="law-reader-footer">
               <p id="law-reader-capture-note"></p>
-              <button id="law-train-article" class="text-button" type="button">Treinar este artigo ↗</button>
+              <div class="law-article-training-buttons">
+                <button id="law-train-article" class="text-button" type="button">Gerar questões deste artigo</button>
+                <button id="law-train-facts" class="text-button" type="button">Identificar prazos, requisitos e exceções</button>
+              </div>
             </div>
           </article>
+          <section id="law-training-panel" class="law-training-panel hidden" aria-live="polite">
+            <header class="law-training-header">
+              <div>
+                <span class="eyebrow">TREINAMENTO NA BIBLIOTECA</span>
+                <h3 id="law-training-title">Treinamento do artigo</h3>
+                <p id="law-training-progress"></p>
+              </div>
+              <button id="law-training-close" class="secondary-button" type="button">Fechar</button>
+            </header>
+            <p id="law-training-prompt" class="law-training-prompt"></p>
+            <div id="law-training-recall-area" class="law-training-recall hidden">
+              <label for="law-training-recall">Sua resposta (opcional)</label>
+              <textarea id="law-training-recall" rows="3" placeholder="Tente responder sem consultar o texto..."></textarea>
+              <button id="law-training-reveal" class="primary-button" type="button">Mostrar resposta</button>
+            </div>
+            <div id="law-training-cloze-area" class="law-training-cloze-area hidden">
+              <div id="law-training-cloze" class="law-training-cloze-text"></div>
+              <button id="law-training-check" class="primary-button" type="button">Conferir lacunas</button>
+            </div>
+            <div id="law-training-choices" class="law-training-choices hidden">
+              <button id="law-training-true" class="answer-button" type="button">Certo</button>
+              <button id="law-training-false" class="answer-button" type="button">Errado</button>
+            </div>
+            <div id="law-training-answer" class="law-training-answer hidden">
+              <strong id="law-training-answer-title">Conferência</strong>
+              <p id="law-training-explanation"></p>
+              <pre id="law-training-source-text"></pre>
+              <a id="law-training-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a>
+            </div>
+            <div class="law-training-footer">
+              <span id="law-training-feedback" class="hidden"></span>
+              <button id="law-training-next" class="primary-button" type="button" disabled>Próximo exercício →</button>
+            </div>
+          </section>
         </div>
       </section>
     </section>

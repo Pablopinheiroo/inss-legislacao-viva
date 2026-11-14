@@ -33,6 +33,8 @@ let legalEntries = [];
 let legalSelectedArticle = "";
 let selectedLegalExcerpt = null;
 let legalSelectionTimer = null;
+let selectedLegalDevicePaths = new Set();
+let legalTrainingState = { items: [], index: 0, title: "", selected: null };
 let memoryCards = [];
 let memoryState = { cards: [], index: 0, ratings: [], revealed: false };
 const $ = (selector) => document.querySelector(selector);
@@ -487,6 +489,9 @@ async function loadLegalLaw(lawId) {
   const law = legalLaws.find(item => item.id === lawId);
   if (!law) return;
   clearLegalExcerptSelection();
+  selectedLegalDevicePaths.clear();
+  legalTrainingState = { items: [], index: 0, title: "", selected: null };
+  $("#law-training-panel").classList.add("hidden");
   legalSelectedLaw = law;
   legalSnapshot = null;
   legalEntries = [];
@@ -549,6 +554,7 @@ async function loadLegalLaw(lawId) {
       $("#law-mark-studied").disabled = true;
       $("#law-components-details").hidden = true;
       $("#law-train-article").disabled = true;
+      $("#law-train-facts").disabled = true;
       $("#law-article-count").textContent = "Sem artigos separados";
       $("#law-reader-capture-note").textContent = "Consulta registrada em " + formatDate(snapshot.captured_at) + ".";
       updateLegalLibrarySummary();
@@ -621,6 +627,11 @@ function renderLegalArticlePicker() {
   const next = entries.some(([article]) => article === previousValue)
     ? previousValue
     : entries[0][0];
+  if (next !== previousValue) {
+    selectedLegalDevicePaths.clear();
+    legalTrainingState = { items: [], index: 0, title: "", selected: null };
+    $("#law-training-panel").classList.add("hidden");
+  }
   select.value = next;
   legalSelectedArticle = next;
   renderLegalArticle();
@@ -656,7 +667,8 @@ function renderLegalArticle() {
   $("#law-mark-studied").disabled = false;
   $("#law-mark-studied").textContent = isStudied ? "Marcar como não estudado" : "Marcar como estudado";
   $("#law-mark-studied").setAttribute("aria-pressed", String(isStudied));
-  $("#law-train-article").disabled = text.trim().length < 80;
+  $("#law-train-article").disabled = text.trim().length < 60;
+  $("#law-train-facts").disabled = text.trim().length < 40;
 
   const components = legalSnapshot.components && legalSnapshot.components[article]
     ? Object.entries(legalSnapshot.components[article])
@@ -668,6 +680,7 @@ function renderLegalArticle() {
   $("#law-components-details > summary").textContent =
     "Ver partes identificadas deste artigo (" + deviceCount + " dispositivos)";
   renderLegalComponents(components, article);
+  updateSelectedLegalDeviceControls();
 
   const lawStatus = legalLawStatus(legalSelectedLaw.id);
   const captureDate = formatDate(legalSnapshot.captured_at);
@@ -845,6 +858,28 @@ function renderLegalArticleHistory(article) {
     "O monitor ainda não registrou alterações neste artigo. Quando uma diferença for detectada, as redações anterior e atual aparecerão aqui."
   );
 }
+function updateSelectedLegalDeviceControls() {
+  const components = legalSnapshot && legalSnapshot.components && legalSnapshot.components[legalSelectedArticle]
+    ? legalSnapshot.components[legalSelectedArticle]
+    : {};
+  let paragraphs = 0;
+  let incisos = 0;
+  selectedLegalDevicePaths.forEach(path => {
+    const component = components[path];
+    if (!component) {
+      selectedLegalDevicePaths.delete(path);
+      return;
+    }
+    if (component.device_type === "paragrafo") paragraphs += 1;
+    if (component.device_type === "inciso") incisos += 1;
+  });
+  $("#law-training-selected-paragraphs").disabled = paragraphs === 0;
+  $("#law-training-selected-incisos").disabled = incisos === 0;
+  $("#law-training-selected-paragraphs").textContent = "Treinar parágrafos selecionados (" + paragraphs + ")";
+  $("#law-training-selected-incisos").textContent = "Treinar incisos selecionados (" + incisos + ")";
+  $("#law-training-selection-status").textContent = paragraphs + " parágrafo(s) e " + incisos
+    + " inciso(s) selecionado(s). Selecione os dispositivos que deseja estudar.";
+}
 function renderLegalComponents(components, article) {
   const container = $("#law-components-list");
   const navigation = $("#law-device-navigation");
@@ -854,13 +889,17 @@ function renderLegalComponents(components, article) {
   );
   container.replaceChildren();
   navigation.replaceChildren();
-  if (!components.length) return;
+  if (!components.length) {
+    updateSelectedLegalDeviceControls();
+    return;
+  }
 
   const tree = buildLegalComponentTree(components);
   let nodeNumber = 0;
   function renderNode(node, depth, parentLabels = []) {
     nodeNumber += 1;
     const component = node.component || {};
+    const type = component.device_type || legalComponentNodeType(node);
     const label = legalComponentLabel(node);
     const details = document.createElement("details");
     details.className = "law-component-node";
@@ -874,7 +913,7 @@ function renderLegalComponents(components, article) {
     title.textContent = label;
     const kind = document.createElement("span");
     kind.className = "law-component-kind";
-    kind.textContent = component.device_type || legalComponentNodeType(node);
+    kind.textContent = type;
     summary.append(title, kind);
     details.append(summary);
 
@@ -950,9 +989,32 @@ function renderLegalComponents(components, article) {
       body.append(children);
     }
     details.append(body);
-    return details;
+
+    const wrapper = document.createElement("div");
+    const selectable = type === "paragrafo" || type === "inciso";
+    wrapper.className = "law-component-node-wrap" + (selectable ? " is-selectable" : "");
+    if (selectable) {
+      const selectionLabel = document.createElement("label");
+      selectionLabel.className = "law-component-select-label";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = selectedLegalDevicePaths.has(node.path);
+      checkbox.setAttribute("aria-label", "Selecionar " + label + " para treinamento");
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) selectedLegalDevicePaths.add(node.path);
+        else selectedLegalDevicePaths.delete(node.path);
+        updateSelectedLegalDeviceControls();
+      });
+      const selectionText = document.createElement("span");
+      selectionText.textContent = "Selecionar para treino";
+      selectionLabel.append(checkbox, selectionText);
+      wrapper.append(selectionLabel);
+    }
+    wrapper.append(details);
+    return wrapper;
   }
   tree.forEach(node => container.append(renderNode(node, 0)));
+  updateSelectedLegalDeviceControls();
 }
 function updateLegalLibrarySummary() {
   const studied = legalStudiedSet();
@@ -1020,7 +1082,9 @@ function searchLegalArticles() {
         $("#law-article-filter").value = "todos";
         renderLegalArticlePicker();
         $("#law-article-select").value = article;
+        if (legalSelectedArticle !== article) selectedLegalDevicePaths.clear();
         legalSelectedArticle = article;
+        $("#law-training-panel").classList.add("hidden");
         renderLegalArticle();
         resultsBox.classList.add("hidden");
         $("#law-article-search").value = "";
@@ -1055,6 +1119,10 @@ function stepLegalArticle(direction) {
   const index = entries.findIndex(([article]) => article === legalSelectedArticle);
   const next = entries[index + direction];
   if (!next) return;
+  if (legalSelectedArticle !== next[0]) {
+    selectedLegalDevicePaths.clear();
+    $("#law-training-panel").classList.add("hidden");
+  }
   legalSelectedArticle = next[0];
   $("#law-article-select").value = legalSelectedArticle;
   renderLegalArticle();
@@ -1108,52 +1176,455 @@ function queueLegalExcerptSelectionUpdate() {
   clearTimeout(legalSelectionTimer);
   legalSelectionTimer = setTimeout(updateLegalExcerptSelection, 120);
 }
+function startLegalTraining(items, title) {
+  const panel = $("#law-training-panel");
+  if (!items.length) {
+    panel.classList.remove("hidden");
+    $("#law-training-title").textContent = title || "Treinamento";
+    $("#law-training-prompt").textContent = "Não foi possível criar exercícios a partir deste conteúdo.";
+    $("#law-training-progress").textContent = "Nenhum exercício disponível";
+    $("#law-training-recall-area").classList.add("hidden");
+    $("#law-training-cloze-area").classList.add("hidden");
+    $("#law-training-choices").classList.add("hidden");
+    $("#law-training-answer").classList.add("hidden");
+    $("#law-training-next").disabled = true;
+    return;
+  }
+  legalTrainingState = { items, index: 0, title: title || "Treinamento", selected: null };
+  panel.classList.remove("hidden");
+  renderLegalTrainingItem();
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function renderLegalTrainingAnswer(item, heading, explanation, sourceText) {
+  $("#law-training-answer-title").textContent = heading || "Resposta e conferência";
+  $("#law-training-explanation").textContent = explanation || "";
+  $("#law-training-source-text").textContent = sourceText || item.answerText || item.sourceText || "";
+  $("#law-training-source").href = item.sourceUrl || (legalSnapshot && legalSnapshot.source_url_used) || legalSelectedLaw.url;
+  $("#law-training-answer").classList.remove("hidden");
+}
+function renderLegalTrainingItem() {
+  const item = legalTrainingState.items[legalTrainingState.index];
+  if (!item) return;
+  legalTrainingState.selected = null;
+  $("#law-training-title").textContent = item.title || legalTrainingState.title;
+  $("#law-training-progress").textContent =
+    "Exercício " + (legalTrainingState.index + 1) + " de " + legalTrainingState.items.length
+    + (item.kindLabel ? " · " + item.kindLabel : "");
+  $("#law-training-prompt").textContent = item.prompt || "";
+  $("#law-training-recall-area").classList.add("hidden");
+  $("#law-training-cloze-area").classList.add("hidden");
+  $("#law-training-choices").classList.add("hidden");
+  $("#law-training-answer").classList.add("hidden");
+  $("#law-training-feedback").classList.add("hidden");
+  $("#law-training-next").disabled = true;
+  $("#law-training-next").textContent =
+    legalTrainingState.index === legalTrainingState.items.length - 1 ? "Finalizar treinamento" : "Próximo exercício →";
+  $("#law-training-check").disabled = false;
+
+  if (item.kind === "ce") {
+    $("#law-training-choices").classList.remove("hidden");
+    $("#law-training-true").disabled = false;
+    $("#law-training-false").disabled = false;
+    $("#law-training-true").classList.remove("selected");
+    $("#law-training-false").classList.remove("selected");
+    $("#law-training-true").setAttribute("aria-pressed", "false");
+    $("#law-training-false").setAttribute("aria-pressed", "false");
+    $("#law-training-feedback").textContent = "";
+  } else if (item.kind === "cloze") {
+    $("#law-training-cloze-area").classList.remove("hidden");
+    renderLegalTrainingCloze(item);
+  } else if (item.kind === "notice") {
+    $("#law-training-answer").classList.remove("hidden");
+    $("#law-training-answer-title").textContent = "Observação";
+    $("#law-training-explanation").textContent = item.explanation || "";
+    $("#law-training-source-text").textContent = "";
+    $("#law-training-source").href = item.sourceUrl || legalLawSourceUrl(legalSelectedLaw);
+    $("#law-training-next").disabled = false;
+  } else {
+    $("#law-training-recall-area").classList.remove("hidden");
+    $("#law-training-recall").value = "";
+    $("#law-training-reveal").disabled = false;
+  }
+}
+function answerLegalTrainingCE(value) {
+  const item = legalTrainingState.items[legalTrainingState.index];
+  if (!item || item.kind !== "ce" || legalTrainingState.selected !== null) return;
+  legalTrainingState.selected = value;
+  const correct = value === item.answer;
+  $("#law-training-true").disabled = true;
+  $("#law-training-false").disabled = true;
+  $("#law-training-true").classList.toggle("selected", value === true);
+  $("#law-training-false").classList.toggle("selected", value === false);
+  $("#law-training-feedback").textContent = correct ? "Você acertou! ✓" : "Você errou. ✕";
+  $("#law-training-feedback").className = "law-training-feedback " + (correct ? "correct" : "incorrect");
+  renderLegalTrainingAnswer(
+    item,
+    correct ? "Resposta: Certo" : "Resposta: Errado",
+    item.explanation,
+    item.sourceText || item.literalText || item.statement
+  );
+  $("#law-training-next").disabled = false;
+}
+function revealLegalTrainingRecall() {
+  const item = legalTrainingState.items[legalTrainingState.index];
+  if (!item || item.kind !== "recall") return;
+  renderLegalTrainingAnswer(
+    item,
+    item.answerTitle || "Conferência",
+    item.explanation || "Compare sua resposta com a redação apresentada.",
+    item.answerText || item.sourceText
+  );
+  $("#law-training-reveal").disabled = true;
+  $("#law-training-next").disabled = false;
+}
+function renderLegalTrainingCloze(item) {
+  const container = $("#law-training-cloze");
+  container.replaceChildren();
+  const fragment = document.createDocumentFragment();
+  let cursor = 0;
+  item.blanks.forEach((blank, index) => {
+    fragment.append(document.createTextNode(item.text.slice(cursor, blank.start)));
+    const slot = document.createElement("span");
+    slot.className = "law-training-cloze-slot";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "law-training-cloze-input";
+    input.dataset.index = String(index);
+    input.autocomplete = "off";
+    input.spellcheck = false;
+    input.placeholder = "____";
+    input.style.width = Math.max(4.5, Math.min(15, blank.value.length * 0.78)) + "ch";
+    slot.append(input);
+    fragment.append(slot);
+    cursor = blank.end;
+  });
+  fragment.append(document.createTextNode(item.text.slice(cursor)));
+  container.append(fragment);
+}
+function checkLegalTrainingCloze() {
+  const item = legalTrainingState.items[legalTrainingState.index];
+  if (!item || item.kind !== "cloze") return;
+  const inputs = [...$("#law-training-cloze").querySelectorAll("input")];
+  let correct = 0;
+  inputs.forEach(input => {
+    const expected = item.blanks[Number(input.dataset.index)].value;
+    const isCorrect = normalizeAnswer(input.value) === normalizeAnswer(expected);
+    if (isCorrect) correct += 1;
+    input.disabled = true;
+    input.classList.toggle("correct", isCorrect);
+    input.classList.toggle("incorrect", !isCorrect);
+    if (!isCorrect) {
+      const correction = document.createElement("small");
+      correction.className = "law-training-cloze-correction";
+      correction.textContent = "Resposta: " + expected;
+      input.insertAdjacentElement("afterend", correction);
+    }
+  });
+  $("#law-training-feedback").textContent = correct + " de " + item.blanks.length + " lacunas corretas.";
+  $("#law-training-feedback").className =
+    "law-training-feedback " + (correct === item.blanks.length ? "correct" : "incorrect");
+  $("#law-training-check").disabled = true;
+  renderLegalTrainingAnswer(
+    item,
+    "Trecho completo",
+    "A correção compara suas respostas com as palavras exatas do trecho selecionado.",
+    item.text
+  );
+  $("#law-training-next").disabled = false;
+}
+function nextLegalTrainingItem() {
+  if (legalTrainingState.index + 1 >= legalTrainingState.items.length) {
+    $("#law-training-panel").classList.add("hidden");
+    legalTrainingState = { items: [], index: 0, title: "", selected: null };
+    $("#law-current-article").scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  legalTrainingState.index += 1;
+  renderLegalTrainingItem();
+}
+function legalTrainingLawMatches(item, law) {
+  if (item.law_id) return item.law_id === law.id;
+  const acceptedTitles = [law.title, law.short_title].filter(Boolean).map(normalizeAnswer);
+  const itemTitle = normalizeAnswer(item.law_title || "");
+  if (itemTitle && acceptedTitles.some(title => itemTitle === title || itemTitle.includes(title) || title.includes(itemTitle))) return true;
+  const acceptedSources = new Set([
+    law.url,
+    legalSnapshot && legalSnapshot.source_url_used,
+    ...(Array.isArray(law.fetch_urls) ? law.fetch_urls : [])
+  ].filter(Boolean));
+  return Boolean(item.source_url && acceptedSources.has(item.source_url));
+}
+function legalTrainingArticleMatches(value, article) {
+  const left = legalArticleNumber(value);
+  const right = legalArticleNumber(article);
+  return left[0] === right[0] && left[1] === right[1];
+}
+function legalAlterLiteralStatement(text, fullText) {
+  const swaps = [
+    [/\bmediante\b/i, "independentemente"],
+    [/\bindependentemente\b/i, "mediante"],
+    [/\bdeverá\b/i, "poderá"],
+    [/\bpoderá\b/i, "deverá"],
+    [/\bobrigatórios?\b/i, "facultativos"],
+    [/\bfacultativos?\b/i, "obrigatórios"],
+    [/\burbana e rural\b/i, "urbana"],
+    [/\burbanas e rurais\b/i, "urbanas"],
+    [/\bmaior\b/i, "menor"],
+    [/\bmenor\b/i, "maior"],
+    [/\bfacultativa\b/i, "obrigatória"],
+    [/\bobrigatória\b/i, "facultativa"],
+    [/\baté\b/i, "após"],
+    [/\bantes\b/i, "depois"]
+  ];
+  for (const [pattern, replacement] of swaps) {
+    if (pattern.test(text)) {
+      const candidate = text.replace(pattern, replacement);
+      if (normalizeAnswer(candidate) !== normalizeAnswer(text)
+        && !normalizeAnswer(fullText).includes(normalizeAnswer(candidate))) return candidate;
+    }
+  }
+  if (/\bnão\b/i.test(text)) {
+    const candidate = text.replace(/\bnão\b/i, "");
+    if (normalizeAnswer(candidate) !== normalizeAnswer(text)
+      && !normalizeAnswer(fullText).includes(normalizeAnswer(candidate))) return candidate;
+  }
+  const word = text.match(/\b[A-Za-zÀ-ÖØ-öø-ÿ]{5,}\b/u);
+  if (word) {
+    const candidate = text.slice(0, word.index) + "exclusivamente" + text.slice(word.index + word[0].length);
+    if (!normalizeAnswer(fullText).includes(normalizeAnswer(candidate))) return candidate;
+  }
+  return "";
+}
+function buildLegalFidelityCE(text, deviceLabel, sourceUrl, limit = 4) {
+  const clauses = String(text || "").replace(/\r/g, "").split(/(?<=[;.!?])\s+|\n+/u)
+    .map(value => value.trim()).filter(value => value.length >= 28);
+  const candidates = clauses.length ? clauses : [String(text || "").trim()].filter(Boolean);
+  const items = [];
+  for (const clause of candidates) {
+    if (items.length >= limit) break;
+    const variant = legalAlterLiteralStatement(clause, text);
+    items.push({
+      kind: "ce",
+      kindLabel: "Conferência literal",
+      title: "Certo ou Errado · " + deviceLabel,
+      prompt: "A afirmação a seguir reproduz fielmente a redação de " + deviceLabel + "? “" + clause + "”",
+      answer: true,
+      explanation: "Certo. O trecho apresentado foi extraído literalmente do texto salvo para este dispositivo.",
+      sourceText: clause,
+      sourceUrl
+    });
+    if (variant && items.length < limit) {
+      items.push({
+        kind: "ce",
+        kindLabel: "Conferência literal",
+        title: "Certo ou Errado · " + deviceLabel,
+        prompt: "A afirmação a seguir reproduz fielmente a redação de " + deviceLabel + "? “" + variant + "”",
+        answer: false,
+        explanation: "Errado. A frase foi modificada para o exercício. Compare com a redação efetiva do dispositivo, apresentada abaixo.",
+        sourceText: clause,
+        sourceUrl
+      });
+    }
+  }
+  return items;
+}
+function legalTrainingRecallItem(label, text, sourceUrl, prompt) {
+  return {
+    kind: "recall",
+    kindLabel: "Memorização",
+    title: "Lembre o conteúdo · " + label,
+    prompt: prompt || "Sem consultar o texto, tente explicar o que estabelece " + label + ". Depois, confira a redação abaixo.",
+    answerTitle: "Redação do dispositivo",
+    answerText: text,
+    sourceText: text,
+    sourceUrl,
+    explanation: "Use a redação oficial salva para conferir se você lembrou todos os pontos importantes."
+  };
+}
+function legalTrainingClauses(text) {
+  return String(text || "").replace(/\r/g, "").split(/(?<=[;.!?])\s+|\n+/u)
+    .map(value => value.trim()).filter(value => value.length >= 24);
+}
+function buildLegalFactTrainingItems(text, label, sourceUrl) {
+  const clauses = legalTrainingClauses(text);
+  const items = [];
+  const deadlinePattern = /\b\d{1,4}(?:\s*\([^)]+\))?\s*(?:dias?|meses?|anos?|horas?|minutos?|semanas?)\b/gi;
+  clauses.forEach(clause => {
+    if (items.length >= 12) return;
+    const found = [...clause.matchAll(deadlinePattern)];
+    found.forEach(match => {
+      if (items.length >= 12) return;
+      const blanked = clause.slice(0, match.index) + "________" + clause.slice(match.index + match[0].length);
+      items.push({
+        kind: "recall",
+        kindLabel: "Prazo",
+        title: "Identificar prazo · " + label,
+        prompt: "Qual prazo aparece neste trecho? " + blanked,
+        answerTitle: "Prazo e contexto",
+        answerText: clause,
+        sourceText: clause,
+        sourceUrl,
+        explanation: "O prazo é a expressão numérica destacada no texto legal. Confira também o contexto completo."
+      });
+    });
+  });
+  const requirementPattern = /\b(?:desde que|contanto que|mediante|condicionad[oa]s?|somente se|apenas se|comprov(?:ar|ação)|é necessário|será necessário|exige|requer|deverá|deverão|depende|observad[oa]s?|respeitad[oa]s?|para fins de)\b/i;
+  clauses.forEach(clause => {
+    if (items.length >= 18) return;
+    const match = requirementPattern.exec(clause);
+    if (!match) return;
+    const context = clause.slice(0, match.index) + "________" + clause.slice(match.index + match[0].length);
+    items.push({
+      kind: "recall",
+      kindLabel: "Requisito",
+      title: "Identificar requisito · " + label,
+      prompt: "Que condição ou requisito é indicado neste trecho? " + context,
+      answerTitle: "Condição ou requisito",
+      answerText: clause,
+      sourceText: clause,
+      sourceUrl,
+      explanation: "O exercício destaca uma expressão associada a condição, obrigação ou requisito. Confira a frase integral para não perder o contexto."
+    });
+  });
+  const exceptionPattern = /\b(?:salvo|exceto|ressalvad[oa]s?|ressalva|não se aplica|excluíd[oa]s?|sem prejuízo|independentemente de|não terá direito|não serão devidos?)\b/i;
+  clauses.forEach(clause => {
+    if (items.length >= 24) return;
+    const match = exceptionPattern.exec(clause);
+    if (!match) return;
+    const context = clause.slice(0, match.index) + "________" + clause.slice(match.index + match[0].length);
+    items.push({
+      kind: "recall",
+      kindLabel: "Exceção",
+      title: "Identificar exceção · " + label,
+      prompt: "Qual ressalva ou exceção aparece neste trecho? " + context,
+      answerTitle: "Ressalva ou exceção",
+      answerText: clause,
+      sourceText: clause,
+      sourceUrl,
+      explanation: "O exercício localizou uma expressão que pode indicar ressalva ou exclusão. Confira o contexto e o alcance do dispositivo."
+    });
+  });
+  return items;
+}
+async function prepareLegalTrainingBanks() {
+  if (!questionBank.length) await loadQuestionBank();
+  if (!multiCEGroups.length) await loadMultiCEBank();
+}
+async function startLegalArticleTraining() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  await prepareLegalTrainingBanks();
+  const entry = legalEntries.find(([article]) => article === legalSelectedArticle);
+  if (!entry) return;
+  const [article, articleText] = entry;
+  const sourceUrl = legalSnapshot.source_url_used || legalSelectedLaw.url;
+  const curated = [];
+  questionBank.filter(item =>
+    legalTrainingLawMatches(item, legalSelectedLaw)
+    && legalTrainingArticleMatches(item.article, article)
+  ).forEach(item => curated.push({
+    kind: "ce",
+    kindLabel: "Questão cadastrada",
+    title: "Questão do artigo · " + article,
+    prompt: item.statement,
+    answer: item.answer,
+    explanation: item.explanation,
+    sourceText: item.literal_text || articleText,
+    sourceUrl: item.source_url || sourceUrl
+  }));
+  multiCEGroups.filter(group =>
+    group.law_id === legalSelectedLaw.id && legalTrainingArticleMatches(group.article_key, article)
+  ).forEach(group => (group.statements || []).forEach(item => curated.push({
+    kind: "ce",
+    kindLabel: "Afirmação cadastrada",
+    title: "Afirmação · " + article,
+    prompt: item.prompt,
+    answer: item.answer,
+    explanation: item.explanation,
+    sourceText: group.literal_text || articleText,
+    sourceUrl: group.source_url || sourceUrl
+  })));
+  const seen = new Set();
+  const unique = curated.filter(item => {
+    const key = normalizeAnswer(item.prompt) + "|" + String(item.answer);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  const generated = buildLegalFidelityCE(articleText, article, sourceUrl, unique.length ? 4 : 8);
+  const items = [
+    ...unique.slice(0, 12),
+    ...generated,
+    legalTrainingRecallItem(article, articleText, sourceUrl)
+  ];
+  startLegalTraining(items, "Treinamento do " + article);
+}
+function startLegalSelectedDeviceTraining(deviceType) {
+  const components = legalSnapshot && legalSnapshot.components && legalSnapshot.components[legalSelectedArticle]
+    ? legalSnapshot.components[legalSelectedArticle]
+    : {};
+  const selected = [...selectedLegalDevicePaths]
+    .map(path => ({ path, component: components[path] }))
+    .filter(entry => entry.component && entry.component.device_type === deviceType);
+  if (!selected.length) return;
+  const typeName = deviceType === "paragrafo" ? "parágrafo(s)" : "inciso(s)";
+  const sourceUrl = legalSnapshot.source_url_used || legalSelectedLaw.url;
+  const items = [];
+  selected.forEach(({component}) => {
+    const label = component.device_label || (deviceType === "paragrafo" ? "Parágrafo" : "Inciso");
+    items.push(legalTrainingRecallItem(label, component.text, sourceUrl,
+      "Sem consultar a lei, lembre o que estabelece " + label + ". Depois confira o texto literal."));
+    items.push(...buildLegalFidelityCE(component.text, label, sourceUrl, 4));
+    items.push(...buildLegalFactTrainingItems(component.text, label, sourceUrl));
+  });
+  startLegalTraining(items, "Treinamento dos " + typeName + " selecionados");
+}
+function startLegalFactTraining() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  const entry = legalEntries.find(([article]) => article === legalSelectedArticle);
+  if (!entry) return;
+  const [article, text] = entry;
+  const sourceUrl = legalSnapshot.source_url_used || legalSelectedLaw.url;
+  const items = buildLegalFactTrainingItems(text, article, sourceUrl);
+  if (!items.length) {
+    startLegalTraining([{
+      kind: "notice",
+      title: "Busca automática · " + article,
+      kindLabel: "Aviso",
+      prompt: "A busca automática não identificou expressões claras de prazo, requisito ou exceção neste artigo.",
+      explanation: "Isso não significa que o dispositivo não contenha essas regras. O exercício procura expressões comuns no texto e pode não reconhecer construções diferentes. Confira a redação completa.",
+      sourceUrl
+    }], "Prazos, requisitos e exceções");
+    return;
+  }
+  startLegalTraining(items, "Prazos, requisitos e exceções · " + article);
+}
 function trainSelectedLegalExcerpt() {
   const excerpt = selectedLegalExcerpt;
   if (!excerpt || !excerpt.text) return;
   const blanks = buildClozeForText(excerpt.text, "facil");
-  if (!blanks.length) {
-    $("#cloze-note").textContent =
-      "O trecho selecionado é curto ou não contém palavras adequadas para criar lacunas. Selecione um trecho um pouco maior.";
-    $("#cloze-card").classList.add("hidden");
-    $("#cloze-welcome").classList.remove("hidden");
-    selectedLegalExcerpt = null;
-    $("#law-selection-toolbar").classList.add("hidden");
-    const selection = window.getSelection && window.getSelection();
-    if (selection && selection.rangeCount) selection.removeAllRanges();
-    showView("cloze");
-    return;
-  }
-
-  clozeCurrent = {
-    article: "Trecho de " + excerpt.article,
-    text: excerpt.text,
-    sourceType: "selection"
-  };
-  clozeBlanks = blanks;
-  clozeAnswered = 0;
-  $("#cloze-law-label").textContent = excerpt.lawTitle;
-  $("#cloze-article-label").textContent = "Trecho selecionado · " + excerpt.article;
-  $("#cloze-original-text").textContent = excerpt.text;
-  $("#cloze-original").querySelector("summary").textContent = "Mostrar trecho original selecionado";
-  $("#cloze-original").open = false;
-  $("#cloze-source").href = excerpt.sourceUrl;
-  $("#cloze-note").textContent =
-    "Exercício criado a partir do trecho que você selecionou em " + excerpt.article
-    + ". A correção usa exatamente o texto selecionado.";
-  $("#cloze-feedback").classList.add("hidden");
-  $("#check-cloze").classList.remove("hidden");
-  $("#next-cloze").classList.add("hidden");
-  $("#next-cloze").textContent = "Voltar à Lei Seca";
-  $("#cloze-progress").textContent = blanks.length + " lacuna(s) no trecho";
-  renderClozeText(excerpt.text, blanks);
-  $("#cloze-welcome").classList.add("hidden");
-  $("#cloze-card").classList.remove("hidden");
   selectedLegalExcerpt = null;
   $("#law-selection-toolbar").classList.add("hidden");
   const selection = window.getSelection && window.getSelection();
   if (selection && selection.rangeCount) selection.removeAllRanges();
-  showView("cloze");
+  if (!blanks.length) {
+    startLegalTraining([{
+      kind: "notice",
+      kindLabel: "Trecho curto",
+      prompt: "O trecho selecionado é curto ou não contém palavras adequadas para criar lacunas.",
+      explanation: "Selecione um trecho um pouco maior ou com palavras suficientes para montar o exercício.",
+      sourceUrl: excerpt.sourceUrl
+    }], "Completar o trecho selecionado");
+    return;
+  }
+  startLegalTraining([{
+    kind: "cloze",
+    kindLabel: "Trecho selecionado",
+    title: "Complete o trecho · " + excerpt.article,
+    prompt: "Complete as palavras ocultadas no trecho que você selecionou.",
+    text: excerpt.text,
+    blanks,
+    sourceUrl: excerpt.sourceUrl
+  }], "Completar o trecho selecionado");
 }
 async function trainCurrentLegalArticle() {
   if (!legalSelectedLaw || !legalSelectedArticle) return;
@@ -2691,7 +3162,16 @@ $("#law-favorite-article").addEventListener("click", toggleLegalArticleFavorite)
 $("#law-mark-studied").addEventListener("click", toggleLegalArticleStudied);
 $("#law-previous-article").addEventListener("click", () => stepLegalArticle(-1));
 $("#law-next-article").addEventListener("click", () => stepLegalArticle(1));
-$("#law-train-article").addEventListener("click", trainCurrentLegalArticle);
+$("#law-train-article").addEventListener("click", startLegalArticleTraining);
+$("#law-train-facts").addEventListener("click", startLegalFactTraining);
+$("#law-training-selected-paragraphs").addEventListener("click", () => startLegalSelectedDeviceTraining("paragrafo"));
+$("#law-training-selected-incisos").addEventListener("click", () => startLegalSelectedDeviceTraining("inciso"));
+$("#law-training-true").addEventListener("click", () => answerLegalTrainingCE(true));
+$("#law-training-false").addEventListener("click", () => answerLegalTrainingCE(false));
+$("#law-training-reveal").addEventListener("click", revealLegalTrainingRecall);
+$("#law-training-check").addEventListener("click", checkLegalTrainingCloze);
+$("#law-training-next").addEventListener("click", nextLegalTrainingItem);
+$("#law-training-close").addEventListener("click", () => $("#law-training-panel").classList.add("hidden"));
 document.addEventListener("selectionchange", queueLegalExcerptSelectionUpdate);
 $("#law-selection-toolbar").addEventListener("mousedown", event => event.preventDefault());
 $("#law-train-selection").addEventListener("click", trainSelectedLegalExcerpt);

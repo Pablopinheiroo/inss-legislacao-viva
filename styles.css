@@ -544,3 +544,61 @@
   .law-selection-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
   .law-selection-actions button{min-width:0;padding:0 8px;font-size:10px}
 }
+
+
+/* Treinamento contextual dentro da biblioteca Lei Seca. */
+.law-article-training-buttons{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.law-article-training-buttons button{font-size:10px}
+.law-device-training-actions{display:grid;gap:8px;margin:10px 0;padding:11px;border:1px solid #e4eaf3;border-radius:10px;background:#f8faff}
+.law-device-training-actions p{margin:0;color:#6f7e94;font-size:10px;line-height:1.45}
+.law-device-training-actions>div{display:flex;flex-wrap:wrap;gap:8px}
+.law-device-training-actions button{min-height:34px;padding:0 10px;font-size:9px}
+.law-device-training-actions button:disabled{opacity:.45;cursor:not-allowed}
+.law-component-node-wrap{min-width:0}
+.law-component-node-wrap.is-selectable{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:8px}
+.law-component-select-label{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 3px;color:#74839a;font-size:9px;white-space:nowrap;cursor:pointer}
+.law-component-select-label input{width:16px;height:16px;accent-color:#3159a8}
+.law-component-node-wrap.is-selectable>.law-component-node{min-width:0}
+.law-training-panel{margin-top:17px;padding:18px;border:1px solid #d8e2f1;border-radius:15px;background:#f8faff;box-shadow:0 5px 20px rgba(28,51,92,.06);scroll-margin-top:90px}
+.law-training-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #e4eaf3}
+.law-training-header .eyebrow{margin:0;color:#7890b8;font-size:8px;font-weight:850;letter-spacing:.12em}
+.law-training-header h3{margin:6px 0 4px;color:#263f72;font-size:18px}
+.law-training-header p{margin:0;color:#8794a8;font-size:10px}
+.law-training-header button{min-height:34px;padding:0 10px;font-size:10px}
+.law-training-prompt{margin:15px 0;color:#26344e;font-size:14px;font-weight:650;line-height:1.65;overflow-wrap:anywhere}
+.law-training-recall{display:grid;gap:8px}
+.law-training-recall label{color:#74839a;font-size:10px;font-weight:700}
+.law-training-recall textarea{width:100%;min-height:76px;padding:11px;border:1px solid #dfe6f0;border-radius:9px;background:#fff;color:#27344a;font:inherit;font-size:12px;line-height:1.55;resize:vertical}
+.law-training-recall button,.law-training-cloze-area>button{justify-self:start;min-height:36px;padding:0 13px;font-size:10px}
+.law-training-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.law-training-choices .answer-button{min-height:48px}
+.law-training-answer{margin-top:13px;padding:12px;border:1px solid #dce5f0;border-radius:10px;background:#fff}
+.law-training-answer>strong{display:block;color:#35538e;font-size:11px}
+.law-training-answer p{margin:7px 0;color:#65738a;font-size:11px;line-height:1.55}
+.law-training-answer pre{margin:9px 0 0;padding:10px;border-radius:8px;background:#f8f9fc;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.7 Georgia,"Times New Roman",serif;color:#4c5668}
+.law-training-answer a{display:inline-block;margin-top:9px;color:#3159a8;font-size:10px;font-weight:750;text-decoration:none}
+.law-training-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px}
+.law-training-footer button{min-height:38px;padding:0 14px;font-size:10px}
+.law-training-feedback{font-size:11px;font-weight:800}
+.law-training-feedback.correct{color:#237647}
+.law-training-feedback.incorrect{color:#b04444}
+.law-training-cloze-text{padding:12px;border:1px solid #e0e8f4;border-radius:10px;background:#fff;font:14px/1.9 Georgia,"Times New Roman",serif;color:#3b4559;white-space:pre-wrap;overflow-wrap:anywhere}
+.law-training-cloze-slot{display:inline-block;margin:2px 3px}
+.law-training-cloze-input{max-width:100%;min-width:4.5ch;padding:3px 5px;border:0;border-bottom:2px solid #7890b8;border-radius:3px;background:#f2f6fd;color:#233d73;font:inherit;font-size:13px}
+.law-training-cloze-input.correct{border-color:#268354;background:#effaf3}
+.law-training-cloze-input.incorrect{border-color:#bd4d4d;background:#fff1f1}
+.law-training-cloze-correction{display:inline-block;margin:2px 4px;color:#b04444;font:10px/1.4 system-ui,sans-serif}
+@media(max-width:760px){
+  .law-article-training-buttons{justify-content:flex-start;width:100%}
+  .law-article-training-buttons button{text-align:left}
+  .law-device-training-actions>div{display:grid;grid-template-columns:1fr}
+  .law-device-training-actions button{width:100%;min-height:40px;font-size:10px}
+  .law-component-node-wrap.is-selectable{grid-template-columns:1fr;gap:2px}
+  .law-component-select-label{min-height:32px;padding-left:8px}
+  .law-training-panel{padding:13px}
+  .law-training-header h3{font-size:16px}
+  .law-training-prompt{font-size:13px}
+  .law-training-footer{align-items:stretch;flex-direction:column}
+  .law-training-footer button{width:100%}
+  .law-training-choices .answer-button{min-height:46px}
+}
