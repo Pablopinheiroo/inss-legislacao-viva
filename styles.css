@@ -321,3 +321,8 @@
   .multi-ce-article-panel:not([hidden]){padding:13px;margin:10px 0 16px}
   .multi-ce-article-panel pre{font-size:13px;line-height:1.75}
 }
+
+/* Estado visível das fontes com bloqueio ou recuperação */
+.law-item small.source-error{color:#b54747;font-weight:750}
+.law-item small.source-recovered{color:#94620d;font-weight:700}
+@media(max-width:760px){.law-item small{white-space:normal;max-width:52%;text-align:right}}
