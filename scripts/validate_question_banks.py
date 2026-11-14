@@ -83,11 +83,13 @@ def check_common(item: dict, bank: str, key: str, anchors: list[str], snapshots:
     if source != snapshot_url:
         fail(errors, bank, item_id, "URL da questão difere da fonte usada na captura atual")
 
+    # A captura do monitor é renovada periodicamente mesmo quando o texto não muda.
+    # Por isso, o horário em que a questão foi criada não precisa ser idêntico ao
+    # horário da última consulta. A validade jurídica do item é conferida abaixo
+    # pelo hash do artigo, pelas âncoras e pelo vínculo com a fonte oficial.
     captured_at = str(snapshot.get("captured_at") or "")
-    if captured_at and item.get("source_snapshot_captured_at") != captured_at:
-        fail(errors, bank, item_id, "data/hora da captura registrada não corresponde à captura do repositório")
-    if captured_at and item.get("source_snapshot_date") != captured_at[:10]:
-        fail(errors, bank, item_id, "data da captura registrada não corresponde à captura do repositório")
+    if not item.get("source_snapshot_captured_at") or not item.get("source_snapshot_date"):
+        fail(errors, bank, item_id, "data da captura de origem não registrada")
 
     articles = snapshot.get("articles") or {}
     article_text = articles.get(key)
@@ -225,6 +227,7 @@ def main() -> int:
     print(f"Descubra o artigo: {len(discover_rows)}")
     print(f"Várias afirmações: {len(multi_rows)} artigos / {statement_total} itens")
     print(f"Capturas oficiais localizadas: {len(snapshots)}")
+    print("Vínculo atual conferido pelo hash do artigo e pelos trechos-âncora; a hora da nova consulta não invalida texto idêntico.")
 
     if errors:
         print(f"FALHAS: {len(errors)}")
