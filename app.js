@@ -620,7 +620,7 @@ async function loadLegalLaw(lawId) {
     legalSnapshot = snapshot;
     const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
     legalEntries = Object.entries(articles)
-      .filter(([_, text]) => typeof text === "string" && text.trim().length > 0)
+      .filter(([article, text]) => typeof text === "string" && text.trim().length > 0 && (!Array.isArray(law.include_articles) || law.include_articles.includes(article)))
       .sort((a, b) => compareLegalArticles(a[0], b[0]));
     $("#law-reader-category").textContent = law.category || "Legislação";
     $("#law-reader-title").textContent = law.short_title || law.title;
