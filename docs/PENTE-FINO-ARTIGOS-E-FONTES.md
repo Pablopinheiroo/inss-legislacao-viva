@@ -25,3 +25,16 @@ A seleção artigo por artigo das demais normas continua em andamento. Não fora
 3. Classificar cada dispositivo como dentro do edital, parcialmente relacionado, complementar, fora do edital, revogado/desatualizado ou pendente de validação.
 4. Remover do banco ativo somente os dispositivos classificados como fora do edital ou revogados, preservando histórico e trilha de auditoria.
 5. Testar a navegação, busca, favoritos, progresso e todos os modos de treino após a filtragem.
+
+
+## Recorte atualizado em 14/11/2026
+
+O filtro ativo abrange as 27 normas cadastradas, incluindo Constitucional, Administrativo e Ética, além de Previdenciário. O art. 13 da Constituição foi retirado; a IN 128/2022 permanece sem artigos ativos até a captura consolidada.
+
+A seleção foi aplicada também aos quatro bancos de treinamento. Contagens depois do filtro:
+- data/questoes.json: 169 → 152 (17 removidos)
+- data/encontre-erro.json: 74 → 66 (8 removidos)
+- data/descubra-artigo.json: 65 → 59 (6 removidos)
+- data/afirmacoes-por-artigo.json: 48 → 43 (5 removidos)
+
+**Ponto de atenção:** o leitor já aponta para as fontes oficiais preferenciais, mas os arquivos de captura continuam identificados com a fonte efetivamente usada na coleta anterior. A sincronização integral direta com o Planalto/Portal IN é necessária antes de afirmar que todo o conteúdo foi recapturado e conferido nessa fonte.
