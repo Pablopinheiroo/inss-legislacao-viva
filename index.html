@@ -6,45 +6,113 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-27">
-  <script defer src="app.js?v=20261114-43"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-28">
+  <script defer src="app.js?v=20261114-44"></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">
-      <span class="brand-mark">R</span>
-      <span><strong>Radar Legislativo</strong><small>INSS · legislação e treino</small></span>
-    </a>
-    <div id="xp-widget" class="xp-widget" aria-label="Seu nível e experiência">
-      <div class="xp-widget-top">
-        <span class="xp-level-badge">NÍVEL <strong id="xp-level">1</strong></span>
-        <div class="xp-widget-values"><strong id="xp-total">0 XP</strong><small id="xp-progress-label">0 / 100 XP para o nível 2</small></div>
-      </div>
-      <div class="xp-progress-track" role="progressbar" aria-label="Progresso até o próximo nível" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="xp-progress-fill"></span></div>
+    <div class="topbar-brand-area">
+      <a class="brand" href="./" aria-label="Radar Legislativo INSS — início">
+        <span class="brand-mark">R</span>
+        <span><strong>Radar Legislativo</strong><small>INSS · legislação e treino</small></span>
+      </a>
+      <button id="tab-radar" class="header-radar-button" type="button" aria-label="Abrir Radar legislativo">Radar legislativo</button>
     </div>
-    <button id="notification-button" class="bell-button" aria-label="Abrir alterações recentes" aria-expanded="false">
+    <button id="notification-button" class="bell-button" aria-label="Abrir avisos de alterações legislativas" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
       <span id="notification-badge" class="badge hidden">0</span>
+      <span id="notification-study-indicator" class="notification-study-indicator hidden" aria-hidden="true"></span>
     </button>
   </header>
 
-  <nav class="main-nav" aria-label="Navegação principal">
-    <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
-    <button id="tab-law" class="nav-tab" type="button">Lei Seca</button>
-    <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
-    <button id="tab-simulado" class="nav-tab" type="button">Simulados</button>
-    <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
-    <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
-    <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
-    <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
-    <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
-    <button id="tab-review" class="nav-tab" type="button">Revisão</button>
-    <button id="tab-history" class="nav-tab" type="button">Histórico</button>
-    <button id="tab-achievements" class="nav-tab" type="button">Conquistas</button>
-    <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
+  <nav id="main-nav" class="main-nav" aria-label="Áreas principais">
+    <button id="area-estudar" class="area-tab active" type="button" aria-current="page"><span class="area-tab-icon" aria-hidden="true">✓</span><span>Estudar</span></button>
+    <button id="area-lei-seca" class="area-tab" type="button"><span class="area-tab-icon" aria-hidden="true">§</span><span>Lei Seca</span></button>
+    <button id="area-jogos" class="area-tab" type="button"><span class="area-tab-icon" aria-hidden="true">◇</span><span>Jogos</span></button>
+    <button id="area-desempenho" class="area-tab" type="button"><span class="area-tab-icon" aria-hidden="true">↗</span><span>Desempenho</span></button>
+  </nav>
+  <nav id="section-nav" class="section-nav" aria-label="Seções da área selecionada">
+    <div id="subnav-estudar" class="subnav-group" data-nav-group="estudar">
+      <span class="subnav-caption">ESTUDAR</span>
+      <button id="tab-review" class="nav-tab" type="button">Central de revisão</button>
+    </div>
+    <div id="subnav-lei-seca" class="subnav-group hidden" data-nav-group="lei-seca">
+      <span class="subnav-caption">BIBLIOTECA</span>
+      <button id="tab-law" class="nav-tab" type="button">Biblioteca de normas</button>
+    </div>
+    <div id="subnav-jogos" class="subnav-group hidden" data-nav-group="jogos">
+      <span class="subnav-caption">TREINAMENTOS</span>
+      <button id="tab-quiz" class="nav-tab" type="button">Certo ou Errado</button>
+      <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
+      <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
+      <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
+      <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
+      <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
+      <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
+      <button id="tab-simulado" class="nav-tab" type="button">Simulados</button>
+    </div>
+    <div id="subnav-desempenho" class="subnav-group hidden" data-nav-group="desempenho">
+      <span class="subnav-caption">ACOMPANHAMENTO</span>
+      <button id="tab-history" class="nav-tab" type="button">Histórico e domínio</button>
+      <button id="tab-achievements" class="nav-tab" type="button">Conquistas</button>
+    </div>
   </nav>
 
-  <main id="radar-view" class="page-shell">
+  <main id="study-view" class="page-shell">
+    <section class="intro study-intro">
+      <div><p class="eyebrow">SEU PRÓXIMO PASSO</p><h1>Estudar</h1>
+        <p class="subtitle">Retome os conteúdos pendentes, faça suas revisões e acompanhe as sessões de estudo.</p></div>
+      <button id="study-open-library" class="secondary-button" type="button">Abrir Lei Seca</button>
+    </section>
+    <section class="study-overview-grid" aria-label="Resumo do estudo">
+      <article class="study-overview-card"><span>Conteúdos pendentes</span><strong id="study-pending-count">0</strong><small>itens na Central de revisão</small></article>
+      <article class="study-overview-card"><span>Revisões vencidas</span><strong id="study-due-count">0</strong><small>prontas para retomar</small></article>
+      <article class="study-overview-card"><span>Sessões registradas</span><strong id="study-session-count">0</strong><small>sessões de estudo</small></article>
+      <article class="study-overview-card"><span>Questões respondidas</span><strong id="study-answer-count">0</strong><small>em todos os treinamentos</small></article>
+    </section>
+    <section class="study-next-step">
+      <div><p class="eyebrow">RECOMENDAÇÃO</p><h2>Cuide primeiro do que está pendente</h2>
+        <p>Os erros, dúvidas, artigos difíceis e alterações legislativas ficam reunidos na Central de revisão.</p></div>
+      <div class="study-next-actions">
+        <button id="study-start-due" class="primary-button" type="button">Começar revisão vencida</button>
+        <button id="study-open-review" class="secondary-button" type="button">Abrir fila completa</button>
+      </div>
+    </section>
+    <section class="study-sessions-section">
+      <div class="section-heading"><div><h2>Sessões recentes</h2><p>Seus últimos treinamentos e atividades de estudo.</p></div>
+        <button id="study-open-history" class="text-button" type="button">Ver histórico completo →</button></div>
+      <div id="study-recent-sessions" class="study-session-list"><p class="empty-state">As sessões aparecerão aqui depois do primeiro treino.</p></div>
+    </section>
+  </main>
+
+  <main id="performance-view" class="page-shell hidden">
+    <section class="intro performance-intro">
+      <div><p class="eyebrow">EVOLUÇÃO E RESULTADOS</p><h1>Desempenho</h1>
+        <p class="subtitle">Acompanhe sua experiência, suas estatísticas, conquistas e domínio por assunto.</p></div>
+    </section>
+    <section class="performance-xp-panel">
+      <div><p class="eyebrow">EXPERIÊNCIA</p><h2>Sua evolução</h2><p>Ganhe experiência ao responder questões, estudar artigos e fazer revisões.</p></div>
+      <div id="xp-widget" class="xp-widget" aria-label="Seu nível e experiência">
+        <div class="xp-widget-top">
+          <span class="xp-level-badge">NÍVEL <strong id="xp-level">1</strong></span>
+          <div class="xp-widget-values"><strong id="xp-total">0 XP</strong><small id="xp-progress-label">0 / 100 XP para o nível 2</small></div>
+        </div>
+        <div class="xp-progress-track" role="progressbar" aria-label="Progresso até o próximo nível" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="xp-progress-fill"></span></div>
+      </div>
+    </section>
+    <section class="performance-overview-grid">
+      <article><span>XP acumulado</span><strong id="performance-xp-total">0 XP</strong></article>
+      <article><span>Questões respondidas</span><strong id="performance-answer-count">0</strong></article>
+      <article><span>Sessões registradas</span><strong id="performance-session-count">0</strong></article>
+      <article><span>Conquistas liberadas</span><strong id="performance-achievement-count">0</strong></article>
+    </section>
+    <section class="performance-actions-grid">
+      <button id="performance-open-history" class="performance-action-card" type="button"><span class="performance-action-icon">▤</span><strong>Histórico e estatísticas</strong><small>Respostas, sessões, artigos estudados e domínio por assunto.</small><span class="performance-action-link">Consultar histórico →</span></button>
+      <button id="performance-open-achievements" class="performance-action-card" type="button"><span class="performance-action-icon">★</span><strong>Conquistas</strong><small>Sequência de estudos, metas, desafios e títulos desbloqueados.</small><span class="performance-action-link">Ver conquistas →</span></button>
+    </section>
+  </main>
+
+  <main id="radar-view" class="page-shell hidden">
     <section class="intro">
       <div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>O que mudou na legislação?</h1><p class="subtitle">Diferenças detectadas nas normas acompanhadas para o estudo do INSS.</p></div>
       <div class="intro-actions">
