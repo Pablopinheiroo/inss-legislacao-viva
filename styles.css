@@ -292,3 +292,24 @@
   .memory-summary-row{align-items:flex-start;flex-direction:column}
   .memory-summary-row span{text-align:left}
 }
+
+
+/* Painel do texto legal no modo Várias afirmações */
+.multi-ce-article-toggle{
+  display:block;position:relative;width:100%;margin:14px 0 0;padding:12px 14px;
+  border:1px solid #dbe4f4;border-radius:11px;background:#f4f7fd;color:#31517f;
+  text-align:left;font:700 11px inherit;cursor:pointer;
+}
+.multi-ce-article-toggle::after{content:"＋";float:right;font-size:14px;line-height:1}
+.multi-ce-article-toggle[aria-expanded="true"]::after{content:"−"}
+.multi-ce-article-panel{
+  display:block;position:relative;clear:both;width:100%;min-width:0;margin:0;padding:14px;
+  border:1px solid #dfe6ef;border-top:0;border-radius:0 0 11px 11px;
+  background:#fff;isolation:isolate;contain:layout paint;
+}
+.multi-ce-article-panel.hidden{display:none!important}
+.multi-ce-article-panel pre{
+  display:block;position:static;width:100%;max-width:100%;max-height:360px;margin:0;padding:0;
+  overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;
+  color:#34445f;background:transparent;font:13px/1.8 Georgia,serif;
+}
