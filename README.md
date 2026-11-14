@@ -216,3 +216,8 @@ Na área **Estudar**, abra **Backup e segurança dos dados** para exportar ou im
 O arquivo de backup não é criptografado. Guarde-o em local privado e não o publique no GitHub nem o envie junto com o código do projeto. O site não pede senha, token ou chave de acesso para salvar o progresso.
 
 **Limite importante:** GitHub Pages é hospedagem estática. O backup manual permite transportar dados entre navegadores e dispositivos, mas não cria sincronização automática. Uma sincronização futura exigiria um serviço externo com autenticação e avaliação própria de segurança.
+
+
+### Atualização das capturas e validade das questões
+
+O monitor faz novas consultas periódicas. Uma consulta pode atualizar o horário da captura mesmo quando a redação de um artigo continua exatamente igual. Por isso, a validação das questões confere o hash do artigo usado no enunciado e os trechos que sustentam o gabarito, em vez de exigir que o horário da última consulta seja igual ao horário de criação da questão. Quando o texto do artigo muda, o hash deixa de corresponder e a questão precisa ser revisada ou suspensa.
