@@ -251,7 +251,7 @@
 
 
 /* Modo Memorização ativa */
-.memory-config{min-width:min(100%,430px)}
+.memory-config{min-width:min(100%,650px);display:flex;flex-wrap:wrap;align-items:end;gap:10px}
 .memory-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 22px}
 .memory-stat{border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px 17px}
 .memory-stat span{display:block;color:#718096;font-size:11px}
@@ -745,3 +745,26 @@
 .before-after-review-center{margin:18px 0 20px}
 @media(max-width:760px){.before-after-change-options{grid-template-columns:1fr}.multi-ce-config{justify-content:flex-start;width:100%}}
 @media(max-width:520px){.multi-ce-article-panel-top{align-items:flex-start;flex-direction:column}.multi-ce-article-panel pre{font-size:13px;line-height:1.8}.before-after-change-question{padding:13px}.before-after-change-option{width:100%}}
+
+
+/* Cartões de memorização: criação na biblioteca, favoritos e alterações legislativas */
+.memory-editor-panel{margin:18px 0 0;padding:18px;border:1px solid #dce5f5;border-radius:14px;background:#f8faff}
+.memory-editor-heading h3{margin:4px 0;font-size:16px;color:#233654}
+.memory-editor-heading p{margin:5px 0 13px;color:#77849a;font-size:11px;line-height:1.5}
+.memory-editor-panel label{display:block;margin:12px 0 6px;color:#435675;font-size:11px;font-weight:800}
+.memory-editor-panel textarea{display:block;width:100%;min-height:62px;border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;color:#253653;font:13px/1.6 Georgia,serif;resize:vertical}
+.memory-editor-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}
+.memory-origin-tag{display:inline-flex;align-items:center;border:1px solid #dce5f5;border-radius:999px;padding:4px 8px;background:#f4f7fd;color:#536b91;font-size:9px;font-weight:800;letter-spacing:.04em}
+.memory-custom-answer-wrap{margin:18px 0}
+.memory-change-comparison{margin:18px 0;padding:15px;border:1px solid #e4e9f2;border-radius:13px;background:#fbfcff}
+.memory-change-comparison>p{margin:0 0 12px;color:#53647e;font-size:12px;line-height:1.55}
+.memory-change-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.memory-change-columns>div{min-width:0;border:1px solid #e5eaf1;border-radius:10px;background:#fff;padding:11px}
+.memory-change-columns>div>span{display:block;margin-bottom:8px;color:#7c899d;font-size:9px;font-weight:900;letter-spacing:.1em}
+.memory-change-columns pre{margin:0;max-height:360px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;color:#253653;font:13px/1.75 Georgia,serif}
+@media(max-width:760px){
+  .memory-config{min-width:0;width:100%;display:grid;grid-template-columns:1fr 1fr}
+  .memory-config .primary-button,.memory-config .secondary-button{width:100%}
+  .memory-change-columns{grid-template-columns:1fr}
+  .memory-editor-actions>*{flex:1}
+}
