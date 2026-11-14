@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "description": "Conjuntos autorais de afirmações C/E dentro de um único artigo. A resposta e a justificativa de cada item se vinculam ao mesmo dispositivo legal.",
+  "source_snapshot_date": "2026-11-14T00:52:03Z",
+  "article_sets": [
+    {
+      "id": "8213-art1",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 1",
+      "article_label": "Art. 1º",
+      "topic": "Finalidade da Previdência Social",
+      "statements": [
+        {
+          "id": "8213-a1-1",
+          "prompt": "A Previdência Social atua mediante contribuição.",
+          "answer": true,
+          "validation_phrase": "mediante contribuição",
+          "explanation": "Certo. O art. 1º afirma expressamente que a Previdência Social atua mediante contribuição."
+        },
+        {
+          "id": "8213-a1-2",
+          "prompt": "A Previdência Social assegura meios de manutenção apenas em razão de idade avançada e incapacidade, não abrangendo desemprego involuntário.",
+          "answer": false,
+          "validation_phrase": "desemprego involuntário",
+          "explanation": "Errado. O dispositivo também menciona desemprego involuntário, tempo de serviço, encargos familiares e prisão ou morte de quem o beneficiário dependia economicamente.",
+          "correction": "O artigo inclui desemprego involuntário, tempo de serviço, encargos familiares e prisão ou morte."
+        },
+        {
+          "id": "8213-a1-3",
+          "prompt": "O art. 1º menciona a prisão ou a morte daqueles de quem os beneficiários dependiam economicamente.",
+          "answer": true,
+          "validation_phrase": "prisão ou morte daqueles de quem dependiam economicamente",
+          "explanation": "Certo. Essa situação aparece expressamente na parte final do art. 1º."
+        }
+      ]
+    },
+    {
+      "id": "8213-art2",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 2",
+      "article_label": "Art. 2º",
+      "topic": "Princípios e objetivos da Previdência Social",
+      "statements": [
+        {
+          "id": "8213-a2-1",
+          "prompt": "A Lei 8.213/1991 prevê a universalidade de participação nos planos previdenciários.",
+          "answer": true,
+          "validation_phrase": "universalidade de participação nos planos previdenciários",
+          "explanation": "Certo. A universalidade de participação aparece no inciso I do art. 2º."
+        },
+        {
+          "id": "8213-a2-2",
+          "prompt": "A uniformidade e a equivalência dos benefícios e serviços alcançam somente as populações urbanas.",
+          "answer": false,
+          "validation_phrase": "populações urbanas e rurais",
+          "explanation": "Errado. O inciso II contempla tanto as populações urbanas quanto as rurais.",
+          "correction": "O inciso II menciona as populações urbanas e rurais."
+        },
+        {
+          "id": "8213-a2-3",
+          "prompt": "A renda mensal dos benefícios substitutos do salário de contribuição ou do rendimento do trabalho não pode ser inferior ao salário-mínimo.",
+          "answer": true,
+          "validation_phrase": "não inferior ao do salário-mínimo",
+          "explanation": "Certo. É a regra expressa no inciso VI do art. 2º."
+        },
+        {
+          "id": "8213-a2-4",
+          "prompt": "A gestão administrativa da Previdência Social tem caráter centralizado e não prevê participação da comunidade.",
+          "answer": false,
+          "validation_phrase": "caráter democrático e descentralizado da gestão administrativa",
+          "explanation": "Errado. O inciso VIII prevê gestão democrática e descentralizada, com participação do governo e da comunidade.",
+          "correction": "A gestão é democrática e descentralizada e conta com participação do governo e da comunidade."
+        }
+      ]
+    },
+    {
+      "id": "8212-art1",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 1",
+      "article_label": "Art. 1º",
+      "topic": "Conceito e diretrizes da Seguridade Social",
+      "statements": [
+        {
+          "id": "8212-a1-1",
+          "prompt": "A Seguridade Social compreende ações integradas de iniciativa dos poderes públicos e da sociedade.",
+          "answer": true,
+          "validation_phrase": "conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade",
+          "explanation": "Certo. Essa é a definição que abre o art. 1º da Lei 8.212/1991."
+        },
+        {
+          "id": "8212-a1-2",
+          "prompt": "A Seguridade Social destina-se a assegurar direitos relativos à saúde e à previdência, mas não à assistência social.",
+          "answer": false,
+          "validation_phrase": "saúde, à previdência e à assistência social",
+          "explanation": "Errado. O texto menciona as três áreas: saúde, previdência e assistência social.",
+          "correction": "A assistência social também integra a Seguridade Social."
+        },
+        {
+          "id": "8212-a1-3",
+          "prompt": "Entre as diretrizes da Seguridade Social estão a universalidade da cobertura e do atendimento e a diversidade da base de financiamento.",
+          "answer": true,
+          "validation_phrase": "universalidade da cobertura e do atendimento",
+          "explanation": "Certo. As diretrizes aparecem no parágrafo único do art. 1º; entre elas estão universalidade e diversidade da base de financiamento."
+        }
+      ]
+    },
+    {
+      "id": "8212-art3",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 3",
+      "article_label": "Art. 3º",
+      "topic": "Finalidade e organização da Previdência Social",
+      "statements": [
+        {
+          "id": "8212-a3-1",
+          "prompt": "A Previdência Social busca assegurar meios indispensáveis de manutenção a seus beneficiários em situações como incapacidade, idade avançada e desemprego involuntário.",
+          "answer": true,
+          "validation_phrase": "incapacidade, idade avançada, tempo de serviço, desemprego involuntário",
+          "explanation": "Certo. O art. 3º enumera esses eventos, além de encargos familiares e reclusão ou morte."
+        },
+        {
+          "id": "8212-a3-2",
+          "prompt": "A organização da Previdência Social admite participação nos planos previdenciários independentemente de contribuição.",
+          "answer": false,
+          "validation_phrase": "universalidade de participação nos planos previdenciários, mediante contribuição",
+          "explanation": "Errado. A alínea a do parágrafo único prevê participação nos planos previdenciários mediante contribuição.",
+          "correction": "O texto exige contribuição para a participação nos planos previdenciários."
+        },
+        {
+          "id": "8212-a3-3",
+          "prompt": "A lei prevê previdência complementar facultativa, custeada por contribuição adicional.",
+          "answer": true,
+          "validation_phrase": "previdência complementar facultativa, custeada por contribuição adicional",
+          "explanation": "Certo. A previsão está na alínea e do parágrafo único do art. 3º."
+        }
+      ]
+    },
+    {
+      "id": "8212-art4",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 4",
+      "article_label": "Art. 4º",
+      "topic": "Assistência Social",
+      "statements": [
+        {
+          "id": "8212-a4-1",
+          "prompt": "A Assistência Social atende às necessidades básicas independentemente de contribuição à Seguridade Social.",
+          "answer": true,
+          "validation_phrase": "independentemente de contribuição à Seguridade Social",
+          "explanation": "Certo. Essa é uma característica expressa no art. 4º."
+        },
+        {
+          "id": "8212-a4-2",
+          "prompt": "A assistência social se limita à proteção da família e da maternidade, sem abranger infância, adolescência ou velhice.",
+          "answer": false,
+          "validation_phrase": "infância, à adolescência, à velhice",
+          "explanation": "Errado. O art. 4º inclui a proteção à família, maternidade, infância, adolescência, velhice e pessoa com deficiência.",
+          "correction": "O artigo também inclui infância, adolescência, velhice e pessoa com deficiência."
+        }
+      ]
+    },
+    {
+      "id": "loas-art1",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 1",
+      "article_label": "Art. 1º",
+      "topic": "Conceito de Assistência Social",
+      "statements": [
+        {
+          "id": "loas-a1-1",
+          "prompt": "A assistência social é direito do cidadão e dever do Estado.",
+          "answer": true,
+          "validation_phrase": "direito do cidadão e dever do Estado",
+          "explanation": "Certo. A LOAS inicia sua definição com essa afirmação."
+        },
+        {
+          "id": "loas-a1-2",
+          "prompt": "A assistência social é Política de Seguridade Social contributiva.",
+          "answer": false,
+          "validation_phrase": "Política de Seguridade Social não contributiva",
+          "explanation": "Errado. A LOAS classifica a assistência social como não contributiva.",
+          "correction": "A expressão correta é “não contributiva”."
+        },
+        {
+          "id": "loas-a1-3",
+          "prompt": "A assistência social é realizada por meio de um conjunto integrado de ações de iniciativa pública e da sociedade.",
+          "answer": true,
+          "validation_phrase": "conjunto integrado de ações de iniciativa pública e da sociedade",
+          "explanation": "Certo. Essa previsão aparece na parte final do art. 1º."
+        }
+      ]
+    },
+    {
+      "id": "loas-art2",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 2",
+      "article_label": "Art. 2º",
+      "topic": "Objetivos da Assistência Social",
+      "statements": [
+        {
+          "id": "loas-a2-1",
+          "prompt": "A proteção social é um dos objetivos da assistência social.",
+          "answer": true,
+          "validation_phrase": "a proteção social",
+          "explanation": "Certo. A proteção social aparece no inciso I do art. 2º."
+        },
+        {
+          "id": "loas-a2-2",
+          "prompt": "A vigilância socioassistencial busca analisar territorialmente a capacidade protetiva das famílias e a ocorrência de vulnerabilidades, ameaças, vitimizações e danos.",
+          "answer": true,
+          "validation_phrase": "vigilância socioassistencial, que visa a analisar territorialmente a capacidade protetiva das famílias",
+          "explanation": "Certo. Essa é a finalidade indicada no inciso II."
+        },
+        {
+          "id": "loas-a2-3",
+          "prompt": "A defesa de direitos não integra os objetivos da assistência social previstos na LOAS.",
+          "answer": false,
+          "validation_phrase": "a defesa de direitos",
+          "explanation": "Errado. A defesa de direitos é expressamente indicada no inciso III do art. 2º.",
+          "correction": "A defesa de direitos é o terceiro objetivo previsto no art. 2º."
+        }
+      ]
+    },
+    {
+      "id": "loas-art4",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 4",
+      "article_label": "Art. 4º",
+      "topic": "Princípios da Assistência Social",
+      "statements": [
+        {
+          "id": "loas-a4-1",
+          "prompt": "A assistência social deve priorizar o atendimento às necessidades sociais em relação às exigências de rentabilidade econômica.",
+          "answer": true,
+          "validation_phrase": "supremacia do atendimento às necessidades sociais sobre as exigências de rentabilidade econômica",
+          "explanation": "Certo. É o princípio previsto no inciso I do art. 4º."
+        },
+        {
+          "id": "loas-a4-2",
+          "prompt": "A LOAS permite comprovação vexatória de necessidade quando exigida pelo órgão público.",
+          "answer": false,
+          "validation_phrase": "vedando-se qualquer comprovação vexatória de necessidade",
+          "explanation": "Errado. O inciso III veda qualquer comprovação vexatória de necessidade.",
+          "correction": "A lei expressamente proíbe comprovação vexatória."
+        },
+        {
+          "id": "loas-a4-3",
+          "prompt": "A assistência social deve assegurar igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza.",
+          "answer": true,
+          "validation_phrase": "igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza",
+          "explanation": "Certo. Essa regra está no inciso IV do art. 4º."
+        }
+      ]
+    },
+    {
+      "id": "loas-art20",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 20",
+      "article_label": "Art. 20",
+      "topic": "Benefício de Prestação Continuada",
+      "statements": [
+        {
+          "id": "loas-a20-1",
+          "prompt": "O BPC garante um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais que atendam aos requisitos legais.",
+          "answer": true,
+          "validation_phrase": "um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais",
+          "explanation": "Certo. O caput do art. 20 define o valor e os grupos que podem receber o BPC, observados os demais requisitos."
+        },
+        {
+          "id": "loas-a20-2",
+          "prompt": "Para caracterizar pessoa com deficiência para fins do BPC, a LOAS exige impedimento de curto prazo.",
+          "answer": false,
+          "validation_phrase": "impedimento de longo prazo",
+          "explanation": "Errado. O § 2º exige impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, em interação com uma ou mais barreiras.",
+          "correction": "A lei exige impedimento de longo prazo, não de curto prazo."
+        },
+        {
+          "id": "loas-a20-3",
+          "prompt": "Para a composição familiar usada no BPC, o art. 20 inclui irmãos casados, ainda que vivam sob o mesmo teto.",
+          "answer": false,
+          "validation_phrase": "os irmãos solteiros",
+          "explanation": "Errado. O § 1º inclui os irmãos solteiros, e não os irmãos casados.",
+          "correction": "O texto do § 1º se refere aos irmãos solteiros."
+        }
+      ]
+    },
+    {
+      "id": "8112-art2",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 2",
+      "article_label": "Art. 2º",
+      "topic": "Definição de servidor",
+      "statements": [
+        {
+          "id": "8112-a2-1",
+          "prompt": "Para os efeitos da Lei 8.112/1990, servidor é a pessoa legalmente investida em cargo público.",
+          "answer": true,
+          "validation_phrase": "pessoa legalmente investida em cargo público",
+          "explanation": "Certo. Essa é a definição expressa do art. 2º."
+        },
+        {
+          "id": "8112-a2-2",
+          "prompt": "A definição de servidor da Lei 8.112/1990 exige investidura em emprego público.",
+          "answer": false,
+          "validation_phrase": "cargo público",
+          "explanation": "Errado. A lei utiliza a expressão “cargo público”.",
+          "correction": "O termo legal é cargo público, e não emprego público."
+        }
+      ]
+    },
+    {
+      "id": "8112-art3",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 3",
+      "article_label": "Art. 3º",
+      "topic": "Definição de cargo público",
+      "statements": [
+        {
+          "id": "8112-a3-1",
+          "prompt": "Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional.",
+          "answer": true,
+          "validation_phrase": "conjunto de atribuições e responsabilidades previstas na estrutura organizacional",
+          "explanation": "Certo. É a definição que consta do caput do art. 3º."
+        },
+        {
+          "id": "8112-a3-2",
+          "prompt": "Os cargos públicos são criados por ato administrativo e pagos com recursos privados.",
+          "answer": false,
+          "validation_phrase": "são criados por lei",
+          "explanation": "Errado. O parágrafo único dispõe que os cargos públicos são criados por lei e têm vencimento pago pelos cofres públicos.",
+          "correction": "Os cargos são criados por lei e pagos pelos cofres públicos."
+        }
+      ]
+    },
+    {
+      "id": "8112-art5",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 5",
+      "article_label": "Art. 5º",
+      "topic": "Requisitos para investidura em cargo público",
+      "statements": [
+        {
+          "id": "8112-a5-1",
+          "prompt": "A nacionalidade brasileira é um dos requisitos básicos para investidura em cargo público previstos na Lei 8.112/1990.",
+          "answer": true,
+          "validation_phrase": "a nacionalidade brasileira",
+          "explanation": "Certo. A nacionalidade brasileira aparece no inciso I do art. 5º."
+        },
+        {
+          "id": "8112-a5-2",
+          "prompt": "A idade mínima básica prevista no art. 5º é de 21 anos.",
+          "answer": false,
+          "validation_phrase": "idade mínima de dezoito anos",
+          "explanation": "Errado. O inciso V estabelece idade mínima de dezoito anos.",
+          "correction": "A idade mínima prevista no inciso V é de 18 anos."
+        },
+        {
+          "id": "8112-a5-3",
+          "prompt": "O art. 5º também prevê aptidão física e mental como requisito básico.",
+          "answer": true,
+          "validation_phrase": "aptidão física e mental",
+          "explanation": "Certo. É o requisito indicado no inciso VI."
+        }
+      ]
+    },
+    {
+      "id": "9784-art2",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 2",
+      "article_label": "Art. 2º",
+      "topic": "Princípios do processo administrativo",
+      "statements": [
+        {
+          "id": "9784-a2-1",
+          "prompt": "A Administração Pública deve observar, entre outros, os princípios da legalidade, finalidade, motivação e eficiência.",
+          "answer": true,
+          "validation_phrase": "legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade",
+          "explanation": "Certo. O caput do art. 2º lista esses princípios, além de ampla defesa, contraditório, segurança jurídica, interesse público e eficiência."
+        },
+        {
+          "id": "9784-a2-2",
+          "prompt": "Nos processos administrativos, a Lei 9.784/1999 admite promoção pessoal de agentes ou autoridades como critério de atuação.",
+          "answer": false,
+          "validation_phrase": "vedada a promoção pessoal de agentes ou autoridades",
+          "explanation": "Errado. O inciso III do parágrafo único veda a promoção pessoal de agentes ou autoridades.",
+          "correction": "O critério legal é a objetividade no atendimento do interesse público, vedada a promoção pessoal."
+        },
+        {
+          "id": "9784-a2-3",
+          "prompt": "A lei prevê a impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados.",
+          "answer": true,
+          "validation_phrase": "impulsão, de ofício, do processo administrativo",
+          "explanation": "Certo. Esse critério está no inciso XII do parágrafo único."
+        }
+      ]
+    },
+    {
+      "id": "9784-art3",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 3",
+      "article_label": "Art. 3º",
+      "topic": "Direitos do administrado",
+      "statements": [
+        {
+          "id": "9784-a3-1",
+          "prompt": "O administrado tem direito de ter ciência da tramitação dos processos administrativos em que seja interessado.",
+          "answer": true,
+          "validation_phrase": "ter ciência da tramitação dos processos administrativos",
+          "explanation": "Certo. O direito está previsto no inciso II do art. 3º."
+        },
+        {
+          "id": "9784-a3-2",
+          "prompt": "O administrado pode formular alegações e apresentar documentos somente depois da decisão.",
+          "answer": false,
+          "validation_phrase": "antes da decisão",
+          "explanation": "Errado. O inciso III permite formular alegações e apresentar documentos antes da decisão.",
+          "correction": "A apresentação deve ocorrer antes da decisão."
+        },
+        {
+          "id": "9784-a3-3",
+          "prompt": "A assistência por advogado é facultativa, salvo quando a representação for obrigatória por força de lei.",
+          "answer": true,
+          "validation_phrase": "facultativamente, por advogado, salvo quando obrigatória a representação",
+          "explanation": "Certo. Essa é a regra do inciso IV do art. 3º."
+        }
+      ]
+    },
+    {
+      "id": "6029-art3",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "article_key": "Art. 3",
+      "article_label": "Art. 3º",
+      "topic": "Comissão de Ética Pública",
+      "statements": [
+        {
+          "id": "6029-a3-1",
+          "prompt": "A Comissão de Ética Pública será integrada por sete brasileiros.",
+          "answer": true,
+          "validation_phrase": "integrada por sete brasileiros",
+          "explanation": "Certo. O caput do art. 3º prevê sete integrantes."
+        },
+        {
+          "id": "6029-a3-2",
+          "prompt": "Os mandatos dos integrantes da Comissão de Ética Pública são de quatro anos.",
+          "answer": false,
+          "validation_phrase": "mandatos de três anos",
+          "explanation": "Errado. O Decreto 6.029/2007 prevê mandatos de três anos, não coincidentes.",
+          "correction": "O prazo correto é de três anos."
+        },
+        {
+          "id": "6029-a3-3",
+          "prompt": "O Decreto 6.029/2007 permite uma única recondução dos membros da Comissão de Ética Pública.",
+          "answer": true,
+          "validation_phrase": "permitida uma única recondução",
+          "explanation": "Certo. A possibilidade de uma única recondução está expressa no caput do art. 3º."
+        }
+      ]
+    },
+    {
+      "id": "6029-art12",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "article_key": "Art. 12",
+      "article_label": "Art. 12",
+      "topic": "Apuração de conduta ética",
+      "statements": [
+        {
+          "id": "6029-a12-1",
+          "prompt": "A apuração de possível falta ética deve respeitar o contraditório e a ampla defesa.",
+          "answer": true,
+          "validation_phrase": "respeitando-se, sempre, as garantias do contraditório e da ampla defesa",
+          "explanation": "Certo. O caput do art. 12 determina a observância dessas garantias."
+        },
+        {
+          "id": "6029-a12-2",
+          "prompt": "O investigado deve ser notificado para se manifestar por escrito no prazo de quinze dias.",
+          "answer": false,
+          "validation_phrase": "no prazo de dez dias",
+          "explanation": "Errado. O caput do art. 12 prevê prazo de dez dias para manifestação escrita.",
+          "correction": "O prazo previsto é de dez dias."
+        },
+        {
+          "id": "6029-a12-3",
+          "prompt": "Se novos elementos de prova forem juntados após a manifestação inicial, o investigado será notificado para nova manifestação em dez dias.",
+          "answer": true,
+          "validation_phrase": "nova manifestação, no prazo de dez dias",
+          "explanation": "Certo. Essa regra está prevista no § 3º do art. 12."
+        }
+      ]
+    }
+  ],
+  "total_articles": 16,
+  "total_statements": 46
+}
