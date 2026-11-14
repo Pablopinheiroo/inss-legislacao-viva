@@ -1703,7 +1703,7 @@ $("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
 $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
 $("#multi-ce-article-toggle").addEventListener("click", () => {
   const panel=$("#multi-ce-article-panel");
-  const opening=panel.classList.contains("hidden");
+  const opening=panel.hidden;
   panel.hidden=!opening;
   $("#multi-ce-article-toggle").textContent=opening?"Fechar artigo":"Ler artigo antes de responder";
   $("#multi-ce-article-toggle").setAttribute("aria-expanded",String(opening));
