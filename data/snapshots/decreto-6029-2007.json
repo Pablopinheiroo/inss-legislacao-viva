@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -34,5 +34,654 @@
     "Art. 24": "Art. 24. As normas do Código de Conduta da Alta Administração Federal, do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal e do Código de Ética do órgão ou entidade aplicam-se, no que couber, às autoridades e agentes públicos neles referidos, mesmo quando em gozo de licença.",
     "Art. 25": "Art. 25. Ficam revogados os incisos XVII, XIX, XX, XXI, XXIII e XXV do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto nº 1.171, de 22 de junho de 1994, os arts. 2º e 3º do Decreto de 26 de maio de 1999, que cria a Comissão de Ética Pública, e os Decretos de 30 de agosto de 2000 e de 18 de maio de 2001, que dispõem sobre a Comissão de Ética Pública.",
     "Art. 26": "Art. 26. Este Decreto entra em vigor na data da sua publicação.\nBrasília, 1º de fevereiro de 2007; 186º da Independência e 119º da República.\nLUIZ INÁCIO LULA DA SILVA\nDilma Rousseff\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 02/02/2007\nPublicação:\nDiário Oficial da União - Seção 1\n- 2/2/2007, Página 2\n(Publicação Original)"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica instituído o Sistema de Gestão da Ética do Poder Executivo Federal com a finalidade de promover atividades que dispõem sobre a conduta ética no âmbito do Executivo Federal, competindo- lhe:",
+        "normalized_text": "Fica instituído o Sistema de Gestão da Ética do Poder Executivo Federal com a finalidade de promover atividades que dispõem sobre a conduta ética no âmbito do Executivo Federal, competindo- lhe:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública;\nintegrar os órgãos, programas e ações relacionadas com a ética pública;",
+        "normalized_text": "I - integrar os órgãos, programas e ações relacionadas com a ética pública; integrar os órgãos, programas e ações relacionadas com a ética pública;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;\ncontribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;",
+        "normalized_text": "II - contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública; contribuir para a implementação de políticas públicas tendo a transparência e o acesso à informação como instrumentos fundamentais para o exercício de gestão da ética pública;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;\npromover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;",
+        "normalized_text": "III - promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública; promover, com apoio dos segmentos pertinentes, a compatibilização e interação de normas, procedimentos técnicos e de gestão relativos à ética pública;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro.\narticular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro.",
+        "normalized_text": "IV - articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro. articular ações com vistas a estabelecer e efetivar procedimentos de incentivo e incremento ao desempenho institucional na gestão da ética pública do Estado brasileiro."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Integram o Sistema de Gestão da Ética do Poder Executivo Federal:",
+        "normalized_text": "Integram o Sistema de Gestão da Ética do Poder Executivo Federal:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;\na Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;",
+        "normalized_text": "I - a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999; a Comissão de Ética Pública - CEP, instituída pelo Decreto de 26 de maio de 1999;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e\nas Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e",
+        "normalized_text": "II - as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e as Comissões de Ética de que trata o Decreto nº 1.171, de 22 de junho de 1994; e"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal.\nas demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal.",
+        "normalized_text": "III - as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal. as demais Comissões de Ética e equivalentes nas entidades e órgãos do Poder Executivo Federal."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução.",
+        "normalized_text": "A CEP será integrada por sete brasileiros que preencham os requisitos de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, para mandatos de três anos, não coincidentes, permitida uma única recondução."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público.\nA atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público.",
+        "normalized_text": "§ 1º A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público. A atuação no âmbito da CEP não enseja qualquer remuneração para seus membros e os trabalhos nela desenvolvidos são considerados prestação de relevante serviço público."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão.\nO Presidente terá o voto de qualidade nas deliberações da Comissão.",
+        "normalized_text": "§ 2º O Presidente terá o voto de qualidade nas deliberações da Comissão. O Presidente terá o voto de qualidade nas deliberações da Comissão."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação.\nOs mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação.",
+        "normalized_text": "§ 3º Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação. Os mandatos dos primeiros membros serão de um, dois e três anos, estabelecidos no decreto de designação."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "À CEP compete:",
+        "normalized_text": "À CEP compete:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;\natuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;",
+        "normalized_text": "I - atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública; atuar como instância consultiva do Presidente da República e Ministros de Estado em matéria de ética pública;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:\nadministrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:",
+        "normalized_text": "II - administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo: administrar a aplicação do Código de Conduta da Alta Administração Federal, devendo:"
+      },
+      "caput/inciso:II/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:II/alinea:a",
+        "text": "a)\nsubmeter ao Presidente da República medidas para seu aprimoramento;",
+        "normalized_text": "a) submeter ao Presidente da República medidas para seu aprimoramento;"
+      },
+      "caput/inciso:II/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:II/alinea:b",
+        "text": "b)\ndirimir dúvidas a respeito de interpretação de suas normas, deliberando sobre casos omissos;",
+        "normalized_text": "b) dirimir dúvidas a respeito de interpretação de suas normas, deliberando sobre casos omissos;"
+      },
+      "caput/inciso:II/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/inciso:II/alinea:c",
+        "text": "c)\napurar, mediante denúncia, ou de ofício, condutas em desacordo com as normas nele previstas, quando praticadas pelas autoridades a ele submetidas;",
+        "normalized_text": "c) apurar, mediante denúncia, ou de ofício, condutas em desacordo com as normas nele previstas, quando praticadas pelas autoridades a ele submetidas;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;\ndirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;",
+        "normalized_text": "III - dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994; dirimir dúvidas de interpretação sobre as normas do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal de que trata o Decreto nº 1.171, de 1994;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;\ncoordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;",
+        "normalized_text": "IV - coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal; coordenar, avaliar e supervisionar o Sistema de Gestão da Ética Pública do Poder Executivo Federal;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - aprovar o seu regimento interno; e\naprovar o seu regimento interno; e",
+        "normalized_text": "V - aprovar o seu regimento interno; e aprovar o seu regimento interno; e"
+      },
+      "caput/inciso:VI": {
+        "device_type": "inciso",
+        "device_label": "inciso VI",
+        "device_path": "caput/inciso:VI",
+        "text": "VI - escolher o seu Presidente.\nescolher o seu Presidente.",
+        "normalized_text": "VI - escolher o seu Presidente. escolher o seu Presidente."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA CEP contará com uma Secretaria-Executiva, vinculada à Casa Civil da Presidência da República, à qual competirá prestar o apoio técnico e administrativo aos trabalhos da Comissão.",
+        "normalized_text": "Parágrafo único. A CEP contará com uma Secretaria-Executiva, vinculada à Casa Civil da Presidência da República, à qual competirá prestar o apoio técnico e administrativo aos trabalhos da Comissão."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Cada Comissão de Ética de que trata o Decreto nº 1171, de 1994, será integrada por três membros titulares e três suplentes, escolhidos entre servidores e empregados do seu quadro permanente, e designados pelo dirigente máximo da respectiva entidade ou órgão, para mandatos não coincidentes de três anos.",
+        "normalized_text": "Cada Comissão de Ética de que trata o Decreto nº 1171, de 1994, será integrada por três membros titulares e três suplentes, escolhidos entre servidores e empregados do seu quadro permanente, e designados pelo dirigente máximo da respectiva entidade ou órgão, para mandatos não coincidentes de três anos."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É dever do titular de entidade ou órgão da Administração Pública Federal, direta e indireta:",
+        "normalized_text": "É dever do titular de entidade ou órgão da Administração Pública Federal, direta e indireta:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;\nassegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;",
+        "normalized_text": "I - assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano; assegurar as condições de trabalho para que as Comissões de Ética cumpram suas funções, inclusive para que do exercício das atribuições de seus integrantes não lhes resulte qualquer prejuízo ou dano;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública.\nconduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública.",
+        "normalized_text": "II - conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública. conduzir em seu âmbito a avaliação da gestão da ética conforme processo coordenado pela Comissão de Ética Pública."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Compete às Comissões de Ética de que tratam os incisos II e III do art. 2º:",
+        "normalized_text": "Compete às Comissões de Ética de que tratam os incisos II e III do art. 2º:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;\natuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;",
+        "normalized_text": "I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade; atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:\naplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:",
+        "normalized_text": "II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo: aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto 1.171, de 1994, devendo:"
+      },
+      "caput/inciso:II/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:II/alinea:a",
+        "text": "a)\nsubmeter à Comissão de Ética Pública propostas para seu aperfeiçoamento;",
+        "normalized_text": "a) submeter à Comissão de Ética Pública propostas para seu aperfeiçoamento;"
+      },
+      "caput/inciso:II/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:II/alinea:b",
+        "text": "b)\ndirimir dúvidas a respeito da interpretação de suas normas e deliberar sobre casos omissos;",
+        "normalized_text": "b) dirimir dúvidas a respeito da interpretação de suas normas e deliberar sobre casos omissos;"
+      },
+      "caput/inciso:II/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/inciso:II/alinea:c",
+        "text": "c)\napurar, mediante denúncia ou de ofício, conduta em desacordo com as normas éticas pertinentes; e",
+        "normalized_text": "c) apurar, mediante denúncia ou de ofício, conduta em desacordo com as normas éticas pertinentes; e"
+      },
+      "caput/inciso:II/alinea:d": {
+        "device_type": "alinea",
+        "device_label": "alínea d",
+        "device_path": "caput/inciso:II/alinea:d",
+        "text": "d)\nrecomendar, acompanhar e avaliar, no âmbito do órgão ou entidade a que estiver vinculada, o desenvolvimento de ações objetivando a disseminação, capacitação e treinamento sobre as normas de ética e disciplina;",
+        "normalized_text": "d) recomendar, acompanhar e avaliar, no âmbito do órgão ou entidade a que estiver vinculada, o desenvolvimento de ações objetivando a disseminação, capacitação e treinamento sobre as normas de ética e disciplina;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e\nrepresentar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e",
+        "normalized_text": "III - representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e representar a respectiva entidade ou órgão na Rede de Ética do Poder Executivo Federal a que se refere o art. 9º; e"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas.\nsupervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas.",
+        "normalized_text": "IV - supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas. supervisionar a observância do Código de Conduta da Alta Administração Federal e comunicar à CEP situações que possam configurar descumprimento de suas normas."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições.\nCada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições.",
+        "normalized_text": "§ 1º Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições. Cada Comissão de Ética contará com uma Secretaria- Executiva, vinculada administrativamente à instância máxima da entidade ou órgão, para cumprir plano de trabalho por ela aprovado e prover o apoio técnico e material necessário ao cumprimento das suas atribuições."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas.\nAs Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas.",
+        "normalized_text": "§ 2º As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas. As Secretarias-Executivas das Comissões de Ética serão chefiadas por servidor ou empregado do quadro permanente da entidade ou órgão, ocupante de cargo de direção compatível com sua estrutura, alocado sem aumento de despesas."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Compete às instâncias superiores dos órgãos e entidades do Poder Executivo Federal, abrangendo a administração direta e indireta:",
+        "normalized_text": "Compete às instâncias superiores dos órgãos e entidades do Poder Executivo Federal, abrangendo a administração direta e indireta:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - observar e fazer observar as normas de ética e disciplina;\nobservar e fazer observar as normas de ética e disciplina;",
+        "normalized_text": "I - observar e fazer observar as normas de ética e disciplina; observar e fazer observar as normas de ética e disciplina;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - constituir Comissão de Ética;\nconstituir Comissão de Ética;",
+        "normalized_text": "II - constituir Comissão de Ética; constituir Comissão de Ética;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e\ngarantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e",
+        "normalized_text": "III - garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e garantir os recursos humanos, materiais e financeiros para que a Comissão cumpra com suas atribuições; e"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - atender com prioridade às solicitações da CEP.\natender com prioridade às solicitações da CEP.",
+        "normalized_text": "IV - atender com prioridade às solicitações da CEP. atender com prioridade às solicitações da CEP."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica constituída a Rede de Ética do Poder Executivo Federal, integrada pelos representantes das Comissões de Ética de que tratam os incisos I, II e III do art. 2º, com o objetivo de promover a cooperação técnica e a avaliação em gestão da ética.",
+        "normalized_text": "Fica constituída a Rede de Ética do Poder Executivo Federal, integrada pelos representantes das Comissões de Ética de que tratam os incisos I, II e III do art. 2º, com o objetivo de promover a cooperação técnica e a avaliação em gestão da ética."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nOs integrantes da Rede de Ética se reunirão sob a coordenação da Comissão de Ética Pública, pelo menos uma vez por ano, em fórum específico, para avaliar o programa e as ações para a promoção da ética na administração pública.",
+        "normalized_text": "Parágrafo único. Os integrantes da Rede de Ética se reunirão sob a coordenação da Comissão de Ética Pública, pelo menos uma vez por ano, em fórum específico, para avaliar o programa e as ações para a promoção da ética na administração pública."
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os trabalhos da CEP e das demais Comissões de Ética devem ser desenvolvidos com celeridade e observância dos seguintes princípios:",
+        "normalized_text": "Os trabalhos da CEP e das demais Comissões de Ética devem ser desenvolvidos com celeridade e observância dos seguintes princípios:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - proteção à honra e à imagem da pessoa investigada;\nproteção à honra e à imagem da pessoa investigada;",
+        "normalized_text": "I - proteção à honra e à imagem da pessoa investigada; proteção à honra e à imagem da pessoa investigada;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e\nproteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e",
+        "normalized_text": "II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto.\nindependência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto.",
+        "normalized_text": "III - independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto. independência e imparcialidade dos seus membros na apuração dos fatos, com as garantias asseguradas neste Decreto."
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Qualquer cidadão, agente público, pessoa jurídica de direito privado, associação ou entidade de classe poderá provocar a atuação da CEP ou de Comissão de Ética, visando à apuração de infração ética imputada a agente público, órgão ou setor específico de ente estatal.",
+        "normalized_text": "Qualquer cidadão, agente público, pessoa jurídica de direito privado, associação ou entidade de classe poderá provocar a atuação da CEP ou de Comissão de Ética, visando à apuração de infração ética imputada a agente público, órgão ou setor específico de ente estatal."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nEntende-se por agente público, para os fins deste Decreto, todo aquele que, por força de lei, contrato ou qualquer ato jurídico, preste serviços de natureza permanente, temporária, excepcional ou eventual, ainda que sem retribuição financeira, a órgão ou entidade da administração pública federal, direta e indireta.",
+        "normalized_text": "Parágrafo único. Entende-se por agente público, para os fins deste Decreto, todo aquele que, por força de lei, contrato ou qualquer ato jurídico, preste serviços de natureza permanente, temporária, excepcional ou eventual, ainda que sem retribuição financeira, a órgão ou entidade da administração pública federal, direta e indireta."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O processo de apuração de prática de ato em desrespeito ao preceituado no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal será instaurado, de ofício ou em razão de denúncia fundamentada, respeitando-se, sempre, as garantias do contraditório e da ampla defesa, pela Comissão de Ética Pública ou Comissões de Ética de que tratam o incisos II e III do art. 2º, conforme o caso, que notificará o investigado para manifestar-se, por escrito, no prazo de dez dias.",
+        "normalized_text": "O processo de apuração de prática de ato em desrespeito ao preceituado no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal será instaurado, de ofício ou em razão de denúncia fundamentada, respeitando-se, sempre, as garantias do contraditório e da ampla defesa, pela Comissão de Ética Pública ou Comissões de Ética de que tratam o incisos II e III do art. 2º, conforme o caso, que notificará o investigado para manifestar-se, por escrito, no prazo de dez dias."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa.\nO investigado poderá produzir prova documental necessária à sua defesa.",
+        "normalized_text": "§ 1º O investigado poderá produzir prova documental necessária à sua defesa. O investigado poderá produzir prova documental necessária à sua defesa."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista.\nAs Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista.",
+        "normalized_text": "§ 2º As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista. As Comissões de Ética poderão requisitar os documentos que entenderem necessários à instrução probatória e, também, promover diligências e solicitar parecer de especialista."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.\nNa hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias.",
+        "normalized_text": "§ 3º Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias. Na hipótese de serem juntados aos autos da investigação, após a manifestação referida no caput deste artigo, novos elementos de prova, o investigado será notificado para nova manifestação, no prazo de dez dias."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada.\nConcluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada.",
+        "normalized_text": "§ 4º Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada. Concluída a instrução processual, as Comissões de Ética proferirão decisão conclusiva e fundamentada."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:\nSe a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:",
+        "normalized_text": "§ 5º Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber: Se a conclusão for pela existência de falta ética, além das providências previstas no Código de Conduta da Alta Administração Federal e no Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, as Comissões de Ética tomarão as seguintes providências, no que couber:"
+      },
+      "paragrafo:5/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:5/inciso:I",
+        "text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;\nencaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;",
+        "normalized_text": "I - encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso; encaminhamento de sugestão de exoneração de cargo ou função de confiança à autoridade hierarquicamente superior ou devolução ao órgão de origem, conforme o caso;"
+      },
+      "paragrafo:5/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:5/inciso:II",
+        "text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e\nencaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e",
+        "normalized_text": "II - encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e encaminhamento, conforme o caso, para a Controladoria- Geral da União ou unidade específica do Sistema de Correição do Poder Executivo Federal de que trata o Decreto nº 5.480, de 30 de junho de 2005, para exame de eventuais transgressões disciplinares; e"
+      },
+      "paragrafo:5/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "paragrafo:5/inciso:III",
+        "text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir.\nrecomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir.",
+        "normalized_text": "III - recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir. recomendação de abertura de procedimento administrativo, se a gravidade da conduta assim o exigir."
+      }
+    },
+    "Art. 13": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Será mantido com a chancela de \"reservado\", até que esteja concluído, qualquer procedimento instaurado para apuração de prática em desrespeito às normas éticas.",
+        "normalized_text": "Será mantido com a chancela de \"reservado\", até que esteja concluído, qualquer procedimento instaurado para apuração de prática em desrespeito às normas éticas."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados.\nConcluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados.",
+        "normalized_text": "§ 1º Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados. Concluída a investigação e após a deliberação da CEP ou da Comissão de Ética do órgão ou entidade, os autos do procedimento deixarão de ser reservados."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda.\nNa hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda.",
+        "normalized_text": "§ 2º Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda. Na hipótese de os autos estarem instruídos com documento acobertado por sigilo legal, o acesso a esse tipo de documento somente será permitido a quem detiver igual direito perante o órgão ou entidade originariamente encarregado da sua guarda."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados.\nPara resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados.",
+        "normalized_text": "§ 3º Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados. Para resguardar o sigilo de documentos que assim devam ser mantidos, as Comissões de Ética, depois de concluído o processo de investigação, providenciarão para que tais documentos sejam desentranhados dos autos, lacrados e acautelados."
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A qualquer pessoa que esteja sendo investigada é assegurado o direito de saber o que lhe está sendo imputado, de conhecer o teor da acusação e de ter vista dos autos, no recinto das Comissões de Ética, mesmo que ainda não tenha sido notificada da existência do procedimento investigatório.",
+        "normalized_text": "A qualquer pessoa que esteja sendo investigada é assegurado o direito de saber o que lhe está sendo imputado, de conhecer o teor da acusação e de ter vista dos autos, no recinto das Comissões de Ética, mesmo que ainda não tenha sido notificada da existência do procedimento investigatório."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nO direito assegurado neste artigo inclui o de obter cópia dos autos e de certidão do seu teor.",
+        "normalized_text": "Parágrafo único. O direito assegurado neste artigo inclui o de obter cópia dos autos e de certidão do seu teor."
+      }
+    },
+    "Art. 15": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Todo ato de posse, investidura em função pública ou celebração de contrato de trabalho, dos agentes públicos referidos no parágrafo único do art. 11, deverá ser acompanhado da prestação de compromisso solene de acatamento e observância das regras estabelecidas pelo Código de Conduta da Alta Administração Federal, pelo Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal e pelo Código de Ética do órgão ou entidade, conforme o caso.",
+        "normalized_text": "Todo ato de posse, investidura em função pública ou celebração de contrato de trabalho, dos agentes públicos referidos no parágrafo único do art. 11, deverá ser acompanhado da prestação de compromisso solene de acatamento e observância das regras estabelecidas pelo Código de Conduta da Alta Administração Federal, pelo Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal e pelo Código de Ética do órgão ou entidade, conforme o caso."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único .\nA posse em cargo ou função pública que submeta a autoridade às normas do Código de Conduta da Alta Administração Federal deve ser precedida de consulta da autoridade à Comissão de Ética Pública acerca de situação que possa suscitar conflito de interesses.",
+        "normalized_text": "Parágrafo único . A posse em cargo ou função pública que submeta a autoridade às normas do Código de Conduta da Alta Administração Federal deve ser precedida de consulta da autoridade à Comissão de Ética Pública acerca de situação que possa suscitar conflito de interesses."
+      }
+    },
+    "Art. 16": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As Comissões de Ética não poderão escusar-se de proferir decisão sobre matéria de sua competência alegando omissão do Código de Conduta da Alta Administração Federal, do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal ou do Código de Ética do órgão ou entidade, que, se existente, será suprida pela analogia e invocação aos princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+        "normalized_text": "As Comissões de Ética não poderão escusar-se de proferir decisão sobre matéria de sua competência alegando omissão do Código de Conduta da Alta Administração Federal, do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal ou do Código de Ética do órgão ou entidade, que, se existente, será suprida pela analogia e invocação aos princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade.\nHavendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade.",
+        "normalized_text": "§ 1º Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade. Havendo dúvida quanto à legalidade, a Comissão de Ética competente deverá ouvir previamente a área jurídica do órgão ou entidade."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal.\nCumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal.",
+        "normalized_text": "§ 2º Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal. Cumpre à CEP responder a consultas sobre aspectos éticos que lhe forem dirigidas pelas demais Comissões de Ética e pelos órgãos e entidades que integram o Executivo Federal, bem como pelos cidadãos e servidores que venham a ser indicados para ocupar cargo ou função abrangida pelo Código de Conduta da Alta Administração Federal."
+      }
+    },
+    "Art. 17": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As Comissões de Ética, sempre que constatarem a possível ocorrência de ilícitos penais, civis, de improbidade administrativa ou de infração disciplinar, encaminharão cópia dos autos às autoridades competentes para apuração de tais fatos, sem prejuízo das medidas de sua competência.",
+        "normalized_text": "As Comissões de Ética, sempre que constatarem a possível ocorrência de ilícitos penais, civis, de improbidade administrativa ou de infração disciplinar, encaminharão cópia dos autos às autoridades competentes para apuração de tais fatos, sem prejuízo das medidas de sua competência."
+      }
+    },
+    "Art. 18": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As decisões das Comissões de Ética, na análise de qualquer fato ou ato submetido à sua apreciação ou por ela levantado, serão resumidas em ementa e, com a omissão dos nomes dos investigados, divulgadas no sítio do próprio órgão, bem como remetidas à Comissão de Ética Pública.",
+        "normalized_text": "As decisões das Comissões de Ética, na análise de qualquer fato ou ato submetido à sua apreciação ou por ela levantado, serão resumidas em ementa e, com a omissão dos nomes dos investigados, divulgadas no sítio do próprio órgão, bem como remetidas à Comissão de Ética Pública."
+      }
+    },
+    "Art. 19": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os trabalhos nas Comissões de Ética de que tratam os incisos II e III do art. 2º são considerados relevantes e têm prioridade sobre as atribuições próprias dos cargos dos seus membros, quando estes não atuarem com exclusividade na Comissão.",
+        "normalized_text": "Os trabalhos nas Comissões de Ética de que tratam os incisos II e III do art. 2º são considerados relevantes e têm prioridade sobre as atribuições próprias dos cargos dos seus membros, quando estes não atuarem com exclusividade na Comissão."
+      }
+    },
+    "Art. 20": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os órgãos e entidades da Administração Pública Federal darão tratamento prioritário às solicitações de documentos necessários à instrução dos procedimentos de investigação instaurados pelas Comissões de Ética .",
+        "normalized_text": "Os órgãos e entidades da Administração Pública Federal darão tratamento prioritário às solicitações de documentos necessários à instrução dos procedimentos de investigação instaurados pelas Comissões de Ética ."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12.\nNa hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12.",
+        "normalized_text": "§ 1º Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12. Na hipótese de haver inobservância do dever funcional previsto no caput, a Comissão de Ética adotará as providências previstas no inciso III do § 5º do art. 12."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética.\nAs autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética.",
+        "normalized_text": "§ 2º As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética. As autoridades competentes não poderão alegar sigilo para deixar de prestar informação solicitada pelas Comissões de Ética."
+      }
+    },
+    "Art. 21": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A infração de natureza ética cometida por membro de Comissão de Ética de que tratam os incisos II e III do art. 2º será apurada pela Comissão de Ética Pública.",
+        "normalized_text": "A infração de natureza ética cometida por membro de Comissão de Ética de que tratam os incisos II e III do art. 2º será apurada pela Comissão de Ética Pública."
+      }
+    },
+    "Art. 22": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Comissão de Ética Pública manterá banco de dados de sanções aplicadas pelas Comissões de Ética de que tratam os incisos II e III do art. 2º e de suas próprias sanções, para fins de consulta pelos órgãos ou entidades da administração pública federal, em casos de nomeação para cargo em comissão ou de alta relevância pública.",
+        "normalized_text": "A Comissão de Ética Pública manterá banco de dados de sanções aplicadas pelas Comissões de Ética de que tratam os incisos II e III do art. 2º e de suas próprias sanções, para fins de consulta pelos órgãos ou entidades da administração pública federal, em casos de nomeação para cargo em comissão ou de alta relevância pública."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nO banco de dados referido neste artigo engloba as sanções aplicadas a qualquer dos agentes públicos mencionados no parágrafo único do art. 11 deste Decreto.",
+        "normalized_text": "Parágrafo único. O banco de dados referido neste artigo engloba as sanções aplicadas a qualquer dos agentes públicos mencionados no parágrafo único do art. 11 deste Decreto."
+      }
+    },
+    "Art. 23": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os representantes das Comissões de Ética de que tratam os incisos II e III do art. 2º atuarão como elementos de ligação com a CEP, que disporá em Resolução própria sobre as atividades que deverão desenvolver para o cumprimento desse mister.",
+        "normalized_text": "Os representantes das Comissões de Ética de que tratam os incisos II e III do art. 2º atuarão como elementos de ligação com a CEP, que disporá em Resolução própria sobre as atividades que deverão desenvolver para o cumprimento desse mister."
+      }
+    },
+    "Art. 24": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As normas do Código de Conduta da Alta Administração Federal, do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal e do Código de Ética do órgão ou entidade aplicam-se, no que couber, às autoridades e agentes públicos neles referidos, mesmo quando em gozo de licença.",
+        "normalized_text": "As normas do Código de Conduta da Alta Administração Federal, do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal e do Código de Ética do órgão ou entidade aplicam-se, no que couber, às autoridades e agentes públicos neles referidos, mesmo quando em gozo de licença."
+      }
+    },
+    "Art. 25": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ficam revogados os incisos XVII, XIX, XX, XXI, XXIII e XXV do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto nº 1.171, de 22 de junho de 1994, os arts. 2º e 3º do Decreto de 26 de maio de 1999, que cria a Comissão de Ética Pública, e os Decretos de 30 de agosto de 2000 e de 18 de maio de 2001, que dispõem sobre a Comissão de Ética Pública.",
+        "normalized_text": "Ficam revogados os incisos XVII, XIX, XX, XXI, XXIII e XXV do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, aprovado pelo Decreto nº 1.171, de 22 de junho de 1994, os arts. 2º e 3º do Decreto de 26 de maio de 1999, que cria a Comissão de Ética Pública, e os Decretos de 30 de agosto de 2000 e de 18 de maio de 2001, que dispõem sobre a Comissão de Ética Pública."
+      }
+    },
+    "Art. 26": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto entra em vigor na data da sua publicação.\nBrasília, 1º de fevereiro de 2007; 186º da Independência e 119º da República.\nLUIZ INÁCIO LULA DA SILVA\nDilma Rousseff\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 02/02/2007\nPublicação:\nDiário Oficial da União - Seção 1\n- 2/2/2007, Página 2\n(Publicação Original)",
+        "normalized_text": "Este Decreto entra em vigor na data da sua publicação. Brasília, 1º de fevereiro de 2007; 186º da Independência e 119º da República. LUIZ INÁCIO LULA DA SILVA Dilma Rousseff Este texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 02/02/2007 Publicação: Diário Oficial da União - Seção 1 - 2/2/2007, Página 2 (Publicação Original)"
+      }
+    }
   }
 }

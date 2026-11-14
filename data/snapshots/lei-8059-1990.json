@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -32,5 +32,475 @@
     "Art. 23": "Art. 23. As despesas decorrentes da aplicação desta lei correrão à conta das dotações consignadas no Orçamento Geral da União.",
     "Art. 24": "Art. 24. Esta Lei entra em vigor na data de sua publicação.",
     "Art. 25": "Art. 25. Revogam-se o art. 30 da Lei nº 4.242, de 17 de julho de 1963, a Lei nº 6.592, de 17 de novembro de 1978, a Lei nº 7.424, de 17 de dezembro de 1985, e demais disposições em contrário.\nBrasília, 4 de julho de 1990; 169º da Independência e 102º da República.\nFERNANDO COLLOR\nMário César Flores\nCarlos Tinoco Ribeiro Gomes\nSócrates da Costa Monteiro\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 05/07/1990\nPublicação:\nDiário Oficial da União - Seção 1\n- 5/7/1990, Página 12939\n(Publicação Original)\nColeção de Leis do Brasil\n- 1990, Página 2368\nVol. 4\n(Publicação Original)"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta lei regula a pensão especial devida a quem tenha participado de operações bélicas durante a Segunda Guerra Mundial, nos termos da Lei nº 5.315, de 12 de setembro de 1967, e aos respectivos dependentes (Ato das Disposições Constitucionais Transitórias, art. 53, II e III).",
+        "normalized_text": "Esta lei regula a pensão especial devida a quem tenha participado de operações bélicas durante a Segunda Guerra Mundial, nos termos da Lei nº 5.315, de 12 de setembro de 1967, e aos respectivos dependentes (Ato das Disposições Constitucionais Transitórias, art. 53, II e III)."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Para os efeitos desta lei, considera-se:",
+        "normalized_text": "Para os efeitos desta lei, considera-se:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;\npensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;",
+        "normalized_text": "I - pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes; pensão especial o benefício pecuniário pago mensalmente ao ex-combatente ou, em caso de falecimento, a seus dependentes;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;\npensionista especial o ex-combatente ou dependentes, que percebam pensão especial;",
+        "normalized_text": "II - pensionista especial o ex-combatente ou dependentes, que percebam pensão especial; pensionista especial o ex-combatente ou dependentes, que percebam pensão especial;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - pensão-tronco a pensão especial integral;\npensão-tronco a pensão especial integral;",
+        "normalized_text": "III - pensão-tronco a pensão especial integral; pensão-tronco a pensão especial integral;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;\ncota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;",
+        "normalized_text": "IV - cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes; cota-parte cada parcela resultante da participação da pensão-tronco entre dependentes;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;\nviúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;",
+        "normalized_text": "V - viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se; viúva a mulher com quem o ex-combatente estava casado quando falecera, e que não voltou a casar-se;"
+      },
+      "caput/inciso:VI": {
+        "device_type": "inciso",
+        "device_label": "inciso VI",
+        "device_path": "caput/inciso:VI",
+        "text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;\nex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;",
+        "normalized_text": "VI - ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado; ex-esposa a pessoa de quem o ex-combatente tenha-se divorciado, desquitado ou separado por sentença transitada em julgado;"
+      },
+      "caput/inciso:VII": {
+        "device_type": "inciso",
+        "device_label": "inciso VII",
+        "device_path": "caput/inciso:VII",
+        "text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;\ncompanheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;",
+        "normalized_text": "VII - companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável; companheira que tenha filho comum com o ex-combatente ou com ele viva no mínimo há cinco anos, em união estável;"
+      },
+      "caput/inciso:VIII": {
+        "device_type": "inciso",
+        "device_label": "inciso VIII",
+        "device_path": "caput/inciso:VIII",
+        "text": "VIII - concessão originária a relativa ao ex-combatente;\nconcessão originária a relativa ao ex-combatente;",
+        "normalized_text": "VIII - concessão originária a relativa ao ex-combatente; concessão originária a relativa ao ex-combatente;"
+      },
+      "caput/inciso:IX": {
+        "device_type": "inciso",
+        "device_label": "inciso IX",
+        "device_path": "caput/inciso:IX",
+        "text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito.\nreversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito.",
+        "normalized_text": "IX - reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito. reversão a concessão da pensão especial aos dependentes do ex-combatente, por ocasião de seu óbito."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial corresponderá à pensão militar deixada por segundo-tenente das Forças Armadas.",
+        "normalized_text": "A pensão especial corresponderá à pensão militar deixada por segundo-tenente das Forças Armadas."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão é inacumulável com quaisquer rendimentos percebidos dos cofres públicos, exceto os benefícios previdenciários.",
+        "normalized_text": "A pensão é inacumulável com quaisquer rendimentos percebidos dos cofres públicos, exceto os benefícios previdenciários."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes.\nO ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes.",
+        "normalized_text": "§ 1º O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes. O ex-combatente, ou dependente legalmente habilitado, que passar a receber importância dos cofres públicos perderá o direito à pensão especial pelo tempo em que permanecer nessa situação, não podendo a sua cota-parte ser transferida a outros dependentes."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos.\nFica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos.",
+        "normalized_text": "§ 2º Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos. Fica assegurado ao interessado que perceber outros rendimentos pagos pelos cofres públicos o direito de optar pela pensão ou por esses rendimentos."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Consideram-se dependentes do ex-combatente para fins desta Lei:",
+        "normalized_text": "Consideram-se dependentes do ex-combatente para fins desta Lei:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - a viúva;\na viúva;",
+        "normalized_text": "I - a viúva; a viúva;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - a companheira;\na companheira;",
+        "normalized_text": "II - a companheira; a companheira;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;\no filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;",
+        "normalized_text": "III - o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos; o filho e a filha de qualquer condição, solteiros, menores de 21 anos ou inválidos;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - o pai e a mãe inválidos; e\no pai e a mãe inválidos; e",
+        "normalized_text": "IV - o pai e a mãe inválidos; e o pai e a mãe inválidos; e"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos.\no irmão e a irmã, solteiros, menores de 21 anos ou inválidos.",
+        "normalized_text": "V - o irmão e a irmã, solteiros, menores de 21 anos ou inválidos. o irmão e a irmã, solteiros, menores de 21 anos ou inválidos."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nOs dependentes de que tratam os incisos IV e V só terão direito à pensão se viviam sob a dependência econômica do ex-combatente, por ocasião de seu óbito.",
+        "normalized_text": "Parágrafo único. Os dependentes de que tratam os incisos IV e V só terão direito à pensão se viviam sob a dependência econômica do ex-combatente, por ocasião de seu óbito."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial é devida ao ex-combatente e somente em caso de sua morte será revertida aos dependentes.",
+        "normalized_text": "A pensão especial é devida ao ex-combatente e somente em caso de sua morte será revertida aos dependentes."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nNa reversão, a pensão será dividida entre o conjunto dos dependentes habilitáveis (art. 5º, I a V), em cotas-partes iguais.",
+        "normalized_text": "Parágrafo único. Na reversão, a pensão será dividida entre o conjunto dos dependentes habilitáveis (art. 5º, I a V), em cotas-partes iguais."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A condição de dependentes comprova-se:",
+        "normalized_text": "A condição de dependentes comprova-se:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - por meio de certidões do registro civil;\npor meio de certidões do registro civil;",
+        "normalized_text": "I - por meio de certidões do registro civil; por meio de certidões do registro civil;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - por declaração expressa do ex-combatente, quando em vida;\npor declaração expressa do ex-combatente, quando em vida;",
+        "normalized_text": "II - por declaração expressa do ex-combatente, quando em vida; por declaração expressa do ex-combatente, quando em vida;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial.\npor qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial.",
+        "normalized_text": "III - por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial. por qualquer meio de prova idôneo, inclusive mediante justificação administrativa ou judicial."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial não será deferida:",
+        "normalized_text": "A pensão especial não será deferida:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - à ex-esposa que não tenha direito a alimentos;\nà ex-esposa que não tenha direito a alimentos;",
+        "normalized_text": "I - à ex-esposa que não tenha direito a alimentos; à ex-esposa que não tenha direito a alimentos;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;\nà viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;",
+        "normalized_text": "II - à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado; à viúva que voluntariamente abandonou o lar conjugal há mais de cinco anos ou que, mesmo por tempo inferior, abandonou-o e a ele recusou-se a voltar, desde que esta situação tenha sido reconhecida por sentença judicial transitada em julgado;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;\nà companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;",
+        "normalized_text": "III - à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária; à companheira, quando, antes da morte do ex-combatente, houver cessado a dependência, pela ruptura da relação concubinária;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente.\nao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente.",
+        "normalized_text": "IV - ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente. ao dependente que tenha sido condenado por crime doloso, do qual resulte a morte do ex-combatente ou de outro dependente."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Até o valor de que trata o art. 3º desta Lei, a ex-esposa que estiver percebendo alimentos por força de decisão judicial terá direito a pensão especial no valor destes.",
+        "normalized_text": "Até o valor de que trata o art. 3º desta Lei, a ex-esposa que estiver percebendo alimentos por força de decisão judicial terá direito a pensão especial no valor destes."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Havendo excesso, este se destinará aos demais dependentes.\nHavendo excesso, este se destinará aos demais dependentes.",
+        "normalized_text": "§ 1º Havendo excesso, este se destinará aos demais dependentes. Havendo excesso, este se destinará aos demais dependentes."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa.\nA falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa.",
+        "normalized_text": "§ 2º A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa. A falta de dependentes habilitados não prejudicará o direito à pensão da ex-esposa."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias.\nO direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias.",
+        "normalized_text": "§ 3º O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias. O direito à parcela da pensão especial, nos termos deste artigo, perdurará enquanto a ex-esposa não contrair novas núpcias."
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial pode ser requerida a qualquer tempo.",
+        "normalized_text": "A pensão especial pode ser requerida a qualquer tempo."
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O benefício será pago mediante requerimento, devidamente instruído, em qualquer organização militar do ministério competente (art. 12), se na data do requerimento o ex-combatente, ou o dependente, preencher os requisitos desta Lei.",
+        "normalized_text": "O benefício será pago mediante requerimento, devidamente instruído, em qualquer organização militar do ministério competente (art. 12), se na data do requerimento o ex-combatente, ou o dependente, preencher os requisitos desta Lei."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É da competência do Ministério Militar ao qual esteve vinculado o ex-combatente durante a Segunda Guerra Mundial o processamento da pensão especial, desde a habilitação até o pagamento, inclusive nos casos de substituição a outra pensão ou reversão.",
+        "normalized_text": "É da competência do Ministério Militar ao qual esteve vinculado o ex-combatente durante a Segunda Guerra Mundial o processamento da pensão especial, desde a habilitação até o pagamento, inclusive nos casos de substituição a outra pensão ou reversão."
+      }
+    },
+    "Art. 13": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Estando o processo devidamente instruído, a autoridade designada pelo Ministro competente autorizará o pagamento da pensão especial, em caráter temporário, até a apreciação da legalidade da concessão e registro pelo Tribunal de Contas da União.",
+        "normalized_text": "Estando o processo devidamente instruído, a autoridade designada pelo Ministro competente autorizará o pagamento da pensão especial, em caráter temporário, até a apreciação da legalidade da concessão e registro pelo Tribunal de Contas da União."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União.\nO pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União.",
+        "normalized_text": "§1º O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União. O pagamento da pensão especial será efetuado em caráter definitivo, após o registro pelo Tribunal de Contas da União."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista.\nAs dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista.",
+        "normalized_text": "§ 2º As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista. As dívidas por exercícios anteriores são pagas pelo ministério a que estiver vinculado o pensionista."
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A cota-parte da pensão dos dependentes se extingue:",
+        "normalized_text": "A cota-parte da pensão dos dependentes se extingue:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - pela morte do pensionista;\npela morte do pensionista;",
+        "normalized_text": "I - pela morte do pensionista; pela morte do pensionista;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - pelo casamento do pensionista;\npelo casamento do pensionista;",
+        "normalized_text": "II - pelo casamento do pensionista; pelo casamento do pensionista;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;\npara o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;",
+        "normalized_text": "III - para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade; para o filho, filha, irmão e irmã, quando, não sendo inválidos, completam 21 anos de idade;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - para o pensionista inválido, pela cessação da invalidez.\npara o pensionista inválido, pela cessação da invalidez.",
+        "normalized_text": "IV - para o pensionista inválido, pela cessação da invalidez. para o pensionista inválido, pela cessação da invalidez."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA ocorrência de qualquer dos casos previstos neste artigo não acarreta a transferência da cota-parte aos demais dependentes.",
+        "normalized_text": "Parágrafo único. A ocorrência de qualquer dos casos previstos neste artigo não acarreta a transferência da cota-parte aos demais dependentes."
+      }
+    },
+    "Art. 15": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial não está sujeita a penhora, seqüestro ou arresto, exceto nos casos especiais previstos ou determinados em Lei.",
+        "normalized_text": "A pensão especial não está sujeita a penhora, seqüestro ou arresto, exceto nos casos especiais previstos ou determinados em Lei."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nSomente após o registro em caráter definitivo, nos termos do § 1º do art. 13 desta Lei, é que poderá haver consignação nos benefícios dos pensionistas.\nArt. 16. No que se refere ao pagamento da pensão, aplicar-se-ão as regras do Código Civil relativas à ausência, quando se verificar o desaparecimento de pensionista especial.",
+        "normalized_text": "Parágrafo único. Somente após o registro em caráter definitivo, nos termos do § 1º do art. 13 desta Lei, é que poderá haver consignação nos benefícios dos pensionistas. Art. 16. No que se refere ao pagamento da pensão, aplicar-se-ão as regras do Código Civil relativas à ausência, quando se verificar o desaparecimento de pensionista especial."
+      }
+    },
+    "Art. 17": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os pensionistas beneficiados pelo art. 30 da Lei nº 4.242, de 17 de julho de 1963, que não se enquadrarem entre os beneficiários da pensão especial de que trata esta lei, continuarão a receber os benefícios assegurados pelo citado artigo, até que se extingam pela perda do direito, sendo vedada sua transmissão, assim por reversão como por transferência.",
+        "normalized_text": "Os pensionistas beneficiados pelo art. 30 da Lei nº 4.242, de 17 de julho de 1963, que não se enquadrarem entre os beneficiários da pensão especial de que trata esta lei, continuarão a receber os benefícios assegurados pelo citado artigo, até que se extingam pela perda do direito, sendo vedada sua transmissão, assim por reversão como por transferência."
+      }
+    },
+    "Art. 18": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os créditos referentes ao pagamento da pensão especial somente poderão ser feitos em agências bancárias localizadas no País.",
+        "normalized_text": "Os créditos referentes ao pagamento da pensão especial somente poderão ser feitos em agências bancárias localizadas no País."
+      }
+    },
+    "Art. 19": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os Ministros de Estado da Marinha, do Exército e da Aeronáutica, nas áreas de suas respectivas competências, adotarão as medidas necessárias à execução desta Lei.",
+        "normalized_text": "Os Ministros de Estado da Marinha, do Exército e da Aeronáutica, nas áreas de suas respectivas competências, adotarão as medidas necessárias à execução desta Lei."
+      }
+    },
+    "Art. 20": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Mediante requerimento do interessado, qualquer outra pensão já concedida ao ex-combatente ou dependente que preencha os requisitos poderá ser substituída pela pensão especial de que trata esta Lei, para todos os efeitos.",
+        "normalized_text": "Mediante requerimento do interessado, qualquer outra pensão já concedida ao ex-combatente ou dependente que preencha os requisitos poderá ser substituída pela pensão especial de que trata esta Lei, para todos os efeitos."
+      }
+    },
+    "Art. 21": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É assegurado o direito à pensão especial aos dependentes de ex-combatente falecido e não pensionista, observado o disposto no art. 11 desta lei. Neste caso, a habilitação é considerada reversão.",
+        "normalized_text": "É assegurado o direito à pensão especial aos dependentes de ex-combatente falecido e não pensionista, observado o disposto no art. 11 desta lei. Neste caso, a habilitação é considerada reversão."
+      }
+    },
+    "Art. 22": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O valor do benefício da pensão especial será revisto, na mesma proporção e na mesma data, sempre que se modificarem os vencimentos dos servidores militares, tomando-se por base a pensão-tronco.",
+        "normalized_text": "O valor do benefício da pensão especial será revisto, na mesma proporção e na mesma data, sempre que se modificarem os vencimentos dos servidores militares, tomando-se por base a pensão-tronco."
+      }
+    },
+    "Art. 23": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As despesas decorrentes da aplicação desta lei correrão à conta das dotações consignadas no Orçamento Geral da União.",
+        "normalized_text": "As despesas decorrentes da aplicação desta lei correrão à conta das dotações consignadas no Orçamento Geral da União."
+      }
+    },
+    "Art. 24": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação."
+      }
+    },
+    "Art. 25": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Revogam-se o art. 30 da Lei nº 4.242, de 17 de julho de 1963, a Lei nº 6.592, de 17 de novembro de 1978, a Lei nº 7.424, de 17 de dezembro de 1985, e demais disposições em contrário.\nBrasília, 4 de julho de 1990; 169º da Independência e 102º da República.\nFERNANDO COLLOR\nMário César Flores\nCarlos Tinoco Ribeiro Gomes\nSócrates da Costa Monteiro\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 05/07/1990\nPublicação:\nDiário Oficial da União - Seção 1\n- 5/7/1990, Página 12939\n(Publicação Original)\nColeção de Leis do Brasil\n- 1990, Página 2368\nVol. 4\n(Publicação Original)",
+        "normalized_text": "Revogam-se o art. 30 da Lei nº 4.242, de 17 de julho de 1963, a Lei nº 6.592, de 17 de novembro de 1978, a Lei nº 7.424, de 17 de dezembro de 1985, e demais disposições em contrário. Brasília, 4 de julho de 1990; 169º da Independência e 102º da República. FERNANDO COLLOR Mário César Flores Carlos Tinoco Ribeiro Gomes Sócrates da Costa Monteiro Este texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 05/07/1990 Publicação: Diário Oficial da União - Seção 1 - 5/7/1990, Página 12939 (Publicação Original) Coleção de Leis do Brasil - 1990, Página 2368 Vol. 4 (Publicação Original)"
+      }
+    }
   }
 }

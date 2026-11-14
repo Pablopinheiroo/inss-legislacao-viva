@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -36,5 +36,980 @@
     "Art. 26": "Art. 26. A União adotará as providências necessárias para que a compensação financeira entre o RPPS da União e o RGPS seja operacionalizada a partir de 2021.",
     "Art. 27": "Art. 27. Fica revogado o Decreto nº 3.112, de 6 de julho de 1999.",
     "Art. 28": "Art. 28. Este Decreto entra em vigor:\nI - em 1º de janeiro de 2020, quanto ao art. 27 e aos demais dispositivos aplicáveis à compensação financeira entre o RGPS e os RPPS;\nII - em 1º de janeiro de 2021, quanto aos dispositivos aplicáveis à compensação financeira entre os RPPS; e\nIII - na data de sua publicação, quanto aos art. 18 ao art. 24.\nBrasília, 20 de dezembro de 2019; 198º da Independência e 131º da República.\nJAIR MESSIAS BOLSONARO\nPaulo Guedes\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/12/2019\nPublicação:\nDiário Oficial da União - Seção 1\n- 23/12/2019, Página 9\n(Publicação Original)"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto regulamenta a Lei nº 9.796, de 5 de maio de 1999, para dispor sobre a compensação financeira entre o Regime Geral de Previdência Social e os regimes próprios de previdência social dos servidores públicos da União, dos Estados, do Distrito Federal e dos Municípios, e entre os regimes próprios, na hipótese de contagem recíproca de tempo de contribuição para efeito de aposentadoria.\nCAPÍTULO II\nDA COMPENSAÇÃO ENTRE OS REGIMES",
+        "normalized_text": "Este Decreto regulamenta a Lei nº 9.796, de 5 de maio de 1999, para dispor sobre a compensação financeira entre o Regime Geral de Previdência Social e os regimes próprios de previdência social dos servidores públicos da União, dos Estados, do Distrito Federal e dos Municípios, e entre os regimes próprios, na hipótese de contagem recíproca de tempo de contribuição para efeito de aposentadoria. CAPÍTULO II DA COMPENSAÇÃO ENTRE OS REGIMES"
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Aplica-se o disposto neste Decreto aos benefícios de aposentadoria concedidos a partir de 5 de outubro de 1988, desde que em manutenção em 6 de maio de 1999 ou concedidos após essa data, com contagem recíproca de tempo de contribuição, e às pensões por morte que deles decorrerem, excluída a aposentadoria por invalidez decorrente de acidente em serviço, moléstia profissional ou doença grave, contagiosa ou incurável, especificada em lei, e a pensão dela decorrente.",
+        "normalized_text": "Aplica-se o disposto neste Decreto aos benefícios de aposentadoria concedidos a partir de 5 de outubro de 1988, desde que em manutenção em 6 de maio de 1999 ou concedidos após essa data, com contagem recíproca de tempo de contribuição, e às pensões por morte que deles decorrerem, excluída a aposentadoria por invalidez decorrente de acidente em serviço, moléstia profissional ou doença grave, contagiosa ou incurável, especificada em lei, e a pensão dela decorrente."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A compensação financeira será realizada exclusivamente na contagem recíproca de tempo de contribuição não concomitante utilizado na concessão da aposentadoria.",
+        "normalized_text": "A compensação financeira será realizada exclusivamente na contagem recíproca de tempo de contribuição não concomitante utilizado na concessão da aposentadoria."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O tempo de atividade rural reconhecido pelo Instituto Nacional de Seguridade Social - INSS por meio de Certidão de Tempo de Serviço expedida até 13 de outubro de 1996 será objeto de compensação financeira, desde que tenha sido utilizado pelo regime instituidor em aposentadoria concedida até essa data.\nO tempo de atividade rural reconhecido pelo Instituto Nacional de Seguridade Social - INSS por meio de Certidão de Tempo de Serviço expedida até 13 de outubro de 1996 será objeto de compensação financeira, desde que tenha sido utilizado pelo regime instituidor em aposentadoria concedida até essa data.",
+        "normalized_text": "§ 1º O tempo de atividade rural reconhecido pelo Instituto Nacional de Seguridade Social - INSS por meio de Certidão de Tempo de Serviço expedida até 13 de outubro de 1996 será objeto de compensação financeira, desde que tenha sido utilizado pelo regime instituidor em aposentadoria concedida até essa data. O tempo de atividade rural reconhecido pelo Instituto Nacional de Seguridade Social - INSS por meio de Certidão de Tempo de Serviço expedida até 13 de outubro de 1996 será objeto de compensação financeira, desde que tenha sido utilizado pelo regime instituidor em aposentadoria concedida até essa data."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O tempo de atividade rural reconhecido pelo INSS por meio de Certidão de Tempo de Serviço emitida a partir de 14 de outubro de 1996 somente será considerado para fins de compensação financeira caso esse período seja indenizado ao RGPS pelo servidor.\nO tempo de atividade rural reconhecido pelo INSS por meio de Certidão de Tempo de Serviço emitida a partir de 14 de outubro de 1996 somente será considerado para fins de compensação financeira caso esse período seja indenizado ao RGPS pelo servidor.",
+        "normalized_text": "§ 2º O tempo de atividade rural reconhecido pelo INSS por meio de Certidão de Tempo de Serviço emitida a partir de 14 de outubro de 1996 somente será considerado para fins de compensação financeira caso esse período seja indenizado ao RGPS pelo servidor. O tempo de atividade rural reconhecido pelo INSS por meio de Certidão de Tempo de Serviço emitida a partir de 14 de outubro de 1996 somente será considerado para fins de compensação financeira caso esse período seja indenizado ao RGPS pelo servidor."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Não será devida pelo RGPS a compensação financeira em relação aos servidores civis e militares dos Estados, do Distrito Federal e dos Municípios quanto aos períodos em que tinham garantida apenas aposentadoria pelo ente federativo e que foram inscritos em regime especial de contribuição para fazer jus aos benefícios de família, na forma prevista no parágrafo único do art. 3º da Lei nº 3.807, de 26 de agosto de 1960, e na legislação posterior.\nNão será devida pelo RGPS a compensação financeira em relação aos servidores civis e militares dos Estados, do Distrito Federal e dos Municípios quanto aos períodos em que tinham garantida apenas aposentadoria pelo ente federativo e que foram inscritos em regime especial de contribuição para fazer jus aos benefícios de família, na forma prevista no parágrafo único do art. 3º da Lei nº 3.807, de 26 de agosto de 1960, e na legislação posterior.",
+        "normalized_text": "§ 3º Não será devida pelo RGPS a compensação financeira em relação aos servidores civis e militares dos Estados, do Distrito Federal e dos Municípios quanto aos períodos em que tinham garantida apenas aposentadoria pelo ente federativo e que foram inscritos em regime especial de contribuição para fazer jus aos benefícios de família, na forma prevista no parágrafo único do art. 3º da Lei nº 3.807, de 26 de agosto de 1960, e na legislação posterior. Não será devida pelo RGPS a compensação financeira em relação aos servidores civis e militares dos Estados, do Distrito Federal e dos Municípios quanto aos períodos em que tinham garantida apenas aposentadoria pelo ente federativo e que foram inscritos em regime especial de contribuição para fazer jus aos benefícios de família, na forma prevista no parágrafo único do art. 3º da Lei nº 3.807, de 26 de agosto de 1960, e na legislação posterior."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Nos períodos em que tenha sido assegurado o pagamento de benefícios de aposentadoria ou pensão mediante convênios ou consórcios entre entes federativos, a compensação financeira é devida pelo ente ao qual, nos termos do convênio ou consórcio, recairia a concessão do benefício de aposentadoria.\nNos períodos em que tenha sido assegurado o pagamento de benefícios de aposentadoria ou pensão mediante convênios ou consórcios entre entes federativos, a compensação financeira é devida pelo ente ao qual, nos termos do convênio ou consórcio, recairia a concessão do benefício de aposentadoria.",
+        "normalized_text": "§ 4º Nos períodos em que tenha sido assegurado o pagamento de benefícios de aposentadoria ou pensão mediante convênios ou consórcios entre entes federativos, a compensação financeira é devida pelo ente ao qual, nos termos do convênio ou consórcio, recairia a concessão do benefício de aposentadoria. Nos períodos em que tenha sido assegurado o pagamento de benefícios de aposentadoria ou pensão mediante convênios ou consórcios entre entes federativos, a compensação financeira é devida pelo ente ao qual, nos termos do convênio ou consórcio, recairia a concessão do benefício de aposentadoria."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Para fins da compensação financeira de que trata este Decreto, considera-se:",
+        "normalized_text": "Para fins da compensação financeira de que trata este Decreto, considera-se:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - Regime Geral de Previdência Social - RGPS - o regime previsto no art. 201 da Constituição;\nRegime Geral de Previdência Social - RGPS - o regime previsto no art. 201 da Constituição;",
+        "normalized_text": "I - Regime Geral de Previdência Social - RGPS - o regime previsto no art. 201 da Constituição; Regime Geral de Previdência Social - RGPS - o regime previsto no art. 201 da Constituição;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - regime próprio de previdência social - RPPS - o regime de previdência social estabelecido no âmbito de cada ente federativo que assegure, por lei, aos servidores que ocupam cargo efetivo, no mínimo, os benefícios de aposentadoria e pensão por morte previstos no art. 40 da Constituição;\nregime próprio de previdência social - RPPS - o regime de previdência social estabelecido no âmbito de cada ente federativo que assegure, por lei, aos servidores que ocupam cargo efetivo, no mínimo, os benefícios de aposentadoria e pensão por morte previstos no art. 40 da Constituição;",
+        "normalized_text": "II - regime próprio de previdência social - RPPS - o regime de previdência social estabelecido no âmbito de cada ente federativo que assegure, por lei, aos servidores que ocupam cargo efetivo, no mínimo, os benefícios de aposentadoria e pensão por morte previstos no art. 40 da Constituição; regime próprio de previdência social - RPPS - o regime de previdência social estabelecido no âmbito de cada ente federativo que assegure, por lei, aos servidores que ocupam cargo efetivo, no mínimo, os benefícios de aposentadoria e pensão por morte previstos no art. 40 da Constituição;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - regime de origem - o regime previdenciário ao qual o segurado ou servidor público esteve vinculado e não tenha ensejado o recebimento de aposentadoria ou de pensão aos seus dependentes;\nregime de origem - o regime previdenciário ao qual o segurado ou servidor público esteve vinculado e não tenha ensejado o recebimento de aposentadoria ou de pensão aos seus dependentes;",
+        "normalized_text": "III - regime de origem - o regime previdenciário ao qual o segurado ou servidor público esteve vinculado e não tenha ensejado o recebimento de aposentadoria ou de pensão aos seus dependentes; regime de origem - o regime previdenciário ao qual o segurado ou servidor público esteve vinculado e não tenha ensejado o recebimento de aposentadoria ou de pensão aos seus dependentes;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - regime instituidor - o regime previdenciário responsável pela concessão e pelo pagamento de benefício de aposentadoria ou pensão por morte dela decorrente a segurado ou servidor público ou a seus dependentes com cômputo de tempo de contribuição no âmbito do regime de origem;\nregime instituidor - o regime previdenciário responsável pela concessão e pelo pagamento de benefício de aposentadoria ou pensão por morte dela decorrente a segurado ou servidor público ou a seus dependentes com cômputo de tempo de contribuição no âmbito do regime de origem;",
+        "normalized_text": "IV - regime instituidor - o regime previdenciário responsável pela concessão e pelo pagamento de benefício de aposentadoria ou pensão por morte dela decorrente a segurado ou servidor público ou a seus dependentes com cômputo de tempo de contribuição no âmbito do regime de origem; regime instituidor - o regime previdenciário responsável pela concessão e pelo pagamento de benefício de aposentadoria ou pensão por morte dela decorrente a segurado ou servidor público ou a seus dependentes com cômputo de tempo de contribuição no âmbito do regime de origem;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - estoque RGPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca do tempo de contribuição do RGPS ou do RPPS, na hipótese de o RGPS ser o regime instituidor, desde que em manutenção em 5 de maio de 1999;\nestoque RGPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca do tempo de contribuição do RGPS ou do RPPS, na hipótese de o RGPS ser o regime instituidor, desde que em manutenção em 5 de maio de 1999;",
+        "normalized_text": "V - estoque RGPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca do tempo de contribuição do RGPS ou do RPPS, na hipótese de o RGPS ser o regime instituidor, desde que em manutenção em 5 de maio de 1999; estoque RGPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca do tempo de contribuição do RGPS ou do RPPS, na hipótese de o RGPS ser o regime instituidor, desde que em manutenção em 5 de maio de 1999;"
+      },
+      "caput/inciso:VI": {
+        "device_type": "inciso",
+        "device_label": "inciso VI",
+        "device_path": "caput/inciso:VI",
+        "text": "VI - estoque RPPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca de outro RPPS, desde que em manutenção em 5 de maio de 1999 ou no período de 6 de maio de 1999 até a data de entrada em vigor deste Decreto;\nestoque RPPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca de outro RPPS, desde que em manutenção em 5 de maio de 1999 ou no período de 6 de maio de 1999 até a data de entrada em vigor deste Decreto;",
+        "normalized_text": "VI - estoque RPPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca de outro RPPS, desde que em manutenção em 5 de maio de 1999 ou no período de 6 de maio de 1999 até a data de entrada em vigor deste Decreto; estoque RPPS - os valores da compensação financeira em atraso relativos ao período compreendido entre 5 de outubro de 1988 e 5 de maio de 1999 dos benefícios concedidos nesse período com contagem recíproca de outro RPPS, desde que em manutenção em 5 de maio de 1999 ou no período de 6 de maio de 1999 até a data de entrada em vigor deste Decreto;"
+      },
+      "caput/inciso:VII": {
+        "device_type": "inciso",
+        "device_label": "inciso VII",
+        "device_path": "caput/inciso:VII",
+        "text": "VII - fluxo acumulado - os valores da compensação financeira dos benefícios concedidos após o período de estoque RGPS ou de estoque RPPS relativos ao período entre a data de concessão e o deferimento do requerimento de compensação, observado o prazo prescricional; e\nfluxo acumulado - os valores da compensação financeira dos benefícios concedidos após o período de estoque RGPS ou de estoque RPPS relativos ao período entre a data de concessão e o deferimento do requerimento de compensação, observado o prazo prescricional; e",
+        "normalized_text": "VII - fluxo acumulado - os valores da compensação financeira dos benefícios concedidos após o período de estoque RGPS ou de estoque RPPS relativos ao período entre a data de concessão e o deferimento do requerimento de compensação, observado o prazo prescricional; e fluxo acumulado - os valores da compensação financeira dos benefícios concedidos após o período de estoque RGPS ou de estoque RPPS relativos ao período entre a data de concessão e o deferimento do requerimento de compensação, observado o prazo prescricional; e"
+      },
+      "caput/inciso:VIII": {
+        "device_type": "inciso",
+        "device_label": "inciso VIII",
+        "device_path": "caput/inciso:VIII",
+        "text": "VIII - fluxo mensal - os valores da compensação financeira pagos mensalmente pelo regime de origem ao regime instituidor, a partir da competência de concessão da compensação, enquanto os pagamentos dos benefícios objeto da compensação financeira estiverem em manutenção.\nfluxo mensal - os valores da compensação financeira pagos mensalmente pelo regime de origem ao regime instituidor, a partir da competência de concessão da compensação, enquanto os pagamentos dos benefícios objeto da compensação financeira estiverem em manutenção.",
+        "normalized_text": "VIII - fluxo mensal - os valores da compensação financeira pagos mensalmente pelo regime de origem ao regime instituidor, a partir da competência de concessão da compensação, enquanto os pagamentos dos benefícios objeto da compensação financeira estiverem em manutenção. fluxo mensal - os valores da compensação financeira pagos mensalmente pelo regime de origem ao regime instituidor, a partir da competência de concessão da compensação, enquanto os pagamentos dos benefícios objeto da compensação financeira estiverem em manutenção."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O regime instituidor apresentará ao regime de origem os seguintes dados e documentos referentes a cada benefício concedido com cômputo de tempo de contribuição no âmbito daquele regime de origem:",
+        "normalized_text": "O regime instituidor apresentará ao regime de origem os seguintes dados e documentos referentes a cada benefício concedido com cômputo de tempo de contribuição no âmbito daquele regime de origem:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - dados pessoais e outros documentos necessários e úteis à identificação do segurado ou do servidor e, se for o caso, dos seus dependentes;\ndados pessoais e outros documentos necessários e úteis à identificação do segurado ou do servidor e, se for o caso, dos seus dependentes;",
+        "normalized_text": "I - dados pessoais e outros documentos necessários e úteis à identificação do segurado ou do servidor e, se for o caso, dos seus dependentes; dados pessoais e outros documentos necessários e úteis à identificação do segurado ou do servidor e, se for o caso, dos seus dependentes;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - o valor inicial da aposentadoria ou da pensão por morte dela decorrente e a data de início do benefício;\no valor inicial da aposentadoria ou da pensão por morte dela decorrente e a data de início do benefício;",
+        "normalized_text": "II - o valor inicial da aposentadoria ou da pensão por morte dela decorrente e a data de início do benefício; o valor inicial da aposentadoria ou da pensão por morte dela decorrente e a data de início do benefício;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - o tempo de contribuição no âmbito do regime de origem utilizado na concessão do benefício na forma da contagem recíproca e o tempo de contribuição total do segurado ou do servidor no regime instituidor;\no tempo de contribuição no âmbito do regime de origem utilizado na concessão do benefício na forma da contagem recíproca e o tempo de contribuição total do segurado ou do servidor no regime instituidor;",
+        "normalized_text": "III - o tempo de contribuição no âmbito do regime de origem utilizado na concessão do benefício na forma da contagem recíproca e o tempo de contribuição total do segurado ou do servidor no regime instituidor; o tempo de contribuição no âmbito do regime de origem utilizado na concessão do benefício na forma da contagem recíproca e o tempo de contribuição total do segurado ou do servidor no regime instituidor;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - cópia da Certidão de Tempo de Serviço ou da Certidão de Tempo de Contribuição fornecida pelo regime de origem e utilizada para cômputo do tempo de contribuição no âmbito do regime instituidor;\ncópia da Certidão de Tempo de Serviço ou da Certidão de Tempo de Contribuição fornecida pelo regime de origem e utilizada para cômputo do tempo de contribuição no âmbito do regime instituidor;",
+        "normalized_text": "IV - cópia da Certidão de Tempo de Serviço ou da Certidão de Tempo de Contribuição fornecida pelo regime de origem e utilizada para cômputo do tempo de contribuição no âmbito do regime instituidor; cópia da Certidão de Tempo de Serviço ou da Certidão de Tempo de Contribuição fornecida pelo regime de origem e utilizada para cômputo do tempo de contribuição no âmbito do regime instituidor;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - cópia do laudo médico que reconheceu a invalidez nos casos de aposentadoria por invalidez;\ncópia do laudo médico que reconheceu a invalidez nos casos de aposentadoria por invalidez;",
+        "normalized_text": "V - cópia do laudo médico que reconheceu a invalidez nos casos de aposentadoria por invalidez; cópia do laudo médico que reconheceu a invalidez nos casos de aposentadoria por invalidez;"
+      },
+      "caput/inciso:VI": {
+        "device_type": "inciso",
+        "device_label": "inciso VI",
+        "device_path": "caput/inciso:VI",
+        "text": "VI - cópia do ato expedido pela autoridade competente que concedeu a aposentadoria ou a pensão por morte dela decorrente; e\ncópia do ato expedido pela autoridade competente que concedeu a aposentadoria ou a pensão por morte dela decorrente; e",
+        "normalized_text": "VI - cópia do ato expedido pela autoridade competente que concedeu a aposentadoria ou a pensão por morte dela decorrente; e cópia do ato expedido pela autoridade competente que concedeu a aposentadoria ou a pensão por morte dela decorrente; e"
+      },
+      "caput/inciso:VII": {
+        "device_type": "inciso",
+        "device_label": "inciso VII",
+        "device_path": "caput/inciso:VII",
+        "text": "VII - cópia do registro do ato concessório da aposentadoria ou da pensão por morte pelo Tribunal de Contas competente, quando couber.\ncópia do registro do ato concessório da aposentadoria ou da pensão por morte pelo Tribunal de Contas competente, quando couber.",
+        "normalized_text": "VII - cópia do registro do ato concessório da aposentadoria ou da pensão por morte pelo Tribunal de Contas competente, quando couber. cópia do registro do ato concessório da aposentadoria ou da pensão por morte pelo Tribunal de Contas competente, quando couber."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A Certidão de Tempo de Contribuição emitida pelos RPPS, prevista no inciso IV do\nA Certidão de Tempo de Contribuição emitida pelos RPPS, prevista no inciso IV do\ncaput\n, observará as regras estabelecidas pela Portaria nº 154, de 15 de maio de 2008, do extinto Ministério da Previdência Social, quando emitida a partir de 16 de maio de 2008.",
+        "normalized_text": "§ 1º A Certidão de Tempo de Contribuição emitida pelos RPPS, prevista no inciso IV do A Certidão de Tempo de Contribuição emitida pelos RPPS, prevista no inciso IV do caput , observará as regras estabelecidas pela Portaria nº 154, de 15 de maio de 2008, do extinto Ministério da Previdência Social, quando emitida a partir de 16 de maio de 2008."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Será dispensado o envio de cópia dos documentos previstos neste artigo quando:\nSerá dispensado o envio de cópia dos documentos previstos neste artigo quando:",
+        "normalized_text": "§ 2º Será dispensado o envio de cópia dos documentos previstos neste artigo quando: Será dispensado o envio de cópia dos documentos previstos neste artigo quando:"
+      },
+      "paragrafo:2/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:2/inciso:I",
+        "text": "I - o tempo de contribuição for averbado eletronicamente por meio de sistema disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia;\no tempo de contribuição for averbado eletronicamente por meio de sistema disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia;",
+        "normalized_text": "I - o tempo de contribuição for averbado eletronicamente por meio de sistema disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia; o tempo de contribuição for averbado eletronicamente por meio de sistema disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia;"
+      },
+      "paragrafo:2/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:2/inciso:II",
+        "text": "II - os dados do registro do ato que tenha concedido a aposentadoria ou a pensão forem encaminhados eletronicamente pelo Tribunal de Contas; ou\nos dados do registro do ato que tenha concedido a aposentadoria ou a pensão forem encaminhados eletronicamente pelo Tribunal de Contas; ou",
+        "normalized_text": "II - os dados do registro do ato que tenha concedido a aposentadoria ou a pensão forem encaminhados eletronicamente pelo Tribunal de Contas; ou os dados do registro do ato que tenha concedido a aposentadoria ou a pensão forem encaminhados eletronicamente pelo Tribunal de Contas; ou"
+      },
+      "paragrafo:2/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "paragrafo:2/inciso:III",
+        "text": "III - as demais informações exigidas puderem ser obtidas eletronicamente pelo órgão ou pela entidade responsável por prestar a informação.\nas demais informações exigidas puderem ser obtidas eletronicamente pelo órgão ou pela entidade responsável por prestar a informação.",
+        "normalized_text": "III - as demais informações exigidas puderem ser obtidas eletronicamente pelo órgão ou pela entidade responsável por prestar a informação. as demais informações exigidas puderem ser obtidas eletronicamente pelo órgão ou pela entidade responsável por prestar a informação."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A não apresentação das informações e dos documentos a que se refere este artigo vedará a realização da compensação financeira entre os regimes.\nA não apresentação das informações e dos documentos a que se refere este artigo vedará a realização da compensação financeira entre os regimes.",
+        "normalized_text": "§ 3º A não apresentação das informações e dos documentos a que se refere este artigo vedará a realização da compensação financeira entre os regimes. A não apresentação das informações e dos documentos a que se refere este artigo vedará a realização da compensação financeira entre os regimes."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O valor da compensação financeira será o resultado da multiplicação do percentual apurado com base nas informações a que se refere o inciso III do\ncaput\ndo art. 5º pelo:",
+        "normalized_text": "O valor da compensação financeira será o resultado da multiplicação do percentual apurado com base nas informações a que se refere o inciso III do caput do art. 5º pelo:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - valor da renda mensal inicial quando o regime instituidor for o RGPS; ou\nvalor da renda mensal inicial quando o regime instituidor for o RGPS; ou",
+        "normalized_text": "I - valor da renda mensal inicial quando o regime instituidor for o RGPS; ou valor da renda mensal inicial quando o regime instituidor for o RGPS; ou"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - valor do benefício pago pelo regime instituidor ou pelo valor da renda mensal inicial, o que for menor, quando o regime instituidor for o RPPS.\nvalor do benefício pago pelo regime instituidor ou pelo valor da renda mensal inicial, o que for menor, quando o regime instituidor for o RPPS.",
+        "normalized_text": "II - valor do benefício pago pelo regime instituidor ou pelo valor da renda mensal inicial, o que for menor, quando o regime instituidor for o RPPS. valor do benefício pago pelo regime instituidor ou pelo valor da renda mensal inicial, o que for menor, quando o regime instituidor for o RPPS."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A renda mensal inicial de que trata o\nA renda mensal inicial de que trata o\ncaput\nserá calculada de acordo com as normas aplicáveis aos benefícios concedidos pelo regime de origem, na data da desvinculação desse regime.",
+        "normalized_text": "§ 1º A renda mensal inicial de que trata o A renda mensal inicial de que trata o caput será calculada de acordo com as normas aplicáveis aos benefícios concedidos pelo regime de origem, na data da desvinculação desse regime."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, de que trata o art. 18, disciplinará a metodologia de apuração da renda mensal inicial nas hipóteses em que o regime de origem não possua informações funcionais ou contributivas individualizadas à época da desvinculação.\nA Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, de que trata o art. 18, disciplinará a metodologia de apuração da renda mensal inicial nas hipóteses em que o regime de origem não possua informações funcionais ou contributivas individualizadas à época da desvinculação.",
+        "normalized_text": "§ 2º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, de que trata o art. 18, disciplinará a metodologia de apuração da renda mensal inicial nas hipóteses em que o regime de origem não possua informações funcionais ou contributivas individualizadas à época da desvinculação. A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, de que trata o art. 18, disciplinará a metodologia de apuração da renda mensal inicial nas hipóteses em que o regime de origem não possua informações funcionais ou contributivas individualizadas à época da desvinculação."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A renda mensal inicial apurada será reajustada na forma prevista no art. 7º da data da desvinculação do regime de origem até a data da concessão do benefício pelo regime instituidor e o seu valor corrigido não poderá ser inferior ao valor do salário-mínimo e nem superior ao:\nA renda mensal inicial apurada será reajustada na forma prevista no art. 7º da data da desvinculação do regime de origem até a data da concessão do benefício pelo regime instituidor e o seu valor corrigido não poderá ser inferior ao valor do salário-mínimo e nem superior ao:",
+        "normalized_text": "§ 3º A renda mensal inicial apurada será reajustada na forma prevista no art. 7º da data da desvinculação do regime de origem até a data da concessão do benefício pelo regime instituidor e o seu valor corrigido não poderá ser inferior ao valor do salário-mínimo e nem superior ao: A renda mensal inicial apurada será reajustada na forma prevista no art. 7º da data da desvinculação do regime de origem até a data da concessão do benefício pelo regime instituidor e o seu valor corrigido não poderá ser inferior ao valor do salário-mínimo e nem superior ao:"
+      },
+      "paragrafo:3/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:3/inciso:I",
+        "text": "I - valor da remuneração do cargo efetivo que o servidor teria no ente de origem na data imediatamente anterior à da concessão da aposentadoria pelo regime instituidor ou que teria servido de referência para a concessão da pensão pelo regime de origem; ou\nvalor da remuneração do cargo efetivo que o servidor teria no ente de origem na data imediatamente anterior à da concessão da aposentadoria pelo regime instituidor ou que teria servido de referência para a concessão da pensão pelo regime de origem; ou",
+        "normalized_text": "I - valor da remuneração do cargo efetivo que o servidor teria no ente de origem na data imediatamente anterior à da concessão da aposentadoria pelo regime instituidor ou que teria servido de referência para a concessão da pensão pelo regime de origem; ou valor da remuneração do cargo efetivo que o servidor teria no ente de origem na data imediatamente anterior à da concessão da aposentadoria pelo regime instituidor ou que teria servido de referência para a concessão da pensão pelo regime de origem; ou"
+      },
+      "paragrafo:3/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:3/inciso:II",
+        "text": "II - limite máximo dos benefícios pagos pelo RGPS, quando este for o regime de origem.\nlimite máximo dos benefícios pagos pelo RGPS, quando este for o regime de origem.",
+        "normalized_text": "II - limite máximo dos benefícios pagos pelo RGPS, quando este for o regime de origem. limite máximo dos benefícios pagos pelo RGPS, quando este for o regime de origem."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Ao valor do benefício pago pelo regime instituidor será acrescido o benefício especial de que trata o § 1º do art. 3º da Lei nº 12.618, de 30 de abril de 2012, no caso da União, ou o benefício que tenha essa mesma natureza, se previsto na legislação dos Estados, do Distrito Federal ou dos Municípios, observado o disposto no § 3º.\nAo valor do benefício pago pelo regime instituidor será acrescido o benefício especial de que trata o § 1º do art. 3º da Lei nº 12.618, de 30 de abril de 2012, no caso da União, ou o benefício que tenha essa mesma natureza, se previsto na legislação dos Estados, do Distrito Federal ou dos Municípios, observado o disposto no § 3º.",
+        "normalized_text": "§ 4º Ao valor do benefício pago pelo regime instituidor será acrescido o benefício especial de que trata o § 1º do art. 3º da Lei nº 12.618, de 30 de abril de 2012, no caso da União, ou o benefício que tenha essa mesma natureza, se previsto na legislação dos Estados, do Distrito Federal ou dos Municípios, observado o disposto no § 3º. Ao valor do benefício pago pelo regime instituidor será acrescido o benefício especial de que trata o § 1º do art. 3º da Lei nº 12.618, de 30 de abril de 2012, no caso da União, ou o benefício que tenha essa mesma natureza, se previsto na legislação dos Estados, do Distrito Federal ou dos Municípios, observado o disposto no § 3º."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O fluxo acumulado será pago em parcela única.\nO fluxo acumulado será pago em parcela única.",
+        "normalized_text": "§ 5º O fluxo acumulado será pago em parcela única. O fluxo acumulado será pago em parcela única."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O valor da compensação financeira de que trata o art. 6º será reajustado nas mesmas datas e pelos mesmos índices de reajuste dos benefícios concedidos pelo RGPS.",
+        "normalized_text": "O valor da compensação financeira de que trata o art. 6º será reajustado nas mesmas datas e pelos mesmos índices de reajuste dos benefícios concedidos pelo RGPS."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os regimes instituidores deverão apresentar aos regimes de origem os dados relativos aos benefícios concedidos no período do estoque RGPS e no período do estoque RPPS, na forma prevista no art. 5º.",
+        "normalized_text": "Os regimes instituidores deverão apresentar aos regimes de origem os dados relativos aos benefícios concedidos no período do estoque RGPS e no período do estoque RPPS, na forma prevista no art. 5º."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA compensação financeira em atraso relativa aos benefícios de que trata o\ncaput\nserá calculada pela multiplicação da parcela da renda mensal devida pelo regime de origem, obtida de acordo com os procedimentos estabelecidos no art. 5º e no art. 6º, pelo número de meses em que o benefício tenha sido pago até a data de deferimento do requerimento de compensação.",
+        "normalized_text": "Parágrafo único. A compensação financeira em atraso relativa aos benefícios de que trata o caput será calculada pela multiplicação da parcela da renda mensal devida pelo regime de origem, obtida de acordo com os procedimentos estabelecidos no art. 5º e no art. 6º, pelo número de meses em que o benefício tenha sido pago até a data de deferimento do requerimento de compensação."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Se for inviável financeiramente ao regime de origem desembolsar de imediato os valores apurados nos termos do art. 8º, os regimes poderão firmar termo de parcelamento em até cento e oitenta meses, hipótese em que os valores devidos serão atualizados nas mesmas datas e pelos mesmos índices de reajustamento dos benefícios do RGPS.",
+        "normalized_text": "Se for inviável financeiramente ao regime de origem desembolsar de imediato os valores apurados nos termos do art. 8º, os regimes poderão firmar termo de parcelamento em até cento e oitenta meses, hipótese em que os valores devidos serão atualizados nas mesmas datas e pelos mesmos índices de reajustamento dos benefícios do RGPS."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A parcela mínima dos parcelamentos formalizados entre os RPPS não poderá ser inferior ao limite máximo aplicável aos benefícios do Regime Geral de Previdência Social.\nA parcela mínima dos parcelamentos formalizados entre os RPPS não poderá ser inferior ao limite máximo aplicável aos benefícios do Regime Geral de Previdência Social.",
+        "normalized_text": "§ 1º A parcela mínima dos parcelamentos formalizados entre os RPPS não poderá ser inferior ao limite máximo aplicável aos benefícios do Regime Geral de Previdência Social. A parcela mínima dos parcelamentos formalizados entre os RPPS não poderá ser inferior ao limite máximo aplicável aos benefícios do Regime Geral de Previdência Social."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Comprovada a inexistência de débitos, na forma prevista no § 5º do art. 6º e no § 3º do art. 11 da Lei nº 9.796, de 1999, o pagamento dos valores de estoque RGPS será quitado:\nComprovada a inexistência de débitos, na forma prevista no § 5º do art. 6º e no § 3º do art. 11 da Lei nº 9.796, de 1999, o pagamento dos valores de estoque RGPS será quitado:",
+        "normalized_text": "§ 2º Comprovada a inexistência de débitos, na forma prevista no § 5º do art. 6º e no § 3º do art. 11 da Lei nº 9.796, de 1999, o pagamento dos valores de estoque RGPS será quitado: Comprovada a inexistência de débitos, na forma prevista no § 5º do art. 6º e no § 3º do art. 11 da Lei nº 9.796, de 1999, o pagamento dos valores de estoque RGPS será quitado:"
+      },
+      "paragrafo:2/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:2/inciso:I",
+        "text": "I - em parcela única, se o crédito não for superior a R$ 1.500.000,00 (um milhão e quinhentos mil reais);\nem parcela única, se o crédito não for superior a R$ 1.500.000,00 (um milhão e quinhentos mil reais);",
+        "normalized_text": "I - em parcela única, se o crédito não for superior a R$ 1.500.000,00 (um milhão e quinhentos mil reais); em parcela única, se o crédito não for superior a R$ 1.500.000,00 (um milhão e quinhentos mil reais);"
+      },
+      "paragrafo:2/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:2/inciso:II",
+        "text": "II - em parcelas mensais de até R$ 1.500.000,00 (um milhão e quinhentos mil reais), se o crédito superar esse montante no prazo de até cento e oitenta meses, condicionada à existência de recursos financeiros para cumprimento da meta de resultado primário estabelecido na Lei de Diretrizes Orçamentárias; ou\nem parcelas mensais de até R$ 1.500.000,00 (um milhão e quinhentos mil reais), se o crédito superar esse montante no prazo de até cento e oitenta meses, condicionada à existência de recursos financeiros para cumprimento da meta de resultado primário estabelecido na Lei de Diretrizes Orçamentárias; ou",
+        "normalized_text": "II - em parcelas mensais de até R$ 1.500.000,00 (um milhão e quinhentos mil reais), se o crédito superar esse montante no prazo de até cento e oitenta meses, condicionada à existência de recursos financeiros para cumprimento da meta de resultado primário estabelecido na Lei de Diretrizes Orçamentárias; ou em parcelas mensais de até R$ 1.500.000,00 (um milhão e quinhentos mil reais), se o crédito superar esse montante no prazo de até cento e oitenta meses, condicionada à existência de recursos financeiros para cumprimento da meta de resultado primário estabelecido na Lei de Diretrizes Orçamentárias; ou"
+      },
+      "paragrafo:2/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "paragrafo:2/inciso:III",
+        "text": "III - por meio de dação em pagamento de imóveis integrantes do Fundo do Regime Geral de Previdência Social - FRGPS, observados os demais procedimentos administrativos, orçamentários, contábeis e legais necessários para sua concretização.\npor meio de dação em pagamento de imóveis integrantes do Fundo do Regime Geral de Previdência Social - FRGPS, observados os demais procedimentos administrativos, orçamentários, contábeis e legais necessários para sua concretização.",
+        "normalized_text": "III - por meio de dação em pagamento de imóveis integrantes do Fundo do Regime Geral de Previdência Social - FRGPS, observados os demais procedimentos administrativos, orçamentários, contábeis e legais necessários para sua concretização. por meio de dação em pagamento de imóveis integrantes do Fundo do Regime Geral de Previdência Social - FRGPS, observados os demais procedimentos administrativos, orçamentários, contábeis e legais necessários para sua concretização."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Caso o prazo de cento e oitenta meses não seja suficiente para a quitação dos créditos de estoque RGPS, o valor da parcela disposto no inciso II do § 2º será ajustado para garantir a quitação no referido prazo.\nCaso o prazo de cento e oitenta meses não seja suficiente para a quitação dos créditos de estoque RGPS, o valor da parcela disposto no inciso II do § 2º será ajustado para garantir a quitação no referido prazo.",
+        "normalized_text": "§ 3º Caso o prazo de cento e oitenta meses não seja suficiente para a quitação dos créditos de estoque RGPS, o valor da parcela disposto no inciso II do § 2º será ajustado para garantir a quitação no referido prazo. Caso o prazo de cento e oitenta meses não seja suficiente para a quitação dos créditos de estoque RGPS, o valor da parcela disposto no inciso II do § 2º será ajustado para garantir a quitação no referido prazo."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O pagamento da compensação financeira do RGPS dependerá da desistência de eventuais ações judiciais que tenham por objeto a dívida compensada e a manutenção do litígio ou o ajuizamento de novas ações será causa da extinção dos pagamentos previstos nos incisos I e II do § 2º.\nO pagamento da compensação financeira do RGPS dependerá da desistência de eventuais ações judiciais que tenham por objeto a dívida compensada e a manutenção do litígio ou o ajuizamento de novas ações será causa da extinção dos pagamentos previstos nos incisos I e II do § 2º.",
+        "normalized_text": "§ 4º O pagamento da compensação financeira do RGPS dependerá da desistência de eventuais ações judiciais que tenham por objeto a dívida compensada e a manutenção do litígio ou o ajuizamento de novas ações será causa da extinção dos pagamentos previstos nos incisos I e II do § 2º. O pagamento da compensação financeira do RGPS dependerá da desistência de eventuais ações judiciais que tenham por objeto a dívida compensada e a manutenção do litígio ou o ajuizamento de novas ações será causa da extinção dos pagamentos previstos nos incisos I e II do § 2º."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá as diretrizes gerais e os procedimentos para a formalização e a revisão dos parcelamentos a que se referem o\nA Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá as diretrizes gerais e os procedimentos para a formalização e a revisão dos parcelamentos a que se referem o\ncaput\ne o § 1º.\nCAPÍTULO III\nDA OPERACIONALIZAÇÃO DA COMPENSAÇÃO FINANCEIRA",
+        "normalized_text": "§ 5º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá as diretrizes gerais e os procedimentos para a formalização e a revisão dos parcelamentos a que se referem o A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá as diretrizes gerais e os procedimentos para a formalização e a revisão dos parcelamentos a que se referem o caput e o § 1º. CAPÍTULO III DA OPERACIONALIZAÇÃO DA COMPENSAÇÃO FINANCEIRA"
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia disponibilizará para adesão do INSS, órgão gestor do RGPS, e dos RPPS da União, dos Estados, do Distrito Federal e dos Municípios, sistema de compensação previdenciária destinado a manter atualizado o cadastro de todos os benefícios objeto de compensação financeira e a apurar o montante devido pelos regimes.",
+        "normalized_text": "A Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia disponibilizará para adesão do INSS, órgão gestor do RGPS, e dos RPPS da União, dos Estados, do Distrito Federal e dos Municípios, sistema de compensação previdenciária destinado a manter atualizado o cadastro de todos os benefícios objeto de compensação financeira e a apurar o montante devido pelos regimes."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Para o processamento do requerimento de compensação financeira pelo sistema, o INSS e os RPPS celebrarão termo de adesão com a Secretaria Especial de Previdência e Trabalho do Ministério da Economia e contrato com a empresa de tecnologia desenvolvedora do sistema de compensação previdenciária.\nPara o processamento do requerimento de compensação financeira pelo sistema, o INSS e os RPPS celebrarão termo de adesão com a Secretaria Especial de Previdência e Trabalho do Ministério da Economia e contrato com a empresa de tecnologia desenvolvedora do sistema de compensação previdenciária.",
+        "normalized_text": "§ 1º Para o processamento do requerimento de compensação financeira pelo sistema, o INSS e os RPPS celebrarão termo de adesão com a Secretaria Especial de Previdência e Trabalho do Ministério da Economia e contrato com a empresa de tecnologia desenvolvedora do sistema de compensação previdenciária. Para o processamento do requerimento de compensação financeira pelo sistema, o INSS e os RPPS celebrarão termo de adesão com a Secretaria Especial de Previdência e Trabalho do Ministério da Economia e contrato com a empresa de tecnologia desenvolvedora do sistema de compensação previdenciária."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O Conselho Nacional dos Regimes Próprios de Previdência Social estabelecerá as diretrizes para as relações negociais do INSS e dos RPPS com a empresa de tecnologia responsável pelo desenvolvimento do sistema de compensação previdenciária.\nO Conselho Nacional dos Regimes Próprios de Previdência Social estabelecerá as diretrizes para as relações negociais do INSS e dos RPPS com a empresa de tecnologia responsável pelo desenvolvimento do sistema de compensação previdenciária.",
+        "normalized_text": "§ 2º O Conselho Nacional dos Regimes Próprios de Previdência Social estabelecerá as diretrizes para as relações negociais do INSS e dos RPPS com a empresa de tecnologia responsável pelo desenvolvimento do sistema de compensação previdenciária. O Conselho Nacional dos Regimes Próprios de Previdência Social estabelecerá as diretrizes para as relações negociais do INSS e dos RPPS com a empresa de tecnologia responsável pelo desenvolvimento do sistema de compensação previdenciária."
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O sistema de compensação previdenciária disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia, na forma prevista no art. 10, conterá o cadastro atualizado de todos os benefícios objeto de compensação financeira entre o RGPS e os RPPS, e destes entre si, incluído o total que cada regime deve aos demais como compensação financeira.",
+        "normalized_text": "O sistema de compensação previdenciária disponibilizado pela Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia, na forma prevista no art. 10, conterá o cadastro atualizado de todos os benefícios objeto de compensação financeira entre o RGPS e os RPPS, e destes entre si, incluído o total que cada regime deve aos demais como compensação financeira."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Até o dia trinta de cada mês, será disponibilizado ao regime de origem o total a ser por ele desembolsado a cada regime instituidor referente a competência do mês anterior, que corresponderá ao somatório do fluxo mensal, do fluxo acumulado e do estoque RGPS ou estoque RPPS, cujo desembolso deverá ser feito até o quinto dia útil do mês subsequente.\nAté o dia trinta de cada mês, será disponibilizado ao regime de origem o total a ser por ele desembolsado a cada regime instituidor referente a competência do mês anterior, que corresponderá ao somatório do fluxo mensal, do fluxo acumulado e do estoque RGPS ou estoque RPPS, cujo desembolso deverá ser feito até o quinto dia útil do mês subsequente.",
+        "normalized_text": "§ 1º Até o dia trinta de cada mês, será disponibilizado ao regime de origem o total a ser por ele desembolsado a cada regime instituidor referente a competência do mês anterior, que corresponderá ao somatório do fluxo mensal, do fluxo acumulado e do estoque RGPS ou estoque RPPS, cujo desembolso deverá ser feito até o quinto dia útil do mês subsequente. Até o dia trinta de cada mês, será disponibilizado ao regime de origem o total a ser por ele desembolsado a cada regime instituidor referente a competência do mês anterior, que corresponderá ao somatório do fluxo mensal, do fluxo acumulado e do estoque RGPS ou estoque RPPS, cujo desembolso deverá ser feito até o quinto dia útil do mês subsequente."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Os desembolsos pelo regime de origem só serão feitos para o regime instituidor que comprovar ser credor no cômputo da compensação financeira devida entre ambos os regimes.\nOs desembolsos pelo regime de origem só serão feitos para o regime instituidor que comprovar ser credor no cômputo da compensação financeira devida entre ambos os regimes.",
+        "normalized_text": "§ 2º Os desembolsos pelo regime de origem só serão feitos para o regime instituidor que comprovar ser credor no cômputo da compensação financeira devida entre ambos os regimes. Os desembolsos pelo regime de origem só serão feitos para o regime instituidor que comprovar ser credor no cômputo da compensação financeira devida entre ambos os regimes."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Observado o disposto no § 2º, o pagamento da compensação financeira pelo RGPS exige a comprovação da inexistência de débitos do ente federativo do regime instituidor pelo não recolhimento de contribuições previdenciárias devidas ao RGPS e pelo disposto no art. 8º da Lei nº 9.702, de 17 de novembro de 1998.\nObservado o disposto no § 2º, o pagamento da compensação financeira pelo RGPS exige a comprovação da inexistência de débitos do ente federativo do regime instituidor pelo não recolhimento de contribuições previdenciárias devidas ao RGPS e pelo disposto no art. 8º da Lei nº 9.702, de 17 de novembro de 1998.",
+        "normalized_text": "§ 3º Observado o disposto no § 2º, o pagamento da compensação financeira pelo RGPS exige a comprovação da inexistência de débitos do ente federativo do regime instituidor pelo não recolhimento de contribuições previdenciárias devidas ao RGPS e pelo disposto no art. 8º da Lei nº 9.702, de 17 de novembro de 1998. Observado o disposto no § 2º, o pagamento da compensação financeira pelo RGPS exige a comprovação da inexistência de débitos do ente federativo do regime instituidor pelo não recolhimento de contribuições previdenciárias devidas ao RGPS e pelo disposto no art. 8º da Lei nº 9.702, de 17 de novembro de 1998."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, poderá estabelecer a parcela mínima mensal de desembolso ao regime instituidor, cujo valor inferior ao piso será acumulado até alcançar o valor estipulado.\nA Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, poderá estabelecer a parcela mínima mensal de desembolso ao regime instituidor, cujo valor inferior ao piso será acumulado até alcançar o valor estipulado.",
+        "normalized_text": "§ 4º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, poderá estabelecer a parcela mínima mensal de desembolso ao regime instituidor, cujo valor inferior ao piso será acumulado até alcançar o valor estipulado. A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, poderá estabelecer a parcela mínima mensal de desembolso ao regime instituidor, cujo valor inferior ao piso será acumulado até alcançar o valor estipulado."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Na hipótese de descumprimento do prazo de desembolso estipulado no § 1º, serão aplicadas as mesmas normas em vigor para atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS.\nNa hipótese de descumprimento do prazo de desembolso estipulado no § 1º, serão aplicadas as mesmas normas em vigor para atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS.",
+        "normalized_text": "§ 5º Na hipótese de descumprimento do prazo de desembolso estipulado no § 1º, serão aplicadas as mesmas normas em vigor para atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS. Na hipótese de descumprimento do prazo de desembolso estipulado no § 1º, serão aplicadas as mesmas normas em vigor para atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º O não pagamento no prazo estabelecido no § 1º a qualquer regime resultará na suspensão do pagamento da compensação financeira devida pelo RGPS e poderá ensejar a inscrição do ente federativo do regime de origem em dívida ativa federal, estadual, distrital ou municipal.\nO não pagamento no prazo estabelecido no § 1º a qualquer regime resultará na suspensão do pagamento da compensação financeira devida pelo RGPS e poderá ensejar a inscrição do ente federativo do regime de origem em dívida ativa federal, estadual, distrital ou municipal.",
+        "normalized_text": "§ 6º O não pagamento no prazo estabelecido no § 1º a qualquer regime resultará na suspensão do pagamento da compensação financeira devida pelo RGPS e poderá ensejar a inscrição do ente federativo do regime de origem em dívida ativa federal, estadual, distrital ou municipal. O não pagamento no prazo estabelecido no § 1º a qualquer regime resultará na suspensão do pagamento da compensação financeira devida pelo RGPS e poderá ensejar a inscrição do ente federativo do regime de origem em dívida ativa federal, estadual, distrital ou municipal."
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º Os pagamentos suspensos na forma prevista no § 6º serão reajustados na forma prevista no art. 7º e esta suspensão não será considerada atraso de pagamento para aplicação de mora.\nOs pagamentos suspensos na forma prevista no § 6º serão reajustados na forma prevista no art. 7º e esta suspensão não será considerada atraso de pagamento para aplicação de mora.",
+        "normalized_text": "§ 7º Os pagamentos suspensos na forma prevista no § 6º serão reajustados na forma prevista no art. 7º e esta suspensão não será considerada atraso de pagamento para aplicação de mora. Os pagamentos suspensos na forma prevista no § 6º serão reajustados na forma prevista no art. 7º e esta suspensão não será considerada atraso de pagamento para aplicação de mora."
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá prazo para que o regime de origem analise os requerimentos apresentados pelos regimes instituidores, observada a ordem cronológica dos requerimentos, sobre o qual incidirá a mesma atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS aos requerimentos que ultrapassarem o prazo determinado.\nA Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá prazo para que o regime de origem analise os requerimentos apresentados pelos regimes instituidores, observada a ordem cronológica dos requerimentos, sobre o qual incidirá a mesma atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS aos requerimentos que ultrapassarem o prazo determinado.",
+        "normalized_text": "§ 8º A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá prazo para que o regime de origem analise os requerimentos apresentados pelos regimes instituidores, observada a ordem cronológica dos requerimentos, sobre o qual incidirá a mesma atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS aos requerimentos que ultrapassarem o prazo determinado. A Secretaria Especial de Previdência e Trabalho do Ministério da Economia, ouvido o Conselho Nacional dos Regimes Próprios de Previdência Social, estabelecerá prazo para que o regime de origem analise os requerimentos apresentados pelos regimes instituidores, observada a ordem cronológica dos requerimentos, sobre o qual incidirá a mesma atualização dos valores dos recolhimentos em atraso de contribuições previdenciárias arrecadadas pelo RGPS aos requerimentos que ultrapassarem o prazo determinado."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Aplica-se a prescrição quinquenal, nos termos do disposto no Decreto nº 20.910, de 6 de janeiro de 1932, aos valores não pagos nem reclamados em época própria do surgimento da pretensão, que ocorrerá:",
+        "normalized_text": "Aplica-se a prescrição quinquenal, nos termos do disposto no Decreto nº 20.910, de 6 de janeiro de 1932, aos valores não pagos nem reclamados em época própria do surgimento da pretensão, que ocorrerá:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - no primeiro dia subsequente ao registro do ato concessório de aposentadoria ou a pensão pelo Tribunal de Contas competente, quando o regime instituidor for o RPPS; ou\nno primeiro dia subsequente ao registro do ato concessório de aposentadoria ou a pensão pelo Tribunal de Contas competente, quando o regime instituidor for o RPPS; ou",
+        "normalized_text": "I - no primeiro dia subsequente ao registro do ato concessório de aposentadoria ou a pensão pelo Tribunal de Contas competente, quando o regime instituidor for o RPPS; ou no primeiro dia subsequente ao registro do ato concessório de aposentadoria ou a pensão pelo Tribunal de Contas competente, quando o regime instituidor for o RPPS; ou"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - no primeiro dia subsequente ao recebimento da primeira prestação, quando o regime instituidor for o RGPS.\nno primeiro dia subsequente ao recebimento da primeira prestação, quando o regime instituidor for o RGPS.",
+        "normalized_text": "II - no primeiro dia subsequente ao recebimento da primeira prestação, quando o regime instituidor for o RGPS. no primeiro dia subsequente ao recebimento da primeira prestação, quando o regime instituidor for o RGPS."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nO prazo prescricional da compensação financeira relativo ao período do estoque do RPPS será contado a partir da entrada em vigor deste Decreto.",
+        "normalized_text": "Parágrafo único. O prazo prescricional da compensação financeira relativo ao período do estoque do RPPS será contado a partir da entrada em vigor deste Decreto."
+      }
+    },
+    "Art. 13": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os regimes instituidores deverão registrar imediatamente no sistema de compensação previdenciária qualquer revisão do benefício objeto de compensação financeira ou sua extinção total ou parcial.",
+        "normalized_text": "Os regimes instituidores deverão registrar imediatamente no sistema de compensação previdenciária qualquer revisão do benefício objeto de compensação financeira ou sua extinção total ou parcial."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Caso a revisão do benefício modifique o seu valor inicial, serão utilizados os mesmos parâmetros para a concessão da compensação financeira, recalculados os valores de compensação devidos ao regime instituidor desde a data de início de pagamento do benefício, observada a prescrição quinquenal.\nCaso a revisão do benefício modifique o seu valor inicial, serão utilizados os mesmos parâmetros para a concessão da compensação financeira, recalculados os valores de compensação devidos ao regime instituidor desde a data de início de pagamento do benefício, observada a prescrição quinquenal.",
+        "normalized_text": "§ 1º Caso a revisão do benefício modifique o seu valor inicial, serão utilizados os mesmos parâmetros para a concessão da compensação financeira, recalculados os valores de compensação devidos ao regime instituidor desde a data de início de pagamento do benefício, observada a prescrição quinquenal. Caso a revisão do benefício modifique o seu valor inicial, serão utilizados os mesmos parâmetros para a concessão da compensação financeira, recalculados os valores de compensação devidos ao regime instituidor desde a data de início de pagamento do benefício, observada a prescrição quinquenal."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Na hipótese de revisão do benefício pela apresentação de novos elementos que resultem em decisão administrativa ou em decisão judicial que não possuam efeitos retroativos, os valores da compensação financeira serão recalculados a partir do pagamento do valor do benefício revisado, observada a prescrição quinquenal.\nNa hipótese de revisão do benefício pela apresentação de novos elementos que resultem em decisão administrativa ou em decisão judicial que não possuam efeitos retroativos, os valores da compensação financeira serão recalculados a partir do pagamento do valor do benefício revisado, observada a prescrição quinquenal.",
+        "normalized_text": "§ 2º Na hipótese de revisão do benefício pela apresentação de novos elementos que resultem em decisão administrativa ou em decisão judicial que não possuam efeitos retroativos, os valores da compensação financeira serão recalculados a partir do pagamento do valor do benefício revisado, observada a prescrição quinquenal. Na hipótese de revisão do benefício pela apresentação de novos elementos que resultem em decisão administrativa ou em decisão judicial que não possuam efeitos retroativos, os valores da compensação financeira serão recalculados a partir do pagamento do valor do benefício revisado, observada a prescrição quinquenal."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º As diferenças de valores decorrentes da revisão ou do pagamento de compensação financeira em relação a benefício cessado serão compensadas no mês seguinte ao da constatação.\nAs diferenças de valores decorrentes da revisão ou do pagamento de compensação financeira em relação a benefício cessado serão compensadas no mês seguinte ao da constatação.",
+        "normalized_text": "§ 3º As diferenças de valores decorrentes da revisão ou do pagamento de compensação financeira em relação a benefício cessado serão compensadas no mês seguinte ao da constatação. As diferenças de valores decorrentes da revisão ou do pagamento de compensação financeira em relação a benefício cessado serão compensadas no mês seguinte ao da constatação."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O direito de anular os atos de concessão, revisão ou indeferimento da compensação financeira decairá no prazo de cinco anos, contado da data em que tenham sido praticados, exceto se comprovada má-fé, nos termos do disposto no art. 54 da Lei nº 9.784, de 29 de janeiro de 1999.\nO direito de anular os atos de concessão, revisão ou indeferimento da compensação financeira decairá no prazo de cinco anos, contado da data em que tenham sido praticados, exceto se comprovada má-fé, nos termos do disposto no art. 54 da Lei nº 9.784, de 29 de janeiro de 1999.\nCAPÍTULO IV\nDISPOSIÇÕES SOBRE A COMPENSAÇÃO FINANCEIRA",
+        "normalized_text": "§ 4º O direito de anular os atos de concessão, revisão ou indeferimento da compensação financeira decairá no prazo de cinco anos, contado da data em que tenham sido praticados, exceto se comprovada má-fé, nos termos do disposto no art. 54 da Lei nº 9.784, de 29 de janeiro de 1999. O direito de anular os atos de concessão, revisão ou indeferimento da compensação financeira decairá no prazo de cinco anos, contado da data em que tenham sido praticados, exceto se comprovada má-fé, nos termos do disposto no art. 54 da Lei nº 9.784, de 29 de janeiro de 1999. CAPÍTULO IV DISPOSIÇÕES SOBRE A COMPENSAÇÃO FINANCEIRA"
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Caso a unidade gestora do RPPS possua personalidade jurídica própria, o ente federativo responderá solidariamente pelas obrigações previstas neste Decreto.",
+        "normalized_text": "Caso a unidade gestora do RPPS possua personalidade jurídica própria, o ente federativo responderá solidariamente pelas obrigações previstas neste Decreto."
+      }
+    },
+    "Art. 15": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os recursos financeiros recebidos pelo RPPS a título de compensação financeira somente poderão ser utilizados no pagamento de benefícios previdenciários do respectivo regime.",
+        "normalized_text": "Os recursos financeiros recebidos pelo RPPS a título de compensação financeira somente poderão ser utilizados no pagamento de benefícios previdenciários do respectivo regime."
+      }
+    },
+    "Art. 16": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O tempo de serviço equivalente ao período das contribuições apuradas e parceladas nos termos do disposto no art. 154 do Regulamento da Organização e do Custeio da Seguridade Social, aprovado pelo Decreto nº 2.173, de 5 de março de 1997, devidas por Estados, Distrito Federal e Municípios ao INSS em razão da extinção de RPPS com o retorno dos respectivos servidores ao RGPS, desde que não tenha sido compensado com contribuições previdenciárias devidas ao RGPS, será computado como tempo de contribuição ao RGPS, inclusive para efeito de contagem recíproca de tempo de contribuição e apuração do valor da compensação financeira de que trata este Decreto.",
+        "normalized_text": "O tempo de serviço equivalente ao período das contribuições apuradas e parceladas nos termos do disposto no art. 154 do Regulamento da Organização e do Custeio da Seguridade Social, aprovado pelo Decreto nº 2.173, de 5 de março de 1997, devidas por Estados, Distrito Federal e Municípios ao INSS em razão da extinção de RPPS com o retorno dos respectivos servidores ao RGPS, desde que não tenha sido compensado com contribuições previdenciárias devidas ao RGPS, será computado como tempo de contribuição ao RGPS, inclusive para efeito de contagem recíproca de tempo de contribuição e apuração do valor da compensação financeira de que trata este Decreto."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nCompete ao INSS a emissão de Certidão de Tempo de Contribuição referente ao tempo de contribuição de que trata o\ncaput\n.",
+        "normalized_text": "Parágrafo único. Compete ao INSS a emissão de Certidão de Tempo de Contribuição referente ao tempo de contribuição de que trata o caput ."
+      }
+    },
+    "Art. 17": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Caberá recurso administrativo da análise dos requerimentos da compensação financeira entre o RGPS e os RPPS e entre estes regimes e do pagamento dos valores relativos à compensação financeira, que será julgado pelo Conselho de Recursos da Previdência Social, na forma definida em seu regimento interno.\nCAPÍTULO V\nDO CONSELHO NACIONAL DOS REGIMES PRÓPRIOS DE PREVIDÊNCIA SOCIAL",
+        "normalized_text": "Caberá recurso administrativo da análise dos requerimentos da compensação financeira entre o RGPS e os RPPS e entre estes regimes e do pagamento dos valores relativos à compensação financeira, que será julgado pelo Conselho de Recursos da Previdência Social, na forma definida em seu regimento interno. CAPÍTULO V DO CONSELHO NACIONAL DOS REGIMES PRÓPRIOS DE PREVIDÊNCIA SOCIAL"
+      }
+    },
+    "Art. 18": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica instituído o Conselho Nacional dos Regimes Próprios de Previdência Social, com as seguintes competências:",
+        "normalized_text": "Fica instituído o Conselho Nacional dos Regimes Próprios de Previdência Social, com as seguintes competências:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - participar da definição das políticas e das diretrizes gerais relativas aos RPPS;\nparticipar da definição das políticas e das diretrizes gerais relativas aos RPPS;",
+        "normalized_text": "I - participar da definição das políticas e das diretrizes gerais relativas aos RPPS; participar da definição das políticas e das diretrizes gerais relativas aos RPPS;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - propor a elaboração e a revisão de normas e procedimentos relativos aos RPPS e à compensação financeira entre o RGPS e os RPPS e destes entre si;\npropor a elaboração e a revisão de normas e procedimentos relativos aos RPPS e à compensação financeira entre o RGPS e os RPPS e destes entre si;",
+        "normalized_text": "II - propor a elaboração e a revisão de normas e procedimentos relativos aos RPPS e à compensação financeira entre o RGPS e os RPPS e destes entre si; propor a elaboração e a revisão de normas e procedimentos relativos aos RPPS e à compensação financeira entre o RGPS e os RPPS e destes entre si;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - examinar proposições de normas e procedimentos relativos aos RPPS e à compensação financeira entre os regimes;\nexaminar proposições de normas e procedimentos relativos aos RPPS e à compensação financeira entre os regimes;",
+        "normalized_text": "III - examinar proposições de normas e procedimentos relativos aos RPPS e à compensação financeira entre os regimes; examinar proposições de normas e procedimentos relativos aos RPPS e à compensação financeira entre os regimes;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - deliberar sobre os parâmetros, as diretrizes e os critérios de responsabilidade previdenciária na instituição, na organização e no funcionamento dos RPPS, relativos a custeio, benefícios, atuária, contabilidade, aplicação e utilização de recursos e constituição e manutenção dos fundos previdenciários, a serem estabelecidos pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia;\ndeliberar sobre os parâmetros, as diretrizes e os critérios de responsabilidade previdenciária na instituição, na organização e no funcionamento dos RPPS, relativos a custeio, benefícios, atuária, contabilidade, aplicação e utilização de recursos e constituição e manutenção dos fundos previdenciários, a serem estabelecidos pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia;",
+        "normalized_text": "IV - deliberar sobre os parâmetros, as diretrizes e os critérios de responsabilidade previdenciária na instituição, na organização e no funcionamento dos RPPS, relativos a custeio, benefícios, atuária, contabilidade, aplicação e utilização de recursos e constituição e manutenção dos fundos previdenciários, a serem estabelecidos pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia; deliberar sobre os parâmetros, as diretrizes e os critérios de responsabilidade previdenciária na instituição, na organização e no funcionamento dos RPPS, relativos a custeio, benefícios, atuária, contabilidade, aplicação e utilização de recursos e constituição e manutenção dos fundos previdenciários, a serem estabelecidos pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - propor metas e ações que contribuam para o aprimoramento dos RPPS e da compensação financeira;\npropor metas e ações que contribuam para o aprimoramento dos RPPS e da compensação financeira;",
+        "normalized_text": "V - propor metas e ações que contribuam para o aprimoramento dos RPPS e da compensação financeira; propor metas e ações que contribuam para o aprimoramento dos RPPS e da compensação financeira;"
+      },
+      "caput/inciso:VI": {
+        "device_type": "inciso",
+        "device_label": "inciso VI",
+        "device_path": "caput/inciso:VI",
+        "text": "VI - participar da definição e acompanhar o desenvolvimento de sistemas relativos aos RPPS e à compensação previdenciária;\nparticipar da definição e acompanhar o desenvolvimento de sistemas relativos aos RPPS e à compensação previdenciária;",
+        "normalized_text": "VI - participar da definição e acompanhar o desenvolvimento de sistemas relativos aos RPPS e à compensação previdenciária; participar da definição e acompanhar o desenvolvimento de sistemas relativos aos RPPS e à compensação previdenciária;"
+      },
+      "caput/inciso:VII": {
+        "device_type": "inciso",
+        "device_label": "inciso VII",
+        "device_path": "caput/inciso:VII",
+        "text": "VII - participar da definição de ações de educação previdenciária, de intercâmbio de informações e de articulação entre órgãos e entidades, públicas ou privadas, nacionais ou internacionais que atuem com previdência;\nparticipar da definição de ações de educação previdenciária, de intercâmbio de informações e de articulação entre órgãos e entidades, públicas ou privadas, nacionais ou internacionais que atuem com previdência;",
+        "normalized_text": "VII - participar da definição de ações de educação previdenciária, de intercâmbio de informações e de articulação entre órgãos e entidades, públicas ou privadas, nacionais ou internacionais que atuem com previdência; participar da definição de ações de educação previdenciária, de intercâmbio de informações e de articulação entre órgãos e entidades, públicas ou privadas, nacionais ou internacionais que atuem com previdência;"
+      },
+      "caput/inciso:VIII": {
+        "device_type": "inciso",
+        "device_label": "inciso VIII",
+        "device_path": "caput/inciso:VIII",
+        "text": "VIII - acompanhar e avaliar a implementação de políticas, diretrizes gerais, metas, ações e a aplicação das normas e dos procedimentos relativos aos RPPS e à compensação financeira pelos entes federativos;\nacompanhar e avaliar a implementação de políticas, diretrizes gerais, metas, ações e a aplicação das normas e dos procedimentos relativos aos RPPS e à compensação financeira pelos entes federativos;",
+        "normalized_text": "VIII - acompanhar e avaliar a implementação de políticas, diretrizes gerais, metas, ações e a aplicação das normas e dos procedimentos relativos aos RPPS e à compensação financeira pelos entes federativos; acompanhar e avaliar a implementação de políticas, diretrizes gerais, metas, ações e a aplicação das normas e dos procedimentos relativos aos RPPS e à compensação financeira pelos entes federativos;"
+      },
+      "caput/inciso:IX": {
+        "device_type": "inciso",
+        "device_label": "inciso IX",
+        "device_path": "caput/inciso:IX",
+        "text": "IX - deliberar sobre o Programa de Certificação Institucional e Modernização da Gestão dos Regimes Próprios de Previdência Social da União, dos Estados, do Distrito Federal e dos Municípios - Pró-Gestão RPPS; e\ndeliberar sobre o Programa de Certificação Institucional e Modernização da Gestão dos Regimes Próprios de Previdência Social da União, dos Estados, do Distrito Federal e dos Municípios - Pró-Gestão RPPS; e",
+        "normalized_text": "IX - deliberar sobre o Programa de Certificação Institucional e Modernização da Gestão dos Regimes Próprios de Previdência Social da União, dos Estados, do Distrito Federal e dos Municípios - Pró-Gestão RPPS; e deliberar sobre o Programa de Certificação Institucional e Modernização da Gestão dos Regimes Próprios de Previdência Social da União, dos Estados, do Distrito Federal e dos Municípios - Pró-Gestão RPPS; e"
+      },
+      "caput/inciso:X": {
+        "device_type": "inciso",
+        "device_label": "inciso X",
+        "device_path": "caput/inciso:X",
+        "text": "X - elaborar e aprovar o seu regimento interno.\nelaborar e aprovar o seu regimento interno.",
+        "normalized_text": "X - elaborar e aprovar o seu regimento interno. elaborar e aprovar o seu regimento interno."
+      }
+    },
+    "Art. 19": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Conselho Nacional dos Regimes Próprios de Previdência Social será composto por representantes dos seguintes órgãos e entidades:",
+        "normalized_text": "O Conselho Nacional dos Regimes Próprios de Previdência Social será composto por representantes dos seguintes órgãos e entidades:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - do Ministério da Economia:\ndo Ministério da Economia:",
+        "normalized_text": "I - do Ministério da Economia: do Ministério da Economia:"
+      },
+      "caput/inciso:I/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:I/alinea:a",
+        "text": "a)\ndois da Secretaria de Previdência da Secretaria Especial de Previdência; e",
+        "normalized_text": "a) dois da Secretaria de Previdência da Secretaria Especial de Previdência; e"
+      },
+      "caput/inciso:I/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:I/alinea:b",
+        "text": "b)\num da Secretaria de Gestão e Desempenho de Pessoal da Secretaria Especial de Desburocratização, Gestão e Governo Digital;",
+        "normalized_text": "b) um da Secretaria de Gestão e Desempenho de Pessoal da Secretaria Especial de Desburocratização, Gestão e Governo Digital;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - um do INSS;\num do INSS;",
+        "normalized_text": "II - um do INSS; um do INSS;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - um dos Tribunais de Contas dos Estados, do Distrito Federal ou dos Municípios;\num dos Tribunais de Contas dos Estados, do Distrito Federal ou dos Municípios;",
+        "normalized_text": "III - um dos Tribunais de Contas dos Estados, do Distrito Federal ou dos Municípios; um dos Tribunais de Contas dos Estados, do Distrito Federal ou dos Municípios;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - sete dos Estados, do Distrito Federal ou dos Municípios, dentre os quais:\nsete dos Estados, do Distrito Federal ou dos Municípios, dentre os quais:",
+        "normalized_text": "IV - sete dos Estados, do Distrito Federal ou dos Municípios, dentre os quais: sete dos Estados, do Distrito Federal ou dos Municípios, dentre os quais:"
+      },
+      "caput/inciso:IV/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:IV/alinea:a",
+        "text": "a)\ndois de RPPS dos Estados ou do Distrito Federal;",
+        "normalized_text": "a) dois de RPPS dos Estados ou do Distrito Federal;"
+      },
+      "caput/inciso:IV/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:IV/alinea:b",
+        "text": "b)\ndois de RPPS dos Municípios;",
+        "normalized_text": "b) dois de RPPS dos Municípios;"
+      },
+      "caput/inciso:IV/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/inciso:IV/alinea:c",
+        "text": "c)\num de entidade de âmbito nacional representativa de unidades gestoras de RPPS;",
+        "normalized_text": "c) um de entidade de âmbito nacional representativa de unidades gestoras de RPPS;"
+      },
+      "caput/inciso:IV/alinea:d": {
+        "device_type": "alinea",
+        "device_label": "alínea d",
+        "device_path": "caput/inciso:IV/alinea:d",
+        "text": "d)\num de entidade de âmbito nacional representativa dos Estados e do Distrito Federal; e",
+        "normalized_text": "d) um de entidade de âmbito nacional representativa dos Estados e do Distrito Federal; e"
+      },
+      "caput/inciso:IV/alinea:e": {
+        "device_type": "alinea",
+        "device_label": "alínea e",
+        "device_path": "caput/inciso:IV/alinea:e",
+        "text": "e)\num de entidade de âmbito nacional representativa dos Municípios; e",
+        "normalized_text": "e) um de entidade de âmbito nacional representativa dos Municípios; e"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - três de segurados e beneficiários de RPPS, dentre os quais:\ntrês de segurados e beneficiários de RPPS, dentre os quais:",
+        "normalized_text": "V - três de segurados e beneficiários de RPPS, dentre os quais: três de segurados e beneficiários de RPPS, dentre os quais:"
+      },
+      "caput/inciso:V/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:V/alinea:a",
+        "text": "a)\num da União;",
+        "normalized_text": "a) um da União;"
+      },
+      "caput/inciso:V/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:V/alinea:b",
+        "text": "b)\num dos Estados ou do Distrito Federal; e",
+        "normalized_text": "b) um dos Estados ou do Distrito Federal; e"
+      },
+      "caput/inciso:V/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/inciso:V/alinea:c",
+        "text": "c)\num dos Municípios.",
+        "normalized_text": "c) um dos Municípios."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Cada membro do Conselho Nacional dos Regimes Próprios de Previdência Social terá um suplente, que o substituirá em suas ausências e impedimentos.\nCada membro do Conselho Nacional dos Regimes Próprios de Previdência Social terá um suplente, que o substituirá em suas ausências e impedimentos.",
+        "normalized_text": "§ 1º Cada membro do Conselho Nacional dos Regimes Próprios de Previdência Social terá um suplente, que o substituirá em suas ausências e impedimentos. Cada membro do Conselho Nacional dos Regimes Próprios de Previdência Social terá um suplente, que o substituirá em suas ausências e impedimentos."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos I e II do\nOs membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos I e II do\ncaput\ne respectivos suplentes serão indicados pelos órgãos que representam.",
+        "normalized_text": "§ 2º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos I e II do Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos I e II do caput e respectivos suplentes serão indicados pelos órgãos que representam."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos III e V do\nOs membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos III e V do\ncaput\ne respectivos suplentes serão escolhidos conforme os critérios estabelecidos em ato da Secretaria Especial de Previdência e Trabalho do Ministério da Economia.",
+        "normalized_text": "§ 3º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos III e V do Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que tratam os incisos III e V do caput e respectivos suplentes serão escolhidos conforme os critérios estabelecidos em ato da Secretaria Especial de Previdência e Trabalho do Ministério da Economia."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que trata o inciso IV do\nOs membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que trata o inciso IV do\ncaput\ne respectivos suplentes serão indicados pelo Conselho Nacional dos Dirigentes de Regimes Próprios de Previdência Social.",
+        "normalized_text": "§ 4º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que trata o inciso IV do Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social de que trata o inciso IV do caput e respectivos suplentes serão indicados pelo Conselho Nacional dos Dirigentes de Regimes Próprios de Previdência Social."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social e respectivos suplentes terão mandato de dois anos, admitida a recondução.\nOs membros do Conselho Nacional dos Regimes Próprios de Previdência Social e respectivos suplentes terão mandato de dois anos, admitida a recondução.",
+        "normalized_text": "§ 5º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social e respectivos suplentes terão mandato de dois anos, admitida a recondução. Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social e respectivos suplentes terão mandato de dois anos, admitida a recondução."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º A autoridade responsável pela indicação para membro do Conselho Nacional dos Regimes Próprios de Previdência Social poderá requerer, a qualquer tempo e a seu critério, a substituição do indicado por novo representante, que cumprirá o mandato pelo prazo remanescente.\nA autoridade responsável pela indicação para membro do Conselho Nacional dos Regimes Próprios de Previdência Social poderá requerer, a qualquer tempo e a seu critério, a substituição do indicado por novo representante, que cumprirá o mandato pelo prazo remanescente.",
+        "normalized_text": "§ 6º A autoridade responsável pela indicação para membro do Conselho Nacional dos Regimes Próprios de Previdência Social poderá requerer, a qualquer tempo e a seu critério, a substituição do indicado por novo representante, que cumprirá o mandato pelo prazo remanescente. A autoridade responsável pela indicação para membro do Conselho Nacional dos Regimes Próprios de Previdência Social poderá requerer, a qualquer tempo e a seu critério, a substituição do indicado por novo representante, que cumprirá o mandato pelo prazo remanescente."
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social serão designados pelo Secretário de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia.\nOs membros do Conselho Nacional dos Regimes Próprios de Previdência Social serão designados pelo Secretário de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia.",
+        "normalized_text": "§ 7º Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social serão designados pelo Secretário de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia. Os membros do Conselho Nacional dos Regimes Próprios de Previdência Social serão designados pelo Secretário de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia."
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º A Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia indicará, dentre os representantes de que trata a alínea \"a\" do inciso I do\nA Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia indicará, dentre os representantes de que trata a alínea \"a\" do inciso I do\ncaput\n, o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social, que designará um Secretário-Executivo para auxiliá-lo na gestão das atividades do Conselho.",
+        "normalized_text": "§ 8º A Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia indicará, dentre os representantes de que trata a alínea \"a\" do inciso I do A Secretaria de Previdência da Secretaria Especial de Previdência e Trabalho do Ministério da Economia indicará, dentre os representantes de que trata a alínea \"a\" do inciso I do caput , o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social, que designará um Secretário-Executivo para auxiliá-lo na gestão das atividades do Conselho."
+      }
+    },
+    "Art. 20": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Conselho Nacional dos Regimes Próprios de Previdência Social se reunirá, em caráter ordinário, quadrimestralmente, por convocação do seu Presidente.",
+        "normalized_text": "O Conselho Nacional dos Regimes Próprios de Previdência Social se reunirá, em caráter ordinário, quadrimestralmente, por convocação do seu Presidente."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social poderá convocar reunião extraordinária, por iniciativa própria ou por requerimento de, no mínimo cinco, de seus membros, para tratar de tema específico.\nO Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social poderá convocar reunião extraordinária, por iniciativa própria ou por requerimento de, no mínimo cinco, de seus membros, para tratar de tema específico.",
+        "normalized_text": "§ 1º O Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social poderá convocar reunião extraordinária, por iniciativa própria ou por requerimento de, no mínimo cinco, de seus membros, para tratar de tema específico. O Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social poderá convocar reunião extraordinária, por iniciativa própria ou por requerimento de, no mínimo cinco, de seus membros, para tratar de tema específico."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O quórum de reunião do Conselho Nacional dos Regimes Próprios de Previdência Social é de maioria absoluta dos membros e o quórum de aprovação é de maioria simples.\nO quórum de reunião do Conselho Nacional dos Regimes Próprios de Previdência Social é de maioria absoluta dos membros e o quórum de aprovação é de maioria simples.",
+        "normalized_text": "§ 2º O quórum de reunião do Conselho Nacional dos Regimes Próprios de Previdência Social é de maioria absoluta dos membros e o quórum de aprovação é de maioria simples. O quórum de reunião do Conselho Nacional dos Regimes Próprios de Previdência Social é de maioria absoluta dos membros e o quórum de aprovação é de maioria simples."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Além do voto ordinário, o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social terá o voto de qualidade em caso de empate.\nAlém do voto ordinário, o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social terá o voto de qualidade em caso de empate.",
+        "normalized_text": "§ 3º Além do voto ordinário, o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social terá o voto de qualidade em caso de empate. Além do voto ordinário, o Presidente do Conselho Nacional dos Regimes Próprios de Previdência Social terá o voto de qualidade em caso de empate."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º As reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão realizadas preferencialmente por meio de videoconferência.\nAs reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão realizadas preferencialmente por meio de videoconferência.",
+        "normalized_text": "§ 4º As reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão realizadas preferencialmente por meio de videoconferência. As reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão realizadas preferencialmente por meio de videoconferência."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O deslocamento dos membros do Conselho Nacional dos Regimes Próprios de Previdência Social para as reuniões presenciais será custeado pelo órgão ou pela entidade responsável pela indicação do representante.\nO deslocamento dos membros do Conselho Nacional dos Regimes Próprios de Previdência Social para as reuniões presenciais será custeado pelo órgão ou pela entidade responsável pela indicação do representante.",
+        "normalized_text": "§ 5º O deslocamento dos membros do Conselho Nacional dos Regimes Próprios de Previdência Social para as reuniões presenciais será custeado pelo órgão ou pela entidade responsável pela indicação do representante. O deslocamento dos membros do Conselho Nacional dos Regimes Próprios de Previdência Social para as reuniões presenciais será custeado pelo órgão ou pela entidade responsável pela indicação do representante."
+      }
+    },
+    "Art. 21": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Secretaria-Executiva do Conselho Nacional dos Regimes Próprios de Previdência Social será exercida pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia.",
+        "normalized_text": "A Secretaria-Executiva do Conselho Nacional dos Regimes Próprios de Previdência Social será exercida pela Secretaria Especial de Previdência e Trabalho do Ministério da Economia."
+      }
+    },
+    "Art. 22": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A participação no Conselho Nacional dos Regimes Próprios de Previdência Social será considerada prestação de serviço público relevante, não remunerada.",
+        "normalized_text": "A participação no Conselho Nacional dos Regimes Próprios de Previdência Social será considerada prestação de serviço público relevante, não remunerada."
+      }
+    },
+    "Art. 23": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Conselho Nacional dos Regimes Próprios de Previdência Social poderá instituir grupos de trabalho para auxiliá-lo no desenvolvimento de suas atividades.",
+        "normalized_text": "O Conselho Nacional dos Regimes Próprios de Previdência Social poderá instituir grupos de trabalho para auxiliá-lo no desenvolvimento de suas atividades."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA criação de grupos de trabalho no âmbito do Conselho Nacional dos Regimes Próprios de Previdência Social observará o disposto no inciso VI do\ncaput\ndo art. 6º do Decreto nº 9.759, de 11 de abril de 2019.",
+        "normalized_text": "Parágrafo único. A criação de grupos de trabalho no âmbito do Conselho Nacional dos Regimes Próprios de Previdência Social observará o disposto no inciso VI do caput do art. 6º do Decreto nº 9.759, de 11 de abril de 2019."
+      }
+    },
+    "Art. 24": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As atas das reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão publicadas no sítio eletrônico da Previdência Social.\nCAPÍTULO IV\nDISPOSIÇÕES FINAIS",
+        "normalized_text": "As atas das reuniões do Conselho Nacional dos Regimes Próprios de Previdência Social serão publicadas no sítio eletrônico da Previdência Social. CAPÍTULO IV DISPOSIÇÕES FINAIS"
+      }
+    },
+    "Art. 25": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os Estados, o Distrito Federal e os Municípios deverão aderir à compensação financeira de que trata este Decreto até 31 de dezembro de 2021, sob pena de incidirem as sanções de que trata o art. 7º da Lei nº 9.717, de 27 de novembro de 1998, e a suspensão do pagamento da compensação financeira devida pelo RGPS.",
+        "normalized_text": "Os Estados, o Distrito Federal e os Municípios deverão aderir à compensação financeira de que trata este Decreto até 31 de dezembro de 2021, sob pena de incidirem as sanções de que trata o art. 7º da Lei nº 9.717, de 27 de novembro de 1998, e a suspensão do pagamento da compensação financeira devida pelo RGPS."
+      }
+    },
+    "Art. 26": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A União adotará as providências necessárias para que a compensação financeira entre o RPPS da União e o RGPS seja operacionalizada a partir de 2021.",
+        "normalized_text": "A União adotará as providências necessárias para que a compensação financeira entre o RPPS da União e o RGPS seja operacionalizada a partir de 2021."
+      }
+    },
+    "Art. 27": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica revogado o Decreto nº 3.112, de 6 de julho de 1999.",
+        "normalized_text": "Fica revogado o Decreto nº 3.112, de 6 de julho de 1999."
+      }
+    },
+    "Art. 28": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto entra em vigor:",
+        "normalized_text": "Este Decreto entra em vigor:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - em 1º de janeiro de 2020, quanto ao art. 27 e aos demais dispositivos aplicáveis à compensação financeira entre o RGPS e os RPPS;\nem 1º de janeiro de 2020, quanto ao art. 27 e aos demais dispositivos aplicáveis à compensação financeira entre o RGPS e os RPPS;",
+        "normalized_text": "I - em 1º de janeiro de 2020, quanto ao art. 27 e aos demais dispositivos aplicáveis à compensação financeira entre o RGPS e os RPPS; em 1º de janeiro de 2020, quanto ao art. 27 e aos demais dispositivos aplicáveis à compensação financeira entre o RGPS e os RPPS;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - em 1º de janeiro de 2021, quanto aos dispositivos aplicáveis à compensação financeira entre os RPPS; e\nem 1º de janeiro de 2021, quanto aos dispositivos aplicáveis à compensação financeira entre os RPPS; e",
+        "normalized_text": "II - em 1º de janeiro de 2021, quanto aos dispositivos aplicáveis à compensação financeira entre os RPPS; e em 1º de janeiro de 2021, quanto aos dispositivos aplicáveis à compensação financeira entre os RPPS; e"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - na data de sua publicação, quanto aos art. 18 ao art. 24.\nna data de sua publicação, quanto aos art. 18 ao art. 24.\nBrasília, 20 de dezembro de 2019; 198º da Independência e 131º da República.\nJAIR MESSIAS BOLSONARO\nPaulo Guedes\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/12/2019\nPublicação:\nDiário Oficial da União - Seção 1\n- 23/12/2019, Página 9\n(Publicação Original)",
+        "normalized_text": "III - na data de sua publicação, quanto aos art. 18 ao art. 24. na data de sua publicação, quanto aos art. 18 ao art. 24. Brasília, 20 de dezembro de 2019; 198º da Independência e 131º da República. JAIR MESSIAS BOLSONARO Paulo Guedes Este texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/12/2019 Publicação: Diário Oficial da União - Seção 1 - 23/12/2019, Página 9 (Publicação Original)"
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -15,5 +15,126 @@
     "Art. 5": "Art. 5º O pagamento da vantagem pecuniária de que trata esta Lei ocorrerá à conta de encargos previdenciários dos Recursos da União sob a supervisão do Ministério da Fazenda, a partir do ano seguinte à publicação desta Lei, com a despesa prevista no Orçamento da União.",
     "Art. 6": "Art. 6º Esta Lei entra em vigor na data de sua publicação.",
     "Art. 7": "Art. 7º Revogam-se as disposições em contrário.\nBrasília, 24 de dezembro de 1996; 175º da Independência e 108º da República.\nFERNANDO HENRIQUE CARDOSO\nPedro Malan\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 26/12/1996\nPublicação:\nDiário Oficial da União - Seção 1\n- 26/12/1996, Página 28444\n(Publicação Original)\nColeção de Leis do Brasil\n- 1996, Página 6625\nVol. 12\n(Publicação Original)"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É concedida pensão vitalícia, a título de indenização especial, às vítimas do acidente com a substância radioativa CÉSIO 137, ocorrido em Goiânia, Estado de Goiás.",
+        "normalized_text": "É concedida pensão vitalícia, a título de indenização especial, às vítimas do acidente com a substância radioativa CÉSIO 137, ocorrido em Goiânia, Estado de Goiás."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA pensão de que trata esta Lei, é personalíssima, não sendo transmissível ao cônjuge sobrevivente ou aos herdeiros, em caso de morte do beneficiário.",
+        "normalized_text": "Parágrafo único. A pensão de que trata esta Lei, é personalíssima, não sendo transmissível ao cônjuge sobrevivente ou aos herdeiros, em caso de morte do beneficiário."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão será concedida do seguinte modo:",
+        "normalized_text": "A pensão será concedida do seguinte modo:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - 300 (trezentas) Unidades Fiscais de Referência - UFIR para as vítimas com incapacidade funcional laborativa parcial ou total permanente, resultante do evento;\n300 (trezentas) Unidades Fiscais de Referência - UFIR para as vítimas com incapacidade funcional laborativa parcial ou total permanente, resultante do evento;",
+        "normalized_text": "I - 300 (trezentas) Unidades Fiscais de Referência - UFIR para as vítimas com incapacidade funcional laborativa parcial ou total permanente, resultante do evento; 300 (trezentas) Unidades Fiscais de Referência - UFIR para as vítimas com incapacidade funcional laborativa parcial ou total permanente, resultante do evento;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - 200 (duzentas) UFIR aos pacientes não abrangidos pelo inciso anterior, irradiados ou contaminados em proporção igual ou superior a 100 (cem) Rads;\n200 (duzentas) UFIR aos pacientes não abrangidos pelo inciso anterior, irradiados ou contaminados em proporção igual ou superior a 100 (cem) Rads;",
+        "normalized_text": "II - 200 (duzentas) UFIR aos pacientes não abrangidos pelo inciso anterior, irradiados ou contaminados em proporção igual ou superior a 100 (cem) Rads; 200 (duzentas) UFIR aos pacientes não abrangidos pelo inciso anterior, irradiados ou contaminados em proporção igual ou superior a 100 (cem) Rads;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - 150 (cento e cinqüenta) UFIR para as vítimas irradiadas ou contaminadas em doses inferiores a 100 (cem) e equivalentes ou superiores a 50 (cinqüenta) Rads;\n150 (cento e cinqüenta) UFIR para as vítimas irradiadas ou contaminadas em doses inferiores a 100 (cem) e equivalentes ou superiores a 50 (cinqüenta) Rads;",
+        "normalized_text": "III - 150 (cento e cinqüenta) UFIR para as vítimas irradiadas ou contaminadas em doses inferiores a 100 (cem) e equivalentes ou superiores a 50 (cinqüenta) Rads; 150 (cento e cinqüenta) UFIR para as vítimas irradiadas ou contaminadas em doses inferiores a 100 (cem) e equivalentes ou superiores a 50 (cinqüenta) Rads;"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - 150 (cento e cinqüenta) UFIR para os descendentes de pessoas irradiadas ou contaminadas que vierem a nascer com alguma anomalia em decorrência da exposição comprovada dos genitores ao CÉSIO 137;\n150 (cento e cinqüenta) UFIR para os descendentes de pessoas irradiadas ou contaminadas que vierem a nascer com alguma anomalia em decorrência da exposição comprovada dos genitores ao CÉSIO 137;",
+        "normalized_text": "IV - 150 (cento e cinqüenta) UFIR para os descendentes de pessoas irradiadas ou contaminadas que vierem a nascer com alguma anomalia em decorrência da exposição comprovada dos genitores ao CÉSIO 137; 150 (cento e cinqüenta) UFIR para os descendentes de pessoas irradiadas ou contaminadas que vierem a nascer com alguma anomalia em decorrência da exposição comprovada dos genitores ao CÉSIO 137;"
+      },
+      "caput/inciso:V": {
+        "device_type": "inciso",
+        "device_label": "inciso V",
+        "device_path": "caput/inciso:V",
+        "text": "V - 150 (cento e cinqüenta) UFIR para os demais pacientes irradiados e/ou contaminados, não abrangidos pelos incisos anteriores, sob controle médico regular pela Fundação Leide das Neves a partir da sua instituição até a data da vigência desta Lei, desde que cadastrados nos grupos de acompanhamento médico I e II da referida entidade.\n150 (cento e cinqüenta) UFIR para os demais pacientes irradiados e/ou contaminados, não abrangidos pelos incisos anteriores, sob controle médico regular pela Fundação Leide das Neves a partir da sua instituição até a data da vigência desta Lei, desde que cadastrados nos grupos de acompanhamento médico I e II da referida entidade.",
+        "normalized_text": "V - 150 (cento e cinqüenta) UFIR para os demais pacientes irradiados e/ou contaminados, não abrangidos pelos incisos anteriores, sob controle médico regular pela Fundação Leide das Neves a partir da sua instituição até a data da vigência desta Lei, desde que cadastrados nos grupos de acompanhamento médico I e II da referida entidade. 150 (cento e cinqüenta) UFIR para os demais pacientes irradiados e/ou contaminados, não abrangidos pelos incisos anteriores, sob controle médico regular pela Fundação Leide das Neves a partir da sua instituição até a data da vigência desta Lei, desde que cadastrados nos grupos de acompanhamento médico I e II da referida entidade."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nO valor mensal da pensão será o valor da UFIR à época da publicação desta Lei, atualizado, a partir de então, na mesma época e índices concedidos aos servidores públicos federais.",
+        "normalized_text": "Parágrafo único. O valor mensal da pensão será o valor da UFIR à época da publicação desta Lei, atualizado, a partir de então, na mesma época e índices concedidos aos servidores públicos federais."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A comprovação de ser a pessoa vítima do acidente radioativo ocorrido com o CÉSIO 137 e estar enquadrada nos incisos do artigo anterior deverá ser feita por meio de junta médica oficial, a cargo da Fundação Leide das Neves Ferreira, com sede em Goiânia, Estado de Goiás e supervisão do Ministério Público Federal, devendo-se anotar o tipo de seqüela que impede o desempenho profissional e/ou o aprendizado de maneira total ou parcial.",
+        "normalized_text": "A comprovação de ser a pessoa vítima do acidente radioativo ocorrido com o CÉSIO 137 e estar enquadrada nos incisos do artigo anterior deverá ser feita por meio de junta médica oficial, a cargo da Fundação Leide das Neves Ferreira, com sede em Goiânia, Estado de Goiás e supervisão do Ministério Público Federal, devendo-se anotar o tipo de seqüela que impede o desempenho profissional e/ou o aprendizado de maneira total ou parcial."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nOs funcionários da Vigilância Sanitária que, em pleno exercício de suas atividades, foram expostos às radiações do CÉSIO 137 também serão submetidos a exame para comprovação e sua classificação como vítimas do acidente, devendo-se igualmente anotar o tipo de seqüela que impede ou limita o desempenho profissional.",
+        "normalized_text": "Parágrafo único. Os funcionários da Vigilância Sanitária que, em pleno exercício de suas atividades, foram expostos às radiações do CÉSIO 137 também serão submetidos a exame para comprovação e sua classificação como vítimas do acidente, devendo-se igualmente anotar o tipo de seqüela que impede ou limita o desempenho profissional."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Havendo condenação judicial da União ao pagamento de indenização por responsabilidade civil em decorrência do acidente de que trata esta Lei, o montante da pensão ora instituída será obrigatoriamente deduzido do quantum da condenação.",
+        "normalized_text": "Havendo condenação judicial da União ao pagamento de indenização por responsabilidade civil em decorrência do acidente de que trata esta Lei, o montante da pensão ora instituída será obrigatoriamente deduzido do quantum da condenação."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O pagamento da vantagem pecuniária de que trata esta Lei ocorrerá à conta de encargos previdenciários dos Recursos da União sob a supervisão do Ministério da Fazenda, a partir do ano seguinte à publicação desta Lei, com a despesa prevista no Orçamento da União.",
+        "normalized_text": "O pagamento da vantagem pecuniária de que trata esta Lei ocorrerá à conta de encargos previdenciários dos Recursos da União sob a supervisão do Ministério da Fazenda, a partir do ano seguinte à publicação desta Lei, com a despesa prevista no Orçamento da União."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Revogam-se as disposições em contrário.\nBrasília, 24 de dezembro de 1996; 175º da Independência e 108º da República.\nFERNANDO HENRIQUE CARDOSO\nPedro Malan\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 26/12/1996\nPublicação:\nDiário Oficial da União - Seção 1\n- 26/12/1996, Página 28444\n(Publicação Original)\nColeção de Leis do Brasil\n- 1996, Página 6625\nVol. 12\n(Publicação Original)",
+        "normalized_text": "Revogam-se as disposições em contrário. Brasília, 24 de dezembro de 1996; 175º da Independência e 108º da República. FERNANDO HENRIQUE CARDOSO Pedro Malan Este texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 26/12/1996 Publicação: Diário Oficial da União - Seção 1 - 26/12/1996, Página 28444 (Publicação Original) Coleção de Leis do Brasil - 1996, Página 6625 Vol. 12 (Publicação Original)"
+      }
+    }
   }
 }

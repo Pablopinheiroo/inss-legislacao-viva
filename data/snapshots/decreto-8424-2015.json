@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -23,5 +23,597 @@
     "Art. 12": "Art. 12 Este Decreto aplica-se aos períodos de defeso iniciados a partir\nde 1º de abril de 2015.\nParágrafo\núnico. Aos períodos de defeso iniciados até 31 de março de 2015,\naplica-se o disposto na legislação anterior, inclusive quanto aos\nprazos, procedimentos e recursos e à competência do Ministério do\nTrabalho e Emprego para as atividades de recebimento e processamento\ndos requerimentos, habilitação dos beneficiários e apuração de\nirregularidades.",
     "Art. 13": "Art. 13 Ficam revogados o inciso III do § 14 e o § 17 do art. 9º do\nRegulamento da Previdência Social, aprovado pelo Decreto nº 3.048,\nde 6 de maio de 1999.",
     "Art. 14": "Art. 14 Este Decreto entra em vigor na data de sua publicação.\nBrasília,\n31 de março de 2015; 194º da Independência e 127º da República.\nDILMA\nROUSSEFF\nManoel\nDias\nCarlos\nEduardo Gabas\nTereza\nCampello\nHelder\nBarbalho"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto regulamenta a concessão do benefício de\nseguro-desemprego, no valor de um salário-mínimo mensal, ao\npescador artesanal de que tratam a alínea \"b\" do inciso\nVII do\ncaput\ndo art. 12 da Lei nº 8.212, de 24 de julho de 1991, e a alínea \"b\"\ndo inciso VII do\ncaput\ndo art. 11 da Lei nº 8.213, de 24 de julho de 1991, desde que exerça\nsua atividade profissional ininterruptamente, de forma artesanal e\nindividualmente ou em regime de economia familiar, durante o período\nde defeso de atividade pesqueira para a preservação da espécie.\n(“Caput”\ndo artigo com redação dada pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "Este Decreto regulamenta a concessão do benefício de seguro-desemprego, no valor de um salário-mínimo mensal, ao pescador artesanal de que tratam a alínea \"b\" do inciso VII do caput do art. 12 da Lei nº 8.212, de 24 de julho de 1991, e a alínea \"b\" do inciso VII do caput do art. 11 da Lei nº 8.213, de 24 de julho de 1991, desde que exerça sua atividade profissional ininterruptamente, de forma artesanal e individualmente ou em regime de economia familiar, durante o período de defeso de atividade pesqueira para a preservação da espécie. (“Caput” do artigo com redação dada pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Considera-se ininterrupta a atividade exercida durante o período\nConsidera-se ininterrupta a atividade exercida durante o período\ncompreendido entre o término do defeso anterior e o início do\ndefeso em curso ou nos doze meses imediatamente anteriores ao início\ndo defeso em curso, o que for menor.",
+        "normalized_text": "§ 1º Considera-se ininterrupta a atividade exercida durante o período Considera-se ininterrupta a atividade exercida durante o período compreendido entre o término do defeso anterior e o início do defeso em curso ou nos doze meses imediatamente anteriores ao início do defeso em curso, o que for menor."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Entende-se como regime de economia familiar a atividade em que o\nEntende-se como regime de economia familiar a atividade em que o\ntrabalho dos membros da família é indispensável à própria\nsubsistência e ao desenvolvimento socioeconômico do núcleo\nfamiliar e exercido em condições de mútua dependência e\ncolaboração, sem a utilização de empregados permanentes.\n(Parágrafo\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 2º Entende-se como regime de economia familiar a atividade em que o Entende-se como regime de economia familiar a atividade em que o trabalho dos membros da família é indispensável à própria subsistência e ao desenvolvimento socioeconômico do núcleo familiar e exercido em condições de mútua dependência e colaboração, sem a utilização de empregados permanentes. (Parágrafo com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Para fins de concessão do benefício, consideram-se como\nPara fins de concessão do benefício, consideram-se como\nperíodos de defeso aqueles estabelecidos pelos órgãos federais\ncompetentes, determinando a paralisação temporária da pesca para\npreservação das espécies, nos termos e prazos fixados nos\nrespectivos atos.\n(Parágrafo\ncom redação dada pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 3º Para fins de concessão do benefício, consideram-se como Para fins de concessão do benefício, consideram-se como períodos de defeso aqueles estabelecidos pelos órgãos federais competentes, determinando a paralisação temporária da pesca para preservação das espécies, nos termos e prazos fixados nos respectivos atos. (Parágrafo com redação dada pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O benefício será devido ao pescador profissional artesanal\nO benefício será devido ao pescador profissional artesanal\ninscrito no Registro Geral da Atividade Pesqueira - RGP, de que trata\no Decreto nº 8.425, de 31 de março de 2015, que não disponha de\noutra fonte de renda diversa da decorrente da atividade pesqueira no\nmomento do requerimento e no período de que trata o § 1º.\n(Parágrafo\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 4º O benefício será devido ao pescador profissional artesanal O benefício será devido ao pescador profissional artesanal inscrito no Registro Geral da Atividade Pesqueira - RGP, de que trata o Decreto nº 8.425, de 31 de março de 2015, que não disponha de outra fonte de renda diversa da decorrente da atividade pesqueira no momento do requerimento e no período de que trata o § 1º. (Parágrafo com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O pescador profissional artesanal não fará jus a mais de um\nO pescador profissional artesanal não fará jus a mais de um\nbenefício de seguro-desemprego no mesmo ano decorrente de defesos\nrelativos a espécies distintas.",
+        "normalized_text": "§ 5º O pescador profissional artesanal não fará jus a mais de um O pescador profissional artesanal não fará jus a mais de um benefício de seguro-desemprego no mesmo ano decorrente de defesos relativos a espécies distintas."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º A concessão do benefício não será extensível aos\nA concessão do benefício não será extensível aos\ntrabalhadores de apoio à pesca artesanal, assim definidos em\nlegislação específica, e nem aos componentes do grupo familiar do\npescador profissional artesanal que não satisfaçam,\nindividualmente, os requisitos e as condições estabelecidos neste\nDecreto.",
+        "normalized_text": "§ 6º A concessão do benefício não será extensível aos A concessão do benefício não será extensível aos trabalhadores de apoio à pesca artesanal, assim definidos em legislação específica, e nem aos componentes do grupo familiar do pescador profissional artesanal que não satisfaçam, individualmente, os requisitos e as condições estabelecidos neste Decreto."
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017)\nrenumerado pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017) renumerado pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º Fará jus ao seguro-desemprego o pescador artesanal que, durante\nFará jus ao seguro-desemprego o pescador artesanal que, durante\no período aquisitivo de que trata o § 1º, tenha recebido benefício\nde auxílio-doença, auxílio-doença acidentário ou salário\nmaternidade, exclusivamente sob categoria de filiação de segurado\nespecial, ou ainda, que tenha contribuído para a Previdência Social\nrelativamente ao exercício exclusivo dessa atividade.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 8º Fará jus ao seguro-desemprego o pescador artesanal que, durante Fará jus ao seguro-desemprego o pescador artesanal que, durante o período aquisitivo de que trata o § 1º, tenha recebido benefício de auxílio-doença, auxílio-doença acidentário ou salário maternidade, exclusivamente sob categoria de filiação de segurado especial, ou ainda, que tenha contribuído para a Previdência Social relativamente ao exercício exclusivo dessa atividade. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:9": {
+        "device_type": "paragrafo",
+        "device_label": "§ 9º",
+        "device_path": "paragrafo:9",
+        "text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio\nO Ministério da Pesca e Aquicultura e o Ministério do Meio\nAmbiente e Mudança do Clima avaliarão, conjuntamente, outras\nmedidas de gestão e de uso sustentável dos recursos pesqueiros\npreviamente ao estabelecimento de períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio O Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima avaliarão, conjuntamente, outras medidas de gestão e de uso sustentável dos recursos pesqueiros previamente ao estabelecimento de períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:10": {
+        "device_type": "paragrafo",
+        "device_label": "§ 10º",
+        "device_path": "paragrafo:10",
+        "text": "§ 10. As normas, os critérios, os padrões e as medidas de ordenamento\nAs normas, os critérios, os padrões e as medidas de ordenamento\nrelativas aos períodos de defeso serão editadas, observadas as\ncompetências do Ministério da Pesca e Aquicultura e do Ministério\ndo Meio Ambiente e Mudança do Clima, e deverão:\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- definir as espécies que são objeto de conservação, as medidas\nde proteção à reprodução e ao recrutamento das espécies, os\npetrechos e os métodos de pesca proibidos;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nII\n- estabelecer a abrangência geográfica da norma, de modo a indicar\nas bacias hidrográficas, a região ou a área costeiro-marinha e\ndiscriminar os Municípios alcançados;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIII\n- definir se há alternativas de pesca disponíveis e se elas\nabrangem todos os pescadores ou apenas aqueles que atuam de forma\nembarcada; e\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIV\n- estabelecer mecanismos de monitoramento da biodiversidade e da\natividade pesqueira e de avaliação da eficácia dos períodos de\ndefeso como medida de ordenamento.\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 10. As normas, os critérios, os padrões e as medidas de ordenamento As normas, os critérios, os padrões e as medidas de ordenamento relativas aos períodos de defeso serão editadas, observadas as competências do Ministério da Pesca e Aquicultura e do Ministério do Meio Ambiente e Mudança do Clima, e deverão: (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - definir as espécies que são objeto de conservação, as medidas de proteção à reprodução e ao recrutamento das espécies, os petrechos e os métodos de pesca proibidos; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) II - estabelecer a abrangência geográfica da norma, de modo a indicar as bacias hidrográficas, a região ou a área costeiro-marinha e discriminar os Municípios alcançados; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) III - definir se há alternativas de pesca disponíveis e se elas abrangem todos os pescadores ou apenas aqueles que atuam de forma embarcada; e (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) IV - estabelecer mecanismos de monitoramento da biodiversidade e da atividade pesqueira e de avaliação da eficácia dos períodos de defeso como medida de ordenamento. (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:11": {
+        "device_type": "paragrafo",
+        "device_label": "§ 11º",
+        "device_path": "paragrafo:11",
+        "text": "§ 11-B. O Ministério da Pesca e Aquicultura publicará e manterá\n-B. O Ministério da Pesca e Aquicultura publicará e manterá\natualizados, em sítio eletrônico e em formato de dados abertos, os\nperíodos de defeso, por recurso pesqueiro e área abrangida, com a\nindicação dos Municípios alcançados, nos termos do disposto no\ninciso II do § 10.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 11-B. O Ministério da Pesca e Aquicultura publicará e manterá -B. O Ministério da Pesca e Aquicultura publicará e manterá atualizados, em sítio eletrônico e em formato de dados abertos, os períodos de defeso, por recurso pesqueiro e área abrangida, com a indicação dos Municípios alcançados, nos termos do disposto no inciso II do § 10. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:12": {
+        "device_type": "paragrafo",
+        "device_label": "§ 12º",
+        "device_path": "paragrafo:12",
+        "text": "§ 12. Não será devido o benefício do seguro-desemprego quando houver\nNão será devido o benefício do seguro-desemprego quando houver\ndisponibilidade de alternativas de pesca nos Municípios alcançados\npelos períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 12. Não será devido o benefício do seguro-desemprego quando houver Não será devido o benefício do seguro-desemprego quando houver disponibilidade de alternativas de pesca nos Municípios alcançados pelos períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:13": {
+        "device_type": "paragrafo",
+        "device_label": "§ 13º",
+        "device_path": "paragrafo:13",
+        "text": "§ 13. O benefício do seguro-desemprego é direito pessoal e\nO benefício do seguro-desemprego é direito pessoal e\nintransferível.\n(Primitivo",
+        "normalized_text": "§ 13. O benefício do seguro-desemprego é direito pessoal e O benefício do seguro-desemprego é direito pessoal e intransferível. (Primitivo"
+      },
+      "paragrafo:14": {
+        "device_type": "paragrafo",
+        "device_label": "§ 14º",
+        "device_path": "paragrafo:14",
+        "text": "§ 14. Excepcionalmente, nas hipóteses de grave contaminação por\nExcepcionalmente, nas hipóteses de grave contaminação por\nagentes químicos, físicos e biológicos, o Ministério da Pesca e\nAquicultura e o Ministério do Meio Ambiente e Mudança do Clima\npoderão, com fundamento em critérios técnicos estabelecidos pelos\nórgãos e pelas entidades competentes, prorrogar o período de\ndefeso, nos termos previstos na legislação.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 14. Excepcionalmente, nas hipóteses de grave contaminação por Excepcionalmente, nas hipóteses de grave contaminação por agentes químicos, físicos e biológicos, o Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima poderão, com fundamento em critérios técnicos estabelecidos pelos órgãos e pelas entidades competentes, prorrogar o período de defeso, nos termos previstos na legislação. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:15": {
+        "device_type": "paragrafo",
+        "device_label": "§ 15º",
+        "device_path": "paragrafo:15",
+        "text": "§ 15.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\nrevogado pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 15. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e revogado pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:16": {
+        "device_type": "paragrafo",
+        "device_label": "§ 16º",
+        "device_path": "paragrafo:16",
+        "text": "§ 16. O pagamento de seguro desemprego do pescador profissional\nO pagamento de seguro desemprego do pescador profissional\nartesanal, quando devido, na hipótese de ocorrência do\nprolongamento a que se refere o § 14, poderá ser ampliado na forma\nprevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de\n1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779,\nde 25 de novembro de 2003.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)",
+        "normalized_text": "§ 16. O pagamento de seguro desemprego do pescador profissional O pagamento de seguro desemprego do pescador profissional artesanal, quando devido, na hipótese de ocorrência do prolongamento a que se refere o § 14, poderá ser ampliado na forma prevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de 1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779, de 25 de novembro de 2003. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019)"
+      },
+      "paragrafo:17": {
+        "device_type": "paragrafo",
+        "device_label": "§ 17º",
+        "device_path": "paragrafo:17",
+        "text": "§ 17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o\nNa hipótese de ser efetuado o pagamento de que trata o § 16, o\nConselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat\ndeverá respeitar os limites de reserva mínima de liquidez de que\ntrata o § 5º do art. 4º da Lei nº 7.998, de 1990.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)",
+        "normalized_text": "§ 17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o Na hipótese de ser efetuado o pagamento de que trata o § 16, o Conselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat deverá respeitar os limites de reserva mínima de liquidez de que trata o § 5º do art. 4º da Lei nº 7.998, de 1990. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019)"
+      }
+    },
+    "Art. 1-A": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A concessão do benefício de seguro-desemprego de que trata\neste Decreto fica limitada à dotação orçamentária para essa\ndespesa na data de publicação de cada lei orçamentária anual, nos\ntermos do disposto no art. 5º, § 1º, da Lei nº 10.779, de 25 de\nnovembro de 2003.",
+        "normalized_text": "A concessão do benefício de seguro-desemprego de que trata este Decreto fica limitada à dotação orçamentária para essa despesa na data de publicação de cada lei orçamentária anual, nos termos do disposto no art. 5º, § 1º, da Lei nº 10.779, de 25 de novembro de 2003."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A limitação de que trata o\nA limitação de que trata o\ncaput\nserá operacionalizada por meio da distribuição proporcional\nponderada dos recursos, para cada um dos períodos de defeso\nprevistos.",
+        "normalized_text": "§ 1º A limitação de que trata o A limitação de que trata o caput será operacionalizada por meio da distribuição proporcional ponderada dos recursos, para cada um dos períodos de defeso previstos."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Ato conjunto do Ministério da Pesca e Aquicultura, do Ministério\nAto conjunto do Ministério da Pesca e Aquicultura, do Ministério\ndo Trabalho e Emprego e do Instituto Nacional do Seguro Social - INSS\nestabelecerá, anualmente, os recursos disponíveis para cada período\nde defeso, de modo a considerar os seguintes critérios:\nI\n- divisão do valor total pago a título do seguro-desemprego de que\ntrata o\ncaput\ndurante o ano pelo valor pago a título de seguro-desemprego durante\naquele período de defeso, com base nos dados referentes ao exercício\nanterior ao da lei orçamentária vigente; e\nII\n- multiplicação do índice obtido com o cálculo de que trata o\ninciso I pelo montante previsto na dotação orçamentária destinada\nao seguro-desemprego de que trata o\ncaput\nna lei orçamentária anual.",
+        "normalized_text": "§ 2º Ato conjunto do Ministério da Pesca e Aquicultura, do Ministério Ato conjunto do Ministério da Pesca e Aquicultura, do Ministério do Trabalho e Emprego e do Instituto Nacional do Seguro Social - INSS estabelecerá, anualmente, os recursos disponíveis para cada período de defeso, de modo a considerar os seguintes critérios: I - divisão do valor total pago a título do seguro-desemprego de que trata o caput durante o ano pelo valor pago a título de seguro-desemprego durante aquele período de defeso, com base nos dados referentes ao exercício anterior ao da lei orçamentária vigente; e II - multiplicação do índice obtido com o cálculo de que trata o inciso I pelo montante previsto na dotação orçamentária destinada ao seguro-desemprego de que trata o caput na lei orçamentária anual."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O ato conjunto de que trata o § 2º poderá, justificadamente,\nO ato conjunto de que trata o § 2º poderá, justificadamente,\nalterar a fórmula de que trata esse artigo.\n(Artigo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 3º O ato conjunto de que trata o § 2º poderá, justificadamente, O ato conjunto de que trata o § 2º poderá, justificadamente, alterar a fórmula de que trata esse artigo. (Artigo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Terá direito ao benefício do seguro-desemprego o pescador\nprofissional artesanal que preencher os seguintes requisitos:\nI\n- ter registro no RGP, com situação cadastral ativa, emitido pelo\nMinistério da Pesca e Aquicultura, na condição de pescador\nprofissional artesanal, observada a antecedência mínima prevista no\nart. 2º da Lei nº 10.779, de 25 de novembro de 2003;\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nII\n- possuir a condição de segurado especial unicamente na categoria\nde pescador profissional artesanal;\nIII\n- exercer atividade de pesca artesanal profissional,\nininterruptamente, no período de que trata o art. 1º, § 1º;\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nIV\n- não estar em gozo de nenhum benefício decorrente de benefício\nprevidenciário ou assistencial de natureza continuada, exceto:\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "Terá direito ao benefício do seguro-desemprego o pescador profissional artesanal que preencher os seguintes requisitos: I - ter registro no RGP, com situação cadastral ativa, emitido pelo Ministério da Pesca e Aquicultura, na condição de pescador profissional artesanal, observada a antecedência mínima prevista no art. 2º da Lei nº 10.779, de 25 de novembro de 2003; (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025) II - possuir a condição de segurado especial unicamente na categoria de pescador profissional artesanal; III - exercer atividade de pesca artesanal profissional, ininterruptamente, no período de que trata o art. 1º, § 1º; (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025) IV - não estar em gozo de nenhum benefício decorrente de benefício previdenciário ou assistencial de natureza continuada, exceto: (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/alinea:a",
+        "text": "a)\npensão por morte;\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "a) pensão por morte; (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/alinea:b",
+        "text": "b)\nauxílio-acidente; e\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "b) auxílio-acidente; e (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/alinea:c",
+        "text": "c)\ntransferências de renda de que tratam o art. 6º, parágrafo único,\ne o art. 203,\ncaput\n,\ninciso VI, da Constituição e o art. 1º,\ncaput\ne § 1º, da Lei nº 10.835, de 8 de janeiro de 2004;\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)\nV\n- não ter vínculo de emprego, ou outra relação de trabalho, ou\noutra fonte de renda diversa da decorrente da atividade pesqueira no\nperíodo de que trata o art. 1º, § 1º;\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nVI\n- ter a Carteira de Identidade Nacional - CIN;\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\nVII\n- residir em Município abrangido, ou limítrofe, pelo ato que\ninstituiu o período de defeso relativo ao benefício requerido; e\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\nVIII\n- obter a homologação do registro a que se refere o inciso I do\ncaput\n,\nnos termos do disposto no art. 2º-A.\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "c) transferências de renda de que tratam o art. 6º, parágrafo único, e o art. 203, caput , inciso VI, da Constituição e o art. 1º, caput e § 1º, da Lei nº 10.835, de 8 de janeiro de 2004; (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025) V - não ter vínculo de emprego, ou outra relação de trabalho, ou outra fonte de renda diversa da decorrente da atividade pesqueira no período de que trata o art. 1º, § 1º; (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025) VI - ter a Carteira de Identidade Nacional - CIN; (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025) VII - residir em Município abrangido, ou limítrofe, pelo ato que instituiu o período de defeso relativo ao benefício requerido; e (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025) VIII - obter a homologação do registro a que se refere o inciso I do caput , nos termos do disposto no art. 2º-A. (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O exercício da pesca artesanal profissional ininterrupta de que\nO exercício da pesca artesanal profissional ininterrupta de que\ntrata o inciso III do\ncaput\nserá comprovado mediante:\n(Parágrafo\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- o pagamento de contribuições previdenciárias, nos termos do\ndisposto na Lei nº 8.212, de 24 de julho de 1991, no período de que\ntrata o art. 1º, § 1º; e\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\nII\n- a apresentação ao Ministério da Pesca e Aquicultura de Relatório\nde Exercício da Atividade Pesqueira referente ao período de que\ntrata o art. 1º, § 1º.\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 1º O exercício da pesca artesanal profissional ininterrupta de que O exercício da pesca artesanal profissional ininterrupta de que trata o inciso III do caput será comprovado mediante: (Parágrafo com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - o pagamento de contribuições previdenciárias, nos termos do disposto na Lei nº 8.212, de 24 de julho de 1991, no período de que trata o art. 1º, § 1º; e (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025) II - a apresentação ao Ministério da Pesca e Aquicultura de Relatório de Exercício da Atividade Pesqueira referente ao período de que trata o art. 1º, § 1º. (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º\n(Revogado\npelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 2º (Revogado pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º\n(Revogado\npelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 3º (Revogado pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º A exigência de que trata o inciso VI do\nA exigência de que trata o inciso VI do\ncaput\nserá cumprida nos termos do disposto no art. 1º da Lei nº 15.077,\nde 27 de dezembro de 2024, e no art. 2º, § 2º, e no art. 3º do\nDecreto nº 12.561, de 23 de julho de 2025.\n(Parágrafo\nacrescido pelo Decreto nº 12.800, de 26/12/2025)",
+        "normalized_text": "§ 4º A exigência de que trata o inciso VI do A exigência de que trata o inciso VI do caput será cumprida nos termos do disposto no art. 1º da Lei nº 15.077, de 27 de dezembro de 2024, e no art. 2º, § 2º, e no art. 3º do Decreto nº 12.561, de 23 de julho de 2025. (Parágrafo acrescido pelo Decreto nº 12.800, de 26/12/2025)"
+      }
+    },
+    "Art. 2-A": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A concessão do benefício de seguro-desemprego de que trata\neste Decreto ao pescador profissional que exerce a atividade\npesqueira de forma artesanal somente ocorrerá após a homologação\ndo seu registro no RGP.",
+        "normalized_text": "A concessão do benefício de seguro-desemprego de que trata este Decreto ao pescador profissional que exerce a atividade pesqueira de forma artesanal somente ocorrerá após a homologação do seu registro no RGP."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A homologação de que trata o\nA homologação de que trata o\ncaput\nserá solicitada à autoridade municipal ou distrital competente da\nlocalidade constante do RGP.",
+        "normalized_text": "§ 1º A homologação de que trata o A homologação de que trata o caput será solicitada à autoridade municipal ou distrital competente da localidade constante do RGP."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O procedimento de homologação abrangerá as atividades de\nO procedimento de homologação abrangerá as atividades de\nrevisão e averiguação das informações apresentadas pelo\ninteressado com a finalidade de obter o registro no RGP.",
+        "normalized_text": "§ 2º O procedimento de homologação abrangerá as atividades de O procedimento de homologação abrangerá as atividades de revisão e averiguação das informações apresentadas pelo interessado com a finalidade de obter o registro no RGP."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º No exercício das atividades de que trata o § 2º, a autoridade\nNo exercício das atividades de que trata o § 2º, a autoridade\ncompetente poderá notificar o interessado para apresentar\nesclarecimentos ou documentação complementar necessários à\ncomprovação do cumprimento dos requisitos para obtenção do\nregistro no RGP.",
+        "normalized_text": "§ 3º No exercício das atividades de que trata o § 2º, a autoridade No exercício das atividades de que trata o § 2º, a autoridade competente poderá notificar o interessado para apresentar esclarecimentos ou documentação complementar necessários à comprovação do cumprimento dos requisitos para obtenção do registro no RGP."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Caso a autoridade competente, após a homologação de que trata\nCaso a autoridade competente, após a homologação de que trata\no\ncaput\n,\nconstate a existência de fraude, irregularidade ou erro material,\ndeverá comunicar o fato ao Ministério da Pesca e Aquicultura e ao\nINSS para adoção das providências cabíveis.",
+        "normalized_text": "§ 4º Caso a autoridade competente, após a homologação de que trata Caso a autoridade competente, após a homologação de que trata o caput , constate a existência de fraude, irregularidade ou erro material, deverá comunicar o fato ao Ministério da Pesca e Aquicultura e ao INSS para adoção das providências cabíveis."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º A homologação de que trata o\nA homologação de que trata o\ncaput\nserá válida pelo prazo de um ano, contado da data de deferimento do\npedido de homologação pela autoridade competente.",
+        "normalized_text": "§ 5º A homologação de que trata o A homologação de que trata o caput será válida pelo prazo de um ano, contado da data de deferimento do pedido de homologação pela autoridade competente."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º O Ministério da Pesca e Aquicultura poderá editar normas\nO Ministério da Pesca e Aquicultura poderá editar normas\ncomplementares necessárias à execução do disposto neste artigo.\n(Artigo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 6º O Ministério da Pesca e Aquicultura poderá editar normas O Ministério da Pesca e Aquicultura poderá editar normas complementares necessárias à execução do disposto neste artigo. (Artigo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Cabe ao INSS receber e processar os requerimentos, habilitar os\nbeneficiários e decidir quanto à concessão do benefício de\nseguro-desemprego de que trata o art. 1º.",
+        "normalized_text": "Cabe ao INSS receber e processar os requerimentos, habilitar os beneficiários e decidir quanto à concessão do benefício de seguro-desemprego de que trata o art. 1º."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\n(Revogado\npelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "Parágrafo único. (Revogado pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O seguro-desemprego do pescador profissional artesanal será\nO seguro-desemprego do pescador profissional artesanal será\nconcedido para cada período de defeso, mediante requerimento\napresentado pelo interessado, nos termos do disposto no art. 5º.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 1º O seguro-desemprego do pescador profissional artesanal será O seguro-desemprego do pescador profissional artesanal será concedido para cada período de defeso, mediante requerimento apresentado pelo interessado, nos termos do disposto no art. 5º. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A concessão do seguro-desemprego dependerá da verificação\nA concessão do seguro-desemprego dependerá da verificação\nprévia das informações do beneficiário, por meio de consulta ao\nCadastro Nacional de Informações Sociais - CNIS, ao Cadastro de\nAtividades Econômicas da Pessoa Física - CAEPF e ao Documento de\nArrecadação do eSocial - DAE, sem prejuízo da consulta a outras\nbases e registros governamentais e de outras verificações\nnecessárias à comprovação do cumprimento dos requisitos.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 2º A concessão do seguro-desemprego dependerá da verificação A concessão do seguro-desemprego dependerá da verificação prévia das informações do beneficiário, por meio de consulta ao Cadastro Nacional de Informações Sociais - CNIS, ao Cadastro de Atividades Econômicas da Pessoa Física - CAEPF e ao Documento de Arrecadação do eSocial - DAE, sem prejuízo da consulta a outras bases e registros governamentais e de outras verificações necessárias à comprovação do cumprimento dos requisitos. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O INSS poderá solicitar à Secretaria Especial da Receita\nO INSS poderá solicitar à Secretaria Especial da Receita\nFederal do Brasil do Ministério da Fazenda, nos termos do disposto\nno art. 1º, § 9º, da Lei nº 10.779, de 25 de novembro de 2003, e\nno art. 2º, parágrafo único, da Lei Complementar nº 199, de 1º\nde agosto de 2023, para confirmar a informação fornecida pelo\nbeneficiário do seguro-desemprego de ausência de fonte de renda\ndiversa da decorrente da atividade pesqueira.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 3º O INSS poderá solicitar à Secretaria Especial da Receita O INSS poderá solicitar à Secretaria Especial da Receita Federal do Brasil do Ministério da Fazenda, nos termos do disposto no art. 1º, § 9º, da Lei nº 10.779, de 25 de novembro de 2003, e no art. 2º, parágrafo único, da Lei Complementar nº 199, de 1º de agosto de 2023, para confirmar a informação fornecida pelo beneficiário do seguro-desemprego de ausência de fonte de renda diversa da decorrente da atividade pesqueira. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O INSS analisará riscos de fraudes, de irregularidades ou de\nO INSS analisará riscos de fraudes, de irregularidades ou de\nerros materiais, os quais poderão resultar na notificação do\nbeneficiário para apresentar esclarecimentos ou documentação\ncomplementar.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 4º O INSS analisará riscos de fraudes, de irregularidades ou de O INSS analisará riscos de fraudes, de irregularidades ou de erros materiais, os quais poderão resultar na notificação do beneficiário para apresentar esclarecimentos ou documentação complementar. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O prazo para requerer o benefício do seguro-desemprego do\npescador profissional artesanal se iniciará trinta dias antes da\ndata de início do período de defeso e terminará no último dia do\nreferido período.",
+        "normalized_text": "O prazo para requerer o benefício do seguro-desemprego do pescador profissional artesanal se iniciará trinta dias antes da data de início do período de defeso e terminará no último dia do referido período."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Desde que requerido dentro do prazo previsto no\nDesde que requerido dentro do prazo previsto no\ncaput\n,\no pagamento do benefício será devido desde o início do período de\ndefeso, independentemente da data do requerimento.",
+        "normalized_text": "Parágrafo único. Desde que requerido dentro do prazo previsto no Desde que requerido dentro do prazo previsto no caput , o pagamento do benefício será devido desde o início do período de defeso, independentemente da data do requerimento."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O requerimento do benefício de seguro-desemprego será feito por\nmeio de sistema do INSS, no qual o requerente deverá informar:\n(“Caput”\ndo artigo com redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- documento de identificação oficial;\nII\n- número de inscrição no Cadastro de Pessoas Físicas - CPF;\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "O requerimento do benefício de seguro-desemprego será feito por meio de sistema do INSS, no qual o requerente deverá informar: (“Caput” do artigo com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - documento de identificação oficial; II - número de inscrição no Cadastro de Pessoas Físicas - CPF; (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II-A\nA\n- endereço de residência;\n(Inciso\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\nIII\n-\n(Revogado\npelo Decreto nº 12.527, de 24/6/2025)\nIV\n-\n(Revogado\npelo Decreto nº 12.527, de 24/6/2025)\nV\n- comprovante de residência em Município abrangido pelo ato que\ninstituiu o período de defeso relativo ao benefício requerido, ou\nseus limítrofes.\n(Inciso\ncom redação dada pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "II-A A - endereço de residência; (Inciso acrescido pelo Decreto nº 12.527, de 24/6/2025) III - (Revogado pelo Decreto nº 12.527, de 24/6/2025) IV - (Revogado pelo Decreto nº 12.527, de 24/6/2025) V - comprovante de residência em Município abrangido pelo ato que instituiu o período de defeso relativo ao benefício requerido, ou seus limítrofes. (Inciso com redação dada pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O pescador profissional artesanal assinará declaração de que:\nO pescador profissional artesanal assinará declaração de que:\n(Parágrafo\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- não dispõe de outra fonte de renda;\nII\n- se dedicou à pesca das espécies e nas localidades atingidas pelo\ndefeso, ininterruptamente, no período de que trata o art. 1º, §\n1º; e\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nIII\n- assume responsabilidade civil e criminal por todas as informações\nprestadas para fins da concessão do benefício.",
+        "normalized_text": "§ 1º O pescador profissional artesanal assinará declaração de que: O pescador profissional artesanal assinará declaração de que: (Parágrafo com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - não dispõe de outra fonte de renda; II - se dedicou à pesca das espécies e nas localidades atingidas pelo defeso, ininterruptamente, no período de que trata o art. 1º, § 1º; e (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025) III - assume responsabilidade civil e criminal por todas as informações prestadas para fins da concessão do benefício."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O Ministério da Pesca e Aquicultura disponibilizará ao INSS\nO Ministério da Pesca e Aquicultura disponibilizará ao INSS\ninformações que demonstrem:\n(Parágrafo\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- o exercício ininterrupto da atividade de pesca pelo pescador\nprofissional artesanal, nos termos do disposto no art. 2º, § 1º,\ninciso II; e\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nII\n- os municípios abrangidos pelo período de defeso e os municípios\nlimítrofes.",
+        "normalized_text": "§ 2º O Ministério da Pesca e Aquicultura disponibilizará ao INSS O Ministério da Pesca e Aquicultura disponibilizará ao INSS informações que demonstrem: (Parágrafo com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - o exercício ininterrupto da atividade de pesca pelo pescador profissional artesanal, nos termos do disposto no art. 2º, § 1º, inciso II; e (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025) II - os municípios abrangidos pelo período de defeso e os municípios limítrofes."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Ato do Ministério da Previdência Social poderá exigir outros\nAto do Ministério da Previdência Social poderá exigir outros\ndocumentos para a habilitação do benefício.",
+        "normalized_text": "§ 3º Ato do Ministério da Previdência Social poderá exigir outros Ato do Ministério da Previdência Social poderá exigir outros documentos para a habilitação do benefício."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O INSS poderá expedir atos complementares relativos ao\nO INSS poderá expedir atos complementares relativos ao\nreconhecimento e à manutenção do direito ao benefício, observado\no disposto neste Decreto e no ato de que trata o § 3º.",
+        "normalized_text": "§ 4º O INSS poderá expedir atos complementares relativos ao O INSS poderá expedir atos complementares relativos ao reconhecimento e à manutenção do direito ao benefício, observado o disposto neste Decreto e no ato de que trata o § 3º."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º-A O acesso ao sistema do INSS de que trata o\n-A O acesso ao sistema do INSS de que trata o\ncaput\nserá feito por meio de autenticação biométrica, ressalvadas\nsituações excepcionais estabelecidas em ato do Poder Executivo\nfederal.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 5º-A O acesso ao sistema do INSS de que trata o -A O acesso ao sistema do INSS de que trata o caput será feito por meio de autenticação biométrica, ressalvadas situações excepcionais estabelecidas em ato do Poder Executivo federal. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\nrevogado pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 6º (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e revogado pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º O INSS poderá comunicar o indeferimento ou a existência de\nO INSS poderá comunicar o indeferimento ou a existência de\nqualquer impedimento para a concessão do benefício por meio da\ninternet ou da central de teleatendimento.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 7º O INSS poderá comunicar o indeferimento ou a existência de O INSS poderá comunicar o indeferimento ou a existência de qualquer impedimento para a concessão do benefício por meio da internet ou da central de teleatendimento. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º O INSS poderá, a qualquer tempo, convocar o pescador para\nO INSS poderá, a qualquer tempo, convocar o pescador para\napresentação de documentos comprobatórios referentes aos\nrequisitos do\ncaput\n.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
+        "normalized_text": "§ 8º O INSS poderá, a qualquer tempo, convocar o pescador para O INSS poderá, a qualquer tempo, convocar o pescador para apresentação de documentos comprobatórios referentes aos requisitos do caput . (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O INSS cessará o benefício de seguro-desemprego nas seguintes\nhipóteses:\nI\n- início de atividade remunerada ou de percepção de outra renda\nque seja incompatível com a percepção do benefício;\nII\n- desrespeito ao período de defeso ou a quaisquer proibições\nestabelecidas em normas de defeso;\nIII\n- obtenção de renda proveniente da pesca de espécie alternativa\nnão contemplada no ato que fixar o período de defeso;\nIV\n- suspensão do período de defeso;\nV\n- morte do beneficiário, exceto em relação às parcelas vencidas;\nVI\n- início de percepção de renda proveniente de benefício\nprevidenciário ou assistencial de natureza continuada, exceto:\n(Inciso\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "O INSS cessará o benefício de seguro-desemprego nas seguintes hipóteses: I - início de atividade remunerada ou de percepção de outra renda que seja incompatível com a percepção do benefício; II - desrespeito ao período de defeso ou a quaisquer proibições estabelecidas em normas de defeso; III - obtenção de renda proveniente da pesca de espécie alternativa não contemplada no ato que fixar o período de defeso; IV - suspensão do período de defeso; V - morte do beneficiário, exceto em relação às parcelas vencidas; VI - início de percepção de renda proveniente de benefício previdenciário ou assistencial de natureza continuada, exceto: (Inciso com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/alinea:a",
+        "text": "a)\npensão por morte;\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "a) pensão por morte; (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/alinea:b",
+        "text": "b)\nauxílio-acidente; e\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "b) auxílio-acidente; e (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025)"
+      },
+      "caput/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/alinea:c",
+        "text": "c)\ntransferências de renda de que tratam o art. 6º, parágrafo único,\ne o art. 203,\ncaput\n,\ninciso VI, da Constituição, e o art. 1º,\ncaput\ne § 1º, da Lei nº 10.835, de 8 de janeiro de 2004;\n(Alínea\nacrescida pelo Decreto nº 12.527, de 24/6/2025)\nVII\n- prestação de declaração falsa; ou\nVIII\n- comprovação de fraude.\n1º\nO INSS cessará o pagamento do benefício quando constatar a\nocorrência de hipótese prevista neste artigo ou quando for\ninformado sobre sua ocorrência pelo órgão ou pela entidade pública\ncompetente.\n(Parágrafo\núnico transformado em §1º e com redação dada pelo Decreto nº",
+        "normalized_text": "c) transferências de renda de que tratam o art. 6º, parágrafo único, e o art. 203, caput , inciso VI, da Constituição, e o art. 1º, caput e § 1º, da Lei nº 10.835, de 8 de janeiro de 2004; (Alínea acrescida pelo Decreto nº 12.527, de 24/6/2025) VII - prestação de declaração falsa; ou VIII - comprovação de fraude. 1º O INSS cessará o pagamento do benefício quando constatar a ocorrência de hipótese prevista neste artigo ou quando for informado sobre sua ocorrência pelo órgão ou pela entidade pública competente. (Parágrafo único transformado em §1º e com redação dada pelo Decreto nº"
+      },
+      "caput/alinea:c/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "caput/alinea:c/item:12",
+        "text": "12.527, de 24/6/2025)\n527, de 24/6/2025)",
+        "normalized_text": "12.527, de 24/6/2025) 527, de 24/6/2025)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O processamento e o julgamento dos recursos seguirão o disposto\nO processamento e o julgamento dos recursos seguirão o disposto\nno Regulamento da Previdência Social, aprovado pelo Decreto nº",
+        "normalized_text": "§ 2º O processamento e o julgamento dos recursos seguirão o disposto O processamento e o julgamento dos recursos seguirão o disposto no Regulamento da Previdência Social, aprovado pelo Decreto nº"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais\nO Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais\nRenováveis e o Instituto Chico Mendes de Conservação da\nBiodiversidade disponibilizarão, eletronicamente, ao INSS e ao\nMinistério da Pesca e da Aquicultura, a relação dos autuados por\ninfração ambiental que configure desrespeito ao período de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\nArt.\n6º-A. O Poder Executivo poderá condicionar o recebimento do\nseguro-desemprego, durante o período de defeso, ao pescador\nprofissional artesanal que exerça sua atividade exclusiva, à\ncomprovação da matrícula e da frequência do trabalhador segurado\nem curso de formação inicial e continuada ou de qualificação\nprofissional, com carga horária mínima de cento e sessenta horas,\nnos termos do § 1º do art. 3º da Lei nº 7.998, de 11 de janeiro\nde 1990.\n(Artigo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nArt. 7º No caso de indeferimento do requerimento de concessão de\nbenefício ou no caso de cessação do benefício, o pescador\nprofissional artesanal poderá interpor recurso ao Conselho de\nRecursos da Previdência Social - CRPS.",
+        "normalized_text": "§ 3º O Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais O Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis e o Instituto Chico Mendes de Conservação da Biodiversidade disponibilizarão, eletronicamente, ao INSS e ao Ministério da Pesca e da Aquicultura, a relação dos autuados por infração ambiental que configure desrespeito ao período de defeso. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025) Art. 6º-A. O Poder Executivo poderá condicionar o recebimento do seguro-desemprego, durante o período de defeso, ao pescador profissional artesanal que exerça sua atividade exclusiva, à comprovação da matrícula e da frequência do trabalhador segurado em curso de formação inicial e continuada ou de qualificação profissional, com carga horária mínima de cento e sessenta horas, nos termos do § 1º do art. 3º da Lei nº 7.998, de 11 de janeiro de 1990. (Artigo acrescido pelo Decreto nº 8.967, de 23/1/2017) Art. 7º No caso de indeferimento do requerimento de concessão de benefício ou no caso de cessação do benefício, o pescador profissional artesanal poderá interpor recurso ao Conselho de Recursos da Previdência Social - CRPS."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O prazo para interposição de recurso e para oferecimento de\nO prazo para interposição de recurso e para oferecimento de\ncontrarrazões será de trinta dias, contado da ciência da decisão\ne da interposição do recurso, respectivamente.",
+        "normalized_text": "§ 1º O prazo para interposição de recurso e para oferecimento de O prazo para interposição de recurso e para oferecimento de contrarrazões será de trinta dias, contado da ciência da decisão e da interposição do recurso, respectivamente."
+      },
+      "paragrafo:2/item:3": {
+        "device_type": "item",
+        "device_label": "item 3",
+        "device_path": "paragrafo:2/item:3",
+        "text": "3.048, de 1999, e no regimento interno do CRPS.\n048, de 1999, e no regimento interno do CRPS.",
+        "normalized_text": "3.048, de 1999, e no regimento interno do CRPS. 048, de 1999, e no regimento interno do CRPS."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os recursos financeiros para o pagamento do benefício de\nseguro-desemprego ao pescador profissional artesanal serão\nprovenientes do Fundo de Amparo ao Trabalhador - FAT.",
+        "normalized_text": "Os recursos financeiros para o pagamento do benefício de seguro-desemprego ao pescador profissional artesanal serão provenientes do Fundo de Amparo ao Trabalhador - FAT."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Compete ao Conselho Deliberativo do Fundo de Amparo ao\nCompete ao Conselho Deliberativo do Fundo de Amparo ao\nTrabalhador - Codefat a gestão do pagamento dos benefícios e ao\nMinistério do Trabalho e Emprego a sua operacionalização, cabendo\naos referidos órgãos a edição dos atos necessários a essas\natividades.",
+        "normalized_text": "§ 1º Compete ao Conselho Deliberativo do Fundo de Amparo ao Compete ao Conselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat a gestão do pagamento dos benefícios e ao Ministério do Trabalho e Emprego a sua operacionalização, cabendo aos referidos órgãos a edição dos atos necessários a essas atividades."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O INSS disponibilizará ao Ministério do Trabalho e Emprego as\nO INSS disponibilizará ao Ministério do Trabalho e Emprego as\ninformações necessárias para a efetivação do pagamento.",
+        "normalized_text": "§ 2º O INSS disponibilizará ao Ministério do Trabalho e Emprego as O INSS disponibilizará ao Ministério do Trabalho e Emprego as informações necessárias para a efetivação do pagamento."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O Ministério do Trabalho e Emprego disponibilizará ao INSS e\nO Ministério do Trabalho e Emprego disponibilizará ao INSS e\naos órgãos de que trata o § 3º do art. 2º as informações\nreferentes à realização dos pagamentos aos beneficiários.",
+        "normalized_text": "§ 3º O Ministério do Trabalho e Emprego disponibilizará ao INSS e O Ministério do Trabalho e Emprego disponibilizará ao INSS e aos órgãos de que trata o § 3º do art. 2º as informações referentes à realização dos pagamentos aos beneficiários."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O Ministério do Trabalho e Emprego e o INSS prestarão aos\nO Ministério do Trabalho e Emprego e o INSS prestarão aos\ninteressados informações relativas ao pagamento dos benefícios em\nseus próprios canais de atendimento.",
+        "normalized_text": "§ 4º O Ministério do Trabalho e Emprego e o INSS prestarão aos O Ministério do Trabalho e Emprego e o INSS prestarão aos interessados informações relativas ao pagamento dos benefícios em seus próprios canais de atendimento."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Regulamento da Previdência Social, aprovado pelo Decreto nº",
+        "normalized_text": "O Regulamento da Previdência Social, aprovado pelo Decreto nº"
+      },
+      "caput/item:3": {
+        "device_type": "item",
+        "device_label": "item 3",
+        "device_path": "caput/item:3",
+        "text": "3.048, de 1999, passa a vigorar com as seguintes alterações:\n048, de 1999, passa a vigorar com as seguintes alterações:\n\"Art.\n9º\n...................................................................................................................\n................................................................................................................................",
+        "normalized_text": "3.048, de 1999, passa a vigorar com as seguintes alterações: 048, de 1999, passa a vigorar com as seguintes alterações: \"Art. 9º ................................................................................................................... ................................................................................................................................"
+      },
+      "paragrafo:14": {
+        "device_type": "paragrafo",
+        "device_label": "§ 14º",
+        "device_path": "paragrafo:14",
+        "text": "§ 14.\n.......................................................................................................................\nI\n- não utilize embarcação; ou\nII\n- utilize embarcação de pequeno porte, nos termos da Lei nº",
+        "normalized_text": "§ 14. ....................................................................................................................... I - não utilize embarcação; ou II - utilize embarcação de pequeno porte, nos termos da Lei nº"
+      },
+      "paragrafo:14/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:14/item:11",
+        "text": "11.959, de 29 de junho de 2009.\n959, de 29 de junho de 2009.",
+        "normalized_text": "11.959, de 29 de junho de 2009. 959, de 29 de junho de 2009."
+      },
+      "paragrafo:15": {
+        "device_type": "paragrafo",
+        "device_label": "§ 15º",
+        "device_path": "paragrafo:15",
+        "text": "§ 15.\n.......................................................................................................................\n................................................................................................................................\nXI\n- o pescador que trabalha em regime de parceria, meação ou\narrendamento, em embarcação de médio ou grande porte, nos termos\nda Lei nº 11.959, de 2009;\n....................................................................................................................\"\n(NR)",
+        "normalized_text": "§ 15. ....................................................................................................................... ................................................................................................................................ XI - o pescador que trabalha em regime de parceria, meação ou arrendamento, em embarcação de médio ou grande porte, nos termos da Lei nº 11.959, de 2009; ....................................................................................................................\" (NR)"
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "(Declarado\nrevogado pelo Decreto nº 10.930, de 7/1/2022, publicado na Edição\nExtra A do DOU de 7/1/2022, em vigor 30 dias após a publicação)",
+        "normalized_text": "(Declarado revogado pelo Decreto nº 10.930, de 7/1/2022, publicado na Edição Extra A do DOU de 7/1/2022, em vigor 30 dias após a publicação)"
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Atos conjuntos dos Ministérios da Previdência Social, do\nTrabalho e Emprego e da Pesca e Aquicultura e de outros órgãos\ninteressados estabelecerão os procedimentos e prazos para\noperacionalização das trocas de informações previstas neste\nDecreto.",
+        "normalized_text": "Atos conjuntos dos Ministérios da Previdência Social, do Trabalho e Emprego e da Pesca e Aquicultura e de outros órgãos interessados estabelecerão os procedimentos e prazos para operacionalização das trocas de informações previstas neste Decreto."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto aplica-se aos períodos de defeso iniciados a partir\nde 1º de abril de 2015.",
+        "normalized_text": "Este Decreto aplica-se aos períodos de defeso iniciados a partir de 1º de abril de 2015."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Aos períodos de defeso iniciados até 31 de março de 2015,\nAos períodos de defeso iniciados até 31 de março de 2015,\naplica-se o disposto na legislação anterior, inclusive quanto aos\nprazos, procedimentos e recursos e à competência do Ministério do\nTrabalho e Emprego para as atividades de recebimento e processamento\ndos requerimentos, habilitação dos beneficiários e apuração de\nirregularidades.",
+        "normalized_text": "Parágrafo único. Aos períodos de defeso iniciados até 31 de março de 2015, Aos períodos de defeso iniciados até 31 de março de 2015, aplica-se o disposto na legislação anterior, inclusive quanto aos prazos, procedimentos e recursos e à competência do Ministério do Trabalho e Emprego para as atividades de recebimento e processamento dos requerimentos, habilitação dos beneficiários e apuração de irregularidades."
+      }
+    },
+    "Art. 13": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ficam revogados o inciso III do § 14 e o § 17 do art. 9º do\nRegulamento da Previdência Social, aprovado pelo Decreto nº 3.048,\nde 6 de maio de 1999.",
+        "normalized_text": "Ficam revogados o inciso III do § 14 e o § 17 do art. 9º do Regulamento da Previdência Social, aprovado pelo Decreto nº 3.048, de 6 de maio de 1999."
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Este Decreto entra em vigor na data de sua publicação.\nBrasília,\n31 de março de 2015; 194º da Independência e 127º da República.\nDILMA\nROUSSEFF\nManoel\nDias\nCarlos\nEduardo Gabas\nTereza\nCampello\nHelder\nBarbalho",
+        "normalized_text": "Este Decreto entra em vigor na data de sua publicação. Brasília, 31 de março de 2015; 194º da Independência e 127º da República. DILMA ROUSSEFF Manoel Dias Carlos Eduardo Gabas Tereza Campello Helder Barbalho"
+      }
+    }
   }
 }

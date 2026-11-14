@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -15,5 +15,140 @@
     "Art. 5": "Art. 5º O Ministério da Saúde, o INSS e a Secretaria Especial dos\nDireitos Humanos da Presidência da República poderão celebrar\nconvênios, acordos, ajustes ou outros instrumentos que objetivem a\ncooperação com órgãos da administração pública e entidades\nprivadas sem fins lucrativos, a fim de dar cumprimento ao disposto\nnesta Lei.",
     "Art. 6": "Art. 6º As despesas decorrentes desta Lei correrão à conta do Tesouro\nNacional e constarão de programação orçamentária específica no\norçamento do Ministério da Previdência Social.",
     "Art. 7": "Art. 7º Esta Lei entra em vigor na data de sua publicação.\nCongresso\nNacional, em 18 de setembro de 2007; 186º da Independência e 119º\nda República.\nSenador\nRENAN CALHEIROS\nPresidente\nda Mesa do Congresso Nacional"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica o Poder Executivo autorizado a conceder pensão especial\nmensal, vitalícia e intransferível às pessoas atingidas pela\nhanseníase que foram compulsoriamente submetidas, até 31 de\ndezembro de 1986, a isolamento, domiciliar ou em seringais, ou a\ninternação em hospitais-colônia, que a requererem, a título de\nindenização especial, não inferior ao salário mínimo nacional\nvigente.\n(“Caput”\ndo artigo com redação dada pela Lei nº 14.736, de 24/11/2023)",
+        "normalized_text": "Fica o Poder Executivo autorizado a conceder pensão especial mensal, vitalícia e intransferível às pessoas atingidas pela hanseníase que foram compulsoriamente submetidas, até 31 de dezembro de 1986, a isolamento, domiciliar ou em seringais, ou a internação em hospitais-colônia, que a requererem, a título de indenização especial, não inferior ao salário mínimo nacional vigente. (“Caput” do artigo com redação dada pela Lei nº 14.736, de 24/11/2023)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A pensão especial de que trata o\nA pensão especial de que trata o\ncaput\né personalíssima, não sendo transmissível a dependentes e\nherdeiros, e será devida a partir da entrada em vigor desta Lei.",
+        "normalized_text": "§ 1º A pensão especial de que trata o A pensão especial de que trata o caput é personalíssima, não sendo transmissível a dependentes e herdeiros, e será devida a partir da entrada em vigor desta Lei."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O valor da pensão especial será reajustado anualmente, conforme\nO valor da pensão especial será reajustado anualmente, conforme\nos índices concedidos aos benefícios de valor superior ao piso do\nRegime Geral de Previdência Social.",
+        "normalized_text": "§ 2º O valor da pensão especial será reajustado anualmente, conforme O valor da pensão especial será reajustado anualmente, conforme os índices concedidos aos benefícios de valor superior ao piso do Regime Geral de Previdência Social."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O requerimento referido no\nO requerimento referido no\ncaput\nserá endereçado ao Secretário Especial dos Direitos Humanos da\nPresidência da República, nos termos do regulamento.",
+        "normalized_text": "§ 3º O requerimento referido no O requerimento referido no caput será endereçado ao Secretário Especial dos Direitos Humanos da Presidência da República, nos termos do regulamento."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Caberá ao Instituto Nacional do Seguro Social - INSS o\nCaberá ao Instituto Nacional do Seguro Social - INSS o\nprocessamento, a manutenção e o pagamento da pensão, observado o\nart. 6º.\nArt.\n1º-A. Fica o Poder Executivo autorizado a conceder pensão especial\nmensal, vitalícia e intransferível aos filhos que foram separados\ndos genitores em razão do isolamento ou da internação destes, nas\ncondições estabelecidas no art. 1º desta Lei, que a requererem, a\ntítulo de indenização especial, não inferior ao salário mínimo\nnacional vigente.",
+        "normalized_text": "§ 4º Caberá ao Instituto Nacional do Seguro Social - INSS o Caberá ao Instituto Nacional do Seguro Social - INSS o processamento, a manutenção e o pagamento da pensão, observado o art. 6º. Art. 1º-A. Fica o Poder Executivo autorizado a conceder pensão especial mensal, vitalícia e intransferível aos filhos que foram separados dos genitores em razão do isolamento ou da internação destes, nas condições estabelecidas no art. 1º desta Lei, que a requererem, a título de indenização especial, não inferior ao salário mínimo nacional vigente."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O benefício de que trata o\nO benefício de que trata o\ncaput\ndeste artigo somente será devido a partir do requerimento do\ninteressado e não produzirá efeitos retroativos.\n(Artigo\nacrescido pela Lei nº 14.736, de 24/11/2023)",
+        "normalized_text": "Parágrafo único. O benefício de que trata o O benefício de que trata o caput deste artigo somente será devido a partir do requerimento do interessado e não produzirá efeitos retroativos. (Artigo acrescido pela Lei nº 14.736, de 24/11/2023)"
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão de que trata o art. 1º será concedida por meio de ato\ndo Secretário Especial dos Direitos Humanos da Presidência da\nRepública, após parecer da Comissão referida no § 1º.",
+        "normalized_text": "A pensão de que trata o art. 1º será concedida por meio de ato do Secretário Especial dos Direitos Humanos da Presidência da República, após parecer da Comissão referida no § 1º."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Fica criada a Comissão Interministerial de Avaliação, com a\nFica criada a Comissão Interministerial de Avaliação, com a\natribuição de emitir parecer prévio sobre os requerimentos\nformulados com base no art. 1º, cuja composição, organização e\nfuncionamento serão definidos em regulamento.",
+        "normalized_text": "§ 1º Fica criada a Comissão Interministerial de Avaliação, com a Fica criada a Comissão Interministerial de Avaliação, com a atribuição de emitir parecer prévio sobre os requerimentos formulados com base no art. 1º, cuja composição, organização e funcionamento serão definidos em regulamento."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Para a comprovação da situação do requerente, será admitida\nPara a comprovação da situação do requerente, será admitida\na ampla produção de prova documental e testemunhal, e, caso\nnecessário, prova pericial.",
+        "normalized_text": "§ 2º Para a comprovação da situação do requerente, será admitida Para a comprovação da situação do requerente, será admitida a ampla produção de prova documental e testemunhal, e, caso necessário, prova pericial."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Na realização de suas atividades, a Comissão poderá promover\nNa realização de suas atividades, a Comissão poderá promover\nas diligências que julgar convenientes, inclusive solicitar apoio\ntécnico, documentos, pareceres e informações de órgãos da\nadministração pública, assim como colher depoimentos de terceiros.",
+        "normalized_text": "§ 3º Na realização de suas atividades, a Comissão poderá promover Na realização de suas atividades, a Comissão poderá promover as diligências que julgar convenientes, inclusive solicitar apoio técnico, documentos, pareceres e informações de órgãos da administração pública, assim como colher depoimentos de terceiros."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º As despesas referentes a diárias e passagens dos membros da\nAs despesas referentes a diárias e passagens dos membros da\nComissão correrão à conta das dotações orçamentárias dos\nórgãos a que pertencerem.",
+        "normalized_text": "§ 4º As despesas referentes a diárias e passagens dos membros da As despesas referentes a diárias e passagens dos membros da Comissão correrão à conta das dotações orçamentárias dos órgãos a que pertencerem."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A pensão especial de que trata esta Lei, ressalvado o direito à\nopção, não é acumulável com indenizações que a União venha a\npagar decorrentes de responsabilização civil sobre os mesmos fatos.",
+        "normalized_text": "A pensão especial de que trata esta Lei, ressalvado o direito à opção, não é acumulável com indenizações que a União venha a pagar decorrentes de responsabilização civil sobre os mesmos fatos."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O recebimento da pensão especial não impede a fruição de\nO recebimento da pensão especial não impede a fruição de\nqualquer benefício previdenciário.",
+        "normalized_text": "Parágrafo único. O recebimento da pensão especial não impede a fruição de O recebimento da pensão especial não impede a fruição de qualquer benefício previdenciário."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Ministério da Saúde, em articulação com os sistemas de\nsaúde dos Estados e Municípios, implementará ações específicas\nem favor dos beneficiários da pensão especial de que trata esta\nLei, voltadas à garantia de fornecimento de órteses, próteses e\ndemais ajudas técnicas, bem como na realização de intervenções\ncirúrgicas e assistência à saúde por meio do Sistema Único de\nSaúde - SUS.",
+        "normalized_text": "O Ministério da Saúde, em articulação com os sistemas de saúde dos Estados e Municípios, implementará ações específicas em favor dos beneficiários da pensão especial de que trata esta Lei, voltadas à garantia de fornecimento de órteses, próteses e demais ajudas técnicas, bem como na realização de intervenções cirúrgicas e assistência à saúde por meio do Sistema Único de Saúde - SUS."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Ministério da Saúde, o INSS e a Secretaria Especial dos\nDireitos Humanos da Presidência da República poderão celebrar\nconvênios, acordos, ajustes ou outros instrumentos que objetivem a\ncooperação com órgãos da administração pública e entidades\nprivadas sem fins lucrativos, a fim de dar cumprimento ao disposto\nnesta Lei.",
+        "normalized_text": "O Ministério da Saúde, o INSS e a Secretaria Especial dos Direitos Humanos da Presidência da República poderão celebrar convênios, acordos, ajustes ou outros instrumentos que objetivem a cooperação com órgãos da administração pública e entidades privadas sem fins lucrativos, a fim de dar cumprimento ao disposto nesta Lei."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As despesas decorrentes desta Lei correrão à conta do Tesouro\nNacional e constarão de programação orçamentária específica no\norçamento do Ministério da Previdência Social.",
+        "normalized_text": "As despesas decorrentes desta Lei correrão à conta do Tesouro Nacional e constarão de programação orçamentária específica no orçamento do Ministério da Previdência Social."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.\nCongresso\nNacional, em 18 de setembro de 2007; 186º da Independência e 119º\nda República.\nSenador\nRENAN CALHEIROS\nPresidente\nda Mesa do Congresso Nacional",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação. Congresso Nacional, em 18 de setembro de 2007; 186º da Independência e 119º da República. Senador RENAN CALHEIROS Presidente da Mesa do Congresso Nacional"
+      }
+    }
   }
 }

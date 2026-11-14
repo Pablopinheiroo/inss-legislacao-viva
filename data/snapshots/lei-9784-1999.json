@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -77,5 +77,1062 @@
     "Art. 68": "Art. 68 As sanções, a serem aplicadas por autoridade competente, terão\nnatureza pecuniária ou consistirão em obrigação de fazer ou de\nnão fazer, assegurado sempre o direito de defesa.\nCAPÍTULO\nXVIII\nDAS\nDISPOSIÇÕES FINAIS",
     "Art. 69": "Art. 69 Os processos administrativos específicos continuarão a reger-se\npor lei própria, aplicando-se-lhes apenas subsidiariamente os\npreceitos desta Lei.\nArt.\n69-A. Terão prioridade na tramitação, em qualquer órgão ou\ninstância, os procedimentos administrativos em que figure como parte\nou interessado:\nI\n- pessoa com idade igual ou superior a 60 (sessenta) anos;\nII\n- pessoa portadora de deficiência, física ou mental;\nIII\n- (VETADO)\nIV\n- pessoa portadora de tuberculose ativa, esclerose múltipla,\nneoplasia maligna, hanseníase, paralisia irreversível e\nincapacitante, cardiopatia grave, doença de Parkinson,\nespondiloartrose anquilosante, nefropatia grave, hepatopatia grave,\nestados avançados da doença de Paget (osteíte deformante),\ncontaminação por radiação, síndrome de imunodeficiência\nadquirida, ou outra doença grave, com base em conclusão da medicina\nespecializada, mesmo que a doença tenha sido contraída após o\ninício do processo.\n§\n1º A pessoa interessada na obtenção do benefício, juntando prova\nde sua condição, deverá requerê-lo à autoridade administrativa\ncompetente, que determinará as providências a serem cumpridas.\n§\n2º Deferida a prioridade, os autos receberão identificação\nprópria que evidencie o regime de tramitação prioritária.\n§\n3º (VETADO)\n§\n4º (VETADO)\n(Artigo\nacrescido pela Lei nº 12.008, de 29/7/2009)",
     "Art. 70": "Art. 70 Esta Lei entra em vigor na data de sua publicação.\nBrasília\n29 de janeiro de 1999; 178º da Independência e 111º da República.\nFERNANDO\nHENRIQUE CARDOSO\nRenan\nCalheiros\nPaulo\nPaiva"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei estabelece normas básicas sobre o processo\nadministrativo no âmbito da Administração Federal direta e\nindireta, visando, em especial, à proteção dos direitos dos\nadministrados e ao melhor cumprimento dos fins da Administração.",
+        "normalized_text": "Esta Lei estabelece normas básicas sobre o processo administrativo no âmbito da Administração Federal direta e indireta, visando, em especial, à proteção dos direitos dos administrados e ao melhor cumprimento dos fins da Administração."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os preceitos desta Lei também se aplicam aos órgãos dos\nOs preceitos desta Lei também se aplicam aos órgãos dos\nPoderes Legislativo e Judiciário da União, quando no desempenho de\nfunção administrativa.",
+        "normalized_text": "§ 1º Os preceitos desta Lei também se aplicam aos órgãos dos Os preceitos desta Lei também se aplicam aos órgãos dos Poderes Legislativo e Judiciário da União, quando no desempenho de função administrativa."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Para os fins desta Lei, consideram-se:\nPara os fins desta Lei, consideram-se:\nI\n- órgão - a unidade de atuação integrante da estrutura da\nAdministração direta e da estrutura da Administração indireta;\nII\n- entidade - a unidade de atuação dotada de personalidade jurídica;\nIII\n- autoridade - o servidor ou agente público dotado de poder de\ndecisão.",
+        "normalized_text": "§ 2º Para os fins desta Lei, consideram-se: Para os fins desta Lei, consideram-se: I - órgão - a unidade de atuação integrante da estrutura da Administração direta e da estrutura da Administração indireta; II - entidade - a unidade de atuação dotada de personalidade jurídica; III - autoridade - o servidor ou agente público dotado de poder de decisão."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Administração Pública obedecerá, dentre outros, aos\nprincípios da legalidade, finalidade, motivação, razoabilidade,\nproporcionalidade, moralidade, ampla defesa, contraditório,\nsegurança jurídica, interesse público e eficiência.",
+        "normalized_text": "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Nos processos administrativos serão observados, entre\nNos processos administrativos serão observados, entre\noutros, os critérios de:\nI\n- atuação conforme a lei e o Direito;\nII\n- atendimento a fins de interesse geral, vedada a renúncia total ou\nparcial de poderes ou competências, salvo autorização em lei;\nIII\n- objetividade no atendimento do interesse público, vedada a\npromoção pessoal de agentes ou autoridades;\nIV\n- atuação segundo padrões éticos de probidade, decoro e boa-fé;\nV\n- divulgação oficial dos atos administrativos, ressalvadas as\nhipóteses de sigilo previstas na Constituição;\nVI\n- adequação entre meios e fins, vedada a imposição de obrigações,\nrestrições e sanções em medida superior àquelas estritamente\nnecessárias ao atendimento do interesse público;\nVII\n- indicação dos pressupostos de fato e de direito que determinarem\na decisão;\nVIII\n- observância das formalidades essenciais à garantia dos direitos\ndos administrados;\nIX\n- adoção de formas simples, suficientes para propiciar adequado\ngrau de certeza, segurança e respeito aos direitos dos\nadministrados;\nX\n- garantia dos direitos à comunicação, à apresentação de\nalegações finais, à produção de provas e à interposição de\nrecursos, nos processos de que possam resultar sanções e nas\nsituações de litígio;\nXI\n- proibição de cobrança de despesas processuais, ressalvadas as\nprevistas em lei;\nXII\n- impulsão, de ofício, do processo administrativo, sem prejuízo da\natuação dos interessados;\nXIII\n- interpretação da norma administrativa da forma que melhor garanta\no atendimento do fim público a que se dirige, vedada aplicação\nretroativa de nova interpretação.\nCAPÍTULO II\nDOS DIREITOS\nDOS ADMINISTRADOS",
+        "normalized_text": "Parágrafo único. Nos processos administrativos serão observados, entre Nos processos administrativos serão observados, entre outros, os critérios de: I - atuação conforme a lei e o Direito; II - atendimento a fins de interesse geral, vedada a renúncia total ou parcial de poderes ou competências, salvo autorização em lei; III - objetividade no atendimento do interesse público, vedada a promoção pessoal de agentes ou autoridades; IV - atuação segundo padrões éticos de probidade, decoro e boa-fé; V - divulgação oficial dos atos administrativos, ressalvadas as hipóteses de sigilo previstas na Constituição; VI - adequação entre meios e fins, vedada a imposição de obrigações, restrições e sanções em medida superior àquelas estritamente necessárias ao atendimento do interesse público; VII - indicação dos pressupostos de fato e de direito que determinarem a decisão; VIII - observância das formalidades essenciais à garantia dos direitos dos administrados; IX - adoção de formas simples, suficientes para propiciar adequado grau de certeza, segurança e respeito aos direitos dos administrados; X - garantia dos direitos à comunicação, à apresentação de alegações finais, à produção de provas e à interposição de recursos, nos processos de que possam resultar sanções e nas situações de litígio; XI - proibição de cobrança de despesas processuais, ressalvadas as previstas em lei; XII - impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados; XIII - interpretação da norma administrativa da forma que melhor garanta o atendimento do fim público a que se dirige, vedada aplicação retroativa de nova interpretação. CAPÍTULO II DOS DIREITOS DOS ADMINISTRADOS"
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O administrado tem os seguintes direitos perante a Administração,\nsem prejuízo de outros que lhe sejam assegurados:\nI\n- ser tratado com respeito pelas autoridades e servidores, que\ndeverão facilitar o exercício de seus direitos e o cumprimento de\nsuas obrigações;\nII\n- ter ciência da tramitação dos processos administrativos em que\ntenha a condição de interessado, ter vista dos autos, obter cópias\nde documentos neles contidos e conhecer as decisões proferidas;\nIII\n- formular alegações e apresentar documentos antes da decisão, os\nquais serão objeto de consideração pelo órgão competente;\nIV\n- fazer-se assistir, facultativamente, por advogado, salvo quando\nobrigatória a representação, por força de lei.\nCAPÍTULO\nIII\nDOS DEVERES\nDO ADMINISTRADO",
+        "normalized_text": "O administrado tem os seguintes direitos perante a Administração, sem prejuízo de outros que lhe sejam assegurados: I - ser tratado com respeito pelas autoridades e servidores, que deverão facilitar o exercício de seus direitos e o cumprimento de suas obrigações; II - ter ciência da tramitação dos processos administrativos em que tenha a condição de interessado, ter vista dos autos, obter cópias de documentos neles contidos e conhecer as decisões proferidas; III - formular alegações e apresentar documentos antes da decisão, os quais serão objeto de consideração pelo órgão competente; IV - fazer-se assistir, facultativamente, por advogado, salvo quando obrigatória a representação, por força de lei. CAPÍTULO III DOS DEVERES DO ADMINISTRADO"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "São deveres do administrado perante a Administração, sem\nprejuízo de outros previstos em ato normativo:\nI\n- expor os fatos conforme a verdade;\nII\n- proceder com lealdade, urbanidade e boa-fé;\nIII\n- não agir de modo temerário;\nIV\n- prestar as informações que lhe forem solicitadas e colaborar para\no esclarecimento dos fatos.\nCAPÍTULO IV\nDO INÍCIO\nDO PROCESSO",
+        "normalized_text": "São deveres do administrado perante a Administração, sem prejuízo de outros previstos em ato normativo: I - expor os fatos conforme a verdade; II - proceder com lealdade, urbanidade e boa-fé; III - não agir de modo temerário; IV - prestar as informações que lhe forem solicitadas e colaborar para o esclarecimento dos fatos. CAPÍTULO IV DO INÍCIO DO PROCESSO"
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O processo administrativo pode iniciar-se de ofício ou a pedido\nde interessado.",
+        "normalized_text": "O processo administrativo pode iniciar-se de ofício ou a pedido de interessado."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O requerimento inicial do interessado, salvo casos em que for\nadmitida solicitação oral, deve ser formulado por escrito e conter\nos seguintes dados:\nI\n- órgão ou autoridade administrativa a que se dirige;\nII\n- identificação do interessado ou de quem o represente;\nIII\n- domicílio do requerente ou local para recebimento de comunicações;\nIV\n- formulação do pedido, com exposição dos fatos e de seus\nfundamentos;\nV\n- data e assinatura do requerente ou de seu representante.",
+        "normalized_text": "O requerimento inicial do interessado, salvo casos em que for admitida solicitação oral, deve ser formulado por escrito e conter os seguintes dados: I - órgão ou autoridade administrativa a que se dirige; II - identificação do interessado ou de quem o represente; III - domicílio do requerente ou local para recebimento de comunicações; IV - formulação do pedido, com exposição dos fatos e de seus fundamentos; V - data e assinatura do requerente ou de seu representante."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. É vedada à Administração a recusa imotivada de\nÉ vedada à Administração a recusa imotivada de\nrecebimento de documentos, devendo o servidor orientar o interessado\nquanto ao suprimento de eventuais falhas.",
+        "normalized_text": "Parágrafo único. É vedada à Administração a recusa imotivada de É vedada à Administração a recusa imotivada de recebimento de documentos, devendo o servidor orientar o interessado quanto ao suprimento de eventuais falhas."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os órgãos e entidades administrativas deverão elaborar modelos\nou formulários padronizados para assuntos que importem pretensões\nequivalentes.",
+        "normalized_text": "Os órgãos e entidades administrativas deverão elaborar modelos ou formulários padronizados para assuntos que importem pretensões equivalentes."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando os pedidos de uma pluralidade de interessados tiverem\nconteúdo e fundamentos idênticos, poderão ser formulados em um\núnico requerimento, salvo preceito legal em contrário.\nCAPÍTULO V\nDOS\nINTERESSADOS",
+        "normalized_text": "Quando os pedidos de uma pluralidade de interessados tiverem conteúdo e fundamentos idênticos, poderão ser formulados em um único requerimento, salvo preceito legal em contrário. CAPÍTULO V DOS INTERESSADOS"
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "São legitimados como interessados no processo administrativo:\nI\n- pessoas físicas ou jurídicas que o iniciem como titulares de\ndireitos ou interesses individuais ou no exercício do direito de\nrepresentação;\nII\n- aqueles que, sem terem iniciado o processo, têm direitos ou\ninteresses que possam ser afetados pela decisão a ser adotada;\nIII\n- as organizações e associações representativas, no tocante a\ndireitos e interesses coletivos;\nIV\n- as pessoas ou as associações legalmente constituídas quanto a\ndireitos ou interesses difusos.",
+        "normalized_text": "São legitimados como interessados no processo administrativo: I - pessoas físicas ou jurídicas que o iniciem como titulares de direitos ou interesses individuais ou no exercício do direito de representação; II - aqueles que, sem terem iniciado o processo, têm direitos ou interesses que possam ser afetados pela decisão a ser adotada; III - as organizações e associações representativas, no tocante a direitos e interesses coletivos; IV - as pessoas ou as associações legalmente constituídas quanto a direitos ou interesses difusos."
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "São capazes, para fins de processo administrativo, os maiores de\ndezoito anos, ressalvada previsão especial em ato normativo próprio.\nCAPÍTULO VI\nDA\nCOMPETÊNCIA",
+        "normalized_text": "São capazes, para fins de processo administrativo, os maiores de dezoito anos, ressalvada previsão especial em ato normativo próprio. CAPÍTULO VI DA COMPETÊNCIA"
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A competência é irrenunciável e se exerce pelos órgãos\nadministrativos a que foi atribuída como própria, salvo os casos de\ndelegação e avocação legalmente admitidos.",
+        "normalized_text": "A competência é irrenunciável e se exerce pelos órgãos administrativos a que foi atribuída como própria, salvo os casos de delegação e avocação legalmente admitidos."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Um órgão administrativo e seu titular poderão, se não houver\nimpedimento legal, delegar parte da sua competência a outros órgãos\nou titulares, ainda que estes não lhe sejam hierarquicamente\nsubordinados, quando for conveniente, em razão de circunstâncias de\níndole técnica, social, econômica, jurídica ou territorial.",
+        "normalized_text": "Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O disposto no\nO disposto no\ncaput\ndeste artigo aplica-se à delegação de competência dos órgãos\ncolegiados aos respectivos presidentes.",
+        "normalized_text": "Parágrafo único. O disposto no O disposto no caput deste artigo aplica-se à delegação de competência dos órgãos colegiados aos respectivos presidentes."
+      }
+    },
+    "Art. 13": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Não podem ser objeto de delegação:\nI\n- a edição de atos de caráter normativo;\nII\n- a decisão de recursos administrativos;\nIII\n- as matérias de competência exclusiva do órgão ou autoridade.",
+        "normalized_text": "Não podem ser objeto de delegação: I - a edição de atos de caráter normativo; II - a decisão de recursos administrativos; III - as matérias de competência exclusiva do órgão ou autoridade."
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O ato de delegação e sua revogação deverão ser publicados no\nmeio oficial.",
+        "normalized_text": "O ato de delegação e sua revogação deverão ser publicados no meio oficial."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O ato de delegação especificará as matérias e poderes\nO ato de delegação especificará as matérias e poderes\ntransferidos, os limites da atuação do delegado, a duração e os\nobjetivos da delegação e o recurso cabível, podendo conter\nressalva de exercício da atribuição delegada.",
+        "normalized_text": "§ 1º O ato de delegação especificará as matérias e poderes O ato de delegação especificará as matérias e poderes transferidos, os limites da atuação do delegado, a duração e os objetivos da delegação e o recurso cabível, podendo conter ressalva de exercício da atribuição delegada."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O ato de delegação é revogável a qualquer tempo pela\nO ato de delegação é revogável a qualquer tempo pela\nautoridade delegante.",
+        "normalized_text": "§ 2º O ato de delegação é revogável a qualquer tempo pela O ato de delegação é revogável a qualquer tempo pela autoridade delegante."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º As decisões adotadas por delegação devem mencionar\nAs decisões adotadas por delegação devem mencionar\nexplicitamente esta qualidade e considerar-se-ão editadas pelo\ndelegado.",
+        "normalized_text": "§ 3º As decisões adotadas por delegação devem mencionar As decisões adotadas por delegação devem mencionar explicitamente esta qualidade e considerar-se-ão editadas pelo delegado."
+      }
+    },
+    "Art. 15": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Será permitida, em caráter excepcional e por motivos relevantes\ndevidamente justificados, a avocação temporária de competência\natribuída a órgão hierarquicamente inferior.",
+        "normalized_text": "Será permitida, em caráter excepcional e por motivos relevantes devidamente justificados, a avocação temporária de competência atribuída a órgão hierarquicamente inferior."
+      }
+    },
+    "Art. 16": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os órgãos e entidades administrativas divulgarão publicamente\nos locais das respectivas sedes e, quando conveniente, a unidade\nfundacional competente em matéria de interesse especial.",
+        "normalized_text": "Os órgãos e entidades administrativas divulgarão publicamente os locais das respectivas sedes e, quando conveniente, a unidade fundacional competente em matéria de interesse especial."
+      }
+    },
+    "Art. 17": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Inexistindo competência legal específica, o processo\nadministrativo deverá ser iniciado perante a autoridade de menor\ngrau hierárquico para decidir.\nCAPÍTULO\nVII\nDOS\nIMPEDIMENTOS E DA SUSPEIÇÃO",
+        "normalized_text": "Inexistindo competência legal específica, o processo administrativo deverá ser iniciado perante a autoridade de menor grau hierárquico para decidir. CAPÍTULO VII DOS IMPEDIMENTOS E DA SUSPEIÇÃO"
+      }
+    },
+    "Art. 18": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É impedido de atuar em processo administrativo o servidor ou\nautoridade que:\nI\n- tenha interesse direto ou indireto na matéria;\nII\n- tenha participado ou venha a participar como perito, testemunha ou\nrepresentante, ou se tais situações ocorrem quanto ao cônjuge,\ncompanheiro ou parente e afins até o terceiro grau;\nIII\n- esteja litigando judicial ou administrativamente com o interessado\nou respectivo cônjuge ou companheiro.",
+        "normalized_text": "É impedido de atuar em processo administrativo o servidor ou autoridade que: I - tenha interesse direto ou indireto na matéria; II - tenha participado ou venha a participar como perito, testemunha ou representante, ou se tais situações ocorrem quanto ao cônjuge, companheiro ou parente e afins até o terceiro grau; III - esteja litigando judicial ou administrativamente com o interessado ou respectivo cônjuge ou companheiro."
+      }
+    },
+    "Art. 19": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A autoridade ou servidor que incorrer em impedimento deve\ncomunicar o fato à autoridade competente, abstendo-se de atuar.",
+        "normalized_text": "A autoridade ou servidor que incorrer em impedimento deve comunicar o fato à autoridade competente, abstendo-se de atuar."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. A omissão do dever de comunicar o impedimento constitui\nA omissão do dever de comunicar o impedimento constitui\nfalta grave, para efeitos disciplinares.",
+        "normalized_text": "Parágrafo único. A omissão do dever de comunicar o impedimento constitui A omissão do dever de comunicar o impedimento constitui falta grave, para efeitos disciplinares."
+      }
+    },
+    "Art. 20": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Pode ser argüida a suspeição de autoridade ou servidor que\ntenha amizade íntima ou inimizade notória com algum dos\ninteressados ou com os respectivos cônjuges, companheiros, parentes\ne afins até o terceiro grau.",
+        "normalized_text": "Pode ser argüida a suspeição de autoridade ou servidor que tenha amizade íntima ou inimizade notória com algum dos interessados ou com os respectivos cônjuges, companheiros, parentes e afins até o terceiro grau."
+      }
+    },
+    "Art. 21": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O indeferimento de alegação de suspeição poderá ser objeto\nde recurso, sem efeito suspensivo.\nCAPÍTULO\nVIII\nDA FORMA,\nTEMPO E LUGAR DOS ATOS DO PROCESSO",
+        "normalized_text": "O indeferimento de alegação de suspeição poderá ser objeto de recurso, sem efeito suspensivo. CAPÍTULO VIII DA FORMA, TEMPO E LUGAR DOS ATOS DO PROCESSO"
+      }
+    },
+    "Art. 22": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os atos do processo administrativo não dependem de forma\ndeterminada senão quando a lei expressamente a exigir.",
+        "normalized_text": "Os atos do processo administrativo não dependem de forma determinada senão quando a lei expressamente a exigir."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os atos do processo devem ser produzidos por escrito, em\nOs atos do processo devem ser produzidos por escrito, em\nvernáculo, com a data e o local de sua realização e a assinatura\nda autoridade responsável.",
+        "normalized_text": "§ 1º Os atos do processo devem ser produzidos por escrito, em Os atos do processo devem ser produzidos por escrito, em vernáculo, com a data e o local de sua realização e a assinatura da autoridade responsável."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Salvo imposição legal, o reconhecimento de firma somente será\nSalvo imposição legal, o reconhecimento de firma somente será\nexigido quando houver dúvida de autenticidade.",
+        "normalized_text": "§ 2º Salvo imposição legal, o reconhecimento de firma somente será Salvo imposição legal, o reconhecimento de firma somente será exigido quando houver dúvida de autenticidade."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A autenticação de documentos exigidos em cópia poderá ser\nA autenticação de documentos exigidos em cópia poderá ser\nfeita pelo órgão administrativo.",
+        "normalized_text": "§ 3º A autenticação de documentos exigidos em cópia poderá ser A autenticação de documentos exigidos em cópia poderá ser feita pelo órgão administrativo."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O processo deverá ter suas páginas numeradas seqüencialmente e\nO processo deverá ter suas páginas numeradas seqüencialmente e\nrubricadas.",
+        "normalized_text": "§ 4º O processo deverá ter suas páginas numeradas seqüencialmente e O processo deverá ter suas páginas numeradas seqüencialmente e rubricadas."
+      }
+    },
+    "Art. 23": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os atos do processo devem realizar-se em dias úteis, no horário\nnormal de funcionamento da repartição na qual tramitar o processo.",
+        "normalized_text": "Os atos do processo devem realizar-se em dias úteis, no horário normal de funcionamento da repartição na qual tramitar o processo."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Serão concluídos depois do horário normal os atos já\nSerão concluídos depois do horário normal os atos já\niniciados, cujo adiamento prejudique o curso regular do procedimento\nou cause dano ao interessado ou à Administração.",
+        "normalized_text": "Parágrafo único. Serão concluídos depois do horário normal os atos já Serão concluídos depois do horário normal os atos já iniciados, cujo adiamento prejudique o curso regular do procedimento ou cause dano ao interessado ou à Administração."
+      }
+    },
+    "Art. 24": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Inexistindo disposição específica, os atos do órgão ou\nautoridade responsável pelo processo e dos administrados que dele\nparticipem devem ser praticados no prazo de cinco dias, salvo motivo\nde força maior.",
+        "normalized_text": "Inexistindo disposição específica, os atos do órgão ou autoridade responsável pelo processo e dos administrados que dele participem devem ser praticados no prazo de cinco dias, salvo motivo de força maior."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O prazo previsto neste artigo pode ser dilatado até o dobro,\nO prazo previsto neste artigo pode ser dilatado até o dobro,\nmediante comprovada justificação.",
+        "normalized_text": "Parágrafo único. O prazo previsto neste artigo pode ser dilatado até o dobro, O prazo previsto neste artigo pode ser dilatado até o dobro, mediante comprovada justificação."
+      }
+    },
+    "Art. 25": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os atos do processo devem realizar-se preferencialmente na sede\ndo órgão, cientificando-se o interessado se outro for o local de\nrealização.\nCAPÍTULO IX\nDA\nCOMUNICAÇÃO DOS ATOS",
+        "normalized_text": "Os atos do processo devem realizar-se preferencialmente na sede do órgão, cientificando-se o interessado se outro for o local de realização. CAPÍTULO IX DA COMUNICAÇÃO DOS ATOS"
+      }
+    },
+    "Art. 26": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O órgão competente perante o qual tramita o processo\nadministrativo determinará a intimação do interessado para ciência\nde decisão ou a efetivação de diligências.",
+        "normalized_text": "O órgão competente perante o qual tramita o processo administrativo determinará a intimação do interessado para ciência de decisão ou a efetivação de diligências."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A intimação deverá conter:\nA intimação deverá conter:\nI\n- identificação do intimado e nome do órgão ou entidade\nadministrativa;\nII\n- finalidade da intimação;\nIII\n- data, hora e local em que deve comparecer;\nIV\n- se o intimado deve comparecer pessoalmente, ou fazer-se\nrepresentar;\nV\n- informação da continuidade do processo independentemente do seu\ncomparecimento;\nVI\n- indicação dos fatos e fundamentos legais pertinentes.",
+        "normalized_text": "§ 1º A intimação deverá conter: A intimação deverá conter: I - identificação do intimado e nome do órgão ou entidade administrativa; II - finalidade da intimação; III - data, hora e local em que deve comparecer; IV - se o intimado deve comparecer pessoalmente, ou fazer-se representar; V - informação da continuidade do processo independentemente do seu comparecimento; VI - indicação dos fatos e fundamentos legais pertinentes."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A intimação observará a antecedência mínima de três dias\nA intimação observará a antecedência mínima de três dias\núteis quanto à data de comparecimento.",
+        "normalized_text": "§ 2º A intimação observará a antecedência mínima de três dias A intimação observará a antecedência mínima de três dias úteis quanto à data de comparecimento."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A intimação pode ser efetuada por ciência no processo, por via\nA intimação pode ser efetuada por ciência no processo, por via\npostal com aviso de recebimento, por telegrama ou outro meio que\nassegure a certeza da ciência do interessado.",
+        "normalized_text": "§ 3º A intimação pode ser efetuada por ciência no processo, por via A intimação pode ser efetuada por ciência no processo, por via postal com aviso de recebimento, por telegrama ou outro meio que assegure a certeza da ciência do interessado."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º No caso de interessados indeterminados, desconhecidos ou com\nNo caso de interessados indeterminados, desconhecidos ou com\ndomicílio indefinido, a intimação deve ser efetuada por meio de\npublicação oficial.",
+        "normalized_text": "§ 4º No caso de interessados indeterminados, desconhecidos ou com No caso de interessados indeterminados, desconhecidos ou com domicílio indefinido, a intimação deve ser efetuada por meio de publicação oficial."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º As intimações serão nulas quando feitas sem observância das\nAs intimações serão nulas quando feitas sem observância das\nprescrições legais, mas o comparecimento do administrado supre sua\nfalta ou irregularidade.",
+        "normalized_text": "§ 5º As intimações serão nulas quando feitas sem observância das As intimações serão nulas quando feitas sem observância das prescrições legais, mas o comparecimento do administrado supre sua falta ou irregularidade."
+      }
+    },
+    "Art. 27": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O desatendimento da intimação não importa o reconhecimento da\nverdade dos fatos, nem a renúncia a direito pelo administrado.",
+        "normalized_text": "O desatendimento da intimação não importa o reconhecimento da verdade dos fatos, nem a renúncia a direito pelo administrado."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. No prosseguimento do processo, será garantido direito de\nNo prosseguimento do processo, será garantido direito de\nampla defesa ao interessado.",
+        "normalized_text": "Parágrafo único. No prosseguimento do processo, será garantido direito de No prosseguimento do processo, será garantido direito de ampla defesa ao interessado."
+      }
+    },
+    "Art. 28": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Devem ser objeto de intimação os atos do processo que resultem\npara o interessado em imposição de deveres, ônus, sanções ou\nrestrição ao exercício de direitos e atividades e os atos de outra\nnatureza, de seu interesse.\nCAPÍTULO X\nDA INSTRUÇÃO",
+        "normalized_text": "Devem ser objeto de intimação os atos do processo que resultem para o interessado em imposição de deveres, ônus, sanções ou restrição ao exercício de direitos e atividades e os atos de outra natureza, de seu interesse. CAPÍTULO X DA INSTRUÇÃO"
+      }
+    },
+    "Art. 29": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As atividades de instrução destinadas a averiguar e comprovar\nos dados necessários à tomada de decisão realizam-se de ofício ou\nmediante impulsão do órgão responsável pelo processo, sem\nprejuízo do direito dos interessados de propor atuações\nprobatórias.",
+        "normalized_text": "As atividades de instrução destinadas a averiguar e comprovar os dados necessários à tomada de decisão realizam-se de ofício ou mediante impulsão do órgão responsável pelo processo, sem prejuízo do direito dos interessados de propor atuações probatórias."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O órgão competente para a instrução fará constar dos autos\nO órgão competente para a instrução fará constar dos autos\nos dados necessários à decisão do processo.",
+        "normalized_text": "§ 1º O órgão competente para a instrução fará constar dos autos O órgão competente para a instrução fará constar dos autos os dados necessários à decisão do processo."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Os atos de instrução que exijam a atuação dos interessados\nOs atos de instrução que exijam a atuação dos interessados\ndevem realizar-se do modo menos oneroso para estes.",
+        "normalized_text": "§ 2º Os atos de instrução que exijam a atuação dos interessados Os atos de instrução que exijam a atuação dos interessados devem realizar-se do modo menos oneroso para estes."
+      }
+    },
+    "Art. 30": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "São inadmissíveis no processo administrativo as provas obtidas\npor meios ilícitos.",
+        "normalized_text": "São inadmissíveis no processo administrativo as provas obtidas por meios ilícitos."
+      }
+    },
+    "Art. 31": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando a matéria do processo envolver assunto de interesse\ngeral, o órgão competente poderá, mediante despacho motivado,\nabrir período de consulta pública para manifestação de terceiros,\nantes da decisão do pedido, se não houver prejuízo para a parte\ninteressada.",
+        "normalized_text": "Quando a matéria do processo envolver assunto de interesse geral, o órgão competente poderá, mediante despacho motivado, abrir período de consulta pública para manifestação de terceiros, antes da decisão do pedido, se não houver prejuízo para a parte interessada."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A abertura da consulta pública será objeto de divulgação\nA abertura da consulta pública será objeto de divulgação\npelos meios oficiais, a fim de que pessoas físicas ou jurídicas\npossam examinar os autos, fixando-se prazo para oferecimento de\nalegações escritas.",
+        "normalized_text": "§ 1º A abertura da consulta pública será objeto de divulgação A abertura da consulta pública será objeto de divulgação pelos meios oficiais, a fim de que pessoas físicas ou jurídicas possam examinar os autos, fixando-se prazo para oferecimento de alegações escritas."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O comparecimento à consulta pública não confere, por si, a\nO comparecimento à consulta pública não confere, por si, a\ncondição de interessado do processo, mas confere o direito de obter\nda Administração resposta fundamentada, que poderá ser comum a\ntodas as alegações substancialmente iguais.",
+        "normalized_text": "§ 2º O comparecimento à consulta pública não confere, por si, a O comparecimento à consulta pública não confere, por si, a condição de interessado do processo, mas confere o direito de obter da Administração resposta fundamentada, que poderá ser comum a todas as alegações substancialmente iguais."
+      }
+    },
+    "Art. 32": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Antes da tomada de decisão, a juízo da autoridade, diante da\nrelevância da questão, poderá ser realizada audiência pública\npara debates sobre a matéria do processo.",
+        "normalized_text": "Antes da tomada de decisão, a juízo da autoridade, diante da relevância da questão, poderá ser realizada audiência pública para debates sobre a matéria do processo."
+      }
+    },
+    "Art. 33": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os órgãos e entidades administrativas, em matéria relevante,\npoderão estabelecer outros meios de participação de administrados,\ndiretamente ou por meio de organizações e associações legalmente\nreconhecidas.",
+        "normalized_text": "Os órgãos e entidades administrativas, em matéria relevante, poderão estabelecer outros meios de participação de administrados, diretamente ou por meio de organizações e associações legalmente reconhecidas."
+      }
+    },
+    "Art. 34": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os resultados da consulta e audiência pública e de outros meios\nde participação de administrados deverão ser apresentados com a\nindicação do procedimento adotado.",
+        "normalized_text": "Os resultados da consulta e audiência pública e de outros meios de participação de administrados deverão ser apresentados com a indicação do procedimento adotado."
+      }
+    },
+    "Art. 35": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando necessária à instrução do processo, a audiência de\noutros órgãos ou entidades administrativas poderá ser realizada em\nreunião conjunta, com a participação de titulares ou\nrepresentantes dos órgãos competentes, lavrando-se a respectiva\nata, a ser juntada aos autos.",
+        "normalized_text": "Quando necessária à instrução do processo, a audiência de outros órgãos ou entidades administrativas poderá ser realizada em reunião conjunta, com a participação de titulares ou representantes dos órgãos competentes, lavrando-se a respectiva ata, a ser juntada aos autos."
+      }
+    },
+    "Art. 36": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Cabe ao interessado a prova dos fatos que tenha alegado, sem\nprejuízo do dever atribuído ao órgão competente para a instrução\ne do disposto no art. 37 desta Lei.",
+        "normalized_text": "Cabe ao interessado a prova dos fatos que tenha alegado, sem prejuízo do dever atribuído ao órgão competente para a instrução e do disposto no art. 37 desta Lei."
+      }
+    },
+    "Art. 37": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando o interessado declarar que fatos e dados estão\nregistrados em documentos existentes na própria Administração\nresponsável pelo processo ou em outro órgão administrativo, o\nórgão competente para a instrução proverá, de ofício, à\nobtenção dos documentos ou das respectivas cópias.",
+        "normalized_text": "Quando o interessado declarar que fatos e dados estão registrados em documentos existentes na própria Administração responsável pelo processo ou em outro órgão administrativo, o órgão competente para a instrução proverá, de ofício, à obtenção dos documentos ou das respectivas cópias."
+      }
+    },
+    "Art. 38": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O interessado poderá, na fase instrutória e antes da tomada da\ndecisão, juntar documentos e pareceres, requerer diligências e\nperícias, bem como aduzir alegações referentes à matéria objeto\ndo processo.",
+        "normalized_text": "O interessado poderá, na fase instrutória e antes da tomada da decisão, juntar documentos e pareceres, requerer diligências e perícias, bem como aduzir alegações referentes à matéria objeto do processo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os elementos probatórios deverão ser considerados na motivação\nOs elementos probatórios deverão ser considerados na motivação\ndo relatório e da decisão.",
+        "normalized_text": "§ 1º Os elementos probatórios deverão ser considerados na motivação Os elementos probatórios deverão ser considerados na motivação do relatório e da decisão."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Somente poderão ser recusadas, mediante decisão fundamentada,\nSomente poderão ser recusadas, mediante decisão fundamentada,\nas provas propostas pelos interessados quando sejam ilícitas,\nimpertinentes, desnecessárias ou protelatórias.",
+        "normalized_text": "§ 2º Somente poderão ser recusadas, mediante decisão fundamentada, Somente poderão ser recusadas, mediante decisão fundamentada, as provas propostas pelos interessados quando sejam ilícitas, impertinentes, desnecessárias ou protelatórias."
+      }
+    },
+    "Art. 39": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando for necessária a prestação de informações ou a\napresentação de provas pelos interessados ou terceiros, serão\nexpedidas intimações para esse fim, mencionando-se data, prazo,\nforma e condições de atendimento.",
+        "normalized_text": "Quando for necessária a prestação de informações ou a apresentação de provas pelos interessados ou terceiros, serão expedidas intimações para esse fim, mencionando-se data, prazo, forma e condições de atendimento."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Não sendo atendida a intimação, poderá o órgão\nNão sendo atendida a intimação, poderá o órgão\ncompetente, se entender relevante a matéria, suprir de ofício a\nomissão, não se eximindo de proferir a decisão.",
+        "normalized_text": "Parágrafo único. Não sendo atendida a intimação, poderá o órgão Não sendo atendida a intimação, poderá o órgão competente, se entender relevante a matéria, suprir de ofício a omissão, não se eximindo de proferir a decisão."
+      }
+    },
+    "Art. 40": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando dados, atuações ou documentos solicitados ao interessado\nforem necessários à apreciação de pedido formulado, o não\natendimento no prazo fixado pela Administração para a respectiva\napresentação implicará arquivamento do processo.",
+        "normalized_text": "Quando dados, atuações ou documentos solicitados ao interessado forem necessários à apreciação de pedido formulado, o não atendimento no prazo fixado pela Administração para a respectiva apresentação implicará arquivamento do processo."
+      }
+    },
+    "Art. 41": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os interessados serão intimados de prova ou diligência\nordenada, com antecedência mínima de três dias úteis,\nmencionando-se data, hora e local de realização.",
+        "normalized_text": "Os interessados serão intimados de prova ou diligência ordenada, com antecedência mínima de três dias úteis, mencionando-se data, hora e local de realização."
+      }
+    },
+    "Art. 42": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando deva ser obrigatoriamente ouvido um órgão consultivo, o\nparecer deverá ser emitido no prazo máximo de quinze dias, salvo\nnorma especial ou comprovada necessidade de maior prazo.",
+        "normalized_text": "Quando deva ser obrigatoriamente ouvido um órgão consultivo, o parecer deverá ser emitido no prazo máximo de quinze dias, salvo norma especial ou comprovada necessidade de maior prazo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Se um parecer obrigatório e vinculante deixar de ser emitido no\nSe um parecer obrigatório e vinculante deixar de ser emitido no\nprazo fixado, o processo não terá seguimento até a respectiva\napresentação, responsabilizando-se quem der causa ao atraso.",
+        "normalized_text": "§ 1º Se um parecer obrigatório e vinculante deixar de ser emitido no Se um parecer obrigatório e vinculante deixar de ser emitido no prazo fixado, o processo não terá seguimento até a respectiva apresentação, responsabilizando-se quem der causa ao atraso."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Se um parecer obrigatório e não vinculante deixar de ser\nSe um parecer obrigatório e não vinculante deixar de ser\nemitido no prazo fixado, o processo poderá ter prosseguimento e ser\ndecidido com sua dispensa, sem prejuízo da responsabilidade de quem\nse omitiu no atendimento.",
+        "normalized_text": "§ 2º Se um parecer obrigatório e não vinculante deixar de ser Se um parecer obrigatório e não vinculante deixar de ser emitido no prazo fixado, o processo poderá ter prosseguimento e ser decidido com sua dispensa, sem prejuízo da responsabilidade de quem se omitiu no atendimento."
+      }
+    },
+    "Art. 43": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Quando por disposição de ato normativo devam ser previamente\nobtidos laudos técnicos de órgãos administrativos e estes não\ncumprirem o encargo no prazo assinalado, o órgão responsável pela\ninstrução deverá solicitar laudo técnico de outro órgão dotado\nde qualificação e capacidade técnica equivalentes.",
+        "normalized_text": "Quando por disposição de ato normativo devam ser previamente obtidos laudos técnicos de órgãos administrativos e estes não cumprirem o encargo no prazo assinalado, o órgão responsável pela instrução deverá solicitar laudo técnico de outro órgão dotado de qualificação e capacidade técnica equivalentes."
+      }
+    },
+    "Art. 44": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Encerrada a instrução, o interessado terá o direito de\nmanifestar-se no prazo máximo de dez dias, salvo se outro prazo for\nlegalmente fixado.",
+        "normalized_text": "Encerrada a instrução, o interessado terá o direito de manifestar-se no prazo máximo de dez dias, salvo se outro prazo for legalmente fixado."
+      }
+    },
+    "Art. 45": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Em caso de risco iminente, a Administração Pública poderá\nmotivadamente adotar providências acauteladoras sem a prévia\nmanifestação do interessado.",
+        "normalized_text": "Em caso de risco iminente, a Administração Pública poderá motivadamente adotar providências acauteladoras sem a prévia manifestação do interessado."
+      }
+    },
+    "Art. 46": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os interessados têm direito à vista do processo e a obter\ncertidões ou cópias reprográficas dos dados e documentos que o\nintegram, ressalvados os dados e documentos de terceiros protegidos\npor sigilo ou pelo direito à privacidade, à honra e à imagem.",
+        "normalized_text": "Os interessados têm direito à vista do processo e a obter certidões ou cópias reprográficas dos dados e documentos que o integram, ressalvados os dados e documentos de terceiros protegidos por sigilo ou pelo direito à privacidade, à honra e à imagem."
+      }
+    },
+    "Art. 47": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O órgão de instrução que não for competente para emitir a\ndecisão final elaborará relatório indicando o pedido inicial, o\nconteúdo das fases do procedimento e formulará proposta de decisão,\nobjetivamente justificada, encaminhando o processo à autoridade\ncompetente.\nCAPÍTULO XI\nDO DEVER DE\nDECIDIR",
+        "normalized_text": "O órgão de instrução que não for competente para emitir a decisão final elaborará relatório indicando o pedido inicial, o conteúdo das fases do procedimento e formulará proposta de decisão, objetivamente justificada, encaminhando o processo à autoridade competente. CAPÍTULO XI DO DEVER DE DECIDIR"
+      }
+    },
+    "Art. 48": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Administração tem o dever de explicitamente emitir decisão\nnos processos administrativos e sobre solicitações ou reclamações,\nem matéria de sua competência.",
+        "normalized_text": "A Administração tem o dever de explicitamente emitir decisão nos processos administrativos e sobre solicitações ou reclamações, em matéria de sua competência."
+      }
+    },
+    "Art. 49": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Concluída a instrução de processo administrativo, a\nAdministração tem o prazo de até trinta dias para decidir, salvo\nprorrogação por igual período expressamente motivada.\nCAPÍTULO",
+        "normalized_text": "Concluída a instrução de processo administrativo, a Administração tem o prazo de até trinta dias para decidir, salvo prorrogação por igual período expressamente motivada. CAPÍTULO"
+      },
+      "caput/inciso:XI": {
+        "device_type": "inciso",
+        "device_label": "inciso XI",
+        "device_path": "caput/inciso:XI",
+        "text": "XI-A\nA\nDA DECISÃO\nCOORDENADA\n(Capítulo\nacrescido pela Lei nº 14.210, de 30/9/2021)\nArt.\n49-A. No âmbito da Administração Pública federal, as decisões\nadministrativas que exijam a participação de 3 (três) ou mais\nsetores, órgãos ou entidades poderão ser tomadas mediante decisão\ncoordenada, sempre que:\nI\n- for justificável pela relevância da matéria; e\nII\n- houver discordância que prejudique a celeridade do processo\nadministrativo decisório.",
+        "normalized_text": "XI-A A DA DECISÃO COORDENADA (Capítulo acrescido pela Lei nº 14.210, de 30/9/2021) Art. 49-A. No âmbito da Administração Pública federal, as decisões administrativas que exijam a participação de 3 (três) ou mais setores, órgãos ou entidades poderão ser tomadas mediante decisão coordenada, sempre que: I - for justificável pela relevância da matéria; e II - houver discordância que prejudique a celeridade do processo administrativo decisório."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Até a assinatura da ata, poderá ser complementada a\nAté a assinatura da ata, poderá ser complementada a\nfundamentação da decisão da autoridade ou do agente a respeito de\nmatéria de competência do órgão ou da entidade representada.",
+        "normalized_text": "§ 1º Até a assinatura da ata, poderá ser complementada a Até a assinatura da ata, poderá ser complementada a fundamentação da decisão da autoridade ou do agente a respeito de matéria de competência do órgão ou da entidade representada."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º\n(VETADO\nna Lei nº 14.210, de 30/9/2021)",
+        "normalized_text": "§ 2º (VETADO na Lei nº 14.210, de 30/9/2021)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A ata será publicada por extrato no Diário Oficial da União,\nA ata será publicada por extrato no Diário Oficial da União,\ndo qual deverão constar, além do registro referido no inciso IV do\ncaput\ndeste artigo, os dados identificadores da decisão coordenada e o\nórgão e o local em que se encontra a ata em seu inteiro teor, para\nconhecimento dos interessados.\n(Artigo\nacrescido pela Lei nº 14.210, de 30/9/2021)\nCAPÍTULO\nXII\nDA MOTIVAÇÃO",
+        "normalized_text": "§ 3º A ata será publicada por extrato no Diário Oficial da União, A ata será publicada por extrato no Diário Oficial da União, do qual deverão constar, além do registro referido no inciso IV do caput deste artigo, os dados identificadores da decisão coordenada e o órgão e o local em que se encontra a ata em seu inteiro teor, para conhecimento dos interessados. (Artigo acrescido pela Lei nº 14.210, de 30/9/2021) CAPÍTULO XII DA MOTIVAÇÃO"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º A decisão coordenada não exclui a responsabilidade originária\nA decisão coordenada não exclui a responsabilidade originária\nde cada órgão ou autoridade envolvida.",
+        "normalized_text": "§ 4º A decisão coordenada não exclui a responsabilidade originária A decisão coordenada não exclui a responsabilidade originária de cada órgão ou autoridade envolvida."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º A decisão coordenada obedecerá aos princípios da legalidade,\nA decisão coordenada obedecerá aos princípios da legalidade,\nda eficiência e da transparência, com utilização, sempre que\nnecessário, da simplificação do procedimento e da concentração\ndas instâncias decisórias.",
+        "normalized_text": "§ 5º A decisão coordenada obedecerá aos princípios da legalidade, A decisão coordenada obedecerá aos princípios da legalidade, da eficiência e da transparência, com utilização, sempre que necessário, da simplificação do procedimento e da concentração das instâncias decisórias."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º Não se aplica a decisão coordenada aos processos\nNão se aplica a decisão coordenada aos processos\nadministrativos:\nI\n- de licitação;\nII\n- relacionados ao poder sancionador; ou\nIII\n- em que estejam envolvidas autoridades de Poderes distintos.\n(Artigo\nacrescido pela Lei nº 14.210, de 30/9/2021)\nArt.\n49-B. Poderão habilitar-se a participar da decisão coordenada, na\nqualidade de ouvintes, os interessados de que trata o art. 9º desta\nLei.",
+        "normalized_text": "§ 6º Não se aplica a decisão coordenada aos processos Não se aplica a decisão coordenada aos processos administrativos: I - de licitação; II - relacionados ao poder sancionador; ou III - em que estejam envolvidas autoridades de Poderes distintos. (Artigo acrescido pela Lei nº 14.210, de 30/9/2021) Art. 49-B. Poderão habilitar-se a participar da decisão coordenada, na qualidade de ouvintes, os interessados de que trata o art. 9º desta Lei."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Não poderá ser arguida matéria estranha ao objeto da\nNão poderá ser arguida matéria estranha ao objeto da\nconvocação.\n(Artigo\nacrescido pela Lei nº 14.210, de 30/9/2021)\nArt.\n49-G. A conclusão dos trabalhos da decisão coordenada será\nconsolidada em ata, que conterá as seguintes informações:\nI\n- relato sobre os itens da pauta;\nII\n- síntese dos fundamentos aduzidos;\nIII\n- síntese das teses pertinentes ao objeto da convocação;\nIV\n- registro das orientações, das diretrizes, das soluções ou das\npropostas de atos governamentais relativos ao objeto da convocação;\nV\n- posicionamento dos participantes para subsidiar futura atuação\ngovernamental em matéria idêntica ou similar; e\nVI\n- decisão de cada órgão ou entidade relativa à matéria sujeita à\nsua competência.",
+        "normalized_text": "Parágrafo único. Não poderá ser arguida matéria estranha ao objeto da Não poderá ser arguida matéria estranha ao objeto da convocação. (Artigo acrescido pela Lei nº 14.210, de 30/9/2021) Art. 49-G. A conclusão dos trabalhos da decisão coordenada será consolidada em ata, que conterá as seguintes informações: I - relato sobre os itens da pauta; II - síntese dos fundamentos aduzidos; III - síntese das teses pertinentes ao objeto da convocação; IV - registro das orientações, das diretrizes, das soluções ou das propostas de atos governamentais relativos ao objeto da convocação; V - posicionamento dos participantes para subsidiar futura atuação governamental em matéria idêntica ou similar; e VI - decisão de cada órgão ou entidade relativa à matéria sujeita à sua competência."
+      }
+    },
+    "Art. 50": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os atos administrativos deverão ser motivados, com indicação\ndos fatos e dos fundamentos jurídicos, quando:\nI\n- neguem, limitem ou afetem direitos ou interesses;\nII\n- imponham ou agravem deveres, encargos ou sanções;\nIII\n- decidam processos administrativos de concurso ou seleção pública;\nIV\n- dispensem ou declarem a inexigibilidade de processo licitatório;\nV\n- decidam recursos administrativos;\nVI\n- decorram de reexame de ofício;\nVII\n- deixem de aplicar jurisprudência firmada sobre a questão ou\ndiscrepem de pareceres, laudos, propostas e relatórios oficiais;\nVIII\n- importem anulação, revogação, suspensão ou convalidação de\nato administrativo.",
+        "normalized_text": "Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando: I - neguem, limitem ou afetem direitos ou interesses; II - imponham ou agravem deveres, encargos ou sanções; III - decidam processos administrativos de concurso ou seleção pública; IV - dispensem ou declarem a inexigibilidade de processo licitatório; V - decidam recursos administrativos; VI - decorram de reexame de ofício; VII - deixem de aplicar jurisprudência firmada sobre a questão ou discrepem de pareceres, laudos, propostas e relatórios oficiais; VIII - importem anulação, revogação, suspensão ou convalidação de ato administrativo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A motivação deve ser explícita, clara e congruente, podendo\nA motivação deve ser explícita, clara e congruente, podendo\nconsistir em declaração de concordância com fundamentos de\nanteriores pareceres, informações, decisões ou propostas, que,\nneste caso, serão parte integrante do ato.",
+        "normalized_text": "§ 1º A motivação deve ser explícita, clara e congruente, podendo A motivação deve ser explícita, clara e congruente, podendo consistir em declaração de concordância com fundamentos de anteriores pareceres, informações, decisões ou propostas, que, neste caso, serão parte integrante do ato."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Na solução de vários assuntos da mesma natureza, pode ser\nNa solução de vários assuntos da mesma natureza, pode ser\nutilizado meio mecânico que reproduza os fundamentos das decisões,\ndesde que não prejudique direito ou garantia dos interessados.",
+        "normalized_text": "§ 2º Na solução de vários assuntos da mesma natureza, pode ser Na solução de vários assuntos da mesma natureza, pode ser utilizado meio mecânico que reproduza os fundamentos das decisões, desde que não prejudique direito ou garantia dos interessados."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A motivação das decisões de órgãos colegiados e comissões\nA motivação das decisões de órgãos colegiados e comissões\nou de decisões orais constará da respectiva ata ou de termo\nescrito.\nCAPÍTULO\nXIII\nDA\nDESISTÊNCIA E OUTROS CASOS DE EXTINÇÃO DO PROCESSO",
+        "normalized_text": "§ 3º A motivação das decisões de órgãos colegiados e comissões A motivação das decisões de órgãos colegiados e comissões ou de decisões orais constará da respectiva ata ou de termo escrito. CAPÍTULO XIII DA DESISTÊNCIA E OUTROS CASOS DE EXTINÇÃO DO PROCESSO"
+      }
+    },
+    "Art. 51": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O interessado poderá, mediante manifestação escrita, desistir\ntotal ou parcialmente do pedido formulado ou, ainda, renunciar a\ndireitos disponíveis.",
+        "normalized_text": "O interessado poderá, mediante manifestação escrita, desistir total ou parcialmente do pedido formulado ou, ainda, renunciar a direitos disponíveis."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Havendo vários interessados, a desistência ou renúncia atinge\nHavendo vários interessados, a desistência ou renúncia atinge\nsomente quem a tenha formulado.",
+        "normalized_text": "§ 1º Havendo vários interessados, a desistência ou renúncia atinge Havendo vários interessados, a desistência ou renúncia atinge somente quem a tenha formulado."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A desistência ou renúncia do interessado, conforme o caso, não\nA desistência ou renúncia do interessado, conforme o caso, não\nprejudica o prosseguimento do processo, se a Administração\nconsiderar que o interesse público assim o exige.",
+        "normalized_text": "§ 2º A desistência ou renúncia do interessado, conforme o caso, não A desistência ou renúncia do interessado, conforme o caso, não prejudica o prosseguimento do processo, se a Administração considerar que o interesse público assim o exige."
+      }
+    },
+    "Art. 52": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O órgão competente poderá declarar extinto o processo quando\nexaurida sua finalidade ou o objeto da decisão se tornar impossível,\ninútil ou prejudicado por fato superveniente.\nCAPÍTULO\nXIV\nDA ANULAÇÃO,\nREVOGAÇÃO E CONVALIDAÇÃO",
+        "normalized_text": "O órgão competente poderá declarar extinto o processo quando exaurida sua finalidade ou o objeto da decisão se tornar impossível, inútil ou prejudicado por fato superveniente. CAPÍTULO XIV DA ANULAÇÃO, REVOGAÇÃO E CONVALIDAÇÃO"
+      }
+    },
+    "Art. 53": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Administração deve anular seus próprios atos, quando eivados\nde vício de legalidade, e pode revogá-los por motivo de\nconveniência ou oportunidade, respeitados os direitos adquiridos.",
+        "normalized_text": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+      }
+    },
+    "Art. 54": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O direito da Administração de anular os atos administrativos de\nque decorram efeitos favoráveis para os destinatários decai em\ncinco anos, contados da data em que foram praticados, salvo\ncomprovada má-fé.",
+        "normalized_text": "O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º No caso de efeitos patrimoniais contínuos, o prazo de decadência\nNo caso de efeitos patrimoniais contínuos, o prazo de decadência\ncontar-se-á da percepção do primeiro pagamento.",
+        "normalized_text": "§ 1º No caso de efeitos patrimoniais contínuos, o prazo de decadência No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Considera-se exercício do direito de anular qualquer medida de\nConsidera-se exercício do direito de anular qualquer medida de\nautoridade administrativa que importe impugnação à validade do\nato.",
+        "normalized_text": "§ 2º Considera-se exercício do direito de anular qualquer medida de Considera-se exercício do direito de anular qualquer medida de autoridade administrativa que importe impugnação à validade do ato."
+      }
+    },
+    "Art. 55": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Em decisão na qual se evidencie não acarretarem lesão ao\ninteresse público nem prejuízo a terceiros, os atos que\napresentarem defeitos sanáveis poderão ser convalidados pela\nprópria Administração.\nCAPÍTULO XV\nDO RECURSO\nADMINISTRATIVO E DA REVISÃO\nArt. 56 Das decisões administrativas cabe recurso, em face de razões de\nlegalidade e de mérito.",
+        "normalized_text": "Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração. CAPÍTULO XV DO RECURSO ADMINISTRATIVO E DA REVISÃO Art. 56 Das decisões administrativas cabe recurso, em face de razões de legalidade e de mérito."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O recurso será dirigido à autoridade que proferiu a decisão, a\nO recurso será dirigido à autoridade que proferiu a decisão, a\nqual, se não a reconsiderar no prazo de cinco dias, o encaminhará à\nautoridade superior.",
+        "normalized_text": "§ 1º O recurso será dirigido à autoridade que proferiu a decisão, a O recurso será dirigido à autoridade que proferiu a decisão, a qual, se não a reconsiderar no prazo de cinco dias, o encaminhará à autoridade superior."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Salvo exigência legal, a interposição de recurso\nSalvo exigência legal, a interposição de recurso\nadministrativo independe de caução.",
+        "normalized_text": "§ 2º Salvo exigência legal, a interposição de recurso Salvo exigência legal, a interposição de recurso administrativo independe de caução."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Se o recorrente alegar que a decisão administrativa contraria\nSe o recorrente alegar que a decisão administrativa contraria\nenunciado da súmula vinculante, caberá à autoridade prolatora da\ndecisão impugnada, se não a reconsiderar, explicitar, antes de\nencaminhar o recurso à autoridade superior, as razões da\naplicabilidade ou inaplicabilidade da súmula, conforme o caso.\n(Parágrafo\nacrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de\n20/12/2006, em vigor 3 (três) meses após a publicação)",
+        "normalized_text": "§ 3º Se o recorrente alegar que a decisão administrativa contraria Se o recorrente alegar que a decisão administrativa contraria enunciado da súmula vinculante, caberá à autoridade prolatora da decisão impugnada, se não a reconsiderar, explicitar, antes de encaminhar o recurso à autoridade superior, as razões da aplicabilidade ou inaplicabilidade da súmula, conforme o caso. (Parágrafo acrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de 20/12/2006, em vigor 3 (três) meses após a publicação)"
+      }
+    },
+    "Art. 57": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O recurso administrativo tramitará no máximo por três\ninstâncias administrativas, salvo disposição legal diversa.",
+        "normalized_text": "O recurso administrativo tramitará no máximo por três instâncias administrativas, salvo disposição legal diversa."
+      }
+    },
+    "Art. 58": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Têm legitimidade para interpor recurso administrativo:\nI\n- os titulares de direitos e interesses que forem parte no processo;\nII\n- aqueles cujos direitos ou interesses forem indiretamente afetados\npela decisão recorrida;\nIII\n- as organizações e associações representativas, no tocante a\ndireitos e interesses coletivos;\nIV\n- os cidadãos ou associações, quanto a direitos ou interesses\ndifusos.",
+        "normalized_text": "Têm legitimidade para interpor recurso administrativo: I - os titulares de direitos e interesses que forem parte no processo; II - aqueles cujos direitos ou interesses forem indiretamente afetados pela decisão recorrida; III - as organizações e associações representativas, no tocante a direitos e interesses coletivos; IV - os cidadãos ou associações, quanto a direitos ou interesses difusos."
+      }
+    },
+    "Art. 59": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Salvo disposição legal específica, é de dez dias o prazo para\ninterposição de recurso administrativo, contado a partir da ciência\nou divulgação oficial da decisão recorrida.",
+        "normalized_text": "Salvo disposição legal específica, é de dez dias o prazo para interposição de recurso administrativo, contado a partir da ciência ou divulgação oficial da decisão recorrida."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Quando a lei não fixar prazo diferente, o recurso administrativo\nQuando a lei não fixar prazo diferente, o recurso administrativo\ndeverá ser decidido no prazo máximo de trinta dias, a partir do\nrecebimento dos autos pelo órgão competente.",
+        "normalized_text": "§ 1º Quando a lei não fixar prazo diferente, o recurso administrativo Quando a lei não fixar prazo diferente, o recurso administrativo deverá ser decidido no prazo máximo de trinta dias, a partir do recebimento dos autos pelo órgão competente."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O prazo mencionado no parágrafo anterior poderá ser prorrogado\nO prazo mencionado no parágrafo anterior poderá ser prorrogado\npor igual período, ante justificativa explícita.",
+        "normalized_text": "§ 2º O prazo mencionado no parágrafo anterior poderá ser prorrogado O prazo mencionado no parágrafo anterior poderá ser prorrogado por igual período, ante justificativa explícita."
+      }
+    },
+    "Art. 60": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O recurso interpõe-se por meio de requerimento no qual o\nrecorrente deverá expor os fundamentos do pedido de reexame, podendo\njuntar os documentos que julgar convenientes.",
+        "normalized_text": "O recurso interpõe-se por meio de requerimento no qual o recorrente deverá expor os fundamentos do pedido de reexame, podendo juntar os documentos que julgar convenientes."
+      }
+    },
+    "Art. 61": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Salvo disposição legal em contrário, o recurso não tem efeito\nsuspensivo.",
+        "normalized_text": "Salvo disposição legal em contrário, o recurso não tem efeito suspensivo."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Havendo justo receio de prejuízo de difícil ou incerta\nHavendo justo receio de prejuízo de difícil ou incerta\nreparação decorrente da execução, a autoridade recorrida ou a\nimediatamente superior poderá, de ofício ou a pedido, dar efeito\nsuspensivo ao recurso.",
+        "normalized_text": "Parágrafo único. Havendo justo receio de prejuízo de difícil ou incerta Havendo justo receio de prejuízo de difícil ou incerta reparação decorrente da execução, a autoridade recorrida ou a imediatamente superior poderá, de ofício ou a pedido, dar efeito suspensivo ao recurso."
+      }
+    },
+    "Art. 62": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Interposto o recurso, o órgão competente para dele conhecer\ndeverá intimar os demais interessados para que, no prazo de cinco\ndias úteis, apresentem alegações.",
+        "normalized_text": "Interposto o recurso, o órgão competente para dele conhecer deverá intimar os demais interessados para que, no prazo de cinco dias úteis, apresentem alegações."
+      }
+    },
+    "Art. 63": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O recurso não será conhecido quando interposto:\nI\n- fora do prazo;\nII\n- perante órgão incompetente;\nIII\n- por quem não seja legitimado;\nIV\n- após exaurida a esfera administrativa.",
+        "normalized_text": "O recurso não será conhecido quando interposto: I - fora do prazo; II - perante órgão incompetente; III - por quem não seja legitimado; IV - após exaurida a esfera administrativa."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Na hipótese do inciso II, será indicada ao recorrente a\nNa hipótese do inciso II, será indicada ao recorrente a\nautoridade competente, sendo-lhe devolvido o prazo para recurso.",
+        "normalized_text": "§ 1º Na hipótese do inciso II, será indicada ao recorrente a Na hipótese do inciso II, será indicada ao recorrente a autoridade competente, sendo-lhe devolvido o prazo para recurso."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O não conhecimento do recurso não impede a Administração de\nO não conhecimento do recurso não impede a Administração de\nrever de ofício o ato ilegal, desde que não ocorrida preclusão\nadministrativa.",
+        "normalized_text": "§ 2º O não conhecimento do recurso não impede a Administração de O não conhecimento do recurso não impede a Administração de rever de ofício o ato ilegal, desde que não ocorrida preclusão administrativa."
+      }
+    },
+    "Art. 64": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O órgão competente para decidir o recurso poderá confirmar,\nmodificar, anular ou revogar, total ou parcialmente, a decisão\nrecorrida, se a matéria for de sua competência.",
+        "normalized_text": "O órgão competente para decidir o recurso poderá confirmar, modificar, anular ou revogar, total ou parcialmente, a decisão recorrida, se a matéria for de sua competência."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Se da aplicação do disposto neste artigo puder decorrer\nSe da aplicação do disposto neste artigo puder decorrer\ngravame à situação do recorrente, este deverá ser cientificado\npara que formule suas alegações antes da decisão.\nArt.\n64-A. Se o recorrente alegar violação de enunciado da súmula\nvinculante, o órgão competente para decidir o recurso explicitará\nas razões da aplicabilidade ou inaplicabilidade da súmula, conforme\no caso.\n(Artigo\nacrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de\n20/12/2006, em vigor 3 (três) meses após a publicação)\nArt.\n64-B. Acolhida pelo Supremo Tribunal Federal a reclamação fundada\nem violação de enunciado da súmula vinculante, dar-se-á ciência\nà autoridade prolatora e ao órgão competente para o julgamento do\nrecurso, que deverão adequar as futuras decisões administrativas em\ncasos semelhantes, sob pena de responsabilização pessoal nas\nesferas cível, administrativa e penal.\n(Artigo\nacrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de\n20/12/2006, em vigor 3 (três) meses após a publicação)",
+        "normalized_text": "Parágrafo único. Se da aplicação do disposto neste artigo puder decorrer Se da aplicação do disposto neste artigo puder decorrer gravame à situação do recorrente, este deverá ser cientificado para que formule suas alegações antes da decisão. Art. 64-A. Se o recorrente alegar violação de enunciado da súmula vinculante, o órgão competente para decidir o recurso explicitará as razões da aplicabilidade ou inaplicabilidade da súmula, conforme o caso. (Artigo acrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de 20/12/2006, em vigor 3 (três) meses após a publicação) Art. 64-B. Acolhida pelo Supremo Tribunal Federal a reclamação fundada em violação de enunciado da súmula vinculante, dar-se-á ciência à autoridade prolatora e ao órgão competente para o julgamento do recurso, que deverão adequar as futuras decisões administrativas em casos semelhantes, sob pena de responsabilização pessoal nas esferas cível, administrativa e penal. (Artigo acrescido pela Lei nº 11.417, de 19/12/2006, publicada no DOU de 20/12/2006, em vigor 3 (três) meses após a publicação)"
+      }
+    },
+    "Art. 65": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os processos administrativos de que resultem sanções poderão\nser revistos, a qualquer tempo, a pedido ou de ofício, quando\nsurgirem fatos novos ou circunstâncias relevantes suscetíveis de\njustificar a inadequação da sanção aplicada.",
+        "normalized_text": "Os processos administrativos de que resultem sanções poderão ser revistos, a qualquer tempo, a pedido ou de ofício, quando surgirem fatos novos ou circunstâncias relevantes suscetíveis de justificar a inadequação da sanção aplicada."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Da revisão do processo não poderá resultar agravamento da\nDa revisão do processo não poderá resultar agravamento da\nsanção.\nCAPÍTULO\nXVI\nDOS PRAZOS",
+        "normalized_text": "Parágrafo único. Da revisão do processo não poderá resultar agravamento da Da revisão do processo não poderá resultar agravamento da sanção. CAPÍTULO XVI DOS PRAZOS"
+      }
+    },
+    "Art. 66": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os prazos começam a correr a partir da data da cientificação\noficial, excluindo-se da contagem o dia do começo e incluindo-se o\ndo vencimento.",
+        "normalized_text": "Os prazos começam a correr a partir da data da cientificação oficial, excluindo-se da contagem o dia do começo e incluindo-se o do vencimento."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Considera-se prorrogado o prazo até o primeiro dia útil\nConsidera-se prorrogado o prazo até o primeiro dia útil\nseguinte se o vencimento cair em dia em que não houver expediente ou\neste for encerrado antes da hora normal.",
+        "normalized_text": "§ 1º Considera-se prorrogado o prazo até o primeiro dia útil Considera-se prorrogado o prazo até o primeiro dia útil seguinte se o vencimento cair em dia em que não houver expediente ou este for encerrado antes da hora normal."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Os prazos expressos em dias contam-se de modo contínuo.\nOs prazos expressos em dias contam-se de modo contínuo.",
+        "normalized_text": "§ 2º Os prazos expressos em dias contam-se de modo contínuo. Os prazos expressos em dias contam-se de modo contínuo."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Os prazos fixados em meses ou anos contam-se de data a data. Se\nOs prazos fixados em meses ou anos contam-se de data a data. Se\nno mês do vencimento não houver o dia equivalente àquele do início\ndo prazo, tem-se como termo o último dia do mês.",
+        "normalized_text": "§ 3º Os prazos fixados em meses ou anos contam-se de data a data. Se Os prazos fixados em meses ou anos contam-se de data a data. Se no mês do vencimento não houver o dia equivalente àquele do início do prazo, tem-se como termo o último dia do mês."
+      }
+    },
+    "Art. 67": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Salvo motivo de força maior devidamente comprovado, os prazos\nprocessuais não se suspendem.\nCAPÍTULO\nXVII\nDAS SANÇÕES",
+        "normalized_text": "Salvo motivo de força maior devidamente comprovado, os prazos processuais não se suspendem. CAPÍTULO XVII DAS SANÇÕES"
+      }
+    },
+    "Art. 68": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As sanções, a serem aplicadas por autoridade competente, terão\nnatureza pecuniária ou consistirão em obrigação de fazer ou de\nnão fazer, assegurado sempre o direito de defesa.\nCAPÍTULO\nXVIII\nDAS\nDISPOSIÇÕES FINAIS",
+        "normalized_text": "As sanções, a serem aplicadas por autoridade competente, terão natureza pecuniária ou consistirão em obrigação de fazer ou de não fazer, assegurado sempre o direito de defesa. CAPÍTULO XVIII DAS DISPOSIÇÕES FINAIS"
+      }
+    },
+    "Art. 69": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os processos administrativos específicos continuarão a reger-se\npor lei própria, aplicando-se-lhes apenas subsidiariamente os\npreceitos desta Lei.\nArt.\n69-A. Terão prioridade na tramitação, em qualquer órgão ou\ninstância, os procedimentos administrativos em que figure como parte\nou interessado:\nI\n- pessoa com idade igual ou superior a 60 (sessenta) anos;\nII\n- pessoa portadora de deficiência, física ou mental;\nIII\n- (VETADO)\nIV\n- pessoa portadora de tuberculose ativa, esclerose múltipla,\nneoplasia maligna, hanseníase, paralisia irreversível e\nincapacitante, cardiopatia grave, doença de Parkinson,\nespondiloartrose anquilosante, nefropatia grave, hepatopatia grave,\nestados avançados da doença de Paget (osteíte deformante),\ncontaminação por radiação, síndrome de imunodeficiência\nadquirida, ou outra doença grave, com base em conclusão da medicina\nespecializada, mesmo que a doença tenha sido contraída após o\ninício do processo.",
+        "normalized_text": "Os processos administrativos específicos continuarão a reger-se por lei própria, aplicando-se-lhes apenas subsidiariamente os preceitos desta Lei. Art. 69-A. Terão prioridade na tramitação, em qualquer órgão ou instância, os procedimentos administrativos em que figure como parte ou interessado: I - pessoa com idade igual ou superior a 60 (sessenta) anos; II - pessoa portadora de deficiência, física ou mental; III - (VETADO) IV - pessoa portadora de tuberculose ativa, esclerose múltipla, neoplasia maligna, hanseníase, paralisia irreversível e incapacitante, cardiopatia grave, doença de Parkinson, espondiloartrose anquilosante, nefropatia grave, hepatopatia grave, estados avançados da doença de Paget (osteíte deformante), contaminação por radiação, síndrome de imunodeficiência adquirida, ou outra doença grave, com base em conclusão da medicina especializada, mesmo que a doença tenha sido contraída após o início do processo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A pessoa interessada na obtenção do benefício, juntando prova\nA pessoa interessada na obtenção do benefício, juntando prova\nde sua condição, deverá requerê-lo à autoridade administrativa\ncompetente, que determinará as providências a serem cumpridas.",
+        "normalized_text": "§ 1º A pessoa interessada na obtenção do benefício, juntando prova A pessoa interessada na obtenção do benefício, juntando prova de sua condição, deverá requerê-lo à autoridade administrativa competente, que determinará as providências a serem cumpridas."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Deferida a prioridade, os autos receberão identificação\nDeferida a prioridade, os autos receberão identificação\nprópria que evidencie o regime de tramitação prioritária.",
+        "normalized_text": "§ 2º Deferida a prioridade, os autos receberão identificação Deferida a prioridade, os autos receberão identificação própria que evidencie o regime de tramitação prioritária."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º (VETADO)\n(VETADO)",
+        "normalized_text": "§ 3º (VETADO) (VETADO)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º (VETADO)\n(VETADO)\n(Artigo\nacrescido pela Lei nº 12.008, de 29/7/2009)",
+        "normalized_text": "§ 4º (VETADO) (VETADO) (Artigo acrescido pela Lei nº 12.008, de 29/7/2009)"
+      }
+    },
+    "Art. 70": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.\nBrasília\n29 de janeiro de 1999; 178º da Independência e 111º da República.\nFERNANDO\nHENRIQUE CARDOSO\nRenan\nCalheiros\nPaulo\nPaiva",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação. Brasília 29 de janeiro de 1999; 178º da Independência e 111º da República. FERNANDO HENRIQUE CARDOSO Renan Calheiros Paulo Paiva"
+      }
+    }
   }
 }

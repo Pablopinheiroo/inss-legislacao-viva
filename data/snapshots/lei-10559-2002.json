@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -29,5 +29,385 @@
     "Art. 20": "Art. 20 Ao declarado anistiado que se encontre em litígio judicial\nvisando à obtenção dos benefícios ou indenização estabelecidos\npelo art. 8º do Ato das Disposições Constitucionais Transitórias\né facultado celebrar transação a ser homologada no juízo\ncompetente.\nParágrafo\núnico. Para efeito do cumprimento do disposto neste artigo, a\nAdvocacia-Geral da União e as Procuradorias Jurídicas das\nautarquias e fundações públicas federais ficam autorizadas a\ncelebrar transação nos processos movidos contra a União ou suas\nentidades.",
     "Art. 21": "Art. 21 Esta Lei entra em vigor na data da sua publicação.",
     "Art. 22": "Art. 22 Ficam revogados a Medida Provisória nº 2.151-3, de 24 de agosto\nde 2001, o art. 2º, o § 5º do art. 3º, e os arts. 4º e 5º da\nLei nº 6.683, de 28 de agosto de 1979, e o art. 150 da Lei nº\n8.213, de 24 de julho de 1991.\nCongresso\nNacional, em 13 de novembro de 2002; 181º da Independência e 114º\nda República.\nSenador\nRAMEZ TEBET\nPresidente\nda Mesa do Congresso Nacional"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Regime do Anistiado Político compreende os seguintes direitos:\nI\n- declaração da condição de anistiado político;\nII\n- reparação econômica, de caráter indenizatório, em prestação\núnica ou em prestação mensal, permanente e continuada, asseguradas\na readmissão ou a promoção na inatividade, nas condições\nestabelecidas no caput e nos §§ 1º e 5º do art. 8º do Ato das\nDisposições Constitucionais Transitórias;\nIII\n- contagem, para todos os efeitos, do tempo em que o anistiado\npolítico esteve compelido ao afastamento de suas atividades\nprofissionais, em virtude de punição ou de fundada ameaça de\npunição, por motivo exclusivamente político, vedada a exigência\nde recolhimento de quaisquer contribuições previdenciárias;\nIV\n- conclusão do curso, em escola pública, ou, na falta, com\nprioridade para bolsa de estudo, a partir do período letivo\ninterrompido, para o punido na condição de estudante, em escola\npública, ou registro do respectivo diploma para os que concluíram\ncurso em instituições de ensino no exterior, mesmo que este não\ntenha correspondente no Brasil, exigindo-se para isso o diploma ou\ncertificado de conclusão do curso em instituição de reconhecido\nprestígio internacional; e\nV\n- reintegração dos servidores públicos civis e dos empregados\npúblicos punidos, por interrupção de atividade profissional em\ndecorrência de decisão dos trabalhadores, por adesão à greve em\nserviço público e em atividades essenciais de interesse da\nsegurança nacional por motivo político.",
+        "normalized_text": "O Regime do Anistiado Político compreende os seguintes direitos: I - declaração da condição de anistiado político; II - reparação econômica, de caráter indenizatório, em prestação única ou em prestação mensal, permanente e continuada, asseguradas a readmissão ou a promoção na inatividade, nas condições estabelecidas no caput e nos §§ 1º e 5º do art. 8º do Ato das Disposições Constitucionais Transitórias; III - contagem, para todos os efeitos, do tempo em que o anistiado político esteve compelido ao afastamento de suas atividades profissionais, em virtude de punição ou de fundada ameaça de punição, por motivo exclusivamente político, vedada a exigência de recolhimento de quaisquer contribuições previdenciárias; IV - conclusão do curso, em escola pública, ou, na falta, com prioridade para bolsa de estudo, a partir do período letivo interrompido, para o punido na condição de estudante, em escola pública, ou registro do respectivo diploma para os que concluíram curso em instituições de ensino no exterior, mesmo que este não tenha correspondente no Brasil, exigindo-se para isso o diploma ou certificado de conclusão do curso em instituição de reconhecido prestígio internacional; e V - reintegração dos servidores públicos civis e dos empregados públicos punidos, por interrupção de atividade profissional em decorrência de decisão dos trabalhadores, por adesão à greve em serviço público e em atividades essenciais de interesse da segurança nacional por motivo político."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Aqueles que foram afastados em processos administrativos,\nAqueles que foram afastados em processos administrativos,\ninstalados com base na legislação de exceção, sem direito ao\ncontraditório e à própria defesa, e impedidos de conhecer os\nmotivos e fundamentos da decisão, serão reintegrados em seus\ncargos.\nCAPÍTULO II\nDA\nDECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO",
+        "normalized_text": "Parágrafo único. Aqueles que foram afastados em processos administrativos, Aqueles que foram afastados em processos administrativos, instalados com base na legislação de exceção, sem direito ao contraditório e à própria defesa, e impedidos de conhecer os motivos e fundamentos da decisão, serão reintegrados em seus cargos. CAPÍTULO II DA DECLARAÇÃO DA CONDIÇÃO DE ANISTIADO POLÍTICO"
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "São declarados anistiados políticos aqueles que, no período de\n18 de setembro de 1946 até 5 de outubro de 1988, por motivação\nexclusivamente política, foram:\nI\n- atingidos por atos institucionais ou complementares, ou de exceção\nna plena abrangência do termo;\nII\n- punidos com transferência para localidade diversa daquela onde\nexerciam suas atividades profissionais, impondo-se mudanças de local\nde residência;\nIII\n- punidos com perda de comissões já incorporadas ao contrato de\ntrabalho ou inerentes às suas carreiras administrativas;\nIV\n- compelidos ao afastamento da atividade profissional remunerada,\npara acompanhar o cônjuge;\nV\n- impedidos de exercer, na vida civil, atividade profissional\nespecífica em decorrência das Portarias Reservadas do Ministério\nda Aeronáutica nº S-50-GM5, de 19 de junho de 1964, e nº\nS-285-GM5;\nVI\n- punidos, demitidos ou compelidos ao afastamento das atividades\nremuneradas que exerciam, bem como impedidos de exercer atividades\nprofissionais em virtude de pressões ostensivas ou expedientes\noficiais sigilosos, sendo trabalhadores do setor privado ou\ndirigentes e representantes sindicais, nos termos do § 2º do art.\n8º do Ato das Disposições Constitucionais Transitórias;\nVII\n- punidos com fundamento em atos de exceção, institucionais ou\ncomplementares, ou sofreram punição disciplinar, sendo estudantes;\nVIII\n- abrangidos pelo Decreto Legislativo nº 18, de 15 de dezembro de\n1961, e pelo Decreto-Lei nº 864, de 12 de setembro de 1969;\nIX\n- demitidos, sendo servidores públicos civis e empregados em todos\nos níveis de governo ou em suas fundações públicas, empresas\npúblicas ou empresas mistas ou sob controle estatal, exceto nos\nComandos militares no que se refere ao disposto no § 5º do art. 8º\ndo Ato das Disposições Constitucionais Transitórias;\nX\n- punidos com a cassação da aposentadoria ou disponibilidade;\nXI\n- desligados, licenciados, expulsos ou de qualquer forma compelidos\nao afastamento de suas atividades remuneradas, ainda que com\nfundamento na legislação comum, ou decorrentes de expedientes\noficiais sigilosos.\nXII\n- punidos com a transferência para a reserva remunerada, reformados,\nou, já na condição de inativos, com perda de proventos, por atos\nde exceção, institucionais ou complementares, na plena abrangência\ndo termo;\nXIII\n- compelidos a exercer gratuitamente mandato eletivo de vereador, por\nforça de atos institucionais;\nXIV\n- punidos com a cassação de seus mandatos eletivos nos Poderes\nLegislativo ou Executivo, em todos os níveis de governo;\nXV\n- na condição de servidores públicos civis ou empregados em todos\nos níveis de governo ou de suas fundações, empresas públicas ou\nde economia mista ou sob controle estatal, punidos ou demitidos por\ninterrupção de atividades profissionais, em decorrência de decisão\nde trabalhadores;\nXVI\n- sendo servidores públicos, punidos com demissão ou afastamento, e\nque não requereram retorno ou reversão à atividade, no prazo que\ntranscorreu de 28 de agosto de 1979 a 26 de dezembro do mesmo ano, ou\ntiveram seu pedido indeferido, arquivado ou não conhecido e tampouco\nforam considerados aposentados, transferidos para a reserva ou\nreformados;\nXVII\n- impedidos de tomar posse ou de entrar em exercício de cargo\npúblico, nos Poderes Judiciário, Legislativo ou Executivo, em todos\nos níveis, tendo sido válido o concurso.",
+        "normalized_text": "São declarados anistiados políticos aqueles que, no período de 18 de setembro de 1946 até 5 de outubro de 1988, por motivação exclusivamente política, foram: I - atingidos por atos institucionais ou complementares, ou de exceção na plena abrangência do termo; II - punidos com transferência para localidade diversa daquela onde exerciam suas atividades profissionais, impondo-se mudanças de local de residência; III - punidos com perda de comissões já incorporadas ao contrato de trabalho ou inerentes às suas carreiras administrativas; IV - compelidos ao afastamento da atividade profissional remunerada, para acompanhar o cônjuge; V - impedidos de exercer, na vida civil, atividade profissional específica em decorrência das Portarias Reservadas do Ministério da Aeronáutica nº S-50-GM5, de 19 de junho de 1964, e nº S-285-GM5; VI - punidos, demitidos ou compelidos ao afastamento das atividades remuneradas que exerciam, bem como impedidos de exercer atividades profissionais em virtude de pressões ostensivas ou expedientes oficiais sigilosos, sendo trabalhadores do setor privado ou dirigentes e representantes sindicais, nos termos do § 2º do art. 8º do Ato das Disposições Constitucionais Transitórias; VII - punidos com fundamento em atos de exceção, institucionais ou complementares, ou sofreram punição disciplinar, sendo estudantes; VIII - abrangidos pelo Decreto Legislativo nº 18, de 15 de dezembro de 1961, e pelo Decreto-Lei nº 864, de 12 de setembro de 1969; IX - demitidos, sendo servidores públicos civis e empregados em todos os níveis de governo ou em suas fundações públicas, empresas públicas ou empresas mistas ou sob controle estatal, exceto nos Comandos militares no que se refere ao disposto no § 5º do art. 8º do Ato das Disposições Constitucionais Transitórias; X - punidos com a cassação da aposentadoria ou disponibilidade; XI - desligados, licenciados, expulsos ou de qualquer forma compelidos ao afastamento de suas atividades remuneradas, ainda que com fundamento na legislação comum, ou decorrentes de expedientes oficiais sigilosos. XII - punidos com a transferência para a reserva remunerada, reformados, ou, já na condição de inativos, com perda de proventos, por atos de exceção, institucionais ou complementares, na plena abrangência do termo; XIII - compelidos a exercer gratuitamente mandato eletivo de vereador, por força de atos institucionais; XIV - punidos com a cassação de seus mandatos eletivos nos Poderes Legislativo ou Executivo, em todos os níveis de governo; XV - na condição de servidores públicos civis ou empregados em todos os níveis de governo ou de suas fundações, empresas públicas ou de economia mista ou sob controle estatal, punidos ou demitidos por interrupção de atividades profissionais, em decorrência de decisão de trabalhadores; XVI - sendo servidores públicos, punidos com demissão ou afastamento, e que não requereram retorno ou reversão à atividade, no prazo que transcorreu de 28 de agosto de 1979 a 26 de dezembro do mesmo ano, ou tiveram seu pedido indeferido, arquivado ou não conhecido e tampouco foram considerados aposentados, transferidos para a reserva ou reformados; XVII - impedidos de tomar posse ou de entrar em exercício de cargo público, nos Poderes Judiciário, Legislativo ou Executivo, em todos os níveis, tendo sido válido o concurso."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido\nNo caso previsto no inciso XIII, o período de mandato exercido\ngratuitamente conta-se apenas para efeito de aposentadoria no serviço\npúblico e de previdência social.",
+        "normalized_text": "§ 1º No caso previsto no inciso XIII, o período de mandato exercido No caso previsto no inciso XIII, o período de mandato exercido gratuitamente conta-se apenas para efeito de aposentadoria no serviço público e de previdência social."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração\nFica assegurado o direito de requerer a correspondente declaração\naos sucessores ou dependentes daquele que seria beneficiário da\ncondição de anistiado político.\nCAPÍTULO\nIII\nDA REPARAÇÃO\nECONÔMICA DE CARÁTER INDENIZATÓRIO",
+        "normalized_text": "§ 2º Fica assegurado o direito de requerer a correspondente declaração Fica assegurado o direito de requerer a correspondente declaração aos sucessores ou dependentes daquele que seria beneficiário da condição de anistiado político. CAPÍTULO III DA REPARAÇÃO ECONÔMICA DE CARÁTER INDENIZATÓRIO"
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A reparação econômica de que trata o inciso II do art. 1º\ndesta Lei, nas condições estabelecidas no caput do art. 8º do Ato\ndas Disposições Constitucionais Transitórias, correrá à conta do\nTesouro Nacional.",
+        "normalized_text": "A reparação econômica de que trata o inciso II do art. 1º desta Lei, nas condições estabelecidas no caput do art. 8º do Ato das Disposições Constitucionais Transitórias, correrá à conta do Tesouro Nacional."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A reparação econômica em prestação única não é acumulável\nA reparação econômica em prestação única não é acumulável\ncom a reparação econômica em prestação mensal, permanente e\ncontinuada.",
+        "normalized_text": "§ 1º A reparação econômica em prestação única não é acumulável A reparação econômica em prestação única não é acumulável com a reparação econômica em prestação mensal, permanente e continuada."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º A reparação econômica, nas condições estabelecidas no\nA reparação econômica, nas condições estabelecidas no\ncaput\ndo art. 8º do Ato das Disposições Constitucionais Transitórias,\nserá concedida mediante portaria do Ministro de Estado da Justiça,\napós parecer favorável da Comissão de Anistia de que trata o art.\n12 desta Lei.\nSeção I\nDa\nReparação Econômica em Prestação Única",
+        "normalized_text": "§ 2º A reparação econômica, nas condições estabelecidas no A reparação econômica, nas condições estabelecidas no caput do art. 8º do Ato das Disposições Constitucionais Transitórias, será concedida mediante portaria do Ministro de Estado da Justiça, após parecer favorável da Comissão de Anistia de que trata o art. 12 desta Lei. Seção I Da Reparação Econômica em Prestação Única"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A reparação econômica em prestação única consistirá no\npagamento de trinta salários mínimos por ano de punição e será\ndevida aos anistiados políticos que não puderem comprovar vínculos\ncom a atividade laboral.",
+        "normalized_text": "A reparação econômica em prestação única consistirá no pagamento de trinta salários mínimos por ano de punição e será devida aos anistiados políticos que não puderem comprovar vínculos com a atividade laboral."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo,\nPara o cálculo do pagamento mencionado no caput deste artigo,\nconsidera-se como um ano o período inferior a doze meses.",
+        "normalized_text": "§ 1º Para o cálculo do pagamento mencionado no caput deste artigo, Para o cálculo do pagamento mencionado no caput deste artigo, considera-se como um ano o período inferior a doze meses."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em\nEm nenhuma hipótese o valor da reparação econômica em\nprestação única será superior a R$ 100.000,00 (cem mil reais).\nSeção\nII\nDa\nReparação Econômica em Prestação Mensal, Permanente e Continuada",
+        "normalized_text": "§ 2º Em nenhuma hipótese o valor da reparação econômica em Em nenhuma hipótese o valor da reparação econômica em prestação única será superior a R$ 100.000,00 (cem mil reais). Seção II Da Reparação Econômica em Prestação Mensal, Permanente e Continuada"
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A reparação econômica em prestação mensal, permanente e\ncontinuada, nos termos do art. 8º do Ato das Disposições\nConstitucionais Transitórias, será assegurada aos anistiados\npolíticos que comprovarem vínculos com a atividade laboral, à\nexceção dos que optarem por receber em prestação única.",
+        "normalized_text": "A reparação econômica em prestação mensal, permanente e continuada, nos termos do art. 8º do Ato das Disposições Constitucionais Transitórias, será assegurada aos anistiados políticos que comprovarem vínculos com a atividade laboral, à exceção dos que optarem por receber em prestação única."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O valor da prestação mensal, permanente e continuada, será\nigual ao da remuneração que o anistiado político receberia se na\nativa estivesse, considerada a graduação a que teria direito,\nobedecidos os prazos para promoção previstos nas leis e\nregulamentos vigentes, e asseguradas as promoções ao oficialato,\nindependentemente de requisitos e condições, respeitadas as\ncaracterísticas e peculiaridades dos regimes jurídicos dos\nservidores públicos civis e dos militares, e, se necessário,\nconsiderando-se os seus paradigmas.",
+        "normalized_text": "O valor da prestação mensal, permanente e continuada, será igual ao da remuneração que o anistiado político receberia se na ativa estivesse, considerada a graduação a que teria direito, obedecidos os prazos para promoção previstos nas leis e regulamentos vigentes, e asseguradas as promoções ao oficialato, independentemente de requisitos e condições, respeitadas as características e peculiaridades dos regimes jurídicos dos servidores públicos civis e dos militares, e, se necessário, considerando-se os seus paradigmas."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O valor da prestação mensal, permanente e continuada, será\nO valor da prestação mensal, permanente e continuada, será\nestabelecido conforme os elementos de prova oferecidos pelo\nrequerente, informações de órgãos oficiais, bem como de\nfundações, empresas públicas ou privadas, ou empresas mistas sob\ncontrole estatal, ordens, sindicatos ou conselhos profissionais a que\no anistiado político estava vinculado ao sofrer a punição, podendo\nser arbitrado até mesmo com base em pesquisa de mercado.",
+        "normalized_text": "§ 1º O valor da prestação mensal, permanente e continuada, será O valor da prestação mensal, permanente e continuada, será estabelecido conforme os elementos de prova oferecidos pelo requerente, informações de órgãos oficiais, bem como de fundações, empresas públicas ou privadas, ou empresas mistas sob controle estatal, ordens, sindicatos ou conselhos profissionais a que o anistiado político estava vinculado ao sofrer a punição, podendo ser arbitrado até mesmo com base em pesquisa de mercado."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo\nPara o cálculo do valor da prestação de que trata este artigo\nserão considerados os direitos e vantagens incorporados à situação\njurídica da categoria profissional a que pertencia o anistiado\npolítico, observado o disposto no § 4º deste artigo.",
+        "normalized_text": "§ 2º Para o cálculo do valor da prestação de que trata este artigo Para o cálculo do valor da prestação de que trata este artigo serão considerados os direitos e vantagens incorporados à situação jurídica da categoria profissional a que pertencia o anistiado político, observado o disposto no § 4º deste artigo."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º As promoções asseguradas ao anistiado político independerão\nAs promoções asseguradas ao anistiado político independerão\nde seu tempo de admissão ou incorporação de seu posto ou\ngraduação, sendo obedecidos os prazos de permanência em atividades\nprevistos nas leis e regulamentos vigentes, vedada a exigência de\nsatisfação das condições incompatíveis com a situação pessoal\ndo beneficiário.",
+        "normalized_text": "§ 3º As promoções asseguradas ao anistiado político independerão As promoções asseguradas ao anistiado político independerão de seu tempo de admissão ou incorporação de seu posto ou graduação, sendo obedecidos os prazos de permanência em atividades previstos nas leis e regulamentos vigentes, vedada a exigência de satisfação das condições incompatíveis com a situação pessoal do beneficiário."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação\nPara os efeitos desta Lei, considera-se paradigma a situação\nfuncional de maior frequência constatada entre os pares ou colegas\ncontemporâneos do anistiado que apresentavam o mesmo posicionamento\nno cargo, emprego ou posto quando da punição.",
+        "normalized_text": "§ 4º Para os efeitos desta Lei, considera-se paradigma a situação Para os efeitos desta Lei, considera-se paradigma a situação funcional de maior frequência constatada entre os pares ou colegas contemporâneos do anistiado que apresentavam o mesmo posicionamento no cargo, emprego ou posto quando da punição."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até\nDesde que haja manifestação do beneficiário, no prazo de até\ndois anos a contar da entrada em vigor desta Lei, será revisto, pelo\nórgão competente, no prazo de até seis meses a contar da data do\nrequerimento, o valor da aposentadoria e da pensão excepcional,\nrelativa ao anistiado político, que tenha sido reduzido ou cancelado\nem virtude de critérios previdenciários ou estabelecido por ordens\nnormativas ou de serviço do Instituto Nacional do Seguro Social -\nINSS, respeitado o disposto no art. 7º desta Lei.",
+        "normalized_text": "§ 5º Desde que haja manifestação do beneficiário, no prazo de até Desde que haja manifestação do beneficiário, no prazo de até dois anos a contar da entrada em vigor desta Lei, será revisto, pelo órgão competente, no prazo de até seis meses a contar da data do requerimento, o valor da aposentadoria e da pensão excepcional, relativa ao anistiado político, que tenha sido reduzido ou cancelado em virtude de critérios previdenciários ou estabelecido por ordens normativas ou de serviço do Instituto Nacional do Seguro Social - INSS, respeitado o disposto no art. 7º desta Lei."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar\nOs valores apurados nos termos deste artigo poderão gerar\nefeitos financeiros a partir de 5 de outubro de 1988, considerando-se\npara início da retroatividade e da prescrição quinquenal a data do\nprotocolo da petição ou requerimento inicial de anistia, de acordo\ncom os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de",
+        "normalized_text": "§ 6º Os valores apurados nos termos deste artigo poderão gerar Os valores apurados nos termos deste artigo poderão gerar efeitos financeiros a partir de 5 de outubro de 1988, considerando-se para início da retroatividade e da prescrição quinquenal a data do protocolo da petição ou requerimento inicial de anistia, de acordo com os arts. 1º e 4º do Decreto nº 20.910, de 6 de janeiro de"
+      },
+      "paragrafo:6/item:1932": {
+        "device_type": "item",
+        "device_label": "item 1932",
+        "device_path": "paragrafo:6/item:1932",
+        "text": "1932.",
+        "normalized_text": "1932."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O valor da prestação mensal, permanente e continuada, não será\ninferior ao do salário mínimo nem superior ao do teto estabelecido\nno art. 37, inciso XI, e § 9º da Constituição.",
+        "normalized_text": "O valor da prestação mensal, permanente e continuada, não será inferior ao do salário mínimo nem superior ao do teto estabelecido no art. 37, inciso XI, e § 9º da Constituição."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Se o anistiado político era, na data da punição,\nSe o anistiado político era, na data da punição,\ncomprovadamente remunerado por mais de uma atividade laboral, não\neventual, o valor da prestação mensal, permanente e continuada,\nserá igual à soma das remunerações a que tinha direito, até o\nlimite estabelecido no caput deste artigo, obedecidas as regras\nconstitucionais de não-acumulação de cargos, funções, empregos\nou proventos.",
+        "normalized_text": "§ 1º Se o anistiado político era, na data da punição, Se o anistiado político era, na data da punição, comprovadamente remunerado por mais de uma atividade laboral, não eventual, o valor da prestação mensal, permanente e continuada, será igual à soma das remunerações a que tinha direito, até o limite estabelecido no caput deste artigo, obedecidas as regras constitucionais de não-acumulação de cargos, funções, empregos ou proventos."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo,\nPara o cálculo da prestação mensal de que trata este artigo,\nserão asseguradas, na inatividade, na aposentadoria ou na reserva,\nas promoções ao cargo, emprego, posto ou graduação a que teria\ndireito se estivesse em serviço ativo.",
+        "normalized_text": "§ 2º Para o cálculo da prestação mensal de que trata este artigo, Para o cálculo da prestação mensal de que trata este artigo, serão asseguradas, na inatividade, na aposentadoria ou na reserva, as promoções ao cargo, emprego, posto ou graduação a que teria direito se estivesse em serviço ativo."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O reajustamento do valor da prestação mensal, permanente e\ncontinuada, será feito quando ocorrer alteração na remuneração\nque o anistiado político estaria recebendo se estivesse em serviço\nativo, observadas as disposições do art. 8º do Ato das Disposições\nConstitucionais Transitórias.",
+        "normalized_text": "O reajustamento do valor da prestação mensal, permanente e continuada, será feito quando ocorrer alteração na remuneração que o anistiado político estaria recebendo se estivesse em serviço ativo, observadas as disposições do art. 8º do Ato das Disposições Constitucionais Transitórias."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os valores pagos por anistia não poderão ser objeto de\ncontribuição ao INSS, a caixas de assistência ou fundos de pensão\nou previdência, nem objeto de ressarcimento por estes de suas\nresponsabilidades estatutárias.",
+        "normalized_text": "Os valores pagos por anistia não poderão ser objeto de contribuição ao INSS, a caixas de assistência ou fundos de pensão ou previdência, nem objeto de ressarcimento por estes de suas responsabilidades estatutárias."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Os valores pagos a título de indenização a anistiados\nOs valores pagos a título de indenização a anistiados\npolíticos são isentos do Imposto de Renda.\nCAPÍTULO IV\nDAS\nCOMPETÊNCIAS ADMINISTRATIVAS",
+        "normalized_text": "Parágrafo único. Os valores pagos a título de indenização a anistiados Os valores pagos a título de indenização a anistiados políticos são isentos do Imposto de Renda. CAPÍTULO IV DAS COMPETÊNCIAS ADMINISTRATIVAS"
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Caberá ao Ministro de Estado da Mulher, da Família e dos\nDireitos Humanos decidir a respeito dos requerimentos baseados nesta\nLei.\n(Artigo\ncom redação dada pela\nLei\nnº 13.844, de 18/6/2019\n)",
+        "normalized_text": "Caberá ao Ministro de Estado da Mulher, da Família e dos Direitos Humanos decidir a respeito dos requerimentos baseados nesta Lei. (Artigo com redação dada pela Lei nº 13.844, de 18/6/2019 )"
+      }
+    },
+    "Art. 11": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Todos os processos de anistia política, deferidos ou não,\ninclusive os que estão arquivados, bem como os respectivos atos\ninformatizados que se encontram em outros Ministérios, ou em outros\nórgãos da Administração Pública direta ou indireta, serão\ntransferidos para o Ministério da Justiça, no prazo de noventa dias\ncontados da publicação desta Lei.",
+        "normalized_text": "Todos os processos de anistia política, deferidos ou não, inclusive os que estão arquivados, bem como os respectivos atos informatizados que se encontram em outros Ministérios, ou em outros órgãos da Administração Pública direta ou indireta, serão transferidos para o Ministério da Justiça, no prazo de noventa dias contados da publicação desta Lei."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a\nO anistiado político ou seu dependente poderá solicitar, a\nqualquer tempo, a revisão do valor da correspondente prestação\nmensal, permanente e continuada, toda vez que esta não esteja de\nacordo com os arts. 6º, 7º, 8º e 9º desta Lei.",
+        "normalized_text": "Parágrafo único. O anistiado político ou seu dependente poderá solicitar, a O anistiado político ou seu dependente poderá solicitar, a qualquer tempo, a revisão do valor da correspondente prestação mensal, permanente e continuada, toda vez que esta não esteja de acordo com os arts. 6º, 7º, 8º e 9º desta Lei."
+      }
+    },
+    "Art. 12": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica criada, no âmbito do Ministério da Mulher, da Família e\ndos Direitos Humanos, a Comissão de Anistia, com a finalidade de\nexaminar os requerimentos referidos no art. 10 desta Lei e de\nassessorar o Ministro de Estado em suas decisões.\n(“Caput”\ndo artigo com redação dada pela Medida Provisória nº 870, de\n1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "Fica criada, no âmbito do Ministério da Mulher, da Família e dos Direitos Humanos, a Comissão de Anistia, com a finalidade de examinar os requerimentos referidos no art. 10 desta Lei e de assessorar o Ministro de Estado em suas decisões. (“Caput” do artigo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de\nOs membros da Comissão de Anistia serão designados por meio de\nportaria do Ministro de Estado da Mulher, da Família e dos Direitos\nHumanos, e participarão da Comissão, entre outros, 1 (um)\nrepresentante do Ministério da Defesa, indicado pelo respectivo\nMinistro de Estado, e 1 (um) representante dos anistiados.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 1º Os membros da Comissão de Anistia serão designados por meio de Os membros da Comissão de Anistia serão designados por meio de portaria do Ministro de Estado da Mulher, da Família e dos Direitos Humanos, e participarão da Comissão, entre outros, 1 (um) representante do Ministério da Defesa, indicado pelo respectivo Ministro de Estado, e 1 (um) representante dos anistiados. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O representante dos anistiados será indicado pelas respectivas\nO representante dos anistiados será indicado pelas respectivas\nassociações e designado conforme procedimento estabelecido pelo\nMinistro de Estado da Mulher, da Família e dos Direitos Humanos.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 2º O representante dos anistiados será indicado pelas respectivas O representante dos anistiados será indicado pelas respectivas associações e designado conforme procedimento estabelecido pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar\nPara os fins desta Lei, a Comissão de Anistia poderá realizar\ndiligências, requerer informações e documentos, ouvir testemunhas\ne emitir pareceres técnicos com o objetivo de instruir os processos\ne requerimentos, bem como arbitrar, com base nas provas obtidas, o\nvalor das indenizações previstas nos arts. 4º e 5º nos casos que\nnão for possível identificar o tempo exato de punição do\ninteressado.",
+        "normalized_text": "§ 3º Para os fins desta Lei, a Comissão de Anistia poderá realizar Para os fins desta Lei, a Comissão de Anistia poderá realizar diligências, requerer informações e documentos, ouvir testemunhas e emitir pareceres técnicos com o objetivo de instruir os processos e requerimentos, bem como arbitrar, com base nas provas obtidas, o valor das indenizações previstas nos arts. 4º e 5º nos casos que não for possível identificar o tempo exato de punição do interessado."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º As requisições e as decisões proferidas pelo Ministro de\nAs requisições e as decisões proferidas pelo Ministro de\nEstado da Mulher, da Família e dos Direitos Humanos nos processos de\nanistia política serão obrigatoriamente cumpridas no prazo de 60\n(sessenta) dias, por todos os órgãos da administração pública e\npor quaisquer outras entidades a que estejam dirigidas, ressalvada a\ndisponibilidade orçamentária.\n(Parágrafo\ncom redação dada pela Medida Provisória nº 870, de 1º/1/2019,\nconvertida\nna Lei nº 13.844, de 18/6/2019)",
+        "normalized_text": "§ 4º As requisições e as decisões proferidas pelo Ministro de As requisições e as decisões proferidas pelo Ministro de Estado da Mulher, da Família e dos Direitos Humanos nos processos de anistia política serão obrigatoriamente cumpridas no prazo de 60 (sessenta) dias, por todos os órgãos da administração pública e por quaisquer outras entidades a que estejam dirigidas, ressalvada a disponibilidade orçamentária. (Parágrafo com redação dada pela Medida Provisória nº 870, de 1º/1/2019, convertida na Lei nº 13.844, de 18/6/2019)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a\nPara a finalidade de bem desempenhar suas atribuições legais, a\nComissão de Anistia poderá requisitar das empresas públicas,\nprivadas ou de economia mista, no período abrangido pela anistia, os\ndocumentos e registros funcionais do postulante à anistia que tenha\npertencido aos seus quadros funcionais, não podendo essas empresas\nrecusar-se à devida exibição dos referidos documentos, desde que\noficialmente solicitado por expediente administrativo da Comissão e\nrequisitar, quando julgar necessário, informações e assessoria das\nassociações dos anistiados.\nCAPÍTULO V\nDAS\nDISPOSIÇÕES GERAIS E FINAIS\nArt. 13 No caso de falecimento do anistiado político, o direito à\nreparação econômica transfere-se aos seus dependentes, observados\nos critérios fixados nos regimes jurídicos dos servidores civis e\nmilitares da União.",
+        "normalized_text": "§ 5º Para a finalidade de bem desempenhar suas atribuições legais, a Para a finalidade de bem desempenhar suas atribuições legais, a Comissão de Anistia poderá requisitar das empresas públicas, privadas ou de economia mista, no período abrangido pela anistia, os documentos e registros funcionais do postulante à anistia que tenha pertencido aos seus quadros funcionais, não podendo essas empresas recusar-se à devida exibição dos referidos documentos, desde que oficialmente solicitado por expediente administrativo da Comissão e requisitar, quando julgar necessário, informações e assessoria das associações dos anistiados. CAPÍTULO V DAS DISPOSIÇÕES GERAIS E FINAIS Art. 13 No caso de falecimento do anistiado político, o direito à reparação econômica transfere-se aos seus dependentes, observados os critérios fixados nos regimes jurídicos dos servidores civis e militares da União."
+      }
+    },
+    "Art. 14": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ao anistiado político são também assegurados os benefícios\nindiretos mantidos pelas empresas ou órgãos da Administração\nPública a que estavam vinculados quando foram punidos, ou pelas\nentidades instituídas por umas ou por outros, inclusive planos de\nseguro, de assistência médica, odontológica e hospitalar, bem como\nde financiamento habitacional.",
+        "normalized_text": "Ao anistiado político são também assegurados os benefícios indiretos mantidos pelas empresas ou órgãos da Administração Pública a que estavam vinculados quando foram punidos, ou pelas entidades instituídas por umas ou por outros, inclusive planos de seguro, de assistência médica, odontológica e hospitalar, bem como de financiamento habitacional."
+      }
+    },
+    "Art. 15": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A empresa, fundação ou autarquia poderá, mediante convênio\ncom a Fazenda Pública, encarregar-se do pagamento da prestação\nmensal, permanente e continuada, relativamente a seus ex-empregados,\nanistiados políticos, bem como a seus eventuais dependentes.",
+        "normalized_text": "A empresa, fundação ou autarquia poderá, mediante convênio com a Fazenda Pública, encarregar-se do pagamento da prestação mensal, permanente e continuada, relativamente a seus ex-empregados, anistiados políticos, bem como a seus eventuais dependentes."
+      }
+    },
+    "Art. 16": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os direitos expressos nesta Lei não excluem os conferidos por\noutras normas legais ou constitucionais, vedada a acumulação de\nquaisquer pagamentos ou benefícios ou indenização com o mesmo\nfundamento, facultando-se a opção mais favorável.",
+        "normalized_text": "Os direitos expressos nesta Lei não excluem os conferidos por outras normas legais ou constitucionais, vedada a acumulação de quaisquer pagamentos ou benefícios ou indenização com o mesmo fundamento, facultando-se a opção mais favorável."
+      }
+    },
+    "Art. 17": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Comprovando-se a falsidade dos motivos que ensejaram a declaração\nda condição de anistiado político ou os benefícios e direitos\nassegurados por esta Lei será o ato respectivo tornado nulo pelo\nMinistro de Estado da Justiça, em procedimento em que se assegurará\na plenitude do direito de defesa, ficando ao favorecido o encargo de\nressarcir a Fazenda Nacional pelas verbas que houver recebido\nindevidamente, sem prejuízo de outras sanções de caráter\nadministrativo e penal.",
+        "normalized_text": "Comprovando-se a falsidade dos motivos que ensejaram a declaração da condição de anistiado político ou os benefícios e direitos assegurados por esta Lei será o ato respectivo tornado nulo pelo Ministro de Estado da Justiça, em procedimento em que se assegurará a plenitude do direito de defesa, ficando ao favorecido o encargo de ressarcir a Fazenda Nacional pelas verbas que houver recebido indevidamente, sem prejuízo de outras sanções de caráter administrativo e penal."
+      }
+    },
+    "Art. 18": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Caberá ao Ministério do Planejamento, Orçamento e Gestão\nefetuar, com referência às anistias concedidas a civis, mediante\ncomunicação do Ministério da Justiça, no prazo de sessenta dias a\ncontar dessa comunicação, o pagamento das reparações econômicas,\ndesde que atendida a ressalva do § 4º do art. 12 desta Lei.",
+        "normalized_text": "Caberá ao Ministério do Planejamento, Orçamento e Gestão efetuar, com referência às anistias concedidas a civis, mediante comunicação do Ministério da Justiça, no prazo de sessenta dias a contar dessa comunicação, o pagamento das reparações econômicas, desde que atendida a ressalva do § 4º do art. 12 desta Lei."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as\nTratando-se de anistias concedidas aos militares, as\nreintegrações e promoções, bem como as reparações econômicas,\nreconhecidas pela Comissão, serão efetuadas pelo Ministério da\nDefesa, no prazo de sessenta dias após a comunicação do Ministério\nda Justiça, à exceção dos casos especificados no art. 2º, inciso\nV, desta Lei.",
+        "normalized_text": "Parágrafo único. Tratando-se de anistias concedidas aos militares, as Tratando-se de anistias concedidas aos militares, as reintegrações e promoções, bem como as reparações econômicas, reconhecidas pela Comissão, serão efetuadas pelo Ministério da Defesa, no prazo de sessenta dias após a comunicação do Ministério da Justiça, à exceção dos casos especificados no art. 2º, inciso V, desta Lei."
+      }
+    },
+    "Art. 19": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O pagamento de aposentadoria ou pensão excepcional relativa aos\njá anistiados políticos, que vem sendo efetuado pelo INSS e demais\nentidades públicas, bem como por empresas, mediante convênio com o\nreferido instituto, será mantido, sem solução de continuidade, até\na sua substituição pelo regime de prestação mensal, permanente e\ncontinuada, instituído por esta Lei, obedecido o que determina o\nart. 11.",
+        "normalized_text": "O pagamento de aposentadoria ou pensão excepcional relativa aos já anistiados políticos, que vem sendo efetuado pelo INSS e demais entidades públicas, bem como por empresas, mediante convênio com o referido instituto, será mantido, sem solução de continuidade, até a sua substituição pelo regime de prestação mensal, permanente e continuada, instituído por esta Lei, obedecido o que determina o art. 11."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Os recursos necessários ao pagamento das reparações\nOs recursos necessários ao pagamento das reparações\neconômicas de caráter indenizatório terão rubrica própria no\nOrçamento Geral da União e serão determinados pelo Ministério da\nJustiça, com destinação específica para civis (Ministério do\nPlanejamento, Orçamento e Gestão) e militares (Ministério da\nDefesa).",
+        "normalized_text": "Parágrafo único. Os recursos necessários ao pagamento das reparações Os recursos necessários ao pagamento das reparações econômicas de caráter indenizatório terão rubrica própria no Orçamento Geral da União e serão determinados pelo Ministério da Justiça, com destinação específica para civis (Ministério do Planejamento, Orçamento e Gestão) e militares (Ministério da Defesa)."
+      }
+    },
+    "Art. 20": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ao declarado anistiado que se encontre em litígio judicial\nvisando à obtenção dos benefícios ou indenização estabelecidos\npelo art. 8º do Ato das Disposições Constitucionais Transitórias\né facultado celebrar transação a ser homologada no juízo\ncompetente.",
+        "normalized_text": "Ao declarado anistiado que se encontre em litígio judicial visando à obtenção dos benefícios ou indenização estabelecidos pelo art. 8º do Ato das Disposições Constitucionais Transitórias é facultado celebrar transação a ser homologada no juízo competente."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a\nPara efeito do cumprimento do disposto neste artigo, a\nAdvocacia-Geral da União e as Procuradorias Jurídicas das\nautarquias e fundações públicas federais ficam autorizadas a\ncelebrar transação nos processos movidos contra a União ou suas\nentidades.",
+        "normalized_text": "Parágrafo único. Para efeito do cumprimento do disposto neste artigo, a Para efeito do cumprimento do disposto neste artigo, a Advocacia-Geral da União e as Procuradorias Jurídicas das autarquias e fundações públicas federais ficam autorizadas a celebrar transação nos processos movidos contra a União ou suas entidades."
+      }
+    },
+    "Art. 21": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data da sua publicação.",
+        "normalized_text": "Esta Lei entra em vigor na data da sua publicação."
+      }
+    },
+    "Art. 22": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ficam revogados a Medida Provisória nº 2.151-3, de 24 de agosto\nde 2001, o art. 2º, o § 5º do art. 3º, e os arts. 4º e 5º da\nLei nº 6.683, de 28 de agosto de 1979, e o art. 150 da Lei nº",
+        "normalized_text": "Ficam revogados a Medida Provisória nº 2.151-3, de 24 de agosto de 2001, o art. 2º, o § 5º do art. 3º, e os arts. 4º e 5º da Lei nº 6.683, de 28 de agosto de 1979, e o art. 150 da Lei nº"
+      },
+      "caput/item:8": {
+        "device_type": "item",
+        "device_label": "item 8",
+        "device_path": "caput/item:8",
+        "text": "8.213, de 24 de julho de 1991.\n213, de 24 de julho de 1991.\nCongresso\nNacional, em 13 de novembro de 2002; 181º da Independência e 114º\nda República.\nSenador\nRAMEZ TEBET\nPresidente\nda Mesa do Congresso Nacional",
+        "normalized_text": "8.213, de 24 de julho de 1991. 213, de 24 de julho de 1991. Congresso Nacional, em 13 de novembro de 2002; 181º da Independência e 114º da República. Senador RAMEZ TEBET Presidente da Mesa do Congresso Nacional"
+      }
+    }
   }
 }

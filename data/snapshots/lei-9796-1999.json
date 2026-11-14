@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -17,5 +17,277 @@
     "Art. 7": "Art. 7º Os regimes instituidores devem comunicar de imediato aos regimes\nde origem qualquer revisão no valor do benefício objeto de\ncompensação financeira ou sua extinção total ou parcial, cabendo\nao Instituto Nacional do Seguro Social - INSS registrar as alterações\nno cadastro a que se refere o artigo anterior.\nParágrafo\núnico. Constatado o não cumprimento do disposto neste artigo, as\nparcelas pagas indevidamente pelo regime de origem serão registradas\nem dobro, no mês seguinte ao da constatação, como débito daquele\nregime.\nArt. 8º Na hipótese de descumprimento do prazo de desembolso estipulado\nno § 2º do art. 6º desta Lei ou de descumprimento do prazo de\nanálise dos requerimentos estipulado em regulamento, serão\naplicadas as mesmas normas em vigor para atualização dos valores\ndos recolhimentos em atraso de contribuições previdenciárias\narrecadadas pelo Instituto Nacional do Seguro Social (INSS).\n(“Caput”\ndo artigo com redação dada pela Lei nº 13.846, de 18/6/2019)\nParágrafo\núnico. Na hipótese de o regime previdenciário próprio dos\nservidores da União, dos Estados, do Distrito Federal e dos\nMunicípios possuir personalidade jurídica própria, os respectivos\nentes federados respondem solidariamente pelas obrigações previstas\nnesta Lei.\nArt.\n8º-A. A compensação financeira entre os regimes próprios de\nprevidência social da União, dos Estados, do Distrito Federal e dos\nMunicípios, na hipótese de contagem recíproca de tempos de\ncontribuição, obedecerá, no que couber, às disposições desta\nLei.\n(“Caput”\ndo artigo acrescido pela Medida Provisória nº 2.187-13, de\n24/8/2001)\n§\n1º O regulamento estabelecerá as disposições específicas a serem\nobservadas na compensação financeira entre os regimes próprios de\nprevidência social, inclusive no que se refere ao período de\nestoque e às condições para seu pagamento, admitido o\nparcelamento.\n(Parágrafo\nacrescido pela Lei nº 13.846, de 18/6/2019)\n§\n2º O ente federativo que não aderir à compensação financeira com\nos demais regimes próprios de previdência social ou inadimplir suas\nobrigações terá suspenso o recebimento dos valores devidos pela\ncompensação com o regime geral de previdência social, na forma\nestabelecida no regulamento.\n(Parágrafo\nacrescido pela Lei nº 13.846, de 18/6/2019)\nArt.\n8º-B.\n(Artigo\nacrescido pela Medida Provisória nº 1.303, de 11/6/2025\n,\ncom\nprazo de vigência encerrado em 8/10/2025, conforme Ato Declaratório\nnº 67, de 14/10/2025, publicado no DOU de 15/10/2025)\nArt.\n8º-C. A despesa federal anual resultante da compensação financeira\nentre o Regime Geral de Previdência Social e os regimes de\nprevidência dos servidores da União, dos Estados, do Distrito\nFederal e dos Municípios fica limitada à dotação orçamentária\npara essa despesa na data de publicação de cada lei orçamentária\nanual.\n(Artigo\nacrescido pela Lei nº 15.265, de 21/11/2025)",
     "Art. 9": "Art. 9º O Poder Executivo regulamentará esta Lei no prazo de sessenta\ndias contado da data de sua publicação.",
     "Art. 10": "Art. 10 Esta Lei entra em vigor na data de sua publicação.\nBrasília,\n5 de maio de 1999; 178º da Independência e 111º da República.\nFERNANDO\nHENRIQUE CARDOSO\nWaldeck\nOrnélas"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A compensação financeira entre o Regime Geral de Previdência\nSocial e os regimes próprios de previdência social dos servidores\nda União, dos Estados, do Distrito Federal e dos Municípios, na\nhipótese de contagem recíproca de tempos de contribuição,\nobedecerá às disposições desta Lei.",
+        "normalized_text": "A compensação financeira entre o Regime Geral de Previdência Social e os regimes próprios de previdência social dos servidores da União, dos Estados, do Distrito Federal e dos Municípios, na hipótese de contagem recíproca de tempos de contribuição, obedecerá às disposições desta Lei."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Para os efeitos desta Lei, considera-se:\nI\n- regime de origem: o regime previdenciário ao qual o segurado ou\nservidor público esteve vinculado sem que dele receba aposentadoria\nou tenha gerado pensão para seus dependentes;\nII\n- regime instituidor: o regime previdenciário responsável pela\nconcessão e pagamento de benefício de aposentadoria ou pensão dela\ndecorrente a segurado ou servidor público ou a seus dependentes com\ncômputo de tempo de contribuição no âmbito do regime de origem.",
+        "normalized_text": "Para os efeitos desta Lei, considera-se: I - regime de origem: o regime previdenciário ao qual o segurado ou servidor público esteve vinculado sem que dele receba aposentadoria ou tenha gerado pensão para seus dependentes; II - regime instituidor: o regime previdenciário responsável pela concessão e pagamento de benefício de aposentadoria ou pensão dela decorrente a segurado ou servidor público ou a seus dependentes com cômputo de tempo de contribuição no âmbito do regime de origem."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os regimes próprios de previdência de servidores da União, dos\nOs regimes próprios de previdência de servidores da União, dos\nEstados, do Distrito Federal e dos Municípios só serão\nconsiderados regimes de origem quando o Regime Geral de Previdência\nSocial for o regime instituidor.",
+        "normalized_text": "§ 1º Os regimes próprios de previdência de servidores da União, dos Os regimes próprios de previdência de servidores da União, dos Estados, do Distrito Federal e dos Municípios só serão considerados regimes de origem quando o Regime Geral de Previdência Social for o regime instituidor."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Na hipótese de o regime próprio de previdência de servidor\nNa hipótese de o regime próprio de previdência de servidor\npúblico não possuir personalidade jurídica própria, atribuem-se\nao respectivo ente federado as obrigações e direitos previstos\nnesta Lei.",
+        "normalized_text": "§ 2º Na hipótese de o regime próprio de previdência de servidor Na hipótese de o regime próprio de previdência de servidor público não possuir personalidade jurídica própria, atribuem-se ao respectivo ente federado as obrigações e direitos previstos nesta Lei."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Regime Geral de Previdência Social, como regime instituidor,\ntem direito de receber de cada regime de origem compensação\nfinanceira, observado o disposto neste artigo.",
+        "normalized_text": "O Regime Geral de Previdência Social, como regime instituidor, tem direito de receber de cada regime de origem compensação financeira, observado o disposto neste artigo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O Regime Geral de Previdência Social deve apresentar a cada\nO Regime Geral de Previdência Social deve apresentar a cada\nregime de origem os seguintes dados referentes a cada benefício\nconcedido com cômputo de tempo de contribuição no âmbito daquele\nregime de origem:\nI\n- identificação do segurado e, se for o caso, de seu dependente;\nII\n- a renda mensal inicial e a data de início do benefício;\nIII\n- o percentual do tempo de serviço total do segurado correspondente\nao tempo de contribuição no âmbito daquele regime de origem.",
+        "normalized_text": "§ 1º O Regime Geral de Previdência Social deve apresentar a cada O Regime Geral de Previdência Social deve apresentar a cada regime de origem os seguintes dados referentes a cada benefício concedido com cômputo de tempo de contribuição no âmbito daquele regime de origem: I - identificação do segurado e, se for o caso, de seu dependente; II - a renda mensal inicial e a data de início do benefício; III - o percentual do tempo de serviço total do segurado correspondente ao tempo de contribuição no âmbito daquele regime de origem."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Cada regime de origem deve pagar ao Regime Geral de Previdência\nCada regime de origem deve pagar ao Regime Geral de Previdência\nSocial, para cada mês de competência do benefício, o valor\nresultante da multiplicação da renda mensal do benefício pelo\npercentual obtido na forma do inciso III do parágrafo anterior.",
+        "normalized_text": "§ 2º Cada regime de origem deve pagar ao Regime Geral de Previdência Cada regime de origem deve pagar ao Regime Geral de Previdência Social, para cada mês de competência do benefício, o valor resultante da multiplicação da renda mensal do benefício pelo percentual obtido na forma do inciso III do parágrafo anterior."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A compensação financeira referente a cada benefício não\nA compensação financeira referente a cada benefício não\npoderá exceder o resultado da multiplicação do percentual obtido\nna forma do inciso III do § 1º deste artigo pela renda mensal do\nmaior benefício da mesma espécie pago diretamente pelo regime de\norigem.",
+        "normalized_text": "§ 3º A compensação financeira referente a cada benefício não A compensação financeira referente a cada benefício não poderá exceder o resultado da multiplicação do percentual obtido na forma do inciso III do § 1º deste artigo pela renda mensal do maior benefício da mesma espécie pago diretamente pelo regime de origem."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Para fins do disposto no parágrafo anterior, o regime de origem\nPara fins do disposto no parágrafo anterior, o regime de origem\ndeve informar ao Regime Geral de Previdência Social, na forma do\nregulamento, a maior renda mensal de cada espécie de benefício por\nele pago diretamente.",
+        "normalized_text": "§ 4º Para fins do disposto no parágrafo anterior, o regime de origem Para fins do disposto no parágrafo anterior, o regime de origem deve informar ao Regime Geral de Previdência Social, na forma do regulamento, a maior renda mensal de cada espécie de benefício por ele pago diretamente."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O valor de que trata o § 2º deste artigo será reajustado nas\nO valor de que trata o § 2º deste artigo será reajustado nas\nmesmas datas e pelos mesmos índices de reajustamento do benefício\npela Previdência Social, devendo o Regime Geral de Previdência\nSocial comunicar a cada regime de origem o total por ele devido em\ncada mês como compensação financeira.",
+        "normalized_text": "§ 5º O valor de que trata o § 2º deste artigo será reajustado nas O valor de que trata o § 2º deste artigo será reajustado nas mesmas datas e pelos mesmos índices de reajustamento do benefício pela Previdência Social, devendo o Regime Geral de Previdência Social comunicar a cada regime de origem o total por ele devido em cada mês como compensação financeira."
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º Aplica-se o disposto neste artigo aos períodos de contribuição\nAplica-se o disposto neste artigo aos períodos de contribuição\nutilizados para fins de concessão de aposentadoria pelo INSS em\ndecorrência de acordos internacionais.\n(Parágrafo\nacrescido pela Lei nº 11.430, de 26/12/2006)",
+        "normalized_text": "§ 6º Aplica-se o disposto neste artigo aos períodos de contribuição Aplica-se o disposto neste artigo aos períodos de contribuição utilizados para fins de concessão de aposentadoria pelo INSS em decorrência de acordos internacionais. (Parágrafo acrescido pela Lei nº 11.430, de 26/12/2006)"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Cada regime próprio de previdência de servidor público tem\ndireito, como regime instituidor, de receber do Regime Geral de\nPrevidência Social, enquanto regime de origem, compensação\nfinanceira, observado o disposto neste artigo.",
+        "normalized_text": "Cada regime próprio de previdência de servidor público tem direito, como regime instituidor, de receber do Regime Geral de Previdência Social, enquanto regime de origem, compensação financeira, observado o disposto neste artigo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O regime instituidor deve apresentar ao Regime Geral de\nO regime instituidor deve apresentar ao Regime Geral de\nPrevidência Social, além das normas que o regem, os seguintes dados\nreferentes a cada benefício concedido com cômputo de tempo de\ncontribuição no âmbito do Regime Geral de Previdência Social:\nI\n- identificação do servidor público e, se for o caso, de seu\ndependente;\nII\n- o valor dos proventos da aposentadoria ou pensão dela decorrente e\na data de início do benefício;\nIII\n- o tempo de serviço total do servidor e o correspondente ao tempo\nde contribuição ao Regime Geral de Previdência Social.",
+        "normalized_text": "§ 1º O regime instituidor deve apresentar ao Regime Geral de O regime instituidor deve apresentar ao Regime Geral de Previdência Social, além das normas que o regem, os seguintes dados referentes a cada benefício concedido com cômputo de tempo de contribuição no âmbito do Regime Geral de Previdência Social: I - identificação do servidor público e, se for o caso, de seu dependente; II - o valor dos proventos da aposentadoria ou pensão dela decorrente e a data de início do benefício; III - o tempo de serviço total do servidor e o correspondente ao tempo de contribuição ao Regime Geral de Previdência Social."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Com base nas informações referidas no parágrafo anterior, o\nCom base nas informações referidas no parágrafo anterior, o\nRegime Geral de Previdência Social calculará qual seria a renda\nmensal inicial daquele benefício segundo as normas do Regime Geral\nde Previdência Social.",
+        "normalized_text": "§ 2º Com base nas informações referidas no parágrafo anterior, o Com base nas informações referidas no parágrafo anterior, o Regime Geral de Previdência Social calculará qual seria a renda mensal inicial daquele benefício segundo as normas do Regime Geral de Previdência Social."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º A compensação financeira devida pelo Regime Geral de\nA compensação financeira devida pelo Regime Geral de\nPrevidência Social, relativa ao primeiro mês de competência do\nbenefício, será calculada com base no valor do benefício pago pelo\nregime instituidor ou na renda mensal do benefício calculada na\nforma do parágrafo anterior, o que for menor.",
+        "normalized_text": "§ 3º A compensação financeira devida pelo Regime Geral de A compensação financeira devida pelo Regime Geral de Previdência Social, relativa ao primeiro mês de competência do benefício, será calculada com base no valor do benefício pago pelo regime instituidor ou na renda mensal do benefício calculada na forma do parágrafo anterior, o que for menor."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O valor da compensação financeira mencionada no parágrafo\nO valor da compensação financeira mencionada no parágrafo\nanterior corresponde à multiplicação do montante ali especificado\npelo percentual correspondente ao tempo de contribuição ao Regime\nGeral de Previdência Social no tempo de serviço total do servidor\npúblico.",
+        "normalized_text": "§ 4º O valor da compensação financeira mencionada no parágrafo O valor da compensação financeira mencionada no parágrafo anterior corresponde à multiplicação do montante ali especificado pelo percentual correspondente ao tempo de contribuição ao Regime Geral de Previdência Social no tempo de serviço total do servidor público."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O valor da compensação financeira devida pelo Regime Geral de\nO valor da compensação financeira devida pelo Regime Geral de\nPrevidência Social será reajustado nas mesmas datas e pelos mesmos\níndices de reajustamento dos benefícios da Previdência Social,\nmesmo que tenha prevalecido, no primeiro mês, o valor do benefício\npago pelo regime instituidor.",
+        "normalized_text": "§ 5º O valor da compensação financeira devida pelo Regime Geral de O valor da compensação financeira devida pelo Regime Geral de Previdência Social será reajustado nas mesmas datas e pelos mesmos índices de reajustamento dos benefícios da Previdência Social, mesmo que tenha prevalecido, no primeiro mês, o valor do benefício pago pelo regime instituidor."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os regimes instituidores apresentarão aos regimes de origem, no\nprazo máximo de trinta e seis meses a contar da data da entrada em\nvigor desta Lei, os dados relativos aos benefícios em manutenção\nnessa data, concedidos a partir da promulgação da Constituição\nFederal.\n(“Caput”\ndo artigo com redação dada pela Medida Provisória nº 2.187-13, de\n24/8/2001)",
+        "normalized_text": "Os regimes instituidores apresentarão aos regimes de origem, no prazo máximo de trinta e seis meses a contar da data da entrada em vigor desta Lei, os dados relativos aos benefícios em manutenção nessa data, concedidos a partir da promulgação da Constituição Federal. (“Caput” do artigo com redação dada pela Medida Provisória nº 2.187-13, de 24/8/2001)"
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. A compensação financeira em atraso relativa aos benefícios\nA compensação financeira em atraso relativa aos benefícios\nde que trata este artigo será calculada multiplicando-se a renda\nmensal obtida para o último mês, de acordo com o procedimento\ndeterminado nos arts. 3º e 4º, pelo número de meses em que o\nbenefício foi pago até então.",
+        "normalized_text": "Parágrafo único. A compensação financeira em atraso relativa aos benefícios A compensação financeira em atraso relativa aos benefícios de que trata este artigo será calculada multiplicando-se a renda mensal obtida para o último mês, de acordo com o procedimento determinado nos arts. 3º e 4º, pelo número de meses em que o benefício foi pago até então."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Instituto Nacional do Seguro Social - INSS manterá cadastro\natualizado de todos os benefícios objeto de compensação\nfinanceira, totalizando o quanto deve para cada regime próprio de\nprevidência dos servidores da União, dos Estados, do Distrito\nFederal e dos Municípios, bem como o montante devido por cada um\ndeles para o Regime Geral de Previdência Social, como compensação\nfinanceira e pelo não recolhimento de contribuições\nprevidenciárias no prazo legal.",
+        "normalized_text": "O Instituto Nacional do Seguro Social - INSS manterá cadastro atualizado de todos os benefícios objeto de compensação financeira, totalizando o quanto deve para cada regime próprio de previdência dos servidores da União, dos Estados, do Distrito Federal e dos Municípios, bem como o montante devido por cada um deles para o Regime Geral de Previdência Social, como compensação financeira e pelo não recolhimento de contribuições previdenciárias no prazo legal."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Os desembolsos pelos regimes de origem só serão feitos para os\nOs desembolsos pelos regimes de origem só serão feitos para os\nregimes instituidores que se mostrem credores no cômputo da\ncompensação financeira devida de lado a lado e dos débitos pelo\nnão recolhimento de contribuições previdenciárias no prazo legal.",
+        "normalized_text": "§ 1º Os desembolsos pelos regimes de origem só serão feitos para os Os desembolsos pelos regimes de origem só serão feitos para os regimes instituidores que se mostrem credores no cômputo da compensação financeira devida de lado a lado e dos débitos pelo não recolhimento de contribuições previdenciárias no prazo legal."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O Instituto Nacional do Seguro Social - INSS comunicará o total\nO Instituto Nacional do Seguro Social - INSS comunicará o total\na ser desembolsado por cada regime de origem até o dia trinta de\ncada mês, devendo os desembolsos ser feitos até o quinto dia útil\ndo mês subsequente.",
+        "normalized_text": "§ 2º O Instituto Nacional do Seguro Social - INSS comunicará o total O Instituto Nacional do Seguro Social - INSS comunicará o total a ser desembolsado por cada regime de origem até o dia trinta de cada mês, devendo os desembolsos ser feitos até o quinto dia útil do mês subsequente."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Os valores não desembolsados em virtude do disposto no § 1º\nOs valores não desembolsados em virtude do disposto no § 1º\ndeste artigo serão contabilizados como pagamentos efetivos, devendo\no Instituto Nacional do Seguro Social - INSS registrar mensalmente\nessas operações e informar a cada regime próprio de previdência\nde servidor público os valores a ele referentes.",
+        "normalized_text": "§ 3º Os valores não desembolsados em virtude do disposto no § 1º Os valores não desembolsados em virtude do disposto no § 1º deste artigo serão contabilizados como pagamentos efetivos, devendo o Instituto Nacional do Seguro Social - INSS registrar mensalmente essas operações e informar a cada regime próprio de previdência de servidor público os valores a ele referentes."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Sendo inviável financeiramente para um regime de origem\nSendo inviável financeiramente para um regime de origem\ndesembolsar de imediato os valores relativos à compensação\nfinanceira, em função dos valores em atraso a que se refere o",
+        "normalized_text": "§ 4º Sendo inviável financeiramente para um regime de origem Sendo inviável financeiramente para um regime de origem desembolsar de imediato os valores relativos à compensação financeira, em função dos valores em atraso a que se refere o"
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "parágrafo único do artigo anterior, podem os regimes de origem e\ndo artigo anterior, podem os regimes de origem e\ninstituidor firmar termo de parcelamento dos desembolsos\natualizando-se os valores devidos nas mesmas datas e pelos mesmos\níndices de reajustamento dos benefícios de prestação continuada\nda Previdência Social.",
+        "normalized_text": "parágrafo único do artigo anterior, podem os regimes de origem e do artigo anterior, podem os regimes de origem e instituidor firmar termo de parcelamento dos desembolsos atualizando-se os valores devidos nas mesmas datas e pelos mesmos índices de reajustamento dos benefícios de prestação continuada da Previdência Social."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O pagamento para os regimes próprios de previdência social\nO pagamento para os regimes próprios de previdência social\ncredores da compensação financeira, relativa ao período de 5 de\noutubro de 1988 a 5 de maio de 1999, cujos entes instituidores não\nsejam devedores de contribuições previdenciárias ao Regime Geral\nde Previdência Social (RGPS), será efetivado conforme os seguintes\nparâmetros:\nI\n- até o exercício de 2017, para os Municípios:",
+        "normalized_text": "§ 5º O pagamento para os regimes próprios de previdência social O pagamento para os regimes próprios de previdência social credores da compensação financeira, relativa ao período de 5 de outubro de 1988 a 5 de maio de 1999, cujos entes instituidores não sejam devedores de contribuições previdenciárias ao Regime Geral de Previdência Social (RGPS), será efetivado conforme os seguintes parâmetros: I - até o exercício de 2017, para os Municípios:"
+      },
+      "paragrafo:5/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "paragrafo:5/alinea:a",
+        "text": "a)\nem parcela única, se o crédito não superar R$ 1.500.000,00 (um\nmilhão e quinhentos mil reais);",
+        "normalized_text": "a) em parcela única, se o crédito não superar R$ 1.500.000,00 (um milhão e quinhentos mil reais);"
+      },
+      "paragrafo:5/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "paragrafo:5/alinea:b",
+        "text": "b)\nem tantas parcelas mensais de até R$ 1.500.000,00 (um milhão e\nquinhentos mil reais), se o crédito superar esse montante, no prazo\nde até cento e oitenta meses, condicionada à existência de\nrecursos financeiros para cumprimento da meta de resultado primário\nestabelecido na lei de diretrizes orçamentárias;",
+        "normalized_text": "b) em tantas parcelas mensais de até R$ 1.500.000,00 (um milhão e quinhentos mil reais), se o crédito superar esse montante, no prazo de até cento e oitenta meses, condicionada à existência de recursos financeiros para cumprimento da meta de resultado primário estabelecido na lei de diretrizes orçamentárias;"
+      },
+      "paragrafo:5/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "paragrafo:5/alinea:c",
+        "text": "c)\ncaso o limite de cento e oitenta meses não seja suficiente para a\nquitação dos créditos, o valor da parcela disposto na alínea b\ndeste inciso será ajustado de forma a garantir a quitação no prazo\nde cento e oitenta meses;\nIII\n- por meio de dação em pagamento de imóveis integrantes do Fundo\ndo Regime Geral de Previdência Social (FRGPS).\n(Parágrafo\nacrescido pela Lei nº 13.485, de 2/10/2017)",
+        "normalized_text": "c) caso o limite de cento e oitenta meses não seja suficiente para a quitação dos créditos, o valor da parcela disposto na alínea b deste inciso será ajustado de forma a garantir a quitação no prazo de cento e oitenta meses; III - por meio de dação em pagamento de imóveis integrantes do Fundo do Regime Geral de Previdência Social (FRGPS). (Parágrafo acrescido pela Lei nº 13.485, de 2/10/2017)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º O pagamento da compensação financeira do Fundo do Regime Geral\nO pagamento da compensação financeira do Fundo do Regime Geral\nde Previdência Social depende da desistência de eventuais ações\njudiciais que tenham por objeto a dívida compensada, e é causa da\nextinção dos pagamentos previstos no § 5º deste artigo a\nmanutenção do litígio ou o ajuizamento de novas ações.\n(Parágrafo\nacrescido pela Lei nº 13.485, de 2/10/2017)",
+        "normalized_text": "§ 6º O pagamento da compensação financeira do Fundo do Regime Geral O pagamento da compensação financeira do Fundo do Regime Geral de Previdência Social depende da desistência de eventuais ações judiciais que tenham por objeto a dívida compensada, e é causa da extinção dos pagamentos previstos no § 5º deste artigo a manutenção do litígio ou o ajuizamento de novas ações. (Parágrafo acrescido pela Lei nº 13.485, de 2/10/2017)"
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os regimes instituidores devem comunicar de imediato aos regimes\nde origem qualquer revisão no valor do benefício objeto de\ncompensação financeira ou sua extinção total ou parcial, cabendo\nao Instituto Nacional do Seguro Social - INSS registrar as alterações\nno cadastro a que se refere o artigo anterior.",
+        "normalized_text": "Os regimes instituidores devem comunicar de imediato aos regimes de origem qualquer revisão no valor do benefício objeto de compensação financeira ou sua extinção total ou parcial, cabendo ao Instituto Nacional do Seguro Social - INSS registrar as alterações no cadastro a que se refere o artigo anterior."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Na hipótese de o regime previdenciário próprio dos\nNa hipótese de o regime previdenciário próprio dos\nservidores da União, dos Estados, do Distrito Federal e dos\nMunicípios possuir personalidade jurídica própria, os respectivos\nentes federados respondem solidariamente pelas obrigações previstas\nnesta Lei.\nArt.\n8º-A. A compensação financeira entre os regimes próprios de\nprevidência social da União, dos Estados, do Distrito Federal e dos\nMunicípios, na hipótese de contagem recíproca de tempos de\ncontribuição, obedecerá, no que couber, às disposições desta\nLei.\n(“Caput”\ndo artigo acrescido pela Medida Provisória nº 2.187-13, de\n24/8/2001)",
+        "normalized_text": "Parágrafo único. Na hipótese de o regime previdenciário próprio dos Na hipótese de o regime previdenciário próprio dos servidores da União, dos Estados, do Distrito Federal e dos Municípios possuir personalidade jurídica própria, os respectivos entes federados respondem solidariamente pelas obrigações previstas nesta Lei. Art. 8º-A. A compensação financeira entre os regimes próprios de previdência social da União, dos Estados, do Distrito Federal e dos Municípios, na hipótese de contagem recíproca de tempos de contribuição, obedecerá, no que couber, às disposições desta Lei. (“Caput” do artigo acrescido pela Medida Provisória nº 2.187-13, de 24/8/2001)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O regulamento estabelecerá as disposições específicas a serem\nO regulamento estabelecerá as disposições específicas a serem\nobservadas na compensação financeira entre os regimes próprios de\nprevidência social, inclusive no que se refere ao período de\nestoque e às condições para seu pagamento, admitido o\nparcelamento.\n(Parágrafo\nacrescido pela Lei nº 13.846, de 18/6/2019)",
+        "normalized_text": "§ 1º O regulamento estabelecerá as disposições específicas a serem O regulamento estabelecerá as disposições específicas a serem observadas na compensação financeira entre os regimes próprios de previdência social, inclusive no que se refere ao período de estoque e às condições para seu pagamento, admitido o parcelamento. (Parágrafo acrescido pela Lei nº 13.846, de 18/6/2019)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O ente federativo que não aderir à compensação financeira com\nO ente federativo que não aderir à compensação financeira com\nos demais regimes próprios de previdência social ou inadimplir suas\nobrigações terá suspenso o recebimento dos valores devidos pela\ncompensação com o regime geral de previdência social, na forma\nestabelecida no regulamento.\n(Parágrafo\nacrescido pela Lei nº 13.846, de 18/6/2019)\nArt.\n8º-B.\n(Artigo\nacrescido pela Medida Provisória nº 1.303, de 11/6/2025\n,\ncom\nprazo de vigência encerrado em 8/10/2025, conforme Ato Declaratório\nnº 67, de 14/10/2025, publicado no DOU de 15/10/2025)\nArt.\n8º-C. A despesa federal anual resultante da compensação financeira\nentre o Regime Geral de Previdência Social e os regimes de\nprevidência dos servidores da União, dos Estados, do Distrito\nFederal e dos Municípios fica limitada à dotação orçamentária\npara essa despesa na data de publicação de cada lei orçamentária\nanual.\n(Artigo\nacrescido pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 2º O ente federativo que não aderir à compensação financeira com O ente federativo que não aderir à compensação financeira com os demais regimes próprios de previdência social ou inadimplir suas obrigações terá suspenso o recebimento dos valores devidos pela compensação com o regime geral de previdência social, na forma estabelecida no regulamento. (Parágrafo acrescido pela Lei nº 13.846, de 18/6/2019) Art. 8º-B. (Artigo acrescido pela Medida Provisória nº 1.303, de 11/6/2025 , com prazo de vigência encerrado em 8/10/2025, conforme Ato Declaratório nº 67, de 14/10/2025, publicado no DOU de 15/10/2025) Art. 8º-C. A despesa federal anual resultante da compensação financeira entre o Regime Geral de Previdência Social e os regimes de previdência dos servidores da União, dos Estados, do Distrito Federal e dos Municípios fica limitada à dotação orçamentária para essa despesa na data de publicação de cada lei orçamentária anual. (Artigo acrescido pela Lei nº 15.265, de 21/11/2025)"
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Poder Executivo regulamentará esta Lei no prazo de sessenta\ndias contado da data de sua publicação.",
+        "normalized_text": "O Poder Executivo regulamentará esta Lei no prazo de sessenta dias contado da data de sua publicação."
+      }
+    },
+    "Art. 10": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.\nBrasília,\n5 de maio de 1999; 178º da Independência e 111º da República.\nFERNANDO\nHENRIQUE CARDOSO\nWaldeck\nOrnélas",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação. Brasília, 5 de maio de 1999; 178º da Independência e 111º da República. FERNANDO HENRIQUE CARDOSO Waldeck Ornélas"
+      }
+    }
   }
 }

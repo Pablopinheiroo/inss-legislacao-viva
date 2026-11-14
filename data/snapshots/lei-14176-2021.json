@@ -1,18 +1,452 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
   "snapshot_scope": "all_detected_articles",
-  "article_count": 6,
-  "content_hash": "1ab60905a9213b4e0fb4d3ab211b90d414d2a1fd2cfdec1b97183852f0bde1ad",
+  "article_count": 13,
+  "content_hash": "dd8812d20cbd473cd63e893b00e522544878a3bf831861099375b93844c1d117",
   "articles": {
     "Art. 1": "Art. 1º A Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar com as seguintes alterações:\n\"Art. 20. ..............................................................................................................\n..............................................................................................................................\n§ 3º Observados os demais critérios de elegibilidade definidos nesta Lei, terão direito ao benefício financeiro de que trata o\ncaput\ndeste artigo a pessoa com deficiência ou a pessoa idosa com renda familiar mensal\nper capita\nigual ou inferior a 1/4 (um quarto) do salário-mínimo.\nI - (revogado);\n.................................................................................................................................\n§ 11-A. O regulamento de que trata o § 11 deste artigo poderá ampliar o limite de renda mensal familiar\nper capita\nprevisto no § 3º deste artigo para até 1/2 (meio) salário-mínimo, observado o disposto no art. 20-B desta Lei.\n.............................................................................................................................\" (NR)\n\"Art. 20-B. Na avaliação de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade de que trata o § 11 do art. 20 desta Lei, serão considerados os seguintes aspectos para ampliação do critério de aferição da renda familiar mensal\nper capita\nde que trata o § 11-A do referido artigo:\nI - o grau da deficiência;\nII - a dependência de terceiros para o desempenho de atividades básicas da vida diária; e\nIII - o comprometimento do orçamento do núcleo familiar de que trata o § 3º do art. 20 desta Lei exclusivamente com gastos médicos, com tratamentos de saúde, com fraldas, com alimentos especiais e com medicamentos do idoso ou da pessoa com deficiência não disponibilizados gratuitamente pelo SUS, ou com serviços não prestados pelo Suas, desde que comprovadamente necessários à preservação da saúde e da vida.\n§ 1º A ampliação de que trata o\ncaput\ndeste artigo ocorrerá na forma de escalas graduais, definidas em regulamento.\n§ 2º Aplicam-se à pessoa com deficiência os elementos constantes dos incisos I e III do\ncaput\ndeste artigo, e à pessoa idosa os constantes dos incisos II e III do\ncaput\ndeste artigo.\n§ 3º O grau da deficiência de que trata o inciso I do\ncaput\ndeste artigo será aferido por meio de instrumento de avaliação biopsicossocial, observados os termos dos §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), e do § 6º do art. 20 e do art. 40-B desta Lei.\n§ 4º O valor referente ao comprometimento do orçamento do núcleo familiar com gastos de que trata o inciso III do\ncaput\ndeste artigo será definido em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS, a partir de valores médios dos gastos realizados pelas famílias exclusivamente com essas finalidades, facultada ao interessado a possibilidade de comprovação, conforme critérios definidos em regulamento, de que os gastos efetivos ultrapassam os valores médios.\"\n\"Art. 21. ..............................................................................................................\n...............................................................................................................................\n§ 5º O beneficiário em gozo de benefício de prestação continuada concedido judicial ou administrativamente poderá ser convocado para avaliação das condições que ensejaram sua concessão ou manutenção, sendo-lhe exigida a presença dos requisitos previstos nesta Lei e no regulamento.\" (NR)\n\"Art. 40-B. Enquanto não estiver regulamentado o instrumento de avaliação de que tratam os §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a concessão do benefício de prestação continuada à pessoa com deficiência ficará sujeita à avaliação do grau da deficiência e do impedimento de que trata o § 2º do art. 20 desta Lei, composta por avaliação médica e avaliação social realizadas, respectivamente, pela Perícia Médica Federal e pelo serviço social do INSS, com a utilização de instrumentos desenvolvidos especificamente para esse fim.\"\n\"Art. 40-C. Os eventuais débitos do beneficiário decorrentes de recebimento irregular do benefício de prestação continuada ou do auxílio-inclusão poderão ser consignados no valor mensal desses benefícios, nos termos do regulamento.\"",
-    "Art. 2": "Art. 2º O Capítulo IV da Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar acrescido da seguinte Seção VI:\n\"Seção VI\nDo Auxílio-Inclusão\nArt. 26-A. Terá direito à concessão do auxílio-inclusão de que trata o art. 94 da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a pessoa com deficiência moderada ou grave que, cumulativamente:\nI - receba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade:\na)\nque tenha remuneração limitada a 2 (dois) salários-mínimos; e\nb)\nque enquadre o beneficiário como segurado obrigatório do Regime Geral de Previdência Social ou como filiado a regime próprio de previdência social da União, dos Estados, do Distrito Federal ou dos Municípios;\nII - tenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão;\nIII - tenha inscrição regular no CPF; e\nIV - atenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal\nper capita\nexigida para o acesso ao benefício, observado o disposto no § 4º deste artigo.\n§ 1º O auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do\ncaput\ndeste artigo, mediante requerimento e sem retroatividade no pagamento, ao beneficiário:\nI - que tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e\nII - que tenha tido o benefício suspenso nos termos do art. 21-A desta Lei.\n§ 2º O valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, para fins de concessão e de manutenção de outro auxílio-inclusão no âmbito do mesmo grupo familiar.\n§ 3º O valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \"\na\n\" do inciso I do\ncaput\ndeste artigo percebidos por um membro da família não serão considerados no cálculo da renda familiar mensal\nper capita\nde que tratam os §§ 3º e 11-A do art. 20 desta Lei para fins de manutenção de benefício de prestação continuada concedido anteriormente a outra pessoa do mesmo grupo familiar.\n§ 4º Para fins de cálculo da renda familiar\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, serão desconsideradas:\nI - as remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e\nII - as rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem.\nArt. 26-B. O auxílio-inclusão será devido a partir da data do requerimento, e o seu valor corresponderá a 50% (cinquenta por cento) do valor do benefício de prestação continuada em vigor.\nParágrafo único.\nAo requerer o auxílio-inclusão, o beneficiário autorizará a suspensão do benefício de prestação continuada, nos termos do art. 21-A desta Lei.\nArt. 26-C. O pagamento do auxílio-inclusão não será acumulado com o pagamento de:\nI - benefício de prestação continuada de que trata o art. 20 desta Lei;\nII - prestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou\nIII - seguro-desemprego.\nArt. 26-D. O pagamento do auxílio-inclusão cessará na hipótese de o beneficiário:\nI - deixar de atender aos critérios de manutenção do benefício de prestação continuada; ou\nII - deixar de atender aos critérios de concessão do auxílio-inclusão.\nParágrafo único.\nAto do Poder Executivo federal disporá sobre o procedimento de verificação dos critérios de manutenção e de revisão do auxílioinclusão.\nArt. 26-E. O auxílio-inclusão não está sujeito a desconto de qualquer contribuição e não gera direito a pagamento de abono anual.\nArt. 26-F. Compete ao Ministério da Cidadania a gestão do auxílio-inclusão, e ao INSS a sua operacionalização e pagamento.\nArt. 26-G. As despesas decorrentes do pagamento do auxílio-inclusão correrão à conta do orçamento do Ministério da Cidadania.\n§ 1º O Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes.\n§ 2º O regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal.\nArt. 26-H. No prazo de 10 (dez) anos, contado da data de publicação desta \"Seção, será promovida a revisão do auxílio-inclusão, observado o disposto no § 2º do art. 26-G desta Lei, com vistas a seu aprimoramento e ampliação.\"",
+    "Art. 2": "Art. 2º O Capítulo IV da Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar acrescido da seguinte Seção VI:\n\"Seção VI\nDo Auxílio-Inclusão",
+    "Art. 26-A": "Art. 26-A. Terá direito à concessão do auxílio-inclusão de que trata o art. 94 da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a pessoa com deficiência moderada ou grave que, cumulativamente:\nI - receba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade:\na)\nque tenha remuneração limitada a 2 (dois) salários-mínimos; e\nb)\nque enquadre o beneficiário como segurado obrigatório do Regime Geral de Previdência Social ou como filiado a regime próprio de previdência social da União, dos Estados, do Distrito Federal ou dos Municípios;\nII - tenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão;\nIII - tenha inscrição regular no CPF; e\nIV - atenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal\nper capita\nexigida para o acesso ao benefício, observado o disposto no § 4º deste artigo.\n§ 1º O auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do\ncaput\ndeste artigo, mediante requerimento e sem retroatividade no pagamento, ao beneficiário:\nI - que tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e\nII - que tenha tido o benefício suspenso nos termos do art. 21-A desta Lei.\n§ 2º O valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, para fins de concessão e de manutenção de outro auxílio-inclusão no âmbito do mesmo grupo familiar.\n§ 3º O valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \"\na\n\" do inciso I do\ncaput\ndeste artigo percebidos por um membro da família não serão considerados no cálculo da renda familiar mensal\nper capita\nde que tratam os §§ 3º e 11-A do art. 20 desta Lei para fins de manutenção de benefício de prestação continuada concedido anteriormente a outra pessoa do mesmo grupo familiar.\n§ 4º Para fins de cálculo da renda familiar\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, serão desconsideradas:\nI - as remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e\nII - as rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem.",
+    "Art. 26-B": "Art. 26-B. O auxílio-inclusão será devido a partir da data do requerimento, e o seu valor corresponderá a 50% (cinquenta por cento) do valor do benefício de prestação continuada em vigor.\nParágrafo único.\nAo requerer o auxílio-inclusão, o beneficiário autorizará a suspensão do benefício de prestação continuada, nos termos do art. 21-A desta Lei.",
+    "Art. 26-C": "Art. 26-C. O pagamento do auxílio-inclusão não será acumulado com o pagamento de:\nI - benefício de prestação continuada de que trata o art. 20 desta Lei;\nII - prestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou\nIII - seguro-desemprego.",
+    "Art. 26-D": "Art. 26-D. O pagamento do auxílio-inclusão cessará na hipótese de o beneficiário:\nI - deixar de atender aos critérios de manutenção do benefício de prestação continuada; ou\nII - deixar de atender aos critérios de concessão do auxílio-inclusão.\nParágrafo único.\nAto do Poder Executivo federal disporá sobre o procedimento de verificação dos critérios de manutenção e de revisão do auxílioinclusão.",
+    "Art. 26-E": "Art. 26-E. O auxílio-inclusão não está sujeito a desconto de qualquer contribuição e não gera direito a pagamento de abono anual.",
+    "Art. 26-F": "Art. 26-F. Compete ao Ministério da Cidadania a gestão do auxílio-inclusão, e ao INSS a sua operacionalização e pagamento.",
+    "Art. 26-G": "Art. 26-G. As despesas decorrentes do pagamento do auxílio-inclusão correrão à conta do orçamento do Ministério da Cidadania.\n§ 1º O Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes.\n§ 2º O regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal.\nArt. 26-H. No prazo de 10 (dez) anos, contado da data de publicação desta \"Seção, será promovida a revisão do auxílio-inclusão, observado o disposto no § 2º do art. 26-G desta Lei, com vistas a seu aprimoramento e ampliação.\"",
     "Art. 3": "Art. 3º Para avaliação da deficiência que justifica o acesso, a manutenção e a revisão do benefício de prestação continuada de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, fica o Instituto Nacional do Seguro Social (INSS) autorizado a adotar as seguintes medidas excepcionais, até 31 de dezembro de 2021:\nI - realização da avaliação social, de que tratam o § 6º do art. 20 e o art. 40-B da Lei nº 8.742, de 7 de dezembro de 1993, por meio de videoconferência; e\nII - concessão ou manutenção do benefício de prestação continuada aplicado padrão médio à avaliação social, que compõe a avaliação da deficiência de que trata o § 6º do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, desde que tenha sido realizada a avaliação médica e constatado o impedimento de longo prazo.\n§ 1º É vedada a utilização da medida prevista no inciso II do\ncaput\ndeste artigo para indeferimento de requerimentos ou para cessação de benefícios.\n§ 2º Os requisitos para aplicação das medidas previstas no\ncaput\ndeste artigo serão definidos em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS.\n§ 3º O prazo de aplicação das medidas previstas no\ncaput\ndeste artigo poderá ser prorrogado mediante ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS.",
     "Art. 4": "Art. 4º O INSS e a Empresa de Tecnologia e Informações da Previdência (Dataprev) adotarão as medidas necessárias à operacionalização das alterações promovidas por esta Lei.",
     "Art. 5": "Art. 5º Ficam revogados os seguintes dispositivos da Lei nº 8.742, de 7 de dezembro de 1993:\nI - inciso I do § 3º do art. 20; e\nII - art. 20-A.",
     "Art. 6": "Art. 6º Esta Lei entra em vigor:\nI - em 1º de janeiro de 2022, quanto ao art. 1º, na parte que acrescenta o § 11-A no art. 20 e o art. 20-B na Lei nº 8.742, de 7 de dezembro de 1993;\nII - em 1º de outubro de 2021, quanto ao art. 2º, que institui o auxílio-inclusão; e\nIII - na data de sua publicação, quanto aos demais dispositivos.\nParágrafo único.\nA ampliação do limite de renda mensal de 1/4 (um quarto) para até 1/2 (meio) salário-mínimo mensal, de que trata o § 11-A do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, mediante a utilização de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade do grupo familiar, na forma do art. 20-B da referida Lei, fica condicionada a decreto regulamentador do Poder Executivo, em cuja edição deverá ser comprovado o atendimento aos requisitos fiscais.\nBrasília, 22 de junho de 2021; 200º da Independência e 133º da República.\nJAIR MESSIAS BOLSONARO\nPaulo Guedes\nJoão Inácio Ribeiro Roma Neto\nDamares Regina Alves\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/06/2021\nPublicação:\nDiário Oficial da União - Seção 1\n- 23/6/2021, Página 1\n(Publicação Original)"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar com as seguintes alterações:\n\"Art. 20. ..............................................................................................................\n..............................................................................................................................",
+        "normalized_text": "A Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar com as seguintes alterações: \"Art. 20. .............................................................................................................. .............................................................................................................................."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O grau da deficiência de que trata o inciso I do\nO grau da deficiência de que trata o inciso I do\ncaput\ndeste artigo será aferido por meio de instrumento de avaliação biopsicossocial, observados os termos dos §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), e do § 6º do art. 20 e do art. 40-B desta Lei.",
+        "normalized_text": "§ 3º O grau da deficiência de que trata o inciso I do O grau da deficiência de que trata o inciso I do caput deste artigo será aferido por meio de instrumento de avaliação biopsicossocial, observados os termos dos §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), e do § 6º do art. 20 e do art. 40-B desta Lei."
+      },
+      "paragrafo:3/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:3/inciso:I",
+        "text": "I - (revogado);\n(revogado);\n.................................................................................................................................",
+        "normalized_text": "I - (revogado); (revogado); ................................................................................................................................."
+      },
+      "paragrafo:11": {
+        "device_type": "paragrafo",
+        "device_label": "§ 11º",
+        "device_path": "paragrafo:11",
+        "text": "§ 11-A. O regulamento de que trata o § 11 deste artigo poderá ampliar o limite de renda mensal familiar\n-A. O regulamento de que trata o § 11 deste artigo poderá ampliar o limite de renda mensal familiar\nper capita\nprevisto no § 3º deste artigo para até 1/2 (meio) salário-mínimo, observado o disposto no art. 20-B desta Lei.\n.............................................................................................................................\" (NR)\n\"Art. 20-B. Na avaliação de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade de que trata o § 11 do art. 20 desta Lei, serão considerados os seguintes aspectos para ampliação do critério de aferição da renda familiar mensal\nper capita\nde que trata o § 11-A do referido artigo:",
+        "normalized_text": "§ 11-A. O regulamento de que trata o § 11 deste artigo poderá ampliar o limite de renda mensal familiar -A. O regulamento de que trata o § 11 deste artigo poderá ampliar o limite de renda mensal familiar per capita previsto no § 3º deste artigo para até 1/2 (meio) salário-mínimo, observado o disposto no art. 20-B desta Lei. .............................................................................................................................\" (NR) \"Art. 20-B. Na avaliação de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade de que trata o § 11 do art. 20 desta Lei, serão considerados os seguintes aspectos para ampliação do critério de aferição da renda familiar mensal per capita de que trata o § 11-A do referido artigo:"
+      },
+      "paragrafo:11/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:11/inciso:I",
+        "text": "I - o grau da deficiência;\no grau da deficiência;",
+        "normalized_text": "I - o grau da deficiência; o grau da deficiência;"
+      },
+      "paragrafo:11/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:11/inciso:II",
+        "text": "II - a dependência de terceiros para o desempenho de atividades básicas da vida diária; e\na dependência de terceiros para o desempenho de atividades básicas da vida diária; e",
+        "normalized_text": "II - a dependência de terceiros para o desempenho de atividades básicas da vida diária; e a dependência de terceiros para o desempenho de atividades básicas da vida diária; e"
+      },
+      "paragrafo:11/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "paragrafo:11/inciso:III",
+        "text": "III - o comprometimento do orçamento do núcleo familiar de que trata o § 3º do art. 20 desta Lei exclusivamente com gastos médicos, com tratamentos de saúde, com fraldas, com alimentos especiais e com medicamentos do idoso ou da pessoa com deficiência não disponibilizados gratuitamente pelo SUS, ou com serviços não prestados pelo Suas, desde que comprovadamente necessários à preservação da saúde e da vida.\no comprometimento do orçamento do núcleo familiar de que trata o § 3º do art. 20 desta Lei exclusivamente com gastos médicos, com tratamentos de saúde, com fraldas, com alimentos especiais e com medicamentos do idoso ou da pessoa com deficiência não disponibilizados gratuitamente pelo SUS, ou com serviços não prestados pelo Suas, desde que comprovadamente necessários à preservação da saúde e da vida.",
+        "normalized_text": "III - o comprometimento do orçamento do núcleo familiar de que trata o § 3º do art. 20 desta Lei exclusivamente com gastos médicos, com tratamentos de saúde, com fraldas, com alimentos especiais e com medicamentos do idoso ou da pessoa com deficiência não disponibilizados gratuitamente pelo SUS, ou com serviços não prestados pelo Suas, desde que comprovadamente necessários à preservação da saúde e da vida. o comprometimento do orçamento do núcleo familiar de que trata o § 3º do art. 20 desta Lei exclusivamente com gastos médicos, com tratamentos de saúde, com fraldas, com alimentos especiais e com medicamentos do idoso ou da pessoa com deficiência não disponibilizados gratuitamente pelo SUS, ou com serviços não prestados pelo Suas, desde que comprovadamente necessários à preservação da saúde e da vida."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A ampliação de que trata o\nA ampliação de que trata o\ncaput\ndeste artigo ocorrerá na forma de escalas graduais, definidas em regulamento.",
+        "normalized_text": "§ 1º A ampliação de que trata o A ampliação de que trata o caput deste artigo ocorrerá na forma de escalas graduais, definidas em regulamento."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Aplicam-se à pessoa com deficiência os elementos constantes dos incisos I e III do\nAplicam-se à pessoa com deficiência os elementos constantes dos incisos I e III do\ncaput\ndeste artigo, e à pessoa idosa os constantes dos incisos II e III do\ncaput\ndeste artigo.",
+        "normalized_text": "§ 2º Aplicam-se à pessoa com deficiência os elementos constantes dos incisos I e III do Aplicam-se à pessoa com deficiência os elementos constantes dos incisos I e III do caput deste artigo, e à pessoa idosa os constantes dos incisos II e III do caput deste artigo."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O valor referente ao comprometimento do orçamento do núcleo familiar com gastos de que trata o inciso III do\nO valor referente ao comprometimento do orçamento do núcleo familiar com gastos de que trata o inciso III do\ncaput\ndeste artigo será definido em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS, a partir de valores médios dos gastos realizados pelas famílias exclusivamente com essas finalidades, facultada ao interessado a possibilidade de comprovação, conforme critérios definidos em regulamento, de que os gastos efetivos ultrapassam os valores médios.\"\n\"Art. 21. ..............................................................................................................\n...............................................................................................................................",
+        "normalized_text": "§ 4º O valor referente ao comprometimento do orçamento do núcleo familiar com gastos de que trata o inciso III do O valor referente ao comprometimento do orçamento do núcleo familiar com gastos de que trata o inciso III do caput deste artigo será definido em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS, a partir de valores médios dos gastos realizados pelas famílias exclusivamente com essas finalidades, facultada ao interessado a possibilidade de comprovação, conforme critérios definidos em regulamento, de que os gastos efetivos ultrapassam os valores médios.\" \"Art. 21. .............................................................................................................. ..............................................................................................................................."
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º O beneficiário em gozo de benefício de prestação continuada concedido judicial ou administrativamente poderá ser convocado para avaliação das condições que ensejaram sua concessão ou manutenção, sendo-lhe exigida a presença dos requisitos previstos nesta Lei e no regulamento.\" (NR)\nO beneficiário em gozo de benefício de prestação continuada concedido judicial ou administrativamente poderá ser convocado para avaliação das condições que ensejaram sua concessão ou manutenção, sendo-lhe exigida a presença dos requisitos previstos nesta Lei e no regulamento.\" (NR)\n\"Art. 40-B. Enquanto não estiver regulamentado o instrumento de avaliação de que tratam os §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a concessão do benefício de prestação continuada à pessoa com deficiência ficará sujeita à avaliação do grau da deficiência e do impedimento de que trata o § 2º do art. 20 desta Lei, composta por avaliação médica e avaliação social realizadas, respectivamente, pela Perícia Médica Federal e pelo serviço social do INSS, com a utilização de instrumentos desenvolvidos especificamente para esse fim.\"\n\"Art. 40-C. Os eventuais débitos do beneficiário decorrentes de recebimento irregular do benefício de prestação continuada ou do auxílio-inclusão poderão ser consignados no valor mensal desses benefícios, nos termos do regulamento.\"",
+        "normalized_text": "§ 5º O beneficiário em gozo de benefício de prestação continuada concedido judicial ou administrativamente poderá ser convocado para avaliação das condições que ensejaram sua concessão ou manutenção, sendo-lhe exigida a presença dos requisitos previstos nesta Lei e no regulamento.\" (NR) O beneficiário em gozo de benefício de prestação continuada concedido judicial ou administrativamente poderá ser convocado para avaliação das condições que ensejaram sua concessão ou manutenção, sendo-lhe exigida a presença dos requisitos previstos nesta Lei e no regulamento.\" (NR) \"Art. 40-B. Enquanto não estiver regulamentado o instrumento de avaliação de que tratam os §§ 1º e 2º do art. 2º da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a concessão do benefício de prestação continuada à pessoa com deficiência ficará sujeita à avaliação do grau da deficiência e do impedimento de que trata o § 2º do art. 20 desta Lei, composta por avaliação médica e avaliação social realizadas, respectivamente, pela Perícia Médica Federal e pelo serviço social do INSS, com a utilização de instrumentos desenvolvidos especificamente para esse fim.\" \"Art. 40-C. Os eventuais débitos do beneficiário decorrentes de recebimento irregular do benefício de prestação continuada ou do auxílio-inclusão poderão ser consignados no valor mensal desses benefícios, nos termos do regulamento.\""
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Capítulo IV da Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar acrescido da seguinte Seção VI:\n\"Seção VI\nDo Auxílio-Inclusão",
+        "normalized_text": "O Capítulo IV da Lei nº 8.742, de 7 de dezembro de 1993, passa a vigorar acrescido da seguinte Seção VI: \"Seção VI Do Auxílio-Inclusão"
+      }
+    },
+    "Art. 26-A": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Terá direito à concessão do auxílio-inclusão de que trata o art. 94 da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a pessoa com deficiência moderada ou grave que, cumulativamente:",
+        "normalized_text": "Terá direito à concessão do auxílio-inclusão de que trata o art. 94 da Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a pessoa com deficiência moderada ou grave que, cumulativamente:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - receba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade:\nreceba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade:",
+        "normalized_text": "I - receba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade: receba o benefício de prestação continuada, de que trata o art. 20 desta Lei, e passe a exercer atividade:"
+      },
+      "caput/inciso:I/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/inciso:I/alinea:a",
+        "text": "a)\nque tenha remuneração limitada a 2 (dois) salários-mínimos; e",
+        "normalized_text": "a) que tenha remuneração limitada a 2 (dois) salários-mínimos; e"
+      },
+      "caput/inciso:I/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/inciso:I/alinea:b",
+        "text": "b)\nque enquadre o beneficiário como segurado obrigatório do Regime Geral de Previdência Social ou como filiado a regime próprio de previdência social da União, dos Estados, do Distrito Federal ou dos Municípios;",
+        "normalized_text": "b) que enquadre o beneficiário como segurado obrigatório do Regime Geral de Previdência Social ou como filiado a regime próprio de previdência social da União, dos Estados, do Distrito Federal ou dos Municípios;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - tenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão;\ntenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão;",
+        "normalized_text": "II - tenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão; tenha inscrição atualizada no CadÚnico no momento do requerimento do auxílio-inclusão;"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - tenha inscrição regular no CPF; e\ntenha inscrição regular no CPF; e",
+        "normalized_text": "III - tenha inscrição regular no CPF; e tenha inscrição regular no CPF; e"
+      },
+      "caput/inciso:IV": {
+        "device_type": "inciso",
+        "device_label": "inciso IV",
+        "device_path": "caput/inciso:IV",
+        "text": "IV - atenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal\natenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal\nper capita\nexigida para o acesso ao benefício, observado o disposto no § 4º deste artigo.",
+        "normalized_text": "IV - atenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal atenda aos critérios de manutenção do benefício de prestação continuada, incluídos os critérios relativos à renda familiar mensal per capita exigida para o acesso ao benefício, observado o disposto no § 4º deste artigo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do\nO auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do\ncaput\ndeste artigo, mediante requerimento e sem retroatividade no pagamento, ao beneficiário:",
+        "normalized_text": "§ 1º O auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do O auxílio-inclusão poderá ainda ser concedido, nos termos do inciso I do caput deste artigo, mediante requerimento e sem retroatividade no pagamento, ao beneficiário:"
+      },
+      "paragrafo:1/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:1/inciso:I",
+        "text": "I - que tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e\nque tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e",
+        "normalized_text": "I - que tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e que tenha recebido o benefício de prestação continuada nos 5 (cinco) anos imediatamente anteriores ao exercício da atividade remunerada; e"
+      },
+      "paragrafo:1/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:1/inciso:II",
+        "text": "II - que tenha tido o benefício suspenso nos termos do art. 21-A desta Lei.\nque tenha tido o benefício suspenso nos termos do art. 21-A desta Lei.",
+        "normalized_text": "II - que tenha tido o benefício suspenso nos termos do art. 21-A desta Lei. que tenha tido o benefício suspenso nos termos do art. 21-A desta Lei."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal\nO valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, para fins de concessão e de manutenção de outro auxílio-inclusão no âmbito do mesmo grupo familiar.",
+        "normalized_text": "§ 2º O valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal O valor do auxílio-inclusão percebido por um membro da família não será considerado no cálculo da renda familiar mensal per capita de que trata o inciso IV do caput deste artigo, para fins de concessão e de manutenção de outro auxílio-inclusão no âmbito do mesmo grupo familiar."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \"\nO valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \"\na\n\" do inciso I do\ncaput\ndeste artigo percebidos por um membro da família não serão considerados no cálculo da renda familiar mensal\nper capita\nde que tratam os §§ 3º e 11-A do art. 20 desta Lei para fins de manutenção de benefício de prestação continuada concedido anteriormente a outra pessoa do mesmo grupo familiar.",
+        "normalized_text": "§ 3º O valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \" O valor do auxílio-inclusão e o da remuneração do beneficiário do auxílio-inclusão de que trata a alínea \" a \" do inciso I do caput deste artigo percebidos por um membro da família não serão considerados no cálculo da renda familiar mensal per capita de que tratam os §§ 3º e 11-A do art. 20 desta Lei para fins de manutenção de benefício de prestação continuada concedido anteriormente a outra pessoa do mesmo grupo familiar."
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º Para fins de cálculo da renda familiar\nPara fins de cálculo da renda familiar\nper capita\nde que trata o inciso IV do\ncaput\ndeste artigo, serão desconsideradas:",
+        "normalized_text": "§ 4º Para fins de cálculo da renda familiar Para fins de cálculo da renda familiar per capita de que trata o inciso IV do caput deste artigo, serão desconsideradas:"
+      },
+      "paragrafo:4/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:4/inciso:I",
+        "text": "I - as remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e\nas remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e",
+        "normalized_text": "I - as remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e as remunerações obtidas pelo requerente em decorrência de exercício de atividade laboral, desde que o total recebido no mês seja igual ou inferior a 2 (dois) salários-mínimos; e"
+      },
+      "paragrafo:4/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:4/inciso:II",
+        "text": "II - as rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem.\nas rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem.",
+        "normalized_text": "II - as rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem. as rendas oriundas dos rendimentos decorrentes de estágio supervisionado e de aprendizagem."
+      }
+    },
+    "Art. 26-B": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O auxílio-inclusão será devido a partir da data do requerimento, e o seu valor corresponderá a 50% (cinquenta por cento) do valor do benefício de prestação continuada em vigor.",
+        "normalized_text": "O auxílio-inclusão será devido a partir da data do requerimento, e o seu valor corresponderá a 50% (cinquenta por cento) do valor do benefício de prestação continuada em vigor."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nAo requerer o auxílio-inclusão, o beneficiário autorizará a suspensão do benefício de prestação continuada, nos termos do art. 21-A desta Lei.",
+        "normalized_text": "Parágrafo único. Ao requerer o auxílio-inclusão, o beneficiário autorizará a suspensão do benefício de prestação continuada, nos termos do art. 21-A desta Lei."
+      }
+    },
+    "Art. 26-C": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O pagamento do auxílio-inclusão não será acumulado com o pagamento de:",
+        "normalized_text": "O pagamento do auxílio-inclusão não será acumulado com o pagamento de:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - benefício de prestação continuada de que trata o art. 20 desta Lei;\nbenefício de prestação continuada de que trata o art. 20 desta Lei;",
+        "normalized_text": "I - benefício de prestação continuada de que trata o art. 20 desta Lei; benefício de prestação continuada de que trata o art. 20 desta Lei;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - prestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou\nprestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou",
+        "normalized_text": "II - prestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou prestações a título de aposentadoria, de pensões ou de benefícios por incapacidade pagos por qualquer regime de previdência social; ou"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - seguro-desemprego.\nseguro-desemprego.",
+        "normalized_text": "III - seguro-desemprego. seguro-desemprego."
+      }
+    },
+    "Art. 26-D": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O pagamento do auxílio-inclusão cessará na hipótese de o beneficiário:",
+        "normalized_text": "O pagamento do auxílio-inclusão cessará na hipótese de o beneficiário:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - deixar de atender aos critérios de manutenção do benefício de prestação continuada; ou\ndeixar de atender aos critérios de manutenção do benefício de prestação continuada; ou",
+        "normalized_text": "I - deixar de atender aos critérios de manutenção do benefício de prestação continuada; ou deixar de atender aos critérios de manutenção do benefício de prestação continuada; ou"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - deixar de atender aos critérios de concessão do auxílio-inclusão.\ndeixar de atender aos critérios de concessão do auxílio-inclusão.",
+        "normalized_text": "II - deixar de atender aos critérios de concessão do auxílio-inclusão. deixar de atender aos critérios de concessão do auxílio-inclusão."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nAto do Poder Executivo federal disporá sobre o procedimento de verificação dos critérios de manutenção e de revisão do auxílioinclusão.",
+        "normalized_text": "Parágrafo único. Ato do Poder Executivo federal disporá sobre o procedimento de verificação dos critérios de manutenção e de revisão do auxílioinclusão."
+      }
+    },
+    "Art. 26-E": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O auxílio-inclusão não está sujeito a desconto de qualquer contribuição e não gera direito a pagamento de abono anual.",
+        "normalized_text": "O auxílio-inclusão não está sujeito a desconto de qualquer contribuição e não gera direito a pagamento de abono anual."
+      }
+    },
+    "Art. 26-F": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Compete ao Ministério da Cidadania a gestão do auxílio-inclusão, e ao INSS a sua operacionalização e pagamento.",
+        "normalized_text": "Compete ao Ministério da Cidadania a gestão do auxílio-inclusão, e ao INSS a sua operacionalização e pagamento."
+      }
+    },
+    "Art. 26-G": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "As despesas decorrentes do pagamento do auxílio-inclusão correrão à conta do orçamento do Ministério da Cidadania.",
+        "normalized_text": "As despesas decorrentes do pagamento do auxílio-inclusão correrão à conta do orçamento do Ministério da Cidadania."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º O Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes.\nO Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes.",
+        "normalized_text": "§ 1º O Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes. O Poder Executivo federal compatibilizará o quantitativo de benefícios financeiros do auxílio-inclusão de que trata o art. 26-A desta Lei com as dotações orçamentárias existentes."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal.\nO regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal.\nArt. 26-H. No prazo de 10 (dez) anos, contado da data de publicação desta \"Seção, será promovida a revisão do auxílio-inclusão, observado o disposto no § 2º do art. 26-G desta Lei, com vistas a seu aprimoramento e ampliação.\"",
+        "normalized_text": "§ 2º O regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal. O regulamento indicará o órgão do Poder Executivo responsável por avaliar os impactos da concessão do auxílio-inclusão na participação no mercado de trabalho, na redução de desigualdades e no exercício dos direitos e liberdades fundamentais das pessoas com deficiência, nos termos do § 16 do art. 37 da Constituição Federal. Art. 26-H. No prazo de 10 (dez) anos, contado da data de publicação desta \"Seção, será promovida a revisão do auxílio-inclusão, observado o disposto no § 2º do art. 26-G desta Lei, com vistas a seu aprimoramento e ampliação.\""
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Para avaliação da deficiência que justifica o acesso, a manutenção e a revisão do benefício de prestação continuada de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, fica o Instituto Nacional do Seguro Social (INSS) autorizado a adotar as seguintes medidas excepcionais, até 31 de dezembro de 2021:",
+        "normalized_text": "Para avaliação da deficiência que justifica o acesso, a manutenção e a revisão do benefício de prestação continuada de que trata o art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, fica o Instituto Nacional do Seguro Social (INSS) autorizado a adotar as seguintes medidas excepcionais, até 31 de dezembro de 2021:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - realização da avaliação social, de que tratam o § 6º do art. 20 e o art. 40-B da Lei nº 8.742, de 7 de dezembro de 1993, por meio de videoconferência; e\nrealização da avaliação social, de que tratam o § 6º do art. 20 e o art. 40-B da Lei nº 8.742, de 7 de dezembro de 1993, por meio de videoconferência; e",
+        "normalized_text": "I - realização da avaliação social, de que tratam o § 6º do art. 20 e o art. 40-B da Lei nº 8.742, de 7 de dezembro de 1993, por meio de videoconferência; e realização da avaliação social, de que tratam o § 6º do art. 20 e o art. 40-B da Lei nº 8.742, de 7 de dezembro de 1993, por meio de videoconferência; e"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - concessão ou manutenção do benefício de prestação continuada aplicado padrão médio à avaliação social, que compõe a avaliação da deficiência de que trata o § 6º do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, desde que tenha sido realizada a avaliação médica e constatado o impedimento de longo prazo.\nconcessão ou manutenção do benefício de prestação continuada aplicado padrão médio à avaliação social, que compõe a avaliação da deficiência de que trata o § 6º do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, desde que tenha sido realizada a avaliação médica e constatado o impedimento de longo prazo.",
+        "normalized_text": "II - concessão ou manutenção do benefício de prestação continuada aplicado padrão médio à avaliação social, que compõe a avaliação da deficiência de que trata o § 6º do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, desde que tenha sido realizada a avaliação médica e constatado o impedimento de longo prazo. concessão ou manutenção do benefício de prestação continuada aplicado padrão médio à avaliação social, que compõe a avaliação da deficiência de que trata o § 6º do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, desde que tenha sido realizada a avaliação médica e constatado o impedimento de longo prazo."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º É vedada a utilização da medida prevista no inciso II do\nÉ vedada a utilização da medida prevista no inciso II do\ncaput\ndeste artigo para indeferimento de requerimentos ou para cessação de benefícios.",
+        "normalized_text": "§ 1º É vedada a utilização da medida prevista no inciso II do É vedada a utilização da medida prevista no inciso II do caput deste artigo para indeferimento de requerimentos ou para cessação de benefícios."
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Os requisitos para aplicação das medidas previstas no\nOs requisitos para aplicação das medidas previstas no\ncaput\ndeste artigo serão definidos em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS.",
+        "normalized_text": "§ 2º Os requisitos para aplicação das medidas previstas no Os requisitos para aplicação das medidas previstas no caput deste artigo serão definidos em ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O prazo de aplicação das medidas previstas no\nO prazo de aplicação das medidas previstas no\ncaput\ndeste artigo poderá ser prorrogado mediante ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS.",
+        "normalized_text": "§ 3º O prazo de aplicação das medidas previstas no O prazo de aplicação das medidas previstas no caput deste artigo poderá ser prorrogado mediante ato conjunto do Ministério da Cidadania, da Secretaria Especial de Previdência e Trabalho do Ministério da Economia e do INSS."
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O INSS e a Empresa de Tecnologia e Informações da Previdência (Dataprev) adotarão as medidas necessárias à operacionalização das alterações promovidas por esta Lei.",
+        "normalized_text": "O INSS e a Empresa de Tecnologia e Informações da Previdência (Dataprev) adotarão as medidas necessárias à operacionalização das alterações promovidas por esta Lei."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Ficam revogados os seguintes dispositivos da Lei nº 8.742, de 7 de dezembro de 1993:",
+        "normalized_text": "Ficam revogados os seguintes dispositivos da Lei nº 8.742, de 7 de dezembro de 1993:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - inciso I do § 3º do art. 20; e\ninciso I do § 3º do art. 20; e",
+        "normalized_text": "I - inciso I do § 3º do art. 20; e inciso I do § 3º do art. 20; e"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - art. 20-A.\nart. 20-A.",
+        "normalized_text": "II - art. 20-A. art. 20-A."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor:",
+        "normalized_text": "Esta Lei entra em vigor:"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I - em 1º de janeiro de 2022, quanto ao art. 1º, na parte que acrescenta o § 11-A no art. 20 e o art. 20-B na Lei nº 8.742, de 7 de dezembro de 1993;\nem 1º de janeiro de 2022, quanto ao art. 1º, na parte que acrescenta o § 11-A no art. 20 e o art. 20-B na Lei nº 8.742, de 7 de dezembro de 1993;",
+        "normalized_text": "I - em 1º de janeiro de 2022, quanto ao art. 1º, na parte que acrescenta o § 11-A no art. 20 e o art. 20-B na Lei nº 8.742, de 7 de dezembro de 1993; em 1º de janeiro de 2022, quanto ao art. 1º, na parte que acrescenta o § 11-A no art. 20 e o art. 20-B na Lei nº 8.742, de 7 de dezembro de 1993;"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II - em 1º de outubro de 2021, quanto ao art. 2º, que institui o auxílio-inclusão; e\nem 1º de outubro de 2021, quanto ao art. 2º, que institui o auxílio-inclusão; e",
+        "normalized_text": "II - em 1º de outubro de 2021, quanto ao art. 2º, que institui o auxílio-inclusão; e em 1º de outubro de 2021, quanto ao art. 2º, que institui o auxílio-inclusão; e"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III - na data de sua publicação, quanto aos demais dispositivos.\nna data de sua publicação, quanto aos demais dispositivos.",
+        "normalized_text": "III - na data de sua publicação, quanto aos demais dispositivos. na data de sua publicação, quanto aos demais dispositivos."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único.\nA ampliação do limite de renda mensal de 1/4 (um quarto) para até 1/2 (meio) salário-mínimo mensal, de que trata o § 11-A do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, mediante a utilização de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade do grupo familiar, na forma do art. 20-B da referida Lei, fica condicionada a decreto regulamentador do Poder Executivo, em cuja edição deverá ser comprovado o atendimento aos requisitos fiscais.\nBrasília, 22 de junho de 2021; 200º da Independência e 133º da República.\nJAIR MESSIAS BOLSONARO\nPaulo Guedes\nJoão Inácio Ribeiro Roma Neto\nDamares Regina Alves\nEste texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/06/2021\nPublicação:\nDiário Oficial da União - Seção 1\n- 23/6/2021, Página 1\n(Publicação Original)",
+        "normalized_text": "Parágrafo único. A ampliação do limite de renda mensal de 1/4 (um quarto) para até 1/2 (meio) salário-mínimo mensal, de que trata o § 11-A do art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, mediante a utilização de outros elementos probatórios da condição de miserabilidade e da situação de vulnerabilidade do grupo familiar, na forma do art. 20-B da referida Lei, fica condicionada a decreto regulamentador do Poder Executivo, em cuja edição deverá ser comprovado o atendimento aos requisitos fiscais. Brasília, 22 de junho de 2021; 200º da Independência e 133º da República. JAIR MESSIAS BOLSONARO Paulo Guedes João Inácio Ribeiro Roma Neto Damares Regina Alves Este texto não substitui o original publicado no Diário Oficial da União - Seção 1 de 23/06/2021 Publicação: Diário Oficial da União - Seção 1 - 23/6/2021, Página 1 (Publicação Original)"
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -17,5 +17,123 @@
     "Art. 7": "Art. 7º O órgão previdenciário encarregado do pagamento da pensão deverá firmar\nconvênios com outros órgãos públicos federais, estaduais ou municipais, a fim de possibilitar aos\nbeneficiários desta Lei perceberem mensalmente as respectivas pensões, preferencialmente nos\nlocais onde residem, sem necessidade de grandes deslocamentos.",
     "Art. 8": "Art. 8º Esta Lei entra em vigor na data de sua publicação.",
     "Art. 9": "Art. 9º Revogam-se as disposições em contrário.\nBrasília, 28 de dezembro de 1989; 168º da Independência e 101º da República.\nJOSÉ SARNEY\nJáder Fontenelle Barbalho"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "É assegurado aos seringueiros recrutados nos termos do Decreto-Lei nº 5.813,\nde 14 de setembro de 1943, que tenham trabalhado durante a Segunda Guerra Mundial nos\nSeringais da Região Amazônica, amparados pelo Decreto-Lei nº 9.882, de 16 de setembro de\n1946, e que não possuam meios para a sua subsistência e da sua família, o pagamento de pensão\nmensal vitalícia correspondente ao valor de 2 (dois) salários-mínimos vigentes no País.",
+        "normalized_text": "É assegurado aos seringueiros recrutados nos termos do Decreto-Lei nº 5.813, de 14 de setembro de 1943, que tenham trabalhado durante a Segunda Guerra Mundial nos Seringais da Região Amazônica, amparados pelo Decreto-Lei nº 9.882, de 16 de setembro de 1946, e que não possuam meios para a sua subsistência e da sua família, o pagamento de pensão mensal vitalícia correspondente ao valor de 2 (dois) salários-mínimos vigentes no País."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros\nO benefício a que se refere este artigo estende-se aos seringueiros\nque, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na\nregião Amazônica, contribuindo para o esforço de guerra.",
+        "normalized_text": "Parágrafo único. O benefício a que se refere este artigo estende-se aos seringueiros O benefício a que se refere este artigo estende-se aos seringueiros que, atendendo ao chamamento do governo brasileiro, trabalharam na produção de borracha, na região Amazônica, contribuindo para o esforço de guerra."
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O benefício de que trata esta Lei é transferível aos dependentes que\ncomprovem o estado de carência.",
+        "normalized_text": "O benefício de que trata esta Lei é transferível aos dependentes que comprovem o estado de carência."
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A comprovação da efetiva prestação de serviços a que alude esta Lei, inclusive\nmediante justificação administrativa ou judicial, só produzirá efeito quando baseada em início de\nprova material, não sendo admitida prova exclusivamente testemunhal. (“Caput” do artigo com\nredação dada pela Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "A comprovação da efetiva prestação de serviços a que alude esta Lei, inclusive mediante justificação administrativa ou judicial, só produzirá efeito quando baseada em início de prova material, não sendo admitida prova exclusivamente testemunhal. (“Caput” do artigo com redação dada pela Lei nº 9.711, de 20/11/1998)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á\nA comprovação da efetiva prestação de serviços a que alude o caput far-se-á\nperante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação\ndada pela Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 1º A comprovação da efetiva prestação de serviços a que alude o caput far-se-á A comprovação da efetiva prestação de serviços a que alude o caput far-se-á perante os órgãos do Ministério da Previdência e Assistência Social. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado,\nCaberá à Defensoria Pública, por solicitação do interessado, quando necessitado,\npromover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou\noutras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 2º Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado, Caberá à Defensoria Pública, por solicitação do interessado, quando necessitado, promover a justificação judicial, ficando o solicitante isento de quaisquer custas judiciais ou outras despesas. (Parágrafo com redação dada pela Lei nº 9.711, de 20/11/1998)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido\nO prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido\npela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)",
+        "normalized_text": "§ 3º O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido O prazo para julgamento da justificação é de quinze dias. (Parágrafo acrescido pela Medida Provisória nº 1.663-15, de 22/10/1998, convertida na Lei nº 9.711, de 20/11/1998)"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "A comprovação da carência do beneficiário ou do dependente será feita com a\napresentação de atestado fornecido por órgão oficial.",
+        "normalized_text": "A comprovação da carência do beneficiário ou do dependente será feita com a apresentação de atestado fornecido por órgão oficial."
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Os pedidos de concessão do benefício ou de sua transferência, devidamente\ninstruídos, serão processados e julgados no prazo de 45 (quarenta e cinco) dias, sob pena de\nresponsabilidade.",
+        "normalized_text": "Os pedidos de concessão do benefício ou de sua transferência, devidamente instruídos, serão processados e julgados no prazo de 45 (quarenta e cinco) dias, sob pena de responsabilidade."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de\nOs pagamentos de pensão especial iniciar-se-ão no prazo máximo de\n30 (trinta) dias após o reconhecimento do direito.",
+        "normalized_text": "Parágrafo único. Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de Os pagamentos de pensão especial iniciar-se-ão no prazo máximo de 30 (trinta) dias após o reconhecimento do direito."
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O Ministério da Previdência e Assistência Social baixará as instruções\nnecessárias à execução desta Lei, no prazo de 60 (sessenta) dias.",
+        "normalized_text": "O Ministério da Previdência e Assistência Social baixará as instruções necessárias à execução desta Lei, no prazo de 60 (sessenta) dias."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O órgão previdenciário encarregado do pagamento da pensão deverá firmar\nconvênios com outros órgãos públicos federais, estaduais ou municipais, a fim de possibilitar aos\nbeneficiários desta Lei perceberem mensalmente as respectivas pensões, preferencialmente nos\nlocais onde residem, sem necessidade de grandes deslocamentos.",
+        "normalized_text": "O órgão previdenciário encarregado do pagamento da pensão deverá firmar convênios com outros órgãos públicos federais, estaduais ou municipais, a fim de possibilitar aos beneficiários desta Lei perceberem mensalmente as respectivas pensões, preferencialmente nos locais onde residem, sem necessidade de grandes deslocamentos."
+      }
+    },
+    "Art. 8": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação."
+      }
+    },
+    "Art. 9": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Revogam-se as disposições em contrário.\nBrasília, 28 de dezembro de 1989; 168º da Independência e 101º da República.\nJOSÉ SARNEY\nJáder Fontenelle Barbalho",
+        "normalized_text": "Revogam-se as disposições em contrário. Brasília, 28 de dezembro de 1989; 168º da Independência e 101º da República. JOSÉ SARNEY Jáder Fontenelle Barbalho"
+      }
+    }
   }
 }

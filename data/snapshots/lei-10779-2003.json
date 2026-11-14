@@ -1,6 +1,6 @@
 {
-  "snapshot_version": 2,
-  "captured_at": "2026-11-14T09:37:05Z",
+  "snapshot_version": 3,
+  "captured_at": "2026-11-14T10:02:05Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -15,5 +15,378 @@
     "Art. 5": "Art. 5º O benefício do seguro-desemprego a que se refere esta Lei será\npago à conta do Fundo de Amparo ao Trabalhador - FAT, instituído\npela Lei nº 7.998, de 11 de janeiro de 1990.\n§\n1º A despesa resultante da concessão do benefício de que trata\nesta Lei fica limitada, a cada exercício, à dotação orçamentária\npara essa despesa referente ao exercício anterior, corrigida pelo\níndice calculado nos termos dos arts. 4º e 5º da Lei Complementar\nnº 200, de 30 de agosto de 2023, aplicável ao exercício a que se\nrefere a despesa.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\n§\n2º A concessão do benefício de que trata esta Lei observará o\ndisposto no § 1º deste artigo.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\n§\n3º No exercício de 2026, a despesa de que trata o § 1º deste\nartigo não excederá a R$ 7.909.535.000,00 (sete bilhões novecentos\ne nove milhões e quinhentos e trinta e cinco mil reais).\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\n§\n4º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)\n§\n5º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)\n§\n6º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)\nArt.\n5º-A. O Ministério do Trabalho e Emprego deverá prover meios para\no requerimento, a identificação, a comprovação documental e as\ndemais exigências para o acesso ao seguro-desemprego pelos\npescadores artesanais com restrições físicas, residentes em áreas\nlongínquas, sem acesso ou com acesso insatisfatório à internet ou\ncom disponibilidade precária de transporte e recursos tecnológicos\nem geral.\n(“Caput”\ndo artigo acrescido pela Lei nº 15.399, de 4/5/2026)\n§\n1º Nas situações previstas no\ncaput\ndeste artigo poderão ser utilizadas unidades móveis pelo Ministério\ndo Trabalho e Emprego, diretamente ou por meio das alternativas\nprevistas no § 13 do art. 2º desta Lei.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\n§\n2º\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
     "Art. 6": "Art. 6º Esta Lei entra em vigor na data de sua publicação.",
     "Art. 7": "Art. 7º Fica revogada a Lei nº 8.287, de 20 de dezembro de 1991.\nBrasília,\n25 de novembro de 2003; 182º da Independência e 115º da República.\nLUIZ\nINÁCIO LULA DA SILVA\nJaques\nWagner"
+  },
+  "components": {
+    "Art. 1": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O pescador artesanal de que tratam a alínea \"b\" do\ninciso VII do art. 12 da Lei nº 8.212, de 24 de julho de 1991, e a\nalínea \"b\" do inciso VII do art. 11 da Lei nº 8.213, de\n24 de julho de 1991, desde que exerça sua atividade profissional\nininterruptamente, de forma artesanal e individualmente ou em regime\nde economia familiar, fará jus ao benefício do seguro-desemprego,\nno valor de 1 (um) salário-mínimo mensal, durante o período de\ndefeso de atividade pesqueira para a preservação da espécie.\n(“Caput”\ndo artigo com redação dada pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "O pescador artesanal de que tratam a alínea \"b\" do inciso VII do art. 12 da Lei nº 8.212, de 24 de julho de 1991, e a alínea \"b\" do inciso VII do art. 11 da Lei nº 8.213, de 24 de julho de 1991, desde que exerça sua atividade profissional ininterruptamente, de forma artesanal e individualmente ou em regime de economia familiar, fará jus ao benefício do seguro-desemprego, no valor de 1 (um) salário-mínimo mensal, durante o período de defeso de atividade pesqueira para a preservação da espécie. (“Caput” do artigo com redação dada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Considera-se profissão habitual ou principal meio de vida a\nConsidera-se profissão habitual ou principal meio de vida a\natividade exercida durante o período compreendido entre o defeso\nanterior e o em curso, ou nos 12 (doze) meses imediatamente\nanteriores ao do defeso em curso, o que for menor.\n(Parágrafo\ncom redação dada pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 1º Considera-se profissão habitual ou principal meio de vida a Considera-se profissão habitual ou principal meio de vida a atividade exercida durante o período compreendido entre o defeso anterior e o em curso, ou nos 12 (doze) meses imediatamente anteriores ao do defeso em curso, o que for menor. (Parágrafo com redação dada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O período de defeso de atividade pesqueira é o fixado pelo\nO período de defeso de atividade pesqueira é o fixado pelo\nInstituto Brasileiro do Meio Ambiente e dos Recursos Naturais\nRenováveis - IBAMA, em relação à espécie marinha, fluvial ou\nlacustre a cuja captura o pescador se dedique.",
+        "normalized_text": "§ 2º O período de defeso de atividade pesqueira é o fixado pelo O período de defeso de atividade pesqueira é o fixado pelo Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis - IBAMA, em relação à espécie marinha, fluvial ou lacustre a cuja captura o pescador se dedique."
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º Considera-se ininterrupta a atividade exercida durante o período\nConsidera-se ininterrupta a atividade exercida durante o período\ncompreendido entre o defeso anterior e o em curso, ou nos 12 (doze)\nmeses imediatamente anteriores ao do defeso em curso, o que for\nmenor.\n(Parágrafo\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 3º Considera-se ininterrupta a atividade exercida durante o período Considera-se ininterrupta a atividade exercida durante o período compreendido entre o defeso anterior e o em curso, ou nos 12 (doze) meses imediatamente anteriores ao do defeso em curso, o que for menor. (Parágrafo acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º acrescido pela Medida Provisória nº 665, de 30/12/2014,\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\ncom\nredação dada pela Lei nº 13.134, de 16/6/2015,\nrenumerado\ne com redação dada pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 4º acrescido pela Medida Provisória nº 665, de 30/12/2014, acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, com redação dada pela Lei nº 13.134, de 16/6/2015, renumerado e com redação dada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º acrescido pela Medida Provisória nº 665, de 30/12/2014,\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nrenumerado\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 5º acrescido pela Medida Provisória nº 665, de 30/12/2014, acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, renumerado pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º acrescido pela Medida Provisória nº 665, de 30/12/2014,\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nrenumerado\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 6º acrescido pela Medida Provisória nº 665, de 30/12/2014, acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, renumerado pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º acrescido pela Medida Provisória nº 665, de 30/12/2014,\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nrenumerado\ne com redação dada pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 7º acrescido pela Medida Provisória nº 665, de 30/12/2014, acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, renumerado e com redação dada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º O período de recebimento do benefício não poderá exceder o\nO período de recebimento do benefício não poderá exceder o\nlimite máximo variável de que trata o\ncaput\ndo art. 4º da Lei nº 7.998, de 11 de janeiro de 1990, ressalvado o\ndisposto nos §§ 4º e 5º do referido artigo.\n(Primitivo",
+        "normalized_text": "§ 8º O período de recebimento do benefício não poderá exceder o O período de recebimento do benefício não poderá exceder o limite máximo variável de que trata o caput do art. 4º da Lei nº 7.998, de 11 de janeiro de 1990, ressalvado o disposto nos §§ 4º e 5º do referido artigo. (Primitivo"
+      },
+      "paragrafo:9": {
+        "device_type": "paragrafo",
+        "device_label": "§ 9º",
+        "device_path": "paragrafo:9",
+        "text": "§ 9º Os órgãos federais disponibilizarão as informações\nOs órgãos federais disponibilizarão as informações\nconstantes das bases de dados, de que sejam detentores, necessárias\nà verificação dos requisitos para concessão e manutenção do\nbenefício, os quais serão objeto de cruzamento com informações\ndas bases de dados cadastrais oficiais, nos termos de ato do Poder\nExecutivo federal.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 9º Os órgãos federais disponibilizarão as informações Os órgãos federais disponibilizarão as informações constantes das bases de dados, de que sejam detentores, necessárias à verificação dos requisitos para concessão e manutenção do benefício, os quais serão objeto de cruzamento com informações das bases de dados cadastrais oficiais, nos termos de ato do Poder Executivo federal. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:10": {
+        "device_type": "paragrafo",
+        "device_label": "§ 10º",
+        "device_path": "paragrafo:10",
+        "text": "§ 10. Ao requerente do benefício de que trata o\nAo requerente do benefício de que trata o\ncaput\ndeste artigo será solicitado registro biométrico nos termos do art.\n1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no\nCadastro Único para Programas Sociais do Governo Federal (CadÚnico),\nsem efeitos em limite de renda para o acesso ao benefício, admitida,\npara fins de verificação biométrica, a utilização da base de\ndados do Tribunal Superior Eleitoral e da Carteira Nacional de\nHabilitação (CNH) até a plena implementação da Carteira de\nIdentidade Nacional.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 10. Ao requerente do benefício de que trata o Ao requerente do benefício de que trata o caput deste artigo será solicitado registro biométrico nos termos do art. 1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico), sem efeitos em limite de renda para o acesso ao benefício, admitida, para fins de verificação biométrica, a utilização da base de dados do Tribunal Superior Eleitoral e da Carteira Nacional de Habilitação (CNH) até a plena implementação da Carteira de Identidade Nacional. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:11": {
+        "device_type": "paragrafo",
+        "device_label": "§ 11º",
+        "device_path": "paragrafo:11",
+        "text": "§ 11. Somente fará jus ao benefício de que trata este artigo o\nSomente fará jus ao benefício de que trata este artigo o\npescador profissional que comprovar domicílio em Município\nabrangido ou limítrofe à área definida no ato que instituiu o\nperíodo de defeso, conforme procedimentos e critérios estabelecidos\nem resolução do Conselho Deliberativo do Fundo de Amparo ao\nTrabalhador (Codefat).\n(\nParágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 11. Somente fará jus ao benefício de que trata este artigo o Somente fará jus ao benefício de que trata este artigo o pescador profissional que comprovar domicílio em Município abrangido ou limítrofe à área definida no ato que instituiu o período de defeso, conforme procedimentos e critérios estabelecidos em resolução do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (Codefat). ( Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:12": {
+        "device_type": "paragrafo",
+        "device_label": "§ 12º",
+        "device_path": "paragrafo:12",
+        "text": "§ 12. Nos casos de exclusão por inconsistência cadastral ou falha de\nNos casos de exclusão por inconsistência cadastral ou falha de\nconferência biométrica, serão disponibilizados canais de revisão\ncéleres, presenciais ou virtuais, e gratuitos, para os pescadores\nartesanais, diretamente, ou com o apoio das entidades de pesca\nhabilitadas pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 12. Nos casos de exclusão por inconsistência cadastral ou falha de Nos casos de exclusão por inconsistência cadastral ou falha de conferência biométrica, serão disponibilizados canais de revisão céleres, presenciais ou virtuais, e gratuitos, para os pescadores artesanais, diretamente, ou com o apoio das entidades de pesca habilitadas pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:13": {
+        "device_type": "paragrafo",
+        "device_label": "§ 13º",
+        "device_path": "paragrafo:13",
+        "text": "§ 13. O pagamento do benefício previsto no\nO pagamento do benefício previsto no\ncaput\ndeste artigo ocorrerá durante o período do defeso correspondente,\nnos termos das regras do programa.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 13. O pagamento do benefício previsto no O pagamento do benefício previsto no caput deste artigo ocorrerá durante o período do defeso correspondente, nos termos das regras do programa. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      }
+    },
+    "Art. 2": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Compete ao Ministério do Trabalho e Emprego (MTE) receber e\nprocessar os requerimentos e habilitar os beneficiários do\nseguro-desemprego do pescador artesanal, conforme procedimentos,\ncritérios e validações estabelecidos em resolução do Codefat.\n(“Caput”\ndo artigo com redação dada pela Lei nº 15.265, de 21/11/2025)\nI\n-\n(Revogado\npela Lei nº 13.134, de 16/6/2015)\nII\n-\n(Revogado\npela Lei nº 13.134, de 16/6/2015)\nIII\n-\n(Revogado\npela Lei nº 13.134, de 16/6/2015)\nIV\n-\n(Revogado\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "Compete ao Ministério do Trabalho e Emprego (MTE) receber e processar os requerimentos e habilitar os beneficiários do seguro-desemprego do pescador artesanal, conforme procedimentos, critérios e validações estabelecidos em resolução do Codefat. (“Caput” do artigo com redação dada pela Lei nº 15.265, de 21/11/2025) I - (Revogado pela Lei nº 13.134, de 16/6/2015) II - (Revogado pela Lei nº 13.134, de 16/6/2015) III - (Revogado pela Lei nº 13.134, de 16/6/2015) IV - (Revogado pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "caput/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "caput/alinea:a",
+        "text": "a)\n(Revogada\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "a) (Revogada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "caput/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "caput/alinea:b",
+        "text": "b)\n(Revogada\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "b) (Revogada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "caput/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "caput/alinea:c",
+        "text": "c)\n(Revogada\npela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "c) (Revogada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Para fazer jus ao benefício, o pescador não poderá estar em\nPara fazer jus ao benefício, o pescador não poderá estar em\ngozo de benefício previdenciário ou assistencial de natureza\ncontinuada, exceto pensão por morte, auxílio-acidente e\ntransferências de renda de que tratam o parágrafo único do art. 6º\ne o inciso VI do\ncaput\ndo art. 203 da Constituição Federal e o\ncaput\ne o § 1º do art. 1º da Lei nº 10.835, de 8 de janeiro de 2004.\n(Parágrafo\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\nconvertida\nna Lei nº 13.134, de 16/6/2015,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 1º Para fazer jus ao benefício, o pescador não poderá estar em Para fazer jus ao benefício, o pescador não poderá estar em gozo de benefício previdenciário ou assistencial de natureza continuada, exceto pensão por morte, auxílio-acidente e transferências de renda de que tratam o parágrafo único do art. 6º e o inciso VI do caput do art. 203 da Constituição Federal e o caput e o § 1º do art. 1º da Lei nº 10.835, de 8 de janeiro de 2004. (Parágrafo acrescido pela Medida Provisória nº 665, de 30/12/2014, convertida na Lei nº 13.134, de 16/6/2015, e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º Para se habilitar ao benefício, o pescador deverá apresentar ao\nPara se habilitar ao benefício, o pescador deverá apresentar ao\nMinistério do Trabalho e Emprego os seguintes documentos:\n(“Caput”\ndo parágrafo acrescido pela Medida Provisória nº 665, de\n30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)\nI\n- registro como pescador profissional, categoria artesanal,\ndevidamente atualizado no Registro Geral da Atividade Pesqueira\n(RGP), emitido pelo Ministério da Pesca e Aquicultura com\nantecedência mínima de 1 (um) ano, contado da data de requerimento\ndo benefício;\n(Inciso\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015,\ncom\nredação dada pela Lei nº 13.134, de 16/6/2015)\nII\n- cópia dos documentos fiscais de venda do pescado a empresa\nadquirente, consumidora ou consignatária da produção, em que\nconste, além do registro da operação realizada, o valor da\nrespectiva contribuição previdenciária de que trata o § 7º do\nart. 30 da Lei nº 8.212, de 24 de julho de 1991, referentes a pelo\nmenos 6 (seis) dos 12 (doze) meses anteriores ao início do período\nde defeso ou comprovantes de contribuição previdenciária mensal\nreferentes aos meses de exercício da pesca, caso tenha\ncomercializado sua produção a pessoa física; e\n(Inciso\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)\nIII\n- outros estabelecidos em ato do Codefat que comprovem:\n(“Caput”\ndo inciso acrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 2º Para se habilitar ao benefício, o pescador deverá apresentar ao Para se habilitar ao benefício, o pescador deverá apresentar ao Ministério do Trabalho e Emprego os seguintes documentos: (“Caput” do parágrafo acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015 , e com redação dada pela Lei nº 15.265, de 21/11/2025) I - registro como pescador profissional, categoria artesanal, devidamente atualizado no Registro Geral da Atividade Pesqueira (RGP), emitido pelo Ministério da Pesca e Aquicultura com antecedência mínima de 1 (um) ano, contado da data de requerimento do benefício; (Inciso acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015, com redação dada pela Lei nº 13.134, de 16/6/2015) II - cópia dos documentos fiscais de venda do pescado a empresa adquirente, consumidora ou consignatária da produção, em que conste, além do registro da operação realizada, o valor da respectiva contribuição previdenciária de que trata o § 7º do art. 30 da Lei nº 8.212, de 24 de julho de 1991, referentes a pelo menos 6 (seis) dos 12 (doze) meses anteriores ao início do período de defeso ou comprovantes de contribuição previdenciária mensal referentes aos meses de exercício da pesca, caso tenha comercializado sua produção a pessoa física; e (Inciso acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015 , e com redação dada pela Lei nº 15.265, de 21/11/2025) III - outros estabelecidos em ato do Codefat que comprovem: (“Caput” do inciso acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:2/alinea:a": {
+        "device_type": "alinea",
+        "device_label": "alínea a",
+        "device_path": "paragrafo:2/alinea:a",
+        "text": "a)\no exercício da profissão, na forma do art. 1º desta Lei;\n(Alínea\nacrescida pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "a) o exercício da profissão, na forma do art. 1º desta Lei; (Alínea acrescida pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:2/alinea:b": {
+        "device_type": "alinea",
+        "device_label": "alínea b",
+        "device_path": "paragrafo:2/alinea:b",
+        "text": "b)\nque se dedicou à pesca durante o período definido no § 3º do art.\n1º desta Lei;\n(Alínea\nacrescida pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\ncom\nredação dada pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "b) que se dedicou à pesca durante o período definido no § 3º do art. 1º desta Lei; (Alínea acrescida pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, com redação dada pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:2/alinea:c": {
+        "device_type": "alinea",
+        "device_label": "alínea c",
+        "device_path": "paragrafo:2/alinea:c",
+        "text": "c)\nque não dispõe de outra fonte de renda diversa da decorrente da\natividade pesqueira.\n(Alínea\nacrescida pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\nconvertida\nna Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "c) que não dispõe de outra fonte de renda diversa da decorrente da atividade pesqueira. (Alínea acrescida pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, convertida na Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º O Ministério do Trabalho e Emprego, no ato de habilitação ao\nO Ministério do Trabalho e Emprego, no ato de habilitação ao\nbenefício, deverá verificar a condição de segurado pescador\nartesanal e o pagamento mensal da contribuição previdenciária, nos\núltimos 12 (doze) meses imediatamente anteriores ao requerimento do\nbenefício ou no período entre defesos, o que for menor.\n(Parágrafo\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação\n,\nconvertida\nna Lei nº 13.134, de 16/6/2015\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 3º O Ministério do Trabalho e Emprego, no ato de habilitação ao O Ministério do Trabalho e Emprego, no ato de habilitação ao benefício, deverá verificar a condição de segurado pescador artesanal e o pagamento mensal da contribuição previdenciária, nos últimos 12 (doze) meses imediatamente anteriores ao requerimento do benefício ou no período entre defesos, o que for menor. (Parágrafo acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação , convertida na Lei nº 13.134, de 16/6/2015 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º O Ministério da Pesca e Aquicultura desenvolverá atividades que\nO Ministério da Pesca e Aquicultura desenvolverá atividades que\ngarantam ao Ministério do Trabalho e Emprego acesso às informações\ncadastrais disponíveis no RGP, de que trata o art. 24 da Lei nº",
+        "normalized_text": "§ 4º O Ministério da Pesca e Aquicultura desenvolverá atividades que O Ministério da Pesca e Aquicultura desenvolverá atividades que garantam ao Ministério do Trabalho e Emprego acesso às informações cadastrais disponíveis no RGP, de que trata o art. 24 da Lei nº"
+      },
+      "paragrafo:4/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:4/item:11",
+        "text": "11.959, de 29 de junho de 2009, necessárias para a concessão do\n959, de 29 de junho de 2009, necessárias para a concessão do\nseguro-desemprego.\n(Parágrafo\nacrescido pela Medida Provisória nº 665, de 30/12/2014,\npublicada\nna Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nquarto\nmês subsequente à data de sua publicação,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "11.959, de 29 de junho de 2009, necessárias para a concessão do 959, de 29 de junho de 2009, necessárias para a concessão do seguro-desemprego. (Parágrafo acrescido pela Medida Provisória nº 665, de 30/12/2014, publicada na Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do quarto mês subsequente à data de sua publicação, e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º Da aplicação do disposto no § 4º deste artigo não poderá\nDa aplicação do disposto no § 4º deste artigo não poderá\nresultar nenhum ônus para os segurados.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015)",
+        "normalized_text": "§ 5º Da aplicação do disposto no § 4º deste artigo não poderá Da aplicação do disposto no § 4º deste artigo não poderá resultar nenhum ônus para os segurados. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º O Ministério do Trabalho e Emprego poderá, quando julgar\nO Ministério do Trabalho e Emprego poderá, quando julgar\nnecessário, exigir outros documentos ou validações para a\nhabilitação do benefício.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "§ 6º O Ministério do Trabalho e Emprego poderá, quando julgar O Ministério do Trabalho e Emprego poderá, quando julgar necessário, exigir outros documentos ou validações para a habilitação do benefício. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      },
+      "paragrafo:7": {
+        "device_type": "paragrafo",
+        "device_label": "§ 7º",
+        "device_path": "paragrafo:7",
+        "text": "§ 7º O Ministério do Trabalho e Emprego divulgará, mensalmente, a\nO Ministério do Trabalho e Emprego divulgará, mensalmente, a\nlista dos beneficiários em gozo do seguro-desemprego no período de\ndefeso, com o nome, o Município de residência e o número de\ninscrição no RGP, vedada a divulgação do endereço completo ou de\nqualquer dado que permita a identificação específica do domicílio\ndo beneficiário.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\ncom redação dada pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 7º O Ministério do Trabalho e Emprego divulgará, mensalmente, a O Ministério do Trabalho e Emprego divulgará, mensalmente, a lista dos beneficiários em gozo do seguro-desemprego no período de defeso, com o nome, o Município de residência e o número de inscrição no RGP, vedada a divulgação do endereço completo ou de qualquer dado que permita a identificação específica do domicílio do beneficiário. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e com redação dada pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:8": {
+        "device_type": "paragrafo",
+        "device_label": "§ 8º",
+        "device_path": "paragrafo:8",
+        "text": "§ 8º\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)",
+        "normalized_text": "§ 8º (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)"
+      },
+      "paragrafo:9": {
+        "device_type": "paragrafo",
+        "device_label": "§ 9º",
+        "device_path": "paragrafo:9",
+        "text": "§ 9º\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)",
+        "normalized_text": "§ 9º (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)"
+      },
+      "paragrafo:10": {
+        "device_type": "paragrafo",
+        "device_label": "§ 10º",
+        "device_path": "paragrafo:10",
+        "text": "§ 10.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)",
+        "normalized_text": "§ 10. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)"
+      },
+      "paragrafo:11": {
+        "device_type": "paragrafo",
+        "device_label": "§ 11º",
+        "device_path": "paragrafo:11",
+        "text": "§ 11.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.303, de 11/6/2025,\ncom\nvigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67,\nde 14/10/2025, publicado no DOU de 15/10/2025)",
+        "normalized_text": "§ 11. (Parágrafo acrescido pela Medida Provisória nº 1.303, de 11/6/2025, com vigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67, de 14/10/2025, publicado no DOU de 15/10/2025)"
+      },
+      "paragrafo:12": {
+        "device_type": "paragrafo",
+        "device_label": "§ 12º",
+        "device_path": "paragrafo:12",
+        "text": "§ 12. Exceto para os casos justificados de impossibilidade do exercício\nExceto para os casos justificados de impossibilidade do exercício\nda atividade pesqueira, a concessão e a manutenção do\nseguro-desemprego ficam condicionadas à comprovação do exercício\nda atividade pesqueira no período entre defesos, por meio de\nrelatório anual que deverá conter informações sobre a venda do\npescado, na forma, nos prazos e observados os critérios\nestabelecidos pelo Codefat, a ser submetido ao Ministério do\nTrabalho e Emprego.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nconvertida\nna Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 12. Exceto para os casos justificados de impossibilidade do exercício Exceto para os casos justificados de impossibilidade do exercício da atividade pesqueira, a concessão e a manutenção do seguro-desemprego ficam condicionadas à comprovação do exercício da atividade pesqueira no período entre defesos, por meio de relatório anual que deverá conter informações sobre a venda do pescado, na forma, nos prazos e observados os critérios estabelecidos pelo Codefat, a ser submetido ao Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , convertida na Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:13": {
+        "device_type": "paragrafo",
+        "device_label": "§ 13º",
+        "device_path": "paragrafo:13",
+        "text": "§ 13.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 13. (VETADO na Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:14": {
+        "device_type": "paragrafo",
+        "device_label": "§ 14º",
+        "device_path": "paragrafo:14",
+        "text": "§ 14.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 14. (VETADO na Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:15": {
+        "device_type": "paragrafo",
+        "device_label": "§ 15º",
+        "device_path": "paragrafo:15",
+        "text": "§ 15. No processo de elaboração das normas pelo Codefat que\nNo processo de elaboração das normas pelo Codefat que\nregulamentem ou complementem os dispositivos legais relacionados ao\nseguro-desemprego, será assegurada a participação, com direito a\nvoz, de representantes das entidades representativas dos pescadores\nartesanais credenciadas das 5 (cinco) grandes regiões do País, nos\ntermos definidos pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\nArt.\n2º-A. O Ministério do Trabalho e Emprego promoverá ações de\norientação e de formação direcionadas aos pescadores\nprofissionais artesanais sobre o seguro-desemprego do pescador\nartesanal, conforme disponibilidade orçamentária e financeira.\n(Artigo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 15. No processo de elaboração das normas pelo Codefat que No processo de elaboração das normas pelo Codefat que regulamentem ou complementem os dispositivos legais relacionados ao seguro-desemprego, será assegurada a participação, com direito a voz, de representantes das entidades representativas dos pescadores artesanais credenciadas das 5 (cinco) grandes regiões do País, nos termos definidos pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026) Art. 2º-A. O Ministério do Trabalho e Emprego promoverá ações de orientação e de formação direcionadas aos pescadores profissionais artesanais sobre o seguro-desemprego do pescador artesanal, conforme disponibilidade orçamentária e financeira. (Artigo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      }
+    },
+    "Art. 3": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Sem prejuízo das sanções civis e penais cabíveis, os\nresponsáveis pelo uso de meios fraudulentos na habilitação ou na\npercepção do seguro-desemprego estarão sujeitos:\n(“Caput”\ndo artigo com redação dada pela Lei nº 15.265, de 21/11/2025)\nI\n- a demissão do cargo que ocupa, se servidor público;\nII\n- à suspensão de sua atividade, com o cancelamento do respectivo\nregistro, por 5 (cinco) anos; e\n(Inciso\ncom redação dada pela Lei nº 15.399, de 4/5/2026)\nIII\n- ao impedimento de requerer o benefício estabelecido no\ncaput\ndo art. 1º desta Lei pelo prazo de 5 (cinco) anos, aplicando-se o\ndobro do prazo nos casos de reincidência.\n(Inciso\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nconvertida\nna Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "Sem prejuízo das sanções civis e penais cabíveis, os responsáveis pelo uso de meios fraudulentos na habilitação ou na percepção do seguro-desemprego estarão sujeitos: (“Caput” do artigo com redação dada pela Lei nº 15.265, de 21/11/2025) I - a demissão do cargo que ocupa, se servidor público; II - à suspensão de sua atividade, com o cancelamento do respectivo registro, por 5 (cinco) anos; e (Inciso com redação dada pela Lei nº 15.399, de 4/5/2026) III - ao impedimento de requerer o benefício estabelecido no caput do art. 1º desta Lei pelo prazo de 5 (cinco) anos, aplicando-se o dobro do prazo nos casos de reincidência. (Inciso acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , convertida na Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Além das sanções estabelecidas no\nAlém das sanções estabelecidas no\ncaput\n,\na entidade representativa da pesca artesanal que colaborar de\nqualquer forma para o uso dos meios fraudulentos de que trata o\ncaput\ndeste artigo ficará impedida de celebrar qualquer modalidade de\nparceria prevista nesta Lei, bem como terá suas eventuais parcerias\nem curso canceladas.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 1º Além das sanções estabelecidas no Além das sanções estabelecidas no caput , a entidade representativa da pesca artesanal que colaborar de qualquer forma para o uso dos meios fraudulentos de que trata o caput deste artigo ficará impedida de celebrar qualquer modalidade de parceria prevista nesta Lei, bem como terá suas eventuais parcerias em curso canceladas. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º O Ministério do Trabalho e Emprego comunicará ao Instituto\nO Ministério do Trabalho e Emprego comunicará ao Instituto\nNacional do Seguro Social (INSS), ao Ministério do Desenvolvimento e\nAssistência Social, Família e Combate à Fome e ao Ministério da\nPesca e Aquicultura as ocorrências de que trata o\ncaput\ndeste artigo.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\nArt.\n3º-A. A União instituirá mecanismos permanentes de acompanhamento\ncadastral dos pescadores artesanais beneficiários de\nseguro-desemprego com vistas à:\nI\n- atualização periódica dos dados socioeconômicos e produtivos;\nII\n- identificação de demandas regionais e perfil produtivo.",
+        "normalized_text": "§ 2º O Ministério do Trabalho e Emprego comunicará ao Instituto O Ministério do Trabalho e Emprego comunicará ao Instituto Nacional do Seguro Social (INSS), ao Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome e ao Ministério da Pesca e Aquicultura as ocorrências de que trata o caput deste artigo. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026) Art. 3º-A. A União instituirá mecanismos permanentes de acompanhamento cadastral dos pescadores artesanais beneficiários de seguro-desemprego com vistas à: I - atualização periódica dos dados socioeconômicos e produtivos; II - identificação de demandas regionais e perfil produtivo."
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. As informações coletadas na forma do\nAs informações coletadas na forma do\ncaput\ndeste artigo, respeitada a privacidade dos dados pessoais utilizados,\nserão divulgadas em plataforma digital de acesso amplo.\n(Artigo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "Parágrafo único. As informações coletadas na forma do As informações coletadas na forma do caput deste artigo, respeitada a privacidade dos dados pessoais utilizados, serão divulgadas em plataforma digital de acesso amplo. (Artigo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      }
+    },
+    "Art. 4": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O benefício de que trata esta Lei será cancelado nas seguintes\nhipóteses:\nI\n- início de atividade remunerada;\nII\n- início de percepção de outra renda;\nIII\n- morte do beneficiário;\nIV\n- desrespeito ao período de defeso; ou\nV\n- comprovação de falsidade nas informações prestadas para a\nobtenção do benefício.\nArt.\n4º-A. O pescador profissional artesanal que houver percebido\nindevidamente parcela do seguro-desemprego de que trata esta Lei\nsujeitar-se-á à compensação automática do valor percebido\nindevidamente com o novo benefício a que fizer jus, na forma e de\nacordo com os critérios definidos em resolução do Codefat.\n(Artigo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
+        "normalized_text": "O benefício de que trata esta Lei será cancelado nas seguintes hipóteses: I - início de atividade remunerada; II - início de percepção de outra renda; III - morte do beneficiário; IV - desrespeito ao período de defeso; ou V - comprovação de falsidade nas informações prestadas para a obtenção do benefício. Art. 4º-A. O pescador profissional artesanal que houver percebido indevidamente parcela do seguro-desemprego de que trata esta Lei sujeitar-se-á à compensação automática do valor percebido indevidamente com o novo benefício a que fizer jus, na forma e de acordo com os critérios definidos em resolução do Codefat. (Artigo acrescido pela Medida Provisória nº 1.323, de 4/11/2025, e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      }
+    },
+    "Art. 5": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "O benefício do seguro-desemprego a que se refere esta Lei será\npago à conta do Fundo de Amparo ao Trabalhador - FAT, instituído\npela Lei nº 7.998, de 11 de janeiro de 1990.",
+        "normalized_text": "O benefício do seguro-desemprego a que se refere esta Lei será pago à conta do Fundo de Amparo ao Trabalhador - FAT, instituído pela Lei nº 7.998, de 11 de janeiro de 1990."
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1º Nas situações previstas no\nNas situações previstas no\ncaput\ndeste artigo poderão ser utilizadas unidades móveis pelo Ministério\ndo Trabalho e Emprego, diretamente ou por meio das alternativas\nprevistas no § 13 do art. 2º desta Lei.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 1º Nas situações previstas no Nas situações previstas no caput deste artigo poderão ser utilizadas unidades móveis pelo Ministério do Trabalho e Emprego, diretamente ou por meio das alternativas previstas no § 13 do art. 2º desta Lei. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2º\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 2º (VETADO na Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3º No exercício de 2026, a despesa de que trata o § 1º deste\nNo exercício de 2026, a despesa de que trata o § 1º deste\nartigo não excederá a R$ 7.909.535.000,00 (sete bilhões novecentos\ne nove milhões e quinhentos e trinta e cinco mil reais).\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 3º No exercício de 2026, a despesa de que trata o § 1º deste No exercício de 2026, a despesa de que trata o § 1º deste artigo não excederá a R$ 7.909.535.000,00 (sete bilhões novecentos e nove milhões e quinhentos e trinta e cinco mil reais). (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)",
+        "normalized_text": "§ 4º (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , não mantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a referida Medida Provisória)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)",
+        "normalized_text": "§ 5º (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , não mantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a referida Medida Provisória)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6º\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nnão\nmantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a\nreferida Medida Provisória)\nArt.\n5º-A. O Ministério do Trabalho e Emprego deverá prover meios para\no requerimento, a identificação, a comprovação documental e as\ndemais exigências para o acesso ao seguro-desemprego pelos\npescadores artesanais com restrições físicas, residentes em áreas\nlongínquas, sem acesso ou com acesso insatisfatório à internet ou\ncom disponibilidade precária de transporte e recursos tecnológicos\nem geral.\n(“Caput”\ndo artigo acrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "§ 6º (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , não mantido pela Lei nº 15.399, de 4/5/2026, na qual foi convertida a referida Medida Provisória) Art. 5º-A. O Ministério do Trabalho e Emprego deverá prover meios para o requerimento, a identificação, a comprovação documental e as demais exigências para o acesso ao seguro-desemprego pelos pescadores artesanais com restrições físicas, residentes em áreas longínquas, sem acesso ou com acesso insatisfatório à internet ou com disponibilidade precária de transporte e recursos tecnológicos em geral. (“Caput” do artigo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      }
+    },
+    "Art. 6": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Esta Lei entra em vigor na data de sua publicação.",
+        "normalized_text": "Esta Lei entra em vigor na data de sua publicação."
+      }
+    },
+    "Art. 7": {
+      "caput": {
+        "device_type": "caput",
+        "device_label": "caput",
+        "device_path": "caput",
+        "text": "Fica revogada a Lei nº 8.287, de 20 de dezembro de 1991.\nBrasília,\n25 de novembro de 2003; 182º da Independência e 115º da República.\nLUIZ\nINÁCIO LULA DA SILVA\nJaques\nWagner",
+        "normalized_text": "Fica revogada a Lei nº 8.287, de 20 de dezembro de 1991. Brasília, 25 de novembro de 2003; 182º da Independência e 115º da República. LUIZ INÁCIO LULA DA SILVA Jaques Wagner"
+      }
+    }
   }
 }
