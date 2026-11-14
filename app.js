@@ -2121,6 +2121,36 @@ function normalizeLegalForMatch(value) {
 function findErrorTypeLabel(type) {
   return ({prazo:"Prazos",percentual:"Percentuais e frações",requisito:"Requisitos",excecao:"Exceções"})[type] || "Requisitos";
 }
+
+function renderFindErrorLegalHighlight(element, source, phrase) {
+  const original=String(source||"");
+  const target=normalizeLegalForMatch(phrase);
+  let normalized="",positions=[],pendingSpace=null;
+  for(let i=0;i<original.length;){
+    const cp=String.fromCodePoint(original.codePointAt(i));
+    const decomposed=cp.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLocaleLowerCase("pt-BR");
+    for(const char of decomposed){
+      if(/[\\p{L}\\p{N}%]/u.test(char)){
+        if(pendingSpace!==null&&normalized.length){normalized+=" ";positions.push(pendingSpace);}
+        pendingSpace=null;normalized+=char;positions.push(i);
+      }else if(normalized.length&&pendingSpace===null){pendingSpace=i;}
+    }
+    i+=cp.length;
+  }
+  const found=target?normalized.indexOf(target):-1;
+  if(found<0){element.textContent=original;return false;}
+  const start=positions[found],last=positions[found+target.length-1];
+  if(start===undefined||last===undefined){element.textContent=original;return false;}
+  const end=last+String.fromCodePoint(original.codePointAt(last)).length;
+  element.replaceChildren();
+  if(start>0)element.append(document.createTextNode(original.slice(0,start)));
+  const mark=document.createElement("mark");
+  mark.className="error-correct-highlight";
+  mark.textContent=original.slice(start,end);
+  element.append(mark);
+  if(end<original.length)element.append(document.createTextNode(original.slice(end)));
+  return true;
+}
 async function loadFindErrorBank() {
   const note=$("#error-count-note");
   try {
@@ -2263,7 +2293,7 @@ function chooseFindErrorSegment(index,button){
   $("#error-result").className="feedback-result correct";
   $("#error-wrong-phrase").textContent=item.segments[index].trim();$("#error-correct-phrase").textContent=item.correct_phrase;
   $("#error-explanation").textContent=item.explanation;
-  renderTextWithHighlights($("#error-literal"),item.literal_text,[item.correct_phrase],"error-correct-highlight");
+  renderFindErrorLegalHighlight($("#error-literal"),item.literal_text,item.correct_phrase);
   $("#error-source").href=item.source_url;$("#error-solution").classList.remove("hidden");
   $("#next-error-question").textContent=findErrorState.index===findErrorState.questions.length-1?"Ver resultado →":"Próxima questão →";
   renderFindErrorReviewOverview();
