@@ -21,6 +21,8 @@ let articleQuestions = [];
 let articleGameState = { questions: [], index: 0, selected: null, answers: [] };
 let multiCEGroups = [];
 let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
+let beforeAfterAvailable = [];
+let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -170,6 +172,7 @@ async function loadDashboard() {
     if (!response.ok) throw new Error("HTTP " + response.status);
     dashboardData = await response.json();
     allChanges = Array.isArray(dashboardData.changes) ? dashboardData.changes : [];
+    prepareBeforeAfterBank();
     renderStatus(dashboardData);
     updateBadge();
     renderChanges();
@@ -1100,12 +1103,233 @@ function showMultiCESummary(){
   $("#multi-ce-retry-mistakes").classList.toggle("hidden",failedIds.size===0);
 }
 
+
+// -------------------- Antes e depois das alterações --------------------
+function beforeAfterCategoryForChange(change) {
+  const id = change.law_id || "";
+  if (id === "constituicao-1988" || id === "ec-103-2019") return "Direito Constitucional";
+  if (id === "decreto-6029-2007" || id === "decreto-1171-1994") return "Ética";
+  if (id === "lei-8112-1990" || id === "lei-9784-1999" || id === "lei-8429-1992") return "Direito Administrativo";
+  return "Direito Previdenciário";
+}
+
+function beforeAfterText(change, version) {
+  if (version === "old") {
+    return change.old_text || (
+      change.change_type === "incluido"
+        ? "Este artigo não aparecia na captura anterior."
+        : "Não havia texto anterior disponível para comparação."
+    );
+  }
+  return change.new_text || (
+    change.change_type === "nao_encontrado"
+      ? "Este artigo não foi localizado na captura atual."
+      : "Não havia texto deste artigo na captura atual."
+  );
+}
+
+function prepareBeforeAfterBank() {
+  beforeAfterAvailable = allChanges.filter(change =>
+    change.change_type !== "texto_integral_alterado" &&
+    Boolean(change.article) &&
+    Boolean(change.old_text || change.new_text || change.change_type === "incluido" || change.change_type === "nao_encontrado")
+  );
+
+  const select = $("#before-after-category");
+  if (!select) return;
+  select.replaceChildren();
+  const all = document.createElement("option");
+  all.value = "todas";
+  all.textContent = "Todas as matérias";
+  select.append(all);
+
+  [...new Set(beforeAfterAvailable.map(beforeAfterCategoryForChange))]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"))
+    .forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      select.append(option);
+    });
+
+  $("#start-before-after").disabled = beforeAfterAvailable.length === 0;
+  const note = $("#before-after-count-note");
+  const checked = dashboardData && Array.isArray(dashboardData.laws)
+    ? dashboardData.laws.filter(law => !law.error && law.last_checked).length
+    : 0;
+
+  if (beforeAfterAvailable.length) {
+    note.textContent = beforeAfterAvailable.length + " alteração(ões) de artigos disponíveis. Cada rodada usa textos registrados pelo monitor, sem criar exemplos fictícios.";
+  } else if (allChanges.length) {
+    note.textContent = "Há " + allChanges.length + " registro(s) no Radar, mas nenhum é uma comparação artigo por artigo. Consulte as mudanças de texto integral diretamente no Radar.";
+  } else if (dashboardData && dashboardData.status === "ok") {
+    note.textContent = "Nenhuma alteração artigo por artigo foi registrada até agora. A última verificação consultou " + checked + " fontes sem detectar diferenças. Quando surgir uma alteração, ela aparecerá aqui automaticamente.";
+  } else if (dashboardData && dashboardData.status === "parcial") {
+    note.textContent = "A última verificação foi parcial. Não há comparações artigo por artigo disponíveis neste momento; confira o estado das fontes no Radar.";
+  } else {
+    note.textContent = "O histórico ainda não está disponível. Recarregue o painel depois que o monitoramento concluir uma verificação.";
+  }
+}
+
+function prepareBeforeAfterQuestion(change) {
+  const options = shuffle([
+    { version: "old", text: beforeAfterText(change, "old") },
+    { version: "new", text: beforeAfterText(change, "new") }
+  ]);
+  return {
+    change,
+    category: beforeAfterCategoryForChange(change),
+    options,
+    correctIndex: options.findIndex(option => option.version === "new")
+  };
+}
+
+function startBeforeAfterGame(items = null) {
+  let pool = Array.isArray(items) ? [...items] : [...beforeAfterAvailable];
+  if (!Array.isArray(items)) {
+    const category = $("#before-after-category").value;
+    if (category !== "todas") pool = pool.filter(change => beforeAfterCategoryForChange(change) === category);
+  }
+  if (!pool.length) return;
+
+  const length = $("#before-after-length").value;
+  const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
+  beforeAfterState = {
+    questions: shuffle(pool).slice(0, amount).map(prepareBeforeAfterQuestion),
+    index: 0,
+    selected: null,
+    answers: [],
+    answered: false
+  };
+  $("#before-after-welcome").classList.add("hidden");
+  $("#before-after-summary").classList.add("hidden");
+  $("#before-after-card").classList.remove("hidden");
+  renderBeforeAfterQuestion();
+}
+
+function renderBeforeAfterQuestion() {
+  const question = beforeAfterState.questions[beforeAfterState.index];
+  if (!question) return;
+  beforeAfterState.selected = null;
+  beforeAfterState.answered = false;
+  $("#before-after-category-label").textContent = question.category;
+  $("#before-after-progress").textContent = "Alteração " + (beforeAfterState.index + 1) + " de " + beforeAfterState.questions.length;
+  $("#before-after-law").textContent = question.change.law_short_title || question.change.law_title || "Norma";
+  $("#before-after-article").textContent = question.change.article || "Dispositivo";
+  $("#before-after-prompt").textContent = "Qual das duas versões corresponde à captura mais recente da fonte oficial?";
+  $("#before-after-options").replaceChildren();
+
+  question.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "before-after-option";
+    button.setAttribute("aria-pressed", "false");
+    const label = document.createElement("strong");
+    label.textContent = "VERSÃO " + (index === 0 ? "A" : "B");
+    const text = document.createElement("pre");
+    text.textContent = option.text;
+    button.append(label, text);
+    button.addEventListener("click", () => {
+      if (beforeAfterState.answered) return;
+      beforeAfterState.selected = index;
+      [...$("#before-after-options").children].forEach((child, childIndex) => {
+        child.classList.toggle("is-selected", childIndex === index);
+        child.setAttribute("aria-pressed", childIndex === index ? "true" : "false");
+      });
+      $("#before-after-submit").disabled = false;
+    });
+    $("#before-after-options").append(button);
+  });
+
+  $("#before-after-submit").disabled = true;
+  $("#before-after-feedback").classList.add("hidden");
+  $("#before-after-next").textContent = beforeAfterState.index + 1 < beforeAfterState.questions.length
+    ? "Próxima alteração →"
+    : "Ver resultado →";
+}
+
+function confirmBeforeAfterAnswer() {
+  if (beforeAfterState.selected === null || beforeAfterState.answered) return;
+  const question = beforeAfterState.questions[beforeAfterState.index];
+  const change = question.change;
+  const correct = beforeAfterState.selected === question.correctIndex;
+  beforeAfterState.answered = true;
+  beforeAfterState.answers.push({ item: change, correct });
+
+  [...$("#before-after-options").children].forEach(button => { button.disabled = true; });
+  $("#before-after-submit").disabled = true;
+  $("#before-after-result").textContent = correct
+    ? "✓ Você identificou a versão mais recente."
+    : "✕ A versão mais recente era a outra opção.";
+  $("#before-after-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
+  $("#before-after-explanation").textContent =
+    (change.summary || "O monitor registrou uma diferença entre duas capturas.")
+    + " A versão atual é a que aparece na captura mais recente; isso não substitui a conferência da publicação e da vigência do ato.";
+
+  const comparison = $("#before-after-comparison");
+  comparison.replaceChildren();
+  [
+    { title: "ANTES · CAPTURA ANTERIOR", text: beforeAfterText(change, "old"), className: "diff-panel old-panel" },
+    { title: "AGORA · CAPTURA MAIS RECENTE", text: beforeAfterText(change, "new"), className: "diff-panel new-panel" }
+  ].forEach(panelData => {
+    const panel = document.createElement("div");
+    panel.className = panelData.className;
+    const title = document.createElement("span");
+    title.textContent = panelData.title;
+    const text = document.createElement("pre");
+    text.textContent = panelData.text;
+    panel.append(title, text);
+    comparison.append(panel);
+  });
+  $("#before-after-source").href = change.source_url || "https://www.gov.br/";
+  $("#before-after-feedback").classList.remove("hidden");
+}
+
+function nextBeforeAfterQuestion() {
+  if (beforeAfterState.index + 1 < beforeAfterState.questions.length) {
+    beforeAfterState.index += 1;
+    renderBeforeAfterQuestion();
+    return;
+  }
+  showBeforeAfterSummary();
+}
+
+function showBeforeAfterSummary() {
+  $("#before-after-card").classList.add("hidden");
+  $("#before-after-summary").classList.remove("hidden");
+  const total = beforeAfterState.answers.length;
+  const correct = beforeAfterState.answers.filter(answer => answer.correct).length;
+  const percent = total ? Math.round(correct / total * 100) : 0;
+  const mistakes = beforeAfterState.answers.filter(answer => !answer.correct);
+  $("#before-after-score").textContent = correct + " de " + total + " acerto(s) · " + percent + "%";
+  $("#before-after-score-note").textContent = total + " alteração(ões) revisada(s). Confira novamente as que você errou.";
+  const box = $("#before-after-mistakes");
+  box.replaceChildren();
+  if (mistakes.length) {
+    const title = document.createElement("h3");
+    title.textContent = "Alterações para revisar";
+    const list = document.createElement("ul");
+    mistakes.forEach(answer => {
+      const item = document.createElement("li");
+      item.textContent = (answer.item.law_short_title || answer.item.law_title || "Norma") + " · " + (answer.item.article || "Dispositivo");
+      list.append(item);
+    });
+    box.append(title, list);
+  } else {
+    const note = document.createElement("p");
+    note.textContent = "Muito bem! Você identificou todas as versões atuais deste treino.";
+    box.append(note);
+  }
+  $("#before-after-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+}
+
 function showView(view) {
   const quiz = view === "quiz";
   const cloze = view === "cloze";
   const findError = view === "find-error";
   const article = view === "article";
   const multiCE = view === "multi-ce";
+  const beforeAfter = view === "before-after";
   const radar = view === "radar";
   $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
@@ -1113,13 +1337,15 @@ function showView(view) {
   $("#find-error-view").classList.toggle("hidden", !findError);
   $("#article-view").classList.toggle("hidden", !article);
   $("#multi-ce-view").classList.toggle("hidden", !multiCE);
+  $("#before-after-view").classList.toggle("hidden", !beforeAfter);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
   $("#tab-find-error").classList.toggle("active", findError);
   $("#tab-article").classList.toggle("active", article);
   $("#tab-multi-ce").classList.toggle("active", multiCE);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE] ].forEach(([id, active]) => {
+  $("#tab-before-after").classList.toggle("active", beforeAfter);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -1128,6 +1354,7 @@ function showView(view) {
   else if (findError) $("#find-error-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (article) $("#article-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (multiCE) $("#multi-ce-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (beforeAfter) $("#before-after-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -1144,6 +1371,15 @@ $("#tab-cloze").addEventListener("click", () => showView("cloze"));
 $("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#tab-article").addEventListener("click", () => showView("article"));
 $("#tab-multi-ce").addEventListener("click", () => showView("multi-ce"));
+$("#tab-before-after").addEventListener("click", () => showView("before-after"));
+$("#start-before-after").addEventListener("click", () => startBeforeAfterGame());
+$("#before-after-submit").addEventListener("click", confirmBeforeAfterAnswer);
+$("#before-after-next").addEventListener("click", nextBeforeAfterQuestion);
+$("#before-after-restart").addEventListener("click", () => startBeforeAfterGame());
+$("#before-after-retry-mistakes").addEventListener("click", () => {
+  const mistakes = beforeAfterState.answers.filter(answer => !answer.correct).map(answer => answer.item);
+  startBeforeAfterGame(mistakes);
+});
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
