@@ -496,7 +496,7 @@ async function loadLegalLaw(lawId) {
       law.edital_item ? "Conteúdo do edital: " + law.edital_item : ""
     ].filter(Boolean).join(" · ");
     $("#law-reader-source").href = snapshot.source_url_used || law.url;
-    $("#law-reader-source").textContent = "Fonte consultada ↗";
+    $("#law-reader-source").textContent = "Fonte oficial consultada ↗";
     $("#law-reader-warning").classList.add("hidden");
     const status = legalLawStatus(law.id);
     if (status && status.error) {
