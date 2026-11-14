@@ -152,7 +152,7 @@
         " a prestação de serviços gratuitos, salvo os casos previstos em lei."
       ],
       "wrong_segment_index": 1,
-      "correct_phrase": "É proibida a prestação de serviços gratuitos",
+      "correct_phrase": "proibida",
       "explanation": "A regra do art. 4º é a proibição da prestação de serviços gratuitos. A exceção existe apenas para os casos previstos em lei.",
       "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
     },
@@ -186,7 +186,7 @@
         ", não coincidentes."
       ],
       "wrong_segment_index": 1,
-      "correct_phrase": "mandatos de três anos",
+      "correct_phrase": "três anos",
       "explanation": "O mandato previsto no art. 3º é de três anos e não é coincidente.",
       "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
     },
