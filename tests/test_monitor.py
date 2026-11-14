@@ -1,6 +1,14 @@
 import unittest
 
-from scripts.monitor import baseline_must_be_rebuilt, compare, make_snapshot, split_articles, validate_law_identity
+from scripts.monitor import (
+    baseline_must_be_rebuilt,
+    compare,
+    extract_event_dates,
+    make_snapshot,
+    split_article_components,
+    split_articles,
+    validate_law_identity,
+)
 
 
 class MonitorTests(unittest.TestCase):
@@ -133,6 +141,110 @@ class MonitorTests(unittest.TestCase):
             "parser_mode": "artigos",
         }
         self.assertTrue(baseline_must_be_rebuilt(old, current))
+
+
+    def test_hierarchical_device_parser_identifies_nested_units(self):
+        parts = split_article_components(
+            "Art. 10. Texto do caput.\n"
+            "§\n1º Texto do parágrafo.\n"
+            "I - Texto do inciso.\n"
+            "a) Texto da alínea.\n"
+            "1. Texto do item.\n"
+            "§ 2º Segundo parágrafo."
+        )
+        self.assertIn("caput", parts)
+        self.assertIn("paragrafo:1", parts)
+        self.assertIn("paragrafo:1/inciso:I", parts)
+        self.assertIn("paragrafo:1/inciso:I/alinea:a", parts)
+        self.assertIn("paragrafo:1/inciso:I/alinea:a/item:1", parts)
+        self.assertIn("paragrafo:2", parts)
+        self.assertEqual(parts["paragrafo:1/inciso:I/alinea:a"]["device_label"], "alínea a")
+
+    def test_compare_reports_only_the_changed_subdevice(self):
+        law = {
+            "id": "lei-teste-1",
+            "title": "Lei de teste",
+            "short_title": "Lei de teste",
+            "category": "Lei",
+            "url": "https://example.org/lei",
+        }
+        old = make_snapshot(
+            "Art. 1º Texto do caput.\n§ 1º Parágrafo.\nI - Redação antiga.\nII - Mantido.",
+            law,
+            law["url"],
+        )
+        new = make_snapshot(
+            "Art. 1º Texto do caput.\n§ 1º Parágrafo.\nI - Redação nova.\nII - Mantido.",
+            law,
+            law["url"],
+        )
+        changes = compare(law, old, new, "2026-11-14T12:00:00Z")
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]["article"], "Art. 1")
+        self.assertEqual(changes[0]["device_type"], "inciso")
+        self.assertEqual(changes[0]["device_label"], "inciso I")
+        self.assertEqual(changes[0]["change_scope"], "parte_do_dispositivo")
+        self.assertEqual(changes[0]["legal_effect_status"], "vigencia_nao_confirmada")
+
+    def test_added_subdevice_is_not_reported_as_whole_article(self):
+        law = {
+            "id": "lei-teste-2",
+            "title": "Lei de teste",
+            "short_title": "Lei de teste",
+            "category": "Lei",
+            "url": "https://example.org/lei",
+        }
+        old = make_snapshot("Art. 1º Texto do caput.", law, law["url"])
+        new = make_snapshot("Art. 1º Texto do caput.\n§ 1º Parágrafo incluído.", law, law["url"])
+        changes = compare(law, old, new, "2026-11-14T12:00:00Z")
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]["change_type"], "incluido")
+        self.assertEqual(changes[0]["device_label"], "§ 1º")
+
+    def test_explicit_revocation_annotation_is_identified_at_device_level(self):
+        law = {
+            "id": "lei-teste-3",
+            "title": "Lei de teste",
+            "short_title": "Lei de teste",
+            "category": "Lei",
+            "url": "https://example.org/lei",
+        }
+        old = make_snapshot("Art. 1º Caput.\n§ 1º Texto vigente.", law, law["url"])
+        new = make_snapshot("Art. 1º Caput.\n§ 1º (Revogado pela Lei nº 9.999, de 1º/1/2026).", law, law["url"])
+        changes = compare(law, old, new, "2026-11-14T12:00:00Z")
+        paragraph_change = next(change for change in changes if change["device_type"] == "paragrafo")
+        self.assertEqual(paragraph_change["change_type"], "possivelmente_revogado")
+        self.assertEqual(paragraph_change["textual_change_status"], "revogacao_indicada_na_fonte")
+
+    def test_publication_and_effective_dates_require_explicit_wording(self):
+        dates = extract_event_dates(
+            "Publicado no Diário Oficial em 05/05/2026. "
+            "Esta norma entra em vigor a partir de 10/05/2026."
+        )
+        self.assertEqual(dates["publication_date"], "2026-05-05")
+        self.assertEqual(dates["effective_date"], "2026-05-10")
+
+        amendment_reference = extract_event_dates(
+            "(Inciso com redação dada pela Lei nº 9.528, de 10/12/1997)"
+        )
+        self.assertIsNone(amendment_reference["publication_date"])
+        self.assertIsNone(amendment_reference["effective_date"])
+
+    def test_missing_device_is_not_automatically_classified_as_revoked(self):
+        law = {
+            "id": "lei-teste-4",
+            "title": "Lei de teste",
+            "short_title": "Lei de teste",
+            "category": "Lei",
+            "url": "https://example.org/lei",
+        }
+        old = make_snapshot("Art. 1º Caput.\n§ 1º Texto antigo.", law, law["url"])
+        new = make_snapshot("Art. 1º Caput.", law, law["url"])
+        changes = compare(law, old, new, "2026-11-14T12:00:00Z")
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]["change_type"], "nao_encontrado")
+        self.assertEqual(changes[0]["legal_effect_status"], "situacao_juridica_nao_confirmada")
+
 
 
 if __name__ == "__main__":
