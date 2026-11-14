@@ -14,6 +14,8 @@ let clozeSnapshot = null;
 let clozeCurrent = null;
 let clozeBlanks = [];
 let clozeAnswered = 0;
+let clozeReviewSessionSeen = new Set();
+let selectedClozeText = "";
 let quizState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false };
 let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
@@ -25,6 +27,7 @@ let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
 const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
+const CLOZE_REVIEW_KEY = "radarLegislativo.clozeReview.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
@@ -1723,175 +1726,386 @@ async function loadClozeLaws() {
     clozeLaws = (Array.isArray(data) ? data : []).filter(law => law.enabled !== false);
     const select = $("#cloze-law");
     select.replaceChildren();
-    clozeLaws.forEach(law => {
-      const option = document.createElement("option");
-      option.value = law.id;
-      option.textContent = law.short_title || law.title;
-      select.append(option);
-    });
+    clozeLaws.forEach(law => select.append(new Option(law.short_title || law.title, law.id)));
     if (!clozeLaws.length) throw new Error("Nenhuma norma está cadastrada.");
     await loadClozeSnapshot();
+    renderClozeReviewOverview();
   } catch (error) {
     $("#cloze-note").textContent = "Não foi possível carregar as normas salvas. Recarregue o site e tente novamente.";
     console.error(error);
   }
 }
+function getClozeComponents(article,type) {
+  const raw=clozeSnapshot?.snapshot?.components?.[article];
+  if(!raw||typeof raw!=="object")return [];
+  return Object.entries(raw).filter(([path,component])=>
+    component && component.device_type===type && typeof component.text==="string" && component.text.trim().length>=18
+  ).map(([path,component])=>({...component,device_path:component.device_path||path}));
+}
+function updateClozeArticleOptions() {
+  if(!clozeSnapshot)return;
+  const type=$("#cloze-content-type").value;
+  const previous=$("#cloze-article").value||"aleatorio";
+  const available=clozeSnapshot.entries.filter(([article])=>
+    type==="artigo"||getClozeComponents(article,type).length>0
+  );
+  const select=$("#cloze-article");
+  select.replaceChildren();
+  select.append(new Option("Artigo aleatório","aleatorio"));
+  available.forEach(([article])=>select.append(new Option(article,article)));
+  select.disabled=available.length===0;
+  select.value=available.some(([article])=>article===previous)?previous:"aleatorio";
+  updateClozeDeviceOptions();
+  $("#start-cloze").disabled=available.length===0;
+  if(!available.length) {
+    const label=type==="inciso"?"incisos":"parágrafos";
+    $("#cloze-note").textContent="Não foram encontrados "+label+" separados nesta norma. Escolha outra norma ou treine o artigo completo.";
+  } else if(type!=="artigo") {
+    const label=type==="inciso"?"incisos":"parágrafos";
+    $("#cloze-note").textContent=available.length+" artigos possuem "+label+" identificados. Escolha um artigo e, opcionalmente, um dispositivo específico.";
+  } else {
+    $("#cloze-note").textContent=available.length+" artigos disponíveis nesta norma. Fonte consultada em "+formatDate(clozeSnapshot.snapshot.captured_at)+".";
+  }
+}
+function updateClozeDeviceOptions() {
+  const type=$("#cloze-content-type").value;
+  const control=$("#cloze-device-control");
+  const select=$("#cloze-device");
+  const article=$("#cloze-article").value;
+  control.hidden=type==="artigo";
+  if(type==="artigo") {
+    select.replaceChildren(new Option("Não se aplica",""));
+    select.disabled=true;
+    return;
+  }
+  const label=type==="inciso"?"inciso":"parágrafo";
+  if(article==="aleatorio") {
+    select.replaceChildren(new Option("Qualquer "+label+" do artigo sorteado","aleatorio"));
+    select.disabled=true;
+    return;
+  }
+  const devices=getClozeComponents(article,type);
+  select.replaceChildren(new Option("Qualquer "+label+" deste artigo","aleatorio"));
+  devices.forEach(device=>select.append(new Option(device.device_label||device.device_path,device.device_path)));
+  select.disabled=devices.length===0;
+}
 async function loadClozeSnapshot() {
-  const law = clozeLaws.find(item => item.id === $("#cloze-law").value) || clozeLaws[0];
-  if (!law) return;
-  $("#cloze-note").textContent = "Carregando artigos de " + (law.short_title || law.title) + "...";
-  $("#start-cloze").disabled = true;
-  clozeSnapshot = null;
+  const law=clozeLaws.find(item=>item.id===$("#cloze-law").value)||clozeLaws[0];
+  if(!law)return;
+  $("#cloze-note").textContent="Carregando artigos de "+(law.short_title||law.title)+"...";
+  $("#start-cloze").disabled=true;
+  clozeSnapshot=null;
   try {
-    const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
-    if (!response.ok) throw new Error("HTTP " + response.status);
-    const snapshot = await response.json();
-    const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
-    const entries = Object.entries(articles).filter(([_, text]) => typeof text === "string" && text.trim().length >= 80);
-    clozeSnapshot = { law, entries, snapshot };
-    const articleSelect = $("#cloze-article");
-    articleSelect.replaceChildren();
-    const randomOption = document.createElement("option");
-    randomOption.value = "aleatorio";
-    randomOption.textContent = "Artigo aleatório";
-    articleSelect.append(randomOption);
-    entries.sort((a,b) => {
-      const na = Number((a[0].match(/\d+/) || [0])[0]);
-      const nb = Number((b[0].match(/\d+/) || [0])[0]);
-      return na - nb || a[0].localeCompare(b[0], "pt-BR");
-    }).forEach(([article]) => {
-      const option = document.createElement("option");
-      option.value = article;
-      option.textContent = article;
-      articleSelect.append(option);
-    });
-    articleSelect.disabled = entries.length === 0;
-    $("#start-cloze").disabled = entries.length === 0;
-    $("#cloze-note").textContent = entries.length
-      ? entries.length + " artigos disponíveis nesta norma. Fonte consultada em " + formatDate(snapshot.captured_at) + "."
-      : "Esta norma ainda não possui artigos separados com segurança para o exercício de lacunas. Escolha outra norma.";
-  } catch (error) {
-    $("#cloze-note").textContent = "Não foi possível carregar a captura dessa norma. A verificação pode não ter sido concluída.";
-    $("#cloze-article").disabled = true;
-    $("#start-cloze").disabled = true;
+    const response=await fetch("data/snapshots/"+encodeURIComponent(law.id)+".json?v="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("HTTP "+response.status);
+    const snapshot=await response.json();
+    const articles=snapshot.articles&&typeof snapshot.articles==="object"?snapshot.articles:{};
+    const entries=Object.entries(articles).filter(([_,text])=>typeof text==="string"&&text.trim().length>=45);
+    clozeSnapshot={law,entries,snapshot};
+    updateClozeArticleOptions();
+    if(!entries.length) {
+      $("#cloze-note").textContent="Esta norma não possui artigos separados com texto suficiente para este exercício.";
+      $("#start-cloze").disabled=true;
+    }
+  } catch(error) {
+    $("#cloze-note").textContent="Não foi possível carregar a captura dessa norma. A verificação pode não ter sido concluída.";
+    $("#cloze-article").disabled=true;$("#cloze-device").disabled=true;$("#start-cloze").disabled=true;
     console.error(error);
   }
 }
-function buildClozeForText(text, difficulty) {
-  const tokenRegex = /[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)*|\d+(?:[.,]\d+)?/gu;
-  const common = new Set([
-    "para","pela","pelo","pelas","pelos","sobre","entre","desde","quando","onde","como","mais","menos",
-    "esta","este","essas","esses","isso","isto","aquele","aquela","tambem","ainda","assim","sendo",
-    "serao","seria","serao","foram","ser","sua","suas","seu","seus","que","com","sem","nos","nas",
-    "dos","das","dos","uma","umas","uns","por","sob","aos","aquelas","aqueles","cada","todo","toda",
-    "todos","todas","qual","quais","cujo","cuja","cujos","cujas","art","artigo"
-  ]);
-  const tokens = [];
+const CLOZE_COMMON_WORDS=new Set([
+  "para","pela","pelo","pelas","pelos","sobre","entre","desde","quando","onde","como","mais","menos",
+  "esta","este","essas","esses","isso","isto","aquele","aquela","tambem","ainda","assim","sendo",
+  "serao","seria","foram","ser","sua","suas","seu","seus","que","com","sem","nos","nas","dos","das",
+  "uma","umas","uns","por","sob","aos","aquelas","aqueles","cada","todo","toda","todos","todas",
+  "qual","quais","cujo","cuja","cujos","cujas","art","artigo","inciso","paragrafo","caput"
+]);
+const CLOZE_LEGAL_KEYWORDS=new Set([
+  "nao","vedado","vedada","proibido","proibida","salvo","exceto","mediante","independentemente",
+  "obrigatorio","obrigatoria","facultativo","facultativa","exclusivamente","somente","apenas",
+  "segurado","beneficio","beneficios","contribuicao","carencia","salario","incapacidade",
+  "aposentadoria","dependente","dependentes","requisito","requisitos","prazo","dias","meses",
+  "anos","imediatamente","anteriormente","posteriormente","remuneracao","qualidade","inscricao"
+]);
+function clozeTokenScore(value,numeric) {
+  const normalized=normalizeAnswer(value);
+  if(numeric)return 5;
+  if(CLOZE_LEGAL_KEYWORDS.has(normalized))return 6;
+  if(value.length>=11)return 4;
+  if(value.length>=8)return 3;
+  if(value.length>=5)return 2;
+  return 1;
+}
+function buildClozeForText(text,difficulty) {
+  if(difficulty==="dificil")return buildClozePassageBlanks(text);
+  const tokenRegex=/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)*|\d+(?:[.,]\d+)?/gu;
+  const tokens=[];
   let match;
-  while ((match = tokenRegex.exec(text)) !== null) {
-    const value = match[0];
-    const normalized = normalizeAnswer(value);
-    const numeric = /^\d/.test(value);
-    const initialHeaderToken = tokens.length < 2 && (normalized === "art" || /^\d/.test(value));
-    if (!initialHeaderToken && (numeric ? value.length >= 2 : value.length >= 5 && !common.has(normalized))) {
-      tokens.push({ start: match.index, end: match.index + value.length, value });
+  while((match=tokenRegex.exec(text))!==null) {
+    const value=match[0],normalized=normalizeAnswer(value),numeric=/^\d/.test(value);
+    const isHeader=match.index<16&&(/^(?:art|artigo)$/i.test(value)||numeric);
+    const meaningful=numeric||CLOZE_LEGAL_KEYWORDS.has(normalized)||(value.length>=5&&!CLOZE_COMMON_WORDS.has(normalized));
+    if(!isHeader&&meaningful)tokens.push({
+      start:match.index,end:match.index+value.length,value,
+      score:clozeTokenScore(value,numeric),
+      hint:numeric?"Quantidade de algarismos: "+value.length:"Começa com “"+value[0].toLocaleLowerCase("pt-BR")+"” · "+[...value].length+" letras"
+    });
+  }
+  const amount=difficulty==="facil"?4:7;
+  const ranked=shuffle(tokens).sort((a,b)=>b.score-a.score);
+  return ranked.slice(0,Math.min(amount,ranked.length)).sort((a,b)=>a.start-b.start)
+    .map(item=>({...item,type:"word",hint:difficulty==="facil"?item.hint:""}));
+}
+function buildClozePassageBlanks(text) {
+  const candidates=[];
+  const pattern=/[^;.!?]+[;.!?]?/g;
+  let match;
+  while((match=pattern.exec(text))!==null) {
+    const raw=match[0],trimmed=raw.trim(),left=raw.indexOf(trimmed);
+    const words=trimmed.split(/\s+/).filter(Boolean);
+    if(trimmed.length>=45&&words.length>=7)
+      candidates.push({start:match.index+left,end:match.index+left+trimmed.length,value:trimmed,type:"segment"});
+  }
+  if(candidates.length<2) {
+    const commaPattern=/[^,;.!?]+[,;!?]?/g;
+    while((match=commaPattern.exec(text))!==null) {
+      const raw=match[0],trimmed=raw.trim(),left=raw.indexOf(trimmed);
+      const words=trimmed.split(/\s+/).filter(Boolean);
+      if(trimmed.length>=45&&words.length>=7) {
+        const candidate={start:match.index+left,end:match.index+left+trimmed.length,value:trimmed,type:"segment"};
+        if(!candidates.some(item=>item.start===candidate.start))candidates.push(candidate);
+      }
     }
   }
-  const requested = difficulty === "facil" ? 4 : difficulty === "dificil" ? 10 : 7;
-  const selected = shuffle(tokens).slice(0, Math.min(requested, tokens.length)).sort((a,b) => a.start - b.start);
-  return selected;
+  const amount=candidates.length>=3?3:Math.min(2,candidates.length);
+  return shuffle(candidates).slice(0,amount).sort((a,b)=>a.start-b.start);
 }
-function renderClozeText(text, blanks) {
-  const container = $("#cloze-text");
+function renderClozeText(text,blanks,difficulty) {
+  const container=$("#cloze-text");
   container.replaceChildren();
-  const fragment = document.createDocumentFragment();
-  let cursor = 0;
-  blanks.forEach((blank, index) => {
-    fragment.append(document.createTextNode(text.slice(cursor, blank.start)));
-    const slot = document.createElement("span");
-    slot.className = "cloze-slot";
-    const input = document.createElement("input");
-    input.type = "text";
-    input.className = "cloze-input";
-    input.dataset.index = String(index);
-    input.autocomplete = "off";
-    input.autocapitalize = "none";
-    input.spellcheck = false;
-    input.setAttribute("aria-label", "Lacuna " + (index + 1));
-    input.placeholder = "____";
-    input.style.width = Math.max(4.5, Math.min(15, blank.value.length * 0.78)) + "ch";
-    const correction = document.createElement("span");
-    correction.className = "cloze-correction hidden";
-    slot.append(input, correction);
+  const fragment=document.createDocumentFragment();
+  let cursor=0;
+  blanks.forEach((blank,index)=>{
+    fragment.append(document.createTextNode(text.slice(cursor,blank.start)));
+    const slot=document.createElement("span");
+    slot.className="cloze-slot";
+    const input=blank.type==="segment"?document.createElement("textarea"):document.createElement("input");
+    input.className="cloze-input"+(blank.type==="segment"?" cloze-segment-input":"");
+    input.dataset.index=String(index);
+    input.autocomplete="off";input.autocapitalize="none";input.spellcheck=false;
+    input.setAttribute("aria-label",blank.type==="segment"?"Trecho inteiro ocultado "+(index+1):"Lacuna "+(index+1));
+    input.placeholder=blank.type==="segment"?"Digite o trecho inteiro ocultado":"____";
+    if(blank.type==="segment") {
+      input.rows=Math.min(7,Math.max(3,Math.ceil(blank.value.length/72)));
+      slot.classList.add("cloze-segment-slot");
+    } else {
+      input.type="text";
+      input.style.width=Math.max(4.5,Math.min(15,blank.value.length*.78))+"ch";
+    }
+    const correction=document.createElement("span");
+    correction.className="cloze-correction hidden";
+    slot.append(input,correction);
+    if(blank.hint&&difficulty==="facil") {
+      const hint=document.createElement("small");
+      hint.className="cloze-hint";hint.textContent="Pista: "+blank.hint;slot.append(hint);
+    }
     fragment.append(slot);
-    cursor = blank.end;
+    cursor=blank.end;
   });
   fragment.append(document.createTextNode(text.slice(cursor)));
   container.append(fragment);
 }
-function startCloze() {
-  if (!clozeSnapshot || !clozeSnapshot.entries.length) return;
-  const selected = $("#cloze-article").value;
-  let entry;
-  if (selected === "aleatorio") {
-    entry = clozeSnapshot.entries[Math.floor(Math.random() * clozeSnapshot.entries.length)];
-  } else {
-    entry = clozeSnapshot.entries.find(([article]) => article === selected);
-  }
-  if (!entry) return;
-  const [article, text] = entry;
-  clozeCurrent = { article, text, sourceType: "catalog" };
-  clozeBlanks = buildClozeForText(text, $("#cloze-difficulty").value);
-  $("#next-cloze").textContent = "Outro trecho ↻";
-  $("#cloze-source").href = clozeSnapshot.snapshot.source_url_used || clozeSnapshot.law.url || "";
-  clozeAnswered = 0;
-  $("#cloze-law-label").textContent = clozeSnapshot.law.short_title || clozeSnapshot.law.title;
-  $("#cloze-article-label").textContent = article;
-  $("#cloze-original-text").textContent = text;
-  $("#cloze-original").querySelector("summary").textContent = "Mostrar texto completo do artigo";
-  $("#cloze-original").open = false;
+function renderClozeExercise(current,difficulty,customBlanks=null) {
+  clozeCurrent=current;
+  clozeBlanks=customBlanks||buildClozeForText(current.text,difficulty);
+  clozeAnswered=0;
+  $("#next-cloze").textContent=current.sourceType==="review"?"Próxima revisão →":"Outro trecho ↻";
+  $("#cloze-source").href=current.source_url||clozeSnapshot?.snapshot?.source_url_used||clozeSnapshot?.law?.url||"#";
+  $("#cloze-law-label").textContent=current.law_title||clozeSnapshot?.law?.short_title||clozeSnapshot?.law?.title||"Lei Seca";
+  $("#cloze-article-label").textContent=[current.article,current.device_label].filter(Boolean).join(" · ");
+  $("#cloze-original-text").textContent=current.fullText||current.text;
+  $("#cloze-original").querySelector("summary").textContent="Mostrar texto original para conferência";
+  $("#cloze-original").open=false;
   $("#cloze-feedback").classList.add("hidden");
   $("#check-cloze").classList.remove("hidden");
   $("#next-cloze").classList.add("hidden");
-  $("#cloze-progress").textContent = clozeBlanks.length + " lacuna(s)";
-  if (!clozeBlanks.length) {
-    $("#cloze-note").textContent = "Este artigo é curto demais para gerar lacunas úteis. Escolha outro artigo ou outra norma.";
-    $("#cloze-card").classList.add("hidden");
-    $("#cloze-welcome").classList.remove("hidden");
+  $("#cloze-progress").textContent=clozeBlanks.length+(clozeBlanks.length===1?" lacuna":" lacunas");
+  if(!clozeBlanks.length) {
+    $("#cloze-note").textContent="O conteúdo escolhido é curto demais para gerar lacunas úteis. Escolha outro artigo ou dispositivo.";
+    $("#cloze-card").classList.add("hidden");$("#cloze-welcome").classList.remove("hidden");
+    return false;
+  }
+  renderClozeText(current.text,clozeBlanks,difficulty);
+  $("#cloze-welcome").classList.add("hidden");$("#cloze-card").classList.remove("hidden");
+  selectedClozeText="";
+  $("#cloze-selection-toolbar").classList.add("hidden");
+  return true;
+}
+function startCloze() {
+  if(!clozeSnapshot||!clozeSnapshot.entries.length)return;
+  const mode=$("#cloze-content-type").value;
+  const selected=$("#cloze-article").value;
+  const available=clozeSnapshot.entries.filter(([article])=>mode==="artigo"||getClozeComponents(article,mode).length>0);
+  if(!available.length)return;
+  const entry=selected==="aleatorio"?available[Math.floor(Math.random()*available.length)]:available.find(([article])=>article===selected);
+  if(!entry)return;
+  const [article,articleText]=entry;
+  let text=articleText,deviceLabel="";
+  if(mode!=="artigo") {
+    const devices=getClozeComponents(article,mode);
+    if(!devices.length) {
+      $("#cloze-note").textContent="Este artigo não possui "+(mode==="inciso"?"incisos":"parágrafos")+" identificados com segurança.";
+      return;
+    }
+    const chosenPath=$("#cloze-device").value;
+    const device=chosenPath&&chosenPath!=="aleatorio"?devices.find(item=>item.device_path===chosenPath):shuffle(devices)[0];
+    if(!device)return;
+    text=device.text;deviceLabel=device.device_label||mode;
+  }
+  const source=clozeSnapshot.snapshot.source_url_used||clozeSnapshot.law.url||"";
+  renderClozeExercise({
+    article,text,fullText:articleText,sourceType:"catalog",
+    law_id:clozeSnapshot.law.id,law_title:clozeSnapshot.law.short_title||clozeSnapshot.law.title,
+    source_url:source,device_label:deviceLabel
+  },$("#cloze-difficulty").value);
+}
+function loadClozeReviewQueue() {
+  try {
+    const value=JSON.parse(localStorage.getItem(CLOZE_REVIEW_KEY)||"{}");
+    return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
+  } catch(_) { return {}; }
+}
+function saveClozeReviewQueue(queue) {
+  try {localStorage.setItem(CLOZE_REVIEW_KEY,JSON.stringify(queue));}
+  catch(error){console.warn("Não foi possível salvar os erros de Lei Seca:",error);$("#cloze-review-note").textContent="O navegador não permitiu salvar a revisão. Confira as permissões de armazenamento.";}
+}
+function clozeReviewPending() {
+  return Object.values(loadClozeReviewQueue()).filter(item=>item&&item.status==="pending"&&item.blank&&item.text);
+}
+function renderClozeReviewOverview() {
+  const queue=Object.values(loadClozeReviewQueue());
+  const pending=queue.filter(item=>item&&item.status==="pending"&&item.blank);
+  const now=Date.now();
+  const due=pending.filter(item=>!item.next_due||new Date(item.next_due).getTime()<=now);
+  const mastered=queue.filter(item=>item&&item.status==="mastered").length;
+  $("#cloze-review-due").textContent=String(due.length);
+  $("#cloze-review-pending").textContent=String(pending.length);
+  $("#cloze-review-mastered").textContent=String(mastered);
+  const button=$("#cloze-review-start");
+  button.disabled=due.length===0;
+  button.textContent=due.length?"Revisar erros ("+due.length+")":"Nenhum erro vencido";
+  const note=$("#cloze-review-note");
+  if(!pending.length)note.textContent="Os trechos em que você errar serão guardados aqui automaticamente.";
+  else if(due.length)note.textContent=due.length+" erro(s) pronto(s) para revisar. Os itens que você acertar três vezes deixam a fila ativa.";
+  else {
+    const next=pending.map(item=>new Date(item.next_due).getTime()).filter(Number.isFinite);
+    note.textContent=pending.length+" erro(s) em acompanhamento. Próxima revisão: "+(next.length?formatDate(new Date(Math.min(...next)).toISOString()):"aguardando");
+  }
+}
+function recordClozeReviewError(current,blank,response) {
+  const queue=loadClozeReviewQueue();
+  const id=[current.law_id||"norma",current.article||"artigo",current.device_label||"",blank.start,normalizeAnswer(blank.value)].join("::");
+  const previous=queue[id]||{};
+  const now=Date.now();
+  queue[id]={
+    id,law_id:current.law_id||"",law_title:current.law_title||"Lei Seca",
+    article:current.article||"",device_label:current.device_label||"",
+    text:current.text,fullText:current.fullText||current.text,
+    source_url:current.source_url||"",blank:{...blank},
+    error_count:(Number(previous.error_count)||0)+1,correct_reviews:0,
+    last_wrong_response:String(response||"").slice(0,500),
+    first_error_at:previous.first_error_at||new Date(now).toISOString(),
+    last_error_at:new Date(now).toISOString(),next_due:new Date(now).toISOString(),status:"pending"
+  };
+  saveClozeReviewQueue(queue);renderClozeReviewOverview();
+  return id;
+}
+function recordClozeReviewSuccess(id) {
+  const queue=loadClozeReviewQueue(),item=queue[id];
+  if(!item||item.status!=="pending")return;
+  const correct=(Number(item.correct_reviews)||0)+1,mastered=correct>=3,interval=correct===1?1:3,now=Date.now();
+  queue[id]={...item,correct_reviews:correct,last_correct_at:new Date(now).toISOString(),
+    next_due:mastered?null:new Date(now+interval*24*60*60*1000).toISOString(),status:mastered?"mastered":"pending"};
+  saveClozeReviewQueue(queue);renderClozeReviewOverview();
+}
+function startClozeReviewSession() {
+  clozeReviewSessionSeen=new Set();
+  nextClozeReviewItem();
+}
+function nextClozeReviewItem() {
+  const now=Date.now();
+  const next=clozeReviewPending().filter(item=>
+    !clozeReviewSessionSeen.has(item.id)&&(!item.next_due||new Date(item.next_due).getTime()<=now)
+  ).sort((a,b)=>new Date(a.next_due||0)-new Date(b.next_due||0))[0];
+  if(!next) {
+    $("#cloze-card").classList.add("hidden");$("#cloze-welcome").classList.remove("hidden");
+    $("#cloze-note").textContent="Revisão encerrada por enquanto. Os erros que ainda precisam de reforço permanecem salvos para a próxima sessão.";
+    clozeCurrent=null;clozeBlanks=[];renderClozeReviewOverview();
     return;
   }
-  renderClozeText(text, clozeBlanks);
-  $("#cloze-welcome").classList.add("hidden");
-  $("#cloze-card").classList.remove("hidden");
+  clozeReviewSessionSeen.add(next.id);
+  renderClozeExercise({
+    article:next.article,text:next.text,fullText:next.fullText||next.text,sourceType:"review",
+    review_id:next.id,law_id:next.law_id,law_title:next.law_title,
+    source_url:next.source_url,device_label:next.device_label
+  },"dificil",[next.blank]);
+  $("#cloze-note").textContent="Central de revisão · responda novamente ao trecho que você errou.";
+}
+function startClozeFromSelectedText() {
+  const selected=String(selectedClozeText||"").trim();
+  if(!clozeCurrent||selected.length<15) {
+    $("#cloze-selection-help").textContent="Selecione primeiro um trecho com pelo menos 15 caracteres no texto original.";
+    return;
+  }
+  const current={...clozeCurrent,text:selected,fullText:clozeCurrent.fullText||clozeCurrent.text,
+    sourceType:"manual-selection",device_label:"Trecho selecionado"};
+  renderClozeExercise(current,$("#cloze-difficulty").value);
+  $("#cloze-note").textContent="Treinando somente o trecho que você selecionou. A fonte oficial continua disponível abaixo.";
+}
+function updateClozeSelectionToolbar() {
+  const original=$("#cloze-original-text"),selection=window.getSelection();
+  if(!original||!selection||selection.isCollapsed) {
+    selectedClozeText="";$("#cloze-selection-toolbar").classList.add("hidden");return;
+  }
+  const range=selection.getRangeAt(0);
+  if(!original.contains(range.startContainer)||!original.contains(range.endContainer)) {
+    selectedClozeText="";$("#cloze-selection-toolbar").classList.add("hidden");return;
+  }
+  const text=selection.toString().trim();
+  if(text.length<15) {
+    selectedClozeText="";$("#cloze-selection-toolbar").classList.add("hidden");return;
+  }
+  selectedClozeText=text;
+  $("#cloze-selection-preview").textContent=text.length>180?text.slice(0,180)+"…":text;
+  $("#cloze-selection-toolbar").classList.remove("hidden");
 }
 function checkCloze() {
-  if (!clozeCurrent || !clozeBlanks.length) return;
-  const inputs = [...$("#cloze-text").querySelectorAll(".cloze-input")];
-  let correct = 0;
-  inputs.forEach(input => {
-    const index = Number(input.dataset.index);
-    const expected = clozeBlanks[index].value;
-    const isCorrect = normalizeAnswer(input.value) === normalizeAnswer(expected);
-    if (isCorrect) correct += 1;
-    input.disabled = true;
-    input.classList.toggle("correct", isCorrect);
-    input.classList.toggle("incorrect", !isCorrect);
-    const correction = input.nextElementSibling;
-    if (!isCorrect) {
-      correction.textContent = "→ " + expected;
-      correction.classList.remove("hidden");
-    }
+  if(!clozeCurrent||!clozeBlanks.length)return;
+  const inputs=[...$("#cloze-text").querySelectorAll(".cloze-input")];
+  let correct=0,errors=0;
+  inputs.forEach(input=>{
+    const index=Number(input.dataset.index),blank=clozeBlanks[index],response=input.value||"";
+    const isCorrect=normalizeAnswer(response)===normalizeAnswer(blank.value);
+    if(isCorrect)correct++;else errors++;
+    input.disabled=true;input.classList.toggle("correct",isCorrect);input.classList.toggle("incorrect",!isCorrect);
+    const correction=input.nextElementSibling;
+    if(!isCorrect&&correction){correction.textContent="→ "+blank.value;correction.classList.remove("hidden");}
+    if(clozeCurrent.sourceType==="review") {
+      if(isCorrect)recordClozeReviewSuccess(clozeCurrent.review_id);
+      else recordClozeReviewError(clozeCurrent,blank,response);
+    } else if(!isCorrect)recordClozeReviewError(clozeCurrent,blank,response);
   });
-  clozeAnswered += correct;
-  $("#cloze-feedback").textContent = correct + " de " + clozeBlanks.length + " lacunas corretas.";
-  $("#cloze-feedback").className = "cloze-feedback " + (correct === clozeBlanks.length ? "all-correct" : "has-errors");
+  const reviewMode=clozeCurrent.sourceType==="review";
+  if(reviewMode)$("#cloze-feedback").textContent=errors?"Você ainda precisa reforçar este trecho. Ele continuará na Central de revisão.":"Você acertou! O intervalo para rever este trecho foi atualizado.";
+  else $("#cloze-feedback").textContent=correct+" de "+clozeBlanks.length+" lacuna(s) correta(s)."
+    +(errors?" "+errors+" erro(s) foram guardados para revisão posterior.":" Nenhum erro neste trecho.");
+  $("#cloze-feedback").className="cloze-feedback "+(errors?"has-errors":"all-correct");
   $("#cloze-feedback").classList.remove("hidden");
-  $("#check-cloze").classList.add("hidden");
-  $("#next-cloze").classList.remove("hidden");
-  $("#cloze-progress").textContent = "Acertos neste artigo: " + clozeAnswered;
+  $("#check-cloze").classList.add("hidden");$("#next-cloze").classList.remove("hidden");
+  $("#next-cloze").textContent=reviewMode?"Próximo erro para revisar →":"Outro trecho ↻";
+  $("#cloze-progress").textContent=correct+" de "+clozeBlanks.length+" acerto(s)";
+  if(reviewMode)renderClozeReviewOverview();
 }
-
-
 // -------------------- Modo de jogo Encontre o erro --------------------
 function normalizeLegalForMatch(value) {
   return normalizeAnswer(value)
@@ -3434,10 +3648,17 @@ $("#law-selection-toolbar").addEventListener("mousedown", event => event.prevent
 $("#law-train-selection").addEventListener("click", trainSelectedLegalExcerpt);
 $("#law-clear-selection").addEventListener("click", clearLegalExcerptSelection);
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
+$("#cloze-content-type").addEventListener("change", updateClozeArticleOptions);
+$("#cloze-article").addEventListener("change", updateClozeDeviceOptions);
+$("#cloze-review-start").addEventListener("click", startClozeReviewSession);
+$("#cloze-train-selection").addEventListener("click", startClozeFromSelectedText);
+$("#cloze-selection-toolbar").addEventListener("mousedown", event => event.preventDefault());
+document.addEventListener("selectionchange", updateClozeSelectionToolbar);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
 $("#next-cloze").addEventListener("click", () => {
   if (clozeCurrent && clozeCurrent.sourceType === "selection") showView("law");
+  else if (clozeCurrent && clozeCurrent.sourceType === "review") nextClozeReviewItem();
   else startCloze();
 });
 $("#start-error").addEventListener("click", () => startFindErrorGame());
