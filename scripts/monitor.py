@@ -106,8 +106,18 @@ def split_articles(text: str) -> dict[str, str]:
         stripped = raw_lines[index].strip()
         if re.fullmatch(r"Art(?:igo)?\.?", stripped) and index + 1 < len(raw_lines):
             number_line = raw_lines[index + 1].strip()
-            if re.fullmatch(r"\d+\s*(?:[º°o])?\s*\.?(?:\s*[-–]\s*[A-Z])?", number_line):
-                lines.append("Art. " + number_line)
+            number_match = re.match(
+                r"^(\d+)\s*([º°o])?\s*\.?(?:\s*[-–]\s*([A-Z]))?(?:\s+(.*))?$",
+                number_line,
+            )
+            if number_match:
+                number, ordinal, suffix, body = number_match.groups()
+                heading = "Art. " + number + (ordinal or "")
+                if suffix:
+                    heading += "-" + suffix
+                if body:
+                    heading += " " + body
+                lines.append(heading)
                 index += 2
                 continue
         lines.append(stripped)
