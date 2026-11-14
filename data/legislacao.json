@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-14T20:08:49Z",
+  "generated_at": "2026-11-14T21:17:43.497Z",
   "last_check_attempt": "2026-11-14T20:08:49Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
-  "status": "ok",
-  "summary": "27 fontes oficiais consultadas; 0 capturas iniciais/atualizadas; 0 alteração(ões) detectada(s).",
+  "status": "parcial",
+  "summary": "Catálogo atualizado com fontes preferenciais oficiais do Planalto/Portal IN e recorte do edital. As capturas anteriores ainda aguardam sincronização direta e validação integral.",
   "baseline_updated_count": 0,
   "laws": [
     {
@@ -38,7 +38,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "preferred_source_name": "Planalto — Constituição compilada",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-1171-1994",
@@ -70,7 +74,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-6029-2007",
@@ -102,7 +110,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8112-1990",
@@ -134,7 +146,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8429-1992",
@@ -166,7 +182,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-9784-1999",
@@ -198,7 +218,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-7070-1982",
@@ -230,7 +254,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-7986-1989",
@@ -262,7 +290,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8059-1990",
@@ -294,7 +326,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-9422-1996",
@@ -326,7 +362,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-9425-1996",
@@ -358,7 +398,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-10559-2002",
@@ -390,7 +434,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10559.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-11520-2007",
@@ -422,7 +470,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-13985-2020",
@@ -454,7 +506,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-10779-2003",
@@ -486,7 +542,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10779.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-8424-2015",
@@ -518,7 +578,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8742-1993",
@@ -550,7 +614,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-14176-2021",
@@ -582,7 +650,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-6214-2007",
@@ -614,7 +686,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-9796-1999",
@@ -646,7 +722,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-10188-2019",
@@ -678,7 +758,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "ec-103-2019",
@@ -710,7 +794,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lc-142-2013",
@@ -742,7 +830,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "preferred_source_name": "Planalto — texto oficial",
+      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8212-1991",
@@ -774,7 +866,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "lei-8213-1991",
@@ -806,7 +902,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "decreto-3048-1999",
@@ -838,7 +938,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm",
+      "preferred_source_name": "Planalto — texto compilado",
+      "preferred_source_status": "confirmado",
+      "source_sync_status": "captura_anterior_ainda_nao_substituida"
     },
     {
       "id": "in-128-2022",
@@ -870,7 +974,11 @@
       "source_failure_type": null,
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null
+      "error": null,
+      "preferred_source_url": "https://portalin.inss.gov.br/in/540",
+      "preferred_source_name": "Portal IN oficial do INSS — texto com histórico de alterações",
+      "preferred_source_status": "confirmado_com_alerta_de_redacoes_riscadas",
+      "source_sync_status": "texto_integral_nao_importado"
     }
   ],
   "changes": [],
