@@ -44,13 +44,14 @@ function setStudyState(id, state) {
   states[id] = state;
   localStorage.setItem(STUDY_KEY, JSON.stringify(states));
 }
-function typeLabel(type) {
+function typeLabel(type, change = {}) {
+  if (type === "texto_integral_alterado") return "TEXTO INTEGRAL DIFERENTE";
+  const device = (change.device_label || "artigo").toLocaleUpperCase("pt-BR");
   return ({
-    alterado: "ARTIGO ALTERADO",
-    incluido: "ARTIGO INCLUÍDO",
-    nao_encontrado: "ARTIGO NÃO LOCALIZADO",
-    possivelmente_revogado: "POSSÍVEL REVOGAÇÃO",
-    texto_integral_alterado: "TEXTO INTEGRAL DIFERENTE"
+    alterado: device + " ALTERADO",
+    incluido: device + " INCLUÍDO",
+    nao_encontrado: device + " NÃO LOCALIZADO",
+    possivelmente_revogado: device + " COM REVOGAÇÃO INDICADA"
   })[type] || "DIFERENÇA DETECTADA";
 }
 function renderStatus(data) {
@@ -74,11 +75,14 @@ function updateBadge() {
 function createChangeCard(change) {
   const node = $("#change-template").content.firstElementChild.cloneNode(true);
   const type = node.querySelector(".change-type");
-  type.textContent = typeLabel(change.change_type);
+  type.textContent = typeLabel(change.change_type, change);
   type.classList.add(change.change_type || "");
   node.querySelector(".detected-date").textContent = "Detectado em " + formatDate(change.detected_at);
   node.querySelector(".law-name").textContent = change.law_short_title || change.law_title || "Norma sem identificação";
-  node.querySelector(".article-label").textContent = change.article || "Texto integral";
+  const articleLabel = change.article || "Texto integral";
+  node.querySelector(".article-label").textContent = change.device_type && change.device_type !== "artigo" && change.device_type !== "texto_integral"
+    ? articleLabel + " · " + (change.device_label || change.device_type)
+    : articleLabel;
   node.querySelector(".change-summary").textContent = change.summary || "Diferença detectada entre duas verificações.";
   node.querySelector(".old-text").textContent = change.old_text || "Não havia texto anterior para comparação.";
   node.querySelector(".new-text").textContent = change.new_text || "O artigo não foi localizado na captura atual.";
@@ -86,7 +90,18 @@ function createChangeCard(change) {
   const select = node.querySelector(".study-select");
   select.value = stateFor(change.id);
   select.addEventListener("change", () => setStudyState(change.id, select.value));
-  node.querySelector(".date-note").textContent = change.date_note || "Confira a fonte oficial antes de atualizar seu material.";
+  const formatLegalDate = value => value ? value.split("-").reverse().join("/") : "não identificada";
+  const publication = "Publicação: " + formatLegalDate(change.publication_date);
+  const effective = "Entrada em vigor: " + formatLegalDate(change.effective_date);
+  const effectNotes = {
+    data_de_vigencia_expressa_transcorrida: "A data de vigência expressamente indicada já passou; confirme se a redação continua aplicável.",
+    vigencia_futura_expressa: "A fonte indica uma data de vigência futura.",
+    revogacao_indicada_sem_data_de_efeito: "A fonte indica revogação, mas a data dos efeitos não foi identificada.",
+    situacao_juridica_nao_confirmada: "A ausência na captura não comprova revogação.",
+    vigencia_nao_confirmada: "A diferença textual não confirma, sozinha, que a nova redação já esteja vigente."
+  };
+  const effectNote = effectNotes[change.legal_effect_status] || "Situação jurídica exige conferência do ato oficial.";
+  node.querySelector(".date-note").textContent = [publication, effective, effectNote, change.date_note].filter(Boolean).join(" · ");
   return node;
 }
 function filteredChanges() {
@@ -94,7 +109,7 @@ function filteredChanges() {
   const type = $("#type-filter").value;
   const study = $("#study-filter").value;
   return allChanges.filter(item => {
-    const haystack = [item.law_title, item.law_short_title, item.article].join(" ").toLocaleLowerCase("pt-BR");
+    const haystack = [item.law_title, item.law_short_title, item.article, item.device_label, item.device_path].join(" ").toLocaleLowerCase("pt-BR");
     return (!query || haystack.includes(query)) && (type === "todos" || item.change_type === type) && (study === "todos" || stateFor(item.id) === study);
   });
 }
@@ -153,7 +168,7 @@ function renderDrawer() {
     const strong = document.createElement("strong");
     const detail = document.createElement("span");
     strong.textContent = (item.law_short_title || item.law_title) + " · " + (item.article || "Texto integral");
-    detail.textContent = typeLabel(item.change_type) + " · " + formatDate(item.detected_at);
+    detail.textContent = typeLabel(item.change_type, item) + " · " + formatDate(item.detected_at);
     row.append(strong, detail);
     content.append(row);
   });
