@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -53,42 +54,261 @@ def normalize(text: str) -> str:
     return "\n".join(lines)
 
 
-def fetch_text(url: str) -> str:
+MAX_FETCH_ATTEMPTS = 3
+MAX_RETRY_WAIT_SECONDS = 10
+
+BLOCK_PAGE_PATTERNS = (
+    r"attention required.{0,80}cloudflare",
+    r"just a moment\.\.\.",
+    r"checking your browser",
+    r"verify (?:that )?you are human",
+    r"complete the security check",
+    r"access denied",
+    r"request blocked",
+    r"you have been blocked",
+    r"too many requests",
+    r"rate limit exceeded",
+    r"cf-chl-",
+    r"enable javascript and cookies to continue",
+)
+
+
+class SourceFetchError(RuntimeError):
+    """Falha de consulta com diagnóstico preservado para o painel."""
+
+    def __init__(
+        self,
+        message: str,
+        failure_type: str = "network_error",
+        attempts: list[dict[str, Any]] | None = None,
+    ):
+        super().__init__(message)
+        self.failure_type = failure_type
+        self.attempts = attempts or []
+        waits = [
+            item.get("retry_after_seconds")
+            for item in self.attempts
+            if isinstance(item.get("retry_after_seconds"), (int, float))
+        ]
+        self.retry_after_seconds = max(waits) if waits else None
+
+
+def parse_retry_after(value: str | None) -> int | None:
+    """Lê Retry-After em segundos ou no formato de data HTTP."""
+    if not value:
+        return None
+    value = value.strip()
+    if value.isdigit():
+        return int(value)
+    try:
+        retry_at = parsedate_to_datetime(value)
+        if retry_at.tzinfo is None:
+            retry_at = retry_at.replace(tzinfo=timezone.utc)
+        return max(0, int((retry_at - datetime.now(timezone.utc)).total_seconds()))
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def classify_http_failure(status: int, body: str = "") -> str:
+    body_lower = body.lower()
+    if status == 429 or "rate limit exceeded" in body_lower or "too many requests" in body_lower:
+        return "rate_limited"
+    if status in {401, 403, 407}:
+        return "access_denied"
+    if status in {408, 425}:
+        return "temporary_network_error"
+    if status >= 500:
+        return "server_error"
+    return "http_error"
+
+
+def is_access_block_page(body: str) -> bool:
+    sample = body[:20000].lower()
+    return any(re.search(pattern, sample, re.IGNORECASE | re.DOTALL) for pattern in BLOCK_PAGE_PATTERNS)
+
+
+def _response_body(response: Any) -> str:
+    try:
+        return str(response.text or "")
+    except Exception:
+        try:
+            return bytes(response.content).decode("utf-8", errors="replace")
+        except Exception:
+            return ""
+
+
+def fetch_text_with_diagnostics(url: str) -> tuple[str, list[dict[str, Any]]]:
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
         "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
         "Cache-Control": "no-cache",
     }
-    response = requests.get(url, headers=headers, timeout=45)
-    response.raise_for_status()
+    attempts: list[dict[str, Any]] = []
 
-    requested_host = (urlparse(url).hostname or "").lower().removeprefix("www.")
-    final_host = (urlparse(response.url).hostname or "").lower().removeprefix("www.")
-    if requested_host and final_host and requested_host != final_host:
-        raise ValueError(
-            "A fonte redirecionou para outro domínio: " + response.url
-        )
+    for attempt in range(1, MAX_FETCH_ATTEMPTS + 1):
+        try:
+            response = requests.get(url, headers=headers, timeout=45)
+        except requests.Timeout as exc:
+            failure_type = "timeout"
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": failure_type,
+                "http_status": None,
+                "detail": str(exc)[:300],
+            })
+            if attempt < MAX_FETCH_ATTEMPTS:
+                time.sleep(min(attempt, 2))
+                continue
+            raise SourceFetchError(
+                "Tempo limite excedido após " + str(attempt) + " tentativa(s): " + str(exc),
+                failure_type,
+                attempts,
+            ) from exc
+        except requests.RequestException as exc:
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "network_error",
+                "http_status": None,
+                "detail": str(exc)[:300],
+            })
+            if attempt < MAX_FETCH_ATTEMPTS:
+                time.sleep(min(attempt, 2))
+                continue
+            raise SourceFetchError(
+                "Falha de rede após " + str(attempt) + " tentativa(s): " + str(exc),
+                "network_error",
+                attempts,
+            ) from exc
 
-    content_type = response.headers.get("Content-Type", "").lower()
-    is_pdf = url.lower().endswith(".pdf") or "application/pdf" in content_type or response.content.startswith(b"%PDF")
-    if is_pdf:
-        reader = PdfReader(io.BytesIO(response.content))
-        text = normalize("\n".join(page.extract_text() or "" for page in reader.pages))
-    else:
-        if not response.encoding or response.encoding.lower() == "iso-8859-1":
-            response.encoding = response.apparent_encoding or "utf-8"
-        soup = BeautifulSoup(response.text, "html.parser")
-        for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header", "del", "s", "strike"]):
-            tag.decompose()
-        # As páginas da Câmara e do Planalto usam contêineres diferentes.
-        main = soup.find("main") or soup.find(id="conteudo") or soup.find(id="content") or soup.body or soup
-        text = normalize(main.get_text("\n", strip=True))
+        status = int(getattr(response, "status_code", 0) or 0)
+        response_body = _response_body(response)
+        if status >= 400:
+            failure_type = classify_http_failure(status, response_body)
+            retry_after = parse_retry_after(response.headers.get("Retry-After"))
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": failure_type,
+                "http_status": status,
+                "retry_after_seconds": retry_after,
+                "detail": (response_body[:240].replace("\n", " ") if response_body else "Resposta HTTP " + str(status)),
+            })
+            retryable = status in {408, 425, 429, 500, 502, 503, 504}
+            delay = retry_after if retry_after is not None else min(attempt, 2)
+            if retryable and attempt < MAX_FETCH_ATTEMPTS and delay <= MAX_RETRY_WAIT_SECONDS:
+                time.sleep(delay)
+                continue
+            raise SourceFetchError(
+                "A fonte respondeu HTTP " + str(status) + " (" + failure_type + ").",
+                failure_type,
+                attempts,
+            )
 
-    if len(text) < 350:
-        raise ValueError("A fonte retornou pouco texto; captura considerada incompleta.")
+        requested_host = (urlparse(url).hostname or "").lower().removeprefix("www.")
+        final_url = getattr(response, "url", url) or url
+        final_host = (urlparse(final_url).hostname or "").lower().removeprefix("www.")
+        if requested_host and final_host and requested_host != final_host:
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "redirected_domain",
+                "http_status": status,
+                "detail": "Redirecionou para outro domínio: " + final_url,
+            })
+            raise SourceFetchError(
+                "A fonte redirecionou para outro domínio: " + final_url,
+                "redirected_domain",
+                attempts,
+            )
+
+        if is_access_block_page(response_body):
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "blocked_page",
+                "http_status": status,
+                "detail": "A fonte exibiu uma página de bloqueio ou verificação automática.",
+            })
+            raise SourceFetchError(
+                "A fonte retornou uma página de bloqueio/verificação (HTTP "
+                + str(status) + ").",
+                "blocked_page",
+                attempts,
+            )
+
+        try:
+            content_type = response.headers.get("Content-Type", "").lower()
+            is_pdf = (
+                url.lower().endswith(".pdf")
+                or "application/pdf" in content_type
+                or getattr(response, "content", b"").startswith(b"%PDF")
+            )
+            if is_pdf:
+                reader = PdfReader(io.BytesIO(response.content))
+                text = normalize("\n".join(page.extract_text() or "" for page in reader.pages))
+            else:
+                if not response.encoding or response.encoding.lower() == "iso-8859-1":
+                    response.encoding = response.apparent_encoding or "utf-8"
+                soup = BeautifulSoup(response.text, "html.parser")
+                for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header", "del", "s", "strike"]):
+                    tag.decompose()
+                main = soup.find("main") or soup.find(id="conteudo") or soup.find(id="content") or soup.body or soup
+                text = normalize(main.get_text("\n", strip=True))
+        except Exception as exc:
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "invalid_content",
+                "http_status": status,
+                "detail": "Não foi possível interpretar a resposta: " + str(exc)[:200],
+            })
+            raise SourceFetchError(
+                "Não foi possível interpretar a resposta da fonte: " + str(exc),
+                "invalid_content",
+                attempts,
+            ) from exc
+
+        if len(text) < 350:
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "incomplete_response",
+                "http_status": status,
+                "detail": "A fonte retornou menos de 350 caracteres úteis.",
+            })
+            raise SourceFetchError(
+                "A fonte retornou pouco texto; captura considerada incompleta.",
+                "incomplete_response",
+                attempts,
+            )
+
+        attempts.append({
+            "url": url,
+            "attempt": attempt,
+            "outcome": "success",
+            "failure_type": None,
+            "http_status": status,
+            "detail": "Conteúdo recebido e interpretado.",
+        })
+        return text, attempts
+
+    raise SourceFetchError("A fonte não respondeu após as tentativas previstas.", "network_error", attempts)
+
+
+def fetch_text(url: str) -> str:
+    """Compatibilidade com testes e chamadas que precisam apenas do texto."""
+    text, _attempts = fetch_text_with_diagnostics(url)
     return text
-
 
 def validate_law_identity(text: str, law: dict[str, Any], source_url: str) -> None:
     """Impede que páginas genéricas/erros do portal sejam salvos como texto de lei."""
@@ -117,18 +337,83 @@ def validate_law_identity(text: str, law: dict[str, Any], source_url: str) -> No
         )
 
 
-def fetch_law_text(law: dict[str, Any]) -> tuple[str, str]:
+def fetch_law_text(law: dict[str, Any]) -> tuple[str, str, dict[str, Any]]:
+    """Tenta as fontes em ordem e devolve diagnóstico de cada tentativa."""
     urls = law.get("fetch_urls") or [law["url"]]
-    failures = []
+    attempts: list[dict[str, Any]] = []
+    failure_types: list[str] = []
+
     for url in urls:
         try:
-            text = fetch_text(url)
-            validate_law_identity(text, law, url)
-            return text, url
-        except Exception as exc:
-            failures.append(url + " -> " + type(exc).__name__ + ": " + str(exc))
-    raise RuntimeError("Nenhuma fonte configurada respondeu: " + " | ".join(failures))
+            text, url_attempts = fetch_text_with_diagnostics(url)
+            try:
+                validate_law_identity(text, law, url)
+            except Exception as exc:
+                failure_types.append("invalid_content")
+                attempts.extend(url_attempts[:-1])
+                attempts.append({
+                    "url": url,
+                    "attempt": url_attempts[-1].get("attempt", 1) if url_attempts else 1,
+                    "outcome": "error",
+                    "failure_type": "invalid_content",
+                    "http_status": url_attempts[-1].get("http_status") if url_attempts else None,
+                    "detail": str(exc)[:300],
+                })
+                continue
 
+            attempts.extend(url_attempts)
+            prior_failures = [item for item in attempts if item.get("outcome") == "error"]
+            if prior_failures:
+                used_fallback = any(item.get("url") != url for item in prior_failures)
+                status = "fallback_used" if used_fallback else "recovered"
+            else:
+                status = "ok"
+            return text, url, {
+                "source_status": status,
+                "source_attempts": attempts,
+                "source_failure_count": len(prior_failures),
+                "source_failure_type": None,
+                "retry_after_seconds": None,
+            }
+        except Exception as exc:
+            if isinstance(exc, SourceFetchError):
+                attempts.extend(exc.attempts)
+                failure_types.append(exc.failure_type)
+            else:
+                attempts.append({
+                    "url": url,
+                    "attempt": 1,
+                    "outcome": "error",
+                    "failure_type": "invalid_content",
+                    "http_status": None,
+                    "detail": type(exc).__name__ + ": " + str(exc)[:240],
+                })
+                failure_types.append("invalid_content")
+
+    priority = (
+        "rate_limited",
+        "access_denied",
+        "blocked_page",
+        "redirected_domain",
+        "server_error",
+        "timeout",
+        "network_error",
+        "temporary_network_error",
+        "incomplete_response",
+        "invalid_content",
+        "http_error",
+    )
+    failure_type = next((kind for kind in priority if kind in failure_types), "network_error")
+    details = " | ".join(
+        item.get("url", "fonte") + " -> " + item.get("failure_type", "erro")
+        + (": " + item.get("detail", "") if item.get("detail") else "")
+        for item in attempts
+    )
+    raise SourceFetchError(
+        "Nenhuma fonte configurada respondeu de forma válida: " + details,
+        failure_type,
+        attempts,
+    )
 
 def split_articles(text: str) -> dict[str, str]:
     articles: dict[str, list[str]] = {}
@@ -694,6 +979,16 @@ def compare(
         )
     ]
 
+
+def source_status_for_failure(failure_type: str) -> str:
+    if failure_type == "rate_limited":
+        return "rate_limited"
+    if failure_type in {"access_denied", "blocked_page"}:
+        return "blocked"
+    if failure_type in {"timeout", "network_error", "temporary_network_error", "server_error"}:
+        return "unavailable"
+    return "invalid_response"
+
 def run() -> int:
     laws = [law for law in load_json(LAWS_FILE, []) if law.get("enabled", True)]
     previous_data = load_json(OUTPUT_FILE, {})
@@ -711,7 +1006,7 @@ def run() -> int:
         snapshot_path = SNAPSHOTS / (law["id"] + ".json")
         previous_snapshot = load_json(snapshot_path, None)
         try:
-            text, source_url_used = fetch_law_text(law)
+            text, source_url_used, source_diagnostics = fetch_law_text(law)
             current = make_snapshot(text, law, source_url_used, detected)
             law_with_source = {**law, "source_url_used": source_url_used}
             rebuilt = baseline_must_be_rebuilt(previous_snapshot, current)
@@ -737,6 +1032,11 @@ def run() -> int:
                 "snapshot_scope": current["snapshot_scope"],
                 "baseline_updated": rebuilt,
                 "source_url_used": source_url_used,
+                "source_status": source_diagnostics["source_status"],
+                "source_attempts": source_diagnostics["source_attempts"],
+                "source_failure_count": source_diagnostics["source_failure_count"],
+                "source_failure_type": source_diagnostics["source_failure_type"],
+                "retry_after_seconds": source_diagnostics["retry_after_seconds"],
                 "new_changes_detected": len(changes),
                 "error": None,
             })
@@ -748,7 +1048,15 @@ def run() -> int:
             )
         except Exception as exc:
             message = type(exc).__name__ + ": " + str(exc)
-            errors.append({"law_id": law["id"], "law_title": law["title"], "message": message})
+            failure_type = exc.failure_type if isinstance(exc, SourceFetchError) else "invalid_content"
+            source_status = source_status_for_failure(failure_type)
+            source_attempts = exc.attempts if isinstance(exc, SourceFetchError) else []
+            retry_after = exc.retry_after_seconds if isinstance(exc, SourceFetchError) else None
+            errors.append({
+                "law_id": law["id"], "law_title": law["title"], "message": message,
+                "source_status": source_status, "failure_type": failure_type,
+                "attempts": source_attempts, "retry_after_seconds": retry_after,
+            })
             law_results.append({
                 "id": law["id"],
                 "title": law["title"],
@@ -764,6 +1072,11 @@ def run() -> int:
                 "snapshot_scope": previous_snapshot.get("snapshot_scope") if previous_snapshot else None,
                 "baseline_updated": False,
                 "source_url_used": previous_snapshot.get("source_url_used") if previous_snapshot else None,
+                "source_status": source_status,
+                "source_attempts": source_attempts,
+                "source_failure_count": len([item for item in source_attempts if item.get("outcome") == "error"]),
+                "source_failure_type": failure_type,
+                "retry_after_seconds": retry_after,
                 "new_changes_detected": 0,
                 "error": message,
             })
@@ -784,11 +1097,22 @@ def run() -> int:
     elif success_count:
         status = "parcial"
         last_success = previous_data.get("last_successful_check")
-        summary = f"{success_count} fonte(s) consultada(s); {len(errors)} fonte(s) apresentaram erro. Fontes com erro não tiveram a captura anterior substituída."
+        limited = sum(1 for item in errors if item.get("source_status") == "rate_limited")
+        blocked = sum(1 for item in errors if item.get("source_status") == "blocked")
+        summary = (
+            f"{success_count} fonte(s) consultada(s); {len(errors)} fonte(s) apresentaram erro "
+            f"({limited} com limite de acesso e {blocked} bloqueada(s)). "
+            "As capturas anteriores dessas fontes foram preservadas."
+        )
     else:
         status = "erro"
         last_success = previous_data.get("last_successful_check")
-        summary = "Nenhuma fonte pôde ser consultada. As capturas anteriores foram preservadas."
+        limited = sum(1 for item in errors if item.get("source_status") == "rate_limited")
+        blocked = sum(1 for item in errors if item.get("source_status") == "blocked")
+        summary = (
+            f"Nenhuma fonte pôde ser consultada ({limited} com limite de acesso e "
+            f"{blocked} bloqueada(s)). As capturas anteriores foram preservadas."
+        )
 
     output = {
         "schema_version": 2,
