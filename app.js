@@ -17,6 +17,7 @@ let clozeAnswered = 0;
 let clozeReviewSessionSeen = new Set();
 let selectedClozeText = "";
 let quizState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false };
+let simulatorState = { questions: [], index: 0, responses: [], finished: false };
 let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false, reviewMode: false, reviewFailed: false };
 let findErrorCaptureNote = "";
@@ -2731,6 +2732,12 @@ async function loadQuestionBank() {
     questionBank = Array.isArray(data.questions) ? data.questions : [];
     updateQuizFilters();
     note.textContent = questionBank.length + " itens disponíveis no banco inicial. Use os filtros para escolher matéria, assunto, norma e artigo.";
+    const simulatorNote=$("#simulado-bank-note");
+    if(simulatorNote)simulatorNote.textContent=questionBank.length>=10
+      ?questionBank.length+" questões disponíveis. Cada simulado seleciona 10 itens aleatórios, sem limite de tempo."
+      :"O banco tem "+questionBank.length+" questão(ões). São necessárias pelo menos 10 para iniciar um simulado.";
+    const simulatorStart=$("#start-simulado");
+    if(simulatorStart)simulatorStart.disabled=questionBank.length<10;
     $("#start-quiz").disabled = questionBank.length === 0;
     updateLegalQuizButton();
     renderCEReviewOverview();
@@ -4270,6 +4277,136 @@ function showMemorySummary() {
   finishActivitySession("completed");
 }
 
+
+/* -------------------- Simulados -------------------- */
+function startSimulado(){
+  if(questionBank.length<10){
+    $("#simulado-bank-note").textContent="Ainda não há 10 questões disponíveis no banco para montar um simulado.";
+    return;
+  }
+  const items=shuffle([...questionBank]).slice(0,10);
+  simulatorState={questions:items,index:0,responses:Array(10).fill(null),finished:false};
+  beginActivitySession("simulado",items[0]||{});
+  $("#simulado-welcome").classList.add("hidden");
+  $("#simulado-result").classList.add("hidden");
+  $("#simulado-card").classList.remove("hidden");
+  renderSimuladoQuestion();
+}
+function renderSimuladoNavigator(){
+  const nav=$("#simulado-question-nav");if(!nav)return;
+  nav.replaceChildren();
+  simulatorState.questions.forEach((item,index)=>{
+    const button=document.createElement("button");
+    button.type="button";button.className="simulado-question-jump";
+    if(index===simulatorState.index)button.classList.add("is-current");
+    if(simulatorState.responses[index]!==null)button.classList.add("is-answered");
+    button.textContent=String(index+1);
+    button.setAttribute("aria-label","Ir para questão "+(index+1)+(simulatorState.responses[index]!==null?", respondida":" , sem resposta"));
+    button.setAttribute("aria-current",index===simulatorState.index?"step":"false");
+    button.addEventListener("click",()=>{simulatorState.index=index;renderSimuladoQuestion();});
+    nav.append(button);
+  });
+}
+function renderSimuladoQuestion(){
+  const item=simulatorState.questions[simulatorState.index];
+  if(!item)return;
+  const index=simulatorState.index,response=simulatorState.responses[index];
+  $("#simulado-progress-label").textContent="Questão "+(index+1)+" de 10";
+  $("#simulado-progress-fill").style.width=((index+1)/10*100)+"%";
+  $("#simulado-category").textContent=item.category||"Questão";
+  $("#simulado-law").textContent=item.law_title||"Norma não informada";
+  $("#simulado-article").textContent=item.article||"";
+  $("#simulado-statement").textContent=item.statement||"";
+  ["#simulado-answer-true","#simulado-answer-false"].forEach(selector=>{
+    const button=$(selector),value=selector==="#simulado-answer-true";
+    button.classList.toggle("selected",response!==null&&response.chosen===value);
+    button.setAttribute("aria-pressed",response!==null&&response.chosen===value?"true":"false");
+  });
+  $("#simulado-answer-note").textContent=response===null
+    ?"Selecione Certo ou Errado. Você pode pular esta questão e voltar depois."
+    :"Resposta registrada. O gabarito será revelado somente ao finalizar o simulado.";
+  $("#simulado-previous").disabled=index===0;
+  $("#simulado-next").classList.toggle("hidden",index===9);
+  $("#simulado-finish").textContent=index===9?"Finalizar simulado":"Finalizar agora";
+  $("#simulado-clear-answer").classList.toggle("hidden",response===null);
+  renderSimuladoNavigator();
+}
+function chooseSimuladoAnswer(value){
+  if(simulatorState.finished||!simulatorState.questions.length)return;
+  const index=simulatorState.index,item=simulatorState.questions[index];
+  simulatorState.responses[index]={chosen:Boolean(value),correct:Boolean(value)===Boolean(item.answer)};
+  renderSimuladoQuestion();
+}
+function clearSimuladoAnswer(){
+  if(simulatorState.finished||!simulatorState.questions.length)return;
+  simulatorState.responses[simulatorState.index]=null;
+  renderSimuladoQuestion();
+}
+function moveSimuladoQuestion(direction){
+  if(simulatorState.finished)return;
+  simulatorState.index=Math.max(0,Math.min(9,simulatorState.index+direction));
+  renderSimuladoQuestion();
+}
+function createSimuladoResultCard(item,response,index){
+  const card=document.createElement("article");
+  const correct=response!==null&&response.correct;
+  const blank=response===null;
+  card.className="simulado-result-question "+(blank?"is-blank":correct?"is-correct":"is-incorrect");
+  const head=document.createElement("div");head.className="simulado-result-question-head";
+  const number=document.createElement("strong");number.textContent="Questão "+(index+1);
+  const status=document.createElement("span");status.className="simulado-result-status";
+  status.textContent=blank?"Em branco":correct?"Acertou":"Errou";
+  head.append(number,status);
+  const law=document.createElement("small");law.className="simulado-result-law";
+  law.textContent=(item.law_title||"Norma não informada")+(item.article?" · "+item.article:"");
+  const statement=document.createElement("p");statement.className="simulado-result-statement";statement.textContent=item.statement||"";
+  const answer=document.createElement("p");answer.className="simulado-result-answer";
+  answer.textContent="Sua resposta: "+(blank?"Não respondeu":response.chosen?"Certo":"Errado")
+    +" · Gabarito: "+(item.answer?"Certo":"Errado");
+  const explanation=document.createElement("p");explanation.className="simulado-result-explanation";
+  explanation.textContent=item.explanation||"Não há comentário cadastrado para esta questão.";
+  card.append(head,law,statement,answer,explanation);
+  if(item.source_url){
+    const link=document.createElement("a");link.href=item.source_url;link.target="_blank";link.rel="noopener noreferrer";
+    link.textContent="Consultar fonte da questão ↗";card.append(link);
+  }
+  return card;
+}
+function finishSimulado(){
+  if(simulatorState.finished||simulatorState.questions.length!==10)return;
+  const answered=simulatorState.responses.filter(response=>response!==null).length;
+  const blanks=10-answered;
+  if(blanks>0&&!window.confirm("Você deixou "+blanks+" questão(ões) em branco. Deseja finalizar mesmo assim?"))return;
+  simulatorState.finished=true;
+  let correct=0,wrong=0;
+  simulatorState.questions.forEach((item,index)=>{
+    const response=simulatorState.responses[index];
+    if(response===null)return;
+    if(response.correct)correct++;else wrong++;
+    const chosen=response.chosen?"Certo":"Errado";
+    recordActivityAnswer("simulado",item,item.statement,chosen,response.correct,item.answer?"Certo":"Errado",
+      response.correct?"correct":"incorrect",{simulado_question:index+1});
+    if(response.correct)recordCEReviewSuccess(item);
+    else recordCEReviewMiss(item,response.chosen,false);
+  });
+  finishActivitySession("completed");
+  const percentage=Math.round(correct/10*100);
+  $("#simulado-score").textContent=correct+" de 10 acertos";
+  $("#simulado-score-note").textContent="Aproveitamento: "+percentage+"%. "+(blanks
+    ?blanks+" questão(ões) ficaram em branco. "
+    :"")+"O resultado considera as 10 questões do simulado.";
+  $("#simulado-stat-correct").textContent=String(correct);
+  $("#simulado-stat-wrong").textContent=String(wrong);
+  $("#simulado-stat-blank").textContent=String(blanks);
+  $("#simulado-stat-percent").textContent=percentage+"%";
+  const bar=$("#simulado-result-fill");if(bar)bar.style.width=percentage+"%";
+  const list=$("#simulado-result-list");list.replaceChildren();
+  simulatorState.questions.forEach((item,index)=>list.append(createSimuladoResultCard(item,simulatorState.responses[index],index)));
+  $("#simulado-card").classList.add("hidden");
+  $("#simulado-welcome").classList.add("hidden");
+  $("#simulado-result").classList.remove("hidden");
+  $("#simulado-result").scrollIntoView({behavior:"smooth",block:"start"});
+}
 function showView(view) {
   if(activityCurrentSession&&activityCurrentSession.status==="active"&&!activitySessionMatchesView(activityCurrentSession.mode,view))finishActivitySession("interrupted");
   const quiz = view === "quiz";
@@ -4281,6 +4418,7 @@ function showView(view) {
   const memory = view === "memory";
   const review = view === "review";
   const history = view === "history";
+  const simulado = view === "simulado";
   const achievements = view === "achievements";
   const radar = view === "radar";
   const law = view === "law";
@@ -4295,6 +4433,7 @@ function showView(view) {
   $("#memory-view").classList.toggle("hidden", !memory);
   $("#review-view").classList.toggle("hidden", !review);
   $("#history-view").classList.toggle("hidden", !history);
+  $("#simulado-view").classList.toggle("hidden", !simulado);
   $("#achievements-view").classList.toggle("hidden", !achievements);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-law").classList.toggle("active", law);
@@ -4307,8 +4446,9 @@ function showView(view) {
   $("#tab-memory").classList.toggle("active", memory);
   $("#tab-review").classList.toggle("active", review);
   $("#tab-history").classList.toggle("active", history);
+  $("#tab-simulado").classList.toggle("active", simulado);
   $("#tab-achievements").classList.toggle("active", achievements);
-  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history], ["tab-achievements", achievements] ].forEach(([id, active]) => {
+  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history], ["tab-simulado", simulado], ["tab-achievements", achievements] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -4322,6 +4462,7 @@ function showView(view) {
   else if (memory) $("#memory-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (review) $("#review-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (history) $("#history-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (simulado) $("#simulado-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (achievements) $("#achievements-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -4871,7 +5012,7 @@ function finishActivitySession(status="completed"){
   if(index>=0)sessions[index]={...activityCurrentSession};else sessions.push({...activityCurrentSession});
   saveActivitySessions(sessions);
   try{if(localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
-  if(status==="completed"&&activityCurrentSession.mode==="simulado"){
+  if(status==="completed"&&activityCurrentSession.mode==="simulado"&&Number(activityCurrentSession.answers_total)>=10){
     awardExperience(XP_REWARDS.simulatorCompletion,"simulado-concluido::"+activityCurrentSession.id,"Simulado concluído",
       {session_id:activityCurrentSession.id,answers:activityCurrentSession.answers_total||0});
   }
@@ -5257,6 +5398,7 @@ function initializeActivityHistory(){
   recoverInterruptedActivitySession();
   syncLegacyLegalStudyEvents();
 }
+$("#tab-simulado").addEventListener("click",()=>showView("simulado"));
 $("#tab-history").addEventListener("click",async()=>{
   showView("history");renderActivityHistory();
   try{await ensureMemorySourceSnapshots();syncLegacyLegalStudyEvents();renderActivityHistory();}
@@ -5678,5 +5820,14 @@ function initializeAchievements(){
 }
 $("#achievement-daily-goal-save").addEventListener("click",saveDailyStudyGoal);
 $("#tab-achievements").addEventListener("click",()=>{showView("achievements");refreshAchievementProgress();});
+$("#start-simulado").addEventListener("click",startSimulado);
+$("#simulado-answer-true").addEventListener("click",()=>chooseSimuladoAnswer(true));
+$("#simulado-answer-false").addEventListener("click",()=>chooseSimuladoAnswer(false));
+$("#simulado-clear-answer").addEventListener("click",clearSimuladoAnswer);
+$("#simulado-previous").addEventListener("click",()=>moveSimuladoQuestion(-1));
+$("#simulado-next").addEventListener("click",()=>moveSimuladoQuestion(1));
+$("#simulado-finish").addEventListener("click",finishSimulado);
+$("#simulado-restart").addEventListener("click",startSimulado);
+
 initializeAchievements();
 
