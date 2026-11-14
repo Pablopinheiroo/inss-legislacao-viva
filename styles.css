@@ -252,7 +252,7 @@
 
 /* Modo Memorização ativa */
 .memory-config{min-width:min(100%,650px);display:flex;flex-wrap:wrap;align-items:end;gap:10px}
-.memory-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 22px}
+.memory-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 22px}
 .memory-stat{border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px 17px}
 .memory-stat span{display:block;color:#718096;font-size:11px}
 .memory-stat strong{display:block;color:#1b2b4a;font-size:25px;margin-top:7px}
@@ -285,7 +285,7 @@
 .memory-summary-row span{font-size:10px;color:#8995a7;text-align:right}
 @media(max-width:760px){
   .memory-config{min-width:0;width:100%}
-  .memory-stats{gap:7px}
+  .memory-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
   .memory-stat{padding:12px 10px}
   .memory-stat span{font-size:9px}
   .memory-stat strong{font-size:21px}
