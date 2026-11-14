@@ -768,3 +768,51 @@
   .memory-change-columns{grid-template-columns:1fr}
   .memory-editor-actions>*{flex:1}
 }
+
+
+/* Central unificada de revisão */
+.central-review-intro{align-items:flex-end}
+.central-review-top-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.central-review-session-panel{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:0 0 18px;padding:17px 19px;border:1px solid #d9e4f4;border-radius:15px;background:#f5f8ff}
+.central-review-session-panel p{margin:6px 0 0;color:#526581;font-size:12px;line-height:1.55}
+.central-review-session-actions{display:flex;flex-wrap:wrap;gap:8px}
+.central-review-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}
+.central-review-stat{padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.central-review-stat span{display:block;color:#718096;font-size:11px}
+.central-review-stat strong{display:block;margin-top:6px;color:#1b2b4a;font-size:25px}
+.central-review-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 20px;padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.central-review-filters label{display:grid;gap:6px;min-width:0}
+.central-review-filters label>span{color:#596983;font-size:10px;font-weight:800}
+.central-review-filters select,.central-review-filters input{width:100%;min-height:39px;min-width:0;border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:#fff;color:#33445f;font-size:11px}
+.central-review-search{grid-column:span 2}
+.central-review-list-heading{align-items:flex-end}
+.central-review-priority-note{color:#8390a3;font-size:10px}
+.central-review-list{display:grid;gap:11px}
+.central-review-card{padding:16px 17px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 5px 18px rgba(35,54,84,.035)}
+.central-review-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.central-review-source{color:#5a7195;font-size:9px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.central-review-due{color:#8a96a8;font-size:10px}
+.central-review-due.is-due{color:#b45a46;font-weight:800}
+.central-review-card h3{margin:0;color:#233654;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.central-review-meta{margin:7px 0;color:#78869a;font-size:10px;line-height:1.5}
+.central-review-description{margin:8px 0;color:#4c5d76;font-size:11px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+.central-review-metrics{display:flex;flex-wrap:wrap;gap:8px 15px;padding-top:8px;color:#8995a7;font-size:9px}
+.central-review-card-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid #edf0f5}
+.central-review-card-actions .primary-button,.central-review-card-actions .secondary-button{min-height:35px;padding:8px 12px;font-size:10px}
+.central-review-unavailable{color:#ae6548;font-size:10px;line-height:1.5}
+.law-current-actions #law-mark-difficult[aria-pressed="true"]{border-color:#e8d6a8;background:#fff9e9;color:#8d6825}
+@media(max-width:760px){
+  .central-review-intro{align-items:stretch}
+  .central-review-top-actions{width:100%}
+  .central-review-top-actions>*{flex:1}
+  .central-review-session-panel{align-items:flex-start;flex-direction:column}
+  .central-review-session-actions{width:100%}
+  .central-review-session-actions>*{flex:1}
+  .central-review-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+  .central-review-stat{padding:12px 9px}
+  .central-review-stat span{font-size:9px;line-height:1.4}
+  .central-review-stat strong{font-size:21px}
+  .central-review-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:12px}
+  .central-review-search{grid-column:span 2}
+  .central-review-priority-note{max-width:130px;text-align:right;line-height:1.4}
+}
