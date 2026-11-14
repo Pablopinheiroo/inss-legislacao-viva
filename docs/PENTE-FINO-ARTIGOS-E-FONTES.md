@@ -46,3 +46,17 @@ A leitura automatizada direta do Planalto foi bloqueada. Por isso, a captura atu
 ## Matérias além de Previdenciário
 Foram mantidos no recorte de Lei Seca os dispositivos de Constitucional (direitos fundamentais, direitos sociais, nacionalidade, cidadania, Administração Pública e Seguridade Social), Administrativo (Lei 8.112, Lei 8.429 e Lei 9.784) e Ética (Decretos 1.171 e 6.029).
 Português, Informática e Raciocínio Lógico, assim como tópicos teóricos de Direito Administrativo, Fundamentos Previdenciários, agente de desenvolvimento social e saúde/qualidade de vida no serviço público, foram cadastrados como módulos próprios, sem forçar vínculo com artigos de lei.
+
+
+## Correção dos endereços preferenciais e contagem consolidada
+
+Foram corrigidos os endereços oficiais do Planalto para a Lei 8.212/1991 (texto compilado), LOAS (texto compilado exibido pelo Planalto), Lei 10.559/2002 e Lei 10.779/2003. As questões mantêm `source_url` como endereço da captura real que sustentou o item; o campo `preferred_source_url` aponta para o Planalto. Essa separação é necessária porque a troca do link não substitui a captura nem atualiza o hash.
+
+Contagem atual dos bancos ativos:
+- data/questoes.json: 152
+- data/encontre-erro.json: 66
+- data/descubra-artigo.json: 43
+- data/afirmacoes-por-artigo.json: 43
+
+Situação: o recorte por artigo está aplicado em todas as normas cadastradas. A sincronização integral das capturas está sendo tentada pelo monitor automático acionado ao atualizar `data/laws.json`. Normas cujo Planalto bloqueie a coleta continuarão com a última captura válida, identificada como origem anterior, e não serão declaradas sincronizadas.
+
