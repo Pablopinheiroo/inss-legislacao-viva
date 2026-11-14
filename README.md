@@ -209,7 +209,7 @@ As marcações de estudo e os favoritos ficam no armazenamento local do navegado
 
 ## Salvamento, privacidade e backup do progresso
 
-O progresso pessoal é salvo no próprio navegador, usando \`localStorage\` e a mesma origem do GitHub Pages. A atualização dos arquivos do site não apaga esses dados: os identificadores de armazenamento são mantidos estáveis. Os registros de jogos, revisões, sessões, favoritos, artigos estudados, XP e conquistas passam por uma camada central em \`data-storage.js\`.
+O progresso pessoal é salvo no próprio navegador, usando `localStorage` e a mesma origem do GitHub Pages. A atualização dos arquivos do site não apaga esses dados: os identificadores de armazenamento são mantidos estáveis. Os registros de jogos, revisões, sessões, favoritos, artigos estudados, XP e conquistas passam por uma camada central em `data-storage.js`.
 
 Na área **Estudar**, abra **Backup e segurança dos dados** para exportar ou importar um arquivo JSON. O backup reúne os dados pessoais do navegador, mas não inclui uma partida que esteja em andamento. Antes de importar, o site baixa uma cópia do progresso que está no navegador; depois, restaura o arquivo escolhido.
 
