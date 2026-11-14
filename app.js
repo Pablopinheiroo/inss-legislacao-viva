@@ -5417,16 +5417,34 @@ function achievementWeekKey(date=new Date()){
 function achievementEventIsStudy(event){
   return event.event_type==="answer"||(event.event_type==="article_status"&&event.outcome==="studied");
 }
+function getAchievementUniqueAnswers(events){
+  const unique=new Map();
+  events.filter(event=>event.event_type==="answer").forEach(event=>{
+    const extra=event.extra&&typeof event.extra==="object"?event.extra:{};
+    const prompt=normalizeAnswer(String(event.prompt||""));
+    const questionId=normalizeAnswer(String(event.question_id||""));
+    const key=(event.session_id||event.id)+"::"+(questionId||prompt)+"::"+prompt
+      +"::"+(extra.blank_index||"")+"::"+(extra.stage||"");
+    if(!unique.has(key))unique.set(key,event);
+  });
+  return [...unique.values()].sort((a,b)=>new Date(a.occurred_at||0)-new Date(b.occurred_at||0));
+}
 function getAchievementMetrics(){
   const events=loadActivityEvents().filter(event=>achievementEventIsStudy(event));
-  const answers=events.filter(event=>event.event_type==="answer");
+  const answers=getAchievementUniqueAnswers(events);
   const articleEvents=events.filter(event=>event.event_type==="article_status"&&event.outcome==="studied");
   const days=new Map();
   events.forEach(event=>{
     const key=achievementDateKey(event.occurred_at);
-    if(key){if(!days.has(key))days.set(key,{answers:0,articles:new Set(),activities:0});days.get(key).activities++;}
-    if(event.event_type==="answer"&&key)days.get(key).answers++;
-    if(event.event_type==="article_status"&&key){
+    if(key&&!days.has(key))days.set(key,{answers:0,articles:new Set(),activities:0});
+  });
+  answers.forEach(event=>{
+    const key=achievementDateKey(event.occurred_at);
+    if(key)days.get(key).answers++;
+  });
+  articleEvents.forEach(event=>{
+    const key=achievementDateKey(event.occurred_at);
+    if(key){
       const articleKey=(event.law_id||"norma")+"::"+(event.article||event.question_id||"artigo");
       days.get(key).articles.add(articleKey);
     }
@@ -5487,7 +5505,7 @@ function showNextAchievementToast(){
   toast.setAttribute("role","status");toast.setAttribute("aria-live","polite");
   const icon=document.createElement("span");icon.className="achievement-award-icon";icon.textContent=item.icon||"★";
   const copy=document.createElement("span");copy.className="achievement-award-copy";
-  const title=document.createElement("strong");title.textContent=kind==="challenge"?"Desafio concluído!":"Conquista desbloqueada!";
+  const title=document.createElement("strong");title.textContent=kind==="challenge"?"Desafio concluído!":kind==="notice"?"Meta atualizada":"Conquista desbloqueada!";
   const note=document.createElement("small");note.textContent=item.name+(item.title?" · Título: "+item.title:"");
   copy.append(title,note);toast.append(icon,copy);document.body.append(toast);toast.classList.add("is-visible");
   clearTimeout(achievementToastTimer);
@@ -5624,7 +5642,7 @@ function saveDailyStudyGoal(){
   const target=Math.max(1,Math.min(100,Math.floor(Number(input.value)||DEFAULT_DAILY_STUDY_GOAL)));
   const state=loadAchievementState();state.daily_goal=target;saveAchievementState(state);
   refreshAchievementProgress();
-  showAchievementToast({name:"Meta diária atualizada para "+target+" atividades",icon:"◎"},"challenge");
+  showAchievementToast({name:"Meta diária atualizada para "+target+" atividades",icon:"◎"},"notice");
 }
 function initializeAchievements(){
   refreshAchievementProgress({silent:true});
