@@ -1259,7 +1259,7 @@ function answerLegalTrainingCE(value) {
   $("#law-training-feedback").className = "law-training-feedback " + (correct ? "correct" : "incorrect");
   renderLegalTrainingAnswer(
     item,
-    correct ? "Resposta: Certo" : "Resposta: Errado",
+    item.answer ? "Gabarito: Certo" : "Gabarito: Errado",
     item.explanation,
     item.sourceText || item.literalText || item.statement
   );
@@ -1558,7 +1558,8 @@ async function startLegalArticleTraining() {
   ];
   startLegalTraining(items, "Treinamento do " + article);
 }
-function startLegalSelectedDeviceTraining(deviceType) {
+async function startLegalSelectedDeviceTraining(deviceType) {
+  await prepareLegalTrainingBanks();
   const components = legalSnapshot && legalSnapshot.components && legalSnapshot.components[legalSelectedArticle]
     ? legalSnapshot.components[legalSelectedArticle]
     : {};
@@ -1568,12 +1569,69 @@ function startLegalSelectedDeviceTraining(deviceType) {
   if (!selected.length) return;
   const typeName = deviceType === "paragrafo" ? "parágrafo(s)" : "inciso(s)";
   const sourceUrl = legalSnapshot.source_url_used || legalSelectedLaw.url;
+  const matchingGroups = multiCEGroups.filter(group =>
+    group.law_id === legalSelectedLaw.id && group.article_key === legalSelectedArticle
+  );
   const items = [];
+
   selected.forEach(({component}) => {
     const label = component.device_label || (deviceType === "paragrafo" ? "Parágrafo" : "Inciso");
+    const normalizedDeviceText = normalizeLegalForMatch(component.text || "");
+
+    // Só reaproveita afirmações do banco quando a frase de validação está dentro
+    // do dispositivo selecionado, e não apenas em outra parte do artigo.
+    const validatedStatements = [];
+    matchingGroups.forEach(group => {
+      (group.statements || []).forEach(statement => {
+        const phrase = normalizeLegalForMatch(statement.validation_phrase || "");
+        if (phrase && normalizedDeviceText.includes(phrase)) validatedStatements.push({group, statement});
+      });
+    });
+    const seen = new Set();
+    validatedStatements.forEach(({group, statement}) => {
+      const key = normalizeAnswer(statement.prompt) + "|" + String(statement.answer);
+      if (seen.has(key)) return;
+      seen.add(key);
+      items.push({
+        kind: "ce",
+        kindLabel: "Afirmação validada",
+        title: "Certo ou Errado · " + label,
+        prompt: statement.prompt,
+        answer: statement.answer,
+        explanation: statement.explanation,
+        sourceText: component.text,
+        sourceUrl: group.source_url || sourceUrl
+      });
+    });
+
+    // Também aproveita questões autorais que identificam expressamente este inciso/parágrafo.
+    questionBank.filter(item => {
+      if (!legalTrainingLawMatches(item, legalSelectedLaw)
+        || !legalTrainingArticleMatches(item.article, legalSelectedArticle)) return false;
+      const reference = normalizeAnswer(item.article || "");
+      if (deviceType === "inciso") return reference.includes(normalizeAnswer(label));
+      const number = (label.match(/\d+/) || [])[0];
+      if (label.toLowerCase().includes("único")) return reference.includes("paragrafo unico");
+      return Boolean(number && /§|par[aá]grafo/i.test(item.article || "") && reference.includes(number));
+    }).forEach(item => {
+      const key = normalizeAnswer(item.statement) + "|" + String(item.answer);
+      if (seen.has(key)) return;
+      seen.add(key);
+      items.push({
+        kind: "ce",
+        kindLabel: "Questão cadastrada",
+        title: "Questão · " + label,
+        prompt: item.statement,
+        answer: item.answer,
+        explanation: item.explanation,
+        sourceText: component.text,
+        sourceUrl: item.source_url || sourceUrl
+      });
+    });
+
     items.push(legalTrainingRecallItem(label, component.text, sourceUrl,
       "Sem consultar a lei, lembre o que estabelece " + label + ". Depois confira o texto literal."));
-    items.push(...buildLegalFidelityCE(component.text, label, sourceUrl, 4));
+    items.push(...buildLegalFidelityCE(component.text, label, sourceUrl, seen.size ? 2 : 4));
     items.push(...buildLegalFactTrainingItems(component.text, label, sourceUrl));
   });
   startLegalTraining(items, "Treinamento dos " + typeName + " selecionados");
