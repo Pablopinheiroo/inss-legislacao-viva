@@ -476,8 +476,10 @@ function renderLegalLibrary() {
   if (!list) return;
   const query = normalizeAnswer($("#law-library-search").value || "");
   const matter = $("#law-library-category").value || "todas";
+  const priority = $("#law-library-priority")?.value || "todas";
   const matches = legalLaws.filter(law =>
     (matter === "todas" || legalLawMatter(law) === matter) &&
+    (priority === "todas" || String(law.study_priority || "") === priority) &&
     (!query || legalLawSearchText(law).includes(query))
   );
   list.replaceChildren();
@@ -522,7 +524,7 @@ function renderLegalLibrary() {
       const subjectList = document.createElement("div");
       subjectList.className = "law-library-subject-list";
 
-      subjectLaws.sort((a, b) => collator.compare(a.short_title || a.title, b.short_title || b.title)).forEach(law => {
+      subjectLaws.sort((a, b) => (Number(a.study_priority || 9) - Number(b.study_priority || 9)) || collator.compare(a.short_title || a.title, b.short_title || b.title)).forEach(law => {
         const entry = document.createElement("article");
         entry.className = "law-library-entry";
 
@@ -540,7 +542,11 @@ function renderLegalLibrary() {
         const detail = document.createElement("span");
         detail.className = "law-library-kind";
         detail.textContent = law.category || "Norma";
-        button.append(name, officialName, detail);
+        const priorityBadge = document.createElement("span");
+        priorityBadge.className = "law-priority-badge priority-" + String(law.study_priority || 3);
+        priorityBadge.textContent = "Prioridade " + String(law.study_priority || 3) + " · " + (law.priority_label || "Complementar");
+        priorityBadge.title = law.priority_reason || "Classificação editorial com base no conteúdo programático do edital de 2022.";
+        button.append(name, officialName, detail, priorityBadge);
         button.addEventListener("click", () => loadLegalLaw(law.id));
 
         const status = legalLawStatus(law.id);
@@ -4999,6 +5005,7 @@ $("#before-after-retry-mistakes").addEventListener("click", () => {
 });
 $("#law-library-search").addEventListener("input", renderLegalLibrary);
 $("#law-library-category").addEventListener("change", renderLegalLibrary);
+$("#law-library-priority").addEventListener("change", renderLegalLibrary);
 $("#law-article-select").addEventListener("change", () => {
   legalSelectedArticle = $("#law-article-select").value;
   renderLegalArticle();
