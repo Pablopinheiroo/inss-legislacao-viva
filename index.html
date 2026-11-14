@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca e encontre erros.">
+  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros e descubra artigos.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
@@ -26,6 +26,7 @@
     <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
     <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
     <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
+    <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -203,6 +204,62 @@
     </section>
 
     <footer class="footer-note"><strong>Proteção contra questões desatualizadas.</strong><span>Antes de liberar cada item, o site confere se a expressão correta ainda aparece no artigo salvo pelo monitor. Se a redação mudar e a correção não for encontrada, o item fica suspenso até revisão.</span></footer>
+  </main>
+
+
+  <main id="article-view" class="page-shell hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">MODO DE JOGO · MEMÓRIA DA LEGISLAÇÃO</p>
+        <h1>Descubra o artigo</h1>
+        <p class="subtitle">Leia a descrição e escolha qual artigo da norma trata daquele assunto.</p>
+      </div>
+      <div class="quiz-config article-config">
+        <label class="select-wrap"><span>Matéria</span><select id="article-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Questões</span><select id="article-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
+        <button id="start-article" class="primary-button" type="button" disabled>Começar jogo</button>
+      </div>
+    </section>
+
+    <p id="article-count-note" class="manual-check-note">Carregando questões e conferindo os artigos nas capturas da legislação...</p>
+
+    <section id="article-card" class="quiz-card hidden" aria-live="polite">
+      <div class="quiz-card-top"><span id="article-category-label" class="quiz-chip"></span><span id="article-progress" class="quiz-progress"></span></div>
+      <div class="quiz-law-line"><strong id="article-law"></strong></div>
+      <p id="article-question" class="article-question"></p>
+      <p class="article-instruction">Escolha o número do artigo correto:</p>
+      <div id="article-options" class="article-options" role="group" aria-label="Alternativas de artigos"></div>
+      <button id="submit-article" class="primary-button submit-answer" type="button" disabled>Confirmar artigo</button>
+
+      <section id="article-feedback" class="answer-feedback hidden">
+        <div id="article-result" class="feedback-result"></div>
+        <p id="article-answer-line" class="feedback-explanation"></p>
+        <p id="article-explanation" class="feedback-explanation"></p>
+        <details class="law-excerpt">
+          <summary>Ver texto literal do artigo correto</summary>
+          <pre id="article-literal"></pre>
+        </details>
+        <div class="feedback-bottom"><a id="article-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><button id="next-article" class="primary-button" type="button">Próxima questão →</button></div>
+      </section>
+    </section>
+
+    <section id="article-welcome" class="empty-state quiz-welcome">
+      <h3>Você lembra onde está cada regra?</h3>
+      <p>O jogo apresenta uma descrição de um assunto da lei. Seu desafio é identificar o artigo correspondente. Depois, confira a explicação e leia o dispositivo legal completo.</p>
+    </section>
+
+    <section id="article-summary" class="quiz-summary hidden">
+      <p class="eyebrow">RESULTADO DO JOGO</p>
+      <h2 id="article-score"></h2>
+      <p id="article-score-note"></p>
+      <div id="article-mistakes" class="quiz-mistakes"></div>
+      <div class="summary-actions">
+        <button id="article-retry-mistakes" class="secondary-button hidden" type="button">Treinar somente as erradas</button>
+        <button id="restart-article" class="primary-button" type="button">Novo jogo ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Questões vinculadas à legislação salva.</strong><span>Antes de liberar um item, o site confere se o artigo correto, a frase de referência e as alternativas continuam presentes nas capturas oficiais disponíveis. Questões que não passam pela conferência ficam suspensas.</span></footer>
   </main>
 
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
