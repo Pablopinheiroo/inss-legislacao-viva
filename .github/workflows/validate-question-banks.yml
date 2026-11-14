@@ -1,0 +1,35 @@
+name: Validate question banks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/*.json"
+      - "data/snapshots/**"
+      - "scripts/validate_question_banks.py"
+      - ".github/workflows/validate-question-banks.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/*.json"
+      - "data/snapshots/**"
+      - "scripts/validate_question_banks.py"
+      - ".github/workflows/validate-question-banks.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Check legal basis and current snapshots
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate question banks
+        run: python scripts/validate_question_banks.py
