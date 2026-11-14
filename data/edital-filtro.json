@@ -241,11 +241,9 @@
     },
     "decreto-1171-1994": {
       "include_articles": [
-        "Art. 1",
-        "Art. 2",
-        "Art. 3"
+        "Anexo - Código de Ética"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "somente o Anexo do Código de Ética; arts. 1º a 3º do decreto principal não são conteúdo de estudo",
       "blocked": false
     },
     "decreto-6029-2007": {
@@ -1356,6 +1354,10 @@
     {
       "norm": "LC 142/2013",
       "action": "Arts.1–10 mantidos; Art.11 de vigência excluído."
+    },
+    {
+      "norm": "Decreto 1.171/1994",
+      "action": "Art. 3º de vigência retirado do estudo; Anexo do Código de Ética separado em entrada própria. Menções expressas a itens revogados pelo Decreto 6.029 foram limpas."
     }
   ],
   "decreto6214_status": {
