@@ -711,12 +711,12 @@
     "title": "Lei nº 10.559, de 13 de novembro de 2002",
     "short_title": "Lei 10.559/2002 — Anistiado político",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10559.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
     "source_name": "Planalto — texto oficial",
     "edital_item": "14.2.3 — Benefícios de legislação especial",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/2002/l10559.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -828,12 +828,12 @@
     "title": "Lei nº 10.779, de 25 de novembro de 2003",
     "short_title": "Lei 10.779/2003 — Seguro-defeso",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10779.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm",
     "source_name": "Planalto — texto oficial",
     "edital_item": "14.2.3 — Seguro-defeso",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/2003/l10779.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -903,12 +903,12 @@
     "title": "Lei nº 8.742, de 7 de dezembro de 1993",
     "short_title": "Lei 8.742/1993 — LOAS",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
     "source_name": "Planalto — texto compilado",
     "edital_item": "14.2.3 — LOAS, BPC e auxílio-inclusão",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -1242,12 +1242,12 @@
     "title": "Lei nº 8.212, de 24 de julho de 1991",
     "short_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
     "source_name": "Planalto — texto compilado",
     "edital_item": "14.2.3 — Custeio e financiamento da Seguridade",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
