@@ -272,8 +272,17 @@ function legalLawStatus(lawId) {
     ? dashboardData.laws.find(item => item.id === lawId) || null
     : null;
 }
+function legalLawMatter(law) {
+  return law.matter || "Outras matérias";
+}
+function legalLawSubject(law) {
+  return law.subject || "Assunto não classificado";
+}
 function legalLawSearchText(law) {
-  return normalizeAnswer([law.short_title, law.title, law.category, law.edital_item].join(" "));
+  return normalizeAnswer([
+    law.short_title, law.title, law.category, law.edital_item,
+    legalLawMatter(law), legalLawSubject(law)
+  ].join(" "));
 }
 async function loadLegalLibrary() {
   const list = $("#law-library-list");
@@ -282,27 +291,28 @@ async function loadLegalLibrary() {
     const response = await fetch(LAWS_URL + "?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const catalog = await response.json();
-    legalLaws = (Array.isArray(catalog) ? catalog : []).filter(law => law.enabled !== false);
-    const categories = [...new Set(legalLaws.map(law => law.category).filter(Boolean))]
+    // A biblioteca mostra o cadastro completo, inclusive normas com monitoramento pausado.
+    legalLaws = Array.isArray(catalog) ? catalog : [];
+    const matters = [...new Set(legalLaws.map(legalLawMatter))]
       .sort((a, b) => a.localeCompare(b, "pt-BR"));
-    const categorySelect = $("#law-library-category");
-    categorySelect.replaceChildren();
+    const matterSelect = $("#law-library-category");
+    matterSelect.replaceChildren();
     const all = document.createElement("option");
     all.value = "todas";
     all.textContent = "Todas as matérias";
-    categorySelect.append(all);
-    categories.forEach(category => {
+    matterSelect.append(all);
+    matters.forEach(matter => {
       const option = document.createElement("option");
-      option.value = category;
-      option.textContent = category;
-      categorySelect.append(option);
+      option.value = matter;
+      option.textContent = matter;
+      matterSelect.append(option);
     });
     $("#law-library-search").value = "";
-    categorySelect.value = "todas";
+    matterSelect.value = "todas";
     renderLegalLibrary();
-    $("#law-library-summary-count").textContent = legalLaws.length + " normas no catálogo";
-    $("#law-library-summary-note").textContent = "Textos carregados das capturas do monitoramento.";
-    if (!legalLaws.length) throw new Error("O catálogo não contém normas habilitadas.");
+    $("#law-library-summary-count").textContent = legalLaws.length + " normas cadastradas";
+    $("#law-library-summary-note").textContent = "Todas organizadas por matéria e assunto; textos conforme as capturas disponíveis.";
+    if (!legalLaws.length) throw new Error("O catálogo não contém normas cadastradas.");
     const preferred = legalLaws.find(law => law.id === "lei-8213-1991") || legalLaws[0];
     await loadLegalLaw(preferred.id);
   } catch (error) {
@@ -319,13 +329,13 @@ function renderLegalLibrary() {
   const list = $("#law-library-list");
   if (!list) return;
   const query = normalizeAnswer($("#law-library-search").value || "");
-  const category = $("#law-library-category").value || "todas";
+  const matter = $("#law-library-category").value || "todas";
   const matches = legalLaws.filter(law =>
-    (category === "todas" || law.category === category) &&
+    (matter === "todas" || legalLawMatter(law) === matter) &&
     (!query || legalLawSearchText(law).includes(query))
   );
   list.replaceChildren();
-  $("#law-library-count").textContent = matches.length + " de " + legalLaws.length + " normas";
+  $("#law-library-count").textContent = matches.length + " de " + legalLaws.length + " normas cadastradas";
   if (!matches.length) {
     const empty = document.createElement("p");
     empty.className = "law-library-loading";
@@ -333,28 +343,69 @@ function renderLegalLibrary() {
     list.append(empty);
     return;
   }
+
+  const collator = new Intl.Collator("pt-BR", { sensitivity: "base", numeric: true });
+  const matters = new Map();
   matches.forEach(law => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "law-library-item";
-    button.classList.toggle("active", Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id));
-    button.setAttribute("aria-pressed", String(Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id)));
-    const name = document.createElement("strong");
-    name.textContent = law.short_title || law.title;
-    const detail = document.createElement("span");
-    detail.textContent = law.category || "Norma";
-    const status = legalLawStatus(law.id);
-    const meta = document.createElement("small");
-    meta.textContent = status && status.error
-      ? "última consulta com falha"
-      : status && status.parser_mode === "index"
-        ? "índice de alterações"
-        : status && Number.isFinite(status.article_count)
-          ? status.article_count + " artigos capturados"
-          : "abrir legislação";
-    button.append(name, detail, meta);
-    button.addEventListener("click", () => loadLegalLaw(law.id));
-    list.append(button);
+    const matterName = legalLawMatter(law);
+    const subjectName = legalLawSubject(law);
+    if (!matters.has(matterName)) matters.set(matterName, new Map());
+    const subjects = matters.get(matterName);
+    if (!subjects.has(subjectName)) subjects.set(subjectName, []);
+    subjects.get(subjectName).push(law);
+  });
+
+  [...matters.entries()].sort((a, b) => collator.compare(a[0], b[0])).forEach(([matterName, subjects]) => {
+    const matterSection = document.createElement("section");
+    matterSection.className = "law-library-matter";
+    const matterHeading = document.createElement("div");
+    matterHeading.className = "law-library-matter-heading";
+    const matterTitle = document.createElement("h3");
+    matterTitle.textContent = matterName;
+    const matterCount = document.createElement("span");
+    const uniqueMatterCount = [...subjects.values()].reduce((total, lawsInSubject) => total + lawsInSubject.length, 0);
+    matterCount.textContent = uniqueMatterCount + (uniqueMatterCount === 1 ? " norma" : " normas");
+    matterHeading.append(matterTitle, matterCount);
+    matterSection.append(matterHeading);
+
+    [...subjects.entries()].sort((a, b) => collator.compare(a[0], b[0])).forEach(([subjectName, subjectLaws]) => {
+      const subjectSection = document.createElement("section");
+      subjectSection.className = "law-library-subject";
+      const subjectTitle = document.createElement("h4");
+      subjectTitle.textContent = subjectName;
+      const subjectList = document.createElement("div");
+      subjectList.className = "law-library-subject-list";
+
+      subjectLaws.sort((a, b) => collator.compare(a.short_title || a.title, b.short_title || b.title)).forEach(law => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "law-library-item";
+        button.classList.toggle("active", Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id));
+        button.setAttribute("aria-pressed", String(Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id)));
+        const name = document.createElement("strong");
+        name.textContent = law.short_title || law.title;
+        const detail = document.createElement("span");
+        detail.textContent = law.category || "Norma";
+        const status = legalLawStatus(law.id);
+        const meta = document.createElement("small");
+        meta.textContent = law.enabled === false
+          ? "monitoramento desativado · abrir legislação"
+          : status && status.error
+            ? "última consulta com falha"
+            : status && status.parser_mode === "index"
+              ? "índice de alterações"
+              : status && Number.isFinite(status.article_count)
+                ? status.article_count + " artigos capturados"
+                : "abrir legislação";
+        button.append(name, detail, meta);
+        button.addEventListener("click", () => loadLegalLaw(law.id));
+        subjectList.append(button);
+      });
+
+      subjectSection.append(subjectTitle, subjectList);
+      matterSection.append(subjectSection);
+    });
+    list.append(matterSection);
   });
 }
 async function loadLegalLaw(lawId) {
