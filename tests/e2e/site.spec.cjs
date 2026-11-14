@@ -119,6 +119,7 @@ test("os sete modos de treinamento registram respostas e mantêm o progresso", a
   await expect(page.locator("#central-review-list .central-review-card")).toHaveCount(1);
   await page.locator("#central-review-list .central-review-card .primary-button").click();
   await expect(page.locator("#quiz-card")).toBeVisible();
+  await page.locator("#area-jogos").click();
 
   // 2. Completar Lei Seca: responder incorretamente deve criar um item de revisão.
   await page.locator("#tab-cloze").click();
