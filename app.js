@@ -4448,7 +4448,8 @@ function finishSimulado(options={}){
   const total=simulatorState.questions.length;
   const answered=simulatorState.responses.filter(response=>response!==null).length;
   const blanks=total-answered;
-  const timeExpired=Boolean(options.timeExpired);
+  const timeExpired=Boolean(options.timeExpired)||
+    Boolean(simuladoTimeLimit(simulatorState.type)&&simulatorState.deadline&&simulatorState.deadline<=Date.now());
   if(!timeExpired){
     let confirmation="";
     if(simulatorState.type==="quick")confirmation="Deseja finalizar o simulado rápido agora?";
