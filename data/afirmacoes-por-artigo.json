@@ -3443,6 +3443,6 @@
   "generated_at": "2026-11-14",
   "validation_policy": "Todas as afirmações do grupo precisam ter fundamento legal, frase-âncora e versão atual compatível com a captura do artigo.",
   "filtered_by_edital_2022": true,
-  "edital_filter_note": "Questões/grupos vinculados a artigos fora do recorte do conteúdo programático do edital INSS 2022 foram retirados do banco ativo. Os itens restantes mantêm a referência de captura anterior e aguardam sincronização integral da fonte preferencial do Planalto/Portal IN.",
-  "source_sync_status": "fontes_preferenciais_atualizadas; snapshots_ainda_aguardam_recaptura"
+  "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
+  "source_sync_status": "snapshot_anterior_ainda_nao_sincronizado"
 }
