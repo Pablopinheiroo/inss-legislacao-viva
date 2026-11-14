@@ -8,7 +8,7 @@
 .nav-tab{border:0;background:transparent;color:#8793a6;padding:11px 14px 12px;font:600 12px inherit;cursor:pointer;border-bottom:2px solid transparent}
 .nav-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
 .intro-actions{display:grid;justify-items:end;gap:10px}
-.primary-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;border:1px solid #214fc4;border-radius:11px;background:#2557d6;color:#fff;padding:0 16px;text-decoration:none;font:700 12px inherit;cursor:pointer}
+.primary-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;border:1px solid #214fc4;border-radius:11px;background:#2557d6;color:#fff;padding:0 16px;text-decoration:none;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer}
 .primary-button:hover{background:#1d49bc}
 .primary-button:disabled{opacity:.45;cursor:not-allowed}
 .secondary-button{background:#fff;color:#2557d6;border-color:#d7e1f7}
@@ -1008,7 +1008,7 @@
 .achievement-card-copy>strong{color:#314765;font-size:11px;line-height:1.4}
 .achievement-card-copy>p{margin:0;color:#78869a;font-size:9px;line-height:1.45}
 .achievement-card-copy>small{color:#939eae;font-size:8px;line-height:1.4}
-.achievement-title-button{flex:0 0 auto;min-height:31px;padding:6px 9px;border:1px solid #d8e1f0;border-radius:8px;background:#f7f9fd;color:#48628e;font:700 9px inherit;cursor:pointer}
+.achievement-title-button{flex:0 0 auto;min-height:31px;padding:6px 9px;border:1px solid #d8e1f0;border-radius:8px;background:#f7f9fd;color:#48628e;font-family:inherit;font-size:9px;font-weight:700;cursor:pointer}
 .achievement-title-button.is-equipped{border-color:#cce6d5;background:#eaf6ee;color:#267447}
 .achievement-title-button:disabled{cursor:default}
 .achievement-lock{flex:0 0 auto;font-size:13px;opacity:.45}
