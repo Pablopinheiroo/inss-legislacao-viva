@@ -1,0 +1,38 @@
+name: Validar armazenamento e backups
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "app.js"
+      - "data-storage.js"
+      - "tests/data-storage.test.js"
+      - ".github/workflows/validate-data-storage.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "app.js"
+      - "data-storage.js"
+      - "tests/data-storage.test.js"
+      - ".github/workflows/validate-data-storage.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test-storage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verificar sintaxe JavaScript
+        run: |
+          node --check app.js
+          node --check data-storage.js
+      - name: Testar exportação, importação e recuperação
+        run: node --test tests/data-storage.test.js
