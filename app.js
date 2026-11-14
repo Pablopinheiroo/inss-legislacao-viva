@@ -5086,8 +5086,8 @@ function getSubjectDomainSummaries(){
       extra.stage||""
     ].join("::"))||String(event.id);
     const sessionId=event.session_id||"";
-    // Tentativas repetidas do mesmo item dentro da mesma sessão contam como uma questão.
-    // A última resposta válida da sessão representa o resultado final daquele exercício.
+    // A mesma questão conta uma vez por sessão: usamos a primeira resposta pontuada.
+    // Uma revisão em outra sessão entra como nova tentativa e atualiza o percentual.
     const attemptKey=sessionId?sessionId+"::"+questionKey:String(event.id);
     const occurredAt=new Date(event.occurred_at||0).getTime()||0;
     const session=sessionId?sessionById.get(sessionId):null;
@@ -5095,7 +5095,7 @@ function getSubjectDomainSummaries(){
       ?event.review_mode:Boolean(session&&session.review_mode)||event.mode==="memory";
     const normalized={event,category,topic,questionKey,sessionId,occurredAt,reviewMode};
     const previous=latestAttempts.get(attemptKey);
-    if(!previous||occurredAt>=previous.occurredAt)latestAttempts.set(attemptKey,normalized);
+    if(!previous||occurredAt<previous.occurredAt)latestAttempts.set(attemptKey,normalized);
   });
   const grouped=new Map();
   [...latestAttempts.values()].forEach(attempt=>{
