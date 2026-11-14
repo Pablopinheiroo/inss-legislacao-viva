@@ -3801,7 +3801,7 @@ function renderBeforeAfterQuestion() {
     $("#before-after-options").append(button);
   });
   $("#before-after-submit").disabled=true;$("#before-after-feedback").classList.add("hidden");
-  $("#before-after-change-question").classList.add("hidden");$("#before-after-next").disabled=true;
+  $("#before-after-change-question").hidden=true;$("#before-after-change-question").classList.add("hidden");$("#before-after-next").disabled=true;
   $("#before-after-next").textContent=beforeAfterState.index+1<beforeAfterState.questions.length?"Próxima alteração →":"Ver resultado →";
 }
 function confirmBeforeAfterAnswer() {
@@ -3841,7 +3841,7 @@ function confirmBeforeAfterAnswer() {
     $("#before-after-change-options").append(button);
   });
   $("#before-after-change-feedback").classList.add("hidden");
-  $("#before-after-change-question").classList.remove("hidden");
+  $("#before-after-change-question").hidden=false;$("#before-after-change-question").classList.remove("hidden");
   $("#before-after-source").href=change.source_url||"https://www.gov.br/";
   $("#before-after-feedback").classList.remove("hidden");
 }
