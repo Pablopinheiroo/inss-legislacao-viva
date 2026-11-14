@@ -232,3 +232,17 @@
   .multi-ce-config .primary-button{grid-column:1/-1;width:100%}
   .multi-ce-result-row{align-items:flex-start;flex-direction:column;gap:4px}
 }
+
+
+/* Modo Antes e depois */
+.before-after-config{min-width:min(100%,430px)}
+.before-after-prompt{margin:22px 0 14px;color:var(--ink);font-size:15px;font-weight:700;line-height:1.5}
+.before-after-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.before-after-option{display:flex;flex-direction:column;align-items:stretch;min-width:0;padding:14px;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
+.before-after-option strong{font-size:10px;letter-spacing:.1em;color:#7183a4}
+.before-after-option pre{margin:10px 0 0;max-height:230px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 Georgia,serif;color:#34435c}
+.before-after-option.is-selected{border-color:var(--blue);background:#f4f7ff;box-shadow:0 0 0 2px rgba(37,87,214,.09)}
+.before-after-option:disabled{cursor:default;opacity:.88}
+.before-after-comparison{margin:18px 0}
+.before-after-comparison .diff-panel pre{max-height:360px}
+@media(max-width:760px){.before-after-config{min-width:0;width:100%}.before-after-options{grid-template-columns:1fr}.before-after-option pre{max-height:190px}}
