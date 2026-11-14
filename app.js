@@ -4452,7 +4452,8 @@ function finishSimulado(options={}){
   if(!timeExpired){
     let confirmation="";
     if(simulatorState.type==="quick")confirmation="Deseja finalizar o simulado rápido agora?";
-    else if(simulatorState.type==="complete"&&blanks===0)confirmation="Deseja finalizar o simulado completo agora?";
+    else if(simulatorState.type==="complete")confirmation="Deseja finalizar o simulado completo agora?";
+    else if(blanks)confirmation="Deseja finalizar este simulado agora?";
     if(blanks)confirmation+=" "+blanks+" questão(ões) ficarão em branco.";
     if(confirmation&&!window.confirm(confirmation))return;
   }
