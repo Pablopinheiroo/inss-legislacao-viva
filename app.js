@@ -22,7 +22,9 @@ let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved:
 let findErrorCaptureNote = "";
 let findErrorSuspendedCount = 0;
 let articleQuestions = [];
-let articleGameState = { questions: [], index: 0, selected: null, answers: [] };
+let articleCaptureNote = "";
+let articleSuspendedCount = 0;
+let articleGameState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false, reviewFailed: false };
 let multiCEGroups = [];
 let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
 let beforeAfterAvailable = [];
@@ -31,6 +33,7 @@ const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
 const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
 const CLOZE_REVIEW_KEY = "radarLegislativo.clozeReview.v1";
 const ERROR_REVIEW_KEY = "radarLegislativo.errorReview.v1";
+const ARTICLE_REVIEW_KEY = "radarLegislativo.articleReview.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
@@ -2151,6 +2154,22 @@ function renderFindErrorLegalHighlight(element, source, phrase) {
   if(end<original.length)element.append(document.createTextNode(original.slice(end)));
   return true;
 }
+function renderFindErrorWrongHighlight(button, source) {
+  const value = String(source || "");
+  const leading = (value.match(/^\s*/) || [""])[0];
+  const trailing = (value.match(/\s*$/) || [""])[0];
+  const phrase = value.slice(leading.length, Math.max(leading.length, value.length - trailing.length));
+  button.replaceChildren();
+  if (leading) button.append(document.createTextNode(leading));
+  if (phrase) {
+    const mark = document.createElement("mark");
+    mark.className = "error-wrong-highlight";
+    mark.textContent = phrase;
+    button.append(mark);
+  }
+  if (trailing) button.append(document.createTextNode(trailing));
+  button.setAttribute("aria-label", "Expressão incorreta destacada: " + phrase);
+}
 async function loadFindErrorBank() {
   const note=$("#error-count-note");
   try {
@@ -2287,7 +2306,7 @@ function chooseFindErrorSegment(index,button){
   }
   findErrorState.resolved=true;findErrorState.answers.push({item,attempts:findErrorState.tries});
   if(findErrorState.reviewMode&&!findErrorState.reviewFailed)recordFindErrorReviewSuccess(item);
-  $("#error-statement").querySelectorAll(".error-segment").forEach((segment,i)=>{segment.disabled=true;if(i===index)segment.classList.add("is-wrong");});
+  $("#error-statement").querySelectorAll(".error-segment").forEach((segment,i)=>{segment.disabled=true;if(i===index)renderFindErrorWrongHighlight(segment,item.segments[i]);});
   $("#error-attempt-feedback").classList.add("hidden");
   $("#error-result").textContent=findErrorState.tries===1?"Erro encontrado de primeira! ✓":"Você encontrou o erro! ✓";
   $("#error-result").className="feedback-result correct";
@@ -2376,37 +2395,142 @@ async function loadArticleGameBank() {
     });
 
     const categorySelect = $("#article-category");
+    const previousCategory = categorySelect.value || "todas";
     categorySelect.replaceChildren();
-    const allOption = document.createElement("option");
-    allOption.value = "todas";
-    allOption.textContent = "Todas as matérias";
-    categorySelect.append(allOption);
+    categorySelect.append(new Option("Todas as matérias", "todas"));
     [...new Set(articleQuestions.map(item => item.category))]
       .sort((a,b) => a.localeCompare(b, "pt-BR"))
-      .forEach(category => {
-        const option = document.createElement("option");
-        option.value = category;
-        option.textContent = category;
-        categorySelect.append(option);
-      });
+      .forEach(category => categorySelect.append(new Option(category, category)));
+    if ([...categorySelect.options].some(option => option.value === previousCategory)) categorySelect.value = previousCategory;
 
-    $("#start-article").disabled = articleQuestions.length === 0;
-    const captureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
-    note.textContent = articleQuestions.length + " questões disponíveis." + captureNote +
-      (suspended ? " " + suspended + " questão(ões) suspensa(s) por incompatibilidade com o texto salvo." : " Todas passaram pela conferência dos artigos e das frases de referência.");
-    if (!articleQuestions.length) note.textContent += " Atualize as capturas legais e tente novamente.";
+    const lawSelect = $("#article-law-filter");
+    const previousLaw = lawSelect.value || "todas";
+    lawSelect.replaceChildren();
+    lawSelect.append(new Option("Todas as normas", "todas"));
+    [...new Map(articleQuestions.map(item => [item.law_id, item.law_title])).entries()]
+      .sort((a,b) => a[1].localeCompare(b[1], "pt-BR"))
+      .forEach(([id, title]) => lawSelect.append(new Option(title, id)));
+    if ([...lawSelect.options].some(option => option.value === previousLaw)) lawSelect.value = previousLaw;
+    articleCaptureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
+    articleSuspendedCount = suspended;
+    updateArticleGameFilters();
+    renderArticleReviewOverview();
   } catch (error) {
     articleQuestions = [];
     $("#start-article").disabled = true;
     note.textContent = "Não foi possível carregar o banco ou conferir as capturas da legislação. Recarregue o site e tente novamente.";
+    renderArticleReviewOverview();
     console.error(error);
   }
 }
 function selectedArticlePool() {
   const category = $("#article-category").value;
-  return articleQuestions.filter(item => category === "todas" || item.category === category);
+  const lawId = $("#article-law-filter").value;
+  const onlyStudied = $("#article-study-filter").value === "estudados";
+  const studied = onlyStudied ? legalStudiedSet() : null;
+  return articleQuestions.filter(item =>
+    (category === "todas" || item.category === category) &&
+    (lawId === "todas" || item.law_id === lawId) &&
+    (!onlyStudied || studied.has(legalArticleKey(item.law_id, item.answer_article_key)))
+  );
 }
-function startArticleGame(onlyItems = null) {
+function updateArticleGameFilters() {
+  const pool = selectedArticlePool();
+  $("#start-article").disabled = pool.length === 0;
+  const onlyStudied = $("#article-study-filter").value === "estudados";
+  let message = pool.length + " questão(ões) disponível(is) nesta seleção, de " + articleQuestions.length + " validada(s).";
+  if (articleCaptureNote) message += articleCaptureNote;
+  if (articleSuspendedCount) message += " " + articleSuspendedCount + " questão(ões) suspensa(s) por incompatibilidade com a captura atual.";
+  if (!pool.length && onlyStudied) message += " Nenhuma questão corresponde aos artigos marcados como estudados. Na aba Lei Seca, abra a norma e marque os artigos estudados.";
+  else if (!pool.length) message += " Não há questões para esses filtros.";
+  $("#article-count-note").textContent = message;
+}
+function loadArticleReviewQueue() {
+  try {
+    const value = JSON.parse(localStorage.getItem(ARTICLE_REVIEW_KEY) || "{}");
+    return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  } catch (_) { return {}; }
+}
+function saveArticleReviewQueue(queue) {
+  try { localStorage.setItem(ARTICLE_REVIEW_KEY, JSON.stringify(queue)); }
+  catch (error) {
+    console.warn("Não foi possível salvar a revisão Descubra o artigo:", error);
+    const note = $("#article-review-note");
+    if (note) note.textContent = "O navegador não permitiu salvar os erros. Confira as permissões de armazenamento.";
+  }
+}
+function articleReviewPendingEntries() {
+  return Object.values(loadArticleReviewQueue()).filter(entry =>
+    entry && entry.status !== "mastered" && entry.item && entry.item.id
+  );
+}
+function renderArticleReviewOverview() {
+  const queue = Object.values(loadArticleReviewQueue());
+  const pending = queue.filter(entry => entry && entry.status !== "mastered" && entry.item);
+  const due = pending.filter(entry => {
+    const time = new Date(entry.next_due || 0).getTime();
+    return !Number.isFinite(time) || time <= Date.now();
+  });
+  const available = new Map(articleQuestions.map(item => [item.id,item]));
+  const ready = due.filter(entry => available.has(entry.item.id));
+  const suspended = due.length - ready.length;
+  const mastered = queue.filter(entry => entry && entry.status === "mastered").length;
+  const dueNode=$("#article-review-due"), pendingNode=$("#article-review-pending");
+  const masteredNode=$("#article-review-mastered"), button=$("#article-review-start");
+  const note=$("#article-review-note");
+  if(!dueNode||!pendingNode||!masteredNode||!button||!note)return;
+  dueNode.textContent=String(due.length);
+  pendingNode.textContent=String(pending.length);
+  masteredNode.textContent=String(mastered);
+  button.disabled=ready.length===0;
+  button.textContent=ready.length?"Revisar agora ("+ready.length+")":"Nenhum erro vencido para revisar";
+  if(!pending.length)note.textContent="As questões que você responder incorretamente serão guardadas aqui para revisão espaçada.";
+  else if(ready.length)note.textContent=ready.length+" erro(s) disponível(is) para revisar. Três acertos em revisões espaçadas retiram a questão da fila ativa."
+    +(suspended?" Outros "+suspended+" item(ns) aguardam conferência do texto atualizado.":"");
+  else if(suspended)note.textContent=suspended+" erro(s) estão guardados, mas suas questões estão suspensas porque a redação de referência não passou pela conferência atual.";
+  else {
+    const dates=pending.map(entry=>new Date(entry.next_due||0).getTime()).filter(Number.isFinite);
+    note.textContent=pending.length+" erro(s) em acompanhamento. Próxima revisão: "
+      +(dates.length?formatDate(new Date(Math.min(...dates)).toISOString()):"aguardando");
+  }
+}
+function recordArticleReviewMiss(item, selectedArticle, reviewMode) {
+  const queue=loadArticleReviewQueue(), old=queue[item.id]||{}, now=Date.now();
+  const storedItem={id:item.id,law_id:item.law_id,law_title:item.law_title,
+    answer_article_key:item.answer_article_key,question:item.question};
+  queue[item.id]={
+    item:storedItem,misses:(Number(old.misses)||0)+1,correct_reviews:0,
+    first_missed_at:old.first_missed_at||new Date(now).toISOString(),
+    last_missed_at:new Date(now).toISOString(),last_wrong_article_key:String(selectedArticle||""),
+    next_due:new Date(now+(reviewMode?10*60*1000:0)).toISOString(),status:"pending"
+  };
+  saveArticleReviewQueue(queue);renderArticleReviewOverview();
+}
+function recordArticleReviewSuccess(item) {
+  const queue=loadArticleReviewQueue(),old=queue[item.id];
+  if(!old||old.status==="mastered")return;
+  const now=Date.now(),correct=(Number(old.correct_reviews)||0)+1,mastered=correct>=3;
+  const days=correct===1?1:3;
+  queue[item.id]={...old,correct_reviews:correct,last_correct_at:new Date(now).toISOString(),
+    next_due:mastered?null:new Date(now+days*86400000).toISOString(),status:mastered?"mastered":"pending"};
+  saveArticleReviewQueue(queue);renderArticleReviewOverview();
+}
+function startArticleReviewSession() {
+  const due=articleReviewPendingEntries().filter(entry=>{
+    const time=new Date(entry.next_due||0).getTime();return !Number.isFinite(time)||time<=Date.now();
+  });
+  const current=new Map(articleQuestions.map(item=>[item.id,item]));
+  const ready=due.map(entry=>current.get(entry.item.id)).filter(Boolean);
+  if(!ready.length) {
+    renderArticleReviewOverview();
+    $("#article-review-note").textContent=due.length
+      ?"As questões estão guardadas, mas suspensas porque não passaram pela conferência da captura atual."
+      :"Ainda não há erros vencidos para revisar.";
+    return;
+  }
+  showView("article");startArticleGame(ready,{reviewMode:true});
+}
+function startArticleGame(onlyItems = null, options = {}) {
   const pool = onlyItems || selectedArticlePool();
   if (!pool.length) {
     $("#article-count-note").textContent = "Não há questões disponíveis para essa seleção.";
@@ -2414,7 +2538,7 @@ function startArticleGame(onlyItems = null) {
   }
   const requested = $("#article-length").value === "todas" ? pool.length : Number($("#article-length").value);
   const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
-  articleGameState = { questions: items, index: 0, selected: null, answers: [] };
+  articleGameState = { questions: items, index: 0, selected: null, answers: [], reviewMode: Boolean(options.reviewMode), reviewFailed: false };
   $("#article-welcome").classList.add("hidden");
   $("#article-summary").classList.add("hidden");
   $("#article-card").classList.remove("hidden");
@@ -2424,6 +2548,8 @@ function showArticleQuestion() {
   const item = articleGameState.questions[articleGameState.index];
   if (!item) return;
   articleGameState.selected = null;
+  articleGameState.reviewFailed = false;
+  $("#article-literal-details").open = false;
   $("#article-category-label").textContent = item.category;
   $("#article-progress").textContent = "Questão " + (articleGameState.index + 1) + " de " + articleGameState.questions.length;
   $("#article-law").textContent = item.law_title;
@@ -2458,6 +2584,12 @@ function submitArticleAnswer() {
   const item = articleGameState.questions[articleGameState.index];
   const correct = articleGameState.selected === item.answer_article_key;
   articleGameState.answers.push({ item, chosen: articleGameState.selected, correct });
+  if (!correct) {
+    recordArticleReviewMiss(item, articleGameState.selected, articleGameState.reviewMode);
+    articleGameState.reviewFailed = true;
+  } else if (articleGameState.reviewMode && !articleGameState.reviewFailed) {
+    recordArticleReviewSuccess(item);
+  }
   const answerOption = item.options.find(option => option.article_key === item.answer_article_key);
   const selectedOption = item.options.find(option => option.article_key === articleGameState.selected);
   $("#article-result").textContent = correct ? "Você acertou! ✓" : "Não foi dessa vez. ✕";
@@ -2466,6 +2598,7 @@ function submitArticleAnswer() {
     (correct ? "." : " · Sua escolha: " + (selectedOption ? selectedOption.label : item.answer_article_key) + ".");
   $("#article-explanation").textContent = item.explanation;
   $("#article-literal").textContent = item.literal_text;
+  $("#article-literal-details").open = true;
   $("#article-source").href = item.source_url;
   $("#article-feedback").classList.remove("hidden");
   $("#submit-article").disabled = true;
@@ -2520,6 +2653,7 @@ function showArticleSummary() {
     list.append(heading, rows);
   }
   $("#article-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+  renderArticleReviewOverview();
 }
 
 // -------------------- Modo de treino Certo/Errado --------------------
@@ -3698,6 +3832,10 @@ $("#error-retry-misses").addEventListener("click", () => {
   startFindErrorGame(repeated);
 });
 $("#start-article").addEventListener("click", () => startArticleGame());
+$("#article-category").addEventListener("change", updateArticleGameFilters);
+$("#article-law-filter").addEventListener("change", updateArticleGameFilters);
+$("#article-study-filter").addEventListener("change", updateArticleGameFilters);
+$("#article-review-start").addEventListener("click", startArticleReviewSession);
 $("#submit-article").addEventListener("click", submitArticleAnswer);
 $("#next-article").addEventListener("click", nextArticleQuestion);
 $("#restart-article").addEventListener("click", () => startArticleGame());
