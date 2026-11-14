@@ -23,6 +23,7 @@
 
   <nav class="main-nav" aria-label="Navegação principal">
     <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
+    <button id="tab-law" class="nav-tab" type="button">Lei Seca</button>
     <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
     <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
     <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
@@ -59,6 +60,119 @@
     <section id="change-list" class="change-list" aria-live="polite"><div class="empty-state"><h3>Carregando informações</h3><p>Consultando o arquivo de monitoramento.</p></div></section>
     <section class="sources-section"><div class="section-heading"><div><h2>Normas acompanhadas</h2><p>Fontes públicas oficiais cadastradas no projeto.</p></div></div><div id="law-list" class="law-grid"></div></section>
     <footer class="footer-note"><strong>Confirme sempre na fonte oficial.</strong><span>O painel compara capturas de texto. Ele não determina sozinho a data de publicação, a vigência ou o alcance jurídico da mudança.</span></footer>
+  </main>
+
+  <main id="law-view" class="page-shell hidden">
+    <section class="intro law-library-intro">
+      <div>
+        <p class="eyebrow">BIBLIOTECA DE LEGISLAÇÃO</p>
+        <h1>Lei Seca</h1>
+        <p class="subtitle">Consulte as normas acompanhadas, navegue pelos artigos e organize sua leitura.</p>
+      </div>
+      <div class="law-library-summary">
+        <strong id="law-library-summary-count">Carregando biblioteca...</strong>
+        <span id="law-library-summary-note">Textos das capturas oficiais salvas no projeto.</span>
+      </div>
+    </section>
+
+    <section class="law-library-layout">
+      <aside class="law-library-sidebar" aria-label="Biblioteca de normas">
+        <div class="law-library-panel">
+          <div class="section-heading">
+            <div><h2>Normas</h2><p id="law-library-count">Carregando catálogo...</p></div>
+          </div>
+          <label class="law-library-search">
+            <span class="sr-only">Buscar norma</span>
+            <input id="law-library-search" type="search" placeholder="Buscar lei, decreto ou assunto...">
+          </label>
+          <label class="law-library-category">
+            <span class="sr-only">Filtrar por matéria</span>
+            <select id="law-library-category"><option value="todas">Todas as matérias</option></select>
+          </label>
+          <div id="law-library-list" class="law-library-list" aria-live="polite">
+            <p class="law-library-loading">Carregando as normas...</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="law-reader-panel" aria-label="Leitor da legislação">
+        <div id="law-reader-empty" class="empty-state law-reader-empty">
+          <h3>Escolha uma norma para começar</h3>
+          <p>Selecione uma lei na biblioteca para abrir os artigos disponíveis e acompanhar sua leitura.</p>
+        </div>
+
+        <div id="law-reader" class="hidden">
+          <header class="law-reader-header">
+            <div>
+              <span id="law-reader-category" class="quiz-chip">Legislação</span>
+              <h2 id="law-reader-title"></h2>
+              <p id="law-reader-description"></p>
+            </div>
+            <a id="law-reader-source" class="law-source-link" target="_blank" rel="noopener noreferrer">Fonte oficial ↗</a>
+          </header>
+
+          <p id="law-reader-warning" class="law-reader-warning hidden"></p>
+
+          <div class="law-article-tools">
+            <label class="law-article-select">
+              <span>Artigo</span>
+              <select id="law-article-select" disabled><option value="">Selecione um artigo</option></select>
+            </label>
+            <label class="law-article-filter">
+              <span>Mostrar</span>
+              <select id="law-article-filter">
+                <option value="todos">Todos os artigos</option>
+                <option value="favoritos">Favoritos</option>
+                <option value="nao-estudados">Não estudados</option>
+              </select>
+            </label>
+            <div class="law-step-buttons">
+              <button id="law-previous-article" class="secondary-button" type="button" disabled>← Anterior</button>
+              <button id="law-next-article" class="secondary-button" type="button" disabled>Próximo →</button>
+            </div>
+          </div>
+
+          <div class="law-article-search-row">
+            <label class="law-article-search">
+              <span class="sr-only">Buscar palavra ou expressão nos artigos desta norma</span>
+              <input id="law-article-search" type="search" placeholder="Buscar palavra ou expressão nesta norma...">
+            </label>
+            <span id="law-article-count" class="law-article-count"></span>
+          </div>
+          <div id="law-search-results" class="law-search-results hidden" aria-live="polite"></div>
+
+          <article class="law-current-article">
+            <div class="law-current-top">
+              <div>
+                <span class="law-current-kicker">TEXTO DA LEGISLAÇÃO</span>
+                <h3 id="law-current-article-title">Selecione um artigo</h3>
+              </div>
+              <div class="law-current-actions">
+                <button id="law-favorite-article" class="secondary-button" type="button" disabled>☆ Favoritar artigo</button>
+                <button id="law-mark-studied" class="primary-button" type="button" disabled>Marcar como estudado</button>
+              </div>
+            </div>
+            <pre id="law-article-text" class="legal-article-text"></pre>
+
+            <details id="law-components-details" class="law-components-details" hidden>
+              <summary>Ver partes identificadas deste artigo</summary>
+              <p class="law-components-note">Você também pode guardar parágrafos, incisos e alíneas nos favoritos.</p>
+              <div id="law-components-list" class="law-components-list"></div>
+            </details>
+
+            <div class="law-reader-footer">
+              <p id="law-reader-capture-note"></p>
+              <button id="law-train-article" class="text-button" type="button">Treinar este artigo ↗</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer-note">
+      <strong>Leia a legislação antes de treinar.</strong>
+      <span>O leitor apresenta a captura mais recente salva pelo monitor. Algumas normas ainda usam a publicação original ou um índice de alterações; nesses casos, confira a fonte oficial e não presuma que o texto exibido seja uma consolidação completa. Seus favoritos e marcações ficam salvos neste navegador.</span>
+    </footer>
   </main>
 
   <main id="quiz-view" class="page-shell hidden">
