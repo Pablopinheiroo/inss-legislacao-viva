@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-13">
-  <script defer src="app.js?v=20261114-17"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-14">
+  <script defer src="app.js?v=20261114-18"></script>
 </head>
 <body>
   <header class="topbar">
@@ -538,6 +538,7 @@
       </div>
       <div class="quiz-config multi-ce-config">
         <label class="select-wrap"><span>Matéria</span><select id="multi-ce-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Norma específica</span><select id="multi-ce-law-filter"><option value="todas">Todas as normas</option></select></label>
         <label class="select-wrap"><span>Artigos por treino</span><select id="multi-ce-length"><option value="3">3 artigos</option><option value="5" selected>5 artigos</option><option value="todas">Todos disponíveis</option></select></label>
         <button id="start-multi-ce" class="primary-button" type="button" disabled>Começar treino</button>
       </div>
@@ -556,7 +557,12 @@
       </div>
       <button id="multi-ce-article-toggle" class="multi-ce-article-toggle" type="button" aria-expanded="false" aria-controls="multi-ce-article-panel">Ler artigo antes de responder</button>
       <section id="multi-ce-article-panel" class="multi-ce-article-panel" hidden>
+        <div class="multi-ce-article-panel-top">
+          <div><small>REDAÇÃO LITERAL DO DISPOSITIVO</small><strong id="multi-ce-article-capture">Texto da captura salva no projeto.</strong></div>
+          <a id="multi-ce-article-source" target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a>
+        </div>
         <pre id="multi-ce-article-text"></pre>
+        <p class="multi-ce-article-help">O trecho relacionado à afirmação fica marcado em amarelo. Compare a frase com a redação completa e observe o contexto dos incisos e parágrafos.</p>
       </section>
       <p id="multi-ce-prompt" class="quiz-statement"></p>
       <div class="answer-buttons">
@@ -602,7 +608,7 @@
       <div>
         <p class="eyebrow">MODO DE JOGO · ALTERAÇÕES REAIS</p>
         <h1>Antes e depois</h1>
-        <p class="subtitle">Compare duas versões e identifique qual delas está na captura mais recente da fonte oficial.</p>
+        <p class="subtitle">Compare as versões, veja o que foi acrescentado, retirado ou modificado e responda a uma questão sobre a mudança.</p>
       </div>
       <div class="quiz-config before-after-config">
         <label class="select-wrap"><span>Matéria</span><select id="before-after-category"><option value="todas">Todas as matérias</option></select></label>
@@ -613,6 +619,22 @@
 
     <p id="before-after-count-note" class="manual-check-note">Carregando o histórico de alterações reais...</p>
 
+    <section id="before-after-review-center" class="ce-review-center before-after-review-center" aria-label="Central de revisão de artigos alterados">
+      <div class="ce-review-copy">
+        <span class="eyebrow">CENTRAL DE REVISÃO · ANTES E DEPOIS</span>
+        <h2>Revise automaticamente os artigos alterados</h2>
+        <p id="before-after-review-note">Quando o monitor detectar uma alteração confirmada em artigo, ela será colocada nesta fila.</p>
+      </div>
+      <div class="ce-review-actions">
+        <div class="ce-review-metrics">
+          <div><strong id="before-after-review-due">0</strong><span>prontas agora</span></div>
+          <div><strong id="before-after-review-pending">0</strong><span>em acompanhamento</span></div>
+          <div><strong id="before-after-review-mastered">0</strong><span>já dominadas</span></div>
+        </div>
+        <button id="before-after-review-start" class="primary-button" type="button" disabled>Revisar artigos alterados</button>
+      </div>
+    </section>
+
     <section id="before-after-card" class="quiz-card hidden" aria-live="polite">
       <div class="quiz-card-top">
         <span id="before-after-category-label" class="quiz-chip"></span>
@@ -622,6 +644,7 @@
         <strong id="before-after-law"></strong>
         <span id="before-after-article"></span>
       </div>
+      <p id="before-after-study-status" class="before-after-study-status"></p>
       <p id="before-after-prompt" class="before-after-prompt">Qual versão corresponde à captura mais recente da fonte oficial?</p>
       <div id="before-after-options" class="before-after-options" role="group" aria-label="Escolha entre duas versões do dispositivo"></div>
       <button id="before-after-submit" class="primary-button submit-answer" type="button" disabled>Confirmar versão</button>
@@ -629,7 +652,18 @@
       <section id="before-after-feedback" class="answer-feedback hidden">
         <div id="before-after-result" class="feedback-result"></div>
         <p id="before-after-explanation" class="feedback-explanation"></p>
+        <div class="before-after-diff-legend" aria-label="Legenda das alterações">
+          <span><mark class="diff-added"></mark> Acrescentado</span>
+          <span><mark class="diff-removed"></mark> Retirado</span>
+          <span><mark class="diff-modified"></mark> Modificado</span>
+        </div>
         <div id="before-after-comparison" class="diff-grid before-after-comparison"></div>
+        <section id="before-after-change-question" class="before-after-change-question" hidden>
+          <strong>SEGUNDA ETAPA · ENTENDA A ALTERAÇÃO</strong>
+          <p id="before-after-change-prompt">O que aconteceu com a redação deste artigo?</p>
+          <div id="before-after-change-options" class="before-after-change-options"></div>
+          <p id="before-after-change-feedback" class="before-after-change-feedback hidden" aria-live="polite"></p>
+        </section>
         <div class="feedback-bottom">
           <a id="before-after-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a>
           <button id="before-after-next" class="primary-button" type="button">Próxima alteração →</button>
@@ -639,7 +673,7 @@
 
     <section id="before-after-welcome" class="empty-state quiz-welcome">
       <h3>Aprenda o que realmente mudou</h3>
-      <p>O jogo usa somente diferenças registradas pelo monitoramento. As versões aparecem embaralhadas; depois da resposta, você confere o texto anterior, o atual e a fonte oficial.</p>
+      <p>O jogo usa somente comparações confirmadas pelo monitoramento. Depois de identificar a versão atual, analise o que mudou e confira os trechos destacados na redação anterior e na atual.</p>
     </section>
 
     <section id="before-after-summary" class="quiz-summary hidden">
