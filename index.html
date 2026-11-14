@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-12">
-  <script defer src="app.js?v=20261114-16"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-13">
+  <script defer src="app.js?v=20261114-17"></script>
 </head>
 <body>
   <header class="topbar">
@@ -464,12 +464,30 @@
       </div>
       <div class="quiz-config article-config">
         <label class="select-wrap"><span>Matéria</span><select id="article-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Norma específica</span><select id="article-law-filter"><option value="todas">Todas as normas</option></select></label>
+        <label class="select-wrap"><span>Situação dos artigos</span><select id="article-study-filter"><option value="todos">Todos os artigos</option><option value="estudados">Somente estudados</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="article-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-article" class="primary-button" type="button" disabled>Começar jogo</button>
       </div>
     </section>
 
     <p id="article-count-note" class="manual-check-note">Carregando questões e conferindo os artigos nas capturas da legislação...</p>
+
+    <section id="article-review-center" class="ce-review-center article-review-center" aria-label="Central de revisão dos erros do modo Descubra o artigo">
+      <div class="ce-review-copy">
+        <span class="eyebrow">CENTRAL DE REVISÃO · DESCUBRA O ARTIGO</span>
+        <h2>Revise os artigos que você confundiu</h2>
+        <p id="article-review-note">As questões respondidas incorretamente serão guardadas aqui para revisão espaçada.</p>
+      </div>
+      <div class="ce-review-actions">
+        <div class="ce-review-metrics">
+          <div><strong id="article-review-due">0</strong><span>prontos agora</span></div>
+          <div><strong id="article-review-pending">0</strong><span>em acompanhamento</span></div>
+          <div><strong id="article-review-mastered">0</strong><span>já dominados</span></div>
+        </div>
+        <button id="article-review-start" class="primary-button" type="button" disabled>Revisar artigos agora</button>
+      </div>
+    </section>
 
     <section id="article-card" class="quiz-card hidden" aria-live="polite">
       <div class="quiz-card-top"><span id="article-category-label" class="quiz-chip"></span><span id="article-progress" class="quiz-progress"></span></div>
@@ -483,8 +501,8 @@
         <div id="article-result" class="feedback-result"></div>
         <p id="article-answer-line" class="feedback-explanation"></p>
         <p id="article-explanation" class="feedback-explanation"></p>
-        <details class="law-excerpt">
-          <summary>Ver texto literal do artigo correto</summary>
+        <details id="article-literal-details" class="law-excerpt">
+          <summary>Texto literal do artigo correto</summary>
           <pre id="article-literal"></pre>
         </details>
         <div class="feedback-bottom"><a id="article-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><button id="next-article" class="primary-button" type="button">Próxima questão →</button></div>
@@ -493,7 +511,7 @@
 
     <section id="article-welcome" class="empty-state quiz-welcome">
       <h3>Você lembra onde está cada regra?</h3>
-      <p>O jogo apresenta uma descrição de um assunto da lei. Seu desafio é identificar o artigo correspondente. Depois, confira a explicação e leia o dispositivo legal completo.</p>
+      <p>O jogo apresenta uma descrição de um assunto da lei. Seu desafio é identificar o artigo correspondente. Depois da resposta, o texto literal do dispositivo correto será aberto automaticamente para conferência.</p>
     </section>
 
     <section id="article-summary" class="quiz-summary hidden">
