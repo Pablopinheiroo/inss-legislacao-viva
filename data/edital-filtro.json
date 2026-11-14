@@ -175,6 +175,18 @@
       "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
     }
   ],
-  "article_level_status": "Ainda não concluído. A prioridade por norma foi classificada com base no edital; a seleção artigo por artigo exige cruzamento do texto integral de cada captura com os tópicos do programa. Não marcar automaticamente todos os artigos como incluídos.",
-  "generated_at": "2026-11-14"
+  "article_level_status": "Em execução: filtro de artigos já aplicado ao recorte constitucional inicial; as demais normas permanecem acessíveis até validação artigo por artigo, evitando ocultar matéria que o edital cobra.",
+  "generated_at": "2026-11-14",
+  "source_policy": {
+    "primary": "Usar primeiro a versão compilada/consolidada publicada diretamente no Planalto para leis, decretos, emendas e leis complementares.",
+    "fallback": "Quando o Planalto não disponibilizar versão consolidada ou quando a norma for infralegal do INSS, usar a página oficial do órgão competente. Para a IN 128/2022, usar o Portal IN oficial do INSS, não sites privados.",
+    "exclusion": "Não disponibilizar para estudo redação expressamente revogada, texto riscado, dispositivo substituído ou versão histórica como se estivesse vigente. Em revogação parcial, preservar somente a redação vigente e marcar os trechos revogados.",
+    "verification": "A URL oficial preferida foi atualizada no catálogo. As capturas antigas não são consideradas automaticamente substituídas: cada snapshot precisa ser refeito e validado contra a fonte oficial antes de liberar seu texto como vigente."
+  },
+  "in128_status": {
+    "problem": "A captura anterior era somente o índice de alterações do gov.br (article_count 0), portanto não era o texto da IN.",
+    "verified_source": "https://portalin.inss.gov.br/in/540",
+    "verification": "Página oficial do INSS informa atualização em 12/08/2026 pela IN 212/2026. O conteúdo apresenta alterações com marcação visual; a captura precisa remover redações riscadas e validar dispositivos revogados antes de entrar no banco.",
+    "status": "Fonte oficial localizada; captura integral consolidada ainda pendente de validação."
+  }
 }
