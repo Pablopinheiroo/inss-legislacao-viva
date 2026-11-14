@@ -193,6 +193,8 @@ Ainda não ativamos essa alternativa porque ela exige configuração e revisão 
 A navegação principal inclui a área **Lei Seca**, separada dos jogos. Ela carrega todas as normas cadastradas em data/laws.json — inclusive as que estiverem com o monitoramento desativado — e abre os arquivos de captura em data/snapshots/.
 
 Na biblioteca, as normas são agrupadas primeiro por matéria e depois por assunto. O catálogo atual possui 27 normas, distribuídas entre Direito Constitucional, Direito Administrativo, Ética no Serviço Público e Direito Previdenciário. É possível buscar por nome, tipo, matéria ou assunto e filtrar por matéria. Ao selecionar uma norma com captura por artigos, o leitor permite:
+
+Cada cartão da biblioteca também exibe o número e o nome da norma, a data e hora da última consulta bem-sucedida, um aviso quando o monitor detectou alterações nos últimos 30 dias e um link direto para a fonte oficial utilizada na consulta. Quando uma fonte alternativa é usada, o link aponta para ela. Uma consulta que falhou não é apresentada como atualização bem-sucedida.
 - escolher um artigo e avançar ou voltar entre os dispositivos;
 - pesquisar palavras e expressões dentro do texto dos artigos daquela norma;
 - marcar artigos como estudados;
