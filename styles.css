@@ -163,15 +163,15 @@
   overflow-wrap:anywhere;
 }
 .error-segment{
-  display:inline;border:0;border-radius:5px;background:#edf2ff;color:#244b9f;
-  padding:2px 3px;margin:0 1px;font:inherit;line-height:inherit;cursor:pointer;
+  display:inline;border:0;border-radius:3px;background:transparent;color:inherit;
+  padding:0;margin:0;font:inherit;line-height:inherit;cursor:pointer;
   box-decoration-break:clone;-webkit-box-decoration-break:clone;
 }
-.error-segment:hover:not(:disabled){background:#dfe8ff}
+.error-segment:hover:not(:disabled){background:#eef3ff}
 .error-segment:focus-visible{outline:2px solid #2557d6;outline-offset:2px}
 .error-segment.is-tried{background:#eef1f5;color:#909bad;text-decoration:line-through;cursor:default}
-.error-segment.is-wrong{background:#ffe6e3;color:#a52d2d;text-decoration:underline;text-decoration-thickness:2px}
 .error-segment:disabled{opacity:1}
+.error-wrong-highlight{background:#ffe2df;color:#a52d2d;border-radius:3px;padding:0 2px;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#cf5b52}
 .error-attempt-feedback{margin:13px 0 0;color:#78869a;font-size:12px;line-height:1.6}
 .error-solution .law-excerpt{margin-top:12px}
 @media(max-width:760px){
@@ -187,9 +187,11 @@
 
 
 /* Modo Descubra o artigo */
-.article-config{max-width:430px}
-.article-config .select-wrap select{min-width:125px}
+.article-config{max-width:960px;flex-wrap:wrap;align-items:flex-end;gap:10px}
+.article-config .select-wrap{min-width:155px;flex:1}
+.article-config .select-wrap select{min-width:0;width:100%}
 .article-config .primary-button{min-width:145px}
+.article-review-center{margin-top:18px}
 .article-question{
   margin:20px 0 14px;color:#1c2a44;font-size:clamp(16px,2vw,20px);
   font-weight:600;line-height:1.7;letter-spacing:-.01em;
