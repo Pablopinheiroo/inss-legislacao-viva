@@ -2348,7 +2348,7 @@ function chooseFindErrorSegment(index,button){
   const item=findErrorState.questions[findErrorState.index];findErrorState.tries++;
   const selectedSegment=String(item.segments[index]||"").trim();
   const foundCorrect=index===item.wrong_segment_index;
-  recordActivityAnswer("error",item,(item.segments||[]).join(""),selectedSegment,foundCorrect,item.segments?.[item.wrong_segment_index]||item.correct_phrase,foundCorrect?"correct":"incorrect",{attempt_number:findErrorState.tries});
+  recordActivityAnswer("error",{...item,topic:findErrorTypeLabel(item.question_type)},(item.segments||[]).join(""),selectedSegment,foundCorrect,item.segments?.[item.wrong_segment_index]||item.correct_phrase,foundCorrect?"correct":"incorrect",{attempt_number:findErrorState.tries});
   if(index!==item.wrong_segment_index){
     button.disabled=true;button.classList.add("is-tried");
     if(!findErrorState.reviewFailed){recordFindErrorReviewMiss(item,index,findErrorState.reviewMode);findErrorState.reviewFailed=true;}
@@ -2638,7 +2638,7 @@ function submitArticleAnswer() {
   const correct = articleGameState.selected === item.answer_article_key;
   const chosenOptionForHistory=item.options.find(option=>option.article_key===articleGameState.selected);
   const answerOptionForHistory=item.options.find(option=>option.article_key===item.answer_article_key);
-  recordActivityAnswer("article",item,item.question,chosenOptionForHistory?.label||articleGameState.selected,correct,answerOptionForHistory?.label||item.answer_article_key,correct?"correct":"incorrect");
+  recordActivityAnswer("article",{...item,topic:item.topic||"Identificação de artigo"},item.question,chosenOptionForHistory?.label||articleGameState.selected,correct,answerOptionForHistory?.label||item.answer_article_key,correct?"correct":"incorrect");
   articleGameState.answers.push({ item, chosen: articleGameState.selected, correct });
   if (!correct) {
     recordArticleReviewMiss(item, articleGameState.selected, articleGameState.reviewMode);
@@ -3606,7 +3606,7 @@ function confirmBeforeAfterAnswer() {
   const question=beforeAfterState.questions[beforeAfterState.index],change=question.change;
   const correct=beforeAfterState.selected===question.correctIndex;
   const chosenVersion=question.options[beforeAfterState.selected];
-  recordActivityAnswer("beforeAfter",change,"Qual versão corresponde à captura mais recente?",(beforeAfterState.selected===0?"Versão A: ":"Versão B: ")+(chosenVersion?.text||""),correct,"Versão atual",correct?"correct":"incorrect",{stage:"identificar versão"});
+  recordActivityAnswer("beforeAfter",{...change,category:beforeAfterCategoryForChange(change),topic:"Alterações legislativas"},"Qual versão corresponde à captura mais recente?",(beforeAfterState.selected===0?"Versão A: ":"Versão B: ")+(chosenVersion?.text||""),correct,"Versão atual",correct?"correct":"incorrect",{stage:"identificar versão"});
   beforeAfterState.answered=true;
   [...$("#before-after-options").children].forEach(button=>button.disabled=true);
   $("#before-after-submit").disabled=true;
@@ -3646,7 +3646,7 @@ function chooseBeforeAfterChangeAnswer(index) {
   if(!selected)return;
   const correct=selected.key===question.correctKey;
   const change=beforeAfterState.questions[beforeAfterState.index].change;
-  recordActivityAnswer("beforeAfter",change,"Qual tipo de alteração ocorreu?",selected.label,correct,question.options.find(option=>option.key===question.correctKey)?.label,correct?"correct":"incorrect",{stage:"classificar alteração"});
+  recordActivityAnswer("beforeAfter",{...change,category:beforeAfterCategoryForChange(change),topic:"Alterações legislativas"},"Qual tipo de alteração ocorreu?",selected.label,correct,question.options.find(option=>option.key===question.correctKey)?.label,correct?"correct":"incorrect",{stage:"classificar alteração"});
   beforeAfterState.changeSelected=index;beforeAfterState.changeAnswered=true;
   [...$("#before-after-change-options").children].forEach((button,i)=>{
     button.disabled=true;button.classList.toggle("is-correct",question.options[i].key===question.correctKey);
@@ -5091,7 +5091,7 @@ function initializeActivityHistory(){
   syncLegacyLegalStudyEvents();
 }
 $("#tab-history").addEventListener("click",async()=>{
-  renderActivityHistory();showView("history");
+  showView("history");renderActivityHistory();
   try{await ensureMemorySourceSnapshots();syncLegacyLegalStudyEvents();renderActivityHistory();}
   catch(error){$("#history-unstudied-note").textContent="Não foi possível carregar todas as capturas. Os demais registros do histórico continuam disponíveis.";}
 });
