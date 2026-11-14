@@ -3203,10 +3203,10 @@ async function loadMultiCEBank() {
       .sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"))
       .forEach(([id,title])=>lawSelect.append(new Option(title,id)));
     if([...lawSelect.options].some(option=>option.value===priorLaw))lawSelect.value=priorLaw;
-    const topicSelect=$("#multi-ce-topic"),priorTopic=topicSelect.value||"todas";
+    const topicSelect=$("#multi-ce-topic-filter"),priorTopic=topicSelect.value||"todas";
     const topics=[...new Set(multiCEGroups.map(group=>group.topic).filter(Boolean))]
       .sort((a,b)=>a.localeCompare(b,"pt-BR"));
-    setQuizSelectOptions("#multi-ce-topic",topics.map(value=>({value,label:value})),"Todos os assuntos",priorTopic);
+    setQuizSelectOptions("#multi-ce-topic-filter",topics.map(value=>({value,label:value})),"Todos os assuntos",priorTopic);
     const capture=newest?"Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
     $("#multi-ce-count-note").dataset.captureNote=capture;
     updateMultiCEFilters();
@@ -3224,7 +3224,7 @@ async function loadMultiCEBank() {
 function selectedMultiCEPool(){
   const category=$("#multi-ce-category").value;
   const lawId=$("#multi-ce-law-filter").value;
-  const topic=$("#multi-ce-topic").value||"todas",difficulty=$("#multi-ce-difficulty").value||"todas";
+  const topic=$("#multi-ce-topic-filter").value||"todas",difficulty=$("#multi-ce-difficulty").value||"todas";
   return multiCEGroups.filter(group=>
     (category==="todas"||group.category===category)&&
     (lawId==="todas"||group.law_id===lawId)&&
@@ -4866,7 +4866,7 @@ $("#article-retry-mistakes").addEventListener("click", () => {
 $("#start-multi-ce").addEventListener("click", () => startMultiCEGame());
 $("#multi-ce-category").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-law-filter").addEventListener("change", updateMultiCEFilters);
-$("#multi-ce-topic").addEventListener("change", updateMultiCEFilters);
+$("#multi-ce-topic-filter").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-difficulty").addEventListener("change", updateMultiCEFilters);
 $("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
 $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
