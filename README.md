@@ -186,3 +186,20 @@ O GitHub Pages não pode guardar um token privado no HTML ou no JavaScript. Isso
 Essa opção exige criar e configurar o GitHub App, definir a URL de retorno do site, pedir autorização ao usuário no GitHub e proteger cuidadosamente o token mantido no navegador. O fluxo público também precisa tratar PKCE corretamente; não devemos simplesmente colocar um token pessoal ou um segredo de acesso no JavaScript. Um OAuth App tradicional que pede o escopo repo não é a opção indicada, pois esse escopo é amplo. Referências oficiais: [fluxo Web e PKCE de um GitHub App](https://docs.github.com/pt/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), [permissão Actions exigida para disparar workflows](https://docs.github.com/en/rest/actions/workflows) e [boas práticas de segurança para apps públicos](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/best-practices-for-creating-a-github-app).
 
 Ainda não ativamos essa alternativa porque ela exige configuração e revisão de segurança adicionais. Mantivemos a decisão atual: o botão abre o workflow no GitHub; basta clicar em **Run workflow**. O botão **Recarregar painel** continua apenas carregando os dados publicados.
+
+
+## Área Lei Seca — biblioteca e leitor
+
+A navegação principal inclui a área **Lei Seca**, separada dos jogos. Ela carrega o catálogo de normas habilitadas no arquivo data/laws.json e abre os arquivos de captura em data/snapshots/.
+
+Na biblioteca, é possível buscar normas por nome ou assunto e filtrar por matéria. Ao selecionar uma norma com captura por artigos, o leitor permite:
+- escolher um artigo e avançar ou voltar entre os dispositivos;
+- pesquisar palavras e expressões dentro do texto dos artigos daquela norma;
+- marcar artigos como estudados;
+- favoritar artigos e, quando a estrutura do snapshot permite, favoritar caput, parágrafos, incisos, alíneas e itens;
+- abrir o treino **Completar Lei Seca** diretamente a partir do artigo selecionado, quando houver texto suficiente para gerar lacunas;
+- consultar a fonte que foi usada na captura e a data em que o monitor a registrou.
+
+A Constituição aparece somente com o recorte de artigos selecionados no catálogo. A IN 128/2022, por enquanto, aparece como índice de atos modificadores: o arquivo acompanhado não oferece a redação consolidada separada em artigos e, por isso, o leitor avisa que é necessário abrir a fonte oficial. Normas cuja consulta mais recente falhou continuam usando a última captura válida e exibem um aviso.
+
+As marcações de estudo e os favoritos ficam no armazenamento local do navegador. Não exigem conta, mas também não são sincronizados entre dispositivos. O texto exibido é a captura do monitor, não uma garantia de consolidação jurídica integral; quando a auditoria indicar publicação original ou acompanhamento por índice, confira a fonte oficial antes de usar o conteúdo como redação vigente.
