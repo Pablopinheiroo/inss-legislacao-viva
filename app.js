@@ -4306,14 +4306,16 @@ function simuladoTimeLimit(type){
     type==="quick"?SIMULADO_QUICK_DURATION_SECONDS:0;
 }
 function startSimulado(options={}){
-  const type=options.complete?"complete":options.quick?"quick":"regular";
-  const total=simuladoQuestionCount(type),duration=simuladoTimeLimit(type);
-  if(questionBank.length<total){
+  const retryQuestions=Array.isArray(options.retryQuestions)?options.retryQuestions.filter(Boolean):null;
+  const type=retryQuestions?"retry":options.complete?"complete":options.quick?"quick":"regular";
+  const total=retryQuestions?retryQuestions.length:simuladoQuestionCount(type),duration=simuladoTimeLimit(type);
+  if(!total)return;
+  if(!retryQuestions&&questionBank.length<total){
     $("#simulado-bank-note").textContent="Ainda não há "+total+" questões diferentes disponíveis para este formato.";
     return;
   }
   if(simulatorTimerInterval){clearInterval(simulatorTimerInterval);simulatorTimerInterval=null;}
-  const items=shuffle([...questionBank]).slice(0,total);
+  const items=retryQuestions?shuffle([...retryQuestions]):shuffle([...questionBank]).slice(0,total);
   const now=Date.now();
   const penaltySelect=$("#simulado-complete-penalty");
   const penaltyPerWrong=type==="complete"&&penaltySelect
@@ -4324,7 +4326,7 @@ function startSimulado(options={}){
     deadline:duration?now+duration*1000:null,timeExpired:false,penaltyPerWrong
   };
   beginActivitySession("simulado",{...(items[0]||{}),simulado_total:total,
-    simulado_type:type==="complete"?"completo":type==="quick"?"rápido":"tradicional"});
+    simulado_type:type==="complete"?"completo":type==="quick"?"rápido":type==="retry"?"refazer-erros":"tradicional"});
   $("#simulado-welcome").classList.add("hidden");
   $("#simulado-result").classList.add("hidden");
   $("#simulado-card").classList.remove("hidden");
@@ -4375,7 +4377,9 @@ function renderSimuladoQuestion(){
   $("#simulado-progress-label").textContent="Questão "+(index+1)+" de "+total;
   const typeLabel=$("#simulado-type-label");
   if(typeLabel)typeLabel.textContent=simulatorState.type==="complete"?"SIMULADO COMPLETO · 60 QUESTÕES":
-    simulatorState.type==="quick"?"SIMULADO RÁPIDO · 20 QUESTÕES":"SIMULADO TRADICIONAL · 10 QUESTÕES";
+    simulatorState.type==="quick"?"SIMULADO RÁPIDO · 20 QUESTÕES":
+    simulatorState.type==="retry"?"REFORÇO · "+total+" QUESTÕES ERRADAS":
+    "SIMULADO TRADICIONAL · 10 QUESTÕES";
   $("#simulado-progress-fill").style.width=((index+1)/total*100)+"%";
   $("#simulado-progress-fill").parentElement.setAttribute("aria-valuemax",String(total));
   $("#simulado-progress-fill").parentElement.setAttribute("aria-valuenow",String(index+1));
@@ -4394,7 +4398,7 @@ function renderSimuladoQuestion(){
   $("#simulado-previous").disabled=index===0;
   $("#simulado-next").classList.toggle("hidden",index===total-1);
   $("#simulado-finish").textContent=simulatorState.type==="quick"||simulatorState.type==="complete"
-    ?"Finalizar antecipadamente":index===total-1?"Finalizar simulado":"Finalizar agora";
+    ?"Finalizar antecipadamente":index===total-1?(simulatorState.type==="retry"?"Finalizar reforço":"Finalizar simulado"):"Finalizar agora";
   $("#simulado-clear-answer").classList.toggle("hidden",response===null);
   if(simuladoTimeLimit(simulatorState.type))updateSimuladoTimer();
   renderSimuladoNavigator();
@@ -4443,6 +4447,85 @@ function createSimuladoResultCard(item,response,index){
   }
   return card;
 }
+
+function retryIncorrectSimuladoQuestions(){
+  const wrong=simulatorState.questions.filter((item,index)=>{
+    const response=simulatorState.responses[index];
+    return response!==null&&!response.correct;
+  });
+  if(wrong.length)startSimulado({retryQuestions:wrong});
+}
+function renderSimuladoDiagnostics(){
+  const subjectList=$("#simulado-hardest-subjects");
+  const articleList=$("#simulado-articles-to-review");
+  if(!subjectList||!articleList)return;
+  subjectList.replaceChildren();
+  articleList.replaceChildren();
+  const subjects=new Map(),articles=new Map();
+  simulatorState.questions.forEach((item,index)=>{
+    const response=simulatorState.responses[index];
+    const category=String(item.category||"Matéria não identificada");
+    if(!subjects.has(category))subjects.set(category,{total:0,correct:0,wrong:0,blank:0});
+    const subject=subjects.get(category);subject.total++;
+    if(response===null)subject.blank++;
+    else if(response.correct)subject.correct++;
+    else subject.wrong++;
+    if(response===null||!response.correct){
+      const article=String(item.article||item.article_key||"").trim();
+      if(article){
+        const law=String(item.law_title||item.law_short_title||"Norma não identificada");
+        const key=String(item.law_id||law)+"::"+article;
+        if(!articles.has(key))articles.set(key,{law,article,category,wrong:0,blank:0,source:item.source_url||""});
+        const entry=articles.get(key);
+        if(response===null)entry.blank++;else entry.wrong++;
+        if(!entry.source&&item.source_url)entry.source=item.source_url;
+      }
+    }
+  });
+  const hardest=[...subjects.entries()].map(([name,value])=>({
+    name,...value,needsReview:value.wrong+value.blank,
+    rate:value.total?(value.wrong+value.blank)/value.total:0
+  })).filter(item=>item.needsReview>0)
+    .sort((a,b)=>b.rate-a.rate||b.needsReview-a.needsReview||a.name.localeCompare(b.name,"pt-BR"));
+  if(!hardest.length){
+    const empty=document.createElement("p");empty.className="simulado-report-empty";
+    empty.textContent="Nenhuma matéria apresentou erro ou questão em branco neste simulado.";
+    subjectList.append(empty);
+  }else hardest.forEach(item=>{
+    const card=document.createElement("article");card.className="simulado-report-item";
+    const head=document.createElement("div");head.className="simulado-report-item-head";
+    const title=document.createElement("strong");title.textContent=item.name;
+    const rate=document.createElement("span");rate.textContent=Math.round(item.rate*100)+"% para revisar";
+    head.append(title,rate);
+    const detail=document.createElement("p");
+    detail.textContent=item.needsReview+" de "+item.total+" questão(ões) para revisar · "+item.wrong+" erro(s) · "+item.blank+" em branco · "+item.correct+" acerto(s).";
+    const track=document.createElement("div");track.className="simulado-report-track";
+    const fill=document.createElement("span");fill.style.width=(item.rate*100)+"%";track.append(fill);
+    card.append(head,detail,track);subjectList.append(card);
+  });
+  const articleEntries=[...articles.values()].sort((a,b)=>
+    (b.wrong+b.blank)-(a.wrong+a.blank)||a.law.localeCompare(b.law,"pt-BR")||a.article.localeCompare(b.article,"pt-BR"));
+  if(!articleEntries.length){
+    const empty=document.createElement("p");empty.className="simulado-report-empty";
+    empty.textContent="Nenhum artigo precisa de revisão com base nas respostas deste simulado.";
+    articleList.append(empty);
+  }else articleEntries.forEach(item=>{
+    const card=document.createElement("article");card.className="simulado-report-item simulado-report-article";
+    const head=document.createElement("div");head.className="simulado-report-item-head";
+    const title=document.createElement("strong");title.textContent=item.law+" · "+item.article;
+    const count=document.createElement("span");count.textContent=(item.wrong+item.blank)+" item(ns)";
+    head.append(title,count);
+    const detail=document.createElement("p");
+    detail.textContent=[item.category,item.wrong+" erro(s)",item.blank+" em branco"].join(" · ");
+    card.append(head,detail);
+    if(item.source){
+      const link=document.createElement("a");link.href=item.source;link.target="_blank";link.rel="noopener noreferrer";
+      link.textContent="Consultar fonte oficial ↗";card.append(link);
+    }
+    articleList.append(card);
+  });
+}
+
 function finishSimulado(options={}){
   if(simulatorState.finished||!simulatorState.questions.length)return;
   const total=simulatorState.questions.length;
@@ -4454,6 +4537,7 @@ function finishSimulado(options={}){
     let confirmation="";
     if(simulatorState.type==="quick")confirmation="Deseja finalizar o simulado rápido agora?";
     else if(simulatorState.type==="complete")confirmation="Deseja finalizar o simulado completo agora?";
+    else if(simulatorState.type==="retry")confirmation="Deseja finalizar a refação das questões erradas agora?";
     else if(blanks)confirmation="Deseja finalizar este simulado agora?";
     if(blanks)confirmation+=" "+blanks+" questão(ões) ficarão em branco.";
     if(confirmation&&!window.confirm(confirmation))return;
@@ -4478,13 +4562,15 @@ function finishSimulado(options={}){
   const penalty=simulatorState.type==="complete"?simulatorState.penaltyPerWrong:0;
   const netScore=correct-wrong*penalty;
   const timeLimit=simuladoTimeLimit(simulatorState.type);
-  const elapsedSeconds=Math.max(0,Math.min(timeLimit||Infinity,
-    Math.floor((Date.now()-simulatorState.startedAt)/1000)));
+  const rawElapsedSeconds=Math.max(0,Math.floor((Date.now()-simulatorState.startedAt)/1000));
+  const elapsedSeconds=timeLimit?Math.min(timeLimit,rawElapsedSeconds):rawElapsedSeconds;
   const scoreNote=["Aproveitamento: "+percentage+"%."];
   if(blanks)scoreNote.push(blanks+" questão(ões) ficaram em branco (0 ponto).");
   scoreNote.push("Pontuação: +1 por acerto, "+(penalty>0?"−"+formatSimuladoPoints(penalty)+" por erro":"sem desconto por erro")+", 0 por questão em branco.");
   scoreNote.push("Pontuação líquida: "+formatSimuladoPoints(netScore)+" ponto(s).");
-  if(timeLimit)scoreNote.push(timeExpired?"Tempo esgotado; o simulado foi finalizado automaticamente.":"Tempo utilizado: "+formatSimuladoClock(elapsedSeconds)+" de "+formatSimuladoClock(timeLimit)+".");
+  scoreNote.push("Tempo utilizado: "+formatSimuladoClock(elapsedSeconds)+(timeLimit?" de "+formatSimuladoClock(timeLimit):" (sem limite de tempo)")+".");
+  if(timeExpired)scoreNote.push("Tempo esgotado; o simulado foi finalizado automaticamente.");
+  if(simulatorState.type==="retry")scoreNote.push("Este resultado corresponde à refação das questões que você havia errado.");
   $("#simulado-score").textContent=correct+" de "+total+" acertos";
   $("#simulado-score-note").textContent=scoreNote.join(" ");
   $("#simulado-stat-correct").textContent=String(correct);
@@ -4493,8 +4579,17 @@ function finishSimulado(options={}){
   $("#simulado-stat-percent").textContent=percentage+"%";
   const netNode=$("#simulado-stat-net-points");
   if(netNode)netNode.textContent=formatSimuladoPoints(netScore)+" pts";
+  const timeNode=$("#simulado-stat-time");
+  if(timeNode)timeNode.textContent=formatSimuladoClock(elapsedSeconds);
   const bar=$("#simulado-result-fill");
   if(bar){bar.style.width=percentage+"%";bar.parentElement.setAttribute("aria-valuenow",String(percentage));}
+  renderSimuladoDiagnostics();
+  const retryButton=$("#simulado-retry-wrong");
+  const wrongCount=simulatorState.responses.filter(response=>response!==null&&!response.correct).length;
+  if(retryButton){
+    retryButton.classList.toggle("hidden",wrongCount===0);
+    retryButton.textContent=wrongCount?"Refazer questões erradas ("+wrongCount+")":"Refazer questões erradas";
+  }
   const list=$("#simulado-result-list");list.replaceChildren();
   simulatorState.questions.forEach((item,index)=>list.append(createSimuladoResultCard(item,simulatorState.responses[index],index)));
   $("#simulado-card").classList.add("hidden");
@@ -5926,7 +6021,11 @@ $("#simulado-clear-answer").addEventListener("click",clearSimuladoAnswer);
 $("#simulado-previous").addEventListener("click",()=>moveSimuladoQuestion(-1));
 $("#simulado-next").addEventListener("click",()=>moveSimuladoQuestion(1));
 $("#simulado-finish").addEventListener("click",finishSimulado);
-$("#simulado-restart").addEventListener("click",()=>startSimulado({quick:simulatorState.type==="quick",complete:simulatorState.type==="complete"}));
+$("#simulado-retry-wrong").addEventListener("click",retryIncorrectSimuladoQuestions);
+$("#simulado-restart").addEventListener("click",()=>{
+  if(simulatorState.type==="retry")startSimulado({retryQuestions:simulatorState.questions});
+  else startSimulado({quick:simulatorState.type==="quick",complete:simulatorState.type==="complete"});
+});
 
 initializeAchievements();
 
