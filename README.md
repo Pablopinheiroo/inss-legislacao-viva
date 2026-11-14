@@ -103,3 +103,10 @@ O monitor compara o conteúdo dos dispositivos salvos, e não a página inteira.
 A aba **Completar Lei Seca** carrega os artigos dos snapshots e oculta algumas palavras para treino. É possível escolher a norma, o artigo e o nível de dificuldade. O texto aparece em fonte serifada, maior e com espaçamento adequado para leitura.
 
 A atualização automática continua diária. A verificação manual abre o workflow do GitHub Actions; é necessário confirmar a execução no GitHub. O site estático não guarda token de acesso.
+
+
+## Modo de jogo Encontre o erro
+
+A aba **Encontre o erro** apresenta enunciados com uma expressão propositalmente alterada. O estudante toca no trecho que está incorreto e recebe a correção, a explicação, o texto literal do artigo e o link da fonte oficial. É possível filtrar por matéria e escolher sessões de 5, 10 ou todos os itens disponíveis.
+
+O banco inicial contém 13 itens. Antes de liberar uma questão, o site consulta o snapshot mais recente do artigo e verifica se a expressão correta continua presente no texto capturado. Se o artigo não estiver disponível ou a expressão correta não for encontrada, o item é suspenso automaticamente. Essa verificação reduz o risco de treinar com uma correção que deixou de corresponder ao texto salvo, mas não substitui a revisão jurídica do enunciado quando houver alteração legislativa.
