@@ -24,6 +24,13 @@ let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: n
 let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
+const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
+const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
+let legalLaws = [];
+let legalSelectedLaw = null;
+let legalSnapshot = null;
+let legalEntries = [];
+let legalSelectedArticle = "";
 let memoryCards = [];
 let memoryState = { cards: [], index: 0, ratings: [], revealed: false };
 const $ = (selector) => document.querySelector(selector);
@@ -221,12 +228,431 @@ async function loadDashboard() {
     updateBadge();
     renderChanges();
     renderLaws();
+    if (legalLaws.length) renderLegalLibrary();
   } catch (error) {
     $("#system-status").className = "status-pill error";
     $("#system-status span:last-child").textContent = "Dados indisponíveis";
     $("#change-list").textContent = "Não foi possível carregar os dados do monitoramento. Confira a publicação pelo GitHub Pages.";
     console.error(error);
   }
+}
+
+
+// -------------------- Biblioteca Lei Seca --------------------
+function readLegalStorage(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || "[]");
+    return new Set(Array.isArray(value) ? value.filter(item => typeof item === "string") : []);
+  } catch (_) {
+    return new Set();
+  }
+}
+function writeLegalStorage(key, values) {
+  localStorage.setItem(key, JSON.stringify([...values]));
+}
+function legalStudiedSet() { return readLegalStorage(LEGAL_STUDIED_KEY); }
+function legalFavoritesSet() { return readLegalStorage(LEGAL_FAVORITES_KEY); }
+function legalArticleKey(lawId, article) {
+  return lawId + "::" + article;
+}
+function legalComponentKey(lawId, article, path) {
+  return lawId + "::" + article + "::" + path;
+}
+function legalArticleNumber(value) {
+  const match = String(value).match(/(\d+)(?:-([A-Z]))?/);
+  return match ? [Number(match[1]), match[2] || ""] : [Number.MAX_SAFE_INTEGER, ""];
+}
+function compareLegalArticles(a, b) {
+  const left = legalArticleNumber(a);
+  const right = legalArticleNumber(b);
+  return left[0] - right[0] || left[1].localeCompare(right[1], "pt-BR");
+}
+function legalLawStatus(lawId) {
+  return dashboardData && Array.isArray(dashboardData.laws)
+    ? dashboardData.laws.find(item => item.id === lawId) || null
+    : null;
+}
+function legalLawSearchText(law) {
+  return normalizeAnswer([law.short_title, law.title, law.category, law.edital_item].join(" "));
+}
+async function loadLegalLibrary() {
+  const list = $("#law-library-list");
+  if (!list) return;
+  try {
+    const response = await fetch(LAWS_URL + "?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const catalog = await response.json();
+    legalLaws = (Array.isArray(catalog) ? catalog : []).filter(law => law.enabled !== false);
+    const categories = [...new Set(legalLaws.map(law => law.category).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "pt-BR"));
+    const categorySelect = $("#law-library-category");
+    categorySelect.replaceChildren();
+    const all = document.createElement("option");
+    all.value = "todas";
+    all.textContent = "Todas as matérias";
+    categorySelect.append(all);
+    categories.forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      categorySelect.append(option);
+    });
+    $("#law-library-search").value = "";
+    categorySelect.value = "todas";
+    renderLegalLibrary();
+    $("#law-library-summary-count").textContent = legalLaws.length + " normas no catálogo";
+    $("#law-library-summary-note").textContent = "Textos carregados das capturas do monitoramento.";
+    if (!legalLaws.length) throw new Error("O catálogo não contém normas habilitadas.");
+    const preferred = legalLaws.find(law => law.id === "lei-8213-1991") || legalLaws[0];
+    await loadLegalLaw(preferred.id);
+  } catch (error) {
+    list.replaceChildren();
+    const note = document.createElement("p");
+    note.className = "law-library-loading";
+    note.textContent = "Não foi possível carregar a biblioteca. Confira sua conexão e tente novamente.";
+    list.append(note);
+    $("#law-library-summary-count").textContent = "Biblioteca indisponível";
+    console.error("Falha ao carregar a biblioteca Lei Seca:", error);
+  }
+}
+function renderLegalLibrary() {
+  const list = $("#law-library-list");
+  if (!list) return;
+  const query = normalizeAnswer($("#law-library-search").value || "");
+  const category = $("#law-library-category").value || "todas";
+  const matches = legalLaws.filter(law =>
+    (category === "todas" || law.category === category) &&
+    (!query || legalLawSearchText(law).includes(query))
+  );
+  list.replaceChildren();
+  $("#law-library-count").textContent = matches.length + " de " + legalLaws.length + " normas";
+  if (!matches.length) {
+    const empty = document.createElement("p");
+    empty.className = "law-library-loading";
+    empty.textContent = "Nenhuma norma encontrada para essa busca.";
+    list.append(empty);
+    return;
+  }
+  matches.forEach(law => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "law-library-item";
+    button.classList.toggle("active", Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id));
+    button.setAttribute("aria-pressed", String(Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id)));
+    const name = document.createElement("strong");
+    name.textContent = law.short_title || law.title;
+    const detail = document.createElement("span");
+    detail.textContent = law.category || "Norma";
+    const status = legalLawStatus(law.id);
+    const meta = document.createElement("small");
+    meta.textContent = status && status.error
+      ? "última consulta com falha"
+      : status && status.parser_mode === "index"
+        ? "índice de alterações"
+        : status && Number.isFinite(status.article_count)
+          ? status.article_count + " artigos capturados"
+          : "abrir legislação";
+    button.append(name, detail, meta);
+    button.addEventListener("click", () => loadLegalLaw(law.id));
+    list.append(button);
+  });
+}
+async function loadLegalLaw(lawId) {
+  const law = legalLaws.find(item => item.id === lawId);
+  if (!law) return;
+  legalSelectedLaw = law;
+  legalSnapshot = null;
+  legalEntries = [];
+  legalSelectedArticle = "";
+  renderLegalLibrary();
+  $("#law-reader-empty").classList.remove("hidden");
+  $("#law-reader").classList.add("hidden");
+  $("#law-reader-empty").querySelector("h3").textContent = "Carregando " + (law.short_title || law.title) + "...";
+  $("#law-reader-empty").querySelector("p").textContent = "Abrindo a captura mais recente disponível no projeto.";
+  try {
+    const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const snapshot = await response.json();
+    legalSnapshot = snapshot;
+    const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
+    legalEntries = Object.entries(articles)
+      .filter(([_, text]) => typeof text === "string" && text.trim().length > 0)
+      .sort((a, b) => compareLegalArticles(a[0], b[0]));
+    $("#law-reader-category").textContent = law.category || "Legislação";
+    $("#law-reader-title").textContent = law.short_title || law.title;
+    $("#law-reader-description").textContent = [
+      law.title !== law.short_title ? law.title : "",
+      law.edital_item ? "Conteúdo do edital: " + law.edital_item : ""
+    ].filter(Boolean).join(" · ");
+    $("#law-reader-source").href = snapshot.source_url_used || law.url;
+    $("#law-reader-source").textContent = "Fonte consultada ↗";
+    $("#law-reader-warning").classList.add("hidden");
+    const status = legalLawStatus(law.id);
+    if (status && status.error) {
+      $("#law-reader-warning").textContent = "A última consulta desta norma apresentou falha. O leitor está mostrando a última captura válida, de " + formatDate(snapshot.captured_at) + ". A falha não apagou o texto anterior.";
+      $("#law-reader-warning").classList.remove("hidden");
+    }
+    const warningParts = [];
+    if (law.source_note) warningParts.push(law.source_note);
+    if (law.monitor_note) warningParts.push(law.monitor_note);
+    if (snapshot.snapshot_scope === "selected_articles") {
+      warningParts.push("Esta captura contém somente o recorte de artigos configurado para o estudo.");
+    }
+    if (warningParts.length) {
+      $("#law-reader-warning").textContent = warningParts.join(" ");
+      $("#law-reader-warning").classList.remove("hidden");
+    }
+    $("#law-reader").classList.remove("hidden");
+    $("#law-reader-empty").classList.add("hidden");
+    $("#law-article-search").value = "";
+    if (!legalEntries.length) {
+      $("#law-article-select").replaceChildren(new Option("Sem artigos separados", ""));
+      $("#law-article-select").disabled = true;
+      $("#law-article-filter").disabled = true;
+      $("#law-previous-article").disabled = true;
+      $("#law-next-article").disabled = true;
+      $("#law-current-article-title").textContent = "Texto por artigos indisponível";
+      $("#law-article-text").textContent = law.id === "in-128-2022"
+        ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
+        : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
+      $("#law-favorite-article").disabled = true;
+      $("#law-mark-studied").disabled = true;
+      $("#law-components-details").hidden = true;
+      $("#law-train-article").disabled = true;
+      $("#law-article-count").textContent = "Sem artigos separados";
+      $("#law-reader-capture-note").textContent = "Consulta registrada em " + formatDate(snapshot.captured_at) + ".";
+      updateLegalLibrarySummary();
+      return;
+    }
+    $("#law-article-select").disabled = false;
+    $("#law-article-filter").disabled = false;
+    renderLegalArticlePicker();
+    updateLegalLibrarySummary();
+  } catch (error) {
+    $("#law-reader").classList.add("hidden");
+    $("#law-reader-empty").classList.remove("hidden");
+    $("#law-reader-empty").querySelector("h3").textContent = "Não foi possível abrir esta captura";
+    $("#law-reader-empty").querySelector("p").textContent = "O arquivo desta norma não foi carregado. A biblioteca não substitui a captura anterior nem presume o conteúdo que está indisponível.";
+    console.error("Falha ao abrir snapshot da norma:", law.id, error);
+  }
+}
+function filteredLegalEntries() {
+  const mode = $("#law-article-filter").value || "todos";
+  const studied = legalStudiedSet();
+  const favorites = legalFavoritesSet();
+  return legalEntries.filter(([article]) => {
+    const key = legalArticleKey(legalSelectedLaw.id, article);
+    if (mode === "favoritos") return favorites.has(key);
+    if (mode === "nao-estudados") return !studied.has(key);
+    return true;
+  });
+}
+function renderLegalArticlePicker() {
+  if (!legalSelectedLaw) return;
+  const select = $("#law-article-select");
+  const entries = filteredLegalEntries();
+  const previousValue = legalSelectedArticle;
+  select.replaceChildren();
+  if (!entries.length) {
+    select.append(new Option("Nenhum artigo nesta lista", ""));
+    select.disabled = true;
+    $("#law-previous-article").disabled = true;
+    $("#law-next-article").disabled = true;
+    $("#law-current-article-title").textContent = "Nenhum artigo para mostrar";
+    $("#law-article-text").textContent = $("#law-article-filter").value === "favoritos"
+      ? "Você ainda não favoritou artigos desta norma."
+      : "Todos os artigos desta norma já estão marcados como estudados.";
+    $("#law-favorite-article").disabled = true;
+    $("#law-mark-studied").disabled = true;
+    $("#law-components-details").hidden = true;
+    $("#law-train-article").disabled = true;
+    $("#law-article-count").textContent = "0 artigos nesta lista";
+    return;
+  }
+  entries.forEach(([article]) => select.append(new Option(article, article)));
+  select.disabled = false;
+  const next = entries.some(([article]) => article === previousValue)
+    ? previousValue
+    : entries[0][0];
+  select.value = next;
+  legalSelectedArticle = next;
+  renderLegalArticle();
+  const index = entries.findIndex(([article]) => article === next);
+  $("#law-previous-article").disabled = index <= 0;
+  $("#law-next-article").disabled = index < 0 || index >= entries.length - 1;
+  updateLegalLibrarySummary();
+}
+function renderLegalArticle() {
+  if (!legalSelectedLaw || !legalSnapshot || !legalSelectedArticle) return;
+  const entry = legalEntries.find(([article]) => article === legalSelectedArticle);
+  if (!entry) return;
+  const [article, text] = entry;
+  const articleKey = legalArticleKey(legalSelectedLaw.id, article);
+  const studied = legalStudiedSet();
+  const favorites = legalFavoritesSet();
+  $("#law-current-article-title").textContent = article;
+  $("#law-article-text").textContent = text;
+  $("#law-favorite-article").disabled = false;
+  $("#law-favorite-article").textContent = favorites.has(articleKey) ? "★ Artigo favorito" : "☆ Favoritar artigo";
+  $("#law-mark-studied").disabled = false;
+  $("#law-mark-studied").textContent = studied.has(articleKey) ? "✓ Estudado · desfazer" : "Marcar como estudado";
+  $("#law-train-article").disabled = text.trim().length < 80;
+  const components = legalSnapshot.components && legalSnapshot.components[article]
+    ? Object.entries(legalSnapshot.components[article])
+    : [];
+  $("#law-components-details").hidden = components.length < 2;
+  renderLegalComponents(components, article);
+  const lawStatus = legalLawStatus(legalSelectedLaw.id);
+  const captureDate = formatDate(legalSnapshot.captured_at);
+  $("#law-reader-capture-note").textContent = "Captura consultada em " + captureDate
+    + (lawStatus && lawStatus.source_status === "fallback_used" ? " · fonte alternativa usada" : "")
+    + (lawStatus && lawStatus.source_status === "recovered" ? " · consulta recuperada após nova tentativa" : "");
+  $("#law-article-count").textContent = legalEntries.length + " artigos na norma";
+  const visible = filteredLegalEntries();
+  const index = visible.findIndex(([name]) => name === article);
+  $("#law-previous-article").disabled = index <= 0;
+  $("#law-next-article").disabled = index < 0 || index >= visible.length - 1;
+  updateLegalLibrarySummary();
+}
+function renderLegalComponents(components, article) {
+  const container = $("#law-components-list");
+  container.replaceChildren();
+  if (!components.length) return;
+  const favorites = legalFavoritesSet();
+  components
+    .sort((a, b) => {
+      const order = { caput: 0, paragrafo: 1, inciso: 2, alinea: 3, item: 4 };
+      return (order[a[1].device_type] ?? 9) - (order[b[1].device_type] ?? 9)
+        || a[0].localeCompare(b[0], "pt-BR");
+    })
+    .forEach(([path, component]) => {
+      const row = document.createElement("article");
+      row.className = "law-component-row";
+      const heading = document.createElement("div");
+      heading.className = "law-component-heading";
+      const title = document.createElement("strong");
+      title.textContent = component.device_label || component.device_type || "Parte do artigo";
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "law-component-favorite";
+      const key = legalComponentKey(legalSelectedLaw.id, article, path);
+      button.textContent = favorites.has(key) ? "★ Salvo" : "☆ Favoritar";
+      button.setAttribute("aria-pressed", String(favorites.has(key)));
+      button.addEventListener("click", () => {
+        const current = legalFavoritesSet();
+        if (current.has(key)) current.delete(key);
+        else current.add(key);
+        writeLegalStorage(LEGAL_FAVORITES_KEY, current);
+        renderLegalArticle();
+      });
+      heading.append(title, button);
+      const body = document.createElement("pre");
+      body.textContent = component.text || "";
+      row.append(heading, body);
+      container.append(row);
+    });
+}
+function updateLegalLibrarySummary() {
+  const studied = legalStudiedSet();
+  const favorites = legalFavoritesSet();
+  const articleFavorites = legalSelectedLaw
+    ? [...favorites].filter(key => key.startsWith(legalSelectedLaw.id + "::") && key.split("::").length === 2).length
+    : 0;
+  if (!legalSelectedLaw) return;
+  const studiedCount = legalEntries.filter(([article]) => studied.has(legalArticleKey(legalSelectedLaw.id, article))).length;
+  $("#law-library-summary-count").textContent = legalEntries.length + " artigos · " + studiedCount + " estudados";
+  $("#law-library-summary-note").textContent = articleFavorites + " favoritos nesta norma · marcações salvas neste navegador";
+}
+function searchLegalArticles() {
+  const query = normalizeAnswer($("#law-article-search").value || "");
+  const resultsBox = $("#law-search-results");
+  resultsBox.replaceChildren();
+  if (!legalEntries.length || query.length < 2) {
+    resultsBox.classList.add("hidden");
+    return;
+  }
+  const results = legalEntries
+    .filter(([_, text]) => normalizeAnswer(text).includes(query))
+    .slice(0, 35);
+  if (!results.length) {
+    const empty = document.createElement("p");
+    empty.className = "law-search-empty";
+    empty.textContent = "Nenhum trecho encontrado nesta norma.";
+    resultsBox.append(empty);
+  } else {
+    const header = document.createElement("p");
+    header.className = "law-search-heading";
+    header.textContent = results.length + (results.length === 35 ? "+ resultados" : " resultado(s)");
+    resultsBox.append(header);
+    results.forEach(([article, text]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "law-search-result";
+      const label = document.createElement("strong");
+      label.textContent = article;
+      const snippet = document.createElement("span");
+      const position = text.toLocaleLowerCase("pt-BR").indexOf($("#law-article-search").value.trim().toLocaleLowerCase("pt-BR"));
+      const start = position >= 0 ? Math.max(0, position - 65) : 0;
+      snippet.textContent = text.slice(start, start + 230).replace(/\s+/g, " ") + (text.length > start + 230 ? "…" : "");
+      button.append(label, snippet);
+      button.addEventListener("click", () => {
+        $("#law-article-filter").value = "todos";
+        renderLegalArticlePicker();
+        $("#law-article-select").value = article;
+        legalSelectedArticle = article;
+        renderLegalArticle();
+        resultsBox.classList.add("hidden");
+        $("#law-article-search").value = "";
+      });
+      resultsBox.append(button);
+    });
+  }
+  resultsBox.classList.remove("hidden");
+}
+function toggleLegalArticleFavorite() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  const key = legalArticleKey(legalSelectedLaw.id, legalSelectedArticle);
+  const favorites = legalFavoritesSet();
+  if (favorites.has(key)) favorites.delete(key);
+  else favorites.add(key);
+  writeLegalStorage(LEGAL_FAVORITES_KEY, favorites);
+  renderLegalArticle();
+}
+function toggleLegalArticleStudied() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  const key = legalArticleKey(legalSelectedLaw.id, legalSelectedArticle);
+  const studied = legalStudiedSet();
+  if (studied.has(key)) studied.delete(key);
+  else studied.add(key);
+  writeLegalStorage(LEGAL_STUDIED_KEY, studied);
+  renderLegalArticle();
+}
+function stepLegalArticle(direction) {
+  if (!legalSelectedLaw || !legalEntries.length) return;
+  const entries = filteredLegalEntries();
+  const index = entries.findIndex(([article]) => article === legalSelectedArticle);
+  const next = entries[index + direction];
+  if (!next) return;
+  legalSelectedArticle = next[0];
+  $("#law-article-select").value = legalSelectedArticle;
+  renderLegalArticle();
+}
+async function trainCurrentLegalArticle() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  if (!clozeLaws.length) await loadClozeLaws();
+  const lawSelect = $("#cloze-law");
+  lawSelect.value = legalSelectedLaw.id;
+  await loadClozeSnapshot();
+  const matchingEntry = clozeSnapshot && clozeSnapshot.entries.find(([article]) => article === legalSelectedArticle);
+  if (!matchingEntry) {
+    $("#cloze-note").textContent = "Este artigo não tem texto suficiente para gerar lacunas. Você pode continuar lendo a Lei Seca normalmente.";
+    showView("cloze");
+    return;
+  }
+  $("#cloze-article").value = legalSelectedArticle;
+  $("#cloze-difficulty").value = "medio";
+  showView("cloze");
+  startCloze();
 }
 
 
@@ -1657,7 +2083,9 @@ function showView(view) {
   const beforeAfter = view === "before-after";
   const memory = view === "memory";
   const radar = view === "radar";
+  const law = view === "law";
   $("#radar-view").classList.toggle("hidden", !radar);
+  $("#law-view").classList.toggle("hidden", !law);
   $("#quiz-view").classList.toggle("hidden", !quiz);
   $("#cloze-view").classList.toggle("hidden", !cloze);
   $("#find-error-view").classList.toggle("hidden", !findError);
@@ -1666,6 +2094,7 @@ function showView(view) {
   $("#before-after-view").classList.toggle("hidden", !beforeAfter);
   $("#memory-view").classList.toggle("hidden", !memory);
   $("#tab-radar").classList.toggle("active", radar);
+  $("#tab-law").classList.toggle("active", law);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
   $("#tab-find-error").classList.toggle("active", findError);
@@ -1673,11 +2102,12 @@ function showView(view) {
   $("#tab-multi-ce").classList.toggle("active", multiCE);
   $("#tab-before-after").classList.toggle("active", beforeAfter);
   $("#tab-memory").classList.toggle("active", memory);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory] ].forEach(([id, active]) => {
+  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
-  if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  if (law) $("#law-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (cloze) $("#cloze-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (findError) $("#find-error-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (article) $("#article-view").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1695,6 +2125,7 @@ $("#search-input").addEventListener("input", renderChanges);
 $("#type-filter").addEventListener("change", renderChanges);
 $("#study-filter").addEventListener("change", renderChanges);
 $("#tab-radar").addEventListener("click", () => showView("radar"));
+$("#tab-law").addEventListener("click", () => showView("law"));
 $("#tab-quiz").addEventListener("click", () => showView("quiz"));
 $("#tab-cloze").addEventListener("click", () => showView("cloze"));
 $("#tab-find-error").addEventListener("click", () => showView("find-error"));
@@ -1720,6 +2151,19 @@ $("#before-after-retry-mistakes").addEventListener("click", () => {
   const mistakes = beforeAfterState.answers.filter(answer => !answer.correct).map(answer => answer.item);
   startBeforeAfterGame(mistakes);
 });
+$("#law-library-search").addEventListener("input", renderLegalLibrary);
+$("#law-library-category").addEventListener("change", renderLegalLibrary);
+$("#law-article-select").addEventListener("change", () => {
+  legalSelectedArticle = $("#law-article-select").value;
+  renderLegalArticle();
+});
+$("#law-article-filter").addEventListener("change", renderLegalArticlePicker);
+$("#law-article-search").addEventListener("input", searchLegalArticles);
+$("#law-favorite-article").addEventListener("click", toggleLegalArticleFavorite);
+$("#law-mark-studied").addEventListener("click", toggleLegalArticleStudied);
+$("#law-previous-article").addEventListener("click", () => stepLegalArticle(-1));
+$("#law-next-article").addEventListener("click", () => stepLegalArticle(1));
+$("#law-train-article").addEventListener("click", trainCurrentLegalArticle);
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
@@ -1775,5 +2219,6 @@ document.addEventListener("keydown", event => { if (event.key === "Escape") clos
 loadDashboard();
 loadQuestionBank();
 loadClozeLaws();
+loadLegalLibrary();
 loadFindErrorBank();
 Promise.all([loadArticleGameBank(), loadMultiCEBank()]).then(buildMemoryDeck);
