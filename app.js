@@ -316,6 +316,8 @@ async function loadDashboard() {
     if (legalLaws.length) renderLegalLibrary();
     if (legalSelectedLaw && legalSnapshot && legalSelectedArticle) renderLegalArticle();
     if (memorySourceSnapshotsLoaded) buildMemoryDeck();
+    if($("#study-view")&&!$("#study-view").classList.contains("hidden"))renderStudyHome();
+    if($("#performance-view")&&!$("#performance-view").classList.contains("hidden"))renderPerformanceHome();
   } catch (error) {
     $("#system-status").className = "status-pill error";
     $("#system-status span:last-child").textContent = "Dados indisponíveis";
