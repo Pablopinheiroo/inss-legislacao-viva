@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros e descubra artigos.">
+  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos e pratique várias afirmações.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
@@ -27,6 +27,7 @@
     <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
     <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
     <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
+    <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -260,6 +261,74 @@
     </section>
 
     <footer class="footer-note"><strong>Questões vinculadas à legislação salva.</strong><span>Antes de liberar um item, o site confere se o artigo correto, a frase de referência e as alternativas continuam presentes nas capturas oficiais disponíveis. Questões que não passam pela conferência ficam suspensas.</span></footer>
+  </main>
+
+
+  <main id="multi-ce-view" class="page-shell hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">MODO DE JOGO · FIXAÇÃO POR ARTIGO</p>
+        <h1>Várias afirmações</h1>
+        <p class="subtitle">Responda a uma sequência de itens Certo ou Errado sem sair do mesmo artigo.</p>
+      </div>
+      <div class="quiz-config multi-ce-config">
+        <label class="select-wrap"><span>Matéria</span><select id="multi-ce-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Artigos por treino</span><select id="multi-ce-length"><option value="3">3 artigos</option><option value="5" selected>5 artigos</option><option value="todas">Todos disponíveis</option></select></label>
+        <button id="start-multi-ce" class="primary-button" type="button" disabled>Começar treino</button>
+      </div>
+    </section>
+
+    <p id="multi-ce-count-note" class="manual-check-note">Carregando os artigos e conferindo as afirmações nas capturas da legislação...</p>
+
+    <section id="multi-ce-card" class="quiz-card hidden" aria-live="polite">
+      <div class="quiz-card-top">
+        <span id="multi-ce-category-label" class="quiz-chip"></span>
+        <span id="multi-ce-progress" class="quiz-progress"></span>
+      </div>
+      <div class="multi-ce-article-head">
+        <div class="quiz-law-line"><strong id="multi-ce-law"></strong><span id="multi-ce-article-label"></span></div>
+        <h2 id="multi-ce-topic"></h2>
+      </div>
+      <details class="law-excerpt multi-ce-law-text">
+        <summary>Ler o artigo antes de responder</summary>
+        <pre id="multi-ce-article-text"></pre>
+      </details>
+      <p id="multi-ce-prompt" class="quiz-statement"></p>
+      <div class="answer-buttons">
+        <button id="multi-ce-true" class="answer-button" type="button" aria-pressed="false">Certo</button>
+        <button id="multi-ce-false" class="answer-button" type="button" aria-pressed="false">Errado</button>
+      </div>
+      <button id="multi-ce-submit" class="primary-button submit-answer" type="button" disabled>Confirmar resposta</button>
+
+      <section id="multi-ce-feedback" class="answer-feedback hidden">
+        <div id="multi-ce-result" class="feedback-result"></div>
+        <p id="multi-ce-explanation" class="feedback-explanation"></p>
+        <p id="multi-ce-correction" class="feedback-explanation hidden"></p>
+        <div class="feedback-bottom">
+          <a id="multi-ce-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a>
+          <button id="multi-ce-next" class="primary-button" type="button">Próxima afirmação →</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="multi-ce-welcome" class="empty-state quiz-welcome">
+      <h3>Estude um artigo por vez</h3>
+      <p>Cada rodada reúne duas ou mais afirmações sobre o mesmo dispositivo. Leia o texto legal, responda C/E e confira a justificativa antes de passar para a próxima afirmação.</p>
+    </section>
+
+    <section id="multi-ce-summary" class="quiz-summary hidden">
+      <p class="eyebrow">RESULTADO DO TREINO</p>
+      <h2 id="multi-ce-score"></h2>
+      <p id="multi-ce-score-note"></p>
+      <div id="multi-ce-breakdown" class="multi-ce-breakdown"></div>
+      <div id="multi-ce-mistakes" class="quiz-mistakes"></div>
+      <div class="summary-actions">
+        <button id="multi-ce-retry-mistakes" class="secondary-button hidden" type="button">Repetir artigos com erros</button>
+        <button id="multi-ce-restart" class="primary-button" type="button">Novo treino ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Mais foco no mesmo dispositivo.</strong><span>As afirmações de cada rodada pertencem ao mesmo artigo. O sistema confere as frases de referência na captura salva e suspende o conjunto se o artigo ou alguma referência deixar de corresponder ao texto capturado.</span></footer>
   </main>
 
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
