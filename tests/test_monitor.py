@@ -21,6 +21,14 @@ class MonitorTests(unittest.TestCase):
                 "https://www.planalto.gov.br/ccivil_03/lei/l13985.htm",
             )
 
+    def test_source_identity_accepts_number_year_separated_by_slash(self):
+        law = {"id": "ec-103-2019"}
+        validate_law_identity(
+            "EMENDA CONSTITUCIONAL Nº 103/2019. Texto da emenda.",
+            law,
+            "https://www.camara.leg.br/ec.html",
+        )
+
     def test_split_articles_and_paragraphs(self):
         result = split_articles("Lei teste\nArt. 1º Texto inicial.\n§ 1º Um parágrafo.\nArt. 2º Segundo artigo.")
         self.assertIn("Art. 1", result)
