@@ -955,3 +955,87 @@
  .domain-card-status{white-space:normal}
  .domain-highlight-panel{padding:13px}
 }
+
+
+/* Área de conquistas, constância e desafios semanais */
+.achievements-intro{align-items:flex-end}
+.achievement-title-current{display:grid;gap:5px;min-width:165px;max-width:230px;padding:12px 15px;border:1px solid #dce5f5;border-radius:12px;background:#f6f8ff}
+.achievement-title-current>span{color:#8290a7;font-size:8px;font-weight:900;letter-spacing:.13em}
+.achievement-title-current>strong{color:#36558f;font-size:12px;line-height:1.4}
+.achievement-streak-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:0 0 23px}
+.achievement-streak-overview>article{display:grid;gap:4px;min-width:0;padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.achievement-streak-overview>article>span{color:#738199;font-size:10px}
+.achievement-streak-overview>article>strong{color:#2d4d86;font-size:29px;line-height:1.2}
+.achievement-streak-overview>article>small{color:#8b97a9;font-size:9px}
+.achievement-section{margin:0 0 25px}
+.achievement-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 13px}
+.achievement-section-heading h2{margin:3px 0 0;color:#263b5d;font-size:18px}
+.achievement-section-heading>div>p:last-child{margin:5px 0 0;color:#7d8ba0;font-size:10px;line-height:1.55}
+.daily-goal-panel{padding:17px 18px;border:1px solid #dce5f5;border-radius:14px;background:#f8faff}
+.daily-goal-settings{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:13px 0}
+.daily-goal-settings label{color:#465b7d;font-size:10px;font-weight:800}
+.daily-goal-settings input{width:76px;min-height:37px;border:1px solid #d6dfec;border-radius:9px;padding:7px 9px;background:#fff;color:#2f4568;font:700 12px inherit}
+.daily-goal-settings>span{color:#78869b;font-size:10px}
+.daily-goal-settings button{min-height:36px;margin-left:auto;padding:8px 13px;font-size:10px}
+.daily-goal-progress-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 7px}
+.daily-goal-progress-head strong{color:#344d74;font-size:11px}
+.daily-goal-progress-head span{color:#687b9a;font-size:10px;font-weight:750}
+.daily-goal-track,.challenge-progress-track{height:9px;overflow:hidden;border-radius:99px;background:#e6ebf4}
+.daily-goal-track>span,.challenge-progress-track>span{display:block;width:0;height:100%;border-radius:99px;background:linear-gradient(90deg,#5b84df,#3c65bd);transition:width .3s ease}
+.achievement-muted-note{margin:11px 0 0;color:#8491a5;font-size:9px;line-height:1.55}
+.challenge-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.challenge-card{min-width:0;padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.challenge-card.is-complete{border-color:#cce6d5;background:#f8fcf9}
+.challenge-card-head{display:flex;align-items:flex-start;gap:9px}
+.challenge-icon{display:grid;width:33px;height:33px;flex:0 0 33px;place-items:center;border-radius:10px;background:#edf2ff;color:#3b5fae;font-size:17px;font-weight:800}
+.challenge-card-copy{min-width:0;flex:1}
+.challenge-card-copy>strong{display:block;color:#304666;font-size:11px;line-height:1.4}
+.challenge-card-copy>p{margin:4px 0 0;color:#8290a4;font-size:9px;line-height:1.45}
+.challenge-status{flex:0 0 auto;padding:4px 7px;border-radius:20px;background:#f0f3f8;color:#728098;font-size:8px;font-weight:850}
+.challenge-card.is-complete .challenge-status{background:#e4f3e9;color:#267347}
+.challenge-progress-line{display:grid;gap:6px;margin:13px 0 7px}
+.challenge-progress-line>small{color:#76869e;font-size:9px;text-align:right}
+.challenge-card.is-complete .challenge-progress-track>span{background:linear-gradient(90deg,#59aa78,#308556)}
+.challenge-reward{display:block;color:#8a96a8;font-size:9px}
+.achievement-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.achievement-card{display:flex;align-items:center;gap:11px;min-width:0;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.achievement-card.is-locked{background:#fafbfd}
+.achievement-card.is-unlocked{border-color:#d8e8dc;background:#fbfefc}
+.achievement-badge{display:grid;width:42px;height:42px;flex:0 0 42px;place-items:center;border-radius:13px;background:#edf2ff;color:#4163b2;font-size:17px;font-weight:900}
+.achievement-card.is-unlocked .achievement-badge{background:#e7f5eb;color:#28764b}
+.achievement-card.is-locked .achievement-badge{filter:grayscale(1);opacity:.55}
+.achievement-card-copy{display:grid;min-width:0;flex:1;gap:3px}
+.achievement-card-copy>strong{color:#314765;font-size:11px;line-height:1.4}
+.achievement-card-copy>p{margin:0;color:#78869a;font-size:9px;line-height:1.45}
+.achievement-card-copy>small{color:#939eae;font-size:8px;line-height:1.4}
+.achievement-title-button{flex:0 0 auto;min-height:31px;padding:6px 9px;border:1px solid #d8e1f0;border-radius:8px;background:#f7f9fd;color:#48628e;font:700 9px inherit;cursor:pointer}
+.achievement-title-button.is-equipped{border-color:#cce6d5;background:#eaf6ee;color:#267447}
+.achievement-title-button:disabled{cursor:default}
+.achievement-lock{flex:0 0 auto;font-size:13px;opacity:.45}
+.achievement-award-toast{position:fixed;right:18px;bottom:92px;z-index:10001;display:flex;align-items:center;gap:10px;min-width:190px;max-width:min(360px,calc(100vw - 28px));padding:13px 15px;border:1px solid #d7e9dc;border-radius:13px;background:#fff;box-shadow:0 13px 35px rgba(27,55,39,.17);opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease;pointer-events:none}
+.achievement-award-toast.is-visible{opacity:1;transform:translateY(0)}
+.achievement-award-icon{display:grid;width:34px;height:34px;flex:0 0 34px;place-items:center;border-radius:50%;background:#e9f6ed;color:#28774b;font-size:17px;font-weight:900}
+.achievement-award-copy{display:grid;gap:3px}
+.achievement-award-copy>strong{color:#2c6545;font-size:12px}
+.achievement-award-copy>small{color:#758b7e;font-size:10px;line-height:1.35}
+@media(max-width:760px){
+ .achievements-intro{align-items:stretch}
+ .achievement-title-current{max-width:none}
+ .achievement-streak-overview{gap:7px}
+ .achievement-streak-overview>article{padding:12px 10px}
+ .achievement-streak-overview>article>span{font-size:9px;line-height:1.35}
+ .achievement-streak-overview>article>strong{font-size:24px}
+ .challenge-card-grid{grid-template-columns:1fr}
+ .achievement-card-grid{grid-template-columns:1fr}
+ .daily-goal-settings{gap:7px}
+ .daily-goal-settings button{width:100%;margin-left:0}
+}
+@media(max-width:430px){
+ .achievement-card{align-items:flex-start;padding:12px 10px;gap:8px}
+ .achievement-badge{width:36px;height:36px;flex-basis:36px;border-radius:11px}
+ .achievement-title-button{max-width:88px;white-space:normal;line-height:1.25}
+ .achievement-section-heading h2{font-size:16px}
+ .achievement-streak-overview>article{padding:10px 8px}
+ .achievement-streak-overview>article>strong{font-size:21px}
+ .achievement-award-toast{right:11px;bottom:86px}
+}
