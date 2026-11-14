@@ -4281,6 +4281,7 @@ function showView(view) {
   const memory = view === "memory";
   const review = view === "review";
   const history = view === "history";
+  const achievements = view === "achievements";
   const radar = view === "radar";
   const law = view === "law";
   $("#radar-view").classList.toggle("hidden", !radar);
@@ -4294,6 +4295,7 @@ function showView(view) {
   $("#memory-view").classList.toggle("hidden", !memory);
   $("#review-view").classList.toggle("hidden", !review);
   $("#history-view").classList.toggle("hidden", !history);
+  $("#achievements-view").classList.toggle("hidden", !achievements);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-law").classList.toggle("active", law);
   $("#tab-quiz").classList.toggle("active", quiz);
@@ -4305,7 +4307,8 @@ function showView(view) {
   $("#tab-memory").classList.toggle("active", memory);
   $("#tab-review").classList.toggle("active", review);
   $("#tab-history").classList.toggle("active", history);
-  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history] ].forEach(([id, active]) => {
+  $("#tab-achievements").classList.toggle("active", achievements);
+  [ ["tab-radar", radar], ["tab-law", law], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory], ["tab-review", review], ["tab-history", history], ["tab-achievements", achievements] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -4319,6 +4322,7 @@ function showView(view) {
   else if (memory) $("#memory-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (review) $("#review-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (history) $("#history-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (achievements) $("#achievements-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
