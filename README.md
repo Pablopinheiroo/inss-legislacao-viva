@@ -125,3 +125,12 @@ O banco inicial possui 29 questões de sete normas: Lei 9.784/1999, Lei 8.429/19
 A aba **Várias afirmações** reúne dois ou mais itens de Certo ou Errado sobre um mesmo artigo. O estudante pode ler o dispositivo completo, responder cada afirmação, conferir o gabarito e a justificativa e só depois avançar para outro artigo. Ao final, o painel mostra o resultado geral, o desempenho por artigo e permite repetir os artigos em que houve erros.
 
 O banco inicial contém 16 artigos e 46 afirmações, extraídos de seis normas. O site verifica cada frase-âncora no snapshot mais recente do artigo antes de liberar o conjunto. Se o texto ou alguma referência não corresponder à captura salva, o conjunto inteiro é suspenso até revisão.
+
+
+## Modo Antes e depois
+
+A aba **Antes e depois** transforma diferenças reais registradas em `data/legislacao.json` em um treino. Em cada questão, as duas versões aparecem embaralhadas e o estudante identifica qual corresponde à captura mais recente. Depois, o modo mostra o texto anterior, o atual, a explicação do monitor e o link da fonte oficial.
+
+O modo não inventa alterações nem usa exemplos simulados. Só libera diferenças que podem ser comparadas por artigo. Mudanças de texto integral, como alterações no índice oficial da IN 128/2022, continuam disponíveis no Radar, pois não representam um artigo individual. Enquanto o monitor não registrar mudanças artigo por artigo, o botão de início permanece desativado e o site informa isso ao estudante.
+
+A versão identificada como **Agora** é a captura mais recente consultada pelo monitor. A data de detecção não é necessariamente a data de publicação ou de início da vigência. Confirme sempre o ato oficial antes de atualizar seu material de estudo.
