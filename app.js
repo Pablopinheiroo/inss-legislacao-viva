@@ -2239,6 +2239,7 @@ async function loadFindErrorBank() {
     if([...category.options].some(option=>option.value===previous))category.value=previous;
     findErrorCaptureNote=newest?" Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
     updateFindErrorFilters();renderFindErrorReviewOverview();
+    if(!$("#review-view").classList.contains("hidden"))renderCentralReview();
   } catch(error){
     findErrorItems=[];$("#start-error").disabled=true;
     note.textContent="Não foi possível carregar o banco ou conferir os textos legais. Recarregue o site e tente novamente.";
@@ -2447,6 +2448,7 @@ async function loadArticleGameBank() {
     articleSuspendedCount = suspended;
     updateArticleGameFilters();
     renderArticleReviewOverview();
+    if (!$("#review-view").classList.contains("hidden")) renderCentralReview();
   } catch (error) {
     articleQuestions = [];
     $("#start-article").disabled = true;
@@ -2709,6 +2711,7 @@ async function loadQuestionBank() {
     $("#start-quiz").disabled = questionBank.length === 0;
     updateLegalQuizButton();
     renderCEReviewOverview();
+    if (!$("#review-view").classList.contains("hidden")) renderCentralReview();
   } catch (error) {
     note.textContent = "Não foi possível carregar o banco de questões. Recarregue o site e tente novamente.";
     console.error(error);
@@ -3509,6 +3512,7 @@ function prepareBeforeAfterBank() {
   if([...select.options].some(option=>option.value===previous))select.value=previous;
   $("#start-before-after").disabled=beforeAfterAvailable.length===0;
   syncBeforeAfterReviewQueue();
+  if(!$("#review-view").classList.contains("hidden"))renderCentralReview();
   const note=$("#before-after-count-note");
   const checked=dashboardData&&Array.isArray(dashboardData.laws)?dashboardData.laws.filter(law=>!law.error&&law.last_checked).length:0;
   if(beforeAfterAvailable.length)note.textContent=beforeAfterAvailable.length+" alteração(ões) confirmada(s) em artigos disponíveis. Os trechos acrescentados, retirados e modificados serão destacados.";
@@ -4610,8 +4614,20 @@ function centralReviewBatch(dueOnly){
   centralReviewSession={active:true,keys:entries.map(e=>e.key),index:0,title:dueOnly?"Revisão dos pendentes":"Revisão geral"};startCentralReviewCurrent();
 }
 function startCentralReviewCurrent(){
-  const key=centralReviewSession.keys[centralReviewSession.index],entry=centralReviewEntriesCache.find(e=>e.key===key);
-  if(!entry){renderCentralReview();return;}renderCentralReview();startCentralReviewEntry(entry);
+  while(centralReviewSession.active&&centralReviewSession.index<centralReviewSession.keys.length){
+    const key=centralReviewSession.keys[centralReviewSession.index];
+    const entry=collectCentralReviewData().entries.find(item=>item.key===key);
+    if(entry&&entry.available){
+      renderCentralReview();
+      const current=centralReviewEntriesCache.find(item=>item.key===key)||entry;
+      startCentralReviewEntry(current);
+      return;
+    }
+    centralReviewSession.index++;
+  }
+  centralReviewSession={active:false,keys:[],index:0,title:""};
+  renderCentralReview();
+  $("#central-review-session-note").textContent="Sessão concluída. Os conteúdos que saíram da fila ou ficaram indisponíveis foram ignorados.";
 }
 function nextCentralReviewSessionItem(){
   if(!centralReviewSession.active)return;centralReviewSession.index++;
