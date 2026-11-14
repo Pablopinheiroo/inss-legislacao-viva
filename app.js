@@ -5542,11 +5542,17 @@ function evaluateWeeklyChallenges(metrics,state,silent=false){
 }
 function refreshAchievementProgress(options={}){
   const silent=Boolean(options.silent);
-  const state=loadAchievementState(),metrics=getAchievementMetrics();
+  const state=loadAchievementState();
+  let metrics=getAchievementMetrics();
   ACHIEVEMENT_DEFINITIONS.forEach(definition=>{
     if(definition.test(metrics))unlockAchievement(definition,state,silent);
   });
   evaluateWeeklyChallenges(metrics,state,silent);
+  // Os desafios podem conceder XP e, com isso, liberar uma conquista de nível.
+  metrics=getAchievementMetrics();
+  ACHIEVEMENT_DEFINITIONS.forEach(definition=>{
+    if(definition.test(metrics))unlockAchievement(definition,state,silent);
+  });
   const dailyNode=$("#achievement-daily-progress");
   if(dailyNode){
     const percent=Math.min(100,Math.round(metrics.todayProgress/metrics.dailyGoal*100));
@@ -5571,9 +5577,29 @@ function renderAchievementOverview(metrics=getAchievementMetrics(),state=loadAch
     equipped.textContent=found?found.title:"Nenhum título equipado";
   }
   const unlockedList=$("#achievement-unlocked-list"),allList=$("#achievement-all-list"),challengesList=$("#achievement-challenges-list");
+  const challengeHistory=$("#achievement-challenge-history-list");
   if(!unlockedList||!allList||!challengesList)return;
   const unlockedById=new Map(state.unlocked.map(item=>[item.id,item]));
   unlockedList.replaceChildren();allList.replaceChildren();challengesList.replaceChildren();
+  if(challengeHistory){
+    challengeHistory.replaceChildren();
+    const history=[...state.completed_challenges].sort((a,b)=>new Date(b.completed_at)-new Date(a.completed_at)).slice(0,8);
+    if(history.length)history.forEach(item=>{
+      const row=document.createElement("div");row.className="challenge-history-row";
+      const icon=document.createElement("span");icon.className="challenge-history-check";icon.textContent="✓";
+      const copy=document.createElement("div");copy.className="challenge-history-copy";
+      const title=document.createElement("strong");title.textContent=item.name;
+      const date=document.createElement("small");date.textContent="Concluído em "+formatDate(item.completed_at);
+      copy.append(title,date);
+      const reward=document.createElement("span");reward.className="challenge-history-reward";reward.textContent="+"+(Number(item.xp_reward)||0)+" XP";
+      row.append(icon,copy,reward);challengeHistory.append(row);
+    });
+    else{
+      const empty=document.createElement("p");empty.className="achievement-muted-note";
+      empty.textContent="Os desafios concluídos ficarão registrados aqui.";
+      challengeHistory.append(empty);
+    }
+  }
   if(state.unlocked.length){
     [...state.unlocked].sort((a,b)=>new Date(b.unlocked_at)-new Date(a.unlocked_at))
       .forEach(item=>unlockedList.append(createAchievementCard(item,true,state)));
