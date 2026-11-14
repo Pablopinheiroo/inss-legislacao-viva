@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos e pratique várias afirmações.">
+  <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
@@ -28,6 +28,7 @@
     <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
     <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
     <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
+    <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -329,6 +330,69 @@
     </section>
 
     <footer class="footer-note"><strong>Mais foco no mesmo dispositivo.</strong><span>As afirmações de cada rodada pertencem ao mesmo artigo. O sistema confere as frases de referência na captura salva e suspende o conjunto se o artigo ou alguma referência deixar de corresponder ao texto capturado.</span></footer>
+  </main>
+
+
+  <main id="before-after-view" class="page-shell hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">MODO DE JOGO · ALTERAÇÕES REAIS</p>
+        <h1>Antes e depois</h1>
+        <p class="subtitle">Compare duas versões e identifique qual delas está na captura mais recente da fonte oficial.</p>
+      </div>
+      <div class="quiz-config before-after-config">
+        <label class="select-wrap"><span>Matéria</span><select id="before-after-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Alterações</span><select id="before-after-length"><option value="5">5 alterações</option><option value="10" selected>10 alterações</option><option value="todas">Todas disponíveis</option></select></label>
+        <button id="start-before-after" class="primary-button" type="button" disabled>Começar treino</button>
+      </div>
+    </section>
+
+    <p id="before-after-count-note" class="manual-check-note">Carregando o histórico de alterações reais...</p>
+
+    <section id="before-after-card" class="quiz-card hidden" aria-live="polite">
+      <div class="quiz-card-top">
+        <span id="before-after-category-label" class="quiz-chip"></span>
+        <span id="before-after-progress" class="quiz-progress"></span>
+      </div>
+      <div class="quiz-law-line">
+        <strong id="before-after-law"></strong>
+        <span id="before-after-article"></span>
+      </div>
+      <p id="before-after-prompt" class="before-after-prompt">Qual versão corresponde à captura mais recente da fonte oficial?</p>
+      <div id="before-after-options" class="before-after-options" role="group" aria-label="Escolha entre duas versões do dispositivo"></div>
+      <button id="before-after-submit" class="primary-button submit-answer" type="button" disabled>Confirmar versão</button>
+
+      <section id="before-after-feedback" class="answer-feedback hidden">
+        <div id="before-after-result" class="feedback-result"></div>
+        <p id="before-after-explanation" class="feedback-explanation"></p>
+        <div id="before-after-comparison" class="diff-grid before-after-comparison"></div>
+        <div class="feedback-bottom">
+          <a id="before-after-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a>
+          <button id="before-after-next" class="primary-button" type="button">Próxima alteração →</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="before-after-welcome" class="empty-state quiz-welcome">
+      <h3>Aprenda o que realmente mudou</h3>
+      <p>O jogo usa somente diferenças registradas pelo monitoramento. As versões aparecem embaralhadas; depois da resposta, você confere o texto anterior, o atual e a fonte oficial.</p>
+    </section>
+
+    <section id="before-after-summary" class="quiz-summary hidden">
+      <p class="eyebrow">RESULTADO DO TREINO</p>
+      <h2 id="before-after-score"></h2>
+      <p id="before-after-score-note"></p>
+      <div id="before-after-mistakes" class="quiz-mistakes"></div>
+      <div class="summary-actions">
+        <button id="before-after-retry-mistakes" class="secondary-button hidden" type="button">Revisar as erradas</button>
+        <button id="before-after-restart" class="primary-button" type="button">Novo treino ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <strong>Sem alterações inventadas.</strong>
+      <span>Este modo só libera comparações artigo por artigo que o monitor registrou. Mudanças de texto integral continuam no Radar. A data é a da detecção, não necessariamente a data de publicação ou de início da vigência; confirme sempre o ato oficial.</span>
+    </footer>
   </main>
 
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
