@@ -146,3 +146,41 @@
   .cloze-actions .primary-button,.cloze-actions .secondary-button{width:100%}
   .law-reader{font-size:15.5px;line-height:1.85;padding:15px}
 }
+
+
+/* Modo Encontre o erro */
+.main-nav{overflow-x:auto;scrollbar-width:none}
+.main-nav::-webkit-scrollbar{display:none}
+.nav-tab{white-space:nowrap;flex:0 0 auto}
+.error-config{max-width:430px}
+.error-config .select-wrap select{min-width:125px}
+.error-config .primary-button{min-width:145px}
+.error-instruction{margin:20px 0 12px;color:#74829a;font-size:12px;line-height:1.6}
+.error-statement{
+  background:#fffdf8;border:1px solid #eee8dc;border-radius:14px;
+  padding:22px;color:#26344b;font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(17px,2vw,20px);line-height:2;letter-spacing:.005em;
+  overflow-wrap:anywhere;
+}
+.error-segment{
+  display:inline;border:0;border-radius:5px;background:#edf2ff;color:#244b9f;
+  padding:2px 3px;margin:0 1px;font:inherit;line-height:inherit;cursor:pointer;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+}
+.error-segment:hover:not(:disabled){background:#dfe8ff}
+.error-segment:focus-visible{outline:2px solid #2557d6;outline-offset:2px}
+.error-segment.is-tried{background:#eef1f5;color:#909bad;text-decoration:line-through;cursor:default}
+.error-segment.is-wrong{background:#ffe6e3;color:#a52d2d;text-decoration:underline;text-decoration-thickness:2px}
+.error-segment:disabled{opacity:1}
+.error-attempt-feedback{margin:13px 0 0;color:#78869a;font-size:12px;line-height:1.6}
+.error-solution .law-excerpt{margin-top:12px}
+@media(max-width:760px){
+  .error-config{justify-content:flex-start;width:100%}
+  .error-statement{font-size:17px;line-height:1.9;padding:17px}
+}
+@media(max-width:520px){
+  .error-config{display:grid;grid-template-columns:1fr 1fr}
+  .error-config .select-wrap select{min-width:0;width:100%}
+  .error-config .primary-button{grid-column:1/-1;width:100%}
+  .error-statement{font-size:16px;line-height:1.9;padding:15px}
+}
