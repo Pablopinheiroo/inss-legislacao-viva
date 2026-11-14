@@ -111,3 +111,10 @@ A atualização automática continua diária. A verificação manual abre o work
 A aba **Encontre o erro** apresenta enunciados com uma expressão propositalmente alterada. O estudante toca no trecho que está incorreto e recebe a correção, a explicação, o texto literal do artigo e o link da fonte oficial. É possível filtrar por matéria e escolher sessões de 5, 10 ou todos os itens disponíveis.
 
 O banco inicial contém 13 itens. Antes de liberar uma questão, o site consulta o snapshot mais recente do artigo e verifica se a expressão correta continua presente no texto capturado. Se o artigo não estiver disponível ou a expressão correta não for encontrada, o item é suspenso automaticamente. Essa verificação reduz o risco de treinar com uma correção que deixou de corresponder ao texto salvo, mas não substitui a revisão jurídica do enunciado quando houver alteração legislativa.
+
+
+## Modo de jogo Descubra o artigo
+
+A aba **Descubra o artigo** apresenta uma descrição de um assunto previsto na norma e pede que o estudante escolha, entre quatro números, o artigo correspondente. Após a resposta, mostra o gabarito, a explicação, o texto literal do artigo e o link da fonte oficial. O jogo permite filtrar por matéria e escolher sessões de 5, 10 ou todos os itens disponíveis.
+
+O banco inicial possui 29 questões de sete normas: Lei 9.784/1999, Lei 8.429/1992, Decreto 6.029/2007, Lei 8.213/1991, Lei 8.212/1991, LOAS e Lei 8.112/1990. Antes de liberar cada questão, o site confere se o artigo correto, a frase de referência e as quatro alternativas existem nas capturas salvas. Itens incompatíveis com a captura atual são suspensos automaticamente. Essa validação técnica não substitui a revisão jurídica da descrição da questão.
