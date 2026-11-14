@@ -4451,7 +4451,7 @@ $("#multi-ce-next").addEventListener("click", nextMultiCEStatement);
 $("#multi-ce-restart").addEventListener("click", () => startMultiCEGame());
 $("#multi-ce-retry-mistakes").addEventListener("click", () => {
   const failed = new Set(multiCEState.answers.filter(answer => !answer.correct).map(answer => answer.group.id));
-  startMultiCEGame(multiCEGroups.filter(group => failed.has(group.id)));
+  startMultiCEGame(multiCEGroups.filter(group => failed.has(group.id)),{reviewMode:true});
 });
 ["#quiz-category","#quiz-topic","#quiz-law-filter","#quiz-article-filter"].forEach(selector => {
   $(selector).addEventListener("change", updateQuizFilters);
