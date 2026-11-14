@@ -39,6 +39,7 @@
     <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
     <button id="tab-review" class="nav-tab" type="button">Revisão</button>
     <button id="tab-history" class="nav-tab" type="button">Histórico</button>
+    <button id="tab-achievements" class="nav-tab" type="button">Conquistas</button>
     <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
   </nav>
 
@@ -828,6 +829,76 @@
       <div id="history-session-list" class="history-card-list"><p class="empty-state">Nenhuma sessão registrada.</p></div>
     </section>
     <footer class="footer-note"><strong>Seus registros ficam salvos neste navegador.</strong><span>O histórico começa a registrar as novas atividades a partir da publicação desta funcionalidade. As marcações de artigos estudados que já existiam na Biblioteca serão aproveitadas quando houver uma data salva. Os dados não são sincronizados automaticamente entre aparelhos.</span></footer>
+  </main>
+
+  <main id="achievements-view" class="page-shell hidden">
+    <section class="intro achievements-intro">
+      <div>
+        <p class="eyebrow">EVOLUÇÃO DO ESTUDANTE</p>
+        <h1>Conquistas</h1>
+        <p class="subtitle">Acompanhe sua constância, complete metas, encare desafios semanais e desbloqueie títulos durante seus estudos.</p>
+      </div>
+      <div class="achievement-title-current">
+        <span>TÍTULO ATUAL</span>
+        <strong id="achievement-equipped-title">Nenhum título equipado</strong>
+      </div>
+    </section>
+
+    <section class="achievement-streak-overview" aria-label="Sequência de estudos">
+      <article><span>Sequência atual</span><strong id="achievement-current-streak">0</strong><small>dias seguidos</small></article>
+      <article><span>Maior sequência</span><strong id="achievement-best-streak">0</strong><small>dias seguidos</small></article>
+      <article><span>Dias estudados</span><strong id="achievement-study-days">0</strong><small>dias registrados</small></article>
+    </section>
+
+    <section class="achievement-section daily-goal-panel">
+      <div class="achievement-section-heading">
+        <div><p class="eyebrow">META DIÁRIA</p><h2>Um passo por dia</h2>
+          <p>Conte questões respondidas e artigos concluídos para acompanhar sua meta diária.</p></div>
+      </div>
+      <div class="daily-goal-settings">
+        <label for="achievement-daily-goal">Minha meta diária</label>
+        <input id="achievement-daily-goal" type="number" min="1" max="100" step="1" value="10">
+        <span>atividades por dia</span>
+        <button id="achievement-daily-goal-save" class="secondary-button" type="button">Salvar meta</button>
+      </div>
+      <div class="daily-goal-progress">
+        <div class="daily-goal-progress-head"><strong>Progresso de hoje</strong><span id="achievement-daily-progress">0 de 10 atividades</span></div>
+        <div class="daily-goal-track" role="progressbar" aria-label="Progresso da meta diária" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="achievement-daily-fill"></span></div>
+      </div>
+      <p class="achievement-muted-note">A sequência considera dias com pelo menos uma questão respondida ou um artigo marcado como estudado. Os dias são calculados pela data local deste navegador.</p>
+    </section>
+
+    <section class="achievement-section">
+      <div class="achievement-section-heading">
+        <div><p class="eyebrow">DESAFIOS ESPECIAIS</p><h2>Desafios da semana</h2>
+          <p>Complete os objetivos antes do fim da semana para receber experiência extra. Os desafios recomeçam na segunda-feira.</p></div>
+      </div>
+      <div id="achievement-challenges-list" class="challenge-card-grid">
+        <p class="empty-state">Carregando desafios...</p>
+      </div>
+    </section>
+
+    <section class="achievement-section">
+      <div class="achievement-section-heading">
+        <div><p class="eyebrow">SUAS CONQUISTAS</p><h2>Conquistas desbloqueadas</h2>
+          <p>Os títulos conquistados ficam registrados nesta área. Você pode escolher qual título deseja usar.</p></div>
+      </div>
+      <div id="achievement-unlocked-list" class="achievement-card-grid">
+        <p class="empty-state">Ainda não há conquistas desbloqueadas.</p>
+      </div>
+    </section>
+
+    <section class="achievement-section">
+      <div class="achievement-section-heading">
+        <div><p class="eyebrow">OBJETIVOS DISPONÍVEIS</p><h2>Galeria de conquistas</h2>
+          <p>Veja o que já conquistou e quais objetivos ainda estão bloqueados.</p></div>
+      </div>
+      <div id="achievement-all-list" class="achievement-card-grid">
+        <p class="empty-state">Carregando conquistas...</p>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Seu progresso fica salvo neste navegador.</strong><span>Conquistas, sequência, meta e títulos são armazenados localmente. Eles não são sincronizados automaticamente entre aparelhos.</span></footer>
   </main>
 
   <main id="memory-view" class="page-shell hidden">
