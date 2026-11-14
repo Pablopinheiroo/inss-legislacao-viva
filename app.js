@@ -2128,9 +2128,9 @@ function renderFindErrorLegalHighlight(element, source, phrase) {
   let normalized="",positions=[],pendingSpace=null;
   for(let i=0;i<original.length;){
     const cp=String.fromCodePoint(original.codePointAt(i));
-    const decomposed=cp.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLocaleLowerCase("pt-BR");
+    const decomposed=cp.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR");
     for(const char of decomposed){
-      if(/[\\p{L}\\p{N}%]/u.test(char)){
+      if(/[\p{L}\p{N}%]/u.test(char)){
         if(pendingSpace!==null&&normalized.length){normalized+=" ";positions.push(pendingSpace);}
         pendingSpace=null;normalized+=char;positions.push(i);
       }else if(normalized.length&&pendingSpace===null){pendingSpace=i;}
