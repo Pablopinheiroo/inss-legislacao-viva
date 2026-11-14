@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "description": "Banco autoral do modo Descubra o artigo. Cada gabarito é ligado a um artigo existente no snapshot da norma e possui uma frase-âncora validada para impedir a oferta de itens incompatíveis com a captura atual.",
+  "schema_version": 2,
+  "description": "Banco autoral do modo Descubra o artigo, organizado por matéria, norma, assunto, artigo e dificuldade, com frase-âncora e versão de captura oficial para validação.",
   "source_snapshot_date": "2026-11-14T00:52:03Z",
   "questions": [
     {
@@ -30,7 +30,20 @@
           "label": "Art. 5º"
         }
       ],
-      "explanation": "O art. 2º da Lei 9.784/1999 apresenta os princípios da Administração Pública e critérios que devem ser observados nos processos administrativos."
+      "explanation": "O art. 2º da Lei 9.784/1999 apresenta os princípios da Administração Pública e critérios que devem ser observados nos processos administrativos. Fundamento legal: Art. 2º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "8d199344",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Princípios do processo administrativo",
+      "legal_reference": "Art. 2º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-03",
@@ -59,7 +72,20 @@
           "label": "Art. 5º"
         }
       ],
-      "explanation": "O art. 3º trata dos direitos do administrado perante a Administração, incluindo ciência da tramitação, vista dos autos e apresentação de documentos."
+      "explanation": "O art. 3º trata dos direitos do administrado perante a Administração, incluindo ciência da tramitação, vista dos autos e apresentação de documentos. Fundamento legal: Art. 3º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "93cac94d",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "topic": "Direitos do administrado",
+      "legal_reference": "Art. 3º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-04",
@@ -88,7 +114,20 @@
           "label": "Art. 5º"
         }
       ],
-      "explanation": "O art. 4º da Lei 9.784/1999 lista os deveres do administrado perante a Administração."
+      "explanation": "O art. 4º da Lei 9.784/1999 lista os deveres do administrado perante a Administração. Fundamento legal: Art. 4º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "17f46785",
+      "article": "Art. 4º",
+      "article_key": "Art. 4",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 4º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-05",
@@ -117,7 +156,20 @@
           "label": "Art. 5º"
         }
       ],
-      "explanation": "O art. 5º disciplina o início do processo administrativo e prevê as duas formas: de ofício ou a pedido do interessado."
+      "explanation": "O art. 5º disciplina o início do processo administrativo e prevê as duas formas: de ofício ou a pedido do interessado. Fundamento legal: Art. 5º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "d43f87fe",
+      "article": "Art. 5º",
+      "article_key": "Art. 5",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 5º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8429-02",
@@ -146,7 +198,20 @@
           "label": "Art. 11"
         }
       ],
-      "explanation": "O art. 2º define agente público de forma ampla, abrangendo agente político, servidor público e outras pessoas que exerçam mandato, cargo, emprego ou função nas entidades indicadas."
+      "explanation": "O art. 2º define agente público de forma ampla, abrangendo agente político, servidor público e outras pessoas que exerçam mandato, cargo, emprego ou função nas entidades indicadas. Fundamento legal: Art. 2º da Lei nº 8.429/1992.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "b75da70699348267c0199ef4a4d62b5f2a69c51813a8bfbc3417cea25e19deb6",
+      "source_article_hash": "06ccaea9",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 2º da Lei nº 8.429/1992",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8429-09",
@@ -175,7 +240,20 @@
           "label": "Art. 11"
         }
       ],
-      "explanation": "O art. 9º trata dos atos de improbidade administrativa que importam enriquecimento ilícito."
+      "explanation": "O art. 9º trata dos atos de improbidade administrativa que importam enriquecimento ilícito. Fundamento legal: Art. 9º da Lei nº 8.429/1992.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "b75da70699348267c0199ef4a4d62b5f2a69c51813a8bfbc3417cea25e19deb6",
+      "source_article_hash": "c0000574",
+      "article": "Art. 9º",
+      "article_key": "Art. 9",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 9º da Lei nº 8.429/1992",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8429-10",
@@ -204,7 +282,20 @@
           "label": "Art. 11"
         }
       ],
-      "explanation": "O art. 10 trata dos atos de improbidade administrativa que causam lesão ao erário."
+      "explanation": "O art. 10 trata dos atos de improbidade administrativa que causam lesão ao erário. Fundamento legal: Art. 10º da Lei nº 8.429/1992.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "b75da70699348267c0199ef4a4d62b5f2a69c51813a8bfbc3417cea25e19deb6",
+      "source_article_hash": "54325a32",
+      "article": "Art. 10º",
+      "article_key": "Art. 10",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 10º da Lei nº 8.429/1992",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8429-11",
@@ -233,14 +324,27 @@
           "label": "Art. 11"
         }
       ],
-      "explanation": "O art. 11 trata dos atos de improbidade que atentam contra os princípios da Administração Pública."
+      "explanation": "O art. 11 trata dos atos de improbidade que atentam contra os princípios da Administração Pública. Fundamento legal: Art. 11º da Lei nº 8.429/1992.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "b75da70699348267c0199ef4a4d62b5f2a69c51813a8bfbc3417cea25e19deb6",
+      "source_article_hash": "20a58638",
+      "article": "Art. 11º",
+      "article_key": "Art. 11",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 11º da Lei nº 8.429/1992",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-6029-03",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo define a composição da Comissão de Ética Pública, prevendo sete brasileiros, mandato de três anos e uma única recondução?",
       "answer_article_key": "Art. 3",
       "validation_phrase": "integrada por sete brasileiros",
@@ -262,14 +366,27 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 3º do Decreto 6.029/2007 estabelece a composição da Comissão de Ética Pública, o mandato de seus integrantes e a possibilidade de uma única recondução."
+      "explanation": "O art. 3º do Decreto 6.029/2007 estabelece a composição da Comissão de Ética Pública, o mandato de seus integrantes e a possibilidade de uma única recondução. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "70bb51cfe82965592aeb55573fa523c2d2bb5c9eb029b8b395d692b7be93157e",
+      "source_article_hash": "21d5e250",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "topic": "Comissão de Ética Pública",
+      "legal_reference": "Art. 3º da Decreto nº 6.029/2007",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-6029-05",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo estabelece que cada Comissão de Ética será integrada por três membros titulares e três suplentes?",
       "answer_article_key": "Art. 5",
       "validation_phrase": "tres membros titulares e tres suplentes",
@@ -291,14 +408,27 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 5º trata da composição das Comissões de Ética dos órgãos e entidades, com três titulares e três suplentes."
+      "explanation": "O art. 5º trata da composição das Comissões de Ética dos órgãos e entidades, com três titulares e três suplentes. Fundamento legal: Art. 5º da Decreto nº 6.029/2007.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "70bb51cfe82965592aeb55573fa523c2d2bb5c9eb029b8b395d692b7be93157e",
+      "source_article_hash": "ff26d04a",
+      "article": "Art. 5º",
+      "article_key": "Art. 5",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 5º da Decreto nº 6.029/2007",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-6029-07",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo enumera as competências das Comissões de Ética, incluindo atuação consultiva, aplicação do Código de Ética e apuração de condutas?",
       "answer_article_key": "Art. 7",
       "validation_phrase": "atuar como instancia consultiva de dirigentes e servidores",
@@ -320,14 +450,27 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 7º reúne as competências das Comissões de Ética de que tratam os incisos II e III do art. 2º."
+      "explanation": "O art. 7º reúne as competências das Comissões de Ética de que tratam os incisos II e III do art. 2º. Fundamento legal: Art. 7º da Decreto nº 6.029/2007.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "70bb51cfe82965592aeb55573fa523c2d2bb5c9eb029b8b395d692b7be93157e",
+      "source_article_hash": "e077c785",
+      "article": "Art. 7º",
+      "article_key": "Art. 7",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 7º da Decreto nº 6.029/2007",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-6029-12",
       "category": "Ética",
       "law_id": "decreto-6029-2007",
       "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-1-pe.html",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question": "Qual artigo disciplina o processo de apuração de possível falta ética e prevê prazo de dez dias para manifestação escrita do investigado?",
       "answer_article_key": "Art. 12",
       "validation_phrase": "notificara o investigado para manifestar se por escrito no prazo de dez dias",
@@ -349,7 +492,20 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 12 disciplina a apuração de conduta ética, assegura contraditório e ampla defesa e prevê manifestação escrita em dez dias."
+      "explanation": "O art. 12 disciplina a apuração de conduta ética, assegura contraditório e ampla defesa e prevê manifestação escrita em dez dias. Fundamento legal: Art. 12º da Decreto nº 6.029/2007.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "70bb51cfe82965592aeb55573fa523c2d2bb5c9eb029b8b395d692b7be93157e",
+      "source_article_hash": "c32b587d",
+      "article": "Art. 12º",
+      "article_key": "Art. 12",
+      "topic": "Apuração de conduta ética",
+      "legal_reference": "Art. 12º da Decreto nº 6.029/2007",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-01",
@@ -378,7 +534,20 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 1º apresenta a finalidade da Previdência Social e deixa claro que ela atua mediante contribuição."
+      "explanation": "O art. 1º apresenta a finalidade da Previdência Social e deixa claro que ela atua mediante contribuição. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "88e82669",
+      "article": "Art. 1º",
+      "article_key": "Art. 1",
+      "topic": "Finalidade da Previdência Social",
+      "legal_reference": "Art. 1º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-02",
@@ -407,7 +576,20 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 2º da Lei 8.213/1991 enumera princípios e objetivos da Previdência Social."
+      "explanation": "O art. 2º da Lei 8.213/1991 enumera princípios e objetivos da Previdência Social. Fundamento legal: Art. 2º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "9d3bf8f0",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Princípios e objetivos da Previdência Social",
+      "legal_reference": "Art. 2º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-03",
@@ -436,7 +618,20 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 3º institui o CNPS e estabelece sua composição, incluindo representantes do Governo Federal e da sociedade civil."
+      "explanation": "O art. 3º institui o CNPS e estabelece sua composição, incluindo representantes do Governo Federal e da sociedade civil. Fundamento legal: Art. 3º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "e0c8fb35",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "topic": "Conselho Nacional de Previdência Social",
+      "legal_reference": "Art. 3º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-12",
@@ -465,7 +660,20 @@
           "label": "Art. 12"
         }
       ],
-      "explanation": "O art. 12 estabelece a exclusão do RGPS para as pessoas nele indicadas, desde que amparadas por regime próprio, e trata também do exercício concomitante de atividades."
+      "explanation": "O art. 12 estabelece a exclusão do RGPS para as pessoas nele indicadas, desde que amparadas por regime próprio, e trata também do exercício concomitante de atividades. Fundamento legal: Art. 12º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "dabc3684",
+      "article": "Art. 12º",
+      "article_key": "Art. 12",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 12º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-01",
@@ -494,7 +702,20 @@
           "label": "Art. 4º"
         }
       ],
-      "explanation": "O art. 1º define a Seguridade Social e apresenta seus princípios e diretrizes no parágrafo único."
+      "explanation": "O art. 1º define a Seguridade Social e apresenta seus princípios e diretrizes no parágrafo único. Fundamento legal: Art. 1º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "ed639b73",
+      "article": "Art. 1º",
+      "article_key": "Art. 1",
+      "topic": "Conceito e diretrizes da Seguridade Social",
+      "legal_reference": "Art. 1º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-02",
@@ -523,7 +744,20 @@
           "label": "Art. 4º"
         }
       ],
-      "explanation": "O art. 2º da Lei 8.212/1991 trata da saúde e apresenta seus princípios e diretrizes."
+      "explanation": "O art. 2º da Lei 8.212/1991 trata da saúde e apresenta seus princípios e diretrizes. Fundamento legal: Art. 2º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "a99a036e",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 2º da Lei nº 8.212/1991",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-03",
@@ -552,7 +786,20 @@
           "label": "Art. 4º"
         }
       ],
-      "explanation": "O art. 3º apresenta a finalidade da Previdência Social e os princípios e diretrizes de sua organização."
+      "explanation": "O art. 3º apresenta a finalidade da Previdência Social e os princípios e diretrizes de sua organização. Fundamento legal: Art. 3º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "c9a70d90",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "topic": "Finalidade e organização da Previdência Social",
+      "legal_reference": "Art. 3º da Lei nº 8.212/1991",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-04",
@@ -581,7 +828,20 @@
           "label": "Art. 4º"
         }
       ],
-      "explanation": "O art. 4º da Lei 8.212/1991 define a Assistência Social e apresenta diretrizes para sua organização."
+      "explanation": "O art. 4º da Lei 8.212/1991 define a Assistência Social e apresenta diretrizes para sua organização. Fundamento legal: Art. 4º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "b010d53d",
+      "article": "Art. 4º",
+      "article_key": "Art. 4",
+      "topic": "Assistência Social",
+      "legal_reference": "Art. 4º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-01",
@@ -610,7 +870,20 @@
           "label": "Art. 20"
         }
       ],
-      "explanation": "O art. 1º apresenta o conceito legal da assistência social na LOAS."
+      "explanation": "O art. 1º apresenta o conceito legal da assistência social na LOAS. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "6537e51b",
+      "article": "Art. 1º",
+      "article_key": "Art. 1",
+      "topic": "Conceito de Assistência Social",
+      "legal_reference": "Art. 1º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-02",
@@ -639,7 +912,20 @@
           "label": "Art. 20"
         }
       ],
-      "explanation": "O art. 2º da LOAS enumera os objetivos da assistência social."
+      "explanation": "O art. 2º da LOAS enumera os objetivos da assistência social. Fundamento legal: Art. 2º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "af8112f8",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Objetivos da Assistência Social",
+      "legal_reference": "Art. 2º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-04",
@@ -668,7 +954,20 @@
           "label": "Art. 20"
         }
       ],
-      "explanation": "O art. 4º enumera os princípios que regem a assistência social."
+      "explanation": "O art. 4º enumera os princípios que regem a assistência social. Fundamento legal: Art. 4º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "7f30fff9",
+      "article": "Art. 4º",
+      "article_key": "Art. 4",
+      "topic": "Princípios da Assistência Social",
+      "legal_reference": "Art. 4º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-20",
@@ -697,7 +996,20 @@
           "label": "Art. 20"
         }
       ],
-      "explanation": "O art. 20 disciplina o BPC, incluindo os requisitos pessoais e familiares previstos em lei."
+      "explanation": "O art. 20 disciplina o BPC, incluindo os requisitos pessoais e familiares previstos em lei. Fundamento legal: Art. 20º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "6273fe44",
+      "article": "Art. 20º",
+      "article_key": "Art. 20",
+      "topic": "Benefício de Prestação Continuada",
+      "legal_reference": "Art. 20º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-02",
@@ -726,7 +1038,20 @@
           "label": "Art. 7º"
         }
       ],
-      "explanation": "O art. 2º contém a definição legal de servidor para os efeitos da Lei 8.112/1990."
+      "explanation": "O art. 2º contém a definição legal de servidor para os efeitos da Lei 8.112/1990. Fundamento legal: Art. 2º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "27482f95",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "topic": "Definição de servidor",
+      "legal_reference": "Art. 2º da Lei nº 8.112/1990",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-03",
@@ -755,7 +1080,20 @@
           "label": "Art. 8º"
         }
       ],
-      "explanation": "O art. 3º define cargo público e ainda dispõe, em seu parágrafo único, sobre criação, denominação, vencimento e provimento dos cargos."
+      "explanation": "O art. 3º define cargo público e ainda dispõe, em seu parágrafo único, sobre criação, denominação, vencimento e provimento dos cargos. Fundamento legal: Art. 3º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "1909aa80",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "topic": "Definição de cargo público",
+      "legal_reference": "Art. 3º da Lei nº 8.112/1990",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-05",
@@ -784,7 +1122,20 @@
           "label": "Art. 8º"
         }
       ],
-      "explanation": "O art. 5º reúne os requisitos básicos para investidura em cargo público e prevê outras regras nos parágrafos."
+      "explanation": "O art. 5º reúne os requisitos básicos para investidura em cargo público e prevê outras regras nos parágrafos. Fundamento legal: Art. 5º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "be184d59",
+      "article": "Art. 5º",
+      "article_key": "Art. 5",
+      "topic": "Requisitos para investidura em cargo público",
+      "legal_reference": "Art. 5º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-07",
@@ -813,7 +1164,20 @@
           "label": "Art. 8º"
         }
       ],
-      "explanation": "O art. 7º determina que a investidura em cargo público ocorre com a posse."
+      "explanation": "O art. 7º determina que a investidura em cargo público ocorre com a posse. Fundamento legal: Art. 7º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "21fade4a",
+      "article": "Art. 7º",
+      "article_key": "Art. 7",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 7º da Lei nº 8.112/1990",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-08",
@@ -842,7 +1206,20 @@
           "label": "Art. 8º"
         }
       ],
-      "explanation": "O art. 8º enumera as formas de provimento de cargo público. Algumas formas anteriormente previstas aparecem como revogadas na redação atual."
+      "explanation": "O art. 8º enumera as formas de provimento de cargo público. Algumas formas anteriormente previstas aparecem como revogadas na redação atual. Fundamento legal: Art. 8º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "f1eed745",
+      "article": "Art. 8º",
+      "article_key": "Art. 8",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 8º da Lei nº 8.112/1990",
+      "difficulty": "dificil",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-13",
@@ -871,7 +1248,20 @@
           "label": "Art. 15º"
         }
       ],
-      "explanation": "O art. 13 trata do segurado facultativo e de sua filiação mediante contribuição, desde que não esteja incluído nas categorias obrigatórias do art. 11."
+      "explanation": "O art. 13 trata do segurado facultativo e de sua filiação mediante contribuição, desde que não esteja incluído nas categorias obrigatórias do art. 11. Fundamento legal: Art. 13º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "4c576141",
+      "article": "Art. 13º",
+      "article_key": "Art. 13",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 13º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-15",
@@ -900,7 +1290,20 @@
           "label": "Art. 16º"
         }
       ],
-      "explanation": "O art. 15 define as hipóteses e os prazos em que a pessoa mantém a qualidade de segurado independentemente de contribuições."
+      "explanation": "O art. 15 define as hipóteses e os prazos em que a pessoa mantém a qualidade de segurado independentemente de contribuições. Fundamento legal: Art. 15º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "8919fb13",
+      "article": "Art. 15º",
+      "article_key": "Art. 15",
+      "topic": "Manutenção da qualidade de segurado",
+      "legal_reference": "Art. 15º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-16",
@@ -929,7 +1332,20 @@
           "label": "Art. 18º"
         }
       ],
-      "explanation": "O art. 16 apresenta as classes de dependentes do segurado e as regras relacionadas à dependência econômica."
+      "explanation": "O art. 16 apresenta as classes de dependentes do segurado e as regras relacionadas à dependência econômica. Fundamento legal: Art. 16º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "eebbc826",
+      "article": "Art. 16º",
+      "article_key": "Art. 16",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 16º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-25",
@@ -958,7 +1374,20 @@
           "label": "Art. 27º"
         }
       ],
-      "explanation": "O art. 25 estabelece os períodos de carência para as prestações que enumera, ressalvado o disposto no art. 26."
+      "explanation": "O art. 25 estabelece os períodos de carência para as prestações que enumera, ressalvado o disposto no art. 26. Fundamento legal: Art. 25º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "a2534eff",
+      "article": "Art. 25º",
+      "article_key": "Art. 25",
+      "topic": "Períodos de carência",
+      "legal_reference": "Art. 25º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-26",
@@ -987,7 +1416,20 @@
           "label": "Art. 28º"
         }
       ],
-      "explanation": "O art. 26 apresenta as hipóteses de benefícios e serviços que independem de carência."
+      "explanation": "O art. 26 apresenta as hipóteses de benefícios e serviços que independem de carência. Fundamento legal: Art. 26º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "5fbfca84",
+      "article": "Art. 26º",
+      "article_key": "Art. 26",
+      "topic": "Prestações que independem de carência",
+      "legal_reference": "Art. 26º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-42",
@@ -1016,7 +1458,20 @@
           "label": "Art. 44º"
         }
       ],
-      "explanation": "O art. 42 disciplina a aposentadoria por incapacidade permanente, usando na redação legal capturada a denominação histórica “aposentadoria por invalidez”."
+      "explanation": "O art. 42 disciplina a aposentadoria por incapacidade permanente, usando na redação legal capturada a denominação histórica “aposentadoria por invalidez”. Fundamento legal: Art. 42º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "5475472f",
+      "article": "Art. 42º",
+      "article_key": "Art. 42",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 42º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-59",
@@ -1045,7 +1500,20 @@
           "label": "Art. 60º"
         }
       ],
-      "explanation": "O art. 59 trata do benefício por incapacidade temporária e exige incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos, quando for o caso."
+      "explanation": "O art. 59 trata do benefício por incapacidade temporária e exige incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos, quando for o caso. Fundamento legal: Art. 59º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "9ba0b732",
+      "article": "Art. 59º",
+      "article_key": "Art. 59",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 59º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-74",
@@ -1074,7 +1542,20 @@
           "label": "Art. 75º"
         }
       ],
-      "explanation": "O art. 74 define quando a pensão por morte começa a ser devida, conforme o momento do requerimento e a hipótese de morte presumida."
+      "explanation": "O art. 74 define quando a pensão por morte começa a ser devida, conforme o momento do requerimento e a hipótese de morte presumida. Fundamento legal: Art. 74º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "b44682b3",
+      "article": "Art. 74º",
+      "article_key": "Art. 74",
+      "topic": "Termo inicial da pensão por morte",
+      "legal_reference": "Art. 74º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-86",
@@ -1103,7 +1584,20 @@
           "label": "Art. 88º"
         }
       ],
-      "explanation": "O art. 86 trata do auxílio-acidente e exige sequela consolidada que implique redução da capacidade para o trabalho habitualmente exercido."
+      "explanation": "O art. 86 trata do auxílio-acidente e exige sequela consolidada que implique redução da capacidade para o trabalho habitualmente exercido. Fundamento legal: Art. 86º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "dc05da29",
+      "article": "Art. 86º",
+      "article_key": "Art. 86",
+      "topic": "Auxílio-acidente",
+      "legal_reference": "Art. 86º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8213-101",
@@ -1132,7 +1626,20 @@
           "label": "Art. 103º"
         }
       ],
-      "explanation": "O art. 101 reúne obrigações relacionadas à avaliação médica, à reabilitação profissional e ao tratamento gratuito, com as exceções legais."
+      "explanation": "O art. 101 reúne obrigações relacionadas à avaliação médica, à reabilitação profissional e ao tratamento gratuito, com as exceções legais. Fundamento legal: Art. 101º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "e1547aff",
+      "article": "Art. 101º",
+      "article_key": "Art. 101",
+      "topic": "Identificação do dispositivo legal",
+      "legal_reference": "Art. 101º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-12",
@@ -1161,7 +1668,20 @@
           "label": "Art. 15º"
         }
       ],
-      "explanation": "O art. 12 da Lei 8.212/1991 enumera as categorias de segurados obrigatórios, como empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial."
+      "explanation": "O art. 12 da Lei 8.212/1991 enumera as categorias de segurados obrigatórios, como empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial. Fundamento legal: Art. 12º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "646c148e",
+      "article": "Art. 12º",
+      "article_key": "Art. 12",
+      "topic": "Segurados obrigatórios no custeio",
+      "legal_reference": "Art. 12º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-15",
@@ -1190,7 +1710,20 @@
           "label": "Art. 17º"
         }
       ],
-      "explanation": "O art. 15 define empresa para os efeitos da Lei 8.212/1991 e também define empregador doméstico; o inciso I expressamente admite finalidade lucrativa ou não."
+      "explanation": "O art. 15 define empresa para os efeitos da Lei 8.212/1991 e também define empregador doméstico; o inciso I expressamente admite finalidade lucrativa ou não. Fundamento legal: Art. 15º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "743d6a5a",
+      "article": "Art. 15º",
+      "article_key": "Art. 15",
+      "topic": "Conceito de empresa e empregador doméstico",
+      "legal_reference": "Art. 15º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-28",
@@ -1219,7 +1752,20 @@
           "label": "Art. 30º"
         }
       ],
-      "explanation": "O art. 28 apresenta o conceito de salário-de-contribuição e suas regras para empregado, trabalhador avulso, empregado doméstico, contribuinte individual e segurado facultativo."
+      "explanation": "O art. 28 apresenta o conceito de salário-de-contribuição e suas regras para empregado, trabalhador avulso, empregado doméstico, contribuinte individual e segurado facultativo. Fundamento legal: Art. 28º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "59b42381",
+      "article": "Art. 28º",
+      "article_key": "Art. 28",
+      "topic": "Salário-de-contribuição",
+      "legal_reference": "Art. 28º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8212-30",
@@ -1248,7 +1794,20 @@
           "label": "Art. 31º"
         }
       ],
-      "explanation": "O art. 30 trata das obrigações de arrecadação e recolhimento, incluindo responsabilidades da empresa e prazos previstos em lei."
+      "explanation": "O art. 30 trata das obrigações de arrecadação e recolhimento, incluindo responsabilidades da empresa e prazos previstos em lei. Fundamento legal: Art. 30º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "93b344df",
+      "article": "Art. 30º",
+      "article_key": "Art. 30",
+      "topic": "Arrecadação e recolhimento",
+      "legal_reference": "Art. 30º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-06",
@@ -1277,7 +1836,20 @@
           "label": "Art. 7º"
         }
       ],
-      "explanation": "O art. 6º da LOAS organiza a gestão da assistência social sob a forma descentralizada e participativa do SUAS."
+      "explanation": "O art. 6º da LOAS organiza a gestão da assistência social sob a forma descentralizada e participativa do SUAS. Fundamento legal: Art. 6º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "ed876e47",
+      "article": "Art. 6º",
+      "article_key": "Art. 6",
+      "topic": "Sistema Único de Assistência Social",
+      "legal_reference": "Art. 6º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-21",
@@ -1306,7 +1878,20 @@
           "label": "Art. 22º"
         }
       ],
-      "explanation": "O art. 21 prevê revisão do BPC a cada dois anos e disciplina hipóteses de cessação ou cancelamento, sem afastar as exceções legais."
+      "explanation": "O art. 21 prevê revisão do BPC a cada dois anos e disciplina hipóteses de cessação ou cancelamento, sem afastar as exceções legais. Fundamento legal: Art. 21º da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "4c5b8cbb",
+      "article": "Art. 21º",
+      "article_key": "Art. 21",
+      "topic": "Revisão do BPC",
+      "legal_reference": "Art. 21º da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-21a",
@@ -1335,7 +1920,20 @@
           "label": "Art. 21-B"
         }
       ],
-      "explanation": "O art. 21-A disciplina a suspensão do BPC durante o exercício de atividade remunerada e as condições para requerer a continuidade do pagamento após o encerramento da atividade."
+      "explanation": "O art. 21-A disciplina a suspensão do BPC durante o exercício de atividade remunerada e as condições para requerer a continuidade do pagamento após o encerramento da atividade. Fundamento legal: Art. 21-A da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "7e5096d2",
+      "article": "Art. 21-A",
+      "article_key": "Art. 21-A",
+      "topic": "Atividade remunerada e BPC",
+      "legal_reference": "Art. 21-A da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-loas-21b",
@@ -1364,7 +1962,20 @@
           "label": "Art. 22º"
         }
       ],
-      "explanation": "O art. 21-B estabelece prazos de regularização do CadÚnico contados da efetiva notificação, que variam conforme o porte do município."
+      "explanation": "O art. 21-B estabelece prazos de regularização do CadÚnico contados da efetiva notificação, que variam conforme o porte do município. Fundamento legal: Art. 21-B da Lei nº 8.742/1993.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "ba0e1d8f66332af27dc9b89037a4bc8cf2b6e0745485094ae810fecf8ce3ab28",
+      "source_article_hash": "37c1cab1",
+      "article": "Art. 21-B",
+      "article_key": "Art. 21-B",
+      "topic": "Regularização do CadÚnico",
+      "legal_reference": "Art. 21-B da Lei nº 8.742/1993",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-18",
@@ -1393,7 +2004,20 @@
           "label": "Art. 20º"
         }
       ],
-      "explanation": "O art. 18 lista situações de impedimento, como interesse direto ou indireto na matéria e participação em certas condições no processo."
+      "explanation": "O art. 18 lista situações de impedimento, como interesse direto ou indireto na matéria e participação em certas condições no processo. Fundamento legal: Art. 18º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "bf25958c",
+      "article": "Art. 18º",
+      "article_key": "Art. 18",
+      "topic": "Impedimento no processo administrativo",
+      "legal_reference": "Art. 18º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-24",
@@ -1422,7 +2046,20 @@
           "label": "Art. 26º"
         }
       ],
-      "explanation": "O art. 24 fixa prazo geral de cinco dias quando não houver disposição específica e permite dilatação até o dobro mediante justificação comprovada."
+      "explanation": "O art. 24 fixa prazo geral de cinco dias quando não houver disposição específica e permite dilatação até o dobro mediante justificação comprovada. Fundamento legal: Art. 24º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "ca0b31d8",
+      "article": "Art. 24º",
+      "article_key": "Art. 24",
+      "topic": "Prazo geral para prática de atos",
+      "legal_reference": "Art. 24º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-26",
@@ -1451,7 +2088,20 @@
           "label": "Art. 27º"
         }
       ],
-      "explanation": "O art. 26 disciplina a intimação do interessado para ciência de decisão ou realização de diligências."
+      "explanation": "O art. 26 disciplina a intimação do interessado para ciência de decisão ou realização de diligências. Fundamento legal: Art. 26º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "997e3b90",
+      "article": "Art. 26º",
+      "article_key": "Art. 26",
+      "topic": "Intimação do interessado",
+      "legal_reference": "Art. 26º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-49",
@@ -1480,7 +2130,20 @@
           "label": "Art. 51º"
         }
       ],
-      "explanation": "O art. 49 prevê até trinta dias para a decisão após a conclusão da instrução, com possibilidade de prorrogação por igual período expressamente motivada."
+      "explanation": "O art. 49 prevê até trinta dias para a decisão após a conclusão da instrução, com possibilidade de prorrogação por igual período expressamente motivada. Fundamento legal: Art. 49º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "0037027e",
+      "article": "Art. 49º",
+      "article_key": "Art. 49",
+      "topic": "Prazo para decisão administrativa",
+      "legal_reference": "Art. 49º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-50",
@@ -1509,7 +2172,20 @@
           "label": "Art. 52º"
         }
       ],
-      "explanation": "O art. 50 enumera hipóteses em que a motivação é obrigatória e determina que seja explícita, clara e congruente."
+      "explanation": "O art. 50 enumera hipóteses em que a motivação é obrigatória e determina que seja explícita, clara e congruente. Fundamento legal: Art. 50º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "9f07237d",
+      "article": "Art. 50º",
+      "article_key": "Art. 50",
+      "topic": "Motivação dos atos administrativos",
+      "legal_reference": "Art. 50º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-9784-59",
@@ -1538,7 +2214,20 @@
           "label": "Art. 60º"
         }
       ],
-      "explanation": "O art. 59 prevê prazo de dez dias para interposição do recurso administrativo, salvo disposição legal específica."
+      "explanation": "O art. 59 prevê prazo de dez dias para interposição do recurso administrativo, salvo disposição legal específica. Fundamento legal: Art. 59º da Lei nº 9.784/1999.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "96dc4adbea2ef338b5751c314aee21b8dd1720036e932fab55e11275b1178763",
+      "source_article_hash": "0c8faa81",
+      "article": "Art. 59º",
+      "article_key": "Art. 59",
+      "topic": "Prazo de recurso administrativo",
+      "legal_reference": "Art. 59º da Lei nº 9.784/1999",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-13",
@@ -1567,7 +2256,20 @@
           "label": "Art. 14º"
         }
       ],
-      "explanation": "O art. 13 disciplina a posse e prevê o prazo de trinta dias, com regras próprias para situações de licença ou afastamento."
+      "explanation": "O art. 13 disciplina a posse e prevê o prazo de trinta dias, com regras próprias para situações de licença ou afastamento. Fundamento legal: Art. 13º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "aab07f8e",
+      "article": "Art. 13º",
+      "article_key": "Art. 13",
+      "topic": "Posse em cargo público",
+      "legal_reference": "Art. 13º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-15",
@@ -1596,7 +2298,20 @@
           "label": "Art. 17º"
         }
       ],
-      "explanation": "O art. 15 define exercício e estabelece prazo de quinze dias, contado da posse, para o servidor entrar em exercício."
+      "explanation": "O art. 15 define exercício e estabelece prazo de quinze dias, contado da posse, para o servidor entrar em exercício. Fundamento legal: Art. 15º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "737c8b1f",
+      "article": "Art. 15º",
+      "article_key": "Art. 15",
+      "topic": "Exercício no cargo público",
+      "legal_reference": "Art. 15º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-19",
@@ -1625,7 +2340,20 @@
           "label": "Art. 21º"
         }
       ],
-      "explanation": "O art. 19 estabelece a regra geral de jornada, ressalvadas as durações previstas em leis especiais."
+      "explanation": "O art. 19 estabelece a regra geral de jornada, ressalvadas as durações previstas em leis especiais. Fundamento legal: Art. 19º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "2f664b5a",
+      "article": "Art. 19º",
+      "article_key": "Art. 19",
+      "topic": "Jornada de trabalho",
+      "legal_reference": "Art. 19º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-116",
@@ -1654,7 +2382,20 @@
           "label": "Art. 118º"
         }
       ],
-      "explanation": "O art. 116 enumera os deveres do servidor, incluindo zelo, lealdade às instituições, cumprimento das normas e tratamento urbano às pessoas."
+      "explanation": "O art. 116 enumera os deveres do servidor, incluindo zelo, lealdade às instituições, cumprimento das normas e tratamento urbano às pessoas. Fundamento legal: Art. 116º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "cfe3865c",
+      "article": "Art. 116º",
+      "article_key": "Art. 116",
+      "topic": "Deveres do servidor",
+      "legal_reference": "Art. 116º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-8112-117",
@@ -1683,7 +2424,20 @@
           "label": "Art. 119º"
         }
       ],
-      "explanation": "O art. 117 reúne proibições funcionais e inclui a vedação descrita no inciso VIII."
+      "explanation": "O art. 117 reúne proibições funcionais e inclui a vedação descrita no inciso VIII. Fundamento legal: Art. 117º da Lei nº 8.112/1990.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "9252cec3feb52cb8f98a8e7329fc6bb393ca70a85b7ecce9ac18ec2e8449a01e",
+      "source_article_hash": "05fa5e3f",
+      "article": "Art. 117º",
+      "article_key": "Art. 117",
+      "topic": "Proibições ao servidor",
+      "legal_reference": "Art. 117º da Lei nº 8.112/1990",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-cf-37",
@@ -1712,7 +2466,20 @@
           "label": "Art. 40º"
         }
       ],
-      "explanation": "O caput do art. 37 reúne os princípios expressos da Administração Pública, conhecidos pela sigla LIMPE."
+      "explanation": "O caput do art. 37 reúne os princípios expressos da Administração Pública, conhecidos pela sigla LIMPE. Fundamento legal: Art. 37º da Constituição Federal.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+      "source_snapshot_hash": "f80fc72f1aff3bcfdc7729221bd5d922259c34612f0044fbd7402b09c974cfdc",
+      "source_article_hash": "916fd61a",
+      "article": "Art. 37º",
+      "article_key": "Art. 37",
+      "topic": "Princípios da Administração Pública",
+      "legal_reference": "Art. 37º da Constituição Federal",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-cf-194",
@@ -1741,7 +2508,20 @@
           "label": "Art. 196º"
         }
       ],
-      "explanation": "O art. 194 define a Seguridade Social e enumera os objetivos que orientam sua organização."
+      "explanation": "O art. 194 define a Seguridade Social e enumera os objetivos que orientam sua organização. Fundamento legal: Art. 194º da Constituição Federal.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+      "source_snapshot_hash": "f80fc72f1aff3bcfdc7729221bd5d922259c34612f0044fbd7402b09c974cfdc",
+      "source_article_hash": "961beb6e",
+      "article": "Art. 194º",
+      "article_key": "Art. 194",
+      "topic": "Conceito de Seguridade Social",
+      "legal_reference": "Art. 194º da Constituição Federal",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-cf-201",
@@ -1770,7 +2550,20 @@
           "label": "Art. 203º"
         }
       ],
-      "explanation": "O art. 201 estabelece a organização do RGPS e os riscos sociais que devem ser cobertos, observadas as regras constitucionais e legais."
+      "explanation": "O art. 201 estabelece a organização do RGPS e os riscos sociais que devem ser cobertos, observadas as regras constitucionais e legais. Fundamento legal: Art. 201º da Constituição Federal.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+      "source_snapshot_hash": "f80fc72f1aff3bcfdc7729221bd5d922259c34612f0044fbd7402b09c974cfdc",
+      "source_article_hash": "b0edaa64",
+      "article": "Art. 201º",
+      "article_key": "Art. 201",
+      "topic": "Organização do RGPS",
+      "legal_reference": "Art. 201º da Constituição Federal",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
     },
     {
       "id": "desc-cf-203",
@@ -1799,7 +2592,148 @@
           "label": "Art. 204º"
         }
       ],
-      "explanation": "O art. 203 estabelece os objetivos constitucionais da assistência social e deixa expresso seu caráter não contributivo."
+      "explanation": "O art. 203 estabelece os objetivos constitucionais da assistência social e deixa expresso seu caráter não contributivo. Fundamento legal: Art. 203º da Constituição Federal.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+      "source_snapshot_hash": "f80fc72f1aff3bcfdc7729221bd5d922259c34612f0044fbd7402b09c974cfdc",
+      "source_article_hash": "687808f8",
+      "article": "Art. 203º",
+      "article_key": "Art. 203",
+      "topic": "Objetivos da assistência social",
+      "legal_reference": "Art. 203º da Constituição Federal",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "frase_ancora_no_artigo_atual+alternativas_existentes"
+    },
+    {
+      "id": "desc-from-8213-art11",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Em qual artigo da Lei nº 8.213/1991 aparece a previsão: “São segurados obrigatórios da Previdência Social as seguintes pessoas físicas”?",
+      "answer_article_key": "Art. 11",
+      "article": "Art. 11º",
+      "article_key": "Art. 11",
+      "topic": "Segurados obrigatórios do RGPS",
+      "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
+      "options": [
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        },
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        },
+        {
+          "article_key": "Art. 9",
+          "label": "Art. 9º"
+        }
+      ],
+      "explanation": "O trecho apresentado aparece no Art. 11º da norma. Fundamento legal: Art. 11º da Lei nº 8.213/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "caeb5fefbb559839c65fa5808845084e956151435e514a1800afe34faef35393",
+      "source_article_hash": "ce1e4297",
+      "legal_reference": "Art. 11º da Lei nº 8.213/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
+      "validation_status": "validated",
+      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
+    },
+    {
+      "id": "desc-from-8212-art22",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Em qual artigo da Lei nº 8.212/1991 aparece a previsão: “vinte por cento sobre o total das remunerações pagas”?",
+      "answer_article_key": "Art. 22",
+      "article": "Art. 22º",
+      "article_key": "Art. 22",
+      "topic": "Contribuição a cargo da empresa",
+      "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
+      "options": [
+        {
+          "article_key": "Art. 22",
+          "label": "Art. 22º"
+        },
+        {
+          "article_key": "Art. 22-A",
+          "label": "Art. 22-A"
+        },
+        {
+          "article_key": "Art. 22-B",
+          "label": "Art. 22-B"
+        },
+        {
+          "article_key": "Art. 21",
+          "label": "Art. 21º"
+        }
+      ],
+      "explanation": "O trecho apresentado aparece no Art. 22º da norma. Fundamento legal: Art. 22º da Lei nº 8.212/1991.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "112725fc",
+      "legal_reference": "Art. 22º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
+      "validation_status": "validated",
+      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
+    },
+    {
+      "id": "desc-from-cf-art195",
+      "category": "Direito Constitucional",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "question": "Em qual artigo da Constituição Federal aparece a previsão: “financiada por toda a sociedade, de forma direta e indireta”?",
+      "answer_article_key": "Art. 195",
+      "article": "Art. 195º",
+      "article_key": "Art. 195",
+      "topic": "Financiamento da Seguridade Social",
+      "validation_phrase": "financiada por toda a sociedade, de forma direta e indireta",
+      "options": [
+        {
+          "article_key": "Art. 195",
+          "label": "Art. 195º"
+        },
+        {
+          "article_key": "Art. 194",
+          "label": "Art. 194º"
+        },
+        {
+          "article_key": "Art. 196",
+          "label": "Art. 196º"
+        },
+        {
+          "article_key": "Art. 193",
+          "label": "Art. 193º"
+        }
+      ],
+      "explanation": "O trecho apresentado aparece no Art. 195º da norma. Fundamento legal: Art. 195º da Constituição Federal.",
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
+      "source_snapshot_hash": "f80fc72f1aff3bcfdc7729221bd5d922259c34612f0044fbd7402b09c974cfdc",
+      "source_article_hash": "9c07bccb",
+      "legal_reference": "Art. 195º da Constituição Federal",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; reconhecer um trecho legal entre dispositivos próximos.",
+      "validation_status": "validated",
+      "validation_method": "ancora_exclusiva_no_artigo_atual+alternativas_existentes"
     }
-  ]
+  ],
+  "generated_at": "2026-11-14",
+  "validation_policy": "Questões liberadas apenas quando o artigo-gabarito, a frase-âncora, as alternativas e a versão do texto continuam compatíveis com a captura atual."
 }
