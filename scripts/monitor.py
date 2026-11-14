@@ -11,6 +11,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -62,6 +63,13 @@ def fetch_text(url: str) -> str:
     response = requests.get(url, headers=headers, timeout=45)
     response.raise_for_status()
 
+    requested_host = (urlparse(url).hostname or "").lower().removeprefix("www.")
+    final_host = (urlparse(response.url).hostname or "").lower().removeprefix("www.")
+    if requested_host and final_host and requested_host != final_host:
+        raise ValueError(
+            "A fonte redirecionou para outro domínio: " + response.url
+        )
+
     content_type = response.headers.get("Content-Type", "").lower()
     is_pdf = url.lower().endswith(".pdf") or "application/pdf" in content_type or response.content.startswith(b"%PDF")
     if is_pdf:
@@ -82,12 +90,41 @@ def fetch_text(url: str) -> str:
     return text
 
 
+def validate_law_identity(text: str, law: dict[str, Any], source_url: str) -> None:
+    """Impede que páginas genéricas/erros do portal sejam salvos como texto de lei."""
+    parts = str(law.get("id", "")).split("-")
+    if len(parts) < 2:
+        return
+
+    if parts[0] == "constituicao":
+        required = [parts[-1]]
+    elif len(parts) >= 3 and parts[-2].isdigit() and parts[-1].isdigit():
+        required = [parts[-2], parts[-1]]
+    else:
+        return
+
+    numeric_tokens = {
+        re.sub(r"\\D", "", match.group(0))
+        for match in re.finditer(r"\\d+(?:[./-]\\d+)*", text)
+    }
+    missing = [token for token in required if token not in numeric_tokens]
+    if missing:
+        raise ValueError(
+            "A resposta não contém a identificação desta norma ("
+            + law.get("id", "sem identificador")
+            + "); possível página genérica ou redirecionamento. Fonte: "
+            + source_url
+        )
+
+
 def fetch_law_text(law: dict[str, Any]) -> tuple[str, str]:
     urls = law.get("fetch_urls") or [law["url"]]
     failures = []
     for url in urls:
         try:
-            return fetch_text(url), url
+            text = fetch_text(url)
+            validate_law_identity(text, law, url)
+            return text, url
         except Exception as exc:
             failures.append(url + " -> " + type(exc).__name__ + ": " + str(exc))
     raise RuntimeError("Nenhuma fonte configurada respondeu: " + " | ".join(failures))
