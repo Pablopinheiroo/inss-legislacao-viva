@@ -29,6 +29,7 @@
     <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
     <button id="tab-multi-ce" class="nav-tab" type="button">Várias afirmações</button>
     <button id="tab-before-after" class="nav-tab" type="button">Antes e depois</button>
+    <button id="tab-memory" class="nav-tab" type="button">Memorização ativa</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -392,6 +393,91 @@
     <footer class="footer-note">
       <strong>Sem alterações inventadas.</strong>
       <span>Este modo só libera comparações artigo por artigo que o monitor registrou. Mudanças de texto integral continuam no Radar. A data é a da detecção, não necessariamente a data de publicação ou de início da vigência; confirme sempre o ato oficial.</span>
+    </footer>
+  </main>
+
+
+  <main id="memory-view" class="page-shell hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">MODO DE ESTUDO · LEMBRANÇA ATIVA</p>
+        <h1>Memorização ativa</h1>
+        <p class="subtitle">Tente lembrar o conteúdo sem consultar. Depois compare sua resposta com o texto da lei.</p>
+      </div>
+      <div class="quiz-config memory-config">
+        <label class="select-wrap"><span>Matéria</span><select id="memory-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Cartões</span><select id="memory-length"><option value="5">5 cartões</option><option value="10" selected>10 cartões</option><option value="todas">Todos disponíveis</option></select></label>
+        <button id="start-memory" class="primary-button" type="button" disabled>Começar revisão</button>
+      </div>
+    </section>
+
+    <section class="memory-stats" aria-label="Resumo das revisões">
+      <article class="memory-stat"><span>Cartões disponíveis</span><strong id="memory-total">—</strong></article>
+      <article class="memory-stat"><span>Revisões pendentes</span><strong id="memory-due">—</strong></article>
+      <article class="memory-stat"><span>Já revisados</span><strong id="memory-seen">—</strong></article>
+    </section>
+
+    <p id="memory-note" class="manual-check-note">Carregando os cartões e conferindo os artigos nas capturas da legislação...</p>
+
+    <section id="memory-card" class="quiz-card memory-card hidden" aria-live="polite">
+      <div class="quiz-card-top">
+        <span id="memory-category-label" class="quiz-chip"></span>
+        <span id="memory-progress" class="quiz-progress"></span>
+      </div>
+      <div class="quiz-law-line">
+        <strong id="memory-law"></strong>
+        <span id="memory-article"></span>
+      </div>
+      <div class="memory-prompt-box">
+        <span class="memory-kicker">PUXE DA MEMÓRIA</span>
+        <p id="memory-prompt" class="memory-prompt"></p>
+      </div>
+      <label class="memory-recall-label" for="memory-recall">O que você consegue lembrar?</label>
+      <textarea id="memory-recall" class="memory-recall" rows="4" placeholder="Escreva os pontos principais sem consultar a lei."></textarea>
+      <p class="memory-hint">Não precisa copiar o artigo inteiro. Tente lembrar os conceitos, requisitos, prazos, exceções e palavras importantes.</p>
+      <button id="memory-reveal" class="primary-button submit-answer" type="button">Mostrar texto da lei</button>
+
+      <section id="memory-answer" class="memory-answer hidden">
+        <div class="memory-self-check">
+          <strong>Compare com o texto oficial salvo</strong>
+          <p>Veja o que você escreveu e confira o artigo. A avaliação é sua: o sistema não corrige o texto digitado.</p>
+        </div>
+        <div class="memory-literal-wrap">
+          <span class="memory-kicker">TEXTO DO ARTIGO</span>
+          <pre id="memory-literal" class="memory-literal"></pre>
+        </div>
+        <div class="memory-source-row">
+          <a id="memory-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a>
+          <span id="memory-next-due" class="quiz-progress"></span>
+        </div>
+        <p class="memory-rating-title">Quanto você lembrou?</p>
+        <div class="memory-rating-buttons">
+          <button id="memory-again" class="memory-rating again" type="button">Esqueci</button>
+          <button id="memory-hard" class="memory-rating hard" type="button">Lembrei em parte</button>
+          <button id="memory-good" class="memory-rating good" type="button">Lembrei bem</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="memory-welcome" class="empty-state quiz-welcome">
+      <h3>Aprenda tentando lembrar</h3>
+      <p>Leia a pergunta, tente explicar o assunto com suas palavras e só depois revele o artigo. Ao avaliar sua lembrança, o cartão entra em uma fila de revisão para aparecer novamente no momento certo.</p>
+    </section>
+
+    <section id="memory-summary" class="quiz-summary hidden">
+      <p class="eyebrow">REVISÃO CONCLUÍDA</p>
+      <h2 id="memory-score"></h2>
+      <p id="memory-score-note"></p>
+      <div id="memory-summary-detail" class="memory-summary-detail"></div>
+      <div class="summary-actions">
+        <button id="memory-retry-again" class="secondary-button hidden" type="button">Repetir os que esqueci</button>
+        <button id="memory-restart" class="primary-button" type="button">Nova revisão ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <strong>Revisão salva neste navegador.</strong>
+      <span>As avaliações e datas de revisão ficam armazenadas localmente neste dispositivo. Não são sincronizadas com outro celular ou computador e não geram lembretes automáticos. A íntegra exibida vem da captura da legislação; confirme sempre na fonte oficial.</span>
     </footer>
   </main>
 
