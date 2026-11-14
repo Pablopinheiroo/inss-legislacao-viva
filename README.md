@@ -134,3 +134,12 @@ A aba **Antes e depois** transforma diferenças reais registradas em `data/legis
 O modo não inventa alterações nem usa exemplos simulados. Só libera diferenças que podem ser comparadas por artigo. Mudanças de texto integral, como alterações no índice oficial da IN 128/2022, continuam disponíveis no Radar, pois não representam um artigo individual. Enquanto o monitor não registrar mudanças artigo por artigo, o botão de início permanece desativado e o site informa isso ao estudante.
 
 A versão identificada como **Agora** é a captura mais recente consultada pelo monitor. A data de detecção não é necessariamente a data de publicação ou de início da vigência. Confirme sempre o ato oficial antes de atualizar seu material de estudo.
+
+
+## Modo Memorização ativa
+
+A aba **Memorização ativa** reúne cartões por artigo a partir das perguntas já validadas em **Descubra o artigo** e dos temas de **Várias afirmações**. Antes de usar o cartão, o site aproveita os artigos que esses modos já conferiram nas capturas salvas.
+
+O estudante recebe uma pergunta ou um tema, tenta explicar o conteúdo sem consultar e depois revela o texto integral do artigo para comparar. A avaliação é feita pelo próprio estudante; o site não finge corrigir uma resposta livre.
+
+As opções **Esqueci**, **Lembrei em parte** e **Lembrei bem** organizam a próxima revisão em 10 minutos, 1 dia ou um intervalo crescente (3, 6, 12 dias e assim por diante, limitado a 30 dias). O progresso fica no armazenamento local do navegador, sem conta, servidor ou sincronização entre dispositivos. O modo não envia lembretes: os cartões aparecem como pendentes quando o site é aberto.
