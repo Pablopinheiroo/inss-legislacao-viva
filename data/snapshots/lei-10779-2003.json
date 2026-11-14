@@ -1,6 +1,6 @@
 {
   "snapshot_version": 3,
-  "captured_at": "2026-11-14T10:02:05Z",
+  "captured_at": "2026-11-14T10:03:07Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -85,36 +85,36 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º Os órgãos federais disponibilizarão as informações\nOs órgãos federais disponibilizarão as informações\nconstantes das bases de dados, de que sejam detentores, necessárias\nà verificação dos requisitos para concessão e manutenção do\nbenefício, os quais serão objeto de cruzamento com informações\ndas bases de dados cadastrais oficiais, nos termos de ato do Poder\nExecutivo federal.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
-        "normalized_text": "§ 9º Os órgãos federais disponibilizarão as informações Os órgãos federais disponibilizarão as informações constantes das bases de dados, de que sejam detentores, necessárias à verificação dos requisitos para concessão e manutenção do benefício, os quais serão objeto de cruzamento com informações das bases de dados cadastrais oficiais, nos termos de ato do Poder Executivo federal. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+        "text": "§ 9º Os órgãos federais disponibilizarão as informações\nOs órgãos federais disponibilizarão as informações\nconstantes das bases de dados, de que sejam detentores, necessárias\nà verificação dos requisitos para concessão e manutenção do\nbenefício, os quais serão objeto de cruzamento com informações\ndas bases de dados cadastrais oficiais, nos termos de ato do Poder\nExecutivo federal.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)\n§",
+        "normalized_text": "§ 9º Os órgãos federais disponibilizarão as informações Os órgãos federais disponibilizarão as informações constantes das bases de dados, de que sejam detentores, necessárias à verificação dos requisitos para concessão e manutenção do benefício, os quais serão objeto de cruzamento com informações das bases de dados cadastrais oficiais, nos termos de ato do Poder Executivo federal. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.265, de 21/11/2025) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10. Ao requerente do benefício de que trata o\nAo requerente do benefício de que trata o\ncaput\ndeste artigo será solicitado registro biométrico nos termos do art.\n1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no\nCadastro Único para Programas Sociais do Governo Federal (CadÚnico),\nsem efeitos em limite de renda para o acesso ao benefício, admitida,\npara fins de verificação biométrica, a utilização da base de\ndados do Tribunal Superior Eleitoral e da Carteira Nacional de\nHabilitação (CNH) até a plena implementação da Carteira de\nIdentidade Nacional.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 10. Ao requerente do benefício de que trata o Ao requerente do benefício de que trata o caput deste artigo será solicitado registro biométrico nos termos do art. 1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico), sem efeitos em limite de renda para o acesso ao benefício, admitida, para fins de verificação biométrica, a utilização da base de dados do Tribunal Superior Eleitoral e da Carteira Nacional de Habilitação (CNH) até a plena implementação da Carteira de Identidade Nacional. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10. Ao requerente do benefício de que trata o\nAo requerente do benefício de que trata o\ncaput\ndeste artigo será solicitado registro biométrico nos termos do art.\n1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no\nCadastro Único para Programas Sociais do Governo Federal (CadÚnico),\nsem efeitos em limite de renda para o acesso ao benefício, admitida,\npara fins de verificação biométrica, a utilização da base de\ndados do Tribunal Superior Eleitoral e da Carteira Nacional de\nHabilitação (CNH) até a plena implementação da Carteira de\nIdentidade Nacional.\n(Parágrafo\nacrescido pela Lei nº 14.973, de 16/9/2024\n,\ne\ncom redação dada pela Lei nº 15.399, de 4/5/2026)\n§",
+        "normalized_text": "10. Ao requerente do benefício de que trata o Ao requerente do benefício de que trata o caput deste artigo será solicitado registro biométrico nos termos do art. 1º da Lei nº 15.077, de 27 de dezembro de 2024, e inscrição no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico), sem efeitos em limite de renda para o acesso ao benefício, admitida, para fins de verificação biométrica, a utilização da base de dados do Tribunal Superior Eleitoral e da Carteira Nacional de Habilitação (CNH) até a plena implementação da Carteira de Identidade Nacional. (Parágrafo acrescido pela Lei nº 14.973, de 16/9/2024 , e com redação dada pela Lei nº 15.399, de 4/5/2026) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11. Somente fará jus ao benefício de que trata este artigo o\nSomente fará jus ao benefício de que trata este artigo o\npescador profissional que comprovar domicílio em Município\nabrangido ou limítrofe à área definida no ato que instituiu o\nperíodo de defeso, conforme procedimentos e critérios estabelecidos\nem resolução do Conselho Deliberativo do Fundo de Amparo ao\nTrabalhador (Codefat).\n(\nParágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)",
-        "normalized_text": "§ 11. Somente fará jus ao benefício de que trata este artigo o Somente fará jus ao benefício de que trata este artigo o pescador profissional que comprovar domicílio em Município abrangido ou limítrofe à área definida no ato que instituiu o período de defeso, conforme procedimentos e critérios estabelecidos em resolução do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (Codefat). ( Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , e com redação dada pela Lei nº 15.265, de 21/11/2025)"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11. Somente fará jus ao benefício de que trata este artigo o\nSomente fará jus ao benefício de que trata este artigo o\npescador profissional que comprovar domicílio em Município\nabrangido ou limítrofe à área definida no ato que instituiu o\nperíodo de defeso, conforme procedimentos e critérios estabelecidos\nem resolução do Conselho Deliberativo do Fundo de Amparo ao\nTrabalhador (Codefat).\n(\nParágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\ne\ncom redação dada pela Lei nº 15.265, de 21/11/2025)\n§",
+        "normalized_text": "11. Somente fará jus ao benefício de que trata este artigo o Somente fará jus ao benefício de que trata este artigo o pescador profissional que comprovar domicílio em Município abrangido ou limítrofe à área definida no ato que instituiu o período de defeso, conforme procedimentos e critérios estabelecidos em resolução do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (Codefat). ( Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , e com redação dada pela Lei nº 15.265, de 21/11/2025) §"
       },
-      "paragrafo:12": {
-        "device_type": "paragrafo",
-        "device_label": "§ 12º",
-        "device_path": "paragrafo:12",
-        "text": "§ 12. Nos casos de exclusão por inconsistência cadastral ou falha de\nNos casos de exclusão por inconsistência cadastral ou falha de\nconferência biométrica, serão disponibilizados canais de revisão\ncéleres, presenciais ou virtuais, e gratuitos, para os pescadores\nartesanais, diretamente, ou com o apoio das entidades de pesca\nhabilitadas pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 12. Nos casos de exclusão por inconsistência cadastral ou falha de Nos casos de exclusão por inconsistência cadastral ou falha de conferência biométrica, serão disponibilizados canais de revisão céleres, presenciais ou virtuais, e gratuitos, para os pescadores artesanais, diretamente, ou com o apoio das entidades de pesca habilitadas pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "paragrafo:9/item:12",
+        "text": "12. Nos casos de exclusão por inconsistência cadastral ou falha de\nNos casos de exclusão por inconsistência cadastral ou falha de\nconferência biométrica, serão disponibilizados canais de revisão\ncéleres, presenciais ou virtuais, e gratuitos, para os pescadores\nartesanais, diretamente, ou com o apoio das entidades de pesca\nhabilitadas pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\n§",
+        "normalized_text": "12. Nos casos de exclusão por inconsistência cadastral ou falha de Nos casos de exclusão por inconsistência cadastral ou falha de conferência biométrica, serão disponibilizados canais de revisão céleres, presenciais ou virtuais, e gratuitos, para os pescadores artesanais, diretamente, ou com o apoio das entidades de pesca habilitadas pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026) §"
       },
-      "paragrafo:13": {
-        "device_type": "paragrafo",
-        "device_label": "§ 13º",
-        "device_path": "paragrafo:13",
-        "text": "§ 13. O pagamento do benefício previsto no\nO pagamento do benefício previsto no\ncaput\ndeste artigo ocorrerá durante o período do defeso correspondente,\nnos termos das regras do programa.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 13. O pagamento do benefício previsto no O pagamento do benefício previsto no caput deste artigo ocorrerá durante o período do defeso correspondente, nos termos das regras do programa. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:13": {
+        "device_type": "item",
+        "device_label": "item 13",
+        "device_path": "paragrafo:9/item:13",
+        "text": "13. O pagamento do benefício previsto no\nO pagamento do benefício previsto no\ncaput\ndeste artigo ocorrerá durante o período do defeso correspondente,\nnos termos das regras do programa.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "13. O pagamento do benefício previsto no O pagamento do benefício previsto no caput deste artigo ocorrerá durante o período do defeso correspondente, nos termos das regras do programa. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026)"
       }
     },
     "Art. 2": {
@@ -234,50 +234,50 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)",
-        "normalized_text": "§ 9º (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)"
+        "text": "§ 9º\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)\n§",
+        "normalized_text": "§ 9º (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)",
-        "normalized_text": "§ 10. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10.\n(Parágrafo\nacrescido pela Lei nº 13.134, de 16/6/2015,\ne\nrevogado\npela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024)\n§",
+        "normalized_text": "10. (Parágrafo acrescido pela Lei nº 13.134, de 16/6/2015, e revogado pela Lei nº 14.601, de 19/6/2023, em vigor em 1º/1/2024) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.303, de 11/6/2025,\ncom\nvigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67,\nde 14/10/2025, publicado no DOU de 15/10/2025)",
-        "normalized_text": "§ 11. (Parágrafo acrescido pela Medida Provisória nº 1.303, de 11/6/2025, com vigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67, de 14/10/2025, publicado no DOU de 15/10/2025)"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.303, de 11/6/2025,\ncom\nvigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67,\nde 14/10/2025, publicado no DOU de 15/10/2025)\n§",
+        "normalized_text": "11. (Parágrafo acrescido pela Medida Provisória nº 1.303, de 11/6/2025, com vigência encerrada em 8/10/2025, conforme Ato Declaratório nº 67, de 14/10/2025, publicado no DOU de 15/10/2025) §"
       },
-      "paragrafo:12": {
-        "device_type": "paragrafo",
-        "device_label": "§ 12º",
-        "device_path": "paragrafo:12",
-        "text": "§ 12. Exceto para os casos justificados de impossibilidade do exercício\nExceto para os casos justificados de impossibilidade do exercício\nda atividade pesqueira, a concessão e a manutenção do\nseguro-desemprego ficam condicionadas à comprovação do exercício\nda atividade pesqueira no período entre defesos, por meio de\nrelatório anual que deverá conter informações sobre a venda do\npescado, na forma, nos prazos e observados os critérios\nestabelecidos pelo Codefat, a ser submetido ao Ministério do\nTrabalho e Emprego.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nconvertida\nna Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 12. Exceto para os casos justificados de impossibilidade do exercício Exceto para os casos justificados de impossibilidade do exercício da atividade pesqueira, a concessão e a manutenção do seguro-desemprego ficam condicionadas à comprovação do exercício da atividade pesqueira no período entre defesos, por meio de relatório anual que deverá conter informações sobre a venda do pescado, na forma, nos prazos e observados os critérios estabelecidos pelo Codefat, a ser submetido ao Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , convertida na Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "paragrafo:9/item:12",
+        "text": "12. Exceto para os casos justificados de impossibilidade do exercício\nExceto para os casos justificados de impossibilidade do exercício\nda atividade pesqueira, a concessão e a manutenção do\nseguro-desemprego ficam condicionadas à comprovação do exercício\nda atividade pesqueira no período entre defesos, por meio de\nrelatório anual que deverá conter informações sobre a venda do\npescado, na forma, nos prazos e observados os critérios\nestabelecidos pelo Codefat, a ser submetido ao Ministério do\nTrabalho e Emprego.\n(Parágrafo\nacrescido pela Medida Provisória nº 1.323, de 4/11/2025\n,\nconvertida\nna Lei nº 15.399, de 4/5/2026)\n§",
+        "normalized_text": "12. Exceto para os casos justificados de impossibilidade do exercício Exceto para os casos justificados de impossibilidade do exercício da atividade pesqueira, a concessão e a manutenção do seguro-desemprego ficam condicionadas à comprovação do exercício da atividade pesqueira no período entre defesos, por meio de relatório anual que deverá conter informações sobre a venda do pescado, na forma, nos prazos e observados os critérios estabelecidos pelo Codefat, a ser submetido ao Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Medida Provisória nº 1.323, de 4/11/2025 , convertida na Lei nº 15.399, de 4/5/2026) §"
       },
-      "paragrafo:13": {
-        "device_type": "paragrafo",
-        "device_label": "§ 13º",
-        "device_path": "paragrafo:13",
-        "text": "§ 13.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 13. (VETADO na Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:13": {
+        "device_type": "item",
+        "device_label": "item 13",
+        "device_path": "paragrafo:9/item:13",
+        "text": "13.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)\n§",
+        "normalized_text": "13. (VETADO na Lei nº 15.399, de 4/5/2026) §"
       },
-      "paragrafo:14": {
-        "device_type": "paragrafo",
-        "device_label": "§ 14º",
-        "device_path": "paragrafo:14",
-        "text": "§ 14.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 14. (VETADO na Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:14": {
+        "device_type": "item",
+        "device_label": "item 14",
+        "device_path": "paragrafo:9/item:14",
+        "text": "14.\n(VETADO\nna Lei nº 15.399, de 4/5/2026)\n§",
+        "normalized_text": "14. (VETADO na Lei nº 15.399, de 4/5/2026) §"
       },
-      "paragrafo:15": {
-        "device_type": "paragrafo",
-        "device_label": "§ 15º",
-        "device_path": "paragrafo:15",
-        "text": "§ 15. No processo de elaboração das normas pelo Codefat que\nNo processo de elaboração das normas pelo Codefat que\nregulamentem ou complementem os dispositivos legais relacionados ao\nseguro-desemprego, será assegurada a participação, com direito a\nvoz, de representantes das entidades representativas dos pescadores\nartesanais credenciadas das 5 (cinco) grandes regiões do País, nos\ntermos definidos pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\nArt.\n2º-A. O Ministério do Trabalho e Emprego promoverá ações de\norientação e de formação direcionadas aos pescadores\nprofissionais artesanais sobre o seguro-desemprego do pescador\nartesanal, conforme disponibilidade orçamentária e financeira.\n(Artigo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
-        "normalized_text": "§ 15. No processo de elaboração das normas pelo Codefat que No processo de elaboração das normas pelo Codefat que regulamentem ou complementem os dispositivos legais relacionados ao seguro-desemprego, será assegurada a participação, com direito a voz, de representantes das entidades representativas dos pescadores artesanais credenciadas das 5 (cinco) grandes regiões do País, nos termos definidos pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026) Art. 2º-A. O Ministério do Trabalho e Emprego promoverá ações de orientação e de formação direcionadas aos pescadores profissionais artesanais sobre o seguro-desemprego do pescador artesanal, conforme disponibilidade orçamentária e financeira. (Artigo acrescido pela Lei nº 15.399, de 4/5/2026)"
+      "paragrafo:9/item:15": {
+        "device_type": "item",
+        "device_label": "item 15",
+        "device_path": "paragrafo:9/item:15",
+        "text": "15. No processo de elaboração das normas pelo Codefat que\nNo processo de elaboração das normas pelo Codefat que\nregulamentem ou complementem os dispositivos legais relacionados ao\nseguro-desemprego, será assegurada a participação, com direito a\nvoz, de representantes das entidades representativas dos pescadores\nartesanais credenciadas das 5 (cinco) grandes regiões do País, nos\ntermos definidos pelo Ministério do Trabalho e Emprego.\n(Parágrafo\nacrescido pela Lei nº 15.399, de 4/5/2026)\nArt.\n2º-A. O Ministério do Trabalho e Emprego promoverá ações de\norientação e de formação direcionadas aos pescadores\nprofissionais artesanais sobre o seguro-desemprego do pescador\nartesanal, conforme disponibilidade orçamentária e financeira.\n(Artigo\nacrescido pela Lei nº 15.399, de 4/5/2026)",
+        "normalized_text": "15. No processo de elaboração das normas pelo Codefat que No processo de elaboração das normas pelo Codefat que regulamentem ou complementem os dispositivos legais relacionados ao seguro-desemprego, será assegurada a participação, com direito a voz, de representantes das entidades representativas dos pescadores artesanais credenciadas das 5 (cinco) grandes regiões do País, nos termos definidos pelo Ministério do Trabalho e Emprego. (Parágrafo acrescido pela Lei nº 15.399, de 4/5/2026) Art. 2º-A. O Ministério do Trabalho e Emprego promoverá ações de orientação e de formação direcionadas aos pescadores profissionais artesanais sobre o seguro-desemprego do pescador artesanal, conforme disponibilidade orçamentária e financeira. (Artigo acrescido pela Lei nº 15.399, de 4/5/2026)"
       }
     },
     "Art. 3": {

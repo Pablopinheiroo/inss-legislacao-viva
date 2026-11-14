@@ -1,6 +1,6 @@
 {
   "snapshot_version": 3,
-  "captured_at": "2026-11-14T10:02:05Z",
+  "captured_at": "2026-11-14T10:03:07Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -2171,36 +2171,36 @@
         "device_type": "inciso",
         "device_label": "inciso III",
         "device_path": "paragrafo:9/inciso:III",
-        "text": "III - dez anos, quando se\ndez anos, quando se\ntratar de professora que comprove exclusivamente tempo de efetivo\nexercício das funções de magistério na educação infantil e no\nensino fundamental e médio.\n(Parágrafo\nacrescido pela Lei nº 9.876, de 26/11/1999)",
-        "normalized_text": "III - dez anos, quando se dez anos, quando se tratar de professora que comprove exclusivamente tempo de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio. (Parágrafo acrescido pela Lei nº 9.876, de 26/11/1999)"
+        "text": "III - dez anos, quando se\ndez anos, quando se\ntratar de professora que comprove exclusivamente tempo de efetivo\nexercício das funções de magistério na educação infantil e no\nensino fundamental e médio.\n(Parágrafo\nacrescido pela Lei nº 9.876, de 26/11/1999)\n§",
+        "normalized_text": "III - dez anos, quando se dez anos, quando se tratar de professora que comprove exclusivamente tempo de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio. (Parágrafo acrescido pela Lei nº 9.876, de 26/11/1999) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10. O auxílio-doença não poderá exceder a média aritmética\nO auxílio-doença não poderá exceder a média aritmética\nsimples dos últimos 12 (doze) salários-de-contribuição, inclusive\nem caso de remuneração variável, ou, se não alcançado o número\nde 12 (doze), a média aritmética simples dos\nsalários-de-contribuição existentes.\n(Parágrafo\nacrescido pela Medida Provisória nº 664, de 30/12/2014, publicada\nem Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nterceiro mês subsequente à data de publicação\ne\nconvertida na Lei nº 13.135, de 17/6/2015)",
-        "normalized_text": "§ 10. O auxílio-doença não poderá exceder a média aritmética O auxílio-doença não poderá exceder a média aritmética simples dos últimos 12 (doze) salários-de-contribuição, inclusive em caso de remuneração variável, ou, se não alcançado o número de 12 (doze), a média aritmética simples dos salários-de-contribuição existentes. (Parágrafo acrescido pela Medida Provisória nº 664, de 30/12/2014, publicada em Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do terceiro mês subsequente à data de publicação e convertida na Lei nº 13.135, de 17/6/2015)"
+      "paragrafo:9/inciso:III/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/inciso:III/item:10",
+        "text": "10. O auxílio-doença não poderá exceder a média aritmética\nO auxílio-doença não poderá exceder a média aritmética\nsimples dos últimos 12 (doze) salários-de-contribuição, inclusive\nem caso de remuneração variável, ou, se não alcançado o número\nde 12 (doze), a média aritmética simples dos\nsalários-de-contribuição existentes.\n(Parágrafo\nacrescido pela Medida Provisória nº 664, de 30/12/2014, publicada\nem Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do\nterceiro mês subsequente à data de publicação\ne\nconvertida na Lei nº 13.135, de 17/6/2015)\n§",
+        "normalized_text": "10. O auxílio-doença não poderá exceder a média aritmética O auxílio-doença não poderá exceder a média aritmética simples dos últimos 12 (doze) salários-de-contribuição, inclusive em caso de remuneração variável, ou, se não alcançado o número de 12 (doze), a média aritmética simples dos salários-de-contribuição existentes. (Parágrafo acrescido pela Medida Provisória nº 664, de 30/12/2014, publicada em Edição Extra do DOU de 30/12/2014, em vigor no primeiro dia do terceiro mês subsequente à data de publicação e convertida na Lei nº 13.135, de 17/6/2015) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)",
-        "normalized_text": "§ 11. (VETADO na Lei nº 13.135, de 17/6/2015)"
+      "paragrafo:9/inciso:III/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/inciso:III/item:11",
+        "text": "11.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)\n§",
+        "normalized_text": "11. (VETADO na Lei nº 13.135, de 17/6/2015) §"
       },
-      "paragrafo:12": {
-        "device_type": "paragrafo",
-        "device_label": "§ 12º",
-        "device_path": "paragrafo:12",
-        "text": "§ 12.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)",
-        "normalized_text": "§ 12. (VETADO na Lei nº 13.135, de 17/6/2015)"
+      "paragrafo:9/inciso:III/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "paragrafo:9/inciso:III/item:12",
+        "text": "12.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)\n§",
+        "normalized_text": "12. (VETADO na Lei nº 13.135, de 17/6/2015) §"
       },
-      "paragrafo:13": {
-        "device_type": "paragrafo",
-        "device_label": "§ 13º",
-        "device_path": "paragrafo:13",
-        "text": "§ 13.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)",
-        "normalized_text": "§ 13. (VETADO na Lei nº 13.135, de 17/6/2015)"
+      "paragrafo:9/inciso:III/item:13": {
+        "device_type": "item",
+        "device_label": "item 13",
+        "device_path": "paragrafo:9/inciso:III/item:13",
+        "text": "13.\n(VETADO\nna Lei nº 13.135, de 17/6/2015)",
+        "normalized_text": "13. (VETADO na Lei nº 13.135, de 17/6/2015)"
       }
     },
     "Art. 29-A": {

@@ -1,6 +1,6 @@
 {
   "snapshot_version": 3,
-  "captured_at": "2026-11-14T10:02:05Z",
+  "captured_at": "2026-11-14T10:03:07Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -79,8 +79,8 @@
         "device_type": "paragrafo",
         "device_label": "§ 7º",
         "device_path": "paragrafo:7",
-        "text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017)\nrenumerado pelo Decreto nº 8.967, de 23/1/2017)",
-        "normalized_text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017) renumerado pelo Decreto nº 8.967, de 23/1/2017)"
+        "text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017)\nrenumerado pelo Decreto nº 8.967, de 23/1/2017)\n§",
+        "normalized_text": "§ 7º renumerado pelo Decreto nº 8.967, de 23/1/2017) renumerado pelo Decreto nº 8.967, de 23/1/2017) §"
       },
       "paragrafo:8": {
         "device_type": "paragrafo",
@@ -93,64 +93,64 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio\nO Ministério da Pesca e Aquicultura e o Ministério do Meio\nAmbiente e Mudança do Clima avaliarão, conjuntamente, outras\nmedidas de gestão e de uso sustentável dos recursos pesqueiros\npreviamente ao estabelecimento de períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
-        "normalized_text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio O Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima avaliarão, conjuntamente, outras medidas de gestão e de uso sustentável dos recursos pesqueiros previamente ao estabelecimento de períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+        "text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio\nO Ministério da Pesca e Aquicultura e o Ministério do Meio\nAmbiente e Mudança do Clima avaliarão, conjuntamente, outras\nmedidas de gestão e de uso sustentável dos recursos pesqueiros\npreviamente ao estabelecimento de períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\n§",
+        "normalized_text": "§ 9º O Ministério da Pesca e Aquicultura e o Ministério do Meio O Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima avaliarão, conjuntamente, outras medidas de gestão e de uso sustentável dos recursos pesqueiros previamente ao estabelecimento de períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10. As normas, os critérios, os padrões e as medidas de ordenamento\nAs normas, os critérios, os padrões e as medidas de ordenamento\nrelativas aos períodos de defeso serão editadas, observadas as\ncompetências do Ministério da Pesca e Aquicultura e do Ministério\ndo Meio Ambiente e Mudança do Clima, e deverão:\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- definir as espécies que são objeto de conservação, as medidas\nde proteção à reprodução e ao recrutamento das espécies, os\npetrechos e os métodos de pesca proibidos;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nII\n- estabelecer a abrangência geográfica da norma, de modo a indicar\nas bacias hidrográficas, a região ou a área costeiro-marinha e\ndiscriminar os Municípios alcançados;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIII\n- definir se há alternativas de pesca disponíveis e se elas\nabrangem todos os pescadores ou apenas aqueles que atuam de forma\nembarcada; e\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIV\n- estabelecer mecanismos de monitoramento da biodiversidade e da\natividade pesqueira e de avaliação da eficácia dos períodos de\ndefeso como medida de ordenamento.\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
-        "normalized_text": "§ 10. As normas, os critérios, os padrões e as medidas de ordenamento As normas, os critérios, os padrões e as medidas de ordenamento relativas aos períodos de defeso serão editadas, observadas as competências do Ministério da Pesca e Aquicultura e do Ministério do Meio Ambiente e Mudança do Clima, e deverão: (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - definir as espécies que são objeto de conservação, as medidas de proteção à reprodução e ao recrutamento das espécies, os petrechos e os métodos de pesca proibidos; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) II - estabelecer a abrangência geográfica da norma, de modo a indicar as bacias hidrográficas, a região ou a área costeiro-marinha e discriminar os Municípios alcançados; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) III - definir se há alternativas de pesca disponíveis e se elas abrangem todos os pescadores ou apenas aqueles que atuam de forma embarcada; e (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) IV - estabelecer mecanismos de monitoramento da biodiversidade e da atividade pesqueira e de avaliação da eficácia dos períodos de defeso como medida de ordenamento. (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10. As normas, os critérios, os padrões e as medidas de ordenamento\nAs normas, os critérios, os padrões e as medidas de ordenamento\nrelativas aos períodos de defeso serão editadas, observadas as\ncompetências do Ministério da Pesca e Aquicultura e do Ministério\ndo Meio Ambiente e Mudança do Clima, e deverão:\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\nI\n- definir as espécies que são objeto de conservação, as medidas\nde proteção à reprodução e ao recrutamento das espécies, os\npetrechos e os métodos de pesca proibidos;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nII\n- estabelecer a abrangência geográfica da norma, de modo a indicar\nas bacias hidrográficas, a região ou a área costeiro-marinha e\ndiscriminar os Municípios alcançados;\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIII\n- definir se há alternativas de pesca disponíveis e se elas\nabrangem todos os pescadores ou apenas aqueles que atuam de forma\nembarcada; e\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\nIV\n- estabelecer mecanismos de monitoramento da biodiversidade e da\natividade pesqueira e de avaliação da eficácia dos períodos de\ndefeso como medida de ordenamento.\n(Inciso\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\n§",
+        "normalized_text": "10. As normas, os critérios, os padrões e as medidas de ordenamento As normas, os critérios, os padrões e as medidas de ordenamento relativas aos períodos de defeso serão editadas, observadas as competências do Ministério da Pesca e Aquicultura e do Ministério do Meio Ambiente e Mudança do Clima, e deverão: (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) I - definir as espécies que são objeto de conservação, as medidas de proteção à reprodução e ao recrutamento das espécies, os petrechos e os métodos de pesca proibidos; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) II - estabelecer a abrangência geográfica da norma, de modo a indicar as bacias hidrográficas, a região ou a área costeiro-marinha e discriminar os Municípios alcançados; (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) III - definir se há alternativas de pesca disponíveis e se elas abrangem todos os pescadores ou apenas aqueles que atuam de forma embarcada; e (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) IV - estabelecer mecanismos de monitoramento da biodiversidade e da atividade pesqueira e de avaliação da eficácia dos períodos de defeso como medida de ordenamento. (Inciso acrescido pelo Decreto nº 8.967, de 23/1/2017) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11-B. O Ministério da Pesca e Aquicultura publicará e manterá\n-B. O Ministério da Pesca e Aquicultura publicará e manterá\natualizados, em sítio eletrônico e em formato de dados abertos, os\nperíodos de defeso, por recurso pesqueiro e área abrangida, com a\nindicação dos Municípios alcançados, nos termos do disposto no\ninciso II do § 10.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
-        "normalized_text": "§ 11-B. O Ministério da Pesca e Aquicultura publicará e manterá -B. O Ministério da Pesca e Aquicultura publicará e manterá atualizados, em sítio eletrônico e em formato de dados abertos, os períodos de defeso, por recurso pesqueiro e área abrangida, com a indicação dos Municípios alcançados, nos termos do disposto no inciso II do § 10. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11. O Ministro de Estado da Pesca e Aquicultura e o Ministro de\nO Ministro de Estado da Pesca e Aquicultura e o Ministro de\nEstado do Meio Ambiente e Mudança do Clima, conforme estabelecido em\nato conjunto, avaliarão, periodicamente, a eficácia dos períodos\nde defeso instituídos, especialmente aqueles relativos às áreas\ncontinentais, e revogarão ou suspenderão os atos normativos a eles\ncorrespondentes, quando for comprovado serem ineficazes para a\npreservação dos recursos pesqueiros ou quando tiverem se tornado\ndesnecessários.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\n§\n11-A. O Ministério da Pesca e Aquicultura e o Ministério do Meio\nAmbiente e Mudança do Clima instituirão sistemas para coleta de\ndados e monitoramento da atividade pesqueira e dos recursos\npesqueiros para fazer a avaliação periódica prevista no § 11.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\n§\n11-B. O Ministério da Pesca e Aquicultura publicará e manterá\natualizados, em sítio eletrônico e em formato de dados abertos, os\nperíodos de defeso, por recurso pesqueiro e área abrangida, com a\nindicação dos Municípios alcançados, nos termos do disposto no\ninciso II do § 10.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)\n§",
+        "normalized_text": "11. O Ministro de Estado da Pesca e Aquicultura e o Ministro de O Ministro de Estado da Pesca e Aquicultura e o Ministro de Estado do Meio Ambiente e Mudança do Clima, conforme estabelecido em ato conjunto, avaliarão, periodicamente, a eficácia dos períodos de defeso instituídos, especialmente aqueles relativos às áreas continentais, e revogarão ou suspenderão os atos normativos a eles correspondentes, quando for comprovado serem ineficazes para a preservação dos recursos pesqueiros ou quando tiverem se tornado desnecessários. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) § 11-A. O Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima instituirão sistemas para coleta de dados e monitoramento da atividade pesqueira e dos recursos pesqueiros para fazer a avaliação periódica prevista no § 11. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025) § 11-B. O Ministério da Pesca e Aquicultura publicará e manterá atualizados, em sítio eletrônico e em formato de dados abertos, os períodos de defeso, por recurso pesqueiro e área abrangida, com a indicação dos Municípios alcançados, nos termos do disposto no inciso II do § 10. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025) §"
       },
-      "paragrafo:12": {
-        "device_type": "paragrafo",
-        "device_label": "§ 12º",
-        "device_path": "paragrafo:12",
-        "text": "§ 12. Não será devido o benefício do seguro-desemprego quando houver\nNão será devido o benefício do seguro-desemprego quando houver\ndisponibilidade de alternativas de pesca nos Municípios alcançados\npelos períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)",
-        "normalized_text": "§ 12. Não será devido o benefício do seguro-desemprego quando houver Não será devido o benefício do seguro-desemprego quando houver disponibilidade de alternativas de pesca nos Municípios alcançados pelos períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017)"
+      "paragrafo:9/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "paragrafo:9/item:12",
+        "text": "12. Não será devido o benefício do seguro-desemprego quando houver\nNão será devido o benefício do seguro-desemprego quando houver\ndisponibilidade de alternativas de pesca nos Municípios alcançados\npelos períodos de defeso.\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017)\n§",
+        "normalized_text": "12. Não será devido o benefício do seguro-desemprego quando houver Não será devido o benefício do seguro-desemprego quando houver disponibilidade de alternativas de pesca nos Municípios alcançados pelos períodos de defeso. (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017) §"
       },
-      "paragrafo:13": {
-        "device_type": "paragrafo",
-        "device_label": "§ 13º",
-        "device_path": "paragrafo:13",
-        "text": "§ 13. O benefício do seguro-desemprego é direito pessoal e\nO benefício do seguro-desemprego é direito pessoal e\nintransferível.\n(Primitivo",
-        "normalized_text": "§ 13. O benefício do seguro-desemprego é direito pessoal e O benefício do seguro-desemprego é direito pessoal e intransferível. (Primitivo"
+      "paragrafo:9/item:13": {
+        "device_type": "item",
+        "device_label": "item 13",
+        "device_path": "paragrafo:9/item:13",
+        "text": "13. O benefício do seguro-desemprego é direito pessoal e\nO benefício do seguro-desemprego é direito pessoal e\nintransferível.\n(Primitivo",
+        "normalized_text": "13. O benefício do seguro-desemprego é direito pessoal e O benefício do seguro-desemprego é direito pessoal e intransferível. (Primitivo"
       },
-      "paragrafo:14": {
-        "device_type": "paragrafo",
-        "device_label": "§ 14º",
-        "device_path": "paragrafo:14",
-        "text": "§ 14. Excepcionalmente, nas hipóteses de grave contaminação por\nExcepcionalmente, nas hipóteses de grave contaminação por\nagentes químicos, físicos e biológicos, o Ministério da Pesca e\nAquicultura e o Ministério do Meio Ambiente e Mudança do Clima\npoderão, com fundamento em critérios técnicos estabelecidos pelos\nórgãos e pelas entidades competentes, prorrogar o período de\ndefeso, nos termos previstos na legislação.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)",
-        "normalized_text": "§ 14. Excepcionalmente, nas hipóteses de grave contaminação por Excepcionalmente, nas hipóteses de grave contaminação por agentes químicos, físicos e biológicos, o Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima poderão, com fundamento em critérios técnicos estabelecidos pelos órgãos e pelas entidades competentes, prorrogar o período de defeso, nos termos previstos na legislação. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025)"
+      "paragrafo:7/item:14": {
+        "device_type": "item",
+        "device_label": "item 14",
+        "device_path": "paragrafo:7/item:14",
+        "text": "14. Excepcionalmente, nas hipóteses de grave contaminação por\nExcepcionalmente, nas hipóteses de grave contaminação por\nagentes químicos, físicos e biológicos, o Ministério da Pesca e\nAquicultura e o Ministério do Meio Ambiente e Mudança do Clima\npoderão, com fundamento em critérios técnicos estabelecidos pelos\nórgãos e pelas entidades competentes, prorrogar o período de\ndefeso, nos termos previstos na legislação.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\ncom redação dada pelo Decreto nº 12.527, de 24/6/2025)\n§",
+        "normalized_text": "14. Excepcionalmente, nas hipóteses de grave contaminação por Excepcionalmente, nas hipóteses de grave contaminação por agentes químicos, físicos e biológicos, o Ministério da Pesca e Aquicultura e o Ministério do Meio Ambiente e Mudança do Clima poderão, com fundamento em critérios técnicos estabelecidos pelos órgãos e pelas entidades competentes, prorrogar o período de defeso, nos termos previstos na legislação. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e com redação dada pelo Decreto nº 12.527, de 24/6/2025) §"
       },
-      "paragrafo:15": {
-        "device_type": "paragrafo",
-        "device_label": "§ 15º",
-        "device_path": "paragrafo:15",
-        "text": "§ 15.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\nrevogado pelo Decreto nº 12.527, de 24/6/2025)",
-        "normalized_text": "§ 15. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e revogado pelo Decreto nº 12.527, de 24/6/2025)"
+      "paragrafo:7/item:15": {
+        "device_type": "item",
+        "device_label": "item 15",
+        "device_path": "paragrafo:7/item:15",
+        "text": "15.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019\n,\ne\nrevogado pelo Decreto nº 12.527, de 24/6/2025)\n§",
+        "normalized_text": "15. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019 , e revogado pelo Decreto nº 12.527, de 24/6/2025) §"
       },
-      "paragrafo:16": {
-        "device_type": "paragrafo",
-        "device_label": "§ 16º",
-        "device_path": "paragrafo:16",
-        "text": "§ 16. O pagamento de seguro desemprego do pescador profissional\nO pagamento de seguro desemprego do pescador profissional\nartesanal, quando devido, na hipótese de ocorrência do\nprolongamento a que se refere o § 14, poderá ser ampliado na forma\nprevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de\n1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779,\nde 25 de novembro de 2003.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)",
-        "normalized_text": "§ 16. O pagamento de seguro desemprego do pescador profissional O pagamento de seguro desemprego do pescador profissional artesanal, quando devido, na hipótese de ocorrência do prolongamento a que se refere o § 14, poderá ser ampliado na forma prevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de 1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779, de 25 de novembro de 2003. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019)"
+      "paragrafo:7/item:16": {
+        "device_type": "item",
+        "device_label": "item 16",
+        "device_path": "paragrafo:7/item:16",
+        "text": "16. O pagamento de seguro desemprego do pescador profissional\nO pagamento de seguro desemprego do pescador profissional\nartesanal, quando devido, na hipótese de ocorrência do\nprolongamento a que se refere o § 14, poderá ser ampliado na forma\nprevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de\n1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779,\nde 25 de novembro de 2003.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)\n§",
+        "normalized_text": "16. O pagamento de seguro desemprego do pescador profissional O pagamento de seguro desemprego do pescador profissional artesanal, quando devido, na hipótese de ocorrência do prolongamento a que se refere o § 14, poderá ser ampliado na forma prevista no § 5º do art. 4º da Lei nº 7.998, de 11 de janeiro de 1990, observado o disposto no § 8º do art. 1º da Lei nº 10.779, de 25 de novembro de 2003. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019) §"
       },
-      "paragrafo:17": {
-        "device_type": "paragrafo",
-        "device_label": "§ 17º",
-        "device_path": "paragrafo:17",
-        "text": "§ 17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o\nNa hipótese de ser efetuado o pagamento de que trata o § 16, o\nConselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat\ndeverá respeitar os limites de reserva mínima de liquidez de que\ntrata o § 5º do art. 4º da Lei nº 7.998, de 1990.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)",
-        "normalized_text": "§ 17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o Na hipótese de ser efetuado o pagamento de que trata o § 16, o Conselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat deverá respeitar os limites de reserva mínima de liquidez de que trata o § 5º do art. 4º da Lei nº 7.998, de 1990. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019)"
+      "paragrafo:7/item:17": {
+        "device_type": "item",
+        "device_label": "item 17",
+        "device_path": "paragrafo:7/item:17",
+        "text": "17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o\nNa hipótese de ser efetuado o pagamento de que trata o § 16, o\nConselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat\ndeverá respeitar os limites de reserva mínima de liquidez de que\ntrata o § 5º do art. 4º da Lei nº 7.998, de 1990.\n(Parágrafo\nacrescido pelo Decreto nº 10.080, de 24/10/2019)",
+        "normalized_text": "17. Na hipótese de ser efetuado o pagamento de que trata o § 16, o Na hipótese de ser efetuado o pagamento de que trata o § 16, o Conselho Deliberativo do Fundo de Amparo ao Trabalhador - Codefat deverá respeitar os limites de reserva mínima de liquidez de que trata o § 5º do art. 4º da Lei nº 7.998, de 1990. (Parágrafo acrescido pelo Decreto nº 10.080, de 24/10/2019)"
       }
     },
     "Art. 1-A": {
@@ -399,8 +399,8 @@
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º-A O acesso ao sistema do INSS de que trata o\n-A O acesso ao sistema do INSS de que trata o\ncaput\nserá feito por meio de autenticação biométrica, ressalvadas\nsituações excepcionais estabelecidas em ato do Poder Executivo\nfederal.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
-        "normalized_text": "§ 5º-A O acesso ao sistema do INSS de que trata o -A O acesso ao sistema do INSS de que trata o caput será feito por meio de autenticação biométrica, ressalvadas situações excepcionais estabelecidas em ato do Poder Executivo federal. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
+        "text": "§ 5º\n(Parágrafo\nacrescido pelo Decreto nº 8.967, de 23/1/2017\n,\ne\nrevogado pelo Decreto nº 12.527, de 24/6/2025)\n§\n5º-A O acesso ao sistema do INSS de que trata o\ncaput\nserá feito por meio de autenticação biométrica, ressalvadas\nsituações excepcionais estabelecidas em ato do Poder Executivo\nfederal.\n(Parágrafo\nacrescido pelo Decreto nº 12.527, de 24/6/2025)",
+        "normalized_text": "§ 5º (Parágrafo acrescido pelo Decreto nº 8.967, de 23/1/2017 , e revogado pelo Decreto nº 12.527, de 24/6/2025) § 5º-A O acesso ao sistema do INSS de que trata o caput será feito por meio de autenticação biométrica, ressalvadas situações excepcionais estabelecidas em ato do Poder Executivo federal. (Parágrafo acrescido pelo Decreto nº 12.527, de 24/6/2025)"
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
@@ -538,29 +538,29 @@
         "device_type": "item",
         "device_label": "item 3",
         "device_path": "caput/item:3",
-        "text": "3.048, de 1999, passa a vigorar com as seguintes alterações:\n048, de 1999, passa a vigorar com as seguintes alterações:\n\"Art.\n9º\n...................................................................................................................\n................................................................................................................................",
-        "normalized_text": "3.048, de 1999, passa a vigorar com as seguintes alterações: 048, de 1999, passa a vigorar com as seguintes alterações: \"Art. 9º ................................................................................................................... ................................................................................................................................"
+        "text": "3.048, de 1999, passa a vigorar com as seguintes alterações:\n048, de 1999, passa a vigorar com as seguintes alterações:\n\"Art.\n9º\n...................................................................................................................\n................................................................................................................................\n§",
+        "normalized_text": "3.048, de 1999, passa a vigorar com as seguintes alterações: 048, de 1999, passa a vigorar com as seguintes alterações: \"Art. 9º ................................................................................................................... ................................................................................................................................ §"
       },
-      "paragrafo:14": {
-        "device_type": "paragrafo",
-        "device_label": "§ 14º",
-        "device_path": "paragrafo:14",
-        "text": "§ 14.\n.......................................................................................................................\nI\n- não utilize embarcação; ou\nII\n- utilize embarcação de pequeno porte, nos termos da Lei nº",
-        "normalized_text": "§ 14. ....................................................................................................................... I - não utilize embarcação; ou II - utilize embarcação de pequeno porte, nos termos da Lei nº"
+      "caput/item:14": {
+        "device_type": "item",
+        "device_label": "item 14",
+        "device_path": "caput/item:14",
+        "text": "14.\n.......................................................................................................................\nI\n- não utilize embarcação; ou\nII\n- utilize embarcação de pequeno porte, nos termos da Lei nº",
+        "normalized_text": "14. ....................................................................................................................... I - não utilize embarcação; ou II - utilize embarcação de pequeno porte, nos termos da Lei nº"
       },
-      "paragrafo:14/item:11": {
+      "caput/item:11": {
         "device_type": "item",
         "device_label": "item 11",
-        "device_path": "paragrafo:14/item:11",
-        "text": "11.959, de 29 de junho de 2009.\n959, de 29 de junho de 2009.",
-        "normalized_text": "11.959, de 29 de junho de 2009. 959, de 29 de junho de 2009."
+        "device_path": "caput/item:11",
+        "text": "11.959, de 29 de junho de 2009.\n959, de 29 de junho de 2009.\n§",
+        "normalized_text": "11.959, de 29 de junho de 2009. 959, de 29 de junho de 2009. §"
       },
-      "paragrafo:15": {
-        "device_type": "paragrafo",
-        "device_label": "§ 15º",
-        "device_path": "paragrafo:15",
-        "text": "§ 15.\n.......................................................................................................................\n................................................................................................................................\nXI\n- o pescador que trabalha em regime de parceria, meação ou\narrendamento, em embarcação de médio ou grande porte, nos termos\nda Lei nº 11.959, de 2009;\n....................................................................................................................\"\n(NR)",
-        "normalized_text": "§ 15. ....................................................................................................................... ................................................................................................................................ XI - o pescador que trabalha em regime de parceria, meação ou arrendamento, em embarcação de médio ou grande porte, nos termos da Lei nº 11.959, de 2009; ....................................................................................................................\" (NR)"
+      "caput/item:15": {
+        "device_type": "item",
+        "device_label": "item 15",
+        "device_path": "caput/item:15",
+        "text": "15.\n.......................................................................................................................\n................................................................................................................................\nXI\n- o pescador que trabalha em regime de parceria, meação ou\narrendamento, em embarcação de médio ou grande porte, nos termos\nda Lei nº 11.959, de 2009;\n....................................................................................................................\"\n(NR)",
+        "normalized_text": "15. ....................................................................................................................... ................................................................................................................................ XI - o pescador que trabalha em regime de parceria, meação ou arrendamento, em embarcação de médio ou grande porte, nos termos da Lei nº 11.959, de 2009; ....................................................................................................................\" (NR)"
       }
     },
     "Art. 10": {

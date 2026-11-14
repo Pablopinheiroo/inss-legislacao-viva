@@ -1,6 +1,6 @@
 {
   "snapshot_version": 3,
-  "captured_at": "2026-11-14T10:02:05Z",
+  "captured_at": "2026-11-14T10:03:07Z",
   "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
   "source_revision": null,
   "parser_mode": "artigos",
@@ -526,27 +526,27 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata\nSem prejuízo do compartilhamento das informações de que trata\no § 8º, o acesso à avaliação da deficiência e do grau de\nimpedimento, com a finalidade de permitir que outras políticas para\npessoas com deficiência dela se beneficiem, dependerá de prévio\nconsentimento do titular da informação.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata Sem prejuízo do compartilhamento das informações de que trata o § 8º, o acesso à avaliação da deficiência e do grau de impedimento, com a finalidade de permitir que outras políticas para pessoas com deficiência dela se beneficiem, dependerá de prévio consentimento do titular da informação. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+        "text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata\nSem prejuízo do compartilhamento das informações de que trata\no § 8º, o acesso à avaliação da deficiência e do grau de\nimpedimento, com a finalidade de permitir que outras políticas para\npessoas com deficiência dela se beneficiem, dependerá de prévio\nconsentimento do titular da informação.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
+        "normalized_text": "§ 9º Sem prejuízo do compartilhamento das informações de que trata Sem prejuízo do compartilhamento das informações de que trata o § 8º, o acesso à avaliação da deficiência e do grau de impedimento, com a finalidade de permitir que outras políticas para pessoas com deficiência dela se beneficiem, dependerá de prévio consentimento do titular da informação. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10. O consentimento de acesso à avaliação poderá ser manifestado\nO consentimento de acesso à avaliação poderá ser manifestado\nno momento da prestação das referidas informações ou quando do\nrequerimento de acesso à política pública.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)",
-        "normalized_text": "§ 10. O consentimento de acesso à avaliação poderá ser manifestado O consentimento de acesso à avaliação poderá ser manifestado no momento da prestação das referidas informações ou quando do requerimento de acesso à política pública. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10. O consentimento de acesso à avaliação poderá ser manifestado\nO consentimento de acesso à avaliação poderá ser manifestado\nno momento da prestação das referidas informações ou quando do\nrequerimento de acesso à política pública.\n(Parágrafo\nacrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de\n8/7/2016, em vigor 120 dias após a publicação)\n§",
+        "normalized_text": "10. O consentimento de acesso à avaliação poderá ser manifestado O consentimento de acesso à avaliação poderá ser manifestado no momento da prestação das referidas informações ou quando do requerimento de acesso à política pública. (Parágrafo acrescido pelo Decreto nº 8.805, de 7/7/2016, publicado no DOU de 8/7/2016, em vigor 120 dias após a publicação) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nArt. 17 Na hipótese de não existirem serviços pertinentes para\navaliação da deficiência e do grau de impedimento no município de\nresidência do requerente ou beneficiário, fica assegurado o seu\nencaminhamento ao município mais próximo que contar com tal\nestrutura, devendo o INSS realizar o pagamento das despesas de\ntransporte e diárias com recursos oriundos do Fundo Nacional de\nAssistência Social.\n(“Caput”\ndo artigo com redação dada pelo Decreto nº",
-        "normalized_text": "§ 11. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, e revogado pelo Decreto nº 12.534, de 25/6/2025) Art. 17 Na hipótese de não existirem serviços pertinentes para avaliação da deficiência e do grau de impedimento no município de residência do requerente ou beneficiário, fica assegurado o seu encaminhamento ao município mais próximo que contar com tal estrutura, devendo o INSS realizar o pagamento das despesas de transporte e diárias com recursos oriundos do Fundo Nacional de Assistência Social. (“Caput” do artigo com redação dada pelo Decreto nº"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11.\n(Parágrafo\nacrescido pelo Decreto nº 9.462, de 8/8/2018,\ne\nrevogado pelo Decreto nº 12.534, de 25/6/2025)\nArt. 17 Na hipótese de não existirem serviços pertinentes para\navaliação da deficiência e do grau de impedimento no município de\nresidência do requerente ou beneficiário, fica assegurado o seu\nencaminhamento ao município mais próximo que contar com tal\nestrutura, devendo o INSS realizar o pagamento das despesas de\ntransporte e diárias com recursos oriundos do Fundo Nacional de\nAssistência Social.\n(“Caput”\ndo artigo com redação dada pelo Decreto nº",
+        "normalized_text": "11. (Parágrafo acrescido pelo Decreto nº 9.462, de 8/8/2018, e revogado pelo Decreto nº 12.534, de 25/6/2025) Art. 17 Na hipótese de não existirem serviços pertinentes para avaliação da deficiência e do grau de impedimento no município de residência do requerente ou beneficiário, fica assegurado o seu encaminhamento ao município mais próximo que contar com tal estrutura, devendo o INSS realizar o pagamento das despesas de transporte e diárias com recursos oriundos do Fundo Nacional de Assistência Social. (“Caput” do artigo com redação dada pelo Decreto nº"
       },
-      "paragrafo:11/item:7": {
+      "paragrafo:9/item:7": {
         "device_type": "item",
         "device_label": "item 7",
-        "device_path": "paragrafo:11/item:7",
+        "device_path": "paragrafo:9/item:7",
         "text": "7.617,\n617,\nde 17/11/2011)",
         "normalized_text": "7.617, 617, de 17/11/2011)"
       },

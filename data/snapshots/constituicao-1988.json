@@ -1,6 +1,6 @@
 {
   "snapshot_version": 3,
-  "captured_at": "2026-11-14T10:02:05Z",
+  "captured_at": "2026-11-14T10:03:07Z",
   "source_url_used": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
   "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
   "parser_mode": "artigos",
@@ -2053,15 +2053,15 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º\nO disposto\nno inciso XI aplica-se às empresas públicas e às sociedades de\neconomia mista, e suas subsidiárias, que receberem recursos da\nUnião, dos Estados, do Distrito Federal ou dos Municípios para\npagamento de despesas de pessoal ou de custeio em geral.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 19, de 1998)",
-        "normalized_text": "§ 9º O disposto no inciso XI aplica-se às empresas públicas e às sociedades de economia mista, e suas subsidiárias, que receberem recursos da União, dos Estados, do Distrito Federal ou dos Municípios para pagamento de despesas de pessoal ou de custeio em geral. (Parágrafo acrescido pela Emenda Constitucional nº 19, de 1998)"
+        "text": "§ 9º\nO disposto\nno inciso XI aplica-se às empresas públicas e às sociedades de\neconomia mista, e suas subsidiárias, que receberem recursos da\nUnião, dos Estados, do Distrito Federal ou dos Municípios para\npagamento de despesas de pessoal ou de custeio em geral.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 19, de 1998)\n§",
+        "normalized_text": "§ 9º O disposto no inciso XI aplica-se às empresas públicas e às sociedades de economia mista, e suas subsidiárias, que receberem recursos da União, dos Estados, do Distrito Federal ou dos Municípios para pagamento de despesas de pessoal ou de custeio em geral. (Parágrafo acrescido pela Emenda Constitucional nº 19, de 1998) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10.\nÉ vedada a\npercepção simultânea de proventos de aposentadoria decorrentes do\nart. 40 ou dos arts. 42 e 142 com a remuneração de cargo, emprego\nou função pública, ressalvados os cargos acumuláveis na forma\ndesta Constituição, os cargos eletivos e os cargos em comissão\ndeclarados em lei de livre nomeação e exoneração.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 10. É vedada a percepção simultânea de proventos de aposentadoria decorrentes do art. 40 ou dos arts. 42 e 142 com a remuneração de cargo, emprego ou função pública, ressalvados os cargos acumuláveis na forma desta Constituição, os cargos eletivos e os cargos em comissão declarados em lei de livre nomeação e exoneração. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10.\nÉ vedada a\npercepção simultânea de proventos de aposentadoria decorrentes do\nart. 40 ou dos arts. 42 e 142 com a remuneração de cargo, emprego\nou função pública, ressalvados os cargos acumuláveis na forma\ndesta Constituição, os cargos eletivos e os cargos em comissão\ndeclarados em lei de livre nomeação e exoneração.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)",
+        "normalized_text": "10. É vedada a percepção simultânea de proventos de aposentadoria decorrentes do art. 40 ou dos arts. 42 e 142 com a remuneração de cargo, emprego ou função pública, ressalvados os cargos acumuláveis na forma desta Constituição, os cargos eletivos e os cargos em comissão declarados em lei de livre nomeação e exoneração. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998)"
       },
       "paragrafo:11": {
         "device_type": "paragrafo",
@@ -2102,22 +2102,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 16º",
         "device_path": "paragrafo:16",
-        "text": "§ 16. Os órgãos e entidades\nOs órgãos e entidades\nda administração pública, individual ou conjuntamente, devem\nrealizar avaliação das políticas públicas, inclusive com\ndivulgação do objeto a ser avaliado e dos resultados alcançados,\nna forma da lei.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 109, de 2021)",
-        "normalized_text": "§ 16. Os órgãos e entidades Os órgãos e entidades da administração pública, individual ou conjuntamente, devem realizar avaliação das políticas públicas, inclusive com divulgação do objeto a ser avaliado e dos resultados alcançados, na forma da lei. (Parágrafo acrescido pela Emenda Constitucional nº 109, de 2021)"
+        "text": "§ 16. Os órgãos e entidades\nOs órgãos e entidades\nda administração pública, individual ou conjuntamente, devem\nrealizar avaliação das políticas públicas, inclusive com\ndivulgação do objeto a ser avaliado e dos resultados alcançados,\nna forma da lei.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 109, de 2021)\n§",
+        "normalized_text": "§ 16. Os órgãos e entidades Os órgãos e entidades da administração pública, individual ou conjuntamente, devem realizar avaliação das políticas públicas, inclusive com divulgação do objeto a ser avaliado e dos resultados alcançados, na forma da lei. (Parágrafo acrescido pela Emenda Constitucional nº 109, de 2021) §"
       },
-      "paragrafo:17": {
-        "device_type": "paragrafo",
-        "device_label": "§ 17º",
-        "device_path": "paragrafo:17",
-        "text": "§ 17.\n(Vide\nEmenda Constitucional nº 132, de 2023)",
-        "normalized_text": "§ 17. (Vide Emenda Constitucional nº 132, de 2023)"
+      "paragrafo:16/item:17": {
+        "device_type": "item",
+        "device_label": "item 17",
+        "device_path": "paragrafo:16/item:17",
+        "text": "17.\n(Vide\nEmenda Constitucional nº 132, de 2023)\n§",
+        "normalized_text": "17. (Vide Emenda Constitucional nº 132, de 2023) §"
       },
-      "paragrafo:18": {
-        "device_type": "paragrafo",
-        "device_label": "§ 18º",
-        "device_path": "paragrafo:18",
-        "text": "§ 18.\n(Vide\nEmenda Constitucional nº 132, de 2023)",
-        "normalized_text": "§ 18. (Vide Emenda Constitucional nº 132, de 2023)"
+      "paragrafo:16/item:18": {
+        "device_type": "item",
+        "device_label": "item 18",
+        "device_path": "paragrafo:16/item:18",
+        "text": "18.\n(Vide\nEmenda Constitucional nº 132, de 2023)",
+        "normalized_text": "18. (Vide Emenda Constitucional nº 132, de 2023)"
       }
     },
     "Art. 38": {
@@ -2332,8 +2332,8 @@
         "device_type": "paragrafo",
         "device_label": "§ 5º",
         "device_path": "paragrafo:5",
-        "text": "§ 5º-A. O requisito de idade a que se refere o inciso III do § 1º\n-A. O requisito de idade a que se refere o inciso III do § 1º\ndeste artigo será de 57 (cinquenta e sete) anos de idade, se mulher,\ne 60 (sessenta) anos de idade, se homem, para o agente comunitário\nde saúde e o agente de combate às endemias que comprovem o mínimo\nde 25 (vinte e cinco) anos de tempo de contribuição e de efetivo\nexercício na respectiva atividade profissional.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 140, de 2026)",
-        "normalized_text": "§ 5º-A. O requisito de idade a que se refere o inciso III do § 1º -A. O requisito de idade a que se refere o inciso III do § 1º deste artigo será de 57 (cinquenta e sete) anos de idade, se mulher, e 60 (sessenta) anos de idade, se homem, para o agente comunitário de saúde e o agente de combate às endemias que comprovem o mínimo de 25 (vinte e cinco) anos de tempo de contribuição e de efetivo exercício na respectiva atividade profissional. (Parágrafo acrescido pela Emenda Constitucional nº 140, de 2026)"
+        "text": "§ 5º Os ocupantes do cargo de professor terão idade mínima reduzida\nOs ocupantes do cargo de professor terão idade mínima reduzida\nem 5 (cinco) anos em relação às idades decorrentes da aplicação\ndo disposto no inciso III do § 1º, desde que comprovem tempo de\nefetivo exercício das funções de magistério na educação\ninfantil e no ensino fundamental e médio fixado em lei complementar\ndo respectivo ente federativo.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§\n5º-A. O requisito de idade a que se refere o inciso III do § 1º\ndeste artigo será de 57 (cinquenta e sete) anos de idade, se mulher,\ne 60 (sessenta) anos de idade, se homem, para o agente comunitário\nde saúde e o agente de combate às endemias que comprovem o mínimo\nde 25 (vinte e cinco) anos de tempo de contribuição e de efetivo\nexercício na respectiva atividade profissional.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 140, de 2026)",
+        "normalized_text": "§ 5º Os ocupantes do cargo de professor terão idade mínima reduzida Os ocupantes do cargo de professor terão idade mínima reduzida em 5 (cinco) anos em relação às idades decorrentes da aplicação do disposto no inciso III do § 1º, desde que comprovem tempo de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio fixado em lei complementar do respectivo ente federativo. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) § 5º-A. O requisito de idade a que se refere o inciso III do § 1º deste artigo será de 57 (cinquenta e sete) anos de idade, se mulher, e 60 (sessenta) anos de idade, se homem, para o agente comunitário de saúde e o agente de combate às endemias que comprovem o mínimo de 25 (vinte e cinco) anos de tempo de contribuição e de efetivo exercício na respectiva atividade profissional. (Parágrafo acrescido pela Emenda Constitucional nº 140, de 2026)"
       },
       "paragrafo:6": {
         "device_type": "paragrafo",
@@ -2367,50 +2367,50 @@
         "device_type": "paragrafo",
         "device_label": "§ 10º",
         "device_path": "paragrafo:10",
-        "text": "§ 10\n. A lei não poderá estabelecer qualquer forma de contagem\nde tempo de contribuição fictício.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 10 . A lei não poderá estabelecer qualquer forma de contagem de tempo de contribuição fictício. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998)"
+        "text": "§ 10\n. A lei não poderá estabelecer qualquer forma de contagem\nde tempo de contribuição fictício.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)\n§",
+        "normalized_text": "§ 10 . A lei não poderá estabelecer qualquer forma de contagem de tempo de contribuição fictício. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\nAplica-se o limite fixado no art. 37, XI, à soma total\ndos proventos de inatividade, inclusive quando decorrentes da\nacumulação de cargos ou empregos públicos, bem como de outras\natividades sujeitas a contribuição para o regime geral de\nprevidência social, e ao montante resultante da adição de\nproventos de inatividade com remuneração de cargo acumulável na\nforma desta Constituição, cargo em comissão declarado em lei de\nlivre nomeação e exoneração, e de cargo eletivo.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 11. Aplica-se o limite fixado no art. 37, XI, à soma total dos proventos de inatividade, inclusive quando decorrentes da acumulação de cargos ou empregos públicos, bem como de outras atividades sujeitas a contribuição para o regime geral de previdência social, e ao montante resultante da adição de proventos de inatividade com remuneração de cargo acumulável na forma desta Constituição, cargo em comissão declarado em lei de livre nomeação e exoneração, e de cargo eletivo. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998)"
+      "paragrafo:10/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:10/item:11",
+        "text": "11.\nAplica-se o limite fixado no art. 37, XI, à soma total\ndos proventos de inatividade, inclusive quando decorrentes da\nacumulação de cargos ou empregos públicos, bem como de outras\natividades sujeitas a contribuição para o regime geral de\nprevidência social, e ao montante resultante da adição de\nproventos de inatividade com remuneração de cargo acumulável na\nforma desta Constituição, cargo em comissão declarado em lei de\nlivre nomeação e exoneração, e de cargo eletivo.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)\n§",
+        "normalized_text": "11. Aplica-se o limite fixado no art. 37, XI, à soma total dos proventos de inatividade, inclusive quando decorrentes da acumulação de cargos ou empregos públicos, bem como de outras atividades sujeitas a contribuição para o regime geral de previdência social, e ao montante resultante da adição de proventos de inatividade com remuneração de cargo acumulável na forma desta Constituição, cargo em comissão declarado em lei de livre nomeação e exoneração, e de cargo eletivo. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998) §"
       },
-      "paragrafo:12": {
-        "device_type": "paragrafo",
-        "device_label": "§ 12º",
-        "device_path": "paragrafo:12",
-        "text": "§ 12. Além do disposto neste artigo, serão observados, em regime\nAlém do disposto neste artigo, serão observados, em regime\npróprio de previdência social, no que couber, os requisitos e\ncritérios fixados para o Regime Geral de Previdência Social.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 12. Além do disposto neste artigo, serão observados, em regime Além do disposto neste artigo, serão observados, em regime próprio de previdência social, no que couber, os requisitos e critérios fixados para o Regime Geral de Previdência Social. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:10/item:12": {
+        "device_type": "item",
+        "device_label": "item 12",
+        "device_path": "paragrafo:10/item:12",
+        "text": "12. Além do disposto neste artigo, serão observados, em regime\nAlém do disposto neste artigo, serão observados, em regime\npróprio de previdência social, no que couber, os requisitos e\ncritérios fixados para o Regime Geral de Previdência Social.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "12. Além do disposto neste artigo, serão observados, em regime Além do disposto neste artigo, serão observados, em regime próprio de previdência social, no que couber, os requisitos e critérios fixados para o Regime Geral de Previdência Social. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:13": {
-        "device_type": "paragrafo",
-        "device_label": "§ 13º",
-        "device_path": "paragrafo:13",
-        "text": "§ 13. Aplica-se ao agente público ocupante, exclusivamente, de cargo\nAplica-se ao agente público ocupante, exclusivamente, de cargo\nem comissão declarado em lei de livre nomeação e exoneração, de\noutro cargo temporário, inclusive mandato eletivo, ou de emprego\npúblico, o Regime Geral de Previdência Social.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 13. Aplica-se ao agente público ocupante, exclusivamente, de cargo Aplica-se ao agente público ocupante, exclusivamente, de cargo em comissão declarado em lei de livre nomeação e exoneração, de outro cargo temporário, inclusive mandato eletivo, ou de emprego público, o Regime Geral de Previdência Social. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:10/item:13": {
+        "device_type": "item",
+        "device_label": "item 13",
+        "device_path": "paragrafo:10/item:13",
+        "text": "13. Aplica-se ao agente público ocupante, exclusivamente, de cargo\nAplica-se ao agente público ocupante, exclusivamente, de cargo\nem comissão declarado em lei de livre nomeação e exoneração, de\noutro cargo temporário, inclusive mandato eletivo, ou de emprego\npúblico, o Regime Geral de Previdência Social.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "13. Aplica-se ao agente público ocupante, exclusivamente, de cargo Aplica-se ao agente público ocupante, exclusivamente, de cargo em comissão declarado em lei de livre nomeação e exoneração, de outro cargo temporário, inclusive mandato eletivo, ou de emprego público, o Regime Geral de Previdência Social. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:14": {
-        "device_type": "paragrafo",
-        "device_label": "§ 14º",
-        "device_path": "paragrafo:14",
-        "text": "§ 14. A União, os Estados, o Distrito Federal e os Municípios\nA União, os Estados, o Distrito Federal e os Municípios\ninstituirão, por lei de iniciativa do respectivo Poder Executivo,\nregime de previdência complementar para servidores públicos\nocupantes de cargo efetivo, observado o limite máximo dos benefícios\ndo Regime Geral de Previdência Social para o valor das\naposentadorias e das pensões em regime próprio de previdência\nsocial, ressalvado o disposto no § 16.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 14. A União, os Estados, o Distrito Federal e os Municípios A União, os Estados, o Distrito Federal e os Municípios instituirão, por lei de iniciativa do respectivo Poder Executivo, regime de previdência complementar para servidores públicos ocupantes de cargo efetivo, observado o limite máximo dos benefícios do Regime Geral de Previdência Social para o valor das aposentadorias e das pensões em regime próprio de previdência social, ressalvado o disposto no § 16. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:10/item:14": {
+        "device_type": "item",
+        "device_label": "item 14",
+        "device_path": "paragrafo:10/item:14",
+        "text": "14. A União, os Estados, o Distrito Federal e os Municípios\nA União, os Estados, o Distrito Federal e os Municípios\ninstituirão, por lei de iniciativa do respectivo Poder Executivo,\nregime de previdência complementar para servidores públicos\nocupantes de cargo efetivo, observado o limite máximo dos benefícios\ndo Regime Geral de Previdência Social para o valor das\naposentadorias e das pensões em regime próprio de previdência\nsocial, ressalvado o disposto no § 16.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "14. A União, os Estados, o Distrito Federal e os Municípios A União, os Estados, o Distrito Federal e os Municípios instituirão, por lei de iniciativa do respectivo Poder Executivo, regime de previdência complementar para servidores públicos ocupantes de cargo efetivo, observado o limite máximo dos benefícios do Regime Geral de Previdência Social para o valor das aposentadorias e das pensões em regime próprio de previdência social, ressalvado o disposto no § 16. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:15": {
-        "device_type": "paragrafo",
-        "device_label": "§ 15º",
-        "device_path": "paragrafo:15",
-        "text": "§ 15. O regime de previdência complementar de que trata o § 14\nO regime de previdência complementar de que trata o § 14\noferecerá plano de benefícios somente na modalidade contribuição\ndefinida, observará o disposto no art. 202 e será efetivado por\nintermédio de entidade fechada de previdência complementar ou de\nentidade aberta de previdência complementar.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 15. O regime de previdência complementar de que trata o § 14 O regime de previdência complementar de que trata o § 14 oferecerá plano de benefícios somente na modalidade contribuição definida, observará o disposto no art. 202 e será efetivado por intermédio de entidade fechada de previdência complementar ou de entidade aberta de previdência complementar. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:10/item:15": {
+        "device_type": "item",
+        "device_label": "item 15",
+        "device_path": "paragrafo:10/item:15",
+        "text": "15. O regime de previdência complementar de que trata o § 14\nO regime de previdência complementar de que trata o § 14\noferecerá plano de benefícios somente na modalidade contribuição\ndefinida, observará o disposto no art. 202 e será efetivado por\nintermédio de entidade fechada de previdência complementar ou de\nentidade aberta de previdência complementar.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "15. O regime de previdência complementar de que trata o § 14 O regime de previdência complementar de que trata o § 14 oferecerá plano de benefícios somente na modalidade contribuição definida, observará o disposto no art. 202 e será efetivado por intermédio de entidade fechada de previdência complementar ou de entidade aberta de previdência complementar. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:16": {
-        "device_type": "paragrafo",
-        "device_label": "§ 16º",
-        "device_path": "paragrafo:16",
-        "text": "§ 16.\nSomente mediante sua prévia e expressa opção, o\ndisposto nos §§ 14 e 15 poderá ser aplicado ao servidor que tiver\ningressado no serviço público até a data da publicação do ato de\ninstituição do correspondente regime de previdência complementar.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 16. Somente mediante sua prévia e expressa opção, o disposto nos §§ 14 e 15 poderá ser aplicado ao servidor que tiver ingressado no serviço público até a data da publicação do ato de instituição do correspondente regime de previdência complementar. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998)"
+      "paragrafo:10/item:16": {
+        "device_type": "item",
+        "device_label": "item 16",
+        "device_path": "paragrafo:10/item:16",
+        "text": "16.\nSomente mediante sua prévia e expressa opção, o\ndisposto nos §§ 14 e 15 poderá ser aplicado ao servidor que tiver\ningressado no serviço público até a data da publicação do ato de\ninstituição do correspondente regime de previdência complementar.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 20, de 1998)",
+        "normalized_text": "16. Somente mediante sua prévia e expressa opção, o disposto nos §§ 14 e 15 poderá ser aplicado ao servidor que tiver ingressado no serviço público até a data da publicação do ato de instituição do correspondente regime de previdência complementar. (Parágrafo com redação dada pela Emenda Constitucional nº 20, de 1998)"
       },
       "paragrafo:17": {
         "device_type": "paragrafo",
@@ -2846,22 +2846,22 @@
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º As contribuições\nAs contribuições\nsociais previstas no inciso I do\ncaput\ndeste artigo poderão ter alíquotas diferenciadas em razão da\natividade econômica, da utilização intensiva de mão de obra, do\nporte da empresa ou da condição estrutural do mercado de trabalho,\nsendo também autorizada a adoção de bases de cálculo\ndiferenciadas apenas no caso das alíneas “b” e “c” do inciso\nI do\ncaput\n.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)\n(Vide\nEmenda Constitucional nº 132, de 2023)",
-        "normalized_text": "§ 9º As contribuições As contribuições sociais previstas no inciso I do caput deste artigo poderão ter alíquotas diferenciadas em razão da atividade econômica, da utilização intensiva de mão de obra, do porte da empresa ou da condição estrutural do mercado de trabalho, sendo também autorizada a adoção de bases de cálculo diferenciadas apenas no caso das alíneas “b” e “c” do inciso I do caput . (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019) (Vide Emenda Constitucional nº 132, de 2023)"
+        "text": "§ 9º As contribuições\nAs contribuições\nsociais previstas no inciso I do\ncaput\ndeste artigo poderão ter alíquotas diferenciadas em razão da\natividade econômica, da utilização intensiva de mão de obra, do\nporte da empresa ou da condição estrutural do mercado de trabalho,\nsendo também autorizada a adoção de bases de cálculo\ndiferenciadas apenas no caso das alíneas “b” e “c” do inciso\nI do\ncaput\n.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)\n(Vide\nEmenda Constitucional nº 132, de 2023)\n§",
+        "normalized_text": "§ 9º As contribuições As contribuições sociais previstas no inciso I do caput deste artigo poderão ter alíquotas diferenciadas em razão da atividade econômica, da utilização intensiva de mão de obra, do porte da empresa ou da condição estrutural do mercado de trabalho, sendo também autorizada a adoção de bases de cálculo diferenciadas apenas no caso das alíneas “b” e “c” do inciso I do caput . (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019) (Vide Emenda Constitucional nº 132, de 2023) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10.\nA lei definirá os critérios de transferência de\nrecursos para o sistema único de saúde e ações de assistência\nsocial da União para os Estados, o Distrito Federal e os Municípios,\ne dos Estados para os Municípios, observada a respectiva\ncontrapartida de recursos.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 10. A lei definirá os critérios de transferência de recursos para o sistema único de saúde e ações de assistência social da União para os Estados, o Distrito Federal e os Municípios, e dos Estados para os Municípios, observada a respectiva contrapartida de recursos. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10.\nA lei definirá os critérios de transferência de\nrecursos para o sistema único de saúde e ações de assistência\nsocial da União para os Estados, o Distrito Federal e os Municípios,\ne dos Estados para os Municípios, observada a respectiva\ncontrapartida de recursos.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)\n§",
+        "normalized_text": "10. A lei definirá os critérios de transferência de recursos para o sistema único de saúde e ações de assistência social da União para os Estados, o Distrito Federal e os Municípios, e dos Estados para os Municípios, observada a respectiva contrapartida de recursos. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\nSão vedados a moratória e o parcelamento em prazo\nsuperior a 60 (sessenta) meses e, na forma de lei complementar, a\nremissão e a anistia das contribuições sociais de que tratam a\nalínea “a” do inciso I e o inciso II do\ncaput\n.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 11. São vedados a moratória e o parcelamento em prazo superior a 60 (sessenta) meses e, na forma de lei complementar, a remissão e a anistia das contribuições sociais de que tratam a alínea “a” do inciso I e o inciso II do caput . (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11.\nSão vedados a moratória e o parcelamento em prazo\nsuperior a 60 (sessenta) meses e, na forma de lei complementar, a\nremissão e a anistia das contribuições sociais de que tratam a\nalínea “a” do inciso I e o inciso II do\ncaput\n.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)",
+        "normalized_text": "11. São vedados a moratória e o parcelamento em prazo superior a 60 (sessenta) meses e, na forma de lei complementar, a remissão e a anistia das contribuições sociais de que tratam a alínea “a” do inciso I e o inciso II do caput . (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019)"
       },
       "paragrafo:12": {
         "device_type": "paragrafo",
@@ -3369,29 +3369,29 @@
         "device_type": "paragrafo",
         "device_label": "§ 8º",
         "device_path": "paragrafo:8",
-        "text": "§ 8º-A. O requisito de idade a que se refere o inciso I do § 7º\n-A. O requisito de idade a que se refere o inciso I do § 7º\ndeste artigo será de 57 (cinquenta e sete) anos de idade, se mulher,\ne 60 (sessenta) anos de idade, se homem, para o agente comunitário\nde saúde e o agente de combate às endemias que comprovem o mínimo\nde 25 (vinte e cinco) anos de tempo de contribuição e de efetivo\nexercício na respectiva atividade profissional.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 140, de 2026)",
-        "normalized_text": "§ 8º-A. O requisito de idade a que se refere o inciso I do § 7º -A. O requisito de idade a que se refere o inciso I do § 7º deste artigo será de 57 (cinquenta e sete) anos de idade, se mulher, e 60 (sessenta) anos de idade, se homem, para o agente comunitário de saúde e o agente de combate às endemias que comprovem o mínimo de 25 (vinte e cinco) anos de tempo de contribuição e de efetivo exercício na respectiva atividade profissional. (Parágrafo acrescido pela Emenda Constitucional nº 140, de 2026)"
+        "text": "§ 8º\nO requisito de idade a que se refere o inciso I do § 7º\nserá reduzido em 5 (cinco) anos, para o professor que comprove tempo\nde efetivo exercício das funções de magistério na educação\ninfantil e no ensino fundamental e médio fixado em lei complementar.\n(Parágrafo\ncom redação dada pela Emenda Constitucional nº 103, de 2019)\n§\n8º-A. O requisito de idade a que se refere o inciso I do § 7º\ndeste artigo será de 57 (cinquenta e sete) anos de idade, se mulher,\ne 60 (sessenta) anos de idade, se homem, para o agente comunitário\nde saúde e o agente de combate às endemias que comprovem o mínimo\nde 25 (vinte e cinco) anos de tempo de contribuição e de efetivo\nexercício na respectiva atividade profissional.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 140, de 2026)",
+        "normalized_text": "§ 8º O requisito de idade a que se refere o inciso I do § 7º será reduzido em 5 (cinco) anos, para o professor que comprove tempo de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio fixado em lei complementar. (Parágrafo com redação dada pela Emenda Constitucional nº 103, de 2019) § 8º-A. O requisito de idade a que se refere o inciso I do § 7º deste artigo será de 57 (cinquenta e sete) anos de idade, se mulher, e 60 (sessenta) anos de idade, se homem, para o agente comunitário de saúde e o agente de combate às endemias que comprovem o mínimo de 25 (vinte e cinco) anos de tempo de contribuição e de efetivo exercício na respectiva atividade profissional. (Parágrafo acrescido pela Emenda Constitucional nº 140, de 2026)"
       },
       "paragrafo:9": {
         "device_type": "paragrafo",
         "device_label": "§ 9º",
         "device_path": "paragrafo:9",
-        "text": "§ 9º-A. O tempo de serviço militar exercido nas atividades de que\n-A. O tempo de serviço militar exercido nas atividades de que\ntratam os arts. 42, 142 e 143 e o tempo de contribuição ao Regime\nGeral de Previdência Social ou a regime próprio de previdência\nsocial terão contagem recíproca para fins de inativação militar\nou aposentadoria, e a compensação financeira será devida entre as\nreceitas de contribuição referentes aos militares e as receitas de\ncontribuição aos demais regimes.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 9º-A. O tempo de serviço militar exercido nas atividades de que -A. O tempo de serviço militar exercido nas atividades de que tratam os arts. 42, 142 e 143 e o tempo de contribuição ao Regime Geral de Previdência Social ou a regime próprio de previdência social terão contagem recíproca para fins de inativação militar ou aposentadoria, e a compensação financeira será devida entre as receitas de contribuição referentes aos militares e as receitas de contribuição aos demais regimes. (Parágrafo acrescido pela Emenda Constitucional nº 103, de 2019)"
+        "text": "§ 9º\nPara fins de\naposentadoria, será assegurada a contagem recíproca do tempo de\ncontribuição entre o Regime Geral de Previdência Social e os\nregimes próprios de previdência social, e destes entre si,\nobservada a compensação financeira, de acordo com os critérios\nestabelecidos em lei.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)\n§\n9º-A. O tempo de serviço militar exercido nas atividades de que\ntratam os arts. 42, 142 e 143 e o tempo de contribuição ao Regime\nGeral de Previdência Social ou a regime próprio de previdência\nsocial terão contagem recíproca para fins de inativação militar\nou aposentadoria, e a compensação financeira será devida entre as\nreceitas de contribuição referentes aos militares e as receitas de\ncontribuição aos demais regimes.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "§ 9º Para fins de aposentadoria, será assegurada a contagem recíproca do tempo de contribuição entre o Regime Geral de Previdência Social e os regimes próprios de previdência social, e destes entre si, observada a compensação financeira, de acordo com os critérios estabelecidos em lei. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019) § 9º-A. O tempo de serviço militar exercido nas atividades de que tratam os arts. 42, 142 e 143 e o tempo de contribuição ao Regime Geral de Previdência Social ou a regime próprio de previdência social terão contagem recíproca para fins de inativação militar ou aposentadoria, e a compensação financeira será devida entre as receitas de contribuição referentes aos militares e as receitas de contribuição aos demais regimes. (Parágrafo acrescido pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:10": {
-        "device_type": "paragrafo",
-        "device_label": "§ 10º",
-        "device_path": "paragrafo:10",
-        "text": "§ 10.\nLei\ncomplementar poderá disciplinar a cobertura de benefícios não\nprogramados, inclusive os decorrentes de acidente do trabalho, a ser\natendida concorrentemente pelo Regime Geral de Previdência Social e\npelo setor privado.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)",
-        "normalized_text": "§ 10. Lei complementar poderá disciplinar a cobertura de benefícios não programados, inclusive os decorrentes de acidente do trabalho, a ser atendida concorrentemente pelo Regime Geral de Previdência Social e pelo setor privado. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019)"
+      "paragrafo:9/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:9/item:10",
+        "text": "10.\nLei\ncomplementar poderá disciplinar a cobertura de benefícios não\nprogramados, inclusive os decorrentes de acidente do trabalho, a ser\natendida concorrentemente pelo Regime Geral de Previdência Social e\npelo setor privado.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998,\ne\ncom\nnova redação dada pela Emenda Constitucional nº 103, de 2019)\n§",
+        "normalized_text": "10. Lei complementar poderá disciplinar a cobertura de benefícios não programados, inclusive os decorrentes de acidente do trabalho, a ser atendida concorrentemente pelo Regime Geral de Previdência Social e pelo setor privado. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998, e com nova redação dada pela Emenda Constitucional nº 103, de 2019) §"
       },
-      "paragrafo:11": {
-        "device_type": "paragrafo",
-        "device_label": "§ 11º",
-        "device_path": "paragrafo:11",
-        "text": "§ 11.\nOs ganhos\nhabituais do empregado, a qualquer título, serão incorporados ao\nsalário para efeito de contribuição previdenciária e conseqüente\nrepercussão em benefícios, nos casos e na forma da lei.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)",
-        "normalized_text": "§ 11. Os ganhos habituais do empregado, a qualquer título, serão incorporados ao salário para efeito de contribuição previdenciária e conseqüente repercussão em benefícios, nos casos e na forma da lei. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998)"
+      "paragrafo:9/item:11": {
+        "device_type": "item",
+        "device_label": "item 11",
+        "device_path": "paragrafo:9/item:11",
+        "text": "11.\nOs ganhos\nhabituais do empregado, a qualquer título, serão incorporados ao\nsalário para efeito de contribuição previdenciária e conseqüente\nrepercussão em benefícios, nos casos e na forma da lei.\n(Parágrafo\nacrescido pela Emenda Constitucional nº 20, de 1998)",
+        "normalized_text": "11. Os ganhos habituais do empregado, a qualquer título, serão incorporados ao salário para efeito de contribuição previdenciária e conseqüente repercussão em benefícios, nos casos e na forma da lei. (Parágrafo acrescido pela Emenda Constitucional nº 20, de 1998)"
       },
       "paragrafo:12": {
         "device_type": "paragrafo",
