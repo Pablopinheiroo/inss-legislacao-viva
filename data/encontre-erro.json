@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "description": "Itens do modo Encontre o erro. Cada item possui uma única expressão incorreta; a expressão correta é validada contra o snapshot mais recente da norma antes de ser oferecida.",
+  "baseline_checked_at": "2026-11-14T00:52:03.000Z",
+  "items": [
+    {
+      "id": "err-8213-art1",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 1º",
+      "article_key": "Art. 1",
+      "segments": [
+        "A Previdência Social, ",
+        "independentemente de contribuição",
+        ", tem por fim assegurar aos seus beneficiários meios indispensáveis de manutenção."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "mediante contribuição",
+      "explanation": "A Lei 8.213/1991 estabelece que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao art. 1º.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art2-vi",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 2º, inciso VI",
+      "article_key": "Art. 2",
+      "segments": [
+        "O valor da renda mensal dos benefícios substitutos do salário-de-contribuição ou do rendimento do trabalho do segurado ",
+        "poderá ser inferior ao",
+        " salário-mínimo."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "não inferior ao do salário-mínimo",
+      "explanation": "O inciso VI protege o valor mínimo desses benefícios: ele não pode ser inferior ao salário-mínimo. A questão inverteu essa regra.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art2-viii",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 2º, inciso VIII",
+      "article_key": "Art. 2",
+      "segments": [
+        "A gestão administrativa da Previdência Social possui caráter ",
+        "democrático e centralizado",
+        ", com participação do governo e da comunidade."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "democrático e descentralizado",
+      "explanation": "O inciso VIII prevê gestão administrativa de caráter democrático e descentralizado. A palavra “centralizado” altera o sentido do dispositivo.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8212-art4",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 4º",
+      "article_key": "Art. 4",
+      "segments": [
+        "A assistência social atende às necessidades básicas ",
+        "mediante contribuição à Seguridade Social",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "independentemente de contribuição à Seguridade Social",
+      "explanation": "O art. 4º da Lei 8.212/1991 define a assistência social como política que atende às necessidades básicas independentemente de contribuição à Seguridade Social.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art1",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 1º",
+      "article_key": "Art. 1",
+      "segments": [
+        "A assistência social é Política de Seguridade Social ",
+        "contributiva",
+        ", destinada a garantir o atendimento às necessidades básicas."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "não contributiva",
+      "explanation": "A LOAS define expressamente a assistência social como Política de Seguridade Social não contributiva.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art4-iv",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 4º, inciso IV",
+      "article_key": "Art. 4",
+      "segments": [
+        "A LOAS assegura igualdade de direitos no acesso ao atendimento, ",
+        "admitindo discriminação de qualquer natureza",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "sem discriminação de qualquer natureza",
+      "explanation": "O inciso IV determina igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza, e garante equivalência às populações urbanas e rurais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art2",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 2º",
+      "article_key": "Art. 2",
+      "segments": [
+        "Para os efeitos da Lei 8.112/1990, servidor é a pessoa legalmente investida em ",
+        "emprego público",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "cargo público",
+      "explanation": "O art. 2º define servidor como a pessoa legalmente investida em cargo público, e não em emprego público.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art3",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "segments": [
+        "Na Lei 8.112/1990, cargo público é o conjunto de ",
+        "direitos e vantagens",
+        " concedidos a um servidor."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "atribuições e responsabilidades",
+      "explanation": "O art. 3º define cargo público como o conjunto de atribuições e responsabilidades previstas na estrutura organizacional, não como conjunto de direitos e vantagens.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art4",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 4º",
+      "article_key": "Art. 4",
+      "segments": [
+        "Na Administração Pública Federal, a Lei 8.112/1990 estabelece que é ",
+        "permitida",
+        " a prestação de serviços gratuitos, salvo os casos previstos em lei."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "É proibida a prestação de serviços gratuitos",
+      "explanation": "A regra do art. 4º é a proibição da prestação de serviços gratuitos. A exceção existe apenas para os casos previstos em lei.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-dec6029-art3-numero",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "segments": [
+        "A Comissão de Ética Pública será integrada por ",
+        "cinco brasileiros",
+        " que preencham os requisitos legais."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "sete brasileiros",
+      "explanation": "O art. 3º determina que a Comissão de Ética Pública será integrada por sete brasileiros.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "err-dec6029-art3-mandato",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "segments": [
+        "Os integrantes da Comissão de Ética Pública terão mandatos de ",
+        "quatro anos",
+        ", não coincidentes."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "mandatos de três anos",
+      "explanation": "O mandato previsto no art. 3º é de três anos e não é coincidente.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "err-dec6029-art3-reconducao",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 3º",
+      "article_key": "Art. 3",
+      "segments": [
+        "O Decreto 6.029/2007 permite ",
+        "duas reconduções",
+        " dos membros da Comissão de Ética Pública."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "uma única recondução",
+      "explanation": "O decreto permite uma única recondução. Não são permitidas duas reconduções.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    },
+    {
+      "id": "err-dec6029-art12",
+      "category": "Ética",
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 12, § 3º",
+      "article_key": "Art. 12",
+      "segments": [
+        "Se forem juntados novos elementos de prova após a manifestação inicial, o investigado será notificado para nova manifestação no prazo de ",
+        "quinze dias",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "dez dias",
+      "explanation": "O § 3º do art. 12 prevê prazo de dez dias para a nova manifestação quando forem juntados novos elementos de prova após a manifestação inicial.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+    }
+  ]
+}
