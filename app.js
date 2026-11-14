@@ -3735,7 +3735,7 @@ async function ensureMemorySourceSnapshots() {
       while (cursor < pending.length) {
         const law = pending[cursor++];
         try {
-          const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json", { cache: "force-cache" });
+          const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
           if (!response.ok) throw new Error("HTTP " + response.status);
           const snapshot = await response.json();
           if (snapshot && snapshot.articles && typeof snapshot.articles === "object") {
@@ -3952,7 +3952,7 @@ async function createMemoryCardsFromFavorites() {
   await ensureMemorySourceSnapshots();
   const favoriteArticles = legalFavoritesSet();
   const candidates = memoryCards.filter(card =>
-    card.source_type !== "change" &&
+    card.source_type === "legal" &&
     favoriteArticles.has(legalArticleKey(card.law_id, card.article_key))
   );
   if (!candidates.length) {
@@ -4033,10 +4033,16 @@ function renderMemoryOverview() {
   const progress = loadMemoryProgress();
   const now = Date.now();
   const due = memoryCards.filter(card => memoryDueAt(card, progress) <= now).length;
-  const seen = memoryCards.filter(card => Number(progress[card.id]?.review_count) > 0).length;
+  const reviewedCards = memoryCards.filter(card => Number(progress[card.id]?.review_count) > 0);
+  const seen = reviewedCards.length;
+  const recallScore = seen ? Math.round(reviewedCards.reduce((total, card) => {
+    const rating = progress[card.id]?.last_rating;
+    return total + (rating === "good" ? 1 : rating === "hard" ? 0.5 : 0);
+  }, 0) / seen * 100) : null;
   $("#memory-total").textContent = String(memoryCards.length);
   $("#memory-due").textContent = String(due);
   $("#memory-seen").textContent = String(seen);
+  $("#memory-retention").textContent = recallScore === null ? "—" : recallScore + "%";
   renderCEReviewOverview();
 }
 
@@ -4185,7 +4191,8 @@ function showMemorySummary() {
   const partial = memoryState.ratings.filter(item => item.rating === "hard");
   const good = memoryState.ratings.filter(item => item.rating === "good");
   $("#memory-score").textContent = total + " cartão(ões) revisado(s)";
-  $("#memory-score-note").textContent = "Você marcou " + good.length + " como lembrou bem, " + partial.length + " como lembrou em parte e " + again.length + " como esquecido.";
+  const selfReportedRecall = total ? Math.round((good.length + partial.length * 0.5) / total * 100) : 0;
+  $("#memory-score-note").textContent = "Você marcou " + good.length + " como lembrou bem, " + partial.length + " como lembrou em parte e " + again.length + " como esquecido. Lembrança percebida nesta sessão: " + selfReportedRecall + "% (autoavaliação).";
   const detail = $("#memory-summary-detail");
   detail.replaceChildren();
   [
