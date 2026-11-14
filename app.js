@@ -1,3 +1,5 @@
+const appStorage = window.RadarDataStorage;
+if (!appStorage) throw new Error("O gerenciador de dados não foi carregado.");
 const DATA_URL = "data/legislacao.json";
 const QUESTIONS_URL = "data/questoes.json";
 const LAWS_URL = "data/laws.json";
@@ -65,6 +67,17 @@ let memorySnapshotPromise = null;
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
+window.addEventListener("radar-data-storage", event => {
+  const status = $("#data-save-status");
+  if (!status) return;
+  const detail = event.detail || {};
+  status.classList.toggle("is-error", !detail.ok);
+  status.textContent = detail.ok
+    ? "Progresso salvo neste dispositivo."
+    : "Falha ao salvar. Exporte um backup e confira o espaço disponível no navegador.";
+});
+
+
 function formatDate(value) {
   if (!value) return "Ainda não realizada";
   const date = new Date(value);
@@ -82,14 +95,14 @@ function describeSuspendedQuestionItems(items,limit=5){
     (items.length>limit?"; e mais "+(items.length-limit)+".":".");
 }
 function loadStudyStates() {
-  try { return JSON.parse(localStorage.getItem(STUDY_KEY) || "{}"); }
+  try { return JSON.parse(appStorage.getItem(STUDY_KEY) || "{}"); }
   catch (_) { return {}; }
 }
 function stateFor(id) { return loadStudyStates()[id] || "nao-estudado"; }
 function setStudyState(id, state) {
   const states = loadStudyStates();
   states[id] = state;
-  localStorage.setItem(STUDY_KEY, JSON.stringify(states));
+  appStorage.setItem(STUDY_KEY, JSON.stringify(states));
 }
 function typeLabel(type, change = {}) {
   if (type === "texto_integral_alterado") return "TEXTO INTEGRAL DIFERENTE";
@@ -112,7 +125,7 @@ function renderStatus(data) {
   $("#stat-check-note").textContent = data.summary || (data.last_successful_check ? "Última consulta concluída" : "A primeira execução ainda não ocorreu");
 }
 function updateBadge() {
-  const lastSeen = localStorage.getItem(LAST_SEEN_KEY);
+  const lastSeen = appStorage.getItem(LAST_SEEN_KEY);
   const lastSeenTime = lastSeen ? new Date(lastSeen).getTime() : 0;
   const unread=allChanges.filter(item => new Date(item.detected_at).getTime() > lastSeenTime);
   const count=unread.length;
@@ -294,7 +307,7 @@ function renderDrawer() {
 function openDrawer() {
   $("#notification-drawer").classList.remove("hidden");
   $("#notification-button").setAttribute("aria-expanded", "true");
-  localStorage.setItem(LAST_SEEN_KEY, new Date().toISOString());
+  appStorage.setItem(LAST_SEEN_KEY, new Date().toISOString());
   updateBadge();
   renderDrawer();
 }
@@ -330,25 +343,25 @@ async function loadDashboard() {
 // -------------------- Biblioteca Lei Seca --------------------
 function readLegalStorage(key) {
   try {
-    const value = JSON.parse(localStorage.getItem(key) || "[]");
+    const value = JSON.parse(appStorage.getItem(key) || "[]");
     return new Set(Array.isArray(value) ? value.filter(item => typeof item === "string") : []);
   } catch (_) {
     return new Set();
   }
 }
 function writeLegalStorage(key, values) {
-  localStorage.setItem(key, JSON.stringify([...values]));
+  appStorage.setItem(key, JSON.stringify([...values]));
 }
 function legalStudiedSet() { return readLegalStorage(LEGAL_STUDIED_KEY); }
 function legalFavoritesSet() { return readLegalStorage(LEGAL_FAVORITES_KEY); }
 function loadLegalStudiedDates() {
   try {
-    const value=JSON.parse(localStorage.getItem(LEGAL_STUDIED_AT_KEY)||"{}");
+    const value=JSON.parse(appStorage.getItem(LEGAL_STUDIED_AT_KEY)||"{}");
     return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
   } catch (_) { return {}; }
 }
 function saveLegalStudiedDates(value) {
-  try { localStorage.setItem(LEGAL_STUDIED_AT_KEY,JSON.stringify(value)); }
+  try { appStorage.setItem(LEGAL_STUDIED_AT_KEY,JSON.stringify(value)); }
   catch(error){console.warn("Não foi possível salvar a data do estudo:",error);}
 }
 function legalArticleKey(lawId, article) {
@@ -2095,12 +2108,12 @@ function startCloze() {
 }
 function loadClozeReviewQueue() {
   try {
-    const value=JSON.parse(localStorage.getItem(CLOZE_REVIEW_KEY)||"{}");
+    const value=JSON.parse(appStorage.getItem(CLOZE_REVIEW_KEY)||"{}");
     return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
   } catch(_) { return {}; }
 }
 function saveClozeReviewQueue(queue) {
-  try {localStorage.setItem(CLOZE_REVIEW_KEY,JSON.stringify(queue));}
+  try {appStorage.setItem(CLOZE_REVIEW_KEY,JSON.stringify(queue));}
   catch(error){console.warn("Não foi possível salvar os erros de Lei Seca:",error);$("#cloze-review-note").textContent="O navegador não permitiu salvar a revisão. Confira as permissões de armazenamento.";}
 }
 function clozeReviewPending() {
@@ -2359,11 +2372,11 @@ function updateFindErrorFilters(){
   if(!findErrorItems.length)note.textContent+=" Faça uma nova verificação das normas e tente novamente.";
 }
 function loadFindErrorReviewQueue(){
-  try{const value=JSON.parse(localStorage.getItem(ERROR_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  try{const value=JSON.parse(appStorage.getItem(ERROR_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
   catch(_){return {};}
 }
 function saveFindErrorReviewQueue(queue){
-  try{localStorage.setItem(ERROR_REVIEW_KEY,JSON.stringify(queue));}
+  try{appStorage.setItem(ERROR_REVIEW_KEY,JSON.stringify(queue));}
   catch(error){console.warn("Não foi possível salvar a revisão Encontre o erro:",error);const note=$("#error-review-note");if(note)note.textContent="O navegador não permitiu salvar os erros. Confira as permissões de armazenamento.";}
 }
 function findErrorReviewPendingEntries(){
@@ -2603,12 +2616,12 @@ function updateArticleGameFilters() {
 }
 function loadArticleReviewQueue() {
   try {
-    const value = JSON.parse(localStorage.getItem(ARTICLE_REVIEW_KEY) || "{}");
+    const value = JSON.parse(appStorage.getItem(ARTICLE_REVIEW_KEY) || "{}");
     return value && typeof value === "object" && !Array.isArray(value) ? value : {};
   } catch (_) { return {}; }
 }
 function saveArticleReviewQueue(queue) {
-  try { localStorage.setItem(ARTICLE_REVIEW_KEY, JSON.stringify(queue)); }
+  try { appStorage.setItem(ARTICLE_REVIEW_KEY, JSON.stringify(queue)); }
   catch (error) {
     console.warn("Não foi possível salvar a revisão Descubra o artigo:", error);
     const note = $("#article-review-note");
@@ -3127,11 +3140,11 @@ function nextQuestion() {
   quizState.index++;showQuestion();
 }
 function loadCEReviewQueue() {
-  try{const value=JSON.parse(localStorage.getItem(CE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  try{const value=JSON.parse(appStorage.getItem(CE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
   catch(_){return {};}
 }
 function saveCEReviewQueue(queue) {
-  try{localStorage.setItem(CE_REVIEW_KEY,JSON.stringify(queue));}
+  try{appStorage.setItem(CE_REVIEW_KEY,JSON.stringify(queue));}
   catch(error){console.warn("Não foi possível salvar a Central de revisão C/E:",error);const note=$("#ce-review-note");if(note)note.textContent="O navegador não permitiu salvar os erros. Confira as permissões de armazenamento.";}
 }
 function ceReviewPendingEntries() {
@@ -3504,12 +3517,12 @@ function beforeAfterText(change,version) {
 }
 function loadBeforeAfterReviewQueue() {
   try {
-    const value=JSON.parse(localStorage.getItem(BEFORE_AFTER_REVIEW_KEY)||"{}");
+    const value=JSON.parse(appStorage.getItem(BEFORE_AFTER_REVIEW_KEY)||"{}");
     return value&&typeof value==="object"&&!Array.isArray(value)?value:{};
   } catch(_){return {};}
 }
 function saveBeforeAfterReviewQueue(queue) {
-  try{localStorage.setItem(BEFORE_AFTER_REVIEW_KEY,JSON.stringify(queue));}
+  try{appStorage.setItem(BEFORE_AFTER_REVIEW_KEY,JSON.stringify(queue));}
   catch(error){
     console.warn("Não foi possível salvar a revisão Antes e depois:",error);
     const note=$("#before-after-review-note");
@@ -3895,7 +3908,7 @@ function startBeforeAfterReviewSession() {
 // -------------------- Memorização ativa com revisão espaçada --------------------
 function loadMemoryProgress() {
   try {
-    const value = JSON.parse(localStorage.getItem(MEMORY_PROGRESS_KEY) || "{}");
+    const value = JSON.parse(appStorage.getItem(MEMORY_PROGRESS_KEY) || "{}");
     return value && typeof value === "object" && !Array.isArray(value) ? value : {};
   } catch (_) {
     return {};
@@ -3904,7 +3917,7 @@ function loadMemoryProgress() {
 
 function saveMemoryProgress(progress) {
   try {
-    localStorage.setItem(MEMORY_PROGRESS_KEY, JSON.stringify(progress));
+    appStorage.setItem(MEMORY_PROGRESS_KEY, JSON.stringify(progress));
   } catch (error) {
     console.warn("Não foi possível salvar o progresso de memorização:", error);
     $("#memory-note").textContent = "O navegador não permitiu salvar o progresso. Confira as permissões de armazenamento do site.";
@@ -3913,7 +3926,7 @@ function saveMemoryProgress(progress) {
 
 function loadMemoryCustomCards() {
   try {
-    const value = JSON.parse(localStorage.getItem(MEMORY_CUSTOM_CARDS_KEY) || "[]");
+    const value = JSON.parse(appStorage.getItem(MEMORY_CUSTOM_CARDS_KEY) || "[]");
     return Array.isArray(value) ? value.filter(card => card && card.id && card.article_key && card.literal_text) : [];
   } catch (_) {
     return [];
@@ -3921,7 +3934,7 @@ function loadMemoryCustomCards() {
 }
 function saveMemoryCustomCards(cards) {
   try {
-    localStorage.setItem(MEMORY_CUSTOM_CARDS_KEY, JSON.stringify(cards));
+    appStorage.setItem(MEMORY_CUSTOM_CARDS_KEY, JSON.stringify(cards));
     return true;
   } catch (error) {
     console.warn("Não foi possível salvar os cartões pessoais:", error);
@@ -3931,7 +3944,7 @@ function saveMemoryCustomCards(cards) {
 }
 function loadMemoryFavoriteCardIds() {
   try {
-    const value = JSON.parse(localStorage.getItem(MEMORY_FAVORITE_CARD_IDS_KEY) || "[]");
+    const value = JSON.parse(appStorage.getItem(MEMORY_FAVORITE_CARD_IDS_KEY) || "[]");
     return new Set(Array.isArray(value) ? value.filter(id => typeof id === "string") : []);
   } catch (_) {
     return new Set();
@@ -3939,7 +3952,7 @@ function loadMemoryFavoriteCardIds() {
 }
 function saveMemoryFavoriteCardIds(ids) {
   try {
-    localStorage.setItem(MEMORY_FAVORITE_CARD_IDS_KEY, JSON.stringify([...ids]));
+    appStorage.setItem(MEMORY_FAVORITE_CARD_IDS_KEY, JSON.stringify([...ids]));
     return true;
   } catch (error) {
     console.warn("Não foi possível salvar os cartões favoritos:", error);
@@ -5112,11 +5125,11 @@ let centralReviewSession={active:false,keys:[],index:0,title:""};
 let centralReviewEntriesCache=[];
 
 function loadDifficultArticleQueue(){
-  try{const value=JSON.parse(localStorage.getItem(DIFFICULT_ARTICLE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  try{const value=JSON.parse(appStorage.getItem(DIFFICULT_ARTICLE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
   catch(_){return {};}
 }
 function saveDifficultArticleQueue(queue){
-  try{localStorage.setItem(DIFFICULT_ARTICLE_REVIEW_KEY,JSON.stringify(queue));}
+  try{appStorage.setItem(DIFFICULT_ARTICLE_REVIEW_KEY,JSON.stringify(queue));}
   catch(error){console.warn("Não foi possível salvar artigos difíceis:",error);}
 }
 function toggleLegalArticleDifficulty(){
@@ -5331,8 +5344,8 @@ function startCentralReviewEntry(entry){
 }
 function markCentralReviewMastered(entry){
   if(!entry)return;const now=new Date().toISOString();
-  const update=(key,id)=>{let queue={};try{queue=JSON.parse(localStorage.getItem(key)||"{}");}catch(_){}
-    if(queue[id]){queue[id]={...queue[id],status:"mastered",next_due:null,mastered_at:now,mastered_by_user:true};localStorage.setItem(key,JSON.stringify(queue));}};
+  const update=(key,id)=>{let queue={};try{queue=JSON.parse(appStorage.getItem(key)||"{}");}catch(_){}
+    if(queue[id]){queue[id]={...queue[id],status:"mastered",next_due:null,mastered_at:now,mastered_by_user:true};appStorage.setItem(key,JSON.stringify(queue));}};
   if(entry.source==="ce")update(CE_REVIEW_KEY,entry.native_id);
   else if(entry.source==="cloze")update(CLOZE_REVIEW_KEY,entry.native_id);
   else if(entry.source==="error")update(ERROR_REVIEW_KEY,entry.native_id);
@@ -5403,19 +5416,19 @@ const ACTIVITY_SESSION_LIMIT=500;
 let activityCurrentSession=null;
 
 function loadActivityEvents(){
-  try{const value=JSON.parse(localStorage.getItem(ACTIVITY_EVENTS_KEY)||"[]");return Array.isArray(value)?value:[];}
+  try{const value=JSON.parse(appStorage.getItem(ACTIVITY_EVENTS_KEY)||"[]");return Array.isArray(value)?value:[];}
   catch(_){return [];}
 }
 function saveActivityEvents(events){
-  try{localStorage.setItem(ACTIVITY_EVENTS_KEY,JSON.stringify(events.slice(-ACTIVITY_EVENT_LIMIT)));return true;}
+  try{appStorage.setItem(ACTIVITY_EVENTS_KEY,JSON.stringify(events.slice(-ACTIVITY_EVENT_LIMIT)));return true;}
   catch(error){console.warn("Não foi possível salvar o histórico de atividades:",error);return false;}
 }
 function loadActivitySessions(){
-  try{const value=JSON.parse(localStorage.getItem(ACTIVITY_SESSIONS_KEY)||"[]");return Array.isArray(value)?value:[];}
+  try{const value=JSON.parse(appStorage.getItem(ACTIVITY_SESSIONS_KEY)||"[]");return Array.isArray(value)?value:[];}
   catch(_){return [];}
 }
 function saveActivitySessions(sessions){
-  try{localStorage.setItem(ACTIVITY_SESSIONS_KEY,JSON.stringify(sessions.slice(-ACTIVITY_SESSION_LIMIT)));return true;}
+  try{appStorage.setItem(ACTIVITY_SESSIONS_KEY,JSON.stringify(sessions.slice(-ACTIVITY_SESSION_LIMIT)));return true;}
   catch(error){console.warn("Não foi possível salvar as sessões de estudo:",error);return false;}
 }
 function activityModeInfo(mode){
@@ -5457,7 +5470,7 @@ function beginActivitySession(mode,context={}){
     law_titles:meta.law_title?[meta.law_title]:[],articles:meta.article?[meta.article]:[],
     last_activity_at:new Date().toISOString()
   };
-  try{localStorage.setItem(ACTIVITY_ACTIVE_SESSION_KEY,id);}catch(_){}
+  try{appStorage.setItem(ACTIVITY_ACTIVE_SESSION_KEY,id);}catch(_){}
   const sessions=loadActivitySessions();sessions.push({...activityCurrentSession});saveActivitySessions(sessions);
   return activityCurrentSession;
 }
@@ -5493,7 +5506,7 @@ function finishActivitySession(status="completed"){
   const sessions=loadActivitySessions(),index=sessions.findIndex(item=>item.id===activityCurrentSession.id);
   if(index>=0)sessions[index]={...activityCurrentSession};else sessions.push({...activityCurrentSession});
   saveActivitySessions(sessions);
-  try{if(localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
+  try{if(appStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)appStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
   if(status==="completed"&&activityCurrentSession.mode==="simulado"&&Number(activityCurrentSession.simulado_total)>0&&Number(activityCurrentSession.answers_total)>=Number(activityCurrentSession.simulado_total)){
     awardExperience(XP_REWARDS.simulatorCompletion,"simulado-concluido::"+activityCurrentSession.id,"Simulado concluído",
       {session_id:activityCurrentSession.id,answers:activityCurrentSession.answers_total||0});
@@ -5562,11 +5575,11 @@ function activityLegalTrainingItem(item){
 }
 function recoverInterruptedActivitySession(){
   let activeId="";
-  try{activeId=localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)||"";}catch(_){}
+  try{activeId=appStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)||"";}catch(_){}
   if(!activeId)return;
   const sessions=loadActivitySessions(),index=sessions.findIndex(item=>item.id===activeId&&item.status==="active");
   if(index>=0){sessions[index]={...sessions[index],status:"interrupted",ended_at:new Date().toISOString()};saveActivitySessions(sessions);}
-  try{localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
+  try{appStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
 }
 function syncLegacyLegalStudyEvents(){
   const studied=legalStudiedSet(),dates=loadLegalStudiedDates(),events=loadActivityEvents();
@@ -5906,7 +5919,7 @@ const XP_LEDGER_LIMIT=500;
 let experienceToastTimer=null;
 function loadExperienceData(){
   try{
-    const value=JSON.parse(localStorage.getItem(EXPERIENCE_STORAGE_KEY)||"{}");
+    const value=JSON.parse(appStorage.getItem(EXPERIENCE_STORAGE_KEY)||"{}");
     return value&&typeof value==="object"&&!Array.isArray(value)
       ?{total_xp:Math.max(0,Number(value.total_xp)||0),awarded_ids:Array.isArray(value.awarded_ids)?value.awarded_ids:[],
         ledger:Array.isArray(value.ledger)?value.ledger:[],updated_at:value.updated_at||null}
@@ -5914,7 +5927,7 @@ function loadExperienceData(){
   }catch(_){return {total_xp:0,awarded_ids:[],ledger:[],updated_at:null};}
 }
 function saveExperienceData(data){
-  try{localStorage.setItem(EXPERIENCE_STORAGE_KEY,JSON.stringify(data));return true;}
+  try{appStorage.setItem(EXPERIENCE_STORAGE_KEY,JSON.stringify(data));return true;}
   catch(error){console.warn("Não foi possível salvar os pontos de experiência:",error);return false;}
 }
 function xpRequiredForLevel(level){
@@ -6002,7 +6015,7 @@ let achievementToastActive=false;
 let achievementToastTimer=null;
 function loadAchievementState(){
   try{
-    const value=JSON.parse(localStorage.getItem(ACHIEVEMENTS_STORAGE_KEY)||"{}");
+    const value=JSON.parse(appStorage.getItem(ACHIEVEMENTS_STORAGE_KEY)||"{}");
     return value&&typeof value==="object"&&!Array.isArray(value)
       ?{daily_goal:Math.max(1,Math.min(100,Math.floor(Number(value.daily_goal)||DEFAULT_DAILY_STUDY_GOAL))),
         unlocked:Array.isArray(value.unlocked)?value.unlocked:[],
@@ -6013,7 +6026,7 @@ function loadAchievementState(){
 }
 function saveAchievementState(state){
   state.updated_at=new Date().toISOString();
-  try{localStorage.setItem(ACHIEVEMENTS_STORAGE_KEY,JSON.stringify(state));return true;}
+  try{appStorage.setItem(ACHIEVEMENTS_STORAGE_KEY,JSON.stringify(state));return true;}
   catch(error){console.warn("Não foi possível salvar as conquistas:",error);return false;}
 }
 function achievementDateKey(value){
@@ -6322,3 +6335,99 @@ renderStudyHome();
 renderPerformanceHome();
 showView("study");
 
+
+
+/* -------------------- Armazenamento local e cópias de segurança -------------------- */
+function setBackupOperationStatus(message, isError = false) {
+  const node = $("#backup-operation-status");
+  if (!node) return;
+  node.textContent = message;
+  node.classList.toggle("is-error", Boolean(isError));
+}
+
+function makeBackupFilename(label = "") {
+  const date = new Date().toISOString().slice(0, 10);
+  const suffix = label ? "-" + label : "";
+  return "radar-legislativo-backup-" + date + suffix + ".json";
+}
+
+function downloadBackupFile(backup, label = "") {
+  try {
+    if (typeof Blob === "undefined" || !window.URL || typeof window.URL.createObjectURL !== "function") {
+      throw new Error("Este navegador não permite gerar o arquivo de backup.");
+    }
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json;charset=utf-8" });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = makeBackupFilename(label);
+    link.style.display = "none";
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => window.URL.revokeObjectURL(url), 1500);
+    return true;
+  } catch (error) {
+    console.error("Falha ao gerar backup:", error);
+    return false;
+  }
+}
+
+function exportStudyBackup(label = "") {
+  try {
+    const backup = appStorage.createBackup();
+    if (!downloadBackupFile(backup, label)) {
+      throw new Error("Não foi possível iniciar o download. Tente novamente em outro navegador.");
+    }
+    setBackupOperationStatus(
+      label === "antes-da-importacao"
+        ? "Cópia de segurança do progresso atual criada antes da restauração."
+        : "Backup exportado. Guarde o arquivo em local seguro, fora do repositório público."
+    );
+    return true;
+  } catch (error) {
+    setBackupOperationStatus(error.message || "Não foi possível exportar os dados.", true);
+    return false;
+  }
+}
+
+async function importStudyBackupFile(file) {
+  if (!file) return;
+  try {
+    if (file.size > 25 * 1024 * 1024) throw new Error("O arquivo ultrapassa o limite de 25 MB.");
+    const backup = appStorage.validateBackup(JSON.parse(await file.text()));
+    const date = backup.created_at ? formatDate(backup.created_at) : "data não informada";
+    const approved = window.confirm(
+      "Restaurar o backup de " + date + "?\n\n" +
+      "Os dados de estudo atuais deste navegador serão substituídos pelos dados do arquivo. " +
+      "Antes disso, o site baixará uma cópia do progresso atual para permitir retorno."
+    );
+    if (!approved) {
+      setBackupOperationStatus("Importação cancelada. Os dados atuais foram mantidos.");
+      return;
+    }
+    if (!exportStudyBackup("antes-da-importacao")) {
+      throw new Error("Não foi possível criar a cópia de segurança dos dados atuais. A importação foi cancelada.");
+    }
+    const result = appStorage.restoreBackup(backup);
+    setBackupOperationStatus(
+      "Backup restaurado (" + result.restored_keys + " grupos de dados). Reabrindo o site..."
+    );
+    window.setTimeout(() => window.location.reload(), 1200);
+  } catch (error) {
+    setBackupOperationStatus(error.message || "Não foi possível importar o backup.", true);
+  }
+}
+
+const exportBackupButton = $("#data-export-backup");
+const importBackupButton = $("#data-import-backup");
+const importBackupInput = $("#data-import-file");
+if (exportBackupButton) exportBackupButton.addEventListener("click", () => exportStudyBackup());
+if (importBackupButton && importBackupInput) {
+  importBackupButton.addEventListener("click", () => importBackupInput.click());
+  importBackupInput.addEventListener("change", async event => {
+    const file = event.target.files && event.target.files[0];
+    await importStudyBackupFile(file);
+    event.target.value = "";
+  });
+}
