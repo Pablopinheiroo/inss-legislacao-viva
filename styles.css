@@ -816,3 +816,58 @@
   .central-review-search{grid-column:span 2}
   .central-review-priority-note{max-width:130px;text-align:right;line-height:1.4}
 }
+
+
+/* Histórico e acompanhamento do estudante */
+.history-intro{align-items:flex-end}
+.history-intro-actions{display:flex;gap:8px}
+.history-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0 0 24px}
+.history-stat{min-width:0;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.history-stat span{display:block;color:#718096;font-size:10px;line-height:1.4}
+.history-stat strong{display:block;margin-top:6px;color:#1b2b4a;font-size:24px}
+.history-section{margin:0 0 27px}
+.history-section>.section-heading{align-items:flex-end;margin-bottom:12px}
+.history-section>.section-heading>strong{color:#263c5e;font-size:24px}
+.history-card-list{display:grid;gap:9px}
+.history-card{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.history-card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:7px}
+.history-mode-tag{color:#536d92;font-size:9px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.history-result-tag{padding:4px 8px;border-radius:99px;background:#eef2f7;color:#617087;font-size:9px;font-weight:800;white-space:nowrap}
+.history-result-tag.correct{background:#e8f5ec;color:#267344}
+.history-result-tag.incorrect{background:#fff0ed;color:#ad493c}
+.history-result-tag.unknown,.history-result-tag.partial,.history-result-tag.self_assessed{background:#fff6e5;color:#8b6b2b}
+.history-card h3{margin:0;color:#253a5c;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.history-card-meta{margin:6px 0 0;color:#8290a4;font-size:10px;line-height:1.55}
+.history-card-detail{margin:8px 0 0;padding-top:8px;border-top:1px solid #edf0f5;color:#51617a;font-size:11px;line-height:1.55;overflow-wrap:anywhere}
+.history-card-detail strong{color:#344968}
+.history-card-actions{display:flex;justify-content:flex-end;margin-top:9px}
+.history-card-actions button,.history-card-actions a{min-height:32px;padding:7px 10px;font-size:10px}
+.history-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.history-filters label,.history-search-label{display:grid;gap:6px;min-width:0}
+.history-filters label>span,.history-search-label>span{color:#5e6d84;font-size:10px;font-weight:800}
+.history-filters select,.history-filters input,.history-search-label input{width:100%;min-width:0;min-height:38px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#34465f;font-size:11px}
+.history-search-label{max-width:520px;margin:0 0 13px}
+.history-results-count{margin:0 0 10px;color:#7d899b;font-size:10px}
+.history-unstudied-card{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.history-unstudied-card .history-card-content{min-width:0;flex:1}
+.history-unstudied-card button{flex:0 0 auto}
+.history-session-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px}
+.history-session-card strong{display:block;color:#2b3f60;font-size:12px}
+.history-session-card span{display:block;margin-top:4px;color:#7c899d;font-size:10px;line-height:1.5}
+.history-session-status{padding:5px 8px;border-radius:99px;background:#eef2f7;color:#67758b;font-size:9px;font-weight:800}
+.history-session-status.completed{background:#e8f5ec;color:#267344}
+.history-session-status.interrupted{background:#fff6e5;color:#8b6b2b}
+@media(max-width:760px){
+ .history-intro{align-items:stretch}
+ .history-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .history-stat{padding:12px}
+ .history-stat strong{font-size:21px}
+ .history-filters{grid-template-columns:1fr 1fr;padding:11px}
+ .history-filters .history-query{grid-column:span 2}
+ .history-card{padding:12px}
+ .history-card-head{align-items:flex-start}
+ .history-unstudied-card{align-items:flex-start;flex-direction:column}
+ .history-unstudied-card button{width:100%}
+ .history-session-card{grid-template-columns:1fr}
+ .history-session-status{justify-self:start}
+}
