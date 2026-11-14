@@ -14,7 +14,7 @@ let clozeSnapshot = null;
 let clozeCurrent = null;
 let clozeBlanks = [];
 let clozeAnswered = 0;
-let quizState = { questions: [], index: 0, selected: null, answers: [] };
+let quizState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false };
 let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
 let articleQuestions = [];
@@ -24,6 +24,7 @@ let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: n
 let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
+const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
@@ -554,6 +555,7 @@ async function loadLegalLaw(lawId) {
       $("#law-mark-studied").disabled = true;
       $("#law-components-details").hidden = true;
       $("#law-train-article").disabled = true;
+      $("#law-train-quiz").disabled = true;
       $("#law-train-facts").disabled = true;
       $("#law-article-count").textContent = "Sem artigos separados";
       $("#law-reader-capture-note").textContent = "Consulta registrada em " + formatDate(snapshot.captured_at) + ".";
@@ -612,6 +614,8 @@ function renderLegalArticlePicker() {
     $("#law-mark-studied").disabled = true;
     $("#law-components-details").hidden = true;
     $("#law-train-article").disabled = true;
+    $("#law-train-quiz").disabled = true;
+    legalSelectedArticle = "";
     $("#law-article-count").textContent = "0 artigos nesta lista";
     return;
   }
@@ -635,6 +639,7 @@ function renderLegalArticlePicker() {
   select.value = next;
   legalSelectedArticle = next;
   renderLegalArticle();
+  updateLegalQuizButton();
   const index = entries.findIndex(([article]) => article === next);
   $("#law-previous-article").disabled = index <= 0;
   $("#law-next-article").disabled = index < 0 || index >= entries.length - 1;
@@ -2293,124 +2298,314 @@ async function loadQuestionBank() {
     if (!response.ok) throw new Error("HTTP " + response.status);
     const data = await response.json();
     questionBank = Array.isArray(data.questions) ? data.questions : [];
-    const categories = [...new Set(questionBank.map(item => item.category))].sort((a,b) => a.localeCompare(b, "pt-BR"));
-    categories.forEach(category => {
-      const option = document.createElement("option");
-      option.value = category;
-      option.textContent = category;
-      $("#quiz-category").append(option);
-    });
-    note.textContent = questionBank.length + " itens disponíveis no banco inicial. As questões são embaralhadas a cada treino.";
+    updateQuizFilters();
+    note.textContent = questionBank.length + " itens disponíveis no banco inicial. Use os filtros para escolher matéria, assunto, norma e artigo.";
     $("#start-quiz").disabled = questionBank.length === 0;
+    updateLegalQuizButton();
+    renderCEReviewOverview();
   } catch (error) {
     note.textContent = "Não foi possível carregar o banco de questões. Recarregue o site e tente novamente.";
     console.error(error);
   }
 }
-function selectedPool() {
-  const category = $("#quiz-category").value;
-  return questionBank.filter(item => category === "todas" || item.category === category);
+function setQuizSelectOptions(selector, entries, allLabel, previousValue) {
+  const select = $(selector);
+  const options = [new Option(allLabel, "todas"), ...entries.map(entry => new Option(entry.label, entry.value))];
+  select.replaceChildren(...options);
+  const allowed = new Set(["todas", ...entries.map(entry => entry.value)]);
+  select.value = allowed.has(previousValue) ? previousValue : "todas";
 }
-function startQuiz(onlyItems = null) {
-  const pool = onlyItems || selectedPool();
-  if (!pool.length) {
-    $("#question-count-note").textContent = "Não há questões disponíveis para essa seleção.";
-    return;
-  }
-  const requested = $("#quiz-length").value === "todas" ? pool.length : Number($("#quiz-length").value);
-  const items = shuffle(pool).slice(0, Math.min(requested, pool.length));
-  quizState = { questions: items, index: 0, selected: null, answers: [] };
+function updateQuizFilters() {
+  const previous = {
+    category: $("#quiz-category").value || "todas",
+    topic: $("#quiz-topic").value || "todas",
+    law: $("#quiz-law-filter").value || "todas",
+    article: $("#quiz-article-filter").value || "todas"
+  };
+  const categories = [...new Set(questionBank.map(item => item.category).filter(Boolean))]
+    .sort((a,b) => a.localeCompare(b,"pt-BR"));
+  setQuizSelectOptions("#quiz-category",categories.map(value=>({value,label:value})),"Todas as matérias",previous.category);
+
+  const category=$("#quiz-category").value;
+  const byCategory=questionBank.filter(item=>category==="todas"||item.category===category);
+  const topics=[...new Set(byCategory.map(item=>item.topic).filter(Boolean))]
+    .sort((a,b)=>a.localeCompare(b,"pt-BR"));
+  setQuizSelectOptions("#quiz-topic",topics.map(value=>({value,label:value})),"Todos os assuntos",previous.topic);
+
+  const topic=$("#quiz-topic").value;
+  const byTopic=byCategory.filter(item=>topic==="todas"||item.topic===topic);
+  const laws=[...new Map(byTopic.filter(item=>item.law_id).map(item=>[
+    item.law_id,{value:item.law_id,label:item.law_title||item.law_id}
+  ])).values()].sort((a,b)=>a.label.localeCompare(b.label,"pt-BR"));
+  setQuizSelectOptions("#quiz-law-filter",laws,"Todas as normas",previous.law);
+
+  const law=$("#quiz-law-filter").value;
+  const byLaw=byTopic.filter(item=>law==="todas"||item.law_id===law);
+  const counts=new Map();
+  byLaw.forEach(item=>{if(item.article_key)counts.set(item.article_key,(counts.get(item.article_key)||0)+1);});
+  const articles=[...counts.entries()].sort((a,b)=>{
+    const left=Number((a[0].match(/\d+/)||[])[0]||0);
+    const right=Number((b[0].match(/\d+/)||[])[0]||0);
+    return left-right||a[0].localeCompare(b[0],"pt-BR");
+  }).map(([value,count])=>({value,label:value+" · "+count+" item(ns)"}));
+  setQuizSelectOptions("#quiz-article-filter",articles,"Todos os artigos",previous.article);
+
+  const pool=selectedPool();
+  $("#start-quiz").disabled=pool.length===0;
+  const chosen=[];
+  if($("#quiz-category").value!=="todas")chosen.push($("#quiz-category").selectedOptions[0]?.textContent);
+  if($("#quiz-topic").value!=="todas")chosen.push($("#quiz-topic").selectedOptions[0]?.textContent);
+  if($("#quiz-law-filter").value!=="todas")chosen.push($("#quiz-law-filter").selectedOptions[0]?.textContent);
+  if($("#quiz-article-filter").value!=="todas")chosen.push($("#quiz-article-filter").value);
+  $("#question-count-note").textContent=pool.length+" item(ns) nesta seleção."
+    +(chosen.length?" Filtros: "+chosen.join(" · ")+".":" O banco inicial pode ser ampliado com novos itens.");
+}
+function selectedPool() {
+  const category=$("#quiz-category").value;
+  const topic=$("#quiz-topic").value;
+  const law=$("#quiz-law-filter").value;
+  const article=$("#quiz-article-filter").value;
+  return questionBank.filter(item=>
+    (category==="todas"||item.category===category)
+    &&(topic==="todas"||item.topic===topic)
+    &&(law==="todas"||item.law_id===law)
+    &&(article==="todas"||item.article_key===article)
+  );
+}
+function renderTextWithHighlights(element,text,phrases,className="quiz-highlight") {
+  const source=String(text||"");
+  const wanted=[...new Set((Array.isArray(phrases)?phrases:[phrases]).map(v=>String(v||"").trim()).filter(Boolean))];
+  element.replaceChildren();
+  if(!source||!wanted.length){element.textContent=source;return 0;}
+  const lower=source.toLocaleLowerCase("pt-BR");
+  const matches=[];
+  wanted.forEach(phrase=>{
+    const needle=phrase.toLocaleLowerCase("pt-BR");
+    let from=0;
+    while(needle&&from<lower.length){
+      const index=lower.indexOf(needle,from);
+      if(index<0)break;
+      matches.push({start:index,end:index+phrase.length});
+      from=index+phrase.length;
+    }
+  });
+  matches.sort((a,b)=>a.start-b.start||b.end-a.end);
+  const selected=[];
+  matches.forEach(match=>{const prev=selected[selected.length-1];if(!prev||match.start>=prev.end)selected.push(match);});
+  let cursor=0;
+  selected.forEach(match=>{
+    if(match.start>cursor)element.append(document.createTextNode(source.slice(cursor,match.start)));
+    const mark=document.createElement("mark");mark.className=className;mark.textContent=source.slice(match.start,match.end);element.append(mark);
+    cursor=match.end;
+  });
+  if(cursor<source.length)element.append(document.createTextNode(source.slice(cursor)));
+  return selected.length;
+}
+function renderHighlightSnippets(element,phrases) {
+  element.replaceChildren();
+  (phrases||[]).filter(Boolean).forEach((phrase,index)=>{
+    if(index)element.append(document.createTextNode(" … "));
+    const mark=document.createElement("mark");mark.className="quiz-highlight";mark.textContent=phrase;element.append(mark);
+  });
+}
+function startQuiz(onlyItems=null,options={}) {
+  const pool=onlyItems||selectedPool();
+  if(!pool.length){$("#question-count-note").textContent="Não há questões disponíveis para essa seleção.";return;}
+  const requested=options.fullPool||options.reviewMode||$("#quiz-length").value==="todas"
+    ?pool.length:Number($("#quiz-length").value);
+  const items=shuffle(pool).slice(0,Math.min(requested,pool.length));
+  quizState={questions:items,index:0,selected:null,answers:[],reviewMode:Boolean(options.reviewMode)};
   $("#quiz-welcome").classList.add("hidden");
   $("#quiz-summary").classList.add("hidden");
   $("#quiz-card").classList.remove("hidden");
   showQuestion();
 }
 function showQuestion() {
-  const item = quizState.questions[quizState.index];
-  $("#answer-true").disabled = false;
-  $("#answer-false").disabled = false;
-  quizState.selected = null;
-  $("#quiz-category-label").textContent = item.category;
-  $("#quiz-progress").textContent = "Questão " + (quizState.index + 1) + " de " + quizState.questions.length;
-  $("#quiz-law").textContent = item.law_title;
-  $("#quiz-article").textContent = item.article;
-  $("#quiz-statement").textContent = item.statement;
-  $("#answer-true").classList.remove("selected");
-  $("#answer-false").classList.remove("selected");
-  $("#answer-true").setAttribute("aria-pressed", "false");
-  $("#answer-false").setAttribute("aria-pressed", "false");
-  $("#submit-answer").disabled = true;
+  const item=quizState.questions[quizState.index];
+  $("#answer-true").disabled=false;$("#answer-false").disabled=false;$("#answer-unknown").disabled=false;
+  quizState.selected=null;
+  $("#quiz-category-label").textContent=item.category;
+  $("#quiz-progress").textContent="Questão "+(quizState.index+1)+" de "+quizState.questions.length;
+  $("#quiz-law").textContent=item.law_title;$("#quiz-article").textContent=item.article;
+  renderTextWithHighlights($("#quiz-statement"),item.statement,[]);
+  ["#answer-true","#answer-false","#answer-unknown"].forEach(selector=>{
+    $(selector).classList.remove("selected");$(selector).setAttribute("aria-pressed","false");
+  });
+  $("#submit-answer").disabled=true;
   $("#answer-feedback").classList.add("hidden");
-  $("#next-question").textContent = quizState.index === quizState.questions.length - 1 ? "Ver resultado →" : "Próxima questão →";
+  $("#feedback-wrong-block").classList.add("hidden");
+  $("#feedback-support-block").classList.add("hidden");
+  $("#next-question").textContent=quizState.index===quizState.questions.length-1?"Ver resultado →":"Próxima questão →";
 }
 function chooseAnswer(value) {
-  if ($("#answer-feedback").classList.contains("hidden") === false) return;
-  quizState.selected = value;
-  $("#answer-true").classList.toggle("selected", value === true);
-  $("#answer-false").classList.toggle("selected", value === false);
-  $("#answer-true").setAttribute("aria-pressed", String(value === true));
-  $("#answer-false").setAttribute("aria-pressed", String(value === false));
-  $("#submit-answer").disabled = false;
+  if(!$("#answer-feedback").classList.contains("hidden"))return;
+  quizState.selected=value;
+  $("#answer-true").classList.toggle("selected",value===true);
+  $("#answer-false").classList.toggle("selected",value===false);
+  $("#answer-unknown").classList.remove("selected");
+  $("#answer-true").setAttribute("aria-pressed",String(value===true));
+  $("#answer-false").setAttribute("aria-pressed",String(value===false));
+  $("#answer-unknown").setAttribute("aria-pressed","false");
+  $("#submit-answer").disabled=false;
+}
+function chooseUnknownAnswer() {
+  if(!$("#answer-feedback").classList.contains("hidden"))return;
+  quizState.selected="unknown";
+  $("#answer-true").classList.remove("selected");$("#answer-false").classList.remove("selected");
+  $("#answer-unknown").classList.add("selected");
+  $("#answer-true").setAttribute("aria-pressed","false");$("#answer-false").setAttribute("aria-pressed","false");
+  $("#answer-unknown").setAttribute("aria-pressed","true");$("#submit-answer").disabled=false;
 }
 function submitAnswer() {
-  if (quizState.selected === null) return;
-  const item = quizState.questions[quizState.index];
-  const correct = quizState.selected === item.answer;
-  quizState.answers.push({ item, chosen: quizState.selected, correct });
-  $("#feedback-result").textContent = correct ? "Você acertou! ✓" : "Você errou. ✕";
-  $("#feedback-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
-  $("#feedback-explanation").textContent = item.explanation;
-  $("#feedback-literal").textContent = item.literal_text;
-  $("#feedback-source").href = item.source_url;
+  if(quizState.selected===null)return;
+  const item=quizState.questions[quizState.index],chosen=quizState.selected,unknown=chosen==="unknown";
+  const correct=!unknown&&chosen===item.answer;
+  quizState.answers.push({item,chosen,correct,unknown});
+  if(!correct)recordCEReviewMiss(item,chosen,quizState.reviewMode);
+  else if(quizState.reviewMode)recordCEReviewSuccess(item);
+
+  $("#feedback-result").textContent=unknown
+    ?"Você marcou “Não sei”. Gabarito: "+(item.answer?"Certo.":"Errado.")
+    :correct?"Você acertou! ✓":"Você errou. ✕";
+  $("#feedback-result").className="feedback-result "+(unknown?"unknown":correct?"correct":"incorrect");
+  $("#feedback-explanation").textContent=item.explanation||"";
+
+  const wrong=item.answer===false?(item.wrong_expression||""):"";
+  renderTextWithHighlights($("#quiz-statement"),item.statement,wrong?[wrong]:[]);
+  if(wrong){renderHighlightSnippets($("#feedback-wrong-expression"),[wrong]);$("#feedback-wrong-block").classList.remove("hidden");}
+  else $("#feedback-wrong-block").classList.add("hidden");
+
+  const support=Array.isArray(item.supporting_excerpts)?item.supporting_excerpts:[];
+  if(support.length){
+    renderHighlightSnippets($("#feedback-supporting-excerpt"),support);
+    renderTextWithHighlights($("#feedback-literal"),item.literal_text,support);
+    $("#feedback-support-block").classList.remove("hidden");
+  }else{
+    $("#feedback-support-block").classList.add("hidden");$("#feedback-literal").textContent=item.literal_text||"";
+  }
+  $("#feedback-source").href=item.source_url||"#";
   $("#answer-feedback").classList.remove("hidden");
-  $("#submit-answer").disabled = true;
-  $("#answer-true").disabled = true;
-  $("#answer-false").disabled = true;
+  $("#submit-answer").disabled=true;
+  $("#answer-true").disabled=true;$("#answer-false").disabled=true;$("#answer-unknown").disabled=true;
 }
 function showQuizSummary() {
-  $("#quiz-card").classList.add("hidden");
-  $("#quiz-summary").classList.remove("hidden");
-  const total = quizState.questions.length;
-  const correct = quizState.answers.filter(answer => answer.correct).length;
-  const wrong = total - correct;
-  const percentage = Math.round((correct / total) * 100);
-  $("#quiz-score").textContent = correct + " de " + total + " acertos";
-  $("#quiz-score-note").textContent = "Aproveitamento: " + percentage + "%. " + (wrong === 0 ? "Excelente! Você acertou todos os itens." : "Revise os dispositivos das questões que errou.");
-  const mistakes = quizState.answers.filter(answer => !answer.correct);
-  const box = $("#quiz-mistakes");
+  $("#quiz-card").classList.add("hidden");$("#quiz-summary").classList.remove("hidden");
+  const total=quizState.questions.length;
+  const correct=quizState.answers.filter(a=>a.correct).length;
+  const wrong=total-correct;
+  const unknown=quizState.answers.filter(a=>a.unknown).length;
+  const percentage=Math.round((correct/total)*100);
+  $("#quiz-score").textContent=correct+" de "+total+" acertos";
+  $("#quiz-score-note").textContent="Aproveitamento: "+percentage+"%. "
+    +(unknown?unknown+" item(ns) marcado(s) como “Não sei”. ":"")
+    +(wrong===0?"Excelente! Você acertou todos os itens.":"As questões erradas e as marcadas como “Não sei” foram enviadas à Central de revisão.");
+  const mistakes=quizState.answers.filter(a=>!a.correct),box=$("#quiz-mistakes");
   box.replaceChildren();
-  if (!mistakes.length) {
-    box.textContent = "Nenhuma questão errada neste treino.";
-  } else {
-    const heading = document.createElement("h3");
-    heading.textContent = "Pontos para revisar";
-    const list = document.createElement("div");
-    list.className = "mistake-list";
-    mistakes.forEach(answer => {
-      const row = document.createElement("div");
-      row.className = "mistake-row";
-      const strong = document.createElement("strong");
-      const detail = document.createElement("span");
-      strong.textContent = answer.item.law_title + " · " + answer.item.article;
-      detail.textContent = "Sua resposta: " + (answer.chosen ? "Certo" : "Errado") + " · Gabarito: " + (answer.item.answer ? "Certo" : "Errado");
-      row.append(strong, detail);
-      list.append(row);
+  if(!mistakes.length)box.textContent="Nenhuma questão errada neste treino.";
+  else{
+    const heading=document.createElement("h3");heading.textContent="Pontos para revisar";
+    const list=document.createElement("div");list.className="mistake-list";
+    mistakes.forEach(answer=>{
+      const row=document.createElement("div");row.className="mistake-row";
+      const strong=document.createElement("strong"),detail=document.createElement("span");
+      strong.textContent=answer.item.law_title+" · "+answer.item.article;
+      const chosen=answer.unknown?"Não sei":answer.chosen?"Certo":"Errado";
+      detail.textContent="Sua resposta: "+chosen+" · Gabarito: "+(answer.item.answer?"Certo":"Errado");
+      row.append(strong,detail);list.append(row);
     });
-    box.append(heading, list);
+    box.append(heading,list);
   }
-  $("#retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+  $("#retry-mistakes").classList.toggle("hidden",mistakes.length===0);
+  renderCEReviewOverview();
 }
 function nextQuestion() {
-  if (quizState.index >= quizState.questions.length - 1) {
-    showQuizSummary();
-    return;
-  }
-  quizState.index += 1;
-  $("#answer-true").disabled = false;
-  $("#answer-false").disabled = false;
-  showQuestion();
+  if(quizState.index>=quizState.questions.length-1){showQuizSummary();return;}
+  quizState.index++;showQuestion();
 }
-
+function loadCEReviewQueue() {
+  try{const value=JSON.parse(localStorage.getItem(CE_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  catch(_){return {};}
+}
+function saveCEReviewQueue(queue) {
+  try{localStorage.setItem(CE_REVIEW_KEY,JSON.stringify(queue));}
+  catch(error){console.warn("Não foi possível salvar a Central de revisão C/E:",error);const note=$("#ce-review-note");if(note)note.textContent="O navegador não permitiu salvar os erros. Confira as permissões de armazenamento.";}
+}
+function ceReviewPendingEntries() {
+  return Object.values(loadCEReviewQueue()).filter(entry=>entry&&entry.status!=="mastered"&&entry.item&&entry.item.id);
+}
+function recordCEReviewMiss(item,chosen,reviewMode) {
+  const queue=loadCEReviewQueue(),previous=queue[item.id]||{},now=Date.now();
+  queue[item.id]={
+    item:JSON.parse(JSON.stringify(item)),
+    misses:(Number(previous.misses)||0)+1,
+    correct_reviews:0,
+    first_missed_at:previous.first_missed_at||new Date(now).toISOString(),
+    last_missed_at:new Date(now).toISOString(),
+    last_response:chosen==="unknown"?"nao_sei":chosen?"certo":"errado",
+    next_due:new Date(now+(reviewMode?10*60*1000:0)).toISOString(),
+    status:"pending"
+  };
+  saveCEReviewQueue(queue);renderCEReviewOverview();
+}
+function recordCEReviewSuccess(item) {
+  const queue=loadCEReviewQueue(),previous=queue[item.id];
+  if(!previous||previous.status==="mastered")return;
+  const now=Date.now(),correctReviews=(Number(previous.correct_reviews)||0)+1,mastered=correctReviews>=3;
+  const intervalDays=correctReviews===1?1:3;
+  queue[item.id]={
+    ...previous,item:JSON.parse(JSON.stringify(item)),correct_reviews:correctReviews,
+    last_correct_at:new Date(now).toISOString(),
+    next_due:mastered?null:new Date(now+intervalDays*24*60*60*1000).toISOString(),
+    status:mastered?"mastered":"pending"
+  };
+  saveCEReviewQueue(queue);renderCEReviewOverview();
+}
+function renderCEReviewOverview() {
+  const now=Date.now(),all=Object.values(loadCEReviewQueue());
+  const pending=all.filter(e=>e&&e.status!=="mastered"&&e.item);
+  const due=pending.filter(e=>{const time=new Date(e.next_due||0).getTime();return !Number.isFinite(time)||time<=now;});
+  const mastered=all.filter(e=>e&&e.status==="mastered").length;
+  const dueNode=$("#ce-review-due"),pendingNode=$("#ce-review-pending"),masteredNode=$("#ce-review-mastered");
+  const button=$("#ce-review-start"),note=$("#ce-review-note");
+  if(!dueNode||!pendingNode||!masteredNode||!button||!note)return;
+  dueNode.textContent=String(due.length);pendingNode.textContent=String(pending.length);masteredNode.textContent=String(mastered);
+  button.disabled=due.length===0;
+  button.textContent=due.length?"Revisar agora ("+due.length+")":"Nenhuma revisão vencida";
+  if(!pending.length)note.textContent="As questões erradas e as marcadas como “Não sei” aparecerão aqui automaticamente.";
+  else if(due.length)note.textContent=due.length+" questão(ões) prontas para revisar. As que você acertar três vezes na Central saem da fila ativa.";
+  else{
+    const next=pending.map(e=>new Date(e.next_due||0).getTime()).filter(Number.isFinite);
+    note.textContent=pending.length+" questão(ões) em acompanhamento. Próxima revisão: "+(next.length?formatDate(new Date(Math.min(...next)).toISOString()):"aguardando");
+  }
+}
+function startCEReviewSession() {
+  const now=Date.now();
+  const due=ceReviewPendingEntries().filter(e=>{const time=new Date(e.next_due||0).getTime();return !Number.isFinite(time)||time<=now;});
+  if(!due.length){renderCEReviewOverview();return;}
+  const items=due.map(e=>questionBank.find(q=>q.id===e.item.id)||e.item);
+  showView("quiz");startQuiz(items,{reviewMode:true,fullPool:true});
+}
+function updateLegalQuizButton() {
+  const button=$("#law-train-quiz");if(!button)return;
+  const has=Boolean(legalSelectedLaw&&legalSelectedArticle&&questionBank.some(item=>
+    item.law_id===legalSelectedLaw.id&&legalTrainingArticleMatches(item.article_key||item.article,legalSelectedArticle)
+  ));
+  button.disabled=!has;
+  button.title=has?"Abrir o treino C/E já filtrado para este artigo.":"Ainda não há questões C/E cadastradas para este artigo.";
+}
+async function startQuizForLegalArticle() {
+  if(!legalSelectedLaw||!legalSelectedArticle)return;
+  if(!questionBank.length)await loadQuestionBank();
+  const law=legalSelectedLaw,article=legalSelectedArticle;
+  const items=questionBank.filter(item=>item.law_id===law.id&&legalTrainingArticleMatches(item.article_key||item.article,article));
+  showView("quiz");
+  if(!items.length){$("#question-count-note").textContent="Ainda não há questões C/E cadastradas para "+law.short_title+" · "+article+".";return;}
+  $("#quiz-category").value="todas";$("#quiz-topic").value="todas";$("#quiz-law-filter").value=law.id;
+  updateQuizFilters();
+  $("#quiz-article-filter").value=items[0].article_key;updateQuizFilters();
+  $("#quiz-length").value="todas";
+  startQuiz(selectedPool(),{fullPool:true});
+}
 // -------------------- Modo Várias afirmações sobre o mesmo artigo --------------------
 function multiCECategoryForLaw(lawId) {
   if (lawId === "decreto-6029-2007" || lawId === "decreto-1171-1994") return "Ética";
@@ -2976,6 +3171,7 @@ function renderMemoryOverview() {
   $("#memory-total").textContent = String(memoryCards.length);
   $("#memory-due").textContent = String(due);
   $("#memory-seen").textContent = String(seen);
+  renderCEReviewOverview();
 }
 
 function selectedMemoryPool() {
@@ -3183,7 +3379,8 @@ $("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#tab-article").addEventListener("click", () => showView("article"));
 $("#tab-multi-ce").addEventListener("click", () => showView("multi-ce"));
 $("#tab-before-after").addEventListener("click", () => showView("before-after"));
-$("#tab-memory").addEventListener("click", () => { renderMemoryOverview(); showView("memory"); });
+$("#tab-memory").addEventListener("click", () => { renderMemoryOverview(); renderCEReviewOverview(); showView("memory"); });
+$("#ce-review-start").addEventListener("click", startCEReviewSession);
 $("#start-memory").addEventListener("click", () => startMemorySession());
 $("#memory-reveal").addEventListener("click", revealMemoryAnswer);
 $("#memory-again").addEventListener("click", () => rateMemoryCard("again"));
@@ -3207,6 +3404,7 @@ $("#law-library-category").addEventListener("change", renderLegalLibrary);
 $("#law-article-select").addEventListener("change", () => {
   legalSelectedArticle = $("#law-article-select").value;
   renderLegalArticle();
+  updateLegalQuizButton();
 });
 $("#law-article-filter").addEventListener("change", renderLegalArticlePicker);
 $("#law-article-search").addEventListener("input", searchLegalArticles);
@@ -3221,6 +3419,7 @@ $("#law-mark-studied").addEventListener("click", toggleLegalArticleStudied);
 $("#law-previous-article").addEventListener("click", () => stepLegalArticle(-1));
 $("#law-next-article").addEventListener("click", () => stepLegalArticle(1));
 $("#law-train-article").addEventListener("click", startLegalArticleTraining);
+$("#law-train-quiz").addEventListener("click", startQuizForLegalArticle);
 $("#law-train-facts").addEventListener("click", startLegalFactTraining);
 $("#law-training-selected-paragraphs").addEventListener("click", () => startLegalSelectedDeviceTraining("paragrafo"));
 $("#law-training-selected-incisos").addEventListener("click", () => startLegalSelectedDeviceTraining("inciso"));
@@ -3277,6 +3476,7 @@ $("#multi-ce-retry-mistakes").addEventListener("click", () => {
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
 $("#answer-false").addEventListener("click", () => chooseAnswer(false));
+$("#answer-unknown").addEventListener("click", chooseUnknownAnswer);
 $("#submit-answer").addEventListener("click", submitAnswer);
 $("#next-question").addEventListener("click", nextQuestion);
 $("#restart-quiz").addEventListener("click", () => {
@@ -3286,7 +3486,7 @@ $("#restart-quiz").addEventListener("click", () => {
 });
 $("#retry-mistakes").addEventListener("click", () => {
   const mistakes = quizState.answers.filter(answer => !answer.correct).map(answer => answer.item);
-  startQuiz(mistakes);
+  startQuiz(mistakes,{fullPool:true});
 });
 document.addEventListener("keydown", event => { if (event.key === "Escape") closeDrawer(); });
 loadDashboard();
