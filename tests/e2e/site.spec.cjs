@@ -350,7 +350,9 @@ test("backup exportado pode ser recuperado em outro navegador", async ({ browser
   });
 
   await sourcePage.locator(".study-data-details > summary").click();
-  const download = await sourcePage.waitForEvent("download", () => sourcePage.locator("#data-export-backup").click());
+  const downloadPromise = sourcePage.waitForEvent("download");
+  await sourcePage.locator("#data-export-backup").click();
+  const download = await downloadPromise;
   const backupPath = await download.path();
   const fs = require("node:fs");
   const backup = JSON.parse(fs.readFileSync(backupPath, "utf8"));
