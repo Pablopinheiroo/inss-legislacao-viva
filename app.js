@@ -1,6 +1,7 @@
 const DATA_URL = "data/legislacao.json";
 const QUESTIONS_URL = "data/questoes.json";
 const LAWS_URL = "data/laws.json";
+const ERROR_BANK_URL = "data/encontre-erro.json";
 const LAST_SEEN_KEY = "radarLegislativo.lastSeen";
 const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
@@ -12,6 +13,8 @@ let clozeCurrent = null;
 let clozeBlanks = [];
 let clozeAnswered = 0;
 let quizState = { questions: [], index: 0, selected: null, answers: [] };
+let findErrorItems = [];
+let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -353,6 +356,197 @@ function checkCloze() {
   $("#cloze-progress").textContent = "Acertos neste artigo: " + clozeAnswered;
 }
 
+
+// -------------------- Modo de jogo Encontre o erro --------------------
+function normalizeLegalForMatch(value) {
+  return normalizeAnswer(value)
+    .replace(/[^\\p{L}\\p{N}%]+/gu, " ")
+    .replace(/\\s+/g, " ")
+    .trim();
+}
+async function loadFindErrorBank() {
+  const note = $("#error-count-note");
+  try {
+    const response = await fetch(ERROR_BANK_URL + "?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    const bankItems = Array.isArray(data.items) ? data.items : [];
+    const lawIds = [...new Set(bankItems.map(item => item.law_id))];
+    const snapshotPairs = await Promise.all(lawIds.map(async id => {
+      try {
+        const result = await fetch("data/snapshots/" + encodeURIComponent(id) + ".json?v=" + Date.now(), { cache: "no-store" });
+        if (!result.ok) throw new Error("HTTP " + result.status);
+        return [id, await result.json()];
+      } catch (error) {
+        console.warn("Snapshot indisponível para o modo Encontre o erro:", id, error);
+        return [id, null];
+      }
+    }));
+    const snapshots = Object.fromEntries(snapshotPairs);
+    let suspended = 0;
+    let newestCapture = 0;
+
+    findErrorItems = bankItems.filter(item => {
+      const snapshot = snapshots[item.law_id];
+      const currentText = snapshot && snapshot.articles && snapshot.articles[item.article_key];
+      if (!currentText) {
+        suspended += 1;
+        return false;
+      }
+      const expected = normalizeLegalForMatch(item.correct_phrase);
+      const current = normalizeLegalForMatch(currentText);
+      if (!expected || !current.includes(expected)) {
+        suspended += 1;
+        return false;
+      }
+      item.literal_text = currentText;
+      item.snapshot_captured_at = snapshot.captured_at || null;
+      const stamp = snapshot.captured_at ? new Date(snapshot.captured_at).getTime() : 0;
+      if (Number.isFinite(stamp)) newestCapture = Math.max(newestCapture, stamp);
+      return true;
+    });
+
+    const categorySelect = $("#error-category");
+    categorySelect.replaceChildren();
+    const all = document.createElement("option");
+    all.value = "todas";
+    all.textContent = "Todas as matérias";
+    categorySelect.append(all);
+    [...new Set(findErrorItems.map(item => item.category))]
+      .sort((a,b) => a.localeCompare(b, "pt-BR"))
+      .forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        categorySelect.append(option);
+      });
+
+    $("#start-error").disabled = findErrorItems.length === 0;
+    const captureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
+    note.textContent = findErrorItems.length + " item(ns) disponíveis." + captureNote +
+      (suspended ? " " + suspended + " item(ns) foram suspensos porque o artigo ou a expressão correta não correspondeu à captura atual." : " Todos os itens passaram na conferência do texto salvo.");
+    if (!findErrorItems.length) note.textContent += " Faça uma verificação da legislação e tente novamente.";
+  } catch (error) {
+    findErrorItems = [];
+    $("#start-error").disabled = true;
+    note.textContent = "Não foi possível carregar o banco ou conferir os textos legais. Recarregue o site e tente novamente.";
+    console.error(error);
+  }
+}
+function selectedFindErrorPool() {
+  const category = $("#error-category").value;
+  return findErrorItems.filter(item => category === "todas" || item.category === category);
+}
+function startFindErrorGame(onlyItems = null) {
+  const pool = onlyItems || selectedFindErrorPool();
+  if (!pool.length) {
+    $("#error-count-note").textContent = "Não há itens disponíveis para essa seleção.";
+    return;
+  }
+  const requested = $("#error-length").value === "todas" ? pool.length : Number($("#error-length").value);
+  const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
+  findErrorState = { questions: items, index: 0, answers: [], tries: 0, resolved: false };
+  $("#error-welcome").classList.add("hidden");
+  $("#error-summary").classList.add("hidden");
+  $("#error-card").classList.remove("hidden");
+  showFindErrorQuestion();
+}
+function showFindErrorQuestion() {
+  const item = findErrorState.questions[findErrorState.index];
+  if (!item) return;
+  findErrorState.tries = 0;
+  findErrorState.resolved = false;
+  $("#error-category-label").textContent = item.category;
+  $("#error-progress").textContent = "Questão " + (findErrorState.index + 1) + " de " + findErrorState.questions.length;
+  $("#error-law").textContent = item.law_title;
+  $("#error-article").textContent = item.article;
+  const statement = $("#error-statement");
+  statement.replaceChildren();
+  item.segments.forEach((segment, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "error-segment";
+    button.textContent = segment;
+    button.setAttribute("aria-label", "Trecho " + (index + 1) + ": " + segment.trim());
+    button.addEventListener("click", () => chooseFindErrorSegment(index, button));
+    statement.append(button);
+  });
+  $("#error-attempt-feedback").textContent = "Toque na expressão que contraria a lei.";
+  $("#error-attempt-feedback").classList.remove("hidden");
+  $("#error-solution").classList.add("hidden");
+  $("#error-literal").textContent = "";
+}
+function chooseFindErrorSegment(index, button) {
+  if (findErrorState.resolved || button.disabled) return;
+  const item = findErrorState.questions[findErrorState.index];
+  findErrorState.tries += 1;
+
+  if (index !== item.wrong_segment_index) {
+    button.disabled = true;
+    button.classList.add("is-tried");
+    $("#error-attempt-feedback").textContent = "Esse trecho está de acordo com o dispositivo. Tente outro.";
+    return;
+  }
+
+  findErrorState.resolved = true;
+  findErrorState.answers.push({ item, attempts: findErrorState.tries });
+  $("#error-statement").querySelectorAll(".error-segment").forEach((segment, segmentIndex) => {
+    segment.disabled = true;
+    if (segmentIndex === index) segment.classList.add("is-wrong");
+  });
+  $("#error-attempt-feedback").classList.add("hidden");
+  $("#error-result").textContent = findErrorState.tries === 1 ? "Erro encontrado de primeira! ✓" : "Você encontrou o erro! ✓";
+  $("#error-result").className = "feedback-result correct";
+  $("#error-correction").textContent = "Trecho incorreto: “" + item.segments[index].trim() + "”. Correção: “" + item.correct_phrase + "”.";
+  $("#error-explanation").textContent = item.explanation;
+  $("#error-literal").textContent = item.literal_text;
+  $("#error-source").href = item.source_url;
+  $("#error-solution").classList.remove("hidden");
+  $("#next-error-question").textContent = findErrorState.index === findErrorState.questions.length - 1 ? "Ver resultado →" : "Próxima questão →";
+}
+function nextFindErrorQuestion() {
+  if (findErrorState.index >= findErrorState.questions.length - 1) {
+    showFindErrorSummary();
+    return;
+  }
+  findErrorState.index += 1;
+  showFindErrorQuestion();
+}
+function showFindErrorSummary() {
+  $("#error-card").classList.add("hidden");
+  $("#error-summary").classList.remove("hidden");
+  const total = findErrorState.questions.length;
+  const firstTry = findErrorState.answers.filter(answer => answer.attempts === 1).length;
+  const percentage = total ? Math.round((firstTry / total) * 100) : 0;
+  $("#error-score").textContent = firstTry + " de " + total + " na primeira tentativa";
+  $("#error-score-note").textContent = "Precisão inicial: " + percentage + "%. " +
+    (firstTry === total ? "Excelente! Você identificou todos os erros de primeira." : "Revise as expressões em que precisou de mais tentativas.");
+
+  const repeated = findErrorState.answers.filter(answer => answer.attempts > 1);
+  const list = $("#error-mistakes");
+  list.replaceChildren();
+  if (!repeated.length) {
+    list.textContent = "Você encontrou todos os erros na primeira tentativa.";
+  } else {
+    const heading = document.createElement("h3");
+    heading.textContent = "Trechos para revisar";
+    const rows = document.createElement("div");
+    rows.className = "mistake-list";
+    repeated.forEach(answer => {
+      const row = document.createElement("div");
+      row.className = "mistake-row";
+      const title = document.createElement("strong");
+      const detail = document.createElement("span");
+      title.textContent = answer.item.law_title + " · " + answer.item.article;
+      detail.textContent = "Tentativas até encontrar o erro: " + answer.attempts;
+      row.append(title, detail);
+      rows.append(row);
+    });
+    list.append(heading, rows);
+  }
+  $("#error-retry-misses").classList.toggle("hidden", repeated.length === 0);
+}
+
 // -------------------- Modo de treino Certo/Errado --------------------
 function shuffle(items) {
   const result = [...items];
@@ -489,19 +683,23 @@ function nextQuestion() {
 function showView(view) {
   const quiz = view === "quiz";
   const cloze = view === "cloze";
+  const findError = view === "find-error";
   const radar = view === "radar";
   $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
   $("#cloze-view").classList.toggle("hidden", !cloze);
+  $("#find-error-view").classList.toggle("hidden", !findError);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze] ].forEach(([id, active]) => {
+  $("#tab-find-error").classList.toggle("active", findError);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
   if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (cloze) $("#cloze-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (findError) $("#find-error-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -515,10 +713,18 @@ $("#study-filter").addEventListener("change", renderChanges);
 $("#tab-radar").addEventListener("click", () => showView("radar"));
 $("#tab-quiz").addEventListener("click", () => showView("quiz"));
 $("#tab-cloze").addEventListener("click", () => showView("cloze"));
+$("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
 $("#next-cloze").addEventListener("click", startCloze);
+$("#start-error").addEventListener("click", () => startFindErrorGame());
+$("#next-error-question").addEventListener("click", nextFindErrorQuestion);
+$("#restart-error").addEventListener("click", () => startFindErrorGame());
+$("#error-retry-misses").addEventListener("click", () => {
+  const repeated = findErrorState.answers.filter(answer => answer.attempts > 1).map(answer => answer.item);
+  startFindErrorGame(repeated);
+});
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
 $("#answer-false").addEventListener("click", () => chooseAnswer(false));
@@ -537,3 +743,4 @@ document.addEventListener("keydown", event => { if (event.key === "Escape") clos
 loadDashboard();
 loadQuestionBank();
 loadClozeLaws();
+loadFindErrorBank();
