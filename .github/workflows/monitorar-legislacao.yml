@@ -26,8 +26,11 @@ jobs:
   verificar:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar o repositório
+      - name: Baixar a versão atual da branch principal
         uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Preparar Python
         uses: actions/setup-python@v7.1.0
         with:
