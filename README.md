@@ -52,7 +52,7 @@ A seleção é a base do edital de 2022, não uma afirmação de que todas as no
 
 O monitor tenta primeiro a base oficial de Legislação Informatizada da Câmara dos Deputados, com fontes oficiais alternativas quando disponíveis. Para algumas normas, a página disponível pode ser a publicação original, e não uma consolidação atualizada; esses casos exigem conferência adicional. Para a IN 128/2022, a consulta automatizada usa a página oficial do INSS que lista os atos modificadores, porque o texto interativo pode bloquear robôs. Portanto, essa norma é acompanhada pelo histórico de alterações, não por comparação artigo a artigo.
 
-O monitor detecta diferenças entre capturas de páginas oficiais. Isso não equivale a uma análise jurídica completa. Uma diferença pode decorrer de alteração legislativa, reorganização da página ou mudança na forma como o portal apresenta o texto.
+O monitor detecta diferenças entre capturas de páginas oficiais e confere se a resposta contém a identificação da norma esperada. Redirecionamentos para outro domínio e páginas genéricas sem o número/ano da norma são rejeitados; a captura anterior é preservada. Isso não equivale a uma análise jurídica completa. Uma diferença pode decorrer de alteração legislativa, reorganização da página ou mudança na forma como o portal apresenta o texto.
 
 O painel não inventa datas de publicação ou vigência. A data exibida é a data da detecção. Artigos que deixem de aparecer são classificados como não localizados, não como revogados com certeza. Sempre confirme a mudança no ato oficial e no Diário Oficial.
 
