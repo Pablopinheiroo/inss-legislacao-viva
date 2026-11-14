@@ -898,3 +898,60 @@
  .xp-progress-track{height:4px;margin-top:5px}.xp-award-toast{right:12px;bottom:14px}
 }
 @media(max-width:390px){.brand>span:last-child small{display:none}.xp-widget{width:132px;min-width:132px}}
+
+
+/* Domínio por assunto: evolução, dificuldade e consolidação */
+.domain-section{margin-top:25px}
+.domain-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.domain-overview>article{min-width:0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.domain-overview>article>span{display:block;color:#728097;font-size:10px;line-height:1.4}
+.domain-overview>article>strong{display:block;margin-top:5px;color:#263b5e;font-size:25px}
+.domain-overview>article:nth-child(2)>strong{color:#24764c}
+.domain-overview>article:nth-child(3)>strong{color:#b15a45}
+.domain-method-note{margin:0 0 16px;padding:11px 13px;border:1px solid #e2e9f4;border-radius:10px;background:#f7f9fd;color:#64738a;font-size:10px;line-height:1.65}
+.domain-highlight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 23px}
+.domain-highlight-panel{min-width:0;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.domain-highlight-panel h3{margin:0;color:#2d4162;font-size:13px}
+.domain-highlight-panel>div:first-child>p{margin:5px 0 11px;color:#8290a4;font-size:10px;line-height:1.5}
+.domain-highlight-list{display:grid;gap:8px}
+.domain-highlight-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 11px;border:1px solid #edf0f5;border-radius:9px;background:#fafbfd}
+.domain-highlight-copy{display:grid;min-width:0;gap:3px}
+.domain-highlight-copy strong{color:#344966;font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+.domain-highlight-copy small{color:#8894a6;font-size:9px;line-height:1.4}
+.domain-highlight-score{flex:0 0 auto;color:#425d8c;font-size:14px;font-weight:850}
+.domain-empty{margin:0;padding:10px 11px;color:#8793a5;font-size:10px;line-height:1.55}
+.domain-all-heading{margin:0 0 11px}
+.domain-all-heading h3{margin:0;color:#2d4162;font-size:14px}
+.domain-card-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.domain-card{min-width:0;padding:14px 15px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.domain-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:9px}
+.domain-card-heading{min-width:0}
+.domain-card-heading>small{display:block;margin-bottom:4px;color:#7d8ba0;font-size:9px;font-weight:800;letter-spacing:.04em}
+.domain-card-heading h3{margin:0;color:#2a3f60;font-size:12px;line-height:1.45;overflow-wrap:anywhere}
+.domain-status{flex:0 0 auto;padding:5px 7px;border-radius:20px;background:#f0f3f8;color:#68778e;font-size:8px;font-weight:850;line-height:1.2;white-space:nowrap}
+.domain-status.is-mastered{background:#e8f5ed;color:#267447}
+.domain-status.is-difficult{background:#fff0ed;color:#ad4b3e}
+.domain-status.is-progress{background:#edf3ff;color:#4866a0}
+.domain-status.is-limited{background:#fff7e8;color:#947033}
+.domain-progress-line{display:flex;align-items:center;gap:10px;margin:12px 0 7px}
+.domain-progress-line>strong{width:39px;flex:0 0 39px;color:#34558f;font-size:15px}
+.domain-progress-track{height:7px;min-width:0;flex:1;overflow:hidden;border-radius:99px;background:#e9edf4}
+.domain-progress-track>span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#5d82dc,#3d65bd)}
+.domain-card-metrics{margin:0;color:#5f7089;font-size:10px;font-weight:700;line-height:1.5}
+.domain-card-detail,.domain-card-review{margin:4px 0 0;color:#8793a5;font-size:9px;line-height:1.5}
+.domain-card-review{padding-top:7px;border-top:1px solid #edf0f5}
+@media(max-width:760px){
+ .domain-highlight-grid{grid-template-columns:1fr}
+ .domain-card-list{grid-template-columns:1fr}
+ .domain-overview{gap:7px}
+ .domain-overview>article{padding:11px 10px}
+ .domain-overview>article>span{font-size:9px}
+ .domain-overview>article>strong{font-size:22px}
+}
+@media(max-width:430px){
+ .domain-overview>article{padding:10px 8px}
+ .domain-overview>article>strong{font-size:20px}
+ .domain-card{padding:12px}
+ .domain-card-status{white-space:normal}
+ .domain-highlight-panel{padding:13px}
+}
