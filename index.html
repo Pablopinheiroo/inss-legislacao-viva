@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-6">
-  <script defer src="app.js?v=20261114-8"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-7">
+  <script defer src="app.js?v=20261114-9"></script>
 </head>
 <body>
   <header class="topbar">
@@ -135,7 +135,7 @@
           <div class="law-article-search-row">
             <label class="law-article-search">
               <span class="sr-only">Buscar palavra ou expressão nos artigos desta norma</span>
-              <input id="law-article-search" type="search" placeholder="Buscar palavra ou expressão nesta norma...">
+              <input id="law-article-search" type="search" placeholder="Buscar pelo nº do artigo ou por palavra...">
             </label>
             <span id="law-article-count" class="law-article-count"></span>
           </div>
@@ -156,7 +156,15 @@
 
             <details id="law-components-details" class="law-components-details" hidden>
               <summary>Ver partes identificadas deste artigo</summary>
-              <p class="law-components-note">Você também pode guardar parágrafos, incisos e alíneas nos favoritos.</p>
+              <p class="law-components-note">Os dispositivos aparecem na hierarquia da lei. Abra cada parte para ler o texto ou use a navegação abaixo para ir diretamente a ela.</p>
+              <div class="law-components-actions">
+                <span>Organize a leitura conforme precisar.</span>
+                <div>
+                  <button id="law-components-expand-all" class="text-button" type="button">Expandir todos</button>
+                  <button id="law-components-collapse-all" class="text-button" type="button">Recolher todos</button>
+                </div>
+              </div>
+              <nav id="law-device-navigation" class="law-device-navigation" aria-label="Navegar pelos dispositivos deste artigo"></nav>
               <div id="law-components-list" class="law-components-list"></div>
             </details>
 

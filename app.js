@@ -260,7 +260,16 @@ function legalComponentKey(lawId, article, path) {
 }
 function legalArticleNumber(value) {
   const match = String(value).match(/(\d+)(?:-([A-Z]))?/);
-  return match ? [Number(match[1]), match[2] || ""] : [Number.MAX_SAFE_INTEGER, ""];
+  return match ? [Number(match[1]), (match[2] || "").toUpperCase()] : [Number.MAX_SAFE_INTEGER, ""];
+}
+function parseLegalArticleQuery(value) {
+  const match = String(value).trim().match(/^(?:(?:artigo|art)\.?\s*)?(\d+)\s*(?:º|°)?\s*(?:[-–—]\s*([a-z]))?$/i);
+  return match ? { number: Number(match[1]), suffix: (match[2] || "").toUpperCase() } : null;
+}
+function legalArticleMatchesQuery(article, query) {
+  if (!query) return false;
+  const [number, suffix] = legalArticleNumber(article);
+  return number === query.number && suffix === query.suffix;
 }
 function compareLegalArticles(a, b) {
   const left = legalArticleNumber(a);
@@ -614,7 +623,12 @@ function renderLegalArticle() {
   const components = legalSnapshot.components && legalSnapshot.components[article]
     ? Object.entries(legalSnapshot.components[article])
     : [];
-  $("#law-components-details").hidden = components.length < 2;
+  const deviceCount = components.filter(([path, component]) =>
+    path !== "caput" && component.device_type !== "caput"
+  ).length;
+  $("#law-components-details").hidden = deviceCount === 0;
+  $("#law-components-details > summary").textContent =
+    "Ver partes identificadas deste artigo (" + deviceCount + " dispositivos)";
   renderLegalComponents(components, article);
   const lawStatus = legalLawStatus(legalSelectedLaw.id);
   const captureDate = formatDate(legalSnapshot.captured_at);
@@ -628,43 +642,175 @@ function renderLegalArticle() {
   $("#law-next-article").disabled = index < 0 || index >= visible.length - 1;
   updateLegalLibrarySummary();
 }
+function legalRomanValue(value) {
+  const values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  const roman = String(value || "").toUpperCase();
+  let total = 0;
+  let previous = 0;
+  for (let index = roman.length - 1; index >= 0; index -= 1) {
+    const current = values[roman[index]] || 0;
+    total += current < previous ? -current : current;
+    previous = Math.max(previous, current);
+  }
+  return total;
+}
+function legalComponentNodeType(node) {
+  if (node.component && node.component.device_type) return node.component.device_type;
+  const part = node.path.split("/").pop();
+  return part.includes(":") ? part.split(":")[0] : part;
+}
+function legalComponentNodeValue(node) {
+  const part = node.path.split("/").pop();
+  const value = part.includes(":") ? part.slice(part.indexOf(":") + 1) : "";
+  const type = legalComponentNodeType(node);
+  if (type === "paragrafo") return value === "unico" ? Number.MAX_SAFE_INTEGER : Number(value) || 0;
+  if (type === "inciso") return legalRomanValue(value);
+  if (type === "alinea") return value.toLowerCase().charCodeAt(0) || 0;
+  if (type === "item") return Number(value) || 0;
+  return 0;
+}
+function compareLegalComponentNodes(a, b) {
+  const order = { caput: 0, paragrafo: 1, inciso: 2, alinea: 3, item: 4 };
+  const typeA = legalComponentNodeType(a);
+  const typeB = legalComponentNodeType(b);
+  const typeOrder = (order[typeA] ?? 9) - (order[typeB] ?? 9);
+  if (typeOrder) return typeOrder;
+  const valueOrder = legalComponentNodeValue(a) - legalComponentNodeValue(b);
+  if (valueOrder) return valueOrder;
+  return (a.component?.device_label || a.path).localeCompare(
+    b.component?.device_label || b.path, "pt-BR", { numeric: true, sensitivity: "base" }
+  );
+}
+function legalComponentLabel(node) {
+  if (node.component && node.component.device_label) return node.component.device_label;
+  const part = node.path.split("/").pop();
+  if (part === "caput") return "Caput";
+  const [type, value] = part.split(":");
+  if (type === "paragrafo") return value === "unico" ? "Parágrafo único" : "§ " + value + "º";
+  if (type === "inciso") return "Inciso " + value;
+  if (type === "alinea") return "Alínea " + value;
+  if (type === "item") return "Item " + value;
+  return "Parte do artigo";
+}
+function buildLegalComponentTree(components) {
+  const nodes = new Map();
+  const roots = [];
+  function ensureNode(path) {
+    if (nodes.has(path)) return nodes.get(path);
+    const node = { path, component: null, children: [] };
+    nodes.set(path, node);
+    const separator = path.lastIndexOf("/");
+    if (separator >= 0) {
+      const parent = ensureNode(path.slice(0, separator));
+      parent.children.push(node);
+    } else {
+      roots.push(node);
+    }
+    return node;
+  }
+  components.forEach(([path, component]) => {
+    ensureNode(path).component = component;
+  });
+  function sortNodes(items) {
+    items.sort(compareLegalComponentNodes);
+    items.forEach(node => sortNodes(node.children));
+  }
+  sortNodes(roots);
+  return roots;
+}
 function renderLegalComponents(components, article) {
   const container = $("#law-components-list");
+  const navigation = $("#law-device-navigation");
+  const expandedPaths = new Set(
+    [...container.querySelectorAll("details.law-component-node[open]")]
+      .map(node => node.dataset.devicePath)
+  );
   container.replaceChildren();
+  navigation.replaceChildren();
   if (!components.length) return;
-  const favorites = legalFavoritesSet();
-  components
-    .sort((a, b) => {
-      const order = { caput: 0, paragrafo: 1, inciso: 2, alinea: 3, item: 4 };
-      return (order[a[1].device_type] ?? 9) - (order[b[1].device_type] ?? 9)
-        || a[0].localeCompare(b[0], "pt-BR");
-    })
-    .forEach(([path, component]) => {
-      const row = document.createElement("article");
-      row.className = "law-component-row";
-      const heading = document.createElement("div");
-      heading.className = "law-component-heading";
-      const title = document.createElement("strong");
-      title.textContent = component.device_label || component.device_type || "Parte do artigo";
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "law-component-favorite";
-      const key = legalComponentKey(legalSelectedLaw.id, article, path);
-      button.textContent = favorites.has(key) ? "★ Salvo" : "☆ Favoritar";
-      button.setAttribute("aria-pressed", String(favorites.has(key)));
-      button.addEventListener("click", () => {
+
+  const tree = buildLegalComponentTree(components);
+  let nodeNumber = 0;
+  function renderNode(node, depth, parentLabels = []) {
+    nodeNumber += 1;
+    const component = node.component || {};
+    const label = legalComponentLabel(node);
+    const nodeId = "law-device-" + nodeNumber;
+    const details = document.createElement("details");
+    details.className = "law-component-node";
+    details.id = nodeId;
+    details.dataset.devicePath = node.path;
+    details.open = expandedPaths.has(node.path);
+
+    const summary = document.createElement("summary");
+    const title = document.createElement("span");
+    title.className = "law-component-title";
+    title.textContent = label;
+    const kind = document.createElement("span");
+    kind.className = "law-component-kind";
+    kind.textContent = component.device_type || legalComponentNodeType(node);
+    summary.append(title, kind);
+    details.append(summary);
+
+    const body = document.createElement("div");
+    body.className = "law-component-body";
+    if (component.text) {
+      const text = document.createElement("pre");
+      text.textContent = component.text;
+      body.append(text);
+    }
+    if (component.device_type && component.device_type !== "caput") {
+      const favorite = document.createElement("button");
+      favorite.type = "button";
+      favorite.className = "law-component-favorite";
+      const key = legalComponentKey(legalSelectedLaw.id, article, node.path);
+      const setFavoriteState = () => {
+        const saved = legalFavoritesSet().has(key);
+        favorite.textContent = saved ? "★ Salvo nos favoritos" : "☆ Favoritar este dispositivo";
+        favorite.setAttribute("aria-pressed", String(saved));
+      };
+      setFavoriteState();
+      favorite.addEventListener("click", () => {
         const current = legalFavoritesSet();
         if (current.has(key)) current.delete(key);
         else current.add(key);
         writeLegalStorage(LEGAL_FAVORITES_KEY, current);
-        renderLegalArticle();
+        setFavoriteState();
       });
-      heading.append(title, button);
-      const body = document.createElement("pre");
-      body.textContent = component.text || "";
-      row.append(heading, body);
-      container.append(row);
-    });
+      body.append(favorite);
+    }
+
+    const nextLabels = [...parentLabels, label];
+    if (node.path !== "caput") {
+      const jump = document.createElement("button");
+      jump.type = "button";
+      jump.className = "law-device-jump";
+      jump.style.setProperty("--device-depth", String(Math.max(0, depth - 1)));
+      jump.textContent = label;
+      jump.title = "Ir para " + nextLabels.join(" › ");
+      jump.setAttribute("aria-label", "Ir para " + nextLabels.join(", "));
+      jump.addEventListener("click", () => {
+        $("#law-components-details").open = true;
+        let parent = details;
+        while (parent && parent !== container) {
+          if (parent.matches("details.law-component-node")) parent.open = true;
+          parent = parent.parentElement;
+        }
+        details.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      navigation.append(jump);
+    }
+
+    if (node.children.length) {
+      const children = document.createElement("div");
+      children.className = "law-component-children";
+      node.children.forEach(child => children.append(renderNode(child, depth + 1, nextLabels)));
+      body.append(children);
+    }
+    details.append(body);
+    return details;
+  }
+  tree.forEach(node => container.append(renderNode(node, 0)));
 }
 function updateLegalLibrarySummary() {
   const studied = legalStudiedSet();
@@ -678,25 +824,34 @@ function updateLegalLibrarySummary() {
   $("#law-library-summary-note").textContent = articleFavorites + " favoritos nesta norma · marcações salvas neste navegador";
 }
 function searchLegalArticles() {
-  const query = normalizeAnswer($("#law-article-search").value || "");
+  const rawQuery = ($("#law-article-search").value || "").trim();
+  const query = normalizeAnswer(rawQuery);
+  const articleQuery = parseLegalArticleQuery(rawQuery);
   const resultsBox = $("#law-search-results");
   resultsBox.replaceChildren();
-  if (!legalEntries.length || query.length < 2) {
+  if (!legalEntries.length || (!articleQuery && query.length < 2)) {
     resultsBox.classList.add("hidden");
     return;
   }
-  const results = legalEntries
-    .filter(([_, text]) => normalizeAnswer(text).includes(query))
-    .slice(0, 35);
+
+  const results = articleQuery
+    ? legalEntries.filter(([article]) => legalArticleMatchesQuery(article, articleQuery))
+    : legalEntries.filter(([_, text]) => normalizeAnswer(text).includes(query)).slice(0, 35);
+
   if (!results.length) {
     const empty = document.createElement("p");
     empty.className = "law-search-empty";
-    empty.textContent = "Nenhum trecho encontrado nesta norma.";
+    empty.textContent = articleQuery
+      ? "O Art. " + articleQuery.number + (articleQuery.suffix ? "-" + articleQuery.suffix : "")
+        + " não está disponível nesta captura ou não faz parte do recorte salvo."
+      : "Nenhum trecho encontrado nesta norma.";
     resultsBox.append(empty);
   } else {
     const header = document.createElement("p");
     header.className = "law-search-heading";
-    header.textContent = results.length + (results.length === 35 ? "+ resultados" : " resultado(s)");
+    header.textContent = articleQuery
+      ? "Artigo localizado"
+      : results.length + (results.length === 35 ? "+ resultados" : " resultado(s)");
     resultsBox.append(header);
     results.forEach(([article, text]) => {
       const button = document.createElement("button");
@@ -705,9 +860,14 @@ function searchLegalArticles() {
       const label = document.createElement("strong");
       label.textContent = article;
       const snippet = document.createElement("span");
-      const position = text.toLocaleLowerCase("pt-BR").indexOf($("#law-article-search").value.trim().toLocaleLowerCase("pt-BR"));
-      const start = position >= 0 ? Math.max(0, position - 65) : 0;
-      snippet.textContent = text.slice(start, start + 230).replace(/\s+/g, " ") + (text.length > start + 230 ? "…" : "");
+      let start = 0;
+      if (!articleQuery) {
+        const rawLower = rawQuery.toLocaleLowerCase("pt-BR");
+        const position = text.toLocaleLowerCase("pt-BR").indexOf(rawLower);
+        start = position >= 0 ? Math.max(0, position - 65) : 0;
+      }
+      snippet.textContent = text.slice(start, start + 230).replace(/\s+/g, " ")
+        + (text.length > start + 230 ? "…" : "");
       button.append(label, snippet);
       button.addEventListener("click", () => {
         $("#law-article-filter").value = "todos";
@@ -717,6 +877,7 @@ function searchLegalArticles() {
         renderLegalArticle();
         resultsBox.classList.add("hidden");
         $("#law-article-search").value = "";
+        $("#law-current-article").scrollIntoView({ behavior: "smooth", block: "start" });
       });
       resultsBox.append(button);
     });
@@ -2273,6 +2434,12 @@ $("#law-article-select").addEventListener("change", () => {
 });
 $("#law-article-filter").addEventListener("change", renderLegalArticlePicker);
 $("#law-article-search").addEventListener("input", searchLegalArticles);
+$("#law-components-expand-all").addEventListener("click", () => {
+  $("#law-components-list").querySelectorAll("details.law-component-node").forEach(node => { node.open = true; });
+});
+$("#law-components-collapse-all").addEventListener("click", () => {
+  $("#law-components-list").querySelectorAll("details.law-component-node").forEach(node => { node.open = false; });
+});
 $("#law-favorite-article").addEventListener("click", toggleLegalArticleFavorite);
 $("#law-mark-studied").addEventListener("click", toggleLegalArticleStudied);
 $("#law-previous-article").addEventListener("click", () => stepLegalArticle(-1));
