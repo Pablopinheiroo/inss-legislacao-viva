@@ -1006,7 +1006,9 @@ function showMultiCEStatement(){
   $("#multi-ce-submit").disabled=true;
   $("#multi-ce-feedback").classList.add("hidden");
   $("#multi-ce-correction").classList.add("hidden");
-  $("#multi-ce-article-text").parentElement.open=false;
+  $("#multi-ce-article-panel").classList.add("hidden");
+  $("#multi-ce-article-toggle").textContent="Ler artigo antes de responder";
+  $("#multi-ce-article-toggle").setAttribute("aria-expanded","false");
   $("#multi-ce-next").textContent=multiCEState.statementIndex<group.statements.length-1
     ?"Próxima afirmação →"
     :multiCEState.articleIndex===multiCEState.groups.length-1?"Ver resultado →":"Próximo artigo →";
@@ -1699,6 +1701,13 @@ $("#article-retry-mistakes").addEventListener("click", () => {
 $("#start-multi-ce").addEventListener("click", () => startMultiCEGame());
 $("#multi-ce-true").addEventListener("click", () => chooseMultiCEAnswer(true));
 $("#multi-ce-false").addEventListener("click", () => chooseMultiCEAnswer(false));
+$("#multi-ce-article-toggle").addEventListener("click", () => {
+  const panel=$("#multi-ce-article-panel");
+  const opening=panel.classList.contains("hidden");
+  panel.classList.toggle("hidden",!opening);
+  $("#multi-ce-article-toggle").textContent=opening?"Fechar artigo":"Ler artigo antes de responder";
+  $("#multi-ce-article-toggle").setAttribute("aria-expanded",String(opening));
+});
 $("#multi-ce-submit").addEventListener("click", submitMultiCEAnswer);
 $("#multi-ce-next").addEventListener("click", nextMultiCEStatement);
 $("#multi-ce-restart").addEventListener("click", () => startMultiCEGame());
