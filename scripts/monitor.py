@@ -883,6 +883,66 @@ def make_change(
         "date_note": date_note,
     }
 
+
+def validate_snapshot_continuity(
+    previous: dict[str, Any] | None,
+    current: dict[str, Any],
+) -> None:
+    """Rejeita quedas bruscas de conteúdo antes que virem exclusões aparentes."""
+    if not previous or baseline_must_be_rebuilt(previous, current):
+        return
+
+    old_mode = previous.get("parser_mode")
+    new_mode = current.get("parser_mode")
+    source = current.get("source_url_used", "fonte cadastrada")
+
+    if old_mode == "artigos" and new_mode != "artigos":
+        raise SourceFetchError(
+            "A fonte deixou de apresentar cabeçalhos de artigos que existiam na captura anterior. "
+            "A captura anterior foi preservada para evitar exclusões causadas por resposta incompleta.",
+            "incomplete_response",
+            [{
+                "url": source,
+                "attempt": 1,
+                "outcome": "error",
+                "failure_type": "incomplete_response",
+                "http_status": None,
+                "detail": "A resposta não permitiu separar artigos nesta execução.",
+            }],
+        )
+
+    if old_mode != "artigos" or new_mode != "artigos":
+        return
+
+    old_articles = previous.get("articles") or {}
+    new_articles = current.get("articles") or {}
+    old_count = len(old_articles)
+    new_count = len(new_articles)
+    missing = sorted(set(old_articles) - set(new_articles), key=article_order)
+
+    if old_count == 0:
+        return
+
+    retention = new_count / old_count
+    severe_drop = new_count == 0 or (old_count >= 4 and retention < 0.80)
+    if severe_drop:
+        examples = ", ".join(missing[:12]) or "nenhum artigo identificado"
+        raise SourceFetchError(
+            "A captura atual apresentou queda brusca de artigos ("
+            + str(old_count) + " para " + str(new_count)
+            + "). Possível resposta parcial, página de bloqueio ou falha de extração. "
+            "Artigos ausentes: " + examples + ". A captura anterior foi preservada.",
+            "incomplete_response",
+            [{
+                "url": source,
+                "attempt": 1,
+                "outcome": "error",
+                "failure_type": "incomplete_response",
+                "http_status": None,
+                "detail": "Contagem de artigos caiu de " + str(old_count) + " para " + str(new_count) + ".",
+            }],
+        )
+
 def baseline_must_be_rebuilt(previous: dict[str, Any] | None, current: dict[str, Any]) -> bool:
     if not previous:
         return True
@@ -1008,6 +1068,7 @@ def run() -> int:
         try:
             text, source_url_used, source_diagnostics = fetch_law_text(law)
             current = make_snapshot(text, law, source_url_used, detected)
+            validate_snapshot_continuity(previous_snapshot, current)
             law_with_source = {**law, "source_url_used": source_url_used}
             rebuilt = baseline_must_be_rebuilt(previous_snapshot, current)
             changes = compare(law_with_source, previous_snapshot, current, detected)
