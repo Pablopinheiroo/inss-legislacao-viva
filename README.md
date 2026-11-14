@@ -58,10 +58,15 @@ O painel não inventa datas de publicação ou vigência. A data exibida é a da
 
 Se uma fonte falhar ou devolver pouco conteúdo, a captura anterior é preservada e o erro aparece no painel. O sistema não deve interpretar uma consulta com erro como ausência de alterações.
 
+## Auditoria das fontes legislativas
+
+A revisão técnica individual das 27 normas, com classificação das fontes, resultado da última captura e limitações identificadas, está em [Auditoria das 27 fontes — 14/11/2026](AUDITORIA_FONTES_2026-11-14.md). A auditoria técnica não equivale a uma certificação jurídica da vigência de cada dispositivo.
+
 ## Estrutura
 
 - index.html, styles.css e app.js: site estático.
 - data/laws.json: fontes oficiais acompanhadas.
+- AUDITORIA_FONTES_2026-11-14.md: revisão técnica individual das 27 normas e suas fontes.
 - data/encontre-erro.json: banco de itens do jogo Encontre o erro.
 - data/legislacao.json: dados exibidos pelo site.
 - data/snapshots/: últimas capturas válidas.
@@ -92,7 +97,7 @@ O banco atual é inicial e não cobre integralmente as 27 normas. As questões d
 
 A rotina diária do GitHub Actions consulta as fontes oficiais cadastradas em `data/laws.json`. Para cada norma, o monitor compara o conteúdo obtido agora com o snapshot anterior salvo em `data/snapshots/`. Quando encontra diferença, registra o texto anterior e o atual em `data/legislacao.json`; quando a fonte falha ou retorna conteúdo incompleto, preserva a captura anterior e registra o erro. A rotina diária está programada para 06:17 no horário de Brasília.
 
-O painel do site não acessa diretamente cada portal legislativo. Ele lê os resultados que o monitor gravou no repositório e mostra o histórico. O botão **Abrir execução manual** leva ao GitHub Actions para iniciar uma verificação extra: no GitHub, clique em **Run workflow** e confirme. Quando a execução terminar, volte ao Radar e clique em **Recarregar painel**.
+O painel do site não acessa diretamente cada portal legislativo. Ele lê os resultados que o monitor gravou no repositório e mostra o histórico. O botão **Executar verificação manual no GitHub** abre o workflow; na página do GitHub ainda é necessário clicar em **Run workflow**. Quando a execução terminar, volte ao Radar e clique em **Recarregar painel**. Esse último botão apenas carrega os dados publicados e não inicia uma nova consulta.
 
 O site é estático e não guarda token de acesso do GitHub. Por isso, não é seguro disparar uma execução autenticada diretamente do navegador. Para iniciar e acompanhar uma execução inteiramente dentro do site seria necessário um serviço intermediário autenticado; o projeto atual evita esse serviço e mantém a rotina automática gratuita do GitHub Actions.
 
