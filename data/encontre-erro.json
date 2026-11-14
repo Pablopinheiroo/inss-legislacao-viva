@@ -18,7 +18,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "mediante contribuição",
       "explanation": "A Lei 8.213/1991 estabelece que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao art. 1º. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -30,7 +30,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art2-vi",
@@ -47,7 +48,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não inferior ao do salário-mínimo",
       "explanation": "O inciso VI protege o valor mínimo desses benefícios: ele não pode ser inferior ao salário-mínimo. A questão inverteu essa regra. Fundamento legal: Art. 2º, inciso VI da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -59,7 +60,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art2-viii",
@@ -76,7 +78,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "democrático e descentralizado",
       "explanation": "O inciso VIII prevê gestão administrativa de caráter democrático e descentralizado. A palavra “centralizado” altera o sentido do dispositivo. Fundamento legal: Art. 2º, inciso VIII da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -88,7 +90,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-loas-art1",
@@ -105,7 +108,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não contributiva",
       "explanation": "A LOAS define expressamente a assistência social como Política de Seguridade Social não contributiva. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -117,7 +120,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-loas-art4-iv",
@@ -134,7 +138,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "sem discriminação de qualquer natureza",
       "explanation": "O inciso IV determina igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza, e garante equivalência às populações urbanas e rurais. Fundamento legal: Art. 4º, inciso IV da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -146,7 +150,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-dec6029-art3-numero",
@@ -163,7 +168,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "sete brasileiros",
       "explanation": "O art. 3º determina que a Comissão de Ética Pública será integrada por sete brasileiros. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "requisito",
       "topic": "Requisitos legais",
       "source_snapshot_date": "2026-11-14",
@@ -175,7 +180,8 @@
       "difficulty": "facil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-dec6029-art3-mandato",
@@ -192,7 +198,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "três anos",
       "explanation": "O mandato previsto no art. 3º é de três anos e não é coincidente. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "prazo",
       "topic": "Prazos e contagem de tempo",
       "source_snapshot_date": "2026-11-14",
@@ -204,7 +210,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-dec6029-art3-reconducao",
@@ -221,7 +228,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "uma única recondução",
       "explanation": "O decreto permite uma única recondução. Não são permitidas duas reconduções. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "excecao",
       "topic": "Exceções e hipóteses especiais",
       "source_snapshot_date": "2026-11-14",
@@ -233,7 +240,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-dec6029-art12",
@@ -250,7 +258,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "dez dias",
       "explanation": "O § 3º do art. 12 prevê prazo de dez dias para a nova manifestação quando forem juntados novos elementos de prova após a manifestação inicial. Fundamento legal: Art. 12º, § 3º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "prazo",
       "topic": "Prazos e contagem de tempo",
       "source_snapshot_date": "2026-11-14",
@@ -262,7 +270,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-8213-art15-facultativo",
@@ -281,7 +290,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "6 (seis) meses",
       "explanation": "Para o segurado facultativo, a Lei 8.213/1991 prevê seis meses de período de graça após cessarem as contribuições. Fundamento legal: Art. 15º, inciso VI da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -291,7 +300,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art15-prorrogacao",
@@ -310,7 +320,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "24 (vinte e quatro) meses",
       "explanation": "A prorrogação prevista no § 1º leva o período para até 24 meses, e não 36 meses. Fundamento legal: Art. 15º, § 1º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -320,7 +330,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art74-filho-menor",
@@ -339,7 +350,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "180 (cento e oitenta) dias",
       "explanation": "A lei dá prazo de 180 dias para filhos menores de 16 anos. Para os demais dependentes, o prazo é de 90 dias. Fundamento legal: Art. 74º, inciso I — filho menor de 16 anos da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -349,7 +360,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art74-demais",
@@ -368,7 +380,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "90 (noventa) dias",
       "explanation": "Para os demais dependentes, a regra legal é de 90 dias após o óbito. Fundamento legal: Art. 74º, inciso I — demais dependentes da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -378,7 +390,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art103-decadencia",
@@ -397,7 +410,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "10 (dez) anos",
       "explanation": "O caput do art. 103 estabelece prazo decadencial de dez anos para a revisão dos atos nele indicados. Fundamento legal: Art. 103º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -407,7 +420,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8112-art13-posse",
@@ -426,7 +440,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "trinta dias",
       "explanation": "A Lei 8.112/1990 estabelece trinta dias para a posse, contados da publicação do ato de provimento. Fundamento legal: Art. 13º, § 1º da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -436,7 +450,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-8112-art15-exercicio",
@@ -455,7 +470,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "quinze dias",
       "explanation": "O prazo para entrar em exercício é de quinze dias, contados da data da posse. Fundamento legal: Art. 15º, § 1º da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -465,7 +480,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-8112-art108-recurso",
@@ -484,7 +500,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "30 (trinta) dias",
       "explanation": "O art. 108 prevê prazo de trinta dias para pedido de reconsideração ou recurso. Fundamento legal: Art. 108º da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -494,7 +510,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-9784-art24-prazo-geral",
@@ -513,7 +530,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "cinco dias",
       "explanation": "O prazo geral do art. 24 é de cinco dias. Mediante justificação comprovada, ele pode ser dilatado até o dobro. Fundamento legal: Art. 24º da Lei nº 9.784/1999.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -523,7 +540,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "err-9784-art49-decisao",
@@ -542,7 +560,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "trinta dias",
       "explanation": "O prazo inicial para decidir é de até trinta dias, admitida prorrogação por igual período quando expressamente motivada. Fundamento legal: Art. 49º da Lei nº 9.784/1999.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -552,7 +570,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "err-9784-art59-recurso",
@@ -571,7 +590,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "dez dias",
       "explanation": "O prazo geral para interposição de recurso administrativo é de dez dias. Fundamento legal: Art. 59º da Lei nº 9.784/1999.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -581,7 +600,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
     },
     {
       "id": "err-bpc-decreto-art20-pagamento",
@@ -600,7 +620,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "quarenta e cinco dias",
       "explanation": "O art. 20 do Regulamento do BPC prevê pagamento em até quarenta e cinco dias após o cumprimento das exigências. Fundamento legal: Art. 20º da Decreto nº 6.214/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -610,7 +630,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
     },
     {
       "id": "err-bpc-decreto-art20-desistencia",
@@ -629,7 +650,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "trinta dias",
       "explanation": "O regulamento considera desistência o não cumprimento dessas exigências em até trinta dias. Fundamento legal: Art. 20º, § 2º da Decreto nº 6.214/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -639,7 +660,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
     },
     {
       "id": "err-loas-art21-revisao",
@@ -658,7 +680,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "2 (dois) anos",
       "explanation": "A LOAS prevê revisão do BPC a cada dois anos, ressalvadas as dispensas legais específicas. Fundamento legal: Art. 21º, caput da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -668,7 +690,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-loas-art21a-aprendiz",
@@ -687,7 +710,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "2 (dois) anos",
       "explanation": "A acumulação do BPC com a remuneração do contrato de aprendizagem é limitada a dois anos. Fundamento legal: Art. 21-A, § 2º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -697,7 +720,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-8112-art5-reserva-vagas",
@@ -716,7 +740,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "até 20% (vinte por cento)",
       "explanation": "A lei prevê reserva de até vinte por cento das vagas oferecidas no concurso para pessoas com deficiência, observada a compatibilidade das atribuições. Fundamento legal: Art. 5º, § 2º da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -726,7 +750,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-8213-art61-percentual",
@@ -745,7 +770,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "91% (noventa e um por cento)",
       "explanation": "O percentual previsto no art. 61 é de noventa e um por cento do salário-de-benefício. Fundamento legal: Art. 61º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -755,7 +780,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art86-percentual",
@@ -774,7 +800,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "cinquenta por cento",
       "explanation": "O § 1º do art. 86 estabelece que o auxílio-acidente corresponde a cinquenta por cento do salário-de-benefício. Fundamento legal: Art. 86º, § 1º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -784,7 +810,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-loas-art20-renda-fracao",
@@ -803,7 +830,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "1/4 (um quarto) do salário-mínimo",
       "explanation": "O § 3º do art. 20 estabelece o limite legal de um quarto do salário-mínimo por pessoa, observados os demais critérios de elegibilidade. Fundamento legal: Art. 20º, § 3º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -813,7 +840,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-lc142-art8-tempo",
@@ -832,7 +860,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "100% (cem por cento)",
       "explanation": "Para as aposentadorias previstas nos incisos I, II e III do art. 3º da LC 142/2013, o percentual é de cem por cento do salário de benefício. Fundamento legal: Art. 8º, inciso I da LC 142/2013.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -842,7 +870,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
     },
     {
       "id": "err-lc142-art8-idade-base",
@@ -861,7 +890,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "70% (setenta por cento)",
       "explanation": "A regra da aposentadoria por idade começa em setenta por cento do salário de benefício, com acréscimo por grupos de doze contribuições. Fundamento legal: Art. 8º, inciso II da LC 142/2013.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -871,7 +900,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
     },
     {
       "id": "err-lc142-art8-idade-maximo",
@@ -890,7 +920,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "30% (trinta por cento)",
       "explanation": "O limite máximo do acréscimo previsto no inciso II é de trinta por cento. Fundamento legal: Art. 8º, inciso II da LC 142/2013.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -900,7 +930,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
     },
     {
       "id": "err-8213-art25-incapacidade",
@@ -919,7 +950,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "12 (doze) contribuições mensais",
       "explanation": "A regra geral do inciso I exige doze contribuições mensais, sem prejuízo das hipóteses legais de dispensa de carência. Fundamento legal: Art. 25º, inciso I da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -929,7 +960,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art25-reclusao",
@@ -948,7 +980,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "24 (vinte e quatro) contribuições mensais",
       "explanation": "O inciso IV exige vinte e quatro contribuições mensais para o auxílio-reclusão. Fundamento legal: Art. 25º, inciso IV da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -958,7 +990,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art16-filho",
@@ -977,7 +1010,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "menor de 21 (vinte e um) anos",
       "explanation": "A regra geral inclui o filho não emancipado menor de vinte e um anos, ou inválido ou com as deficiências descritas na lei. Fundamento legal: Art. 16º, inciso I da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -987,7 +1020,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art59-incapacidade",
@@ -1006,7 +1040,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "15 (quinze) dias consecutivos",
       "explanation": "O caput do art. 59 exige incapacidade por mais de quinze dias consecutivos, observados os demais requisitos e as hipóteses legais. Fundamento legal: Art. 59º, caput da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1016,7 +1050,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-loas-art20-idade",
@@ -1035,7 +1070,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "65 (sessenta e cinco) anos ou mais",
       "explanation": "O caput do art. 20 estabelece a idade de sessenta e cinco anos ou mais para a pessoa idosa. Fundamento legal: Art. 20º, caput da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1045,7 +1080,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-loas-art20-deficiencia",
@@ -1064,7 +1100,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "impedimento de longo prazo",
       "explanation": "A LOAS exige impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, em interação com uma ou mais barreiras. Fundamento legal: Art. 20º, § 2º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1074,7 +1110,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-decreto6214-art12-registro",
@@ -1093,7 +1130,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "e o registro biométrico",
       "explanation": "O regulamento inclui o registro biométrico entre os requisitos, observadas as exceções previstas em ato do Poder Executivo federal. Fundamento legal: Art. 12º, caput da Decreto nº 6.214/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1103,7 +1140,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
     },
     {
       "id": "err-decreto6214-art12-atualizacao",
@@ -1122,7 +1160,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "vinte e quatro meses",
       "explanation": "O § 2º exige que as informações do CadÚnico estejam atualizadas há, no máximo, vinte e quatro meses. Fundamento legal: Art. 12º, § 2º da Decreto nº 6.214/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1132,7 +1170,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
     },
     {
       "id": "err-8112-art5-idade",
@@ -1151,7 +1190,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "dezoito anos",
       "explanation": "A Lei 8.112/1990 estabelece idade mínima de dezoito anos para investidura em cargo público. Fundamento legal: Art. 5º, inciso V da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1161,7 +1200,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-8112-art19-jornada",
@@ -1180,7 +1220,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "quarenta horas",
       "explanation": "A regra geral do art. 19 é de até quarenta horas semanais, observadas as exceções previstas em leis especiais. Fundamento legal: Art. 19º, caput da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1190,7 +1230,8 @@
       "difficulty": "facil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-lc142-art3-grave",
@@ -1209,7 +1250,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "25 (vinte e cinco) anos",
       "explanation": "Para o segurado homem com deficiência grave, a LC 142/2013 exige vinte e cinco anos de tempo de contribuição. Fundamento legal: Art. 3º, inciso I da LC 142/2013.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1219,7 +1260,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
     },
     {
       "id": "err-lc142-art3-idade",
@@ -1238,7 +1280,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "60 (sessenta) anos de idade",
       "explanation": "A LC 142/2013 prevê sessenta anos para o homem e cinquenta e cinco anos para a mulher, além dos requisitos de contribuição e deficiência. Fundamento legal: Art. 3º, inciso IV da LC 142/2013.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1248,7 +1290,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm"
     },
     {
       "id": "err-8213-art26-carencia",
@@ -1267,7 +1310,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "Independe de carência",
       "explanation": "O inciso I do art. 26 determina que essas três prestações independem de carência. Fundamento legal: Art. 26º, inciso I da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1277,7 +1320,8 @@
       "difficulty": "facil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art42-doenca-preexistente",
@@ -1296,7 +1340,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "salvo quando a incapacidade sobrevier por motivo de progressão ou agravamento dessa doença ou lesão",
       "explanation": "A doença ou lesão preexistente não impede o benefício quando a incapacidade surge por progressão ou agravamento, conforme a exceção do § 2º. Fundamento legal: Art. 42º, § 2º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1306,7 +1350,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art59-doenca-preexistente",
@@ -1325,7 +1370,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "exceto quando a incapacidade sobrevier por motivo de progressão ou agravamento da doença ou da lesão",
       "explanation": "O § 1º ressalva a hipótese em que a incapacidade aparece por progressão ou agravamento da doença ou lesão preexistente. Fundamento legal: Art. 59º, § 1º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1335,7 +1380,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8213-art15-auxilioacidente",
@@ -1354,7 +1400,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "exceto do auxílio-acidente",
       "explanation": "O inciso I do art. 15 exclui expressamente o auxílio-acidente da regra de manutenção da qualidade de segurado sem limite de prazo. Fundamento legal: Art. 15º, inciso I da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1364,7 +1410,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-8112-art117-procuracao",
@@ -1383,7 +1430,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "salvo quando se tratar de benefícios previdenciários ou assistenciais de parentes até o segundo grau, e de cônjuge ou companheiro",
       "explanation": "O inciso XI traz uma exceção expressa para benefícios previdenciários ou assistenciais de parentes até o segundo grau, além de cônjuge ou companheiro. Fundamento legal: Art. 117º, inciso XI da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1393,7 +1440,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-loas-art20-acumulacao",
@@ -1412,7 +1460,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "salvo os da assistência médica e da pensão especial de natureza indenizatória",
       "explanation": "A regra geral proíbe a acumulação, mas o § 4º prevê exceções expressas. O texto legal também contempla as transferências de renda que indica. Fundamento legal: Art. 20º, § 4º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1422,7 +1470,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-loas-art21-pericia",
@@ -1441,7 +1490,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "é dispensado de avaliação médico-pericial periódica",
       "explanation": "A LOAS dispensa a avaliação médico-pericial periódica nessa hipótese, salvo quando houver fundamentada suspeita de fraude ou erro. Fundamento legal: Art. 21º, § 5º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1451,7 +1500,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-decreto6214-art5-aprendiz",
@@ -1470,7 +1520,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "dois anos",
       "explanation": "O regulamento excepciona a regra geral de não acumulação e permite a concomitância com a remuneração do contrato de aprendizagem por até dois anos. Fundamento legal: Art. 5º, parágrafo único da Decreto nº 6.214/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
       "source_revision": "Captura da fonte oficial em 2026-11-14",
@@ -1480,7 +1530,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_correta_presente_no_artigo_atual"
+      "validation_method": "expressao_correta_presente_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
     },
     {
       "id": "err-from-8213-art1-01",
@@ -1498,7 +1549,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "mediante contribuição",
       "explanation": "Errado. A Lei 8.213/1991 diz expressamente que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao texto do artigo. Fundamento legal: Art. 1º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1509,7 +1560,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-8213-art2-06",
@@ -1527,7 +1579,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não inferior ao do salário-mínimo",
       "explanation": "Errado. A lei estabelece o contrário: o valor não pode ser inferior ao salário-mínimo. Fundamento legal: Art. 2º, inciso VI da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1538,7 +1590,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-loas-art1-01",
@@ -1556,7 +1609,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não contributiva",
       "explanation": "Errado. A LOAS define a assistência social como uma política de Seguridade Social não contributiva. Fundamento legal: Art. 1º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1567,7 +1620,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-from-loas-art4-04",
@@ -1585,7 +1639,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "sem discriminação de qualquer natureza",
       "explanation": "Errado. A lei determina acesso sem discriminação de qualquer natureza e garante equivalência às populações urbanas e rurais. Fundamento legal: Art. 4º, inciso IV da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1596,7 +1650,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-from-etica-art3-02",
@@ -1614,7 +1669,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "permitida uma única recondução",
       "explanation": "Errado. O decreto permite uma única recondução, e não duas. Fundamento legal: Art. 3º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1625,7 +1680,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-from-etica-art12-02",
@@ -1643,7 +1699,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "no prazo de dez dias",
       "explanation": "Errado. O prazo previsto no caput do art. 12 é de dez dias, não quinze. Fundamento legal: Art. 12º da Decreto nº 6.029/2007.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1654,7 +1710,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm"
     },
     {
       "id": "err-from-cf-art37-01",
@@ -1672,7 +1729,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "legalidade, impessoalidade, moralidade, publicidade e eficiência",
       "explanation": "Errado. O caput do art. 37 inclui expressamente a impessoalidade entre os princípios que regem a Administração Pública. Fundamento legal: Art. 37º, caput da Constituição Federal.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1683,7 +1740,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
     },
     {
       "id": "err-from-8112-art5-01",
@@ -1701,7 +1759,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "idade mínima de dezoito anos",
       "explanation": "Errado. Um dos requisitos básicos previstos no art. 5º da Lei 8.112/1990 é ter idade mínima de 18 anos. Fundamento legal: Art. 5º, inciso V da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1712,7 +1770,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     },
     {
       "id": "err-from-8213-art12-rpps-01",
@@ -1730,7 +1789,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "são excluídos do Regime Geral de Previdência Social",
       "explanation": "Errado. O art. 12 exclui essas pessoas do RGPS quando estão amparadas por regime próprio de previdência social. Fundamento legal: Art. 12º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1741,7 +1800,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-8213-art15-inc6-01",
@@ -1759,7 +1819,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "até 6 (seis) meses",
       "explanation": "Errado. Para o segurado facultativo, o prazo previsto no inciso VI é de até 6 meses após a cessação das contribuições. Fundamento legal: Art. 15º, inciso VI da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1770,7 +1830,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-8213-art16-par4-01",
@@ -1788,7 +1849,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "das pessoas indicadas no inciso I é presumida",
       "explanation": "Errado. A dependência econômica das pessoas do inciso I é presumida. A das demais pessoas indicadas no artigo deve ser comprovada. Fundamento legal: Art. 16º, § 4º da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1799,7 +1860,8 @@
       "difficulty": "facil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-8213-art26-inc1-01",
@@ -1817,7 +1879,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "Independe de carência",
       "explanation": "Errado. O inciso I do art. 26 inclui essas três prestações entre aquelas cuja concessão independe de carência. Fundamento legal: Art. 26º, inciso I da Lei nº 8.213/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1828,7 +1890,8 @@
       "difficulty": "facil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
     },
     {
       "id": "err-from-8212-art22-inc2-01",
@@ -1846,7 +1909,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "1% (um por cento)",
       "explanation": "Errado. As alíquotas são de 1% para risco leve, 2% para risco médio e 3% para risco grave. Fundamento legal: Art. 22º, inciso II da Lei nº 8.212/1991.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
       "question_type": "percentual",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1857,7 +1920,8 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     },
     {
       "id": "err-from-loas-art20-idade-bpc-01",
@@ -1875,7 +1939,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "65 (sessenta e cinco) anos ou mais",
       "explanation": "Errado. Para a pessoa idosa, o caput do art. 20 exige 65 anos ou mais. O benefício também pode ser devido à pessoa com deficiência, observados os demais requisitos legais. Fundamento legal: Art. 20º da Lei nº 8.742/1993.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
       "question_type": "prazo",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1886,7 +1950,8 @@
       "difficulty": "media",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
     },
     {
       "id": "err-from-8112-art13-par4-posse-01",
@@ -1904,7 +1969,7 @@
       "wrong_segment_index": 1,
       "correct_phrase": "Só haverá posse",
       "explanation": "Errado. O § 4º determina que só haverá posse nos casos de provimento de cargo por nomeação. Fundamento legal: Art. 13º, § 4º da Lei nº 8.112/1990.",
-      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
       "question_type": "requisito",
       "source_snapshot_date": "2026-11-14",
       "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
@@ -1915,12 +1980,14 @@
       "difficulty": "dificil",
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
-      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual"
+      "validation_method": "expressao_incorreta_no_enunciado+redacao_correta_no_artigo_atual",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
     }
   ],
   "generated_at": "2026-11-14",
   "validation_policy": "Um item só é liberado quando a expressão correta continua presente no artigo atual e a versão/hash coincide.",
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
-  "source_sync_status": "snapshot_anterior_ainda_nao_sincronizado"
+  "source_sync_status": "capturas_anteriores; recaptura_planalto_pendente",
+  "source_provenance_note": "source_url registra a origem real da captura que serviu de base ao item; preferred_source_url é o endereço oficial preferencial do Planalto/Portal IN. O item só será considerado sincronizado com a fonte preferencial após nova captura e validação de hash."
 }
