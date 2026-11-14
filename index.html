@@ -7,7 +7,8 @@
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css?v=20261114-28">
-  <script defer src="app.js?v=20261114-45"></script>
+  <script defer src="data-storage.js?v=20261114-1"></script>
+  <script defer src="app.js?v=20261114-46"></script>
 </head>
 <body>
   <header class="topbar">
@@ -83,6 +84,20 @@
         <button id="study-open-history" class="text-button" type="button">Ver histórico completo →</button></div>
       <div id="study-recent-sessions" class="study-session-list"><p class="empty-state">As sessões aparecerão aqui depois do primeiro treino.</p></div>
     </section>
+    <details class="study-data-details">
+      <summary>Backup e segurança dos dados</summary>
+      <div class="study-data-details-body">
+        <p>Seu progresso fica salvo automaticamente neste navegador. Exporte uma cópia para levar seus dados a outro navegador ou dispositivo.</p>
+        <div class="study-data-actions">
+          <button id="data-export-backup" class="primary-button" type="button">Exportar backup</button>
+          <button id="data-import-backup" class="secondary-button" type="button">Importar backup</button>
+          <input id="data-import-file" type="file" accept=".json,application/json" hidden>
+        </div>
+        <p id="data-save-status" class="data-save-status" role="status" aria-live="polite">O progresso é gravado automaticamente neste navegador.</p>
+        <p id="backup-operation-status" class="backup-operation-status" role="status" aria-live="polite">O arquivo de backup contém revisões, histórico, favoritos, artigos estudados, XP e conquistas. Guarde-o em local privado.</p>
+        <small class="study-data-note">A importação substitui os dados locais pelos dados do arquivo e cria, antes disso, uma cópia do progresso atual. O site não sincroniza automaticamente entre dispositivos.</small>
+      </div>
+    </details>
   </main>
 
   <main id="performance-view" class="page-shell hidden">
