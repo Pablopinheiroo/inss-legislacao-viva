@@ -1039,3 +1039,14 @@
  .achievement-streak-overview>article>strong{font-size:21px}
  .achievement-award-toast{right:11px;bottom:86px}
 }
+
+
+.challenge-history-heading{margin:18px 0 8px}
+.challenge-history-heading h3{margin:0;color:#405474;font-size:11px}
+.challenge-history-list{display:grid;gap:7px}
+.challenge-history-row{display:flex;align-items:center;gap:9px;padding:9px 11px;border:1px solid #e8eee9;border-radius:9px;background:#fbfefc}
+.challenge-history-check{display:grid;width:25px;height:25px;flex:0 0 25px;place-items:center;border-radius:50%;background:#e8f5ec;color:#26764a;font-size:13px;font-weight:900}
+.challenge-history-copy{display:grid;min-width:0;flex:1;gap:3px}
+.challenge-history-copy>strong{color:#3a5a45;font-size:10px;line-height:1.35}
+.challenge-history-copy>small{color:#889a8e;font-size:8px}
+.challenge-history-reward{flex:0 0 auto;color:#347b4f;font-size:10px;font-weight:850}
