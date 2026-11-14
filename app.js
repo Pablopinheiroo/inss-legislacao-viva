@@ -1235,6 +1235,8 @@ function toggleLegalArticleStudied() {
   writeLegalStorage(LEGAL_STUDIED_KEY,studied);
   saveLegalStudiedDates(dates);
   renderLegalArticlePicker();
+  updateBadge();
+  if(!$("#notification-drawer").classList.contains("hidden"))renderDrawer();
 }
 function stepLegalArticle(direction) {
   if (!legalSelectedLaw || !legalEntries.length) return;
