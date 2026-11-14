@@ -2770,7 +2770,8 @@ function questionArticleFingerprint(value){
 }
 function questionMatchesCurrentArticle(item,snapshot,articleKey,anchors=[]){
   const article=snapshot&&snapshot.articles&&snapshot.articles[articleKey];
-  if(!article||!item||!item.source_article_hash)return false;
+  if(!article||!item||!item.source_article_hash||!item.source_snapshot_hash
+    ||!item.source_snapshot_date||!item.source_snapshot_captured_at||!item.source_revision)return false;
   const reference=String(item.legal_reference||"").trim();
   const explanation=String(item.explanation||"");
   if(!reference||!explanation.includes("Fundamento legal: "+reference+"."))return false;
