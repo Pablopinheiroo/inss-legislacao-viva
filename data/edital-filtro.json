@@ -187,7 +187,7 @@
       "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
     }
   ],
-  "article_level_status": "Filtro de artigos aplicado às normas catalogadas e aos bancos de treino. O Código Penal foi acrescentado para cobrir crimes contra a Seguridade Social, mas permanece bloqueado até captura direta do texto compilado. IN 128 também permanece bloqueada.",
+  "article_level_status": "Recorte artigo por artigo aplicado às normas cadastradas. A captura do Decreto 6.214 foi bloqueada por conter dispositivos revogados, misturados e atualizações posteriores ao edital. IN 128 e Código Penal também continuam bloqueados até validação de texto.",
   "generated_at": "2026-11-14",
   "source_policy": {
     "primary": "Usar exclusivamente fonte oficial. Preferir texto compilado/consolidado do Planalto. Quando a norma não tiver consolidação disponível, usar o texto oficial do Planalto. Para a IN 128/2022, usar o Portal IN oficial do INSS.",
@@ -273,14 +273,17 @@
         "Art. 21",
         "Art. 22",
         "Art. 23",
-        "Art. 24",
-        "Art. 25"
+        "Art. 24"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-8112-1990": {
       "include_articles": [
+        "Art. 1",
+        "Art. 2",
+        "Art. 3",
+        "Art. 4",
         "Art. 5",
         "Art. 6",
         "Art. 7",
@@ -299,10 +302,8 @@
         "Art. 20",
         "Art. 21",
         "Art. 22",
-        "Art. 23",
         "Art. 24",
         "Art. 25",
-        "Art. 26",
         "Art. 27",
         "Art. 28",
         "Art. 29",
@@ -319,7 +320,6 @@
         "Art. 40",
         "Art. 41",
         "Art. 42",
-        "Art. 43",
         "Art. 44",
         "Art. 45",
         "Art. 46",
@@ -343,7 +343,6 @@
         "Art. 64",
         "Art. 65",
         "Art. 66",
-        "Art. 67",
         "Art. 68",
         "Art. 69",
         "Art. 70",
@@ -364,8 +363,6 @@
         "Art. 85",
         "Art. 86",
         "Art. 87",
-        "Art. 88",
-        "Art. 89",
         "Art. 90",
         "Art. 91",
         "Art. 92",
@@ -458,9 +455,15 @@
         "Art. 179",
         "Art. 180",
         "Art. 181",
-        "Art. 182"
+        "Art. 182",
+        "Art. 60-A",
+        "Art. 60-B",
+        "Art. 60-D",
+        "Art. 76-A",
+        "Art. 96-A",
+        "Art. 126-A"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-8429-1992": {
@@ -491,7 +494,7 @@
         "Art. 23-A",
         "Art. 23-C"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-9784-1999": {
@@ -682,9 +685,10 @@
     "lei-13985-2020": {
       "include_articles": [
         "Art. 1",
-        "Art. 2"
+        "Art. 2",
+        "Art. 4"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-10779-2003": {
@@ -732,9 +736,11 @@
         "Art. 26-D",
         "Art. 26-E",
         "Art. 26-F",
-        "Art. 26-G"
+        "Art. 37",
+        "Art. 40-B",
+        "Art. 40-C"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-14176-2021": {
@@ -746,56 +752,9 @@
       "blocked": false
     },
     "decreto-6214-2007": {
-      "include_articles": [
-        "Art. 3",
-        "Art. 4",
-        "Art. 5",
-        "Art. 6",
-        "Art. 7",
-        "Art. 8",
-        "Art. 9",
-        "Art. 10",
-        "Art. 11",
-        "Art. 12",
-        "Art. 13",
-        "Art. 14",
-        "Art. 15",
-        "Art. 16",
-        "Art. 17",
-        "Art. 18",
-        "Art. 19",
-        "Art. 20",
-        "Art. 21",
-        "Art. 22",
-        "Art. 23",
-        "Art. 24",
-        "Art. 25",
-        "Art. 26",
-        "Art. 27",
-        "Art. 28",
-        "Art. 29",
-        "Art. 30",
-        "Art. 31",
-        "Art. 32",
-        "Art. 33",
-        "Art. 34",
-        "Art. 35",
-        "Art. 36",
-        "Art. 37",
-        "Art. 38",
-        "Art. 39",
-        "Art. 40",
-        "Art. 41",
-        "Art. 42",
-        "Art. 43",
-        "Art. 44",
-        "Art. 45",
-        "Art. 46",
-        "Art. 48",
-        "Art. 49"
-      ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "include_articles": [],
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
+      "blocked": true
     },
     "lei-9796-1999": {
       "include_articles": [
@@ -803,12 +762,10 @@
         "Art. 2",
         "Art. 3",
         "Art. 4",
-        "Art. 5",
         "Art. 6",
-        "Art. 7",
-        "Art. 8"
+        "Art. 7"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "decreto-10188-2019": {
@@ -829,9 +786,16 @@
         "Art. 14",
         "Art. 15",
         "Art. 16",
-        "Art. 17"
+        "Art. 17",
+        "Art. 18",
+        "Art. 19",
+        "Art. 20",
+        "Art. 21",
+        "Art. 22",
+        "Art. 23",
+        "Art. 24"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "ec-103-2019": {
@@ -847,6 +811,9 @@
         "Art. 9",
         "Art. 10",
         "Art. 11",
+        "Art. 12",
+        "Art. 13",
+        "Art. 14",
         "Art. 15",
         "Art. 16",
         "Art. 17",
@@ -863,10 +830,9 @@
         "Art. 28",
         "Art. 29",
         "Art. 30",
-        "Art. 31",
-        "Art. 32"
+        "Art. 31"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lc-142-2013": {
@@ -882,7 +848,7 @@
         "Art. 9",
         "Art. 10"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
+      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
       "blocked": false
     },
     "lei-8212-1991": {
@@ -1265,7 +1231,7 @@
     "note": "A lista ativa foi filtrada pelo artigo-resposta; no modo Descubra o Artigo também foram removidos itens cujas alternativas incluíam artigos fora do programa. source_url guarda a proveniência da captura original, enquanto preferred_source_url aponta para o Planalto/Portal IN.",
     "active_counts": {
       "data/questoes.json": 152,
-      "data/encontre-erro.json": 66,
+      "data/encontre-erro.json": 61,
       "data/descubra-artigo.json": 43,
       "data/afirmacoes-por-artigo.json": 43
     },
@@ -1274,6 +1240,12 @@
       "data/encontre-erro.json": 8,
       "data/descubra-artigo.json": 22,
       "data/afirmacoes-por-artigo.json": 5
+    },
+    "removed_counts_by_latest_pass": {
+      "data/questoes.json": 0,
+      "data/encontre-erro.json": 5,
+      "data/descubra-artigo.json": 0,
+      "data/afirmacoes-por-artigo.json": 0
     }
   },
   "scope_items": [
@@ -1350,6 +1322,40 @@
         "Saúde e qualidade de vida no serviço público"
       ],
       "mode": "módulo teórico, integrado às matérias correspondentes"
+    }
+  ],
+  "review_findings": [
+    {
+      "norm": "Decreto 6.029/2007",
+      "action": "Art.25 removido por conter revogações formais; mantidos arts.1–24."
+    },
+    {
+      "norm": "Lei 8.112/1990",
+      "action": "Recorte ampliado para arts.1–182 e sufixos pertinentes; artigos integralmente revogados excluídos. Alguns dispositivos não aparecem na captura antiga e aguardam recaptura oficial."
+    },
+    {
+      "norm": "Lei 13.985/2020",
+      "action": "Art.4 incluído por tratar da operacionalização da pensão pelo INSS/Dataprev."
+    },
+    {
+      "norm": "LOAS",
+      "action": "Recorte centrado em princípios gerais da assistência, BPC e auxílio-inclusão; arts.40-B e 40-C incluídos por conexão direta com BPC e débitos do benefício; Art.26-G orçamentário removido."
+    },
+    {
+      "norm": "Decreto 6.214/2007",
+      "action": "Leitura e bancos bloqueados até recaptura limpa do texto compilado do Planalto, porque captura anterior mistura ato principal e Anexo, contém redações revogadas e atualizações posteriores a 2022."
+    },
+    {
+      "norm": "Decreto 10.188/2019",
+      "action": "Recorte ampliado para arts.1–24; retirados os dispositivos transitórios com prazo encerrado, revogação formal e vigência."
+    },
+    {
+      "norm": "EC 103/2019",
+      "action": "Recorte mantido nos arts.1–31, excluindo a regra de CSLL do art.32, a previdência complementar aberta do art.33 e as cláusulas finais."
+    },
+    {
+      "norm": "LC 142/2013",
+      "action": "Arts.1–10 mantidos; Art.11 de vigência excluído."
     }
   ]
 }
