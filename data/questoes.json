@@ -1524,7 +1524,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a1-1",
@@ -1552,7 +1552,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a1-2",
@@ -1580,7 +1580,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a1-3",
@@ -1608,7 +1608,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art10-financiamento-01",
@@ -1636,7 +1636,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art12-1",
@@ -1664,7 +1664,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art12-2",
@@ -1692,7 +1692,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art15-1",
@@ -1720,7 +1720,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art15-2",
@@ -1748,7 +1748,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art22-inc1-01",
@@ -1777,7 +1777,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art22-inc2-01",
@@ -1808,7 +1808,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art22-1",
@@ -1836,7 +1836,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art22-2",
@@ -1864,7 +1864,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art28-1",
@@ -1892,7 +1892,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art28-2",
@@ -1920,7 +1920,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art3-01",
@@ -1948,7 +1948,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a3-1",
@@ -1976,7 +1976,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a3-2",
@@ -2004,7 +2004,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-a3-3",
@@ -2032,7 +2032,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art30-inc1-01",
@@ -2061,7 +2061,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8212-art30-inc2-01",
@@ -2090,7 +2090,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art30-1",
@@ -2118,7 +2118,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "multi-derived-8212-art30-2",
@@ -2146,7 +2146,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
       "id": "8213-art1-01",
@@ -3257,7 +3257,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a1-1",
@@ -3285,7 +3285,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a1-2",
@@ -3313,7 +3313,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a1-3",
@@ -3341,7 +3341,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art2-objetivos-01",
@@ -3371,7 +3371,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a2-1",
@@ -3399,7 +3399,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a2-2",
@@ -3427,7 +3427,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a2-3",
@@ -3455,7 +3455,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art20-idade-bpc-01",
@@ -3484,7 +3484,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art20-par2-pcd-01",
@@ -3513,7 +3513,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a20-1",
@@ -3541,7 +3541,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a20-2",
@@ -3569,7 +3569,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a20-3",
@@ -3597,7 +3597,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21-1",
@@ -3625,7 +3625,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21-2",
@@ -3653,7 +3653,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21a-1",
@@ -3681,7 +3681,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21a-2",
@@ -3709,7 +3709,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21b-1",
@@ -3737,7 +3737,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-art21b-2",
@@ -3765,7 +3765,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art4-03",
@@ -3794,7 +3794,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art4-04",
@@ -3824,7 +3824,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a4-1",
@@ -3852,7 +3852,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a4-2",
@@ -3880,7 +3880,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "multi-derived-loas-a4-3",
@@ -3908,7 +3908,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "item_convertido_de_afirmacao_com_ancora_validada_no_artigo",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "loas-art5-diretrizes-01",
@@ -3938,7 +3938,7 @@
       "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
       "validation_status": "validated",
       "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742compilado.htm"
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
     },
     {
       "id": "decreto6029-art10-reserva-identidade-01",
@@ -4316,6 +4316,6 @@
   "validation_policy": "Itens liberados somente quando a referência, a fonte e a impressão digital do artigo coincidem com a captura oficial atual.",
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
-  "source_sync_status": "capturas_anteriores; recaptura_planalto_pendente",
+  "source_sync_status": "capturas_anteriores; artigos que dependem de recaptura oficial não são liberados",
   "source_provenance_note": "source_url registra a origem real da captura que serviu de base ao item; preferred_source_url é o endereço oficial preferencial do Planalto/Portal IN. O item só será considerado sincronizado com a fonte preferencial após nova captura e validação de hash."
 }
