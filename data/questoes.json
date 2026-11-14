@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "Banco inicial de itens autorais de Certo/Errado vinculados à matéria, ao assunto, à norma e ao artigo. Cada item contém trechos literais que fundamentam o gabarito; itens errados identificam a expressão incorreta.",
+  "description": "Banco de itens autorais de Certo/Errado vinculados à matéria, ao assunto, à norma e ao artigo. Cada item contém trechos literais que fundamentam o gabarito; itens errados identificam a expressão incorreta. O banco foi ampliado para alimentar simulados de até 60 questões, sem repetição dentro da mesma prova.",
   "source_snapshot_date": "2026-11-14",
   "questions": [
     {
@@ -358,6 +358,729 @@
         "idade mínima de dezoito anos"
       ],
       "wrong_expression": "21 anos"
+    },
+    {
+      "id": "8213-art12-rpps-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 12",
+      "statement": "A Lei 8.213/1991 inclui no Regime Geral de Previdência Social os servidores titulares de cargo efetivo e os militares, mesmo quando amparados por regime próprio de previdência social.",
+      "answer": false,
+      "explanation": "Errado. O art. 12 exclui essas pessoas do RGPS quando estão amparadas por regime próprio de previdência social.",
+      "literal_text": "Art. 12. O servidor civil ocupante de cargo efetivo ou o militar da União, dos Estados, do Distrito Federal ou dos Municípios, bem como o das respectivas autarquias e fundações, são excluídos do Regime Geral de Previdência Social consubstanciado nesta Lei, desde que amparados por regime próprio de previdência social.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 12",
+      "topic": "Segurados e regimes de previdência",
+      "supporting_excerpts": [
+        "são excluídos do Regime Geral de Previdência Social",
+        "desde que amparados por regime próprio de previdência social"
+      ],
+      "wrong_expression": "inclui no Regime Geral de Previdência Social"
+    },
+    {
+      "id": "8213-art15-inc1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, inciso I",
+      "statement": "Quem está em gozo de benefício mantém a qualidade de segurado sem limite de prazo, ressalvada a hipótese do auxílio-acidente.",
+      "answer": true,
+      "explanation": "Certo. O inciso I prevê a manutenção da qualidade de segurado, sem limite de prazo, para quem está em gozo de benefício, com exceção do auxílio-acidente.",
+      "literal_text": "Art. 15. Mantém a qualidade de segurado, independentemente de contribuições: I - sem limite de prazo, quem está em gozo de benefício, exceto do auxílio-acidente;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 15",
+      "topic": "Manutenção da qualidade de segurado",
+      "supporting_excerpts": [
+        "sem limite de prazo",
+        "exceto do auxílio-acidente"
+      ]
+    },
+    {
+      "id": "8213-art15-inc6-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, inciso VI",
+      "statement": "O segurado facultativo mantém a qualidade de segurado por até 12 meses após a cessação das contribuições.",
+      "answer": false,
+      "explanation": "Errado. Para o segurado facultativo, o prazo previsto no inciso VI é de até 6 meses após a cessação das contribuições.",
+      "literal_text": "VI - até 6 (seis) meses após a cessação das contribuições, o segurado facultativo.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 15",
+      "topic": "Manutenção da qualidade de segurado",
+      "supporting_excerpts": [
+        "até 6 (seis) meses",
+        "o segurado facultativo"
+      ],
+      "wrong_expression": "12 meses"
+    },
+    {
+      "id": "8213-art15-par1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, § 1º",
+      "statement": "O prazo de manutenção da qualidade de segurado previsto no inciso II pode ser prorrogado para até 24 meses quando o segurado já tiver pago mais de 120 contribuições mensais sem interrupção que provoque a perda dessa qualidade.",
+      "answer": true,
+      "explanation": "Certo. O § 1º permite a prorrogação do prazo para até 24 meses quando houver mais de 120 contribuições mensais sem interrupção que acarrete perda da qualidade de segurado.",
+      "literal_text": "§ 1º O prazo do inciso II será prorrogado para até 24 (vinte e quatro) meses se o segurado já tiver pago mais de 120 (cento e vinte) contribuições mensais sem interrupção que acarrete a perda da qualidade de segurado.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 15",
+      "topic": "Prorrogação do período de graça",
+      "supporting_excerpts": [
+        "até 24 (vinte e quatro) meses",
+        "mais de 120 (cento e vinte) contribuições mensais"
+      ]
+    },
+    {
+      "id": "8213-art15-par2-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, § 2º",
+      "statement": "Os prazos de manutenção da qualidade de segurado previstos no inciso II ou no § 1º podem ser acrescidos de 12 meses para o segurado desempregado, desde que essa situação seja comprovada pelo registro no órgão próprio.",
+      "answer": true,
+      "explanation": "Certo. O § 2º prevê o acréscimo de 12 meses para o segurado desempregado, desde que haja comprovação pelo registro no órgão próprio.",
+      "literal_text": "§ 2º Os prazos do inciso II ou do § 1° serão acrescidos de 12 (doze) meses para o segurado desempregado, desde que comprovada essa situação pelo registro no órgão próprio do Ministério do Trabalho e da Previdência Social.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 15",
+      "topic": "Prorrogação do período de graça",
+      "supporting_excerpts": [
+        "serão acrescidos de 12 (doze) meses",
+        "desde que comprovada essa situação pelo registro"
+      ]
+    },
+    {
+      "id": "8213-art16-par1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 16, § 1º",
+      "statement": "A existência de dependente de qualquer das classes previstas no art. 16 exclui do direito às prestações os dependentes das classes seguintes.",
+      "answer": true,
+      "explanation": "Certo. O § 1º estabelece a preferência entre as classes: a existência de dependente em uma classe afasta o direito das classes seguintes.",
+      "literal_text": "§ 1º A existência de dependente de qualquer das classes deste artigo exclui do direito às prestações os das classes seguintes.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 16",
+      "topic": "Classes de dependentes",
+      "supporting_excerpts": [
+        "exclui do direito às prestações os das classes seguintes"
+      ]
+    },
+    {
+      "id": "8213-art16-par4-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 16, § 4º",
+      "statement": "A dependência econômica dos pais e dos irmãos é presumida, enquanto a dos cônjuges, companheiros e filhos deve ser comprovada.",
+      "answer": false,
+      "explanation": "Errado. A dependência econômica das pessoas do inciso I é presumida. A das demais pessoas indicadas no artigo deve ser comprovada.",
+      "literal_text": "§ 4º A dependência econômica das pessoas indicadas no inciso I é presumida e a das demais deve ser comprovada.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 16",
+      "topic": "Dependência econômica",
+      "supporting_excerpts": [
+        "das pessoas indicadas no inciso I é presumida",
+        "a das demais deve ser comprovada"
+      ],
+      "wrong_expression": "dos pais e dos irmãos é presumida"
+    },
+    {
+      "id": "8213-art16-par2-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 16, § 2º",
+      "statement": "O enteado, o menor sob tutela e o menor sob guarda judicial equiparam-se a filho, mediante declaração do segurado e desde que não possuam condições suficientes para o próprio sustento e educação.",
+      "answer": true,
+      "explanation": "Certo. O § 2º prevê essa equiparação, com declaração do segurado e ausência de condições suficientes para o próprio sustento e educação.",
+      "literal_text": "§ 2º O enteado, o menor sob tutela e o menor sob guarda judicial equiparam-se a filho, mediante declaração do segurado e desde que não possuam condições suficientes para o próprio sustento e educação.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 16",
+      "topic": "Equiparação a filho",
+      "supporting_excerpts": [
+        "O enteado, o menor sob tutela e o menor sob guarda judicial equiparam-se a filho",
+        "mediante declaração do segurado"
+      ]
+    },
+    {
+      "id": "8213-art18-dependentes-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 18, inciso II",
+      "statement": "Entre as prestações devidas aos dependentes do segurado estão a pensão por morte e o auxílio-reclusão.",
+      "answer": true,
+      "explanation": "Certo. O inciso II do art. 18 relaciona a pensão por morte e o auxílio-reclusão entre as prestações destinadas aos dependentes.",
+      "literal_text": "II - quanto ao dependente: a) pensão por morte; b) auxílio-reclusão.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 18",
+      "topic": "Prestações devidas aos dependentes",
+      "supporting_excerpts": [
+        "pensão por morte",
+        "auxílio-reclusão"
+      ]
+    },
+    {
+      "id": "8213-art24-carencia-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 24",
+      "statement": "Período de carência é o número mínimo de contribuições mensais indispensáveis para que o beneficiário faça jus ao benefício, consideradas a partir do primeiro dia dos meses de suas competências.",
+      "answer": true,
+      "explanation": "Certo. Essa é a definição legal de período de carência do art. 24.",
+      "literal_text": "Art. 24. Período de carência é o número mínimo de contribuições mensais indispensáveis para que o beneficiário faça jus ao benefício, consideradas a partir do transcurso do primeiro dia dos meses de suas competências.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 24",
+      "topic": "Conceito de carência",
+      "supporting_excerpts": [
+        "número mínimo de contribuições mensais indispensáveis"
+      ]
+    },
+    {
+      "id": "8213-art25-inc4-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 25, inciso IV",
+      "statement": "A concessão do auxílio-reclusão depende de carência de 24 contribuições mensais.",
+      "answer": true,
+      "explanation": "Certo. O inciso IV do art. 25 prevê expressamente 24 contribuições mensais para o auxílio-reclusão.",
+      "literal_text": "IV - auxílio-reclusão: 24 (vinte e quatro) contribuições mensais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 25",
+      "topic": "Carência dos benefícios",
+      "supporting_excerpts": [
+        "auxílio-reclusão: 24 (vinte e quatro) contribuições mensais"
+      ]
+    },
+    {
+      "id": "8213-art26-inc1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 26, inciso I",
+      "statement": "A pensão por morte, o salário-família e o auxílio-acidente dependem do cumprimento de período de carência.",
+      "answer": false,
+      "explanation": "Errado. O inciso I do art. 26 inclui essas três prestações entre aquelas cuja concessão independe de carência.",
+      "literal_text": "Art. 26. Independe de carência a concessão das seguintes prestações: I - pensão por morte, salário-família e auxílio-acidente;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 26",
+      "topic": "Benefícios independentes de carência",
+      "supporting_excerpts": [
+        "Independe de carência",
+        "pensão por morte, salário-família e auxílio-acidente"
+      ],
+      "wrong_expression": "dependem do cumprimento de período de carência"
+    },
+    {
+      "id": "8213-art42-incapacidade-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 42",
+      "statement": "A aposentadoria por incapacidade prevista no art. 42 é devida ao segurado considerado incapaz e insuscetível de reabilitação para atividade que lhe garanta a subsistência, enquanto permanecer nessa condição.",
+      "answer": true,
+      "explanation": "Certo. O art. 42 exige incapacidade e impossibilidade de reabilitação para atividade que garanta a subsistência, mantendo o benefício enquanto persistir essa condição.",
+      "literal_text": "Art. 42. A aposentadoria por invalidez, uma vez cumprida, quando for o caso, a carência exigida, será devida ao segurado que, estando ou não em gozo de auxílio-doença, for considerado incapaz e insusceptível de reabilitação para o exercício de atividade que lhe garanta a subsistência, e ser-lhe-á paga enquanto permanecer nesta condição.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 42",
+      "topic": "Aposentadoria por incapacidade permanente",
+      "supporting_excerpts": [
+        "incapaz e insusceptível de reabilitação",
+        "enquanto permanecer nesta condição"
+      ]
+    },
+    {
+      "id": "8213-art59-incapacidade-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 59",
+      "statement": "O auxílio por incapacidade temporária é devido ao segurado que ficar incapacitado para seu trabalho ou atividade habitual por mais de 15 dias consecutivos, cumprida a carência quando exigida.",
+      "answer": true,
+      "explanation": "Certo. O art. 59 fixa a incapacidade por mais de 15 dias consecutivos e ressalva o cumprimento da carência, quando for o caso.",
+      "literal_text": "Art. 59. O auxílio-doença será devido ao segurado que, havendo cumprido, quando for o caso, o período de carência exigido nesta Lei, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de 15 (quinze) dias consecutivos.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 59",
+      "topic": "Benefício por incapacidade temporária",
+      "supporting_excerpts": [
+        "por mais de 15 (quinze) dias consecutivos"
+      ]
+    },
+    {
+      "id": "8213-art74-prazo-pensao-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 74, inciso I",
+      "statement": "A pensão por morte é devida desde a data do óbito quando requerida em até 180 dias, para filhos menores de 16 anos, ou em até 90 dias, para os demais dependentes.",
+      "answer": true,
+      "explanation": "Certo. O inciso I prevê os prazos de 180 dias para filhos menores de 16 anos e de 90 dias para os demais dependentes, para que a pensão seja devida desde o óbito.",
+      "literal_text": "Art. 74. A pensão por morte será devida ao conjunto dos dependentes do segurado que falecer, aposentado ou não, a contar da data: I - do óbito, quando requerida em até 180 (cento e oitenta) dias após o óbito, para os filhos menores de 16 (dezesseis) anos, ou em até 90 (noventa) dias após o óbito, para os demais dependentes;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "law_id": "lei-8213-1991",
+      "article_key": "Art. 74",
+      "topic": "Data de início da pensão por morte",
+      "supporting_excerpts": [
+        "180 (cento e oitenta) dias",
+        "90 (noventa) dias"
+      ]
+    },
+    {
+      "id": "8212-art10-financiamento-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 10",
+      "statement": "A Seguridade Social é financiada por toda a sociedade, de forma direta e indireta, mediante recursos públicos e contribuições sociais, nos termos da lei.",
+      "answer": true,
+      "explanation": "Certo. O art. 10 prevê o financiamento por toda a sociedade, de forma direta e indireta, com recursos da União, dos Estados, do Distrito Federal, dos Municípios e contribuições sociais.",
+      "literal_text": "Art. 10. A Seguridade Social será financiada por toda sociedade, de forma direta e indireta, nos termos do art. 195 da Constituição Federal e desta Lei, mediante recursos provenientes da União, dos Estados, do Distrito Federal, dos Municípios e de contribuições sociais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 10",
+      "topic": "Financiamento da Seguridade Social",
+      "supporting_excerpts": [
+        "financiada por toda sociedade, de forma direta e indireta"
+      ]
+    },
+    {
+      "id": "8212-art22-inc1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 22, inciso I",
+      "statement": "A contribuição da empresa prevista no art. 22, inciso I, corresponde a 20% sobre o total das remunerações pagas, devidas ou creditadas aos segurados empregados e trabalhadores avulsos que lhe prestem serviços.",
+      "answer": true,
+      "explanation": "Certo. O inciso I prevê a alíquota de 20% sobre o total das remunerações pagas, devidas ou creditadas aos empregados e trabalhadores avulsos.",
+      "literal_text": "Art. 22. A contribuição a cargo da empresa, destinada à Seguridade Social, além do disposto no art. 23, é de: I - vinte por cento sobre o total das remunerações pagas, devidas ou creditadas a qualquer título, durante o mês, aos segurados empregados e trabalhadores avulsos que lhe prestem serviços, destinadas a retribuir o trabalho...",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 22",
+      "topic": "Contribuição da empresa",
+      "supporting_excerpts": [
+        "vinte por cento",
+        "aos segurados empregados e trabalhadores avulsos"
+      ]
+    },
+    {
+      "id": "8212-art22-inc2-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 22, inciso II",
+      "statement": "Para o financiamento dos benefícios relacionados aos riscos ambientais do trabalho, a contribuição é de 3% para risco leve, 2% para risco médio e 1% para risco grave.",
+      "answer": false,
+      "explanation": "Errado. As alíquotas são de 1% para risco leve, 2% para risco médio e 3% para risco grave.",
+      "literal_text": "Art. 22, II: a) 1% (um por cento) para as empresas em cuja atividade preponderante o risco de acidentes do trabalho seja considerado leve; b) 2% (dois por cento) para as empresas em cuja atividade preponderante esse risco seja considerado médio; c) 3% (três por cento) para as empresas em cuja atividade preponderante esse risco seja considerado grave.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 22",
+      "topic": "Contribuição para riscos ambientais do trabalho",
+      "supporting_excerpts": [
+        "1% (um por cento)",
+        "2% (dois por cento)",
+        "3% (três por cento)"
+      ],
+      "wrong_expression": "3% para risco leve, 2% para risco médio e 1% para risco grave"
+    },
+    {
+      "id": "8212-art30-inc1-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 30, inciso I",
+      "statement": "A empresa é obrigada a arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço, descontando-as da respectiva remuneração.",
+      "answer": true,
+      "explanation": "Certo. Essa obrigação consta do art. 30, inciso I, alínea a, da Lei 8.212/1991.",
+      "literal_text": "Art. 30, I, a) arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço, descontando-as da respectiva remuneração;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 30",
+      "topic": "Arrecadação e recolhimento",
+      "supporting_excerpts": [
+        "arrecadar as contribuições dos segurados empregados e trabalhadores avulsos",
+        "descontando-as da respectiva remuneração"
+      ]
+    },
+    {
+      "id": "8212-art30-inc2-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 30, inciso II",
+      "statement": "Os segurados contribuinte individual e facultativo devem recolher sua contribuição por iniciativa própria até o dia 15 do mês seguinte ao da competência.",
+      "answer": true,
+      "explanation": "Certo. O inciso II atribui a esses segurados o recolhimento por iniciativa própria até o dia 15 do mês seguinte ao da competência.",
+      "literal_text": "II - os segurados contribuinte individual e facultativo estão obrigados a recolher sua contribuição por iniciativa própria, até o dia quinze do mês seguinte ao da competência;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 30",
+      "topic": "Arrecadação e recolhimento",
+      "supporting_excerpts": [
+        "por iniciativa própria",
+        "até o dia quinze do mês seguinte"
+      ]
+    },
+    {
+      "id": "loas-art2-objetivos-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 2º",
+      "statement": "A assistência social tem entre seus objetivos a proteção social, a vigilância socioassistencial e a defesa de direitos.",
+      "answer": true,
+      "explanation": "Certo. O art. 2º relaciona esses três objetivos da assistência social.",
+      "literal_text": "Art. 2º A assistência social tem por objetivos: I - a proteção social; II - a vigilância socioassistencial; III - a defesa de direitos;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 2",
+      "topic": "Objetivos da assistência social",
+      "supporting_excerpts": [
+        "a proteção social",
+        "a vigilância socioassistencial",
+        "a defesa de direitos"
+      ]
+    },
+    {
+      "id": "loas-art3-entidades-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 3º",
+      "statement": "As entidades e organizações de assistência social definidas no art. 3º da LOAS podem ter fins lucrativos, desde que prestem atendimento continuado.",
+      "answer": false,
+      "explanation": "Errado. O art. 3º define essas entidades e organizações como aquelas sem fins lucrativos.",
+      "literal_text": "Art. 3º Consideram-se entidades e organizações de assistência social aquelas sem fins lucrativos que, isolada ou cumulativamente, prestam atendimento e assessoramento aos beneficiários abrangidos por esta Lei, bem como as que atuam na defesa e garantia de direitos.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 3",
+      "topic": "Entidades e organizações de assistência social",
+      "supporting_excerpts": [
+        "aquelas sem fins lucrativos"
+      ],
+      "wrong_expression": "podem ter fins lucrativos"
+    },
+    {
+      "id": "loas-art5-diretrizes-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 5º",
+      "statement": "A organização da assistência social tem como diretrizes a descentralização político-administrativa, a participação da população e a primazia da responsabilidade do Estado.",
+      "answer": true,
+      "explanation": "Certo. As três diretrizes constam do art. 5º da LOAS.",
+      "literal_text": "Art. 5º A organização da assistência social tem como base as seguintes diretrizes: I - descentralização político-administrativa para os Estados, o Distrito Federal e os Municípios, e comando único das ações em cada esfera de governo; II - participação da população, por meio de organizações representativas, na formulação das políticas e no controle das ações em todos os níveis; III - primazia da responsabilidade do Estado na condução da política de assistência social em cada esfera de governo.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 5",
+      "topic": "Diretrizes da assistência social",
+      "supporting_excerpts": [
+        "descentralização político-administrativa",
+        "participação da população",
+        "primazia da responsabilidade do Estado"
+      ]
+    },
+    {
+      "id": "loas-art6-suas-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 6º",
+      "statement": "A gestão das ações de assistência social é organizada sob a forma de um sistema descentralizado e participativo denominado Sistema Único de Assistência Social (Suas).",
+      "answer": true,
+      "explanation": "Certo. O art. 6º caracteriza o Suas como sistema descentralizado e participativo.",
+      "literal_text": "Art. 6º A gestão das ações na área de assistência social fica organizada sob a forma de sistema descentralizado e participativo, denominado Sistema Único de Assistência Social (Suas)...",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 6",
+      "topic": "Sistema Único de Assistência Social",
+      "supporting_excerpts": [
+        "sistema descentralizado e participativo",
+        "Sistema Único de Assistência Social"
+      ]
+    },
+    {
+      "id": "loas-art6a-protecao-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 6º-A, inciso I",
+      "statement": "A proteção social básica busca prevenir situações de vulnerabilidade e risco social, inclusive por meio do fortalecimento de vínculos familiares e comunitários.",
+      "answer": true,
+      "explanation": "Certo. Essa é a finalidade indicada para a proteção social básica no inciso I do art. 6º-A.",
+      "literal_text": "Art. 6º-A. A assistência social organiza-se pelos seguintes tipos de proteção: I - proteção social básica: conjunto de serviços, programas, projetos e benefícios da assistência social que visa a prevenir situações de vulnerabilidade e risco social por meio do desenvolvimento de potencialidades e aquisições e do fortalecimento de vínculos familiares e comunitários;",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 6-A",
+      "topic": "Tipos de proteção social",
+      "supporting_excerpts": [
+        "visa a prevenir situações de vulnerabilidade e risco social",
+        "fortalecimento de vínculos familiares e comunitários"
+      ]
+    },
+    {
+      "id": "loas-art6c-cras-creas-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 6º-C",
+      "statement": "Na LOAS, a proteção social básica é ofertada precipuamente no CRAS e a proteção social especial no CREAS.",
+      "answer": true,
+      "explanation": "Certo. O art. 6º-C associa o CRAS à proteção social básica e o CREAS à proteção social especial, respectivamente.",
+      "literal_text": "Art. 6º-C. As proteções sociais, básica e especial, serão ofertadas precipuamente no Centro de Referência de Assistência Social (Cras) e no Centro de Referência Especializado de Assistência Social (Creas), respectivamente...",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 6-C",
+      "topic": "CRAS e CREAS",
+      "supporting_excerpts": [
+        "Centro de Referência de Assistência Social (Cras)",
+        "Centro de Referência Especializado de Assistência Social (Creas)",
+        "respectivamente"
+      ]
+    },
+    {
+      "id": "loas-art20-idade-bpc-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20",
+      "statement": "O BPC garante um salário-mínimo mensal à pessoa idosa a partir dos 60 anos, desde que ela não possua meios de prover sua manutenção nem de tê-la provida pela família.",
+      "answer": false,
+      "explanation": "Errado. Para a pessoa idosa, o caput do art. 20 exige 65 anos ou mais. O benefício também pode ser devido à pessoa com deficiência, observados os demais requisitos legais.",
+      "literal_text": "Art. 20. O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 20",
+      "topic": "Benefício de prestação continuada",
+      "supporting_excerpts": [
+        "65 (sessenta e cinco) anos ou mais"
+      ],
+      "wrong_expression": "a partir dos 60 anos"
+    },
+    {
+      "id": "loas-art20-par2-pcd-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20, § 2º",
+      "statement": "Para fins de BPC, a pessoa com deficiência é aquela que possui impedimento de longo prazo de natureza física, mental, intelectual ou sensorial que, em interação com barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições.",
+      "answer": true,
+      "explanation": "Certo. Essa é a definição do § 2º do art. 20 da LOAS.",
+      "literal_text": "§ 2º Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "law_id": "lei-8742-1993",
+      "article_key": "Art. 20",
+      "topic": "Pessoa com deficiência para fins de BPC",
+      "supporting_excerpts": [
+        "impedimento de longo prazo",
+        "em interação com uma ou mais barreiras"
+      ]
+    },
+    {
+      "id": "8112-art7-posse-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 7º",
+      "statement": "De acordo com a Lei 8.112/1990, a investidura em cargo público ocorre com a posse.",
+      "answer": true,
+      "explanation": "Certo. O art. 7º estabelece que a investidura em cargo público ocorre com a posse.",
+      "literal_text": "Art. 7º A investidura em cargo público ocorrerá com a posse.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 7",
+      "topic": "Investidura em cargo público",
+      "supporting_excerpts": [
+        "ocorrerá com a posse"
+      ]
+    },
+    {
+      "id": "8112-art10-concurso-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 10",
+      "statement": "A nomeação para cargo de carreira ou cargo isolado de provimento efetivo depende de prévia habilitação em concurso público de provas ou de provas e títulos.",
+      "answer": true,
+      "explanation": "Certo. O art. 10 exige habilitação prévia em concurso público de provas ou de provas e títulos, observadas a ordem de classificação e a validade do certame.",
+      "literal_text": "Art. 10. A nomeação para cargo de carreira ou cargo isolado de provimento efetivo depende de prévia habilitação em concurso público de provas ou de provas e títulos, obedecidos a ordem de classificação e o prazo de sua validade.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 10",
+      "topic": "Nomeação e concurso público",
+      "supporting_excerpts": [
+        "prévia habilitação em concurso público de provas ou de provas e títulos"
+      ]
+    },
+    {
+      "id": "8112-art12-validade-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 12",
+      "statement": "O concurso público para provimento de cargos regidos pela Lei 8.112/1990 terá validade de até dois anos, podendo ser prorrogado uma única vez, por igual período.",
+      "answer": true,
+      "explanation": "Certo. Essa é a regra do art. 12 da Lei 8.112/1990.",
+      "literal_text": "Art. 12. O concurso público terá validade de até 2 (dois) anos, podendo ser prorrogado uma única vez, por igual período.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 12",
+      "topic": "Validade do concurso público",
+      "supporting_excerpts": [
+        "até 2 (dois) anos",
+        "prorrogado uma única vez, por igual período"
+      ]
+    },
+    {
+      "id": "8112-art13-par1-posse-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 13, § 1º",
+      "statement": "A posse deverá ocorrer no prazo de 30 dias contados da publicação do ato de provimento.",
+      "answer": true,
+      "explanation": "Certo. O § 1º do art. 13 prevê o prazo de 30 dias, contado da publicação do ato de provimento.",
+      "literal_text": "§ 1º A posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 13",
+      "topic": "Prazo para posse",
+      "supporting_excerpts": [
+        "no prazo de trinta dias",
+        "contados da publicação do ato de provimento"
+      ]
+    },
+    {
+      "id": "8112-art13-par4-posse-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 13, § 4º",
+      "statement": "Segundo a Lei 8.112/1990, haverá posse em todas as formas de provimento de cargo público, inclusive promoção e readaptação.",
+      "answer": false,
+      "explanation": "Errado. O § 4º determina que só haverá posse nos casos de provimento de cargo por nomeação.",
+      "literal_text": "§ 4º Só haverá posse nos casos de provimento de cargo por nomeação.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 13",
+      "topic": "Posse",
+      "supporting_excerpts": [
+        "Só haverá posse",
+        "por nomeação"
+      ],
+      "wrong_expression": "em todas as formas de provimento"
+    },
+    {
+      "id": "8112-art15-exercicio-01",
+      "category": "Direito Administrativo",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 15, § 1º",
+      "statement": "O servidor empossado em cargo público tem 15 dias, contados da posse, para entrar em exercício.",
+      "answer": true,
+      "explanation": "Certo. O § 1º do art. 15 fixa em 15 dias o prazo para entrar em exercício, contado da data da posse.",
+      "literal_text": "§ 1º É de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício, contados da data da posse.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "law_id": "lei-8112-1990",
+      "article_key": "Art. 15",
+      "topic": "Prazo para entrar em exercício",
+      "supporting_excerpts": [
+        "quinze dias",
+        "contados da data da posse"
+      ]
+    },
+    {
+      "id": "cf-art37-inc3-concurso-01",
+      "category": "Direito Constitucional",
+      "law_title": "Constituição Federal de 1988",
+      "article": "Art. 37, inciso III",
+      "statement": "O prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período.",
+      "answer": true,
+      "explanation": "Certo. Essa é a regra do inciso III do art. 37 da Constituição Federal.",
+      "literal_text": "III - o prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período;",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "law_id": "constituicao-1988",
+      "article_key": "Art. 37",
+      "topic": "Concurso público",
+      "supporting_excerpts": [
+        "até dois anos",
+        "prorrogável uma vez, por igual período"
+      ]
+    },
+    {
+      "id": "cf-art194-gestao-quadri-01",
+      "category": "Direito Constitucional",
+      "law_title": "Constituição Federal de 1988",
+      "article": "Art. 194, parágrafo único, inciso VII",
+      "statement": "A gestão da Seguridade Social tem caráter democrático e descentralizado, mediante gestão quadripartite com participação de trabalhadores, empregadores, aposentados e Governo nos órgãos colegiados.",
+      "answer": true,
+      "explanation": "Certo. O inciso VII do parágrafo único do art. 194 prevê a gestão quadripartite com esses quatro grupos.",
+      "literal_text": "VII - caráter democrático e descentralizado da administração, mediante gestão quadripartite, com participação dos trabalhadores, dos empregadores, dos aposentados e do Governo nos órgãos colegiados.",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "law_id": "constituicao-1988",
+      "article_key": "Art. 194",
+      "topic": "Organização da Seguridade Social",
+      "supporting_excerpts": [
+        "gestão quadripartite",
+        "trabalhadores, dos empregadores, dos aposentados e do Governo"
+      ]
+    },
+    {
+      "id": "cf-art201-rgps-01",
+      "category": "Direito Constitucional",
+      "law_title": "Constituição Federal de 1988",
+      "article": "Art. 201, caput",
+      "statement": "A Previdência Social é organizada sob a forma do RGPS, de caráter contributivo e filiação obrigatória, devendo observar critérios que preservem o equilíbrio financeiro e atuarial.",
+      "answer": true,
+      "explanation": "Certo. O caput do art. 201 estabelece o caráter contributivo, a filiação obrigatória e a preservação do equilíbrio financeiro e atuarial.",
+      "literal_text": "Art. 201. A previdência social será organizada sob a forma do Regime Geral de Previdência Social, de caráter contributivo e de filiação obrigatória, observados critérios que preservem o equilíbrio financeiro e atuarial...",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "law_id": "constituicao-1988",
+      "article_key": "Art. 201",
+      "topic": "Regime Geral de Previdência Social",
+      "supporting_excerpts": [
+        "caráter contributivo e de filiação obrigatória",
+        "equilíbrio financeiro e atuarial"
+      ]
+    },
+    {
+      "id": "decreto6029-art5-comissao-01",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 5º",
+      "statement": "Cada Comissão de Ética dos órgãos e entidades será integrada por três membros titulares e três suplentes, com mandatos não coincidentes de três anos.",
+      "answer": true,
+      "explanation": "Certo. O art. 5º estabelece a composição por três titulares e três suplentes, com mandatos não coincidentes de três anos.",
+      "literal_text": "Art. 5º Cada Comissão de Ética de que trata o Decreto nº 1171, de 1994, será integrada por três membros titulares e três suplentes, escolhidos entre servidores e empregados do seu quadro permanente, e designados pelo dirigente máximo da respectiva entidade ou órgão, para mandatos não coincidentes de três anos.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 5",
+      "topic": "Composição das Comissões de Ética",
+      "supporting_excerpts": [
+        "três membros titulares e três suplentes",
+        "mandatos não coincidentes de três anos"
+      ]
+    },
+    {
+      "id": "decreto6029-art7-competencia-01",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 7º",
+      "statement": "Compete às Comissões de Ética dos órgãos e entidades atuar como instância consultiva de dirigentes e servidores e aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal.",
+      "answer": true,
+      "explanation": "Certo. O art. 7º prevê essas atribuições, além de outras, como apurar condutas em desacordo com as normas éticas.",
+      "literal_text": "Art. 7º Compete às Comissões de Ética de que tratam os incisos II e III do art. 2º: I - atuar como instância consultiva de dirigentes e servidores no âmbito de seu respectivo órgão ou entidade; II - aplicar o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal...",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 7",
+      "topic": "Competências das Comissões de Ética",
+      "supporting_excerpts": [
+        "atuar como instância consultiva",
+        "aplicar o Código de Ética Profissional"
+      ]
+    },
+    {
+      "id": "decreto6029-art10-reserva-identidade-01",
+      "category": "Ética",
+      "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
+      "article": "Art. 10, inciso II",
+      "statement": "A identidade do denunciante deverá ser mantida sob reserva, se ele assim desejar, e os membros das Comissões devem atuar com independência e imparcialidade.",
+      "answer": true,
+      "explanation": "Certo. O art. 10 prevê a reserva da identidade do denunciante quando ele assim desejar e a independência e imparcialidade dos membros na apuração.",
+      "literal_text": "Art. 10. Os trabalhos da CEP e das demais Comissões de Ética devem ser desenvolvidos com celeridade e observância dos seguintes princípios: I - proteção à honra e à imagem da pessoa investigada; II - proteção à identidade do denunciante, que deverá ser mantida sob reserva, se este assim o desejar; e III - independência e imparcialidade dos seus membros na apuração dos fatos...",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "law_id": "decreto-6029-2007",
+      "article_key": "Art. 10",
+      "topic": "Princípios da apuração ética",
+      "supporting_excerpts": [
+        "mantida sob reserva, se este assim o desejar",
+        "independência e imparcialidade"
+      ]
     }
   ]
 }
