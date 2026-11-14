@@ -2,6 +2,7 @@ const DATA_URL = "data/legislacao.json";
 const QUESTIONS_URL = "data/questoes.json";
 const LAWS_URL = "data/laws.json";
 const ERROR_BANK_URL = "data/encontre-erro.json";
+const ARTICLE_BANK_URL = "data/descubra-artigo.json";
 const LAST_SEEN_KEY = "radarLegislativo.lastSeen";
 const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
@@ -15,6 +16,8 @@ let clozeAnswered = 0;
 let quizState = { questions: [], index: 0, selected: null, answers: [] };
 let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
+let articleQuestions = [];
+let articleGameState = { questions: [], index: 0, selected: null, answers: [] };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -547,6 +550,206 @@ function showFindErrorSummary() {
   $("#error-retry-misses").classList.toggle("hidden", repeated.length === 0);
 }
 
+
+// -------------------- Modo de jogo Descubra o artigo --------------------
+async function loadArticleGameBank() {
+  const note = $("#article-count-note");
+  try {
+    const response = await fetch(ARTICLE_BANK_URL + "?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    const bank = Array.isArray(data.questions) ? data.questions : [];
+    const lawIds = [...new Set(bank.map(item => item.law_id))];
+    const snapshotPairs = await Promise.all(lawIds.map(async id => {
+      try {
+        const result = await fetch("data/snapshots/" + encodeURIComponent(id) + ".json?v=" + Date.now(), { cache: "no-store" });
+        if (!result.ok) throw new Error("HTTP " + result.status);
+        return [id, await result.json()];
+      } catch (error) {
+        console.warn("Snapshot indisponível para Descubra o artigo:", id, error);
+        return [id, null];
+      }
+    }));
+    const snapshots = Object.fromEntries(snapshotPairs);
+    let suspended = 0;
+    let newestCapture = 0;
+
+    articleQuestions = bank.filter(item => {
+      const snapshot = snapshots[item.law_id];
+      const articles = snapshot && snapshot.articles;
+      const targetText = articles && articles[item.answer_article_key];
+      const anchor = normalizeLegalForMatch(item.validation_phrase || "");
+      if (!targetText || !anchor || !normalizeLegalForMatch(targetText).includes(anchor)) {
+        suspended += 1;
+        return false;
+      }
+      if (!Array.isArray(item.options) || item.options.length !== 4) {
+        suspended += 1;
+        return false;
+      }
+      const uniqueOptions = new Set(item.options.map(option => option.article_key));
+      if (uniqueOptions.size !== 4 || !item.options.some(option => option.article_key === item.answer_article_key)) {
+        suspended += 1;
+        return false;
+      }
+      if (item.options.some(option => !articles[option.article_key])) {
+        suspended += 1;
+        return false;
+      }
+      item.literal_text = targetText;
+      item.snapshot_captured_at = snapshot.captured_at || null;
+      const stamp = snapshot.captured_at ? new Date(snapshot.captured_at).getTime() : 0;
+      if (Number.isFinite(stamp)) newestCapture = Math.max(newestCapture, stamp);
+      return true;
+    });
+
+    const categorySelect = $("#article-category");
+    categorySelect.replaceChildren();
+    const allOption = document.createElement("option");
+    allOption.value = "todas";
+    allOption.textContent = "Todas as matérias";
+    categorySelect.append(allOption);
+    [...new Set(articleQuestions.map(item => item.category))]
+      .sort((a,b) => a.localeCompare(b, "pt-BR"))
+      .forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        categorySelect.append(option);
+      });
+
+    $("#start-article").disabled = articleQuestions.length === 0;
+    const captureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
+    note.textContent = articleQuestions.length + " questões disponíveis." + captureNote +
+      (suspended ? " " + suspended + " questão(ões) suspensa(s) por incompatibilidade com o texto salvo." : " Todas passaram pela conferência dos artigos e das frases de referência.");
+    if (!articleQuestions.length) note.textContent += " Atualize as capturas legais e tente novamente.";
+  } catch (error) {
+    articleQuestions = [];
+    $("#start-article").disabled = true;
+    note.textContent = "Não foi possível carregar o banco ou conferir as capturas da legislação. Recarregue o site e tente novamente.";
+    console.error(error);
+  }
+}
+function selectedArticlePool() {
+  const category = $("#article-category").value;
+  return articleQuestions.filter(item => category === "todas" || item.category === category);
+}
+function startArticleGame(onlyItems = null) {
+  const pool = onlyItems || selectedArticlePool();
+  if (!pool.length) {
+    $("#article-count-note").textContent = "Não há questões disponíveis para essa seleção.";
+    return;
+  }
+  const requested = $("#article-length").value === "todas" ? pool.length : Number($("#article-length").value);
+  const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
+  articleGameState = { questions: items, index: 0, selected: null, answers: [] };
+  $("#article-welcome").classList.add("hidden");
+  $("#article-summary").classList.add("hidden");
+  $("#article-card").classList.remove("hidden");
+  showArticleQuestion();
+}
+function showArticleQuestion() {
+  const item = articleGameState.questions[articleGameState.index];
+  if (!item) return;
+  articleGameState.selected = null;
+  $("#article-category-label").textContent = item.category;
+  $("#article-progress").textContent = "Questão " + (articleGameState.index + 1) + " de " + articleGameState.questions.length;
+  $("#article-law").textContent = item.law_title;
+  $("#article-question").textContent = item.question;
+  const optionsBox = $("#article-options");
+  optionsBox.replaceChildren();
+  const options = shuffle(item.options);
+  options.forEach(option => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "answer-button article-option";
+    button.textContent = option.label;
+    button.setAttribute("aria-pressed", "false");
+    button.addEventListener("click", () => chooseArticleOption(option.article_key, button));
+    optionsBox.append(button);
+  });
+  $("#submit-article").disabled = true;
+  $("#article-feedback").classList.add("hidden");
+  $("#next-article").textContent = articleGameState.index === articleGameState.questions.length - 1 ? "Ver resultado →" : "Próxima questão →";
+}
+function chooseArticleOption(articleKey, button) {
+  if (!$("#article-feedback").classList.contains("hidden")) return;
+  articleGameState.selected = articleKey;
+  $("#article-options").querySelectorAll(".article-option").forEach(option => {
+    option.classList.toggle("selected", option === button);
+    option.setAttribute("aria-pressed", String(option === button));
+  });
+  $("#submit-article").disabled = false;
+}
+function submitArticleAnswer() {
+  if (!articleGameState.selected) return;
+  const item = articleGameState.questions[articleGameState.index];
+  const correct = articleGameState.selected === item.answer_article_key;
+  articleGameState.answers.push({ item, chosen: articleGameState.selected, correct });
+  const answerOption = item.options.find(option => option.article_key === item.answer_article_key);
+  const selectedOption = item.options.find(option => option.article_key === articleGameState.selected);
+  $("#article-result").textContent = correct ? "Você acertou! ✓" : "Não foi dessa vez. ✕";
+  $("#article-result").className = "feedback-result " + (correct ? "correct" : "incorrect");
+  $("#article-answer-line").textContent = "Artigo correto: " + (answerOption ? answerOption.label : item.answer_article_key) +
+    (correct ? "." : " · Sua escolha: " + (selectedOption ? selectedOption.label : item.answer_article_key) + ".");
+  $("#article-explanation").textContent = item.explanation;
+  $("#article-literal").textContent = item.literal_text;
+  $("#article-source").href = item.source_url;
+  $("#article-feedback").classList.remove("hidden");
+  $("#submit-article").disabled = true;
+  $("#article-options").querySelectorAll(".article-option").forEach(button => {
+    button.disabled = true;
+    const choice = item.options.find(option => option.label === button.textContent);
+    if (choice && choice.article_key === item.answer_article_key) button.classList.add("selected", "correct");
+    else if (choice && choice.article_key === articleGameState.selected && !correct) button.classList.add("incorrect");
+  });
+}
+function nextArticleQuestion() {
+  if (articleGameState.index >= articleGameState.questions.length - 1) {
+    showArticleSummary();
+    return;
+  }
+  articleGameState.index += 1;
+  showArticleQuestion();
+}
+function showArticleSummary() {
+  $("#article-card").classList.add("hidden");
+  $("#article-summary").classList.remove("hidden");
+  const total = articleGameState.questions.length;
+  const correct = articleGameState.answers.filter(answer => answer.correct).length;
+  const wrong = total - correct;
+  const percentage = total ? Math.round((correct / total) * 100) : 0;
+  $("#article-score").textContent = correct + " de " + total + " acertos";
+  $("#article-score-note").textContent = "Aproveitamento: " + percentage + "%. " +
+    (wrong === 0 ? "Excelente! Você identificou todos os artigos." : "Revise os assuntos das questões que errou.");
+  const mistakes = articleGameState.answers.filter(answer => !answer.correct);
+  const list = $("#article-mistakes");
+  list.replaceChildren();
+  if (!mistakes.length) {
+    list.textContent = "Nenhum artigo errado neste jogo.";
+  } else {
+    const heading = document.createElement("h3");
+    heading.textContent = "Artigos para revisar";
+    const rows = document.createElement("div");
+    rows.className = "mistake-list";
+    mistakes.forEach(answer => {
+      const row = document.createElement("div");
+      row.className = "mistake-row";
+      const title = document.createElement("strong");
+      const detail = document.createElement("span");
+      const correctOption = answer.item.options.find(option => option.article_key === answer.item.answer_article_key);
+      const chosenOption = answer.item.options.find(option => option.article_key === answer.chosen);
+      title.textContent = answer.item.law_title + " · " + answer.item.question;
+      detail.textContent = "Sua resposta: " + (chosenOption ? chosenOption.label : answer.chosen) +
+        " · Gabarito: " + (correctOption ? correctOption.label : answer.item.answer_article_key);
+      row.append(title, detail);
+      rows.append(row);
+    });
+    list.append(heading, rows);
+  }
+  $("#article-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
+}
+
 // -------------------- Modo de treino Certo/Errado --------------------
 function shuffle(items) {
   const result = [...items];
@@ -684,22 +887,26 @@ function showView(view) {
   const quiz = view === "quiz";
   const cloze = view === "cloze";
   const findError = view === "find-error";
+  const article = view === "article";
   const radar = view === "radar";
   $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
   $("#cloze-view").classList.toggle("hidden", !cloze);
   $("#find-error-view").classList.toggle("hidden", !findError);
+  $("#article-view").classList.toggle("hidden", !article);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
   $("#tab-find-error").classList.toggle("active", findError);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError] ].forEach(([id, active]) => {
+  $("#tab-article").classList.toggle("active", article);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
   if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (cloze) $("#cloze-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (findError) $("#find-error-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (article) $("#article-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -714,6 +921,7 @@ $("#tab-radar").addEventListener("click", () => showView("radar"));
 $("#tab-quiz").addEventListener("click", () => showView("quiz"));
 $("#tab-cloze").addEventListener("click", () => showView("cloze"));
 $("#tab-find-error").addEventListener("click", () => showView("find-error"));
+$("#tab-article").addEventListener("click", () => showView("article"));
 $("#cloze-law").addEventListener("change", loadClozeSnapshot);
 $("#start-cloze").addEventListener("click", startCloze);
 $("#check-cloze").addEventListener("click", checkCloze);
@@ -724,6 +932,14 @@ $("#restart-error").addEventListener("click", () => startFindErrorGame());
 $("#error-retry-misses").addEventListener("click", () => {
   const repeated = findErrorState.answers.filter(answer => answer.attempts > 1).map(answer => answer.item);
   startFindErrorGame(repeated);
+});
+$("#start-article").addEventListener("click", () => startArticleGame());
+$("#submit-article").addEventListener("click", submitArticleAnswer);
+$("#next-article").addEventListener("click", nextArticleQuestion);
+$("#restart-article").addEventListener("click", () => startArticleGame());
+$("#article-retry-mistakes").addEventListener("click", () => {
+  const misses = articleGameState.answers.filter(answer => !answer.correct).map(answer => answer.item);
+  startArticleGame(misses);
 });
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
@@ -744,3 +960,4 @@ loadDashboard();
 loadQuestionBank();
 loadClozeLaws();
 loadFindErrorBank();
+loadArticleGameBank();
