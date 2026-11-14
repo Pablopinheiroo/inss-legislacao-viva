@@ -24,6 +24,7 @@
   <nav class="main-nav" aria-label="Navegação principal">
     <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
     <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
+    <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -104,6 +105,48 @@
     </section>
 
     <footer class="footer-note"><strong>Treino de fixação.</strong><span>Este é um banco inicial de itens autorais vinculados a dispositivos legais. Confira sempre a redação consolidada na fonte oficial e no edital vigente.</span></footer>
+  </main>
+
+
+  <main id="cloze-view" class="page-shell hidden">
+    <section class="intro cloze-intro">
+      <div>
+        <p class="eyebrow">MODO DE ESTUDO · LEI SECA</p>
+        <h1>Complete o texto da lei</h1>
+        <p class="subtitle">Escolha a norma, o artigo e a dificuldade. Complete as palavras que foram ocultadas.</p>
+      </div>
+      <div class="cloze-config">
+        <label class="select-wrap"><span>Norma</span><select id="cloze-law"><option value="">Carregando normas...</option></select></label>
+        <label class="select-wrap"><span>Artigo</span><select id="cloze-article" disabled><option value="aleatorio">Artigo aleatório</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="cloze-difficulty"><option value="facil">Fácil · 4 lacunas</option><option value="medio" selected>Médio · 7 lacunas</option><option value="dificil">Difícil · 10 lacunas</option></select></label>
+        <button id="start-cloze" class="primary-button" type="button" disabled>Começar</button>
+      </div>
+    </section>
+
+    <p id="cloze-note" class="manual-check-note">As lacunas são geradas a partir dos textos salvos pelo monitor. A Constituição usa apenas os artigos selecionados para o edital.</p>
+
+    <section id="cloze-card" class="cloze-card hidden" aria-live="polite">
+      <div class="quiz-card-top"><span id="cloze-law-label" class="quiz-chip"></span><span id="cloze-article-label" class="quiz-progress"></span></div>
+      <p class="cloze-instruction">Digite a palavra ou expressão que completa cada lacuna.</p>
+      <div id="cloze-text" class="law-reader"></div>
+      <div class="cloze-actions">
+        <button id="check-cloze" class="primary-button" type="button">Conferir respostas</button>
+        <button id="next-cloze" class="secondary-button hidden" type="button">Outro trecho ↻</button>
+      </div>
+      <p id="cloze-feedback" class="cloze-feedback hidden"></p>
+      <details id="cloze-original" class="law-excerpt cloze-original">
+        <summary>Mostrar texto completo do artigo</summary>
+        <pre id="cloze-original-text"></pre>
+      </details>
+      <div class="feedback-bottom"><a id="cloze-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><span id="cloze-progress" class="quiz-progress"></span></div>
+    </section>
+
+    <section id="cloze-welcome" class="empty-state quiz-welcome">
+      <h3>Treine a memória da lei seca</h3>
+      <p>O sistema esconde palavras do texto legal. Você completa as lacunas e depois confere as respostas no próprio dispositivo, com o artigo original disponível para leitura.</p>
+    </section>
+
+    <footer class="footer-note"><strong>Texto legal em primeiro lugar.</strong><span>Os artigos são carregados das capturas oficiais salvas pelo monitor. Quando uma fonte falha ou não pode ser separada com segurança, ela não é oferecida neste modo.</span></footer>
   </main>
 
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
