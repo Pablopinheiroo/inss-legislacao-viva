@@ -18,7 +18,9 @@ let clozeReviewSessionSeen = new Set();
 let selectedClozeText = "";
 let quizState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false };
 let findErrorItems = [];
-let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false };
+let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false, reviewMode: false, reviewFailed: false };
+let findErrorCaptureNote = "";
+let findErrorSuspendedCount = 0;
 let articleQuestions = [];
 let articleGameState = { questions: [], index: 0, selected: null, answers: [] };
 let multiCEGroups = [];
@@ -28,6 +30,7 @@ let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], a
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
 const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
 const CLOZE_REVIEW_KEY = "radarLegislativo.clozeReview.v1";
+const ERROR_REVIEW_KEY = "radarLegislativo.errorReview.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
@@ -2115,187 +2118,178 @@ function normalizeLegalForMatch(value) {
     .replace(/\s+/g, " ")
     .trim();
 }
+function findErrorTypeLabel(type) {
+  return ({prazo:"Prazos",percentual:"Percentuais e frações",requisito:"Requisitos",excecao:"Exceções"})[type] || "Requisitos";
+}
 async function loadFindErrorBank() {
-  const note = $("#error-count-note");
+  const note=$("#error-count-note");
   try {
-    const response = await fetch(ERROR_BANK_URL + "?v=" + Date.now(), { cache: "no-store" });
-    if (!response.ok) throw new Error("HTTP " + response.status);
-    const data = await response.json();
-    const bankItems = Array.isArray(data.items) ? data.items : [];
-    const lawIds = [...new Set(bankItems.map(item => item.law_id))];
-    const snapshotPairs = await Promise.all(lawIds.map(async id => {
+    const response=await fetch(ERROR_BANK_URL+"?v="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("HTTP "+response.status);
+    const data=await response.json(),bankItems=Array.isArray(data.items)?data.items:[];
+    const ids=[...new Set(bankItems.map(item=>item.law_id))];
+    const pairs=await Promise.all(ids.map(async id=>{
       try {
-        const result = await fetch("data/snapshots/" + encodeURIComponent(id) + ".json?v=" + Date.now(), { cache: "no-store" });
-        if (!result.ok) throw new Error("HTTP " + result.status);
-        return [id, await result.json()];
-      } catch (error) {
-        console.warn("Snapshot indisponível para o modo Encontre o erro:", id, error);
-        return [id, null];
-      }
+        const result=await fetch("data/snapshots/"+encodeURIComponent(id)+".json?v="+Date.now(),{cache:"no-store"});
+        if(!result.ok)throw new Error("HTTP "+result.status);
+        return [id,await result.json()];
+      } catch(error){console.warn("Snapshot indisponível para Encontre o erro:",id,error);return [id,null];}
     }));
-    const snapshots = Object.fromEntries(snapshotPairs);
-    let suspended = 0;
-    let newestCapture = 0;
-
-    findErrorItems = bankItems.filter(item => {
-      const snapshot = snapshots[item.law_id];
-      const currentText = snapshot && snapshot.articles && snapshot.articles[item.article_key];
-      if (!currentText) {
-        suspended += 1;
-        return false;
-      }
-      const expected = normalizeLegalForMatch(item.correct_phrase);
-      const current = normalizeLegalForMatch(currentText);
-      if (!expected || !current.includes(expected)) {
-        suspended += 1;
-        return false;
-      }
-      item.literal_text = currentText;
-      item.snapshot_captured_at = snapshot.captured_at || null;
-      const stamp = snapshot.captured_at ? new Date(snapshot.captured_at).getTime() : 0;
-      if (Number.isFinite(stamp)) newestCapture = Math.max(newestCapture, stamp);
+    const snapshots=Object.fromEntries(pairs);let newest=0;findErrorSuspendedCount=0;
+    findErrorItems=bankItems.filter(item=>{
+      const snapshot=snapshots[item.law_id],text=snapshot&&snapshot.articles&&snapshot.articles[item.article_key];
+      const valid=Array.isArray(item.segments)&&item.segments.length>=3&&Number.isInteger(item.wrong_segment_index)
+        &&item.wrong_segment_index>=0&&item.wrong_segment_index<item.segments.length
+        &&item.segments.every(part=>typeof part==="string")
+        &&["prazo","percentual","requisito","excecao"].includes(item.question_type);
+      if(!text||!valid){findErrorSuspendedCount++;return false;}
+      const expected=normalizeLegalForMatch(item.correct_phrase),current=normalizeLegalForMatch(text);
+      if(!expected||!current.includes(expected)){findErrorSuspendedCount++;return false;}
+      item.literal_text=text;item.snapshot_captured_at=snapshot.captured_at||null;
+      const time=snapshot.captured_at?new Date(snapshot.captured_at).getTime():0;
+      if(Number.isFinite(time))newest=Math.max(newest,time);
       return true;
     });
-
-    const categorySelect = $("#error-category");
-    categorySelect.replaceChildren();
-    const all = document.createElement("option");
-    all.value = "todas";
-    all.textContent = "Todas as matérias";
-    categorySelect.append(all);
-    [...new Set(findErrorItems.map(item => item.category))]
-      .sort((a,b) => a.localeCompare(b, "pt-BR"))
-      .forEach(category => {
-        const option = document.createElement("option");
-        option.value = category;
-        option.textContent = category;
-        categorySelect.append(option);
-      });
-
-    $("#start-error").disabled = findErrorItems.length === 0;
-    const captureNote = newestCapture ? " Capturas conferidas até " + formatDate(new Date(newestCapture).toISOString()) + "." : "";
-    note.textContent = findErrorItems.length + " item(ns) disponíveis." + captureNote +
-      (suspended ? " " + suspended + " item(ns) foram suspensos porque o artigo ou a expressão correta não correspondeu à captura atual." : " Todos os itens passaram na conferência do texto salvo.");
-    if (!findErrorItems.length) note.textContent += " Faça uma verificação da legislação e tente novamente.";
-  } catch (error) {
-    findErrorItems = [];
-    $("#start-error").disabled = true;
-    note.textContent = "Não foi possível carregar o banco ou conferir os textos legais. Recarregue o site e tente novamente.";
-    console.error(error);
-  }
-}
-function selectedFindErrorPool() {
-  const category = $("#error-category").value;
-  return findErrorItems.filter(item => category === "todas" || item.category === category);
-}
-function startFindErrorGame(onlyItems = null) {
-  const pool = onlyItems || selectedFindErrorPool();
-  if (!pool.length) {
-    $("#error-count-note").textContent = "Não há itens disponíveis para essa seleção.";
-    return;
-  }
-  const requested = $("#error-length").value === "todas" ? pool.length : Number($("#error-length").value);
-  const items = onlyItems ? shuffle(pool) : shuffle(pool).slice(0, Math.min(requested, pool.length));
-  findErrorState = { questions: items, index: 0, answers: [], tries: 0, resolved: false };
-  $("#error-welcome").classList.add("hidden");
-  $("#error-summary").classList.add("hidden");
-  $("#error-card").classList.remove("hidden");
-  showFindErrorQuestion();
-}
-function showFindErrorQuestion() {
-  const item = findErrorState.questions[findErrorState.index];
-  if (!item) return;
-  findErrorState.tries = 0;
-  findErrorState.resolved = false;
-  $("#error-category-label").textContent = item.category;
-  $("#error-progress").textContent = "Questão " + (findErrorState.index + 1) + " de " + findErrorState.questions.length;
-  $("#error-law").textContent = item.law_title;
-  $("#error-article").textContent = item.article;
-  const statement = $("#error-statement");
-  statement.replaceChildren();
-  item.segments.forEach((segment, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "error-segment";
-    button.textContent = segment;
-    button.setAttribute("aria-label", "Trecho " + (index + 1) + ": " + segment.trim());
-    button.addEventListener("click", () => chooseFindErrorSegment(index, button));
-    statement.append(button);
-  });
-  $("#error-attempt-feedback").textContent = "Toque na expressão que contraria a lei.";
-  $("#error-attempt-feedback").classList.remove("hidden");
-  $("#error-solution").classList.add("hidden");
-  $("#error-literal").textContent = "";
-}
-function chooseFindErrorSegment(index, button) {
-  if (findErrorState.resolved || button.disabled) return;
-  const item = findErrorState.questions[findErrorState.index];
-  findErrorState.tries += 1;
-
-  if (index !== item.wrong_segment_index) {
-    button.disabled = true;
-    button.classList.add("is-tried");
-    $("#error-attempt-feedback").textContent = "Esse trecho está de acordo com o dispositivo. Tente outro.";
-    return;
-  }
-
-  findErrorState.resolved = true;
-  findErrorState.answers.push({ item, attempts: findErrorState.tries });
-  $("#error-statement").querySelectorAll(".error-segment").forEach((segment, segmentIndex) => {
-    segment.disabled = true;
-    if (segmentIndex === index) segment.classList.add("is-wrong");
-  });
-  $("#error-attempt-feedback").classList.add("hidden");
-  $("#error-result").textContent = findErrorState.tries === 1 ? "Erro encontrado de primeira! ✓" : "Você encontrou o erro! ✓";
-  $("#error-result").className = "feedback-result correct";
-  $("#error-correction").textContent = "Trecho incorreto: “" + item.segments[index].trim() + "”. Correção: “" + item.correct_phrase + "”.";
-  $("#error-explanation").textContent = item.explanation;
-  $("#error-literal").textContent = item.literal_text;
-  $("#error-source").href = item.source_url;
-  $("#error-solution").classList.remove("hidden");
-  $("#next-error-question").textContent = findErrorState.index === findErrorState.questions.length - 1 ? "Ver resultado →" : "Próxima questão →";
-}
-function nextFindErrorQuestion() {
-  if (findErrorState.index >= findErrorState.questions.length - 1) {
-    showFindErrorSummary();
-    return;
-  }
-  findErrorState.index += 1;
-  showFindErrorQuestion();
-}
-function showFindErrorSummary() {
-  $("#error-card").classList.add("hidden");
-  $("#error-summary").classList.remove("hidden");
-  const total = findErrorState.questions.length;
-  const firstTry = findErrorState.answers.filter(answer => answer.attempts === 1).length;
-  const percentage = total ? Math.round((firstTry / total) * 100) : 0;
-  $("#error-score").textContent = firstTry + " de " + total + " na primeira tentativa";
-  $("#error-score-note").textContent = "Precisão inicial: " + percentage + "%. " +
-    (firstTry === total ? "Excelente! Você identificou todos os erros de primeira." : "Revise as expressões em que precisou de mais tentativas.");
-
-  const repeated = findErrorState.answers.filter(answer => answer.attempts > 1);
-  const list = $("#error-mistakes");
-  list.replaceChildren();
-  if (!repeated.length) {
-    list.textContent = "Você encontrou todos os erros na primeira tentativa.";
-  } else {
-    const heading = document.createElement("h3");
-    heading.textContent = "Trechos para revisar";
-    const rows = document.createElement("div");
-    rows.className = "mistake-list";
-    repeated.forEach(answer => {
-      const row = document.createElement("div");
-      row.className = "mistake-row";
-      const title = document.createElement("strong");
-      const detail = document.createElement("span");
-      title.textContent = answer.item.law_title + " · " + answer.item.article;
-      detail.textContent = "Tentativas até encontrar o erro: " + answer.attempts;
-      row.append(title, detail);
-      rows.append(row);
+    const category=$("#error-category"),previous=category.value||"todas";category.replaceChildren();
+    const all=document.createElement("option");all.value="todas";all.textContent="Todas as matérias";category.append(all);
+    [...new Set(findErrorItems.map(item=>item.category))].sort((a,b)=>a.localeCompare(b,"pt-BR")).forEach(value=>{
+      const option=document.createElement("option");option.value=value;option.textContent=value;category.append(option);
     });
-    list.append(heading, rows);
+    if([...category.options].some(option=>option.value===previous))category.value=previous;
+    findErrorCaptureNote=newest?" Capturas conferidas até "+formatDate(new Date(newest).toISOString())+".":"";
+    updateFindErrorFilters();renderFindErrorReviewOverview();
+  } catch(error){
+    findErrorItems=[];$("#start-error").disabled=true;
+    note.textContent="Não foi possível carregar o banco ou conferir os textos legais. Recarregue o site e tente novamente.";
+    renderFindErrorReviewOverview();console.error(error);
   }
-  $("#error-retry-misses").classList.toggle("hidden", repeated.length === 0);
+}
+function selectedFindErrorPool(){
+  const category=$("#error-category").value,type=$("#error-type").value;
+  return findErrorItems.filter(item=>(category==="todas"||item.category===category)&&(type==="todas"||item.question_type===type));
+}
+function updateFindErrorFilters(){
+  const pool=selectedFindErrorPool();$("#start-error").disabled=pool.length===0;
+  const counts=["prazo","percentual","requisito","excecao"].map(type=>pool.filter(item=>item.question_type===type).length);
+  const summary=counts.map((n,i)=>["prazos","percentuais/frações","requisitos","exceções"][i]+": "+n).join(" · ");
+  const note=$("#error-count-note");
+  note.textContent=pool.length+" item(ns) nesta seleção. "+summary+"."+findErrorCaptureNote
+    +(findErrorSuspendedCount?" "+findErrorSuspendedCount+" item(ns) suspensos por incompatibilidade com o texto legal atual.":" Todos os itens disponíveis passaram pela conferência da redação correta.");
+  if(!findErrorItems.length)note.textContent+=" Faça uma nova verificação das normas e tente novamente.";
+}
+function loadFindErrorReviewQueue(){
+  try{const value=JSON.parse(localStorage.getItem(ERROR_REVIEW_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{};}
+  catch(_){return {};}
+}
+function saveFindErrorReviewQueue(queue){
+  try{localStorage.setItem(ERROR_REVIEW_KEY,JSON.stringify(queue));}
+  catch(error){console.warn("Não foi possível salvar a revisão Encontre o erro:",error);const note=$("#error-review-note");if(note)note.textContent="O navegador não permitiu salvar os erros. Confira as permissões de armazenamento.";}
+}
+function findErrorReviewPendingEntries(){
+  return Object.values(loadFindErrorReviewQueue()).filter(entry=>entry&&entry.status!=="mastered"&&entry.item&&entry.item.id);
+}
+function recordFindErrorReviewMiss(item,wrongIndex,reviewMode){
+  const queue=loadFindErrorReviewQueue(),old=queue[item.id]||{},now=Date.now();
+  queue[item.id]={item:JSON.parse(JSON.stringify(item)),misses:(Number(old.misses)||0)+1,correct_reviews:0,
+    first_missed_at:old.first_missed_at||new Date(now).toISOString(),last_missed_at:new Date(now).toISOString(),
+    last_wrong_segment:String(item.segments[wrongIndex]||"").trim().slice(0,400),
+    next_due:new Date(now+(reviewMode?10*60*1000:0)).toISOString(),status:"pending"};
+  saveFindErrorReviewQueue(queue);renderFindErrorReviewOverview();
+}
+function recordFindErrorReviewSuccess(item){
+  const queue=loadFindErrorReviewQueue(),old=queue[item.id];if(!old||old.status==="mastered")return;
+  const now=Date.now(),correct=(Number(old.correct_reviews)||0)+1,mastered=correct>=3,days=correct===1?1:3;
+  queue[item.id]={...old,item:JSON.parse(JSON.stringify(item)),correct_reviews:correct,last_correct_at:new Date(now).toISOString(),
+    next_due:mastered?null:new Date(now+days*86400000).toISOString(),status:mastered?"mastered":"pending"};
+  saveFindErrorReviewQueue(queue);renderFindErrorReviewOverview();
+}
+function renderFindErrorReviewOverview(){
+  const all=Object.values(loadFindErrorReviewQueue()),pending=all.filter(e=>e&&e.status!=="mastered"&&e.item);
+  const due=pending.filter(e=>{const t=new Date(e.next_due||0).getTime();return !Number.isFinite(t)||t<=Date.now();});
+  const live=new Set(findErrorItems.map(item=>item.id)),ready=due.filter(e=>live.has(e.item.id)),suspended=due.length-ready.length;
+  const mastered=all.filter(e=>e&&e.status==="mastered").length;
+  const dueNode=$("#error-review-due"),pendingNode=$("#error-review-pending"),masteredNode=$("#error-review-mastered");
+  const button=$("#error-review-start"),note=$("#error-review-note");
+  if(!dueNode||!pendingNode||!masteredNode||!button||!note)return;
+  dueNode.textContent=String(due.length);pendingNode.textContent=String(pending.length);masteredNode.textContent=String(mastered);
+  button.disabled=ready.length===0;button.textContent=ready.length?"Revisar agora ("+ready.length+")":"Nenhum erro disponível para revisar";
+  if(!pending.length)note.textContent="Os trechos que você selecionar incorretamente serão guardados aqui automaticamente.";
+  else if(ready.length)note.textContent=ready.length+" erro(s) disponível(is) para revisar. Três acertos em revisões espaçadas retiram o item da fila ativa."
+    +(suspended?" Outros "+suspended+" item(ns) aguardam atualização porque a redação correta não aparece na captura atual.":"");
+  else if(suspended)note.textContent=suspended+" erro(s) estão guardados, mas foram suspensos porque a redação correta não aparece no snapshot atual da legislação.";
+  else{const dates=pending.map(e=>new Date(e.next_due||0).getTime()).filter(Number.isFinite);note.textContent=pending.length+" erro(s) em acompanhamento. Próxima revisão: "+(dates.length?formatDate(new Date(Math.min(...dates)).toISOString()):"aguardando");}
+}
+function startFindErrorReviewSession(){
+  const due=findErrorReviewPendingEntries().filter(e=>{const t=new Date(e.next_due||0).getTime();return !Number.isFinite(t)||t<=Date.now();});
+  const current=new Map(findErrorItems.map(item=>[item.id,item])),ready=due.map(e=>current.get(e.item.id)).filter(Boolean);
+  if(!ready.length){renderFindErrorReviewOverview();$("#error-review-note").textContent=due.length?"Os erros estão salvos, mas suas questões foram suspensas porque a redação correta não aparece na captura legal atual.":"Ainda não há erros vencidos para revisar.";return;}
+  showView("find-error");startFindErrorGame(ready,{reviewMode:true});
+}
+function startFindErrorGame(onlyItems=null,options={}){
+  const pool=onlyItems||selectedFindErrorPool();if(!pool.length){$("#error-count-note").textContent="Não há itens disponíveis para essa seleção.";return;}
+  const size=onlyItems?pool.length:($("#error-length").value==="todas"?pool.length:Number($("#error-length").value));
+  findErrorState={questions:shuffle(pool).slice(0,Math.min(size,pool.length)),index:0,answers:[],tries:0,resolved:false,reviewMode:Boolean(options.reviewMode),reviewFailed:false};
+  $("#error-welcome").classList.add("hidden");$("#error-summary").classList.add("hidden");$("#error-card").classList.remove("hidden");showFindErrorQuestion();
+}
+function showFindErrorQuestion(){
+  const item=findErrorState.questions[findErrorState.index];if(!item)return;
+  findErrorState.tries=0;findErrorState.resolved=false;findErrorState.reviewFailed=false;
+  $("#error-category-label").textContent=item.category;$("#error-type-label").textContent=findErrorTypeLabel(item.question_type);
+  $("#error-progress").textContent="Questão "+(findErrorState.index+1)+" de "+findErrorState.questions.length;
+  $("#error-law").textContent=item.law_title;$("#error-article").textContent=item.article;
+  const statement=$("#error-statement");statement.replaceChildren();
+  item.segments.forEach((part,index)=>{
+    const button=document.createElement("button");button.type="button";button.className="error-segment";button.textContent=part;
+    button.setAttribute("aria-label","Trecho "+(index+1)+": "+part.trim());
+    button.addEventListener("click",()=>chooseFindErrorSegment(index,button));statement.append(button);
+  });
+  $("#error-attempt-feedback").textContent="Toque na expressão que contraria a lei.";
+  $("#error-attempt-feedback").classList.remove("hidden");$("#error-solution").classList.add("hidden");
+  $("#error-wrong-phrase").textContent="";$("#error-correct-phrase").textContent="";$("#error-literal").textContent="";
+}
+function chooseFindErrorSegment(index,button){
+  if(findErrorState.resolved||button.disabled)return;
+  const item=findErrorState.questions[findErrorState.index];findErrorState.tries++;
+  if(index!==item.wrong_segment_index){
+    button.disabled=true;button.classList.add("is-tried");
+    if(!findErrorState.reviewFailed){recordFindErrorReviewMiss(item,index,findErrorState.reviewMode);findErrorState.reviewFailed=true;}
+    $("#error-attempt-feedback").textContent="Esse trecho está de acordo com o dispositivo. Tente outro.";return;
+  }
+  findErrorState.resolved=true;findErrorState.answers.push({item,attempts:findErrorState.tries});
+  if(findErrorState.reviewMode&&!findErrorState.reviewFailed)recordFindErrorReviewSuccess(item);
+  $("#error-statement").querySelectorAll(".error-segment").forEach((segment,i)=>{segment.disabled=true;if(i===index)segment.classList.add("is-wrong");});
+  $("#error-attempt-feedback").classList.add("hidden");
+  $("#error-result").textContent=findErrorState.tries===1?"Erro encontrado de primeira! ✓":"Você encontrou o erro! ✓";
+  $("#error-result").className="feedback-result correct";
+  $("#error-wrong-phrase").textContent=item.segments[index].trim();$("#error-correct-phrase").textContent=item.correct_phrase;
+  $("#error-explanation").textContent=item.explanation;
+  renderTextWithHighlights($("#error-literal"),item.literal_text,[item.correct_phrase],"error-correct-highlight");
+  $("#error-source").href=item.source_url;$("#error-solution").classList.remove("hidden");
+  $("#next-error-question").textContent=findErrorState.index===findErrorState.questions.length-1?"Ver resultado →":"Próxima questão →";
+  renderFindErrorReviewOverview();
+}
+function nextFindErrorQuestion(){
+  if(findErrorState.index>=findErrorState.questions.length-1){showFindErrorSummary();return;}
+  findErrorState.index++;showFindErrorQuestion();
+}
+function showFindErrorSummary(){
+  $("#error-card").classList.add("hidden");$("#error-summary").classList.remove("hidden");
+  const total=findErrorState.questions.length,first=findErrorState.answers.filter(a=>a.attempts===1).length,percent=total?Math.round(first/total*100):0;
+  $("#error-score").textContent=first+" de "+total+" na primeira tentativa";
+  $("#error-score-note").textContent=(findErrorState.reviewMode?"Revisão espaçada · ":"Precisão inicial · ")+percent+"%. "
+    +(findErrorState.reviewMode?"Os erros que ainda causaram dúvida permanecem na fila e poderão ser revistos novamente."
+      :(first===total?"Excelente! Você identificou todos os erros de primeira.":"Os trechos escolhidos incorretamente foram enviados à Central de revisão."));
+  const repeated=findErrorState.answers.filter(a=>a.attempts>1),list=$("#error-mistakes");list.replaceChildren();
+  if(!repeated.length)list.textContent="Você encontrou todos os erros na primeira tentativa.";
+  else{
+    const heading=document.createElement("h3");heading.textContent="Trechos para revisar";
+    const rows=document.createElement("div");rows.className="mistake-list";
+    repeated.forEach(answer=>{const row=document.createElement("div"),title=document.createElement("strong"),detail=document.createElement("span");
+      row.className="mistake-row";title.textContent=answer.item.law_title+" · "+answer.item.article;detail.textContent="Tentativas até encontrar o erro: "+answer.attempts;
+      row.append(title,detail);rows.append(row);});
+    list.append(heading,rows);
+  }
+  $("#error-retry-misses").classList.toggle("hidden",repeated.length===0);renderFindErrorReviewOverview();
 }
 
 
@@ -3664,6 +3658,9 @@ $("#next-cloze").addEventListener("click", () => {
   else startCloze();
 });
 $("#start-error").addEventListener("click", () => startFindErrorGame());
+$("#error-category").addEventListener("change", updateFindErrorFilters);
+$("#error-type").addEventListener("change", updateFindErrorFilters);
+$("#error-review-start").addEventListener("click", startFindErrorReviewSession);
 $("#next-error-question").addEventListener("click", nextFindErrorQuestion);
 $("#restart-error").addEventListener("click", () => startFindErrorGame());
 $("#error-retry-misses").addEventListener("click", () => {
