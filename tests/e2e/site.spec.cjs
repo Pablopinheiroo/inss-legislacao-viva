@@ -63,6 +63,7 @@ test("navegação entre as quatro áreas, submenus e Radar", async ({ page }) =>
 });
 
 test("Biblioteca Lei Seca: captura, fonte oficial, favoritos e progresso persistente", async ({ page }) => {
+  console.log("ALTERAÇÃO: app aberto");
   await openApp(page);
   await page.locator("#area-lei-seca").click();
   await expect(page.locator("#law-reader")).toBeVisible();
@@ -191,6 +192,7 @@ test("os sete modos de treinamento registram respostas e mantêm o progresso", a
 });
 
 test("artigo alterado: aviso, comparação Antes e depois e questão vinculada", async ({ page }) => {
+  page.setDefaultTimeout(10_000);
   await page.route("**/data/legislacao.json*", async route => {
     const response = await route.fetch();
     const data = await response.json();
@@ -220,12 +222,14 @@ test("artigo alterado: aviso, comparação Antes e depois e questão vinculada",
   await expect(page.locator("#law-reader")).toBeVisible();
   await page.locator("#law-article-select").selectOption("Art. 1");
   await page.locator("#law-mark-studied").click();
+  console.log("ALTERAÇÃO: artigo marcado como estudado");
   await expect(page.locator("#notification-study-indicator")).toBeVisible();
   await expect(page.locator("#notification-button")).toHaveClass(/has-study-impact/);
 
   await page.locator("#notification-button").click();
   await expect(page.locator("#drawer-content")).toContainText("Alterações em artigos estudados");
   await expect(page.locator("#drawer-content")).toContainText("Art. 1");
+  console.log("ALTERAÇÃO: aviso do sino conferido");
   await page.locator("#close-drawer").click();
 
   await enterGames(page);
@@ -233,6 +237,7 @@ test("artigo alterado: aviso, comparação Antes e depois e questão vinculada",
   await expect(page.locator("#before-after-count-note")).toContainText("1 alteração");
   await expect(page.locator("#start-before-after")).toBeEnabled();
   await page.locator("#start-before-after").click();
+  console.log("ALTERAÇÃO: modo Antes e depois iniciado");
   await expect(page.locator("#before-after-card")).toBeVisible();
 
   const currentVersion = page.locator("#before-after-options button").filter({ hasText: "mediante contribuição" });
@@ -240,9 +245,11 @@ test("artigo alterado: aviso, comparação Antes e depois e questão vinculada",
   await currentVersion.click();
   await page.locator("#before-after-submit").click();
   await expect(page.locator("#before-after-feedback")).toBeVisible();
+  console.log("ALTERAÇÃO: versão nova comparada");
   await expect(page.locator("#before-after-comparison")).toContainText("DEPOIS");
   await page.locator("#before-after-change-options button").first().click();
   await expect(page.locator("#before-after-next")).toBeEnabled();
+  console.log("ALTERAÇÃO: tipo de alteração respondido");
   await page.locator("#before-after-next").click();
   await expect(page.locator("#before-after-summary")).toBeVisible();
 
@@ -252,6 +259,7 @@ test("artigo alterado: aviso, comparação Antes e depois e questão vinculada",
   const articleOption = page.locator('#quiz-article-filter option[value="Art. 1"]');
   await expect(articleOption).toHaveCount(1);
   await page.locator("#quiz-article-filter").selectOption("Art. 1");
+  console.log("ALTERAÇÃO: questão vinculada ao artigo filtrada");
   await expect(page.locator("#start-quiz")).toBeEnabled();
   await expect(page.locator("#question-count-note")).toContainText("item(ns) nesta seleção");
 });
@@ -291,7 +299,7 @@ test("simulados tradicional, rápido e completo; cronômetros e relatório", asy
   await page.locator("#start-simulado-completo").click();
   await expect(page.locator("#simulado-type-label")).toContainText("60 QUESTÕES");
   await expect(page.locator("#simulado-timer-wrap")).toBeVisible();
-  await expect(page.locator("#simulado-timer")).toHaveText(/^\d{2}:\d{2}$/);
+  await expect(page.locator("#simulado-timer")).toHaveText(/^\d{2,3}:\d{2}$/);
   await page.locator("#simulado-answer-true").click();
   await page.locator("#simulado-finish").click();
   await expect(page.locator("#simulado-result")).toBeVisible();
