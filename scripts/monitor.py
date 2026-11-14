@@ -200,7 +200,7 @@ def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
         line = raw_lines[index].strip()
         if line == "§" and index + 1 < len(raw_lines):
             following = raw_lines[index + 1].strip()
-            if re.match(r"^(?:\d+\s*[º°o]?|único)\b", following, re.IGNORECASE):
+            if re.match(r"^(?:\d+\s*[º°o]?(?:\s|$)|único\b)", following, re.IGNORECASE):
                 lines.append("§ " + following)
                 index += 2
                 continue
@@ -507,7 +507,7 @@ def make_change(
     dates = extract_event_dates(evidence_text)
     explicitly_revoked = (
         device_type not in {"artigo", "texto_integral"}
-        and bool(re.search(r"\brevogad[oa]s?\b", new, re.IGNORECASE))
+        and bool(re.search(r"\(\s*revogad[oa]\b", new, re.IGNORECASE))
     )
 
     if explicitly_revoked:
