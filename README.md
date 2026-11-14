@@ -62,6 +62,7 @@ Se uma fonte falhar ou devolver pouco conteúdo, a captura anterior é preservad
 
 - index.html, styles.css e app.js: site estático.
 - data/laws.json: fontes oficiais acompanhadas.
+- data/encontre-erro.json: banco de itens do jogo Encontre o erro.
 - data/legislacao.json: dados exibidos pelo site.
 - data/snapshots/: últimas capturas válidas.
 - scripts/monitor.py: comparação dos textos.
