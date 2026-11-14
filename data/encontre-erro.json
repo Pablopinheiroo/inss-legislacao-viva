@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
-  "description": "Itens do modo Encontre o erro. Cada item possui uma única expressão incorreta; a expressão correta é validada contra o snapshot mais recente da norma antes de ser oferecida.",
-  "baseline_checked_at": "2026-11-14T00:52:03.000Z",
+  "schema_version": 2,
+  "description": "Banco autoral do modo Encontre o erro. Cada questão tem uma única expressão incorreta, redação correta e classificação por prazos, percentuais/frações, requisitos ou exceções. A expressão correta é conferida no snapshot atual da norma antes de liberar o item.",
+  "baseline_checked_at": "2026-11-14T12:34:56Z",
   "items": [
     {
       "id": "err-8213-art1",
@@ -18,7 +18,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "mediante contribuição",
       "explanation": "A Lei 8.213/1991 estabelece que a Previdência Social atua mediante contribuição. A expressão “independentemente de contribuição” não corresponde ao art. 1º.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8213-art2-vi",
@@ -35,7 +36,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não inferior ao do salário-mínimo",
       "explanation": "O inciso VI protege o valor mínimo desses benefícios: ele não pode ser inferior ao salário-mínimo. A questão inverteu essa regra.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8213-art2-viii",
@@ -52,7 +54,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "democrático e descentralizado",
       "explanation": "O inciso VIII prevê gestão administrativa de caráter democrático e descentralizado. A palavra “centralizado” altera o sentido do dispositivo.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8212-art4",
@@ -69,7 +72,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "independentemente de contribuição à Seguridade Social",
       "explanation": "O art. 4º da Lei 8.212/1991 define a assistência social como política que atende às necessidades básicas independentemente de contribuição à Seguridade Social.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question_type": "excecao"
     },
     {
       "id": "err-loas-art1",
@@ -86,7 +90,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "não contributiva",
       "explanation": "A LOAS define expressamente a assistência social como Política de Seguridade Social não contributiva.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-loas-art4-iv",
@@ -103,7 +108,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "sem discriminação de qualquer natureza",
       "explanation": "O inciso IV determina igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza, e garante equivalência às populações urbanas e rurais.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8112-art2",
@@ -120,7 +126,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "cargo público",
       "explanation": "O art. 2º define servidor como a pessoa legalmente investida em cargo público, e não em emprego público.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8112-art3",
@@ -137,7 +144,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "atribuições e responsabilidades",
       "explanation": "O art. 3º define cargo público como o conjunto de atribuições e responsabilidades previstas na estrutura organizacional, não como conjunto de direitos e vantagens.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-8112-art4",
@@ -154,7 +162,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "proibida",
       "explanation": "A regra do art. 4º é a proibição da prestação de serviços gratuitos. A exceção existe apenas para os casos previstos em lei.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question_type": "excecao"
     },
     {
       "id": "err-dec6029-art3-numero",
@@ -171,7 +180,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "sete brasileiros",
       "explanation": "O art. 3º determina que a Comissão de Ética Pública será integrada por sete brasileiros.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "question_type": "requisito"
     },
     {
       "id": "err-dec6029-art3-mandato",
@@ -188,7 +198,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "três anos",
       "explanation": "O mandato previsto no art. 3º é de três anos e não é coincidente.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "question_type": "prazo"
     },
     {
       "id": "err-dec6029-art3-reconducao",
@@ -205,7 +216,8 @@
       "wrong_segment_index": 1,
       "correct_phrase": "uma única recondução",
       "explanation": "O decreto permite uma única recondução. Não são permitidas duas reconduções.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "question_type": "excecao"
     },
     {
       "id": "err-dec6029-art12",
@@ -222,7 +234,825 @@
       "wrong_segment_index": 1,
       "correct_phrase": "dez dias",
       "explanation": "O § 3º do art. 12 prevê prazo de dez dias para a nova manifestação quando forem juntados novos elementos de prova após a manifestação inicial.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html"
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "question_type": "prazo"
+    },
+    {
+      "id": "err-8213-art15-facultativo",
+      "question_type": "prazo",
+      "topic": "Período de graça",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, inciso VI",
+      "article_key": "Art. 15",
+      "segments": [
+        "O segurado facultativo mantém a qualidade de segurado por até ",
+        "3 (três) meses",
+        " após a cessação das contribuições."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "6 (seis) meses",
+      "explanation": "Para o segurado facultativo, a Lei 8.213/1991 prevê seis meses de período de graça após cessarem as contribuições.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art15-prorrogacao",
+      "question_type": "prazo",
+      "topic": "Período de graça",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, § 1º",
+      "article_key": "Art. 15",
+      "segments": [
+        "Se o segurado já tiver pago mais de 120 contribuições mensais sem perda da qualidade, o prazo do inciso II poderá ser prorrogado para até ",
+        "36 (trinta e seis) meses",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "24 (vinte e quatro) meses",
+      "explanation": "A prorrogação prevista no § 1º leva o período para até 24 meses, e não 36 meses.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art74-filho-menor",
+      "question_type": "prazo",
+      "topic": "Requerimento de pensão por morte",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 74, inciso I — filho menor de 16 anos",
+      "article_key": "Art. 74",
+      "segments": [
+        "Para filhos menores de 16 anos, a pensão por morte é devida desde o óbito quando requerida em até ",
+        "90 (noventa) dias",
+        " após a morte."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "180 (cento e oitenta) dias",
+      "explanation": "A lei dá prazo de 180 dias para filhos menores de 16 anos. Para os demais dependentes, o prazo é de 90 dias.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art74-demais",
+      "question_type": "prazo",
+      "topic": "Requerimento de pensão por morte",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 74, inciso I — demais dependentes",
+      "article_key": "Art. 74",
+      "segments": [
+        "Para os demais dependentes, a pensão por morte é devida desde o óbito quando requerida em até ",
+        "180 (cento e oitenta) dias",
+        " após a morte."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "90 (noventa) dias",
+      "explanation": "Para os demais dependentes, a regra legal é de 90 dias após o óbito.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art103-decadencia",
+      "question_type": "prazo",
+      "topic": "Decadência previdenciária",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 103",
+      "article_key": "Art. 103",
+      "segments": [
+        "O prazo de decadência para revisão do ato de concessão de benefício previdenciário é de ",
+        "5 (cinco) anos",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "10 (dez) anos",
+      "explanation": "O caput do art. 103 estabelece prazo decadencial de dez anos para a revisão dos atos nele indicados.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art118-estabilidade",
+      "question_type": "prazo",
+      "topic": "Estabilidade acidentária",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 118",
+      "article_key": "Art. 118",
+      "segments": [
+        "Após a cessação do auxílio-doença acidentário, o contrato de trabalho fica garantido por prazo mínimo de ",
+        "seis meses",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "doze meses",
+      "explanation": "O art. 118 garante a manutenção do contrato de trabalho por, no mínimo, doze meses após a cessação do benefício acidentário.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art13-posse",
+      "question_type": "prazo",
+      "topic": "Posse",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 13, § 1º",
+      "article_key": "Art. 13",
+      "segments": [
+        "A posse em cargo público deve ocorrer no prazo de ",
+        "quinze dias",
+        " contados da publicação do ato de provimento."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "trinta dias",
+      "explanation": "A Lei 8.112/1990 estabelece trinta dias para a posse, contados da publicação do ato de provimento.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art15-exercicio",
+      "question_type": "prazo",
+      "topic": "Exercício",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 15, § 1º",
+      "article_key": "Art. 15",
+      "segments": [
+        "Depois da posse, o servidor tem prazo de ",
+        "trinta dias",
+        " para entrar em exercício."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "quinze dias",
+      "explanation": "O prazo para entrar em exercício é de quinze dias, contados da data da posse.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art108-recurso",
+      "question_type": "prazo",
+      "topic": "Pedido de reconsideração e recurso",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 108",
+      "article_key": "Art. 108",
+      "segments": [
+        "O prazo para pedido de reconsideração ou recurso é de ",
+        "dez dias",
+        ", a contar da publicação ou da ciência da decisão."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "30 (trinta) dias",
+      "explanation": "O art. 108 prevê prazo de trinta dias para pedido de reconsideração ou recurso.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-9784-art24-prazo-geral",
+      "question_type": "prazo",
+      "topic": "Prazos do processo administrativo",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "article": "Art. 24",
+      "article_key": "Art. 24",
+      "segments": [
+        "Quando não houver regra específica, os atos do processo administrativo devem ser praticados no prazo de ",
+        "dez dias",
+        ", salvo motivo de força maior."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "cinco dias",
+      "explanation": "O prazo geral do art. 24 é de cinco dias. Mediante justificação comprovada, ele pode ser dilatado até o dobro.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-9784-art49-decisao",
+      "question_type": "prazo",
+      "topic": "Decisão administrativa",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "article": "Art. 49",
+      "article_key": "Art. 49",
+      "segments": [
+        "Concluída a instrução do processo administrativo, a Administração tem até ",
+        "sessenta dias",
+        " para decidir, salvo prorrogação expressamente motivada."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "trinta dias",
+      "explanation": "O prazo inicial para decidir é de até trinta dias, admitida prorrogação por igual período quando expressamente motivada.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-9784-art59-recurso",
+      "question_type": "prazo",
+      "topic": "Recurso administrativo",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "article": "Art. 59",
+      "article_key": "Art. 59",
+      "segments": [
+        "Salvo disposição legal específica, o recurso administrativo deve ser interposto no prazo de ",
+        "quinze dias",
+        ", contado da ciência ou divulgação oficial da decisão."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "dez dias",
+      "explanation": "O prazo geral para interposição de recurso administrativo é de dez dias.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-bpc-decreto-art20-pagamento",
+      "question_type": "prazo",
+      "topic": "Pagamento do BPC",
+      "category": "Direito Previdenciário",
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto 6.214/2007 — Regulamento do BPC",
+      "article": "Art. 20",
+      "article_key": "Art. 20",
+      "segments": [
+        "Cumpridas todas as exigências para concessão do BPC, o pagamento deve ser efetuado em até ",
+        "trinta dias",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "quarenta e cinco dias",
+      "explanation": "O art. 20 do Regulamento do BPC prevê pagamento em até quarenta e cinco dias após o cumprimento das exigências.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html"
+    },
+    {
+      "id": "err-bpc-decreto-art20-desistencia",
+      "question_type": "prazo",
+      "topic": "Exigências do requerimento do BPC",
+      "category": "Direito Previdenciário",
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto 6.214/2007 — Regulamento do BPC",
+      "article": "Art. 20, § 2º",
+      "article_key": "Art. 20",
+      "segments": [
+        "O não cumprimento da exigência de CPF, CadÚnico ou registro biométrico em até ",
+        "quinze dias",
+        " caracteriza desistência do requerimento."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "trinta dias",
+      "explanation": "O regulamento considera desistência o não cumprimento dessas exigências em até trinta dias.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html"
+    },
+    {
+      "id": "err-loas-art21-revisao",
+      "question_type": "prazo",
+      "topic": "Revisão do BPC",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 21, caput",
+      "article_key": "Art. 21",
+      "segments": [
+        "O Benefício de Prestação Continuada deve ser revisto a cada ",
+        "três anos",
+        " para avaliar a continuidade das condições que lhe deram origem."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "2 (dois) anos",
+      "explanation": "A LOAS prevê revisão do BPC a cada dois anos, ressalvadas as dispensas legais específicas.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art21a-aprendiz",
+      "question_type": "prazo",
+      "topic": "BPC e contrato de aprendizagem",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 21-A, § 2º",
+      "article_key": "Art. 21-A",
+      "segments": [
+        "A pessoa com deficiência pode receber simultaneamente o BPC e a remuneração do contrato de aprendizagem por até ",
+        "um ano",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "2 (dois) anos",
+      "explanation": "A acumulação do BPC com a remuneração do contrato de aprendizagem é limitada a dois anos.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art5-reserva-vagas",
+      "question_type": "percentual",
+      "topic": "Reserva de vagas",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 5º, § 2º",
+      "article_key": "Art. 5",
+      "segments": [
+        "Para pessoas com deficiência, a Lei 8.112/1990 reserva até ",
+        "10% (dez por cento)",
+        " das vagas oferecidas em concurso público."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "até 20% (vinte por cento)",
+      "explanation": "A lei prevê reserva de até vinte por cento das vagas oferecidas no concurso para pessoas com deficiência, observada a compatibilidade das atribuições.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art61-percentual",
+      "question_type": "percentual",
+      "topic": "Renda mensal do auxílio-doença",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 61",
+      "article_key": "Art. 61",
+      "segments": [
+        "O auxílio-doença consiste em renda mensal correspondente a ",
+        "100% (cem por cento)",
+        " do salário-de-benefício."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "91% (noventa e um por cento)",
+      "explanation": "O percentual previsto no art. 61 é de noventa e um por cento do salário-de-benefício.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art86-percentual",
+      "question_type": "percentual",
+      "topic": "Renda mensal do auxílio-acidente",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 86, § 1º",
+      "article_key": "Art. 86",
+      "segments": [
+        "O auxílio-acidente mensal corresponde a ",
+        "100% (cem por cento)",
+        " do salário-de-benefício."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "cinquenta por cento",
+      "explanation": "O § 1º do art. 86 estabelece que o auxílio-acidente corresponde a cinquenta por cento do salário-de-benefício.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art20-renda-fracao",
+      "question_type": "percentual",
+      "topic": "Critério de renda do BPC",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20, § 3º",
+      "article_key": "Art. 20",
+      "segments": [
+        "Para o critério legal de renda do BPC, a renda familiar mensal per capita deve ser igual ou inferior a ",
+        "1/2 (metade)",
+        " do salário-mínimo."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "1/4 (um quarto) do salário-mínimo",
+      "explanation": "O § 3º do art. 20 estabelece o limite legal de um quarto do salário-mínimo por pessoa, observados os demais critérios de elegibilidade.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-lc142-art8-tempo",
+      "question_type": "percentual",
+      "topic": "Cálculo da aposentadoria da pessoa com deficiência",
+      "category": "Direito Previdenciário",
+      "law_id": "lc-142-2013",
+      "law_title": "LC 142/2013 — Previdência da pessoa com deficiência",
+      "article": "Art. 8º, inciso I",
+      "article_key": "Art. 8",
+      "segments": [
+        "Na aposentadoria da pessoa com deficiência por tempo de contribuição, a renda mensal corresponde a ",
+        "70% (setenta por cento)",
+        " do salário de benefício."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "100% (cem por cento)",
+      "explanation": "Para as aposentadorias previstas nos incisos I, II e III do art. 3º da LC 142/2013, o percentual é de cem por cento do salário de benefício.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html"
+    },
+    {
+      "id": "err-lc142-art8-idade-base",
+      "question_type": "percentual",
+      "topic": "Cálculo da aposentadoria por idade",
+      "category": "Direito Previdenciário",
+      "law_id": "lc-142-2013",
+      "law_title": "LC 142/2013 — Previdência da pessoa com deficiência",
+      "article": "Art. 8º, inciso II",
+      "article_key": "Art. 8",
+      "segments": [
+        "Na aposentadoria por idade da pessoa com deficiência, a renda mensal parte de ",
+        "80% (oitenta por cento)",
+        " do salário de benefício, antes do acréscimo por contribuições."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "70% (setenta por cento)",
+      "explanation": "A regra da aposentadoria por idade começa em setenta por cento do salário de benefício, com acréscimo por grupos de doze contribuições.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html"
+    },
+    {
+      "id": "err-lc142-art8-idade-maximo",
+      "question_type": "percentual",
+      "topic": "Limite do acréscimo",
+      "category": "Direito Previdenciário",
+      "law_id": "lc-142-2013",
+      "law_title": "LC 142/2013 — Previdência da pessoa com deficiência",
+      "article": "Art. 8º, inciso II",
+      "article_key": "Art. 8",
+      "segments": [
+        "Na aposentadoria por idade da pessoa com deficiência, o acréscimo por grupos de doze contribuições pode chegar ao máximo de ",
+        "20% (vinte por cento)",
+        " do salário de benefício."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "30% (trinta por cento)",
+      "explanation": "O limite máximo do acréscimo previsto no inciso II é de trinta por cento.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html"
+    },
+    {
+      "id": "err-8213-art25-incapacidade",
+      "question_type": "requisito",
+      "topic": "Carência",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 25, inciso I",
+      "article_key": "Art. 25",
+      "segments": [
+        "A carência para auxílio-doença e aposentadoria por invalidez é de ",
+        "6 (seis) contribuições mensais",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "12 (doze) contribuições mensais",
+      "explanation": "A regra geral do inciso I exige doze contribuições mensais, sem prejuízo das hipóteses legais de dispensa de carência.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art25-reclusao",
+      "question_type": "requisito",
+      "topic": "Carência do auxílio-reclusão",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 25, inciso IV",
+      "article_key": "Art. 25",
+      "segments": [
+        "A carência exigida para o auxílio-reclusão é de ",
+        "12 (doze) contribuições mensais",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "24 (vinte e quatro) contribuições mensais",
+      "explanation": "O inciso IV exige vinte e quatro contribuições mensais para o auxílio-reclusão.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art16-filho",
+      "question_type": "requisito",
+      "topic": "Dependentes",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 16, inciso I",
+      "article_key": "Art. 16",
+      "segments": [
+        "O filho não emancipado integra a primeira classe de dependentes enquanto for ",
+        "menor de 18 (dezoito) anos",
+        ", ressalvadas as hipóteses legais de invalidez ou deficiência."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "menor de 21 (vinte e um) anos",
+      "explanation": "A regra geral inclui o filho não emancipado menor de vinte e um anos, ou inválido ou com as deficiências descritas na lei.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art59-incapacidade",
+      "question_type": "requisito",
+      "topic": "Benefício por incapacidade temporária",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 59, caput",
+      "article_key": "Art. 59",
+      "segments": [
+        "Para o auxílio-doença, a incapacidade para o trabalho ou atividade habitual deve durar por mais de ",
+        "30 (trinta) dias consecutivos",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "15 (quinze) dias consecutivos",
+      "explanation": "O caput do art. 59 exige incapacidade por mais de quinze dias consecutivos, observados os demais requisitos e as hipóteses legais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art20-idade",
+      "question_type": "requisito",
+      "topic": "BPC à pessoa idosa",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20, caput",
+      "article_key": "Art. 20",
+      "segments": [
+        "Para a modalidade do BPC destinada à pessoa idosa, a idade mínima é de ",
+        "60 (sessenta) anos",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "65 (sessenta e cinco) anos ou mais",
+      "explanation": "O caput do art. 20 estabelece a idade de sessenta e cinco anos ou mais para a pessoa idosa.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art20-deficiencia",
+      "question_type": "requisito",
+      "topic": "BPC à pessoa com deficiência",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20, § 2º",
+      "article_key": "Art. 20",
+      "segments": [
+        "A definição de pessoa com deficiência para o BPC exige ",
+        "impedimento de curto prazo",
+        " que, em interação com barreiras, possa obstruir sua participação plena e efetiva na sociedade."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "impedimento de longo prazo",
+      "explanation": "A LOAS exige impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, em interação com uma ou mais barreiras.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-decreto6214-art12-registro",
+      "question_type": "requisito",
+      "topic": "Cadastros e registro biométrico",
+      "category": "Direito Previdenciário",
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto 6.214/2007 — Regulamento do BPC",
+      "article": "Art. 12, caput",
+      "article_key": "Art. 12",
+      "segments": [
+        "Para a concessão e a manutenção do BPC, são exigidas as inscrições no CPF e no CadÚnico, mas fica ",
+        "dispensado o registro biométrico",
+        " em qualquer situação."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "e o registro biométrico",
+      "explanation": "O regulamento inclui o registro biométrico entre os requisitos, observadas as exceções previstas em ato do Poder Executivo federal.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html"
+    },
+    {
+      "id": "err-decreto6214-art12-atualizacao",
+      "question_type": "requisito",
+      "topic": "Atualização do CadÚnico",
+      "category": "Direito Previdenciário",
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto 6.214/2007 — Regulamento do BPC",
+      "article": "Art. 12, § 2º",
+      "article_key": "Art. 12",
+      "segments": [
+        "Para concessão ou manutenção do BPC, o CadÚnico pode estar atualizado há, no máximo, ",
+        "trinta e seis meses",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "vinte e quatro meses",
+      "explanation": "O § 2º exige que as informações do CadÚnico estejam atualizadas há, no máximo, vinte e quatro meses.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html"
+    },
+    {
+      "id": "err-8112-art5-idade",
+      "question_type": "requisito",
+      "topic": "Investidura em cargo público",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 5º, inciso V",
+      "article_key": "Art. 5",
+      "segments": [
+        "Um dos requisitos básicos para investidura em cargo público é ter idade mínima de ",
+        "dezesseis anos",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "dezoito anos",
+      "explanation": "A Lei 8.112/1990 estabelece idade mínima de dezoito anos para investidura em cargo público.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art19-jornada",
+      "question_type": "requisito",
+      "topic": "Jornada de trabalho",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 19, caput",
+      "article_key": "Art. 19",
+      "segments": [
+        "A duração máxima geral do trabalho semanal do servidor público federal é de ",
+        "quarenta e quatro horas",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "quarenta horas",
+      "explanation": "A regra geral do art. 19 é de até quarenta horas semanais, observadas as exceções previstas em leis especiais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-lc142-art3-grave",
+      "question_type": "requisito",
+      "topic": "Aposentadoria da pessoa com deficiência grave",
+      "category": "Direito Previdenciário",
+      "law_id": "lc-142-2013",
+      "law_title": "LC 142/2013 — Previdência da pessoa com deficiência",
+      "article": "Art. 3º, inciso I",
+      "article_key": "Art. 3",
+      "segments": [
+        "Na aposentadoria da pessoa com deficiência grave por tempo de contribuição, exige-se do homem ",
+        "20 (vinte) anos",
+        " de contribuição."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "25 (vinte e cinco) anos",
+      "explanation": "Para o segurado homem com deficiência grave, a LC 142/2013 exige vinte e cinco anos de tempo de contribuição.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html"
+    },
+    {
+      "id": "err-lc142-art3-idade",
+      "question_type": "requisito",
+      "topic": "Aposentadoria por idade da pessoa com deficiência",
+      "category": "Direito Previdenciário",
+      "law_id": "lc-142-2013",
+      "law_title": "LC 142/2013 — Previdência da pessoa com deficiência",
+      "article": "Art. 3º, inciso IV",
+      "article_key": "Art. 3",
+      "segments": [
+        "Na aposentadoria por idade da pessoa com deficiência, a idade mínima para o homem é de ",
+        "65 (sessenta e cinco) anos",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "60 (sessenta) anos de idade",
+      "explanation": "A LC 142/2013 prevê sessenta anos para o homem e cinquenta e cinco anos para a mulher, além dos requisitos de contribuição e deficiência.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html"
+    },
+    {
+      "id": "err-8213-art26-carencia",
+      "question_type": "excecao",
+      "topic": "Dispensa de carência",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 26, inciso I",
+      "article_key": "Art. 26",
+      "segments": [
+        "A pensão por morte, o salário-família e o auxílio-acidente ",
+        "dependem de carência",
+        " para sua concessão."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "Independe de carência",
+      "explanation": "O inciso I do art. 26 determina que essas três prestações independem de carência.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art42-doenca-preexistente",
+      "question_type": "excecao",
+      "topic": "Doença preexistente",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 42, § 2º",
+      "article_key": "Art. 42",
+      "segments": [
+        "A doença ou lesão que o segurado já possuía ao se filiar ao RGPS não gera direito à aposentadoria por incapacidade, ",
+        "mesmo se a incapacidade decorrer de progressão ou agravamento",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "salvo quando a incapacidade sobrevier por motivo de progressão ou agravamento dessa doença ou lesão",
+      "explanation": "A doença ou lesão preexistente não impede o benefício quando a incapacidade surge por progressão ou agravamento, conforme a exceção do § 2º.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art59-doenca-preexistente",
+      "question_type": "excecao",
+      "topic": "Doença preexistente",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 59, § 1º",
+      "article_key": "Art. 59",
+      "segments": [
+        "O auxílio-doença não é devido ao segurado que já se filia ao RGPS com a doença ou lesão invocada, ",
+        "mesmo quando a incapacidade resulta de progressão ou agravamento",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "exceto quando a incapacidade sobrevier por motivo de progressão ou agravamento da doença ou da lesão",
+      "explanation": "O § 1º ressalva a hipótese em que a incapacidade aparece por progressão ou agravamento da doença ou lesão preexistente.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8213-art15-auxilioacidente",
+      "question_type": "excecao",
+      "topic": "Período de graça e exceções",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "article": "Art. 15, inciso I",
+      "article_key": "Art. 15",
+      "segments": [
+        "Quem está em gozo de benefício mantém a qualidade de segurado sem limite de prazo, ",
+        "inclusive quando recebe auxílio-acidente",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "exceto do auxílio-acidente",
+      "explanation": "O inciso I do art. 15 exclui expressamente o auxílio-acidente da regra de manutenção da qualidade de segurado sem limite de prazo.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-8112-art117-procuracao",
+      "question_type": "excecao",
+      "topic": "Proibições e exceções",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "article": "Art. 117, inciso XI",
+      "article_key": "Art. 117",
+      "segments": [
+        "A Lei 8.112/1990 proíbe o servidor de atuar como procurador ou intermediário perante repartições públicas, ",
+        "sem prever exceção para benefícios de familiares",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "salvo quando se tratar de benefícios previdenciários ou assistenciais de parentes até o segundo grau, e de cônjuge ou companheiro",
+      "explanation": "O inciso XI traz uma exceção expressa para benefícios previdenciários ou assistenciais de parentes até o segundo grau, além de cônjuge ou companheiro.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art20-acumulacao",
+      "question_type": "excecao",
+      "topic": "Acumulação do BPC",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 20, § 4º",
+      "article_key": "Art. 20",
+      "segments": [
+        "A LOAS proíbe a acumulação do BPC com qualquer outro benefício no âmbito da seguridade social ou de outro regime, ",
+        "sem admitir qualquer exceção",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "salvo os da assistência médica e da pensão especial de natureza indenizatória",
+      "explanation": "A regra geral proíbe a acumulação, mas o § 4º prevê exceções expressas. O texto legal também contempla as transferências de renda que indica.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-loas-art21-pericia",
+      "question_type": "excecao",
+      "topic": "Dispensa de avaliação periódica",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "article": "Art. 21, § 5º",
+      "article_key": "Art. 21",
+      "segments": [
+        "O beneficiário do BPC com impedimento permanente, irreversível ou irrecuperável deve passar por avaliação médico-pericial periódica, ",
+        "mesmo quando não houver suspeita fundamentada de fraude ou erro",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "é dispensado de avaliação médico-pericial periódica",
+      "explanation": "A LOAS dispensa a avaliação médico-pericial periódica nessa hipótese, salvo quando houver fundamentada suspeita de fraude ou erro.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html"
+    },
+    {
+      "id": "err-decreto6214-art5-aprendiz",
+      "question_type": "excecao",
+      "topic": "Acumulação do BPC com aprendizagem",
+      "category": "Direito Previdenciário",
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto 6.214/2007 — Regulamento do BPC",
+      "article": "Art. 5º, parágrafo único",
+      "article_key": "Art. 5",
+      "segments": [
+        "A acumulação do BPC com a remuneração de contrato de aprendizagem pela pessoa com deficiência é limitada ao prazo máximo de ",
+        "um ano",
+        "."
+      ],
+      "wrong_segment_index": 1,
+      "correct_phrase": "dois anos",
+      "explanation": "O regulamento excepciona a regra geral de não acumulação e permite a concomitância com a remuneração do contrato de aprendizagem por até dois anos.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html"
     }
   ]
 }
