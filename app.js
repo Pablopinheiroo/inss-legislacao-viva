@@ -785,7 +785,7 @@ function renderLegalComponents(components, article) {
       const jump = document.createElement("button");
       jump.type = "button";
       jump.className = "law-device-jump";
-      jump.style.setProperty("--device-depth", String(Math.max(0, depth - 1)));
+      jump.style.marginLeft = (Math.max(0, depth - 1) * (window.innerWidth <= 760 ? 8 : 12)) + "px";
       jump.textContent = label;
       jump.title = "Ir para " + nextLabels.join(" › ");
       jump.setAttribute("aria-label", "Ir para " + nextLabels.join(", "));
@@ -827,6 +827,7 @@ function searchLegalArticles() {
   const rawQuery = ($("#law-article-search").value || "").trim();
   const query = normalizeAnswer(rawQuery);
   const articleQuery = parseLegalArticleQuery(rawQuery);
+  const explicitArticleQuery = /^(?:artigo|art)\\b/i.test(rawQuery);
   const resultsBox = $("#law-search-results");
   resultsBox.replaceChildren();
   if (!legalEntries.length || (!articleQuery && query.length < 2)) {
@@ -834,14 +835,18 @@ function searchLegalArticles() {
     return;
   }
 
-  const results = articleQuery
+  const exactArticleResults = articleQuery
     ? legalEntries.filter(([article]) => legalArticleMatchesQuery(article, articleQuery))
+    : [];
+  const searchByArticle = Boolean(articleQuery && (explicitArticleQuery || exactArticleResults.length));
+  const results = searchByArticle
+    ? exactArticleResults
     : legalEntries.filter(([_, text]) => normalizeAnswer(text).includes(query)).slice(0, 35);
 
   if (!results.length) {
     const empty = document.createElement("p");
     empty.className = "law-search-empty";
-    empty.textContent = articleQuery
+    empty.textContent = searchByArticle
       ? "O Art. " + articleQuery.number + (articleQuery.suffix ? "-" + articleQuery.suffix : "")
         + " não está disponível nesta captura ou não faz parte do recorte salvo."
       : "Nenhum trecho encontrado nesta norma.";
@@ -849,7 +854,7 @@ function searchLegalArticles() {
   } else {
     const header = document.createElement("p");
     header.className = "law-search-heading";
-    header.textContent = articleQuery
+    header.textContent = searchByArticle
       ? "Artigo localizado"
       : results.length + (results.length === 35 ? "+ resultados" : " resultado(s)");
     resultsBox.append(header);
@@ -861,12 +866,12 @@ function searchLegalArticles() {
       label.textContent = article;
       const snippet = document.createElement("span");
       let start = 0;
-      if (!articleQuery) {
+      if (!searchByArticle) {
         const rawLower = rawQuery.toLocaleLowerCase("pt-BR");
         const position = text.toLocaleLowerCase("pt-BR").indexOf(rawLower);
         start = position >= 0 ? Math.max(0, position - 65) : 0;
       }
-      snippet.textContent = text.slice(start, start + 230).replace(/\s+/g, " ")
+      snippet.textContent = text.slice(start, start + 230).replace(/\\s+/g, " ")
         + (text.length > start + 230 ? "…" : "");
       button.append(label, snippet);
       button.addEventListener("click", () => {

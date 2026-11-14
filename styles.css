@@ -450,7 +450,7 @@
 .law-components-actions>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .law-components-actions button{padding:4px 0;font-size:10px}
 .law-device-navigation{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px;padding:10px;border:1px solid #e7edf6;border-radius:10px;background:#f8faff}
-.law-device-jump{max-width:100%;min-width:0;padding:7px 10px 7px calc(10px + var(--device-depth,0)*12px);border:1px solid #dce5f2;border-radius:8px;background:#fff;color:#38548d;font-size:10px;font-weight:700;text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.law-device-jump{max-width:100%;min-width:0;padding:7px 10px;border:1px solid #dce5f2;border-radius:8px;background:#fff;color:#38548d;font-size:10px;font-weight:700;text-align:left;cursor:pointer;overflow-wrap:anywhere}
 .law-device-jump:hover{border-color:#8fa9dd;background:#f5f8ff}
 .law-component-node{min-width:0;border:1px solid #e7ebf1;border-radius:10px;background:#fff;scroll-margin-top:88px}
 .law-component-node>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:42px;padding:10px 12px;color:#40516d;font-size:12px;font-weight:750;cursor:pointer;list-style-position:inside}
@@ -469,7 +469,7 @@
   .law-components-actions{align-items:flex-start;flex-direction:column;gap:7px}
   .law-components-actions>div{width:100%;justify-content:space-between}
   .law-device-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:8px}
-  .law-device-jump{min-height:38px;padding:7px 8px 7px calc(8px + var(--device-depth,0)*8px);font-size:10px}
+  .law-device-jump{min-height:38px;padding:7px 8px;font-size:10px}
   .law-component-node>summary{min-height:44px;padding:11px 10px;font-size:12px}
   .law-component-body{padding:9px 10px 11px}
   .law-component-body>pre{font-size:13px;line-height:1.8}
