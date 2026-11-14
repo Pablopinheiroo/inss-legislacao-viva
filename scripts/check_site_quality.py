@@ -105,12 +105,21 @@ def main() -> int:
         errors.append("O painel do monitoramento não corresponde ao catálogo de normas.")
 
     for law_id, snapshot in snapshots.items():
-        articles = snapshot.get("articles")
-        if not isinstance(articles, dict) or not articles:
-            errors.append(f"{law_id}: captura sem artigos.")
-            continue
-        if snapshot.get("article_count") != len(articles):
-            errors.append(f"{law_id}: quantidade declarada de artigos não confere.")
+        mode = snapshot.get("parser_mode")
+        if mode == "index":
+            # Este cadastro acompanha um índice oficial de atos modificadores;
+            # não pretende guardar o texto artigo por artigo.
+            if not str(snapshot.get("document_text") or "").strip():
+                errors.append(f"{law_id}: índice oficial sem texto de referência.")
+            if snapshot.get("article_count") != 0:
+                errors.append(f"{law_id}: índice oficial declara quantidade de artigos inesperada.")
+        else:
+            articles = snapshot.get("articles")
+            if not isinstance(articles, dict) or not articles:
+                errors.append(f"{law_id}: captura sem artigos.")
+                continue
+            if snapshot.get("article_count") != len(articles):
+                errors.append(f"{law_id}: quantidade declarada de artigos não confere.")
         if not is_official(snapshot.get("source_url_used", "")):
             errors.append(f"{law_id}: URL da captura não é HTTPS em domínio oficial.")
 
