@@ -327,11 +327,27 @@
       <div class="cloze-config">
         <label class="select-wrap"><span>Norma</span><select id="cloze-law"><option value="">Carregando normas...</option></select></label>
         <label class="select-wrap"><span>Artigo</span><select id="cloze-article" disabled><option value="aleatorio">Artigo aleatório</option></select></label>
-        <label class="select-wrap"><span>Dificuldade</span><select id="cloze-difficulty"><option value="facil">Fácil · 4 lacunas</option><option value="medio" selected>Médio · 7 lacunas</option><option value="dificil">Difícil · 10 lacunas</option></select></label>
+        <label class="select-wrap"><span>Conteúdo</span><select id="cloze-content-type"><option value="artigo">Artigo completo</option><option value="inciso">Somente incisos</option><option value="paragrafo">Somente parágrafos</option></select></label>
+        <label id="cloze-device-control" class="select-wrap" hidden><span>Dispositivo</span><select id="cloze-device" disabled><option value="aleatorio">Qualquer dispositivo</option></select></label>
+        <label class="select-wrap"><span>Dificuldade</span><select id="cloze-difficulty"><option value="facil">Fácil · 4 palavras importantes + pistas</option><option value="medio" selected>Médio · 7 lacunas sem pistas</option><option value="dificil">Difícil · trechos inteiros ocultados</option></select></label>
         <button id="start-cloze" class="primary-button" type="button" disabled>Começar</button>
       </div>
     </section>
 
+    <section id="cloze-review-center" class="cloze-review-center" aria-label="Central de revisão de erros da Lei Seca">
+      <div class="cloze-review-copy">
+        <span class="eyebrow">REVISÃO DOS ERROS</span><h2>Seus erros da Lei Seca</h2>
+        <p id="cloze-review-note">Os trechos respondidos incorretamente serão guardados aqui para revisão posterior.</p>
+      </div>
+      <div class="cloze-review-actions">
+        <div class="cloze-review-metrics">
+          <div><strong id="cloze-review-due">0</strong><span>prontos para revisar</span></div>
+          <div><strong id="cloze-review-pending">0</strong><span>em acompanhamento</span></div>
+          <div><strong id="cloze-review-mastered">0</strong><span>já dominados</span></div>
+        </div>
+        <button id="cloze-review-start" class="primary-button" type="button" disabled>Revisar erros</button>
+      </div>
+    </section>
     <p id="cloze-note" class="manual-check-note">As lacunas são geradas a partir dos textos salvos pelo monitor. A Constituição usa apenas os artigos selecionados para o edital.</p>
 
     <section id="cloze-card" class="cloze-card hidden" aria-live="polite">
@@ -344,9 +360,14 @@
       </div>
       <p id="cloze-feedback" class="cloze-feedback hidden"></p>
       <details id="cloze-original" class="law-excerpt cloze-original">
-        <summary>Mostrar texto completo do artigo</summary>
+        <summary>Mostrar texto original para conferência</summary>
         <pre id="cloze-original-text"></pre>
       </details>
+      <p id="cloze-selection-help" class="cloze-selection-help">Para treinar um trecho específico, abra o texto original, selecione a passagem com o mouse ou toque prolongado e use o botão abaixo.</p>
+      <div id="cloze-selection-toolbar" class="cloze-selection-toolbar hidden" aria-live="polite">
+        <div><strong>Trecho selecionado</strong><p id="cloze-selection-preview"></p></div>
+        <button id="cloze-train-selection" class="secondary-button" type="button">Treinar somente este trecho</button>
+      </div>
       <div class="feedback-bottom"><a id="cloze-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><span id="cloze-progress" class="quiz-progress"></span></div>
     </section>
 
