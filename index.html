@@ -25,6 +25,7 @@
     <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
     <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
     <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
+    <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
   </nav>
 
   <main id="radar-view" class="page-shell">
@@ -147,6 +148,61 @@
     </section>
 
     <footer class="footer-note"><strong>Texto legal em primeiro lugar.</strong><span>Os artigos são carregados das capturas oficiais salvas pelo monitor. Quando uma fonte falha ou não pode ser separada com segurança, ela não é oferecida neste modo.</span></footer>
+  </main>
+
+
+  <main id="find-error-view" class="page-shell hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">MODO DE JOGO · ATENÇÃO À LEI SECA</p>
+        <h1>Encontre o erro</h1>
+        <p class="subtitle">O enunciado contém uma expressão alterada. Toque no trecho que não corresponde à legislação.</p>
+      </div>
+      <div class="quiz-config error-config">
+        <label class="select-wrap"><span>Matéria</span><select id="error-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Questões</span><select id="error-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
+        <button id="start-error" class="primary-button" type="button" disabled>Começar jogo</button>
+      </div>
+    </section>
+
+    <p id="error-count-note" class="manual-check-note">Carregando itens e conferindo as expressões corretas nos textos da legislação...</p>
+
+    <section id="error-card" class="quiz-card hidden" aria-live="polite">
+      <div class="quiz-card-top"><span id="error-category-label" class="quiz-chip"></span><span id="error-progress" class="quiz-progress"></span></div>
+      <div class="quiz-law-line"><strong id="error-law"></strong><span id="error-article"></span></div>
+      <p class="error-instruction">Toque na expressão que está errada. Cada questão tem apenas um trecho incorreto.</p>
+      <div id="error-statement" class="error-statement" role="group" aria-label="Enunciado dividido em trechos selecionáveis"></div>
+      <p id="error-attempt-feedback" class="error-attempt-feedback" aria-live="polite">Escolha um trecho para conferir.</p>
+
+      <section id="error-solution" class="answer-feedback hidden">
+        <div id="error-result" class="feedback-result"></div>
+        <p id="error-correction" class="feedback-explanation"></p>
+        <p id="error-explanation" class="feedback-explanation"></p>
+        <details class="law-excerpt">
+          <summary>Conferir o texto literal da legislação</summary>
+          <pre id="error-literal"></pre>
+        </details>
+        <div class="feedback-bottom"><a id="error-source" target="_blank" rel="noopener noreferrer">Consultar fonte oficial ↗</a><button id="next-error-question" class="primary-button" type="button">Próxima questão →</button></div>
+      </section>
+    </section>
+
+    <section id="error-welcome" class="empty-state quiz-welcome">
+      <h3>Treine sua atenção aos detalhes</h3>
+      <p>Leia o enunciado e toque na expressão alterada. Ao encontrar o erro, veja a correção, a explicação e o dispositivo legal usado como referência.</p>
+    </section>
+
+    <section id="error-summary" class="quiz-summary hidden">
+      <p class="eyebrow">RESULTADO DO JOGO</p>
+      <h2 id="error-score"></h2>
+      <p id="error-score-note"></p>
+      <div id="error-mistakes" class="quiz-mistakes"></div>
+      <div class="summary-actions">
+        <button id="error-retry-misses" class="secondary-button hidden" type="button">Repetir as que exigiram mais tentativas</button>
+        <button id="restart-error" class="primary-button" type="button">Novo jogo ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Proteção contra questões desatualizadas.</strong><span>Antes de liberar cada item, o site confere se a expressão correta ainda aparece no artigo salvo pelo monitor. Se a redação mudar e a correção não for encontrada, o item fica suspenso até revisão.</span></footer>
   </main>
 
   <div id="notification-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
