@@ -843,6 +843,963 @@
         }
       ],
       "explanation": "O art. 8º enumera as formas de provimento de cargo público. Algumas formas anteriormente previstas aparecem como revogadas na redação atual."
+    },
+    {
+      "id": "desc-8213-13",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo trata da filiação do segurado facultativo ao RGPS mediante contribuição?",
+      "answer_article_key": "Art. 13",
+      "validation_phrase": "segurado facultativo o maior de 14 (quatorze) anos que se filiar ao Regime Geral de Previdência Social",
+      "options": [
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        },
+        {
+          "article_key": "Art. 13",
+          "label": "Art. 13º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        }
+      ],
+      "explanation": "O art. 13 trata do segurado facultativo e de sua filiação mediante contribuição, desde que não esteja incluído nas categorias obrigatórias do art. 11."
+    },
+    {
+      "id": "desc-8213-15",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo disciplina a manutenção da qualidade de segurado mesmo sem recolhimento de contribuições, estabelecendo os períodos de graça?",
+      "answer_article_key": "Art. 15",
+      "validation_phrase": "mantém a qualidade de segurado independentemente de contribuições",
+      "options": [
+        {
+          "article_key": "Art. 13",
+          "label": "Art. 13º"
+        },
+        {
+          "article_key": "Art. 14",
+          "label": "Art. 14º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        },
+        {
+          "article_key": "Art. 16",
+          "label": "Art. 16º"
+        }
+      ],
+      "explanation": "O art. 15 define as hipóteses e os prazos em que a pessoa mantém a qualidade de segurado independentemente de contribuições."
+    },
+    {
+      "id": "desc-8213-16",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo lista as pessoas que podem ser dependentes do segurado no RGPS?",
+      "answer_article_key": "Art. 16",
+      "validation_phrase": "são beneficiários do Regime Geral de Previdência Social, na condição de dependentes do segurado",
+      "options": [
+        {
+          "article_key": "Art. 14",
+          "label": "Art. 14º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        },
+        {
+          "article_key": "Art. 16",
+          "label": "Art. 16º"
+        },
+        {
+          "article_key": "Art. 18",
+          "label": "Art. 18º"
+        }
+      ],
+      "explanation": "O art. 16 apresenta as classes de dependentes do segurado e as regras relacionadas à dependência econômica."
+    },
+    {
+      "id": "desc-8213-25",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo reúne os períodos de carência exigidos para a concessão de prestações pecuniárias do RGPS?",
+      "answer_article_key": "Art. 25",
+      "validation_phrase": "a concessão das prestações pecuniárias do Regime Geral de Previdência Social depende dos seguintes períodos de carência",
+      "options": [
+        {
+          "article_key": "Art. 24",
+          "label": "Art. 24º"
+        },
+        {
+          "article_key": "Art. 25",
+          "label": "Art. 25º"
+        },
+        {
+          "article_key": "Art. 26",
+          "label": "Art. 26º"
+        },
+        {
+          "article_key": "Art. 27",
+          "label": "Art. 27º"
+        }
+      ],
+      "explanation": "O art. 25 estabelece os períodos de carência para as prestações que enumera, ressalvado o disposto no art. 26."
+    },
+    {
+      "id": "desc-8213-26",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo enumera prestações cuja concessão independe de carência?",
+      "answer_article_key": "Art. 26",
+      "validation_phrase": "independe de carência a concessão das seguintes prestações",
+      "options": [
+        {
+          "article_key": "Art. 25",
+          "label": "Art. 25º"
+        },
+        {
+          "article_key": "Art. 26",
+          "label": "Art. 26º"
+        },
+        {
+          "article_key": "Art. 27",
+          "label": "Art. 27º"
+        },
+        {
+          "article_key": "Art. 28",
+          "label": "Art. 28º"
+        }
+      ],
+      "explanation": "O art. 26 apresenta as hipóteses de benefícios e serviços que independem de carência."
+    },
+    {
+      "id": "desc-8213-42",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo define a incapacidade e a impossibilidade de reabilitação para atividade que garanta a subsistência como requisitos do benefício por incapacidade permanente?",
+      "answer_article_key": "Art. 42",
+      "validation_phrase": "for considerado incapaz e insusceptível de reabilitação para o exercício de atividade que lhe garanta a subsistência",
+      "options": [
+        {
+          "article_key": "Art. 41",
+          "label": "Art. 41º"
+        },
+        {
+          "article_key": "Art. 42",
+          "label": "Art. 42º"
+        },
+        {
+          "article_key": "Art. 43",
+          "label": "Art. 43º"
+        },
+        {
+          "article_key": "Art. 44",
+          "label": "Art. 44º"
+        }
+      ],
+      "explanation": "O art. 42 disciplina a aposentadoria por incapacidade permanente, usando na redação legal capturada a denominação histórica “aposentadoria por invalidez”."
+    },
+    {
+      "id": "desc-8213-59",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo trata da incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos?",
+      "answer_article_key": "Art. 59",
+      "validation_phrase": "ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de 15 (quinze) dias consecutivos",
+      "options": [
+        {
+          "article_key": "Art. 57",
+          "label": "Art. 57º"
+        },
+        {
+          "article_key": "Art. 58",
+          "label": "Art. 58º"
+        },
+        {
+          "article_key": "Art. 59",
+          "label": "Art. 59º"
+        },
+        {
+          "article_key": "Art. 60",
+          "label": "Art. 60º"
+        }
+      ],
+      "explanation": "O art. 59 trata do benefício por incapacidade temporária e exige incapacidade para o trabalho ou atividade habitual por mais de 15 dias consecutivos, quando for o caso."
+    },
+    {
+      "id": "desc-8213-74",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo estabelece os termos iniciais da pensão por morte, considerando a data do óbito, do requerimento ou da decisão judicial?",
+      "answer_article_key": "Art. 74",
+      "validation_phrase": "a pensão por morte será devida ao conjunto dos dependentes do segurado que falecer, aposentado ou não, a contar da data",
+      "options": [
+        {
+          "article_key": "Art. 71",
+          "label": "Art. 71º"
+        },
+        {
+          "article_key": "Art. 72",
+          "label": "Art. 72º"
+        },
+        {
+          "article_key": "Art. 74",
+          "label": "Art. 74º"
+        },
+        {
+          "article_key": "Art. 75",
+          "label": "Art. 75º"
+        }
+      ],
+      "explanation": "O art. 74 define quando a pensão por morte começa a ser devida, conforme o momento do requerimento e a hipótese de morte presumida."
+    },
+    {
+      "id": "desc-8213-86",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo disciplina o auxílio-acidente como indenização quando, após a consolidação das lesões, há redução da capacidade para o trabalho habitual?",
+      "answer_article_key": "Art. 86",
+      "validation_phrase": "o auxílio-acidente será concedido, como indenização, ao segurado",
+      "options": [
+        {
+          "article_key": "Art. 85",
+          "label": "Art. 85º"
+        },
+        {
+          "article_key": "Art. 86",
+          "label": "Art. 86º"
+        },
+        {
+          "article_key": "Art. 87",
+          "label": "Art. 87º"
+        },
+        {
+          "article_key": "Art. 88",
+          "label": "Art. 88º"
+        }
+      ],
+      "explanation": "O art. 86 trata do auxílio-acidente e exige sequela consolidada que implique redução da capacidade para o trabalho habitualmente exercido."
+    },
+    {
+      "id": "desc-8213-101",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "question": "Qual artigo prevê a obrigação do beneficiário de se submeter a exame médico, reabilitação profissional e tratamento, sob pena de suspensão?",
+      "answer_article_key": "Art. 101",
+      "validation_phrase": "estão obrigados, sob pena de suspensão do benefício, a submeter-se a",
+      "options": [
+        {
+          "article_key": "Art. 100",
+          "label": "Art. 100º"
+        },
+        {
+          "article_key": "Art. 101",
+          "label": "Art. 101º"
+        },
+        {
+          "article_key": "Art. 102",
+          "label": "Art. 102º"
+        },
+        {
+          "article_key": "Art. 103",
+          "label": "Art. 103º"
+        }
+      ],
+      "explanation": "O art. 101 reúne obrigações relacionadas à avaliação médica, à reabilitação profissional e ao tratamento gratuito, com as exceções legais."
+    },
+    {
+      "id": "desc-8212-12",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo relaciona as pessoas físicas que são seguradas obrigatórias da Previdência Social?",
+      "answer_article_key": "Art. 12",
+      "validation_phrase": "são segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
+      "options": [
+        {
+          "article_key": "Art. 10",
+          "label": "Art. 10º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        },
+        {
+          "article_key": "Art. 13",
+          "label": "Art. 13º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        }
+      ],
+      "explanation": "O art. 12 da Lei 8.212/1991 enumera as categorias de segurados obrigatórios, como empregado, empregado doméstico, contribuinte individual, trabalhador avulso e segurado especial."
+    },
+    {
+      "id": "desc-8212-15",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo define o conceito previdenciário de empresa, abrangendo firma individual ou sociedade com ou sem fins lucrativos?",
+      "answer_article_key": "Art. 15",
+      "validation_phrase": "empresa - a firma individual ou sociedade que assume o risco de atividade econômica urbana ou rural, com fins lucrativos ou não",
+      "options": [
+        {
+          "article_key": "Art. 14",
+          "label": "Art. 14º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        },
+        {
+          "article_key": "Art. 16",
+          "label": "Art. 16º"
+        },
+        {
+          "article_key": "Art. 17",
+          "label": "Art. 17º"
+        }
+      ],
+      "explanation": "O art. 15 define empresa para os efeitos da Lei 8.212/1991 e também define empregador doméstico; o inciso I expressamente admite finalidade lucrativa ou não."
+    },
+    {
+      "id": "desc-8212-28",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo define o salário-de-contribuição para as diferentes categorias de segurados?",
+      "answer_article_key": "Art. 28",
+      "validation_phrase": "entende-se por salário-de-contribuição",
+      "options": [
+        {
+          "article_key": "Art. 27",
+          "label": "Art. 27º"
+        },
+        {
+          "article_key": "Art. 28",
+          "label": "Art. 28º"
+        },
+        {
+          "article_key": "Art. 29",
+          "label": "Art. 29º"
+        },
+        {
+          "article_key": "Art. 30",
+          "label": "Art. 30º"
+        }
+      ],
+      "explanation": "O art. 28 apresenta o conceito de salário-de-contribuição e suas regras para empregado, trabalhador avulso, empregado doméstico, contribuinte individual e segurado facultativo."
+    },
+    {
+      "id": "desc-8212-30",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "question": "Qual artigo reúne normas sobre arrecadação e recolhimento das contribuições devidas à Seguridade Social?",
+      "answer_article_key": "Art. 30",
+      "validation_phrase": "a arrecadação e o recolhimento das contribuições ou de outras importâncias devidas à Seguridade Social obedecem às seguintes normas",
+      "options": [
+        {
+          "article_key": "Art. 28",
+          "label": "Art. 28º"
+        },
+        {
+          "article_key": "Art. 29",
+          "label": "Art. 29º"
+        },
+        {
+          "article_key": "Art. 30",
+          "label": "Art. 30º"
+        },
+        {
+          "article_key": "Art. 31",
+          "label": "Art. 31º"
+        }
+      ],
+      "explanation": "O art. 30 trata das obrigações de arrecadação e recolhimento, incluindo responsabilidades da empresa e prazos previstos em lei."
+    },
+    {
+      "id": "desc-loas-06",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo organiza a gestão das ações de assistência social sob a forma do Sistema Único de Assistência Social (SUAS)?",
+      "answer_article_key": "Art. 6",
+      "validation_phrase": "a gestão das ações na área de assistência social fica organizada sob a forma de sistema descentralizado e participativo, denominado Sistema Único de Assistência Social",
+      "options": [
+        {
+          "article_key": "Art. 5",
+          "label": "Art. 5º"
+        },
+        {
+          "article_key": "Art. 6",
+          "label": "Art. 6º"
+        },
+        {
+          "article_key": "Art. 6-A",
+          "label": "Art. 6-A"
+        },
+        {
+          "article_key": "Art. 7",
+          "label": "Art. 7º"
+        }
+      ],
+      "explanation": "O art. 6º da LOAS organiza a gestão da assistência social sob a forma descentralizada e participativa do SUAS."
+    },
+    {
+      "id": "desc-loas-21",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo determina que o BPC seja revisto periodicamente para avaliar a continuidade das condições que deram origem à concessão?",
+      "answer_article_key": "Art. 21",
+      "validation_phrase": "o benefício de prestação continuada deve ser revisto a cada 2 (dois) anos para avaliação da continuidade das condições que lhe deram origem",
+      "options": [
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        },
+        {
+          "article_key": "Art. 21",
+          "label": "Art. 21º"
+        },
+        {
+          "article_key": "Art. 21-A",
+          "label": "Art. 21-A"
+        },
+        {
+          "article_key": "Art. 22",
+          "label": "Art. 22º"
+        }
+      ],
+      "explanation": "O art. 21 prevê revisão do BPC a cada dois anos e disciplina hipóteses de cessação ou cancelamento, sem afastar as exceções legais."
+    },
+    {
+      "id": "desc-loas-21a",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo prevê a suspensão do BPC quando a pessoa com deficiência exerce atividade remunerada, inclusive como MEI?",
+      "answer_article_key": "Art. 21-A",
+      "validation_phrase": "o benefício de prestação continuada será suspenso pelo órgão concedente quando a pessoa com deficiência exercer atividade remunerada, inclusive na condição de microempreendedor individual",
+      "options": [
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        },
+        {
+          "article_key": "Art. 21",
+          "label": "Art. 21º"
+        },
+        {
+          "article_key": "Art. 21-A",
+          "label": "Art. 21-A"
+        },
+        {
+          "article_key": "Art. 21-B",
+          "label": "Art. 21-B"
+        }
+      ],
+      "explanation": "O art. 21-A disciplina a suspensão do BPC durante o exercício de atividade remunerada e as condições para requerer a continuidade do pagamento após o encerramento da atividade."
+    },
+    {
+      "id": "desc-loas-21b",
+      "category": "Direito Previdenciário",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "question": "Qual artigo estabelece os prazos para regularização do CadÚnico por beneficiários do BPC que não estejam inscritos ou estejam com cadastro desatualizado?",
+      "answer_article_key": "Art. 21-B",
+      "validation_phrase": "os beneficiários do benefício de prestação continuada, quando não estiverem inscritos no CadÚnico ou quando estiverem com o cadastro desatualizado há mais de 24 (vinte e quatro) meses",
+      "options": [
+        {
+          "article_key": "Art. 21",
+          "label": "Art. 21º"
+        },
+        {
+          "article_key": "Art. 21-A",
+          "label": "Art. 21-A"
+        },
+        {
+          "article_key": "Art. 21-B",
+          "label": "Art. 21-B"
+        },
+        {
+          "article_key": "Art. 22",
+          "label": "Art. 22º"
+        }
+      ],
+      "explanation": "O art. 21-B estabelece prazos de regularização do CadÚnico contados da efetiva notificação, que variam conforme o porte do município."
+    },
+    {
+      "id": "desc-9784-18",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo aponta situações em que o servidor ou a autoridade fica impedido de atuar em um processo administrativo?",
+      "answer_article_key": "Art. 18",
+      "validation_phrase": "é impedido de atuar em processo administrativo o servidor ou autoridade que",
+      "options": [
+        {
+          "article_key": "Art. 17",
+          "label": "Art. 17º"
+        },
+        {
+          "article_key": "Art. 18",
+          "label": "Art. 18º"
+        },
+        {
+          "article_key": "Art. 19",
+          "label": "Art. 19º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        }
+      ],
+      "explanation": "O art. 18 lista situações de impedimento, como interesse direto ou indireto na matéria e participação em certas condições no processo."
+    },
+    {
+      "id": "desc-9784-24",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Na falta de prazo específico, qual artigo estabelece o prazo geral de cinco dias para a prática de atos no processo administrativo, admitindo dilatação justificada?",
+      "answer_article_key": "Art. 24",
+      "validation_phrase": "inexistindo disposição específica, os atos do órgão ou autoridade responsável pelo processo e dos administrados que dele participem devem ser praticados no prazo de cinco dias",
+      "options": [
+        {
+          "article_key": "Art. 23",
+          "label": "Art. 23º"
+        },
+        {
+          "article_key": "Art. 24",
+          "label": "Art. 24º"
+        },
+        {
+          "article_key": "Art. 25",
+          "label": "Art. 25º"
+        },
+        {
+          "article_key": "Art. 26",
+          "label": "Art. 26º"
+        }
+      ],
+      "explanation": "O art. 24 fixa prazo geral de cinco dias quando não houver disposição específica e permite dilatação até o dobro mediante justificação comprovada."
+    },
+    {
+      "id": "desc-9784-26",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo trata da intimação do interessado e exige antecedência mínima de três dias úteis para a data de comparecimento?",
+      "answer_article_key": "Art. 26",
+      "validation_phrase": "a intimação observará a antecedência mínima de três dias úteis quanto à data de comparecimento",
+      "options": [
+        {
+          "article_key": "Art. 24",
+          "label": "Art. 24º"
+        },
+        {
+          "article_key": "Art. 25",
+          "label": "Art. 25º"
+        },
+        {
+          "article_key": "Art. 26",
+          "label": "Art. 26º"
+        },
+        {
+          "article_key": "Art. 27",
+          "label": "Art. 27º"
+        }
+      ],
+      "explanation": "O art. 26 disciplina a intimação do interessado para ciência de decisão ou realização de diligências."
+    },
+    {
+      "id": "desc-9784-49",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo fixa o prazo para a Administração decidir após a conclusão da instrução do processo administrativo?",
+      "answer_article_key": "Art. 49",
+      "validation_phrase": "concluída a instrução de processo administrativo, a Administração tem o prazo de até trinta dias para decidir",
+      "options": [
+        {
+          "article_key": "Art. 48",
+          "label": "Art. 48º"
+        },
+        {
+          "article_key": "Art. 49",
+          "label": "Art. 49º"
+        },
+        {
+          "article_key": "Art. 50",
+          "label": "Art. 50º"
+        },
+        {
+          "article_key": "Art. 51",
+          "label": "Art. 51º"
+        }
+      ],
+      "explanation": "O art. 49 prevê até trinta dias para a decisão após a conclusão da instrução, com possibilidade de prorrogação por igual período expressamente motivada."
+    },
+    {
+      "id": "desc-9784-50",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo exige que determinados atos administrativos sejam motivados com indicação dos fatos e dos fundamentos jurídicos?",
+      "answer_article_key": "Art. 50",
+      "validation_phrase": "os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos",
+      "options": [
+        {
+          "article_key": "Art. 49",
+          "label": "Art. 49º"
+        },
+        {
+          "article_key": "Art. 50",
+          "label": "Art. 50º"
+        },
+        {
+          "article_key": "Art. 51",
+          "label": "Art. 51º"
+        },
+        {
+          "article_key": "Art. 52",
+          "label": "Art. 52º"
+        }
+      ],
+      "explanation": "O art. 50 enumera hipóteses em que a motivação é obrigatória e determina que seja explícita, clara e congruente."
+    },
+    {
+      "id": "desc-9784-59",
+      "category": "Direito Administrativo",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "question": "Qual artigo estabelece, como regra geral, o prazo de dez dias para interpor recurso administrativo?",
+      "answer_article_key": "Art. 59",
+      "validation_phrase": "salvo disposição legal específica, é de dez dias o prazo para interposição de recurso administrativo",
+      "options": [
+        {
+          "article_key": "Art. 57",
+          "label": "Art. 57º"
+        },
+        {
+          "article_key": "Art. 58",
+          "label": "Art. 58º"
+        },
+        {
+          "article_key": "Art. 59",
+          "label": "Art. 59º"
+        },
+        {
+          "article_key": "Art. 60",
+          "label": "Art. 60º"
+        }
+      ],
+      "explanation": "O art. 59 prevê prazo de dez dias para interposição do recurso administrativo, salvo disposição legal específica."
+    },
+    {
+      "id": "desc-8112-13",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo disciplina a posse no cargo público e estabelece, como regra, o prazo de trinta dias contado da publicação do ato de provimento?",
+      "answer_article_key": "Art. 13",
+      "validation_phrase": "a posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
+      "options": [
+        {
+          "article_key": "Art. 11",
+          "label": "Art. 11º"
+        },
+        {
+          "article_key": "Art. 12",
+          "label": "Art. 12º"
+        },
+        {
+          "article_key": "Art. 13",
+          "label": "Art. 13º"
+        },
+        {
+          "article_key": "Art. 14",
+          "label": "Art. 14º"
+        }
+      ],
+      "explanation": "O art. 13 disciplina a posse e prevê o prazo de trinta dias, com regras próprias para situações de licença ou afastamento."
+    },
+    {
+      "id": "desc-8112-15",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo define exercício como o efetivo desempenho das atribuições e prevê quinze dias para o servidor empossado entrar em exercício?",
+      "answer_article_key": "Art. 15",
+      "validation_phrase": "é de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício, contados da data da posse",
+      "options": [
+        {
+          "article_key": "Art. 14",
+          "label": "Art. 14º"
+        },
+        {
+          "article_key": "Art. 15",
+          "label": "Art. 15º"
+        },
+        {
+          "article_key": "Art. 16",
+          "label": "Art. 16º"
+        },
+        {
+          "article_key": "Art. 17",
+          "label": "Art. 17º"
+        }
+      ],
+      "explanation": "O art. 15 define exercício e estabelece prazo de quinze dias, contado da posse, para o servidor entrar em exercício."
+    },
+    {
+      "id": "desc-8112-19",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo estabelece a jornada geral dos servidores, com limite máximo semanal de quarenta horas e limites diários de seis a oito horas?",
+      "answer_article_key": "Art. 19",
+      "validation_phrase": "duração máxima do trabalho semanal de quarenta horas e observados os limites mínimo e máximo de seis horas e oito horas diárias",
+      "options": [
+        {
+          "article_key": "Art. 18",
+          "label": "Art. 18º"
+        },
+        {
+          "article_key": "Art. 19",
+          "label": "Art. 19º"
+        },
+        {
+          "article_key": "Art. 20",
+          "label": "Art. 20º"
+        },
+        {
+          "article_key": "Art. 21",
+          "label": "Art. 21º"
+        }
+      ],
+      "explanation": "O art. 19 estabelece a regra geral de jornada, ressalvadas as durações previstas em leis especiais."
+    },
+    {
+      "id": "desc-8112-116",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo reúne os deveres funcionais do servidor público federal, como zelo, lealdade, observância das normas e urbanidade?",
+      "answer_article_key": "Art. 116",
+      "validation_phrase": "são deveres do servidor",
+      "options": [
+        {
+          "article_key": "Art. 115",
+          "label": "Art. 115º"
+        },
+        {
+          "article_key": "Art. 116",
+          "label": "Art. 116º"
+        },
+        {
+          "article_key": "Art. 117",
+          "label": "Art. 117º"
+        },
+        {
+          "article_key": "Art. 118",
+          "label": "Art. 118º"
+        }
+      ],
+      "explanation": "O art. 116 enumera os deveres do servidor, incluindo zelo, lealdade às instituições, cumprimento das normas e tratamento urbano às pessoas."
+    },
+    {
+      "id": "desc-8112-117",
+      "category": "Direito Administrativo",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "question": "Qual artigo lista proibições impostas ao servidor, incluindo manter parente até o segundo grau sob sua chefia imediata em cargo ou função de confiança?",
+      "answer_article_key": "Art. 117",
+      "validation_phrase": "manter sob sua chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente até o segundo grau civil",
+      "options": [
+        {
+          "article_key": "Art. 116",
+          "label": "Art. 116º"
+        },
+        {
+          "article_key": "Art. 117",
+          "label": "Art. 117º"
+        },
+        {
+          "article_key": "Art. 118",
+          "label": "Art. 118º"
+        },
+        {
+          "article_key": "Art. 119",
+          "label": "Art. 119º"
+        }
+      ],
+      "explanation": "O art. 117 reúne proibições funcionais e inclui a vedação descrita no inciso VIII."
+    },
+    {
+      "id": "desc-cf-37",
+      "category": "Direito Constitucional",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "question": "Qual artigo da Constituição apresenta os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência que regem a Administração Pública?",
+      "answer_article_key": "Art. 37",
+      "validation_phrase": "obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência",
+      "options": [
+        {
+          "article_key": "Art. 37",
+          "label": "Art. 37º"
+        },
+        {
+          "article_key": "Art. 38",
+          "label": "Art. 38º"
+        },
+        {
+          "article_key": "Art. 39",
+          "label": "Art. 39º"
+        },
+        {
+          "article_key": "Art. 40",
+          "label": "Art. 40º"
+        }
+      ],
+      "explanation": "O caput do art. 37 reúne os princípios expressos da Administração Pública, conhecidos pela sigla LIMPE."
+    },
+    {
+      "id": "desc-cf-194",
+      "category": "Direito Constitucional",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "question": "Qual artigo constitucional define a Seguridade Social e apresenta seus objetivos, como universalidade da cobertura e do atendimento?",
+      "answer_article_key": "Art. 194",
+      "validation_phrase": "a seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade",
+      "options": [
+        {
+          "article_key": "Art. 193",
+          "label": "Art. 193º"
+        },
+        {
+          "article_key": "Art. 194",
+          "label": "Art. 194º"
+        },
+        {
+          "article_key": "Art. 195",
+          "label": "Art. 195º"
+        },
+        {
+          "article_key": "Art. 196",
+          "label": "Art. 196º"
+        }
+      ],
+      "explanation": "O art. 194 define a Seguridade Social e enumera os objetivos que orientam sua organização."
+    },
+    {
+      "id": "desc-cf-201",
+      "category": "Direito Constitucional",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "question": "Qual artigo constitucional trata da organização da Previdência Social sob a forma do RGPS, de caráter contributivo e filiação obrigatória?",
+      "answer_article_key": "Art. 201",
+      "validation_phrase": "a previdência social será organizada sob a forma do Regime Geral de Previdência Social, de caráter contributivo e de filiação obrigatória",
+      "options": [
+        {
+          "article_key": "Art. 194",
+          "label": "Art. 194º"
+        },
+        {
+          "article_key": "Art. 195",
+          "label": "Art. 195º"
+        },
+        {
+          "article_key": "Art. 201",
+          "label": "Art. 201º"
+        },
+        {
+          "article_key": "Art. 203",
+          "label": "Art. 203º"
+        }
+      ],
+      "explanation": "O art. 201 estabelece a organização do RGPS e os riscos sociais que devem ser cobertos, observadas as regras constitucionais e legais."
+    },
+    {
+      "id": "desc-cf-203",
+      "category": "Direito Constitucional",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "question": "Qual artigo constitucional estabelece que a assistência social será prestada a quem dela necessitar, independentemente de contribuição?",
+      "answer_article_key": "Art. 203",
+      "validation_phrase": "a assistência social será prestada a quem dela necessitar, independentemente de contribuição à seguridade social",
+      "options": [
+        {
+          "article_key": "Art. 201",
+          "label": "Art. 201º"
+        },
+        {
+          "article_key": "Art. 202",
+          "label": "Art. 202º"
+        },
+        {
+          "article_key": "Art. 203",
+          "label": "Art. 203º"
+        },
+        {
+          "article_key": "Art. 204",
+          "label": "Art. 204º"
+        }
+      ],
+      "explanation": "O art. 203 estabelece os objetivos constitucionais da assistência social e deixa expresso seu caráter não contributivo."
     }
   ]
 }
