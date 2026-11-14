@@ -96,9 +96,26 @@ def fetch_law_text(law: dict[str, Any]) -> tuple[str, str]:
 def split_articles(text: str) -> dict[str, str]:
     articles: dict[str, list[str]] = {}
     current: str | None = None
+    raw_lines = text.splitlines()
+    lines: list[str] = []
 
-    for line in text.splitlines():
-        stripped = line.strip()
+    # O extrator HTML da Câmara divide alguns cabeçalhos em três linhas:
+    # "Art." / "37" / "." / "A administração...". Reúne o prefixo com o número.
+    index = 0
+    while index < len(raw_lines):
+        stripped = raw_lines[index].strip()
+        if re.fullmatch(r"Art(?:igo)?\.?", stripped) and index + 1 < len(raw_lines):
+            number_line = raw_lines[index + 1].strip()
+            if re.fullmatch(r"\d+\s*(?:[º°o])?\s*\.?(?:\s*[-–]\s*[A-Z])?", number_line):
+                lines.append("Art. " + number_line)
+                index += 2
+                continue
+        lines.append(stripped)
+        index += 1
+
+    for stripped in lines:
+        if not stripped:
+            continue
         match = ARTICLE_RE.match(stripped)
 
         if match:
