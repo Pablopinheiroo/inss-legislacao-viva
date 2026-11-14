@@ -628,8 +628,8 @@ async function loadLegalLaw(lawId) {
       law.title !== law.short_title ? law.title : "",
       law.edital_item ? "Conteúdo do edital: " + law.edital_item : ""
     ].filter(Boolean).join(" · ");
-    $("#law-reader-source").href = snapshot.source_url_used || law.url;
-    $("#law-reader-source").textContent = "Fonte oficial consultada ↗";
+    $("#law-reader-source").href = law.url || snapshot.source_url_used;
+    $("#law-reader-source").textContent = law.id === "in-128-2022" ? "Portal IN oficial do INSS ↗" : "Fonte oficial preferencial do Planalto ↗";
     $("#law-reader-warning").classList.add("hidden");
     const status = legalLawStatus(law.id);
     if (status && status.error) {
@@ -642,6 +642,12 @@ async function loadLegalLaw(lawId) {
     }
     if (law.source_note) warningParts.push(law.source_note);
     if (law.monitor_note) warningParts.push(law.monitor_note);
+    if (law.source_sync_status === "captura_anterior_ainda_nao_substituida" && snapshot.source_url_used !== law.url) {
+      let oldHost = "fonte anterior";
+      try { oldHost = new URL(snapshot.source_url_used).hostname; } catch (_) {}
+      warningParts.push("A consulta está direcionada à fonte oficial preferencial, mas esta cópia ainda foi capturada de " + oldHost + ". O texto ainda aguarda nova captura direta do Planalto; não considere a troca do link uma validação do conteúdo capturado.");
+    }
+    if (law.study_blocked) warningParts.push("Estudo bloqueado até a importação e limpeza do texto integral vigente.");
     if (snapshot.snapshot_scope === "selected_articles") {
       warningParts.push("Esta captura contém somente o recorte de artigos configurado para o estudo.");
     }
