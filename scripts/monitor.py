@@ -105,7 +105,7 @@ def validate_law_identity(text: str, law: dict[str, Any], source_url: str) -> No
 
     numeric_tokens = {
         re.sub(r"\D", "", match.group(0))
-        for match in re.finditer(r"\d+(?:[./-]\d+)*", text)
+        for match in re.finditer(r"\d+(?:\.\d+)*", text)
     }
     missing = [token for token in required if token not in numeric_tokens]
     if missing:
