@@ -620,7 +620,7 @@ async function loadLegalLaw(lawId) {
     legalSnapshot = snapshot;
     const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
     legalEntries = Object.entries(articles)
-      .filter(([article, text]) => typeof text === "string" && text.trim().length > 0 && (!Array.isArray(law.include_articles) || law.include_articles.includes(article)))
+      .filter(([article, text]) => typeof text === "string" && text.trim().length > 0 && !law.study_blocked && (!Array.isArray(law.include_articles) || law.include_articles.includes(article)))
       .sort((a, b) => compareLegalArticles(a[0], b[0]));
     $("#law-reader-category").textContent = law.category || "Legislação";
     $("#law-reader-title").textContent = law.short_title || law.title;
@@ -665,9 +665,11 @@ async function loadLegalLaw(lawId) {
       $("#law-previous-article").disabled = true;
       $("#law-next-article").disabled = true;
       $("#law-current-article-title").textContent = "Texto por artigos indisponível";
-      $("#law-article-text").textContent = law.id === "in-128-2022"
-        ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
-        : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
+      $("#law-article-text").textContent = law.study_blocked
+        ? (law.source_note || "O estudo desta norma está bloqueado até a captura integral e a validação do texto vigente na fonte oficial.")
+        : law.id === "in-128-2022"
+          ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
+          : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
       $("#law-favorite-article").disabled = true;
       $("#law-mark-difficult").disabled = true;
       $("#law-memory-create").disabled = true;
