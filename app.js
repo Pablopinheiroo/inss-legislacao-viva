@@ -1246,9 +1246,19 @@ function startLegalTraining(items, title) {
   renderLegalTrainingItem();
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+function legalTrainingExplanationWithReference(explanation){
+  const text=String(explanation||"").trim();
+  const lawName=legalSelectedLaw?.short_title||legalSelectedLaw?.title||"norma selecionada";
+  const article=String(legalSelectedArticle||"dispositivo selecionado").trim();
+  const reference=article+" da "+lawName;
+  const citation="Fundamento legal: "+reference+".";
+  const withCitation=text.includes("Fundamento legal:")?text:(text?text+" ":"")+citation;
+  const capture=legalSnapshot?.captured_at?String(legalSnapshot.captured_at).slice(0,10).split("-").reverse().join("/"):"";
+  return withCitation+(capture?" Versão da captura oficial: "+capture+".":"");
+}
 function renderLegalTrainingAnswer(item, heading, explanation, sourceText) {
   $("#law-training-answer-title").textContent = heading || "Resposta e conferência";
-  $("#law-training-explanation").textContent = explanation || "";
+  $("#law-training-explanation").textContent = legalTrainingExplanationWithReference(explanation);
   $("#law-training-source-text").textContent = sourceText || item.answerText || item.sourceText || "";
   $("#law-training-source").href = item.sourceUrl || (legalSnapshot && legalSnapshot.source_url_used) || legalSelectedLaw.url;
   $("#law-training-answer").classList.remove("hidden");
@@ -1287,7 +1297,7 @@ function renderLegalTrainingItem() {
   } else if (item.kind === "notice") {
     $("#law-training-answer").classList.remove("hidden");
     $("#law-training-answer-title").textContent = "Observação";
-    $("#law-training-explanation").textContent = item.explanation || "";
+    $("#law-training-explanation").textContent = legalTrainingExplanationWithReference(item.explanation || "");
     $("#law-training-source-text").textContent = "";
     $("#law-training-source").href = item.sourceUrl || legalLawSourceUrl(legalSelectedLaw);
     $("#law-training-next").disabled = false;
