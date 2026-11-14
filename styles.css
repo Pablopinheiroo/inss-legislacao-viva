@@ -210,3 +210,25 @@
   .article-options{gap:8px}
   .article-option{min-height:54px}
 }
+
+
+/* Modo Várias afirmações no mesmo artigo */
+.multi-ce-config{max-width:430px}
+.multi-ce-config .select-wrap select{min-width:125px}
+.multi-ce-config .primary-button{min-width:145px}
+.multi-ce-article-head{margin-top:18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.multi-ce-article-head .quiz-law-line{margin-top:0}
+.multi-ce-article-head h2{font-size:15px;color:#40516d;margin:10px 0 0}
+.multi-ce-law-text{margin:14px 0 6px}
+.multi-ce-law-text pre{max-height:360px}
+.multi-ce-result-list{display:grid;gap:8px}
+.multi-ce-result-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+.multi-ce-result-row strong{font-size:11px;color:#35445e}
+.multi-ce-result-row span{font-size:11px;color:#718096;white-space:nowrap}
+@media(max-width:760px){.multi-ce-config{justify-content:flex-start;width:100%}}
+@media(max-width:520px){
+  .multi-ce-config{display:grid;grid-template-columns:1fr 1fr}
+  .multi-ce-config .select-wrap select{min-width:0;width:100%}
+  .multi-ce-config .primary-button{grid-column:1/-1;width:100%}
+  .multi-ce-result-row{align-items:flex-start;flex-direction:column;gap:4px}
+}
