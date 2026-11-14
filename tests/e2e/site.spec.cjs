@@ -349,6 +349,7 @@ test("backup exportado pode ser recuperado em outro navegador", async ({ browser
     localStorage.setItem("radarLegislativo.studyStates", JSON.stringify({ "quality::Art. 1": "estudado" }));
   });
 
+  await sourcePage.locator(".study-data-details > summary").click();
   const download = await sourcePage.waitForEvent("download", () => sourcePage.locator("#data-export-backup").click());
   const backupPath = await download.path();
   const fs = require("node:fs");
@@ -365,6 +366,7 @@ test("backup exportado pode ser recuperado em outro navegador", async ({ browser
   });
   targetPage.on("dialog", dialog => dialog.accept());
 
+  await targetPage.locator(".study-data-details > summary").click();
   const safetyCopy = targetPage.waitForEvent("download");
   await targetPage.locator("#data-import-file").setInputFiles({
     name: "backup-de-teste.json",
