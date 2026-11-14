@@ -501,3 +501,46 @@
   .tracked-laws-disclosure>.law-grid{padding:9px}
   .law-study-status{font-size:10px}
 }
+
+
+/* Histórico de alterações por artigo e por dispositivo. */
+.law-article-history{margin:14px 0;border:1px solid #e4eaf3;border-radius:11px;background:#fbfcff}
+.law-article-history>summary,.law-device-history>summary{padding:10px 12px;color:#4c6288;font-size:10px;font-weight:800;cursor:pointer}
+.law-article-history[open]>summary,.law-device-history[open]>summary{border-bottom:1px solid #e8edf5;background:#f6f8fc}
+.law-history-list{display:grid;gap:10px;padding:10px;min-width:0}
+.law-history-entry{min-width:0;padding:11px;border:1px solid #e5eaf1;border-radius:9px;background:#fff}
+.law-history-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.law-history-heading strong{color:#405579;font-size:10px}
+.law-history-heading small{flex:0 0 auto;color:#8995a7;font-size:9px}
+.law-history-summary{margin:7px 0 9px;color:#65738a;font-size:10px;line-height:1.5}
+.law-history-comparison{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.law-history-version{min-width:0;padding:9px;border-radius:8px;background:#f7f8fb}
+.law-history-version.is-previous{border-left:3px solid #c58a8a}
+.law-history-version.is-current{border-left:3px solid #67a987}
+.law-history-version h5{margin:0 0 7px;color:#59677d;font-size:9px}
+.law-history-version pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.7 Georgia,"Times New Roman",serif;color:#4c5668}
+.law-history-footer{display:flex;justify-content:flex-end;margin-top:8px}
+.law-history-footer a{color:#3159a8;font-size:9px;font-weight:750;text-decoration:none}
+.law-history-footer a:hover{text-decoration:underline}
+.law-history-empty{margin:0;padding:12px;color:#8490a3;font-size:10px;line-height:1.5}
+.law-device-history{margin-top:9px;border:1px solid #edf0f5;border-radius:8px;background:#fbfcff}
+.law-device-history>summary{padding:8px 10px;color:#65738a;font-size:9px;font-weight:750;cursor:pointer}
+.law-device-history .law-history-list{padding:8px}
+.law-device-history .law-history-comparison{grid-template-columns:1fr}
+.law-device-history .law-history-version pre{font-size:11px}
+
+/* Seleção de trechos para treino: também funciona com toque prolongado no celular. */
+.legal-selectable-text{user-select:text;-webkit-user-select:text;cursor:text}
+.law-selection-toolbar{position:fixed;left:50%;bottom:16px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(900px,calc(100% - 32px));padding:12px 14px;border:1px solid #cbd8ef;border-radius:14px;background:#fff;box-shadow:0 10px 35px rgba(20,38,70,.18);transform:translateX(-50%)}
+.law-selection-copy{min-width:0;flex:1}
+.law-selection-copy strong{display:block;color:#294b87;font-size:11px}
+.law-selection-copy p{display:-webkit-box;margin:5px 0 0;overflow:hidden;color:#69768a;font:11px/1.45 Georgia,"Times New Roman",serif;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.law-selection-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.law-selection-actions button{min-height:36px;padding:0 12px;font-size:10px}
+@media(max-width:760px){
+  .law-history-heading{flex-direction:column;gap:4px}
+  .law-history-comparison{grid-template-columns:1fr}
+  .law-selection-toolbar{bottom:max(10px,env(safe-area-inset-bottom));align-items:stretch;flex-direction:column;gap:9px;width:calc(100% - 20px);padding:11px}
+  .law-selection-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .law-selection-actions button{min-width:0;padding:0 8px;font-size:10px}
+}

@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-7">
-  <script defer src="app.js?v=20261114-9"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-8">
+  <script defer src="app.js?v=20261114-10"></script>
 </head>
 <body>
   <header class="topbar">
@@ -163,7 +163,11 @@
                 <button id="law-mark-studied" class="primary-button" type="button" disabled>Marcar como estudado</button>
               </div>
             </div>
-            <pre id="law-article-text" class="legal-article-text"></pre>
+            <pre id="law-article-text" class="legal-article-text legal-selectable-text"></pre>
+            <details id="law-article-history" class="law-article-history">
+              <summary id="law-article-history-summary">Histórico de alterações deste artigo</summary>
+              <div id="law-article-history-list" class="law-history-list" aria-live="polite"></div>
+            </details>
 
             <details id="law-components-details" class="law-components-details" hidden>
               <summary>Ver partes identificadas deste artigo</summary>
@@ -179,6 +183,16 @@
               <div id="law-components-list" class="law-components-list"></div>
             </details>
 
+            <div id="law-selection-toolbar" class="law-selection-toolbar hidden" role="region" aria-live="polite">
+              <div class="law-selection-copy">
+                <strong id="law-selection-label">Trecho selecionado</strong>
+                <p id="law-selection-preview"></p>
+              </div>
+              <div class="law-selection-actions">
+                <button id="law-train-selection" class="primary-button" type="button">Treinar este trecho</button>
+                <button id="law-clear-selection" class="secondary-button" type="button">Limpar seleção</button>
+              </div>
+            </div>
             <div class="law-reader-footer">
               <p id="law-reader-capture-note"></p>
               <button id="law-train-article" class="text-button" type="button">Treinar este artigo ↗</button>
