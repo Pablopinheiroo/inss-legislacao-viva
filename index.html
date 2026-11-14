@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-11">
-  <script defer src="app.js?v=20261114-15"></script>
+  <link rel="stylesheet" href="styles.css?v=20261114-12">
+  <script defer src="app.js?v=20261114-16"></script>
 </head>
 <body>
   <header class="topbar">
@@ -389,6 +389,7 @@
       </div>
       <div class="quiz-config error-config">
         <label class="select-wrap"><span>Matéria</span><select id="error-category"><option value="todas">Todas as matérias</option></select></label>
+        <label class="select-wrap"><span>Tipo de conteúdo</span><select id="error-type"><option value="todas">Todos os tipos</option><option value="prazo">Prazos</option><option value="percentual">Percentuais e frações</option><option value="requisito">Requisitos</option><option value="excecao">Exceções</option></select></label>
         <label class="select-wrap"><span>Questões</span><select id="error-length"><option value="5">5 questões</option><option value="10" selected>10 questões</option><option value="todas">Todas disponíveis</option></select></label>
         <button id="start-error" class="primary-button" type="button" disabled>Começar jogo</button>
       </div>
@@ -396,8 +397,24 @@
 
     <p id="error-count-note" class="manual-check-note">Carregando itens e conferindo as expressões corretas nos textos da legislação...</p>
 
+    <section id="error-review-center" class="ce-review-center error-review-center" aria-label="Central de revisão dos erros do modo Encontre o erro">
+      <div class="ce-review-copy">
+        <span class="eyebrow">CENTRAL DE REVISÃO · ENCONTRE O ERRO</span>
+        <h2>Revise as expressões que confundiram você</h2>
+        <p id="error-review-note">Os trechos escolhidos incorretamente serão guardados aqui para revisão espaçada.</p>
+      </div>
+      <div class="ce-review-actions">
+        <div class="ce-review-metrics">
+          <div><strong id="error-review-due">0</strong><span>prontos agora</span></div>
+          <div><strong id="error-review-pending">0</strong><span>em acompanhamento</span></div>
+          <div><strong id="error-review-mastered">0</strong><span>já dominados</span></div>
+        </div>
+        <button id="error-review-start" class="primary-button" type="button" disabled>Revisar erros agora</button>
+      </div>
+    </section>
+
     <section id="error-card" class="quiz-card hidden" aria-live="polite">
-      <div class="quiz-card-top"><span id="error-category-label" class="quiz-chip"></span><span id="error-progress" class="quiz-progress"></span></div>
+      <div class="quiz-card-top"><span id="error-category-label" class="quiz-chip"></span><span id="error-type-label" class="error-type-chip"></span><span id="error-progress" class="quiz-progress"></span></div>
       <div class="quiz-law-line"><strong id="error-law"></strong><span id="error-article"></span></div>
       <p class="error-instruction">Toque na expressão que está errada. Cada questão tem apenas um trecho incorreto.</p>
       <div id="error-statement" class="error-statement" role="group" aria-label="Enunciado dividido em trechos selecionáveis"></div>
@@ -405,7 +422,10 @@
 
       <section id="error-solution" class="answer-feedback hidden">
         <div id="error-result" class="feedback-result"></div>
-        <p id="error-correction" class="feedback-explanation"></p>
+        <div class="error-answer-comparison" aria-label="Comparação entre a expressão incorreta e a redação correta">
+          <div class="error-answer wrong"><span>EXPRESSÃO INCORRETA</span><strong id="error-wrong-phrase"></strong></div>
+          <div class="error-answer correct"><span>REDAÇÃO CORRETA</span><strong id="error-correct-phrase"></strong></div>
+        </div>
         <p id="error-explanation" class="feedback-explanation"></p>
         <details class="law-excerpt">
           <summary>Conferir o texto literal da legislação</summary>
