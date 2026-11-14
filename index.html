@@ -32,6 +32,7 @@
     <button id="tab-radar" class="nav-tab active" type="button" aria-current="page">Radar legislativo</button>
     <button id="tab-law" class="nav-tab" type="button">Lei Seca</button>
     <button id="tab-quiz" class="nav-tab" type="button">Treinar C/E</button>
+    <button id="tab-simulado" class="nav-tab" type="button">Simulados</button>
     <button id="tab-cloze" class="nav-tab" type="button">Completar Lei Seca</button>
     <button id="tab-find-error" class="nav-tab" type="button">Encontre o erro</button>
     <button id="tab-article" class="nav-tab" type="button">Descubra o artigo</button>
@@ -341,6 +342,79 @@
     <footer class="footer-note"><strong>Treino de fixação.</strong><span>Este é um banco inicial de itens autorais vinculados a dispositivos legais. Confira sempre a redação consolidada na fonte oficial e no edital vigente.</span></footer>
   </main>
 
+
+  <main id="simulado-view" class="page-shell hidden">
+    <section class="intro simulado-intro">
+      <div>
+        <p class="eyebrow">TREINAMENTO · 10 QUESTÕES</p>
+        <h1>Simulados</h1>
+        <p class="subtitle">Faça um treino no estilo Certo ou Errado, responda no seu ritmo e confira o resultado somente ao finalizar.</p>
+      </div>
+      <div class="simulado-mode-note"><strong>Sem limite de tempo</strong><span>Você pode pausar, voltar às questões anteriores e revisar suas marcações antes de finalizar.</span></div>
+    </section>
+
+    <p id="simulado-bank-note" class="manual-check-note">Carregando banco de questões para os simulados...</p>
+
+    <section id="simulado-welcome" class="empty-state simulado-welcome">
+      <span class="simulado-welcome-icon">10</span>
+      <h2>Seu simulado está pronto para começar</h2>
+      <p>Serão selecionadas 10 questões aleatórias do banco disponível. Você poderá navegar entre elas, alterar respostas e deixar alguma em branco.</p>
+      <button id="start-simulado" class="primary-button" type="button" disabled>Iniciar simulado</button>
+    </section>
+
+    <section id="simulado-card" class="simulado-card hidden" aria-live="polite">
+      <div class="simulado-card-top">
+        <span class="simulado-chip">SIMULADO · CERTO OU ERRADO</span>
+        <strong id="simulado-progress-label">Questão 1 de 10</strong>
+      </div>
+      <div class="simulado-progress-track" role="progressbar" aria-label="Progresso de navegação do simulado" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
+        <span id="simulado-progress-fill"></span>
+      </div>
+      <div class="simulado-question-heading">
+        <span id="simulado-category" class="quiz-chip"></span>
+        <div class="quiz-law-line"><strong id="simulado-law"></strong><span id="simulado-article"></span></div>
+      </div>
+      <p id="simulado-statement" class="simulado-statement"></p>
+      <div class="simulado-answer-buttons">
+        <button id="simulado-answer-true" class="answer-button" type="button" aria-pressed="false">Certo</button>
+        <button id="simulado-answer-false" class="answer-button" type="button" aria-pressed="false">Errado</button>
+      </div>
+      <div class="simulado-answer-status">
+        <p id="simulado-answer-note">Selecione Certo ou Errado.</p>
+        <button id="simulado-clear-answer" class="text-button hidden" type="button">Limpar resposta</button>
+      </div>
+      <div class="simulado-question-navigation">
+        <div><span>Questões</span><div id="simulado-question-nav" class="simulado-question-nav"></div></div>
+        <div class="simulado-navigation-actions">
+          <button id="simulado-previous" class="secondary-button" type="button" disabled>Anterior</button>
+          <button id="simulado-next" class="primary-button" type="button">Próxima</button>
+          <button id="simulado-finish" class="finish-simulado-button" type="button">Finalizar simulado</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulado-result" class="simulado-result hidden">
+      <p class="eyebrow">SIMULADO FINALIZADO</p>
+      <h2 id="simulado-score">0 de 10 acertos</h2>
+      <p id="simulado-score-note" class="simulado-score-note"></p>
+      <div class="simulado-result-stats">
+        <article><span>Acertos</span><strong id="simulado-stat-correct">0</strong></article>
+        <article><span>Erros</span><strong id="simulado-stat-wrong">0</strong></article>
+        <article><span>Em branco</span><strong id="simulado-stat-blank">0</strong></article>
+        <article><span>Aproveitamento</span><strong id="simulado-stat-percent">0%</strong></article>
+      </div>
+      <div class="simulado-result-bar" role="progressbar" aria-label="Aproveitamento do simulado" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span id="simulado-result-fill"></span>
+      </div>
+      <div class="section-heading simulado-result-heading"><div><h3>Correção das questões</h3><p>Confira sua resposta, o gabarito e o comentário de cada item.</p></div></div>
+      <div id="simulado-result-list" class="simulado-result-list"></div>
+      <div class="summary-actions">
+        <button id="simulado-restart" class="primary-button" type="button">Fazer novo simulado</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><strong>Treino sem cronômetro.</strong><span>O simulado usa questões do banco C/E disponível no Radar Legislativo. O resultado é exibido somente depois da finalização; questões erradas são enviadas à Central de revisão.</span></footer>
+  </main>
 
   <main id="cloze-view" class="page-shell hidden">
     <section class="intro cloze-intro">
