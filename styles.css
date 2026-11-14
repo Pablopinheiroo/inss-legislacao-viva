@@ -871,3 +871,30 @@
  .history-session-card{grid-template-columns:1fr}
  .history-session-status{justify-self:start}
 }
+
+
+/* Indicador discreto de nível e experiência */
+.topbar{gap:14px}
+.xp-widget{width:min(260px,34vw);min-width:155px;margin-left:auto;padding:8px 11px;border:1px solid #e4eaf3;border-radius:12px;background:#f8faff}
+.xp-widget-top{display:flex;align-items:center;gap:9px}
+.xp-level-badge{flex:0 0 auto;padding:5px 7px;border-radius:8px;background:#e9efff;color:#3155a4;font-size:8px;font-weight:900;letter-spacing:.06em;white-space:nowrap}
+.xp-level-badge strong{margin-left:3px;font-size:12px}
+.xp-widget-values{display:flex;min-width:0;flex:1;align-items:center;justify-content:space-between;gap:6px}
+.xp-widget-values>strong{color:#25395f;font-size:11px;white-space:nowrap}
+.xp-widget-values>small{color:#7a879b;font-size:8px;text-align:right;white-space:nowrap}
+.xp-progress-track{height:5px;margin-top:7px;overflow:hidden;border-radius:99px;background:#e5eaf3}
+.xp-progress-track>span{display:block;width:0;height:100%;border-radius:99px;background:linear-gradient(90deg,#5a7ee6,#3d60c6);transition:width .35s ease}
+.xp-award-toast{position:fixed;right:18px;bottom:20px;z-index:10000;display:flex;align-items:center;gap:10px;min-width:175px;max-width:min(340px,calc(100vw - 30px));padding:12px 15px;border:1px solid #dce5f5;border-radius:13px;background:#fff;box-shadow:0 12px 35px rgba(26,43,75,.16);opacity:0;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+.xp-award-toast.is-visible{opacity:1;transform:translateY(0)}
+.xp-award-icon{display:grid;width:30px;height:30px;flex:0 0 30px;place-items:center;border-radius:50%;background:#edf2ff;color:#385dc2;font-size:16px;font-weight:900}
+.xp-award-copy{display:grid;gap:2px}
+.xp-award-copy strong{color:#25395f;font-size:12px}
+.xp-award-copy small{color:#7a879b;font-size:10px;line-height:1.35}
+@media(max-width:760px){
+ .topbar{gap:7px}.xp-widget{width:142px;min-width:142px;padding:7px 8px}.xp-widget-top{gap:6px}
+ .xp-level-badge{padding:4px 5px;font-size:7px}.xp-level-badge strong{font-size:11px}
+ .xp-widget-values{display:grid;gap:1px;justify-content:start}
+ .xp-widget-values>strong{font-size:10px}.xp-widget-values>small{font-size:7px;text-align:left;white-space:normal;line-height:1.15}
+ .xp-progress-track{height:4px;margin-top:5px}.xp-award-toast{right:12px;bottom:14px}
+}
+@media(max-width:390px){.brand>span:last-child small{display:none}.xp-widget{width:132px;min-width:132px}}
