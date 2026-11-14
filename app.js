@@ -3473,6 +3473,9 @@ $("#multi-ce-retry-mistakes").addEventListener("click", () => {
   const failed = new Set(multiCEState.answers.filter(answer => !answer.correct).map(answer => answer.group.id));
   startMultiCEGame(multiCEGroups.filter(group => failed.has(group.id)));
 });
+["#quiz-category","#quiz-topic","#quiz-law-filter","#quiz-article-filter"].forEach(selector => {
+  $(selector).addEventListener("change", updateQuizFilters);
+});
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
 $("#answer-false").addEventListener("click", () => chooseAnswer(false));
