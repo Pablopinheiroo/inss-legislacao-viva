@@ -30,6 +30,8 @@ let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: n
 let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false, changeQuestion: null, changeSelected: null, changeAnswered: false, reviewMode: false };
 const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
+const MEMORY_CUSTOM_CARDS_KEY = "radarLegislativo.memoryCustomCards.v1";
+const MEMORY_FAVORITE_CARD_IDS_KEY = "radarLegislativo.memoryFavoriteCardIds.v1";
 const CE_REVIEW_KEY = "radarLegislativo.ceReview.v1";
 const CLOZE_REVIEW_KEY = "radarLegislativo.clozeReview.v1";
 const ERROR_REVIEW_KEY = "radarLegislativo.errorReview.v1";
@@ -49,6 +51,9 @@ let selectedLegalDevicePaths = new Set();
 let legalTrainingState = { items: [], index: 0, title: "", selected: null };
 let memoryCards = [];
 let memoryState = { cards: [], index: 0, ratings: [], revealed: false };
+let memorySourceSnapshots = new Map();
+let memorySourceSnapshotsLoaded = false;
+let memorySnapshotPromise = null;
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -249,6 +254,7 @@ async function loadDashboard() {
     renderLaws();
     if (legalLaws.length) renderLegalLibrary();
     if (legalSelectedLaw && legalSnapshot && legalSelectedArticle) renderLegalArticle();
+    if (memorySourceSnapshotsLoaded) buildMemoryDeck();
   } catch (error) {
     $("#system-status").className = "status-pill error";
     $("#system-status span:last-child").textContent = "Dados indisponíveis";
@@ -527,6 +533,7 @@ async function loadLegalLaw(lawId) {
     const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const snapshot = await response.json();
+    memorySourceSnapshots.set(law.id, snapshot);
     legalSnapshot = snapshot;
     const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
     legalEntries = Object.entries(articles)
@@ -573,6 +580,8 @@ async function loadLegalLaw(lawId) {
         ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
         : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
       $("#law-favorite-article").disabled = true;
+      $("#law-memory-create").disabled = true;
+      $("#law-memory-create-panel").classList.add("hidden");
       $("#law-mark-studied").disabled = true;
       $("#law-components-details").hidden = true;
       $("#law-train-article").disabled = true;
@@ -678,6 +687,8 @@ function renderLegalArticle() {
   const isStudied = studied.has(articleKey);
   $("#law-current-article-title").textContent = article;
   $("#law-article-text").textContent = text;
+  $("#law-memory-create").disabled = false;
+  $("#law-memory-create-panel").classList.add("hidden");
   renderLegalArticleHistory(article);
 
   const studyStatus = $("#law-current-study-status");
@@ -3664,11 +3675,97 @@ function saveMemoryProgress(progress) {
   }
 }
 
+function loadMemoryCustomCards() {
+  try {
+    const value = JSON.parse(localStorage.getItem(MEMORY_CUSTOM_CARDS_KEY) || "[]");
+    return Array.isArray(value) ? value.filter(card => card && card.id && card.article_key && card.literal_text) : [];
+  } catch (_) {
+    return [];
+  }
+}
+function saveMemoryCustomCards(cards) {
+  try {
+    localStorage.setItem(MEMORY_CUSTOM_CARDS_KEY, JSON.stringify(cards));
+    return true;
+  } catch (error) {
+    console.warn("Não foi possível salvar os cartões pessoais:", error);
+    $("#memory-note").textContent = "O navegador não permitiu salvar o cartão. Confira o espaço disponível e as permissões de armazenamento.";
+    return false;
+  }
+}
+function loadMemoryFavoriteCardIds() {
+  try {
+    const value = JSON.parse(localStorage.getItem(MEMORY_FAVORITE_CARD_IDS_KEY) || "[]");
+    return new Set(Array.isArray(value) ? value.filter(id => typeof id === "string") : []);
+  } catch (_) {
+    return new Set();
+  }
+}
+function saveMemoryFavoriteCardIds(ids) {
+  try {
+    localStorage.setItem(MEMORY_FAVORITE_CARD_IDS_KEY, JSON.stringify([...ids]));
+    return true;
+  } catch (error) {
+    console.warn("Não foi possível salvar os cartões favoritos:", error);
+    $("#memory-note").textContent = "Não foi possível salvar a seleção de favoritos neste navegador.";
+    return false;
+  }
+}
+
+async function ensureMemorySourceSnapshots() {
+  if (memorySourceSnapshotsLoaded) {
+    buildMemoryDeck();
+    return;
+  }
+  if (memorySnapshotPromise) return memorySnapshotPromise;
+  memorySnapshotPromise = (async () => {
+    let laws = legalLaws;
+    if (!laws.length) {
+      const catalogResponse = await fetch(LAWS_URL + "?v=" + Date.now(), { cache: "no-store" });
+      if (!catalogResponse.ok) throw new Error("Não foi possível carregar a lista de normas.");
+      const catalog = await catalogResponse.json();
+      laws = Array.isArray(catalog) ? catalog : [];
+      if (!legalLaws.length) legalLaws = laws;
+    }
+
+    const pending = laws.filter(law => law && law.id && !memorySourceSnapshots.has(law.id));
+    const results = [];
+    let cursor = 0;
+    async function worker() {
+      while (cursor < pending.length) {
+        const law = pending[cursor++];
+        try {
+          const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json", { cache: "force-cache" });
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          const snapshot = await response.json();
+          if (snapshot && snapshot.articles && typeof snapshot.articles === "object") {
+            results.push([law.id, snapshot]);
+          }
+        } catch (error) {
+          console.warn("Captura não disponível para os cartões de memorização:", law.id, error);
+        }
+      }
+    }
+    // Quatro consultas simultâneas evitam sobrecarregar o GitHub Pages e o navegador.
+    await Promise.all(Array.from({ length: Math.min(4, pending.length) }, () => worker()));
+    results.forEach(([id, snapshot]) => memorySourceSnapshots.set(id, snapshot));
+    memorySourceSnapshotsLoaded = true;
+    buildMemoryDeck();
+    const captured = memorySourceSnapshots.size;
+    $("#memory-note").textContent = memoryCards.length + " cartões disponíveis, incluindo artigos das " + captured + " normas cujas capturas puderam ser carregadas. As consultas são feitas somente ao abrir este modo e ficam em cache durante a sessão.";
+  })().catch(error => {
+    memorySnapshotPromise = null;
+    console.error("Falha ao ampliar o baralho de memorização:", error);
+    $("#memory-note").textContent = "Não foi possível ampliar o baralho agora. Os cartões dos bancos de questões continuam disponíveis; tente abrir este modo novamente.";
+  });
+  return memorySnapshotPromise;
+}
+
 function buildMemoryDeck() {
   const cards = new Map();
 
-  function getCard(lawId, articleKey, details) {
-    const id = lawId + "::" + articleKey;
+  function getCard(lawId, articleKey, details, customId = "") {
+    const id = customId || lawId + "::" + articleKey;
     if (!cards.has(id)) {
       cards.set(id, {
         id,
@@ -3680,19 +3777,24 @@ function buildMemoryDeck() {
         source_url: details.source_url || "https://www.gov.br/",
         literal_text: details.literal_text || "",
         prompts: [],
-        captured_at: details.captured_at || null
+        captured_at: details.captured_at || null,
+        source_type: details.source_type || "legal",
+        custom_answer: details.custom_answer || ""
       });
     }
     const card = cards.get(id);
-    if (!card.literal_text && details.literal_text) card.literal_text = details.literal_text;
+    if (details.literal_text) card.literal_text = details.literal_text;
     if (details.source_url) card.source_url = details.source_url;
     if (details.law_title) card.law_title = details.law_title;
     if (details.article_label) card.article_label = details.article_label;
     if (details.category) card.category = details.category;
+    if (details.captured_at) card.captured_at = details.captured_at;
+    if (details.source_type) card.source_type = details.source_type;
+    if (details.custom_answer) card.custom_answer = details.custom_answer;
     return card;
   }
 
-  // Usa as perguntas autorais já validadas pelo modo Descubra o artigo.
+  // Perguntas já validadas pelo modo Descubra o artigo.
   articleQuestions.forEach(item => {
     const correctOption = item.options?.find(option => option.article_key === item.answer_article_key);
     const card = getCard(item.law_id, item.answer_article_key, {
@@ -3708,7 +3810,7 @@ function buildMemoryDeck() {
     }
   });
 
-  // Completa o conjunto com temas e afirmações dos artigos já validados.
+  // Perguntas autorais ligadas aos artigos do modo Várias afirmações.
   multiCEGroups.forEach(group => {
     const card = getCard(group.law_id, group.article_key, {
       law_title: group.law_title,
@@ -3723,10 +3825,81 @@ function buildMemoryDeck() {
       card.prompts.push({ text: topicPrompt, type: "tema" });
     }
     (group.statements || []).forEach(statement => {
-      const text = "Lembre e explique a regra relacionada a esta afirmação: " + statement.prompt;
-      if (!card.prompts.some(prompt => prompt.text === text)) {
-        card.prompts.push({ text, type: "afirmação" });
+      const promptText = "Lembre e explique a regra relacionada a esta afirmação: " + statement.prompt;
+      if (!card.prompts.some(prompt => prompt.text === promptText)) {
+        card.prompts.push({ text: promptText, type: "afirmação" });
       }
+    });
+  });
+
+  // Amplia o conjunto com todos os artigos presentes nas capturas válidas das normas.
+  memorySourceSnapshots.forEach((snapshot, lawId) => {
+    const law = legalLaws.find(item => item.id === lawId);
+    if (!law) return;
+    Object.entries(snapshot.articles || {}).forEach(([articleKey, literalText]) => {
+      if (typeof literalText !== "string" || literalText.trim().length < 30) return;
+      const card = getCard(lawId, articleKey, {
+        law_title: law.short_title || law.title,
+        article_label: articleKey,
+        category: legalLawMatter(law),
+        source_url: snapshot.source_url_used || law.url,
+        literal_text: literalText,
+        captured_at: snapshot.captured_at
+      });
+      const principalPrompt = "Explique, sem consultar, a regra principal prevista em " + articleKey + " de " + (law.short_title || law.title) + ".";
+      const detailPrompt = "Quais requisitos, prazos, percentuais, condições, competências ou exceções aparecem neste dispositivo?";
+      if (!card.prompts.some(prompt => prompt.text === principalPrompt)) {
+        card.prompts.push({ text: principalPrompt, type: "artigo" });
+      }
+      if (!card.prompts.some(prompt => prompt.text === detailPrompt)) {
+        card.prompts.push({ text: detailPrompt, type: "detalhes" });
+      }
+    });
+  });
+
+  // Cartões criados manualmente na Biblioteca Lei Seca.
+  loadMemoryCustomCards().forEach(saved => {
+    const snapshot = memorySourceSnapshots.get(saved.law_id);
+    const currentText = snapshot?.articles?.[saved.article_key] || saved.literal_text;
+    const law = legalLaws.find(item => item.id === saved.law_id);
+    cards.set(saved.id, {
+      ...saved,
+      law_title: saved.law_title || law?.short_title || law?.title || "Norma",
+      category: saved.category || (law ? legalLawMatter(law) : "Direito Previdenciário"),
+      source_url: snapshot?.source_url_used || saved.source_url || law?.url || "https://www.gov.br/",
+      literal_text: currentText,
+      source_type: "manual"
+    });
+  });
+
+  // Toda alteração artigo por artigo confirmada pelo monitor vira cartão próprio.
+  beforeAfterAvailable.forEach(change => {
+    if (!change.law_id || !change.article || !change.new_text) return;
+    const id = "change::" + beforeAfterChangeId(change);
+    const law = legalLaws.find(item => item.id === change.law_id);
+    const lawTitle = change.law_short_title || change.law_title || law?.short_title || law?.title || "Norma";
+    const articleLabel = change.article || "Dispositivo";
+    const prompts = change.change_type === "incluido"
+      ? [{ text: "Qual regra foi acrescentada em " + articleLabel + " de " + lawTitle + "?", type: "alteração" }]
+      : [
+          { text: "O que mudou na redação de " + articleLabel + " de " + lawTitle + "?", type: "alteração" },
+          { text: "Compare a redação anterior e a atual. Quais pontos foram acrescentados, retirados ou modificados?", type: "comparação" }
+        ];
+    cards.set(id, {
+      id,
+      law_id: change.law_id,
+      article_key: articleLabel,
+      law_title: lawTitle,
+      article_label: articleLabel,
+      category: beforeAfterCategoryForChange(change),
+      source_url: change.source_url || law?.url || "https://www.gov.br/",
+      literal_text: change.new_text,
+      previous_text: change.old_text || "",
+      change_summary: change.summary || "",
+      detected_at: change.detected_at || "",
+      prompts,
+      captured_at: change.detected_at || null,
+      source_type: "change"
     });
   });
 
@@ -3735,28 +3908,118 @@ function buildMemoryDeck() {
   );
 
   const select = $("#memory-category");
+  const previousCategory = select.value || "todas";
   select.replaceChildren();
-  const all = document.createElement("option");
-  all.value = "todas";
-  all.textContent = "Todas as matérias";
-  select.append(all);
+  select.append(new Option("Todas as matérias", "todas"));
   [...new Set(memoryCards.map(card => card.category))]
     .sort((a, b) => a.localeCompare(b, "pt-BR"))
-    .forEach(category => {
-      const option = document.createElement("option");
-      option.value = category;
-      option.textContent = category;
-      select.append(option);
-    });
-
-  $("#start-memory").disabled = memoryCards.length === 0;
-  renderMemoryOverview();
-
-  $("#memory-note").textContent = memoryCards.length
-    + " cartões de artigos disponíveis, montados a partir dos bancos de estudo e conferidos com as capturas salvas. As perguntas podem variar a cada revisão."; 
-  if (!memoryCards.length) {
-    $("#memory-note").textContent = "Nenhum cartão pôde ser montado. Confira se os modos Descubra o artigo e Várias afirmações conseguiram carregar os artigos.";
+    .forEach(category => select.append(new Option(category, category)));
+  if ([...select.options].some(option => option.value === previousCategory)) {
+    select.value = previousCategory;
   }
+
+  updateMemoryFilters();
+  renderMemoryOverview();
+  if (!memorySourceSnapshotsLoaded) {
+    $("#memory-note").textContent = memoryCards.length
+      + " cartões iniciais disponíveis. Ao abrir este modo, o sistema também carregará as capturas das normas para ampliar o baralho.";
+  } else {
+    $("#memory-note").textContent = memoryCards.length
+      + " cartões disponíveis, montados com artigos das capturas atuais, questões validadas, alterações confirmadas e cartões pessoais.";
+  }
+  if (!memoryCards.length) {
+    $("#memory-note").textContent = "Nenhum cartão pôde ser montado. Confira se a Biblioteca Lei Seca e os bancos de estudo conseguiram carregar os artigos.";
+  }
+}
+
+function updateMemoryFilters() {
+  const pool = selectedMemoryPool();
+  $("#start-memory").disabled = pool.length === 0;
+  const filter = $("#memory-source-filter");
+  if (filter) {
+    const labels = {
+      todas: "Todos os cartões",
+      favoritos: "Artigos favoritos",
+      alteracoes: "Alterações legislativas",
+      personalizados: "Meus cartões"
+    };
+    const source = filter.value || "todas";
+    $("#memory-note").dataset.filterCount = pool.length + " cartão(ões) na seleção: " + (labels[source] || labels.todas) + ".";
+  }
+}
+
+async function createMemoryCardsFromFavorites() {
+  await ensureMemorySourceSnapshots();
+  const favoriteArticles = legalFavoritesSet();
+  const candidates = memoryCards.filter(card =>
+    card.source_type !== "change" &&
+    favoriteArticles.has(legalArticleKey(card.law_id, card.article_key))
+  );
+  if (!candidates.length) {
+    $("#memory-note").textContent = favoriteArticles.size
+      ? "Seus artigos favoritos ainda não têm uma captura disponível para criar cartões."
+      : "Você ainda não favoritou artigos na Biblioteca Lei Seca.";
+    return;
+  }
+  const saved = loadMemoryFavoriteCardIds();
+  const before = saved.size;
+  candidates.forEach(card => saved.add(card.id));
+  if (!saveMemoryFavoriteCardIds(saved)) return;
+  $("#memory-source-filter").value = "favoritos";
+  updateMemoryFilters();
+  renderMemoryOverview();
+  $("#memory-note").textContent = (saved.size - before) + " novo(s) cartão(ões) adicionado(s) a partir dos artigos favoritos. " + candidates.length + " favorito(s) disponível(is) neste baralho.";
+}
+
+function openMemoryCardEditor() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  const articleText = $("#law-article-text").textContent || "";
+  if (articleText.trim().length < 30) return;
+  $("#law-memory-create-prompt").value = "Explique, sem consultar, a regra principal de " + legalSelectedArticle + ".";
+  $("#law-memory-create-answer").value = "";
+  $("#law-memory-create-panel").classList.remove("hidden");
+  $("#law-memory-create-prompt").focus();
+  $("#law-memory-create-panel").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function saveMemoryCardFromLibrary() {
+  if (!legalSelectedLaw || !legalSelectedArticle) return;
+  const prompt = $("#law-memory-create-prompt").value.trim();
+  const answer = $("#law-memory-create-answer").value.trim();
+  const literalText = $("#law-article-text").textContent || "";
+  if (!prompt) {
+    $("#law-memory-create-prompt").focus();
+    return;
+  }
+  if (literalText.trim().length < 30) {
+    $("#law-reader-warning").textContent = "O texto deste artigo não está disponível para criar um cartão.";
+    $("#law-reader-warning").classList.remove("hidden");
+    return;
+  }
+  const card = {
+    id: "custom::" + legalSelectedLaw.id + "::" + legalSelectedArticle + "::" + Date.now(),
+    law_id: legalSelectedLaw.id,
+    article_key: legalSelectedArticle,
+    law_title: legalSelectedLaw.short_title || legalSelectedLaw.title,
+    article_label: legalSelectedArticle,
+    category: legalLawMatter(legalSelectedLaw),
+    source_url: legalSnapshot?.source_url_used || legalSelectedLaw.url || "https://www.gov.br/",
+    literal_text: literalText,
+    custom_answer: answer,
+    prompts: [{ text: prompt, type: "manual" }],
+    captured_at: legalSnapshot?.captured_at || null,
+    source_type: "manual"
+  };
+  const customCards = loadMemoryCustomCards();
+  customCards.push(card);
+  if (!saveMemoryCustomCards(customCards)) return;
+  $("#law-memory-create-panel").classList.add("hidden");
+  buildMemoryDeck();
+  $("#memory-source-filter").value = "personalizados";
+  updateMemoryFilters();
+  renderMemoryOverview();
+  showView("memory");
+  startMemorySession([memoryCards.find(item => item.id === card.id) || card]);
 }
 
 function memoryDueAt(card, progress) {
@@ -3778,8 +4041,17 @@ function renderMemoryOverview() {
 }
 
 function selectedMemoryPool() {
-  const category = $("#memory-category").value;
-  return memoryCards.filter(card => category === "todas" || card.category === category);
+  const category = $("#memory-category").value || "todas";
+  const source = $("#memory-source-filter")?.value || "todas";
+  const favoriteIds = loadMemoryFavoriteCardIds();
+  return memoryCards.filter(card => {
+    const categoryMatches = category === "todas" || card.category === category;
+    if (!categoryMatches) return false;
+    if (source === "favoritos") return favoriteIds.has(card.id);
+    if (source === "alteracoes") return card.source_type === "change";
+    if (source === "personalizados") return card.source_type === "manual";
+    return true;
+  });
 }
 
 function startMemorySession(onlyCards = null) {
@@ -3830,12 +4102,22 @@ function renderMemoryCard() {
   $("#memory-law").textContent = card.law_title;
   $("#memory-article").textContent = card.article_label;
   $("#memory-prompt").textContent = card.currentPrompt?.text || "Explique o conteúdo deste artigo com suas palavras.";
+  const originLabels = { legal: "Artigo da lei", manual: "Cartão pessoal", change: "Alteração legislativa" };
+  $("#memory-origin-tag").textContent = originLabels[card.source_type] || "Cartão";
+  $("#memory-origin-tag").classList.toggle("hidden", !card.source_type);
   $("#memory-recall").value = "";
   $("#memory-recall").readOnly = false;
   $("#memory-recall").classList.remove("is-locked");
   $("#memory-reveal").classList.remove("hidden");
   $("#memory-answer").classList.add("hidden");
   $("#memory-literal").textContent = card.literal_text;
+  $("#memory-literal-wrap").classList.toggle("hidden", card.source_type === "change");
+  $("#memory-custom-answer-wrap").classList.toggle("hidden", !card.custom_answer);
+  $("#memory-custom-answer").textContent = card.custom_answer || "";
+  $("#memory-change-comparison").classList.toggle("hidden", card.source_type !== "change");
+  $("#memory-previous-literal").textContent = card.previous_text || "Não há redação anterior registrada.";
+  $("#memory-current-literal").textContent = card.literal_text || "";
+  $("#memory-change-summary").textContent = card.change_summary || "Comparação registrada pelo monitor de alterações legislativas.";
   $("#memory-source").href = card.source_url;
   $("#memory-next-due").textContent = "";
 }
@@ -3982,9 +4264,15 @@ $("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#tab-article").addEventListener("click", () => showView("article"));
 $("#tab-multi-ce").addEventListener("click", () => showView("multi-ce"));
 $("#tab-before-after").addEventListener("click", () => showView("before-after"));
-$("#tab-memory").addEventListener("click", () => { renderMemoryOverview(); renderCEReviewOverview(); showView("memory"); });
+$("#tab-memory").addEventListener("click", () => { renderMemoryOverview(); renderCEReviewOverview(); showView("memory"); ensureMemorySourceSnapshots(); });
 $("#ce-review-start").addEventListener("click", startCEReviewSession);
 $("#start-memory").addEventListener("click", () => startMemorySession());
+$("#memory-category").addEventListener("change", updateMemoryFilters);
+$("#memory-source-filter").addEventListener("change", updateMemoryFilters);
+$("#memory-import-favorites").addEventListener("click", createMemoryCardsFromFavorites);
+$("#law-memory-create").addEventListener("click", openMemoryCardEditor);
+$("#law-memory-create-save").addEventListener("click", saveMemoryCardFromLibrary);
+$("#law-memory-create-cancel").addEventListener("click", () => $("#law-memory-create-panel").classList.add("hidden"));
 $("#memory-reveal").addEventListener("click", revealMemoryAnswer);
 $("#memory-again").addEventListener("click", () => rateMemoryCard("again"));
 $("#memory-hard").addEventListener("click", () => rateMemoryCard("hard"));
