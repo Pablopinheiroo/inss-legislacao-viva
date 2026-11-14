@@ -187,7 +187,7 @@
       "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
     }
   ],
-  "article_level_status": "Recorte artigo por artigo aplicado às normas cadastradas. A captura do Decreto 6.214 foi bloqueada por conter dispositivos revogados, misturados e atualizações posteriores ao edital. IN 128 e Código Penal também continuam bloqueados até validação de texto.",
+  "article_level_status": "Filtro aplicado por artigo às normas cadastradas. Decreto 6.214, IN 128/2022 e Código Penal permanecem bloqueados até que as capturas oficiais sejam completas e limpas.",
   "generated_at": "2026-11-14",
   "source_policy": {
     "primary": "Usar exclusivamente fonte oficial. Preferir texto compilado/consolidado do Planalto. Quando a norma não tiver consolidação disponível, usar o texto oficial do Planalto. Para a IN 128/2022, usar o Portal IN oficial do INSS.",
@@ -1224,11 +1224,11 @@
     "filtered": true,
     "removed_counts": {
       "data/questoes.json": 17,
-      "data/encontre-erro.json": 8,
-      "data/descubra-artigo.json": 6,
+      "data/encontre-erro.json": 13,
+      "data/descubra-artigo.json": 22,
       "data/afirmacoes-por-artigo.json": 5
     },
-    "note": "A lista ativa foi filtrada pelo artigo-resposta; no modo Descubra o Artigo também foram removidos itens cujas alternativas incluíam artigos fora do programa. source_url guarda a proveniência da captura original, enquanto preferred_source_url aponta para o Planalto/Portal IN.",
+    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial.",
     "active_counts": {
       "data/questoes.json": 152,
       "data/encontre-erro.json": 61,
@@ -1357,5 +1357,11 @@
       "norm": "LC 142/2013",
       "action": "Arts.1–10 mantidos; Art.11 de vigência excluído."
     }
-  ]
+  ],
+  "decreto6214_status": {
+    "source": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+    "source_status": "Planalto texto compilado localizado; apresenta versões antigas riscadas e alterações recentes",
+    "snapshot_status": "Captura antiga proveniente da Câmara, com atos iniciais e anexo misturados",
+    "action": "Estudo e questões bloqueados até recaptura direta e limpeza dos trechos revogados e históricos."
+  }
 }
