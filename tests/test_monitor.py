@@ -10,6 +10,18 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("Art. 2", result)
         self.assertIn("Um parágrafo", result["Art. 1"])
 
+    def test_article_heading_split_across_lines(self):
+        result = split_articles(
+            "CAPÍTULO\nSeção I\nArt.\n37\n.\nA administração pública seguirá os princípios.\n"
+            "Art.\n149.\nCompete à União instituir contribuições.\n"
+            "Art.\n193. A ordem social tem como base o trabalho."
+        )
+        self.assertIn("Art. 37", result)
+        self.assertIn("Art. 149", result)
+        self.assertIn("Art. 193", result)
+        self.assertIn("A administração pública", result["Art. 37"])
+        self.assertIn("Compete à União", result["Art. 149"])
+
     def test_article_with_letter_suffix(self):
         result = split_articles("Art. 1º-A Texto incluído.\nArt. 2º Outro.")
         self.assertIn("Art. 1-A", result)
