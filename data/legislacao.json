@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "monitor_version": 3,
-  "generated_at": "2026-11-14T10:04:23Z",
-  "last_check_attempt": "2026-11-14T10:04:23Z",
-  "last_successful_check": "2026-11-14T10:04:23Z",
+  "generated_at": "2026-11-14T10:30:04Z",
+  "last_check_attempt": "2026-11-14T10:30:04Z",
+  "last_successful_check": "2026-11-14T10:30:04Z",
   "status": "ok",
   "summary": "27 fontes oficiais consultadas; 0 capturas iniciais/atualizadas; 0 alteração(ões) detectada(s).",
   "baseline_updated_count": 0,
@@ -17,12 +17,26 @@
       "source_name": "Câmara dos Deputados — Constituição atualizada",
       "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
       "source_note": "A captura guarda somente os arts. 5º a 17, 37 a 41, 149 e 193 a 204, usados como recorte do edital.",
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 31,
       "parser_mode": "artigos",
       "snapshot_scope": "selected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -35,12 +49,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 3,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -53,12 +81,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 26,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -71,12 +113,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 254,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -89,12 +145,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 30,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -107,12 +177,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 69,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -125,12 +209,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -143,12 +241,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 9,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -161,12 +273,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 24,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -179,12 +305,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9422-24-dezembro-1996-349439-publicacaooriginal-1-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9422-24-dezembro-1996-349439-publicacaooriginal-1-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -197,12 +337,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -215,12 +369,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 21,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -233,12 +401,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -251,12 +433,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 6,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -269,12 +465,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -287,12 +497,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 15,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -305,12 +529,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 69,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -323,12 +561,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 13,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -341,12 +593,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 47,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -359,12 +625,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 9,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -377,12 +657,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 28,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -395,12 +689,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 35,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/emecon/2019/emendaconstitucional-103-12-novembro-2019-789412-publicacaooriginal-159409-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/emecon/2019/emendaconstitucional-103-12-novembro-2019-789412-publicacaooriginal-159409-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -413,12 +721,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 11,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -431,12 +753,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 110,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -449,12 +785,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 185,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -467,12 +817,26 @@
       "source_name": "Câmara dos Deputados — Legislação Informatizada",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 373,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/1999/decreto-3048-6-maio-1999-368532-normaatualizada-pe.html",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www2.camara.leg.br/legin/fed/decret/1999/decreto-3048-6-maio-1999-368532-normaatualizada-pe.html",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     },
@@ -485,12 +849,26 @@
       "source_name": "INSS — histórico oficial de alterações",
       "source_revision": "Histórico oficial atualizado em 12/08/2026; última alteração listada: IN PRES/INSS nº 212/2026",
       "source_note": "Acompanhamento pelo histórico oficial de atos modificadores, sem extração artigo por artigo.",
-      "last_checked": "2026-11-14T10:04:23Z",
+      "last_checked": "2026-11-14T10:30:04Z",
       "article_count": 0,
       "parser_mode": "index",
       "snapshot_scope": "official_change_index",
       "baseline_updated": false,
       "source_url_used": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+      "source_status": "ok",
+      "source_attempts": [
+        {
+          "url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+          "attempt": 1,
+          "outcome": "success",
+          "failure_type": null,
+          "http_status": 200,
+          "detail": "Conteúdo recebido e interpretado."
+        }
+      ],
+      "source_failure_count": 0,
+      "source_failure_type": null,
+      "retry_after_seconds": null,
       "new_changes_detected": 0,
       "error": null
     }
