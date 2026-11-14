@@ -150,3 +150,17 @@ A aba **Memorização ativa** reúne cartões por artigo a partir das perguntas 
 O estudante recebe uma pergunta ou um tema, tenta explicar o conteúdo sem consultar e depois revela o texto integral do artigo para comparar. A avaliação é feita pelo próprio estudante; o site não finge corrigir uma resposta livre.
 
 As opções **Esqueci**, **Lembrei em parte** e **Lembrei bem** organizam a próxima revisão em 10 minutos, 1 dia ou um intervalo crescente (3, 6, 12 dias e assim por diante, limitado a 30 dias). O progresso fica no armazenamento local do navegador, sem conta, servidor ou sincronização entre dispositivos. O modo não envia lembretes: os cartões aparecem como pendentes quando o site é aberto.
+
+
+## Precisão do histórico de alterações
+
+O monitor usa snapshots da versão 3. Além do texto integral de cada artigo, guarda uma estrutura hierárquica para comparar caput, parágrafos, incisos, alíneas e itens numerados. Quando apenas uma dessas partes muda, o Radar registra a parte correspondente, sem tratar automaticamente o artigo inteiro como alterado.
+
+A classificação separa três fatos diferentes:
+- **Diferença textual:** o conteúdo capturado está diferente, foi incluído ou deixou de ser localizado.
+- **Indicação de revogação:** só é marcada quando a fonte oficial apresenta uma anotação expressa de revogação no próprio dispositivo. A ausência de um trecho na captura não é considerada prova de revogação.
+- **Vigência:** fica como não confirmada quando a fonte não informa expressamente uma data de início. Uma data expressa de vigência futura ou já transcorrida é registrada separadamente, mas ainda exige conferência do ato modificador e de sua aplicação.
+
+As datas de publicação e de entrada em vigor só são preenchidas quando a fonte traz uma indicação textual clara. A data de assinatura ou a data que aparece na referência de uma lei alteradora não é tratada automaticamente como data de publicação ou de vigência. Quando não há informação suficiente, o campo permanece vazio em vez de receber uma data presumida.
+
+A mudança do parser exige uma nova captura-base das fontes. Na primeira execução com a versão 3, as capturas anteriores são substituídas por novas bases estruturadas, sem gerar alertas artificiais por causa da mudança técnica. O histórico de alertas já existente é preservado.
