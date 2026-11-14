@@ -23,6 +23,9 @@ let multiCEGroups = [];
 let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
 let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false };
+const MEMORY_PROGRESS_KEY = "radarLegislativo.memoryProgress.v1";
+let memoryCards = [];
+let memoryState = { cards: [], index: 0, ratings: [], revealed: false };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
 
@@ -1323,6 +1326,281 @@ function showBeforeAfterSummary() {
   $("#before-after-retry-mistakes").classList.toggle("hidden", mistakes.length === 0);
 }
 
+
+// -------------------- Memorização ativa com revisão espaçada --------------------
+function loadMemoryProgress() {
+  try {
+    const value = JSON.parse(localStorage.getItem(MEMORY_PROGRESS_KEY) || "{}");
+    return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+function saveMemoryProgress(progress) {
+  try {
+    localStorage.setItem(MEMORY_PROGRESS_KEY, JSON.stringify(progress));
+  } catch (error) {
+    console.warn("Não foi possível salvar o progresso de memorização:", error);
+    $("#memory-note").textContent = "O navegador não permitiu salvar o progresso. Confira as permissões de armazenamento do site.";
+  }
+}
+
+function buildMemoryDeck() {
+  const cards = new Map();
+
+  function getCard(lawId, articleKey, details) {
+    const id = lawId + "::" + articleKey;
+    if (!cards.has(id)) {
+      cards.set(id, {
+        id,
+        law_id: lawId,
+        article_key: articleKey,
+        law_title: details.law_title || "Norma",
+        article_label: details.article_label || articleKey,
+        category: details.category || "Direito Previdenciário",
+        source_url: details.source_url || "https://www.gov.br/",
+        literal_text: details.literal_text || "",
+        prompts: [],
+        captured_at: details.captured_at || null
+      });
+    }
+    const card = cards.get(id);
+    if (!card.literal_text && details.literal_text) card.literal_text = details.literal_text;
+    if (details.source_url) card.source_url = details.source_url;
+    if (details.law_title) card.law_title = details.law_title;
+    if (details.article_label) card.article_label = details.article_label;
+    if (details.category) card.category = details.category;
+    return card;
+  }
+
+  // Usa as perguntas autorais já validadas pelo modo Descubra o artigo.
+  articleQuestions.forEach(item => {
+    const correctOption = item.options?.find(option => option.article_key === item.answer_article_key);
+    const card = getCard(item.law_id, item.answer_article_key, {
+      law_title: item.law_title,
+      article_label: correctOption?.label || item.answer_article_key,
+      category: item.category,
+      source_url: item.source_url,
+      literal_text: item.literal_text,
+      captured_at: item.snapshot_captured_at
+    });
+    if (item.question && !card.prompts.some(prompt => prompt.text === item.question)) {
+      card.prompts.push({ text: item.question, type: "pergunta" });
+    }
+  });
+
+  // Completa o conjunto com temas e afirmações dos artigos já validados.
+  multiCEGroups.forEach(group => {
+    const card = getCard(group.law_id, group.article_key, {
+      law_title: group.law_title,
+      article_label: group.article_label,
+      category: group.category,
+      source_url: group.source_url,
+      literal_text: group.literal_text,
+      captured_at: group.snapshot_captured_at
+    });
+    const topicPrompt = "Explique, sem consultar, o que a legislação estabelece sobre: " + group.topic + ".";
+    if (!card.prompts.some(prompt => prompt.text === topicPrompt)) {
+      card.prompts.push({ text: topicPrompt, type: "tema" });
+    }
+    (group.statements || []).forEach(statement => {
+      const text = "Lembre e explique a regra relacionada a esta afirmação: " + statement.prompt;
+      if (!card.prompts.some(prompt => prompt.text === text)) {
+        card.prompts.push({ text, type: "afirmação" });
+      }
+    });
+  });
+
+  memoryCards = [...cards.values()].filter(card =>
+    card.literal_text && card.prompts.length && card.article_key
+  );
+
+  const select = $("#memory-category");
+  select.replaceChildren();
+  const all = document.createElement("option");
+  all.value = "todas";
+  all.textContent = "Todas as matérias";
+  select.append(all);
+  [...new Set(memoryCards.map(card => card.category))]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"))
+    .forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      select.append(option);
+    });
+
+  $("#start-memory").disabled = memoryCards.length === 0;
+  renderMemoryOverview();
+
+  const suspended = articleQuestions.length + multiCEGroups.length;
+  $("#memory-note").textContent = memoryCards.length
+    + " cartões de artigos disponíveis, montados a partir dos bancos de estudo e conferidos com as capturas salvas. As perguntas podem variar a cada revisão."
+    + (suspended ? " O texto exibido é o artigo inteiro, não apenas a frase da pergunta." : "");
+  if (!memoryCards.length) {
+    $("#memory-note").textContent = "Nenhum cartão pôde ser montado. Confira se os modos Descubra o artigo e Várias afirmações conseguiram carregar os artigos.";
+  }
+}
+
+function memoryDueAt(card, progress) {
+  const entry = progress[card.id];
+  if (!entry || !entry.next_due) return 0;
+  const value = new Date(entry.next_due).getTime();
+  return Number.isFinite(value) ? value : 0;
+}
+
+function renderMemoryOverview() {
+  const progress = loadMemoryProgress();
+  const now = Date.now();
+  const due = memoryCards.filter(card => memoryDueAt(card, progress) <= now).length;
+  const seen = memoryCards.filter(card => Number(progress[card.id]?.review_count) > 0).length;
+  $("#memory-total").textContent = String(memoryCards.length);
+  $("#memory-due").textContent = String(due);
+  $("#memory-seen").textContent = String(seen);
+}
+
+function selectedMemoryPool() {
+  const category = $("#memory-category").value;
+  return memoryCards.filter(card => category === "todas" || card.category === category);
+}
+
+function startMemorySession(onlyCards = null) {
+  let pool = onlyCards ? [...onlyCards] : selectedMemoryPool();
+  if (!pool.length) {
+    $("#memory-note").textContent = "Não há cartões disponíveis para essa seleção.";
+    return;
+  }
+
+  const progress = loadMemoryProgress();
+  pool.sort((a, b) => {
+    const dueDifference = memoryDueAt(a, progress) - memoryDueAt(b, progress);
+    if (dueDifference !== 0) return dueDifference;
+    return a.law_title.localeCompare(b.law_title, "pt-BR");
+  });
+
+  const length = $("#memory-length").value;
+  const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
+  const selected = onlyCards ? pool : pool.slice(0, amount);
+  memoryState = {
+    cards: shuffle(selected).map(card => ({
+      ...card,
+      currentPrompt: card.prompts[Math.floor(Math.random() * card.prompts.length)]
+    })),
+    index: 0,
+    ratings: [],
+    revealed: false
+  };
+
+  $("#memory-welcome").classList.add("hidden");
+  $("#memory-summary").classList.add("hidden");
+  $("#memory-card").classList.remove("hidden");
+  renderMemoryCard();
+}
+
+function renderMemoryCard() {
+  const card = memoryState.cards[memoryState.index];
+  if (!card) return;
+  memoryState.revealed = false;
+  $("#memory-category-label").textContent = card.category;
+  $("#memory-progress").textContent = "Cartão " + (memoryState.index + 1) + " de " + memoryState.cards.length;
+  $("#memory-law").textContent = card.law_title;
+  $("#memory-article").textContent = card.article_label;
+  $("#memory-prompt").textContent = card.currentPrompt?.text || "Explique o conteúdo deste artigo com suas palavras.";
+  $("#memory-recall").value = "";
+  $("#memory-recall").readOnly = false;
+  $("#memory-recall").classList.remove("is-locked");
+  $("#memory-reveal").classList.remove("hidden");
+  $("#memory-answer").classList.add("hidden");
+  $("#memory-literal").textContent = card.literal_text;
+  $("#memory-source").href = card.source_url;
+  $("#memory-next-due").textContent = "";
+}
+
+function revealMemoryAnswer() {
+  if (memoryState.revealed) return;
+  const card = memoryState.cards[memoryState.index];
+  if (!card) return;
+  memoryState.revealed = true;
+  $("#memory-recall").readOnly = true;
+  $("#memory-recall").classList.add("is-locked");
+  $("#memory-reveal").classList.add("hidden");
+  $("#memory-answer").classList.remove("hidden");
+  $("#memory-answer").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function rateMemoryCard(rating) {
+  if (!memoryState.revealed) return;
+  const card = memoryState.cards[memoryState.index];
+  if (!card) return;
+  const progress = loadMemoryProgress();
+  const previous = progress[card.id] || {};
+  const previousInterval = Number(previous.interval_days) || 0;
+  const previousRepetitions = Number(previous.repetitions) || 0;
+  const now = Date.now();
+  let intervalDays = 0;
+  let dueTime = now;
+
+  if (rating === "again") {
+    dueTime = now + 10 * 60 * 1000;
+    intervalDays = 0;
+  } else if (rating === "hard") {
+    intervalDays = previousInterval < 1 ? 1 : Math.min(30, Math.max(2, Math.round(previousInterval * 1.2)));
+    dueTime = now + intervalDays * 24 * 60 * 60 * 1000;
+  } else {
+    intervalDays = previousInterval < 1 ? 3 : Math.min(30, previousInterval * 2);
+    dueTime = now + intervalDays * 24 * 60 * 60 * 1000;
+  }
+
+  progress[card.id] = {
+    review_count: (Number(previous.review_count) || 0) + 1,
+    repetitions: rating === "good" ? previousRepetitions + 1 : 0,
+    interval_days: intervalDays,
+    next_due: new Date(dueTime).toISOString(),
+    last_reviewed: new Date(now).toISOString(),
+    last_rating: rating
+  };
+  saveMemoryProgress(progress);
+  memoryState.ratings.push({ card, rating, next_due: progress[card.id].next_due });
+  renderMemoryOverview();
+
+  if (memoryState.index + 1 < memoryState.cards.length) {
+    memoryState.index += 1;
+    renderMemoryCard();
+  } else {
+    showMemorySummary();
+  }
+}
+
+function showMemorySummary() {
+  $("#memory-card").classList.add("hidden");
+  $("#memory-summary").classList.remove("hidden");
+  const total = memoryState.ratings.length;
+  const again = memoryState.ratings.filter(item => item.rating === "again");
+  const partial = memoryState.ratings.filter(item => item.rating === "hard");
+  const good = memoryState.ratings.filter(item => item.rating === "good");
+  $("#memory-score").textContent = total + " cartão(ões) revisado(s)";
+  $("#memory-score-note").textContent = "Você marcou " + good.length + " como lembrou bem, " + partial.length + " como lembrou em parte e " + again.length + " como esquecido.";
+  const detail = $("#memory-summary-detail");
+  detail.replaceChildren();
+  [
+    { title: "Esqueci", count: again.length, note: "Volta para revisão em 10 minutos." },
+    { title: "Lembrei em parte", count: partial.length, note: "Volta para revisão em 1 dia." },
+    { title: "Lembrei bem", count: good.length, note: "O intervalo aumenta gradualmente, até 30 dias." }
+  ].forEach(item => {
+    const row = document.createElement("div");
+    row.className = "memory-summary-row";
+    const strong = document.createElement("strong");
+    strong.textContent = item.title + ": " + item.count;
+    const span = document.createElement("span");
+    span.textContent = item.note;
+    row.append(strong, span);
+    detail.append(row);
+  });
+  $("#memory-retry-again").classList.toggle("hidden", again.length === 0);
+  renderMemoryOverview();
+}
+
 function showView(view) {
   const quiz = view === "quiz";
   const cloze = view === "cloze";
@@ -1330,6 +1608,7 @@ function showView(view) {
   const article = view === "article";
   const multiCE = view === "multi-ce";
   const beforeAfter = view === "before-after";
+  const memory = view === "memory";
   const radar = view === "radar";
   $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
@@ -1338,6 +1617,7 @@ function showView(view) {
   $("#article-view").classList.toggle("hidden", !article);
   $("#multi-ce-view").classList.toggle("hidden", !multiCE);
   $("#before-after-view").classList.toggle("hidden", !beforeAfter);
+  $("#memory-view").classList.toggle("hidden", !memory);
   $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
   $("#tab-cloze").classList.toggle("active", cloze);
@@ -1345,7 +1625,8 @@ function showView(view) {
   $("#tab-article").classList.toggle("active", article);
   $("#tab-multi-ce").classList.toggle("active", multiCE);
   $("#tab-before-after").classList.toggle("active", beforeAfter);
-  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter] ].forEach(([id, active]) => {
+  $("#tab-memory").classList.toggle("active", memory);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze], ["tab-find-error", findError], ["tab-article", article], ["tab-multi-ce", multiCE], ["tab-before-after", beforeAfter], ["tab-memory", memory] ].forEach(([id, active]) => {
     if (active) $("#" + id).setAttribute("aria-current", "page");
     else $("#" + id).removeAttribute("aria-current");
   });
@@ -1355,6 +1636,7 @@ function showView(view) {
   else if (article) $("#article-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (multiCE) $("#multi-ce-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else if (beforeAfter) $("#before-after-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (memory) $("#memory-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -1372,6 +1654,17 @@ $("#tab-find-error").addEventListener("click", () => showView("find-error"));
 $("#tab-article").addEventListener("click", () => showView("article"));
 $("#tab-multi-ce").addEventListener("click", () => showView("multi-ce"));
 $("#tab-before-after").addEventListener("click", () => showView("before-after"));
+$("#tab-memory").addEventListener("click", () => { renderMemoryOverview(); showView("memory"); });
+$("#start-memory").addEventListener("click", () => startMemorySession());
+$("#memory-reveal").addEventListener("click", revealMemoryAnswer);
+$("#memory-again").addEventListener("click", () => rateMemoryCard("again"));
+$("#memory-hard").addEventListener("click", () => rateMemoryCard("hard"));
+$("#memory-good").addEventListener("click", () => rateMemoryCard("good"));
+$("#memory-restart").addEventListener("click", () => startMemorySession());
+$("#memory-retry-again").addEventListener("click", () => {
+  const missedIds = new Set(memoryState.ratings.filter(item => item.rating === "again").map(item => item.card.id));
+  startMemorySession(memoryCards.filter(card => missedIds.has(card.id)));
+});
 $("#start-before-after").addEventListener("click", () => startBeforeAfterGame());
 $("#before-after-submit").addEventListener("click", confirmBeforeAfterAnswer);
 $("#before-after-next").addEventListener("click", nextBeforeAfterQuestion);
@@ -1428,5 +1721,4 @@ loadDashboard();
 loadQuestionBank();
 loadClozeLaws();
 loadFindErrorBank();
-loadArticleGameBank();
-loadMultiCEBank();
+Promise.all([loadArticleGameBank(), loadMultiCEBank()]).then(buildMemoryDeck);
