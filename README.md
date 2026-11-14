@@ -190,9 +190,9 @@ Ainda não ativamos essa alternativa porque ela exige configuração e revisão 
 
 ## Área Lei Seca — biblioteca e leitor
 
-A navegação principal inclui a área **Lei Seca**, separada dos jogos. Ela carrega o catálogo de normas habilitadas no arquivo data/laws.json e abre os arquivos de captura em data/snapshots/.
+A navegação principal inclui a área **Lei Seca**, separada dos jogos. Ela carrega todas as normas cadastradas em data/laws.json — inclusive as que estiverem com o monitoramento desativado — e abre os arquivos de captura em data/snapshots/.
 
-Na biblioteca, é possível buscar normas por nome ou assunto e filtrar por matéria. Ao selecionar uma norma com captura por artigos, o leitor permite:
+Na biblioteca, as normas são agrupadas primeiro por matéria e depois por assunto. O catálogo atual possui 27 normas, distribuídas entre Direito Constitucional, Direito Administrativo, Ética no Serviço Público e Direito Previdenciário. É possível buscar por nome, tipo, matéria ou assunto e filtrar por matéria. Ao selecionar uma norma com captura por artigos, o leitor permite:
 - escolher um artigo e avançar ou voltar entre os dispositivos;
 - pesquisar palavras e expressões dentro do texto dos artigos daquela norma;
 - marcar artigos como estudados;
