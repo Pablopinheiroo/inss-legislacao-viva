@@ -18,6 +18,7 @@ let clozeReviewSessionSeen = new Set();
 let selectedClozeText = "";
 let quizState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false };
 let simulatorState = { questions: [], index: 0, responses: [], finished: false };
+let simulatorTimerInterval=null;
 let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false, reviewMode: false, reviewFailed: false };
 let findErrorCaptureNote = "";
@@ -2733,11 +2734,15 @@ async function loadQuestionBank() {
     updateQuizFilters();
     note.textContent = questionBank.length + " itens disponíveis no banco inicial. Use os filtros para escolher matéria, assunto, norma e artigo.";
     const simulatorNote=$("#simulado-bank-note");
-    if(simulatorNote)simulatorNote.textContent=questionBank.length>=10
-      ?questionBank.length+" questões disponíveis. Cada simulado seleciona 10 itens aleatórios, sem limite de tempo."
-      :"O banco tem "+questionBank.length+" questão(ões). São necessárias pelo menos 10 para iniciar um simulado.";
+    if(simulatorNote)simulatorNote.textContent=questionBank.length>=20
+      ?questionBank.length+" questões disponíveis. Simulado tradicional: 10 questões sem cronômetro. Simulado rápido: 20 questões com 20 minutos."
+      :questionBank.length>=10
+        ?questionBank.length+" questões disponíveis. O simulado tradicional está liberado; o rápido precisa de pelo menos 20 questões."
+        :"O banco tem "+questionBank.length+" questão(ões). São necessárias pelo menos 10 para o tradicional e 20 para o rápido.";
     const simulatorStart=$("#start-simulado");
     if(simulatorStart)simulatorStart.disabled=questionBank.length<10;
+    const quickStart=$("#start-simulado-rapido");
+    if(quickStart)quickStart.disabled=questionBank.length<20;
     $("#start-quiz").disabled = questionBank.length === 0;
     updateLegalQuizButton();
     renderCEReviewOverview();
@@ -4279,18 +4284,55 @@ function showMemorySummary() {
 
 
 /* -------------------- Simulados -------------------- */
-function startSimulado(){
-  if(questionBank.length<10){
-    $("#simulado-bank-note").textContent="Ainda não há 10 questões disponíveis no banco para montar um simulado.";
+const SIMULADO_QUICK_DURATION_SECONDS=20*60;
+function formatSimuladoClock(totalSeconds){
+  const safe=Math.max(0,Math.floor(Number(totalSeconds)||0));
+  const minutes=Math.floor(safe/60),seconds=safe%60;
+  return String(minutes).padStart(2,"0")+":"+String(seconds).padStart(2,"0");
+}
+function startSimulado(options={}){
+  const quick=Boolean(options.quick);
+  const total=quick?20:10;
+  if(questionBank.length<total){
+    $("#simulado-bank-note").textContent="Ainda não há "+total+" questões disponíveis para iniciar este simulado.";
     return;
   }
-  const items=shuffle([...questionBank]).slice(0,10);
-  simulatorState={questions:items,index:0,responses:Array(10).fill(null),finished:false};
-  beginActivitySession("simulado",items[0]||{});
+  if(simulatorTimerInterval){clearInterval(simulatorTimerInterval);simulatorTimerInterval=null;}
+  const items=shuffle([...questionBank]).slice(0,total);
+  const now=Date.now();
+  simulatorState={
+    questions:items,index:0,responses:Array(total).fill(null),finished:false,
+    type:quick?"quick":"regular",startedAt:now,
+    deadline:quick?now+SIMULADO_QUICK_DURATION_SECONDS*1000:null,
+    timeExpired:false
+  };
+  beginActivitySession("simulado",{...(items[0]||{}),simulado_total:total,simulado_type:quick?"rápido":"tradicional"});
   $("#simulado-welcome").classList.add("hidden");
   $("#simulado-result").classList.add("hidden");
   $("#simulado-card").classList.remove("hidden");
   renderSimuladoQuestion();
+  startSimuladoTimer();
+}
+function startSimuladoTimer(){
+  const wrap=$("#simulado-timer-wrap");
+  if(wrap)wrap.classList.toggle("hidden",simulatorState.type!=="quick");
+  if(simulatorState.type!=="quick")return;
+  if(simulatorTimerInterval)clearInterval(simulatorTimerInterval);
+  updateSimuladoTimer();
+  if(!simulatorState.finished)simulatorTimerInterval=setInterval(updateSimuladoTimer,1000);
+}
+function updateSimuladoTimer(){
+  if(simulatorState.finished||simulatorState.type!=="quick"||!simulatorState.deadline)return;
+  const remaining=Math.max(0,Math.ceil((simulatorState.deadline-Date.now())/1000));
+  const timer=$("#simulado-timer");
+  if(timer)timer.textContent=formatSimuladoClock(remaining);
+  const wrap=$("#simulado-timer-wrap");
+  if(wrap)wrap.classList.toggle("is-urgent",remaining<=60);
+  if(remaining<=0){
+    simulatorState.timeExpired=true;
+    if(simulatorTimerInterval){clearInterval(simulatorTimerInterval);simulatorTimerInterval=null;}
+    finishSimulado({timeExpired:true});
+  }
 }
 function renderSimuladoNavigator(){
   const nav=$("#simulado-question-nav");if(!nav)return;
@@ -4301,7 +4343,7 @@ function renderSimuladoNavigator(){
     if(index===simulatorState.index)button.classList.add("is-current");
     if(simulatorState.responses[index]!==null)button.classList.add("is-answered");
     button.textContent=String(index+1);
-    button.setAttribute("aria-label","Ir para questão "+(index+1)+(simulatorState.responses[index]!==null?", respondida":" , sem resposta"));
+    button.setAttribute("aria-label","Ir para questão "+(index+1)+(simulatorState.responses[index]!==null?", respondida":", sem resposta"));
     button.setAttribute("aria-current",index===simulatorState.index?"step":"false");
     button.addEventListener("click",()=>{simulatorState.index=index;renderSimuladoQuestion();});
     nav.append(button);
@@ -4310,9 +4352,10 @@ function renderSimuladoNavigator(){
 function renderSimuladoQuestion(){
   const item=simulatorState.questions[simulatorState.index];
   if(!item)return;
-  const index=simulatorState.index,response=simulatorState.responses[index];
-  $("#simulado-progress-label").textContent="Questão "+(index+1)+" de 10";
-  $("#simulado-progress-fill").style.width=((index+1)/10*100)+"%";
+  const index=simulatorState.index,total=simulatorState.questions.length,response=simulatorState.responses[index];
+  $("#simulado-progress-label").textContent="Questão "+(index+1)+" de "+total;
+  $("#simulado-progress-fill").style.width=((index+1)/total*100)+"%";
+  $("#simulado-progress-fill").parentElement.setAttribute("aria-valuemax",String(total));
   $("#simulado-progress-fill").parentElement.setAttribute("aria-valuenow",String(index+1));
   $("#simulado-category").textContent=item.category||"Questão";
   $("#simulado-law").textContent=item.law_title||"Norma não informada";
@@ -4327,25 +4370,30 @@ function renderSimuladoQuestion(){
     ?"Selecione Certo ou Errado. Você pode pular esta questão e voltar depois."
     :"Resposta registrada. O gabarito será revelado somente ao finalizar o simulado.";
   $("#simulado-previous").disabled=index===0;
-  $("#simulado-next").classList.toggle("hidden",index===9);
-  $("#simulado-finish").textContent=index===9?"Finalizar simulado":"Finalizar agora";
+  $("#simulado-next").classList.toggle("hidden",index===total-1);
+  $("#simulado-finish").textContent=simulatorState.type==="quick"
+    ?"Finalizar antecipadamente":index===total-1?"Finalizar simulado":"Finalizar agora";
   $("#simulado-clear-answer").classList.toggle("hidden",response===null);
+  if(simulatorState.type==="quick")updateSimuladoTimer();
   renderSimuladoNavigator();
 }
 function chooseSimuladoAnswer(value){
   if(simulatorState.finished||!simulatorState.questions.length)return;
+  if(simulatorState.type==="quick"&&simulatorState.deadline<=Date.now()){updateSimuladoTimer();return;}
   const index=simulatorState.index,item=simulatorState.questions[index];
   simulatorState.responses[index]={chosen:Boolean(value),correct:Boolean(value)===Boolean(item.answer)};
   renderSimuladoQuestion();
 }
 function clearSimuladoAnswer(){
   if(simulatorState.finished||!simulatorState.questions.length)return;
+  if(simulatorState.type==="quick"&&simulatorState.deadline<=Date.now()){updateSimuladoTimer();return;}
   simulatorState.responses[simulatorState.index]=null;
   renderSimuladoQuestion();
 }
 function moveSimuladoQuestion(direction){
   if(simulatorState.finished)return;
-  simulatorState.index=Math.max(0,Math.min(9,simulatorState.index+direction));
+  if(simulatorState.type==="quick"&&simulatorState.deadline<=Date.now()){updateSimuladoTimer();return;}
+  simulatorState.index=Math.max(0,Math.min(simulatorState.questions.length-1,simulatorState.index+direction));
   renderSimuladoQuestion();
 }
 function createSimuladoResultCard(item,response,index){
@@ -4373,12 +4421,25 @@ function createSimuladoResultCard(item,response,index){
   }
   return card;
 }
-function finishSimulado(){
-  if(simulatorState.finished||simulatorState.questions.length!==10)return;
+function finishSimulado(options={}){
+  if(simulatorState.finished||!simulatorState.questions.length)return;
+  const total=simulatorState.questions.length;
   const answered=simulatorState.responses.filter(response=>response!==null).length;
-  const blanks=10-answered;
-  if(blanks>0&&!window.confirm("Você deixou "+blanks+" questão(ões) em branco. Deseja finalizar mesmo assim?"))return;
+  const blanks=total-answered;
+  const timeExpired=Boolean(options.timeExpired);
+  if(!timeExpired){
+    let confirmation="";
+    if(simulatorState.type==="quick"){
+      confirmation="Deseja finalizar o simulado rápido agora?";
+      if(blanks)confirmation+=" Ainda há "+blanks+" questão(ões) em branco.";
+    }else if(blanks){
+      confirmation="Você deixou "+blanks+" questão(ões) em branco. Deseja finalizar mesmo assim?";
+    }
+    if(confirmation&&!window.confirm(confirmation))return;
+  }
   simulatorState.finished=true;
+  simulatorState.timeExpired=timeExpired;
+  if(simulatorTimerInterval){clearInterval(simulatorTimerInterval);simulatorTimerInterval=null;}
   let correct=0,wrong=0;
   simulatorState.questions.forEach((item,index)=>{
     const response=simulatorState.responses[index];
@@ -4386,16 +4447,21 @@ function finishSimulado(){
     if(response.correct)correct++;else wrong++;
     const chosen=response.chosen?"Certo":"Errado";
     recordActivityAnswer("simulado",item,item.statement,chosen,response.correct,item.answer?"Certo":"Errado",
-      response.correct?"correct":"incorrect",{simulado_question:index+1});
+      response.correct?"correct":"incorrect",{simulado_question:index+1,simulado_type:simulatorState.type,time_expired:timeExpired});
     if(response.correct)recordCEReviewSuccess(item);
     else recordCEReviewMiss(item,response.chosen,false);
   });
   finishActivitySession("completed");
-  const percentage=Math.round(correct/10*100);
-  $("#simulado-score").textContent=correct+" de 10 acertos";
-  $("#simulado-score-note").textContent="Aproveitamento: "+percentage+"%. "+(blanks
-    ?blanks+" questão(ões) ficaram em branco. "
-    :"")+"O resultado considera as 10 questões do simulado.";
+  const percentage=Math.round(correct/total*100);
+  const elapsedSeconds=Math.max(0,Math.min(simulatorState.type==="quick"?SIMULADO_QUICK_DURATION_SECONDS:Infinity,
+    Math.floor((Date.now()-simulatorState.startedAt)/1000)));
+  const scoreNote=["Aproveitamento: "+percentage+"%."];
+  if(blanks)scoreNote.push(blanks+" questão(ões) ficaram em branco.");
+  if(simulatorState.type==="quick"){
+    scoreNote.push(timeExpired?"Tempo esgotado; o simulado foi finalizado automaticamente.":"Tempo utilizado: "+formatSimuladoClock(elapsedSeconds)+".");
+  }
+  $("#simulado-score").textContent=correct+" de "+total+" acertos";
+  $("#simulado-score-note").textContent=scoreNote.join(" ");
   $("#simulado-stat-correct").textContent=String(correct);
   $("#simulado-stat-wrong").textContent=String(wrong);
   $("#simulado-stat-blank").textContent=String(blanks);
@@ -4970,6 +5036,8 @@ function beginActivitySession(mode,context={}){
   activityCurrentSession={
     id,mode,mode_label:info.label,started_at:new Date().toISOString(),ended_at:null,status:"active",
     review_mode:Boolean(context.reviewMode||context.sourceType==="review"||context.review_id||mode==="memory"),
+    simulado_total:mode==="simulado"?Math.max(0,Number(context.simulado_total)||0):0,
+    simulado_type:mode==="simulado"?String(context.simulado_type||"tradicional"):"",
     answers_total:0,correct_count:0,incorrect_count:0,unknown_count:0,partial_count:0,
     self_assessed_count:0,activity_count:0,categories:meta.category?[meta.category]:[],
     topics:meta.topic?[meta.topic]:[],law_ids:meta.law_id?[meta.law_id]:[],
@@ -5013,7 +5081,7 @@ function finishActivitySession(status="completed"){
   if(index>=0)sessions[index]={...activityCurrentSession};else sessions.push({...activityCurrentSession});
   saveActivitySessions(sessions);
   try{if(localStorage.getItem(ACTIVITY_ACTIVE_SESSION_KEY)===activityCurrentSession.id)localStorage.removeItem(ACTIVITY_ACTIVE_SESSION_KEY);}catch(_){}
-  if(status==="completed"&&activityCurrentSession.mode==="simulado"&&Number(activityCurrentSession.answers_total)>=10){
+  if(status==="completed"&&activityCurrentSession.mode==="simulado"&&Number(activityCurrentSession.simulado_total)>0&&Number(activityCurrentSession.answers_total)>=Number(activityCurrentSession.simulado_total)){
     awardExperience(XP_REWARDS.simulatorCompletion,"simulado-concluido::"+activityCurrentSession.id,"Simulado concluído",
       {session_id:activityCurrentSession.id,answers:activityCurrentSession.answers_total||0});
   }
@@ -5822,6 +5890,7 @@ function initializeAchievements(){
 $("#achievement-daily-goal-save").addEventListener("click",saveDailyStudyGoal);
 $("#tab-achievements").addEventListener("click",()=>{showView("achievements");refreshAchievementProgress();});
 $("#start-simulado").addEventListener("click",startSimulado);
+$("#start-simulado-rapido").addEventListener("click",()=>startSimulado({quick:true}));
 $("#simulado-answer-true").addEventListener("click",()=>chooseSimuladoAnswer(true));
 $("#simulado-answer-false").addEventListener("click",()=>chooseSimuladoAnswer(false));
 $("#simulado-clear-answer").addEventListener("click",clearSimuladoAnswer);
