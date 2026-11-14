@@ -4898,6 +4898,7 @@ function recordActivityAnswer(mode,item,prompt,chosen,correct,expected,outcome,e
       {mode,mode_label:event.mode_label,question_id:event.question_id,review_bonus:reviewBonus});
   }
   if($("#history-view")&&!$("#history-view").classList.contains("hidden"))renderActivityHistory();
+  if(typeof refreshAchievementProgress==="function")refreshAchievementProgress();
   return event;
 }
 function recordActivityArticleStudy(law,article,isStudied){
@@ -4920,6 +4921,7 @@ function recordActivityArticleStudy(law,article,isStudied){
       {law_id:law?.id||"",law_title:context.law_title,article});
   }
   finishActivitySession("completed");
+  if(isStudied&&typeof refreshAchievementProgress==="function")refreshAchievementProgress();
 }
 function currentClozePrompt(current,blank){
   const source=String(current?.text||"");
@@ -5322,7 +5324,7 @@ function renderExperienceWidget(){
   const track=fill.parentElement;if(track)track.setAttribute("aria-valuenow",String(level.progress_percent));
   if(widget)widget.setAttribute("aria-label","Nível "+level.level+". "+data.total_xp+" pontos de experiência. Faltam "+level.remaining_xp+" XP para o próximo nível.");
 }
-function awardExperience(amount,awardId,reason,details={}){
+function awardExperience(amount,awardId,reason,details={},options={}){
   const points=Math.max(0,Math.floor(Number(amount)||0));if(!points||!awardId)return false;
   const data=loadExperienceData();if(data.awarded_ids.includes(awardId))return false;
   const previousLevel=calculateExperienceLevel(data.total_xp).level;
@@ -5333,10 +5335,297 @@ function awardExperience(amount,awardId,reason,details={}){
   data.ledger.push(record);if(data.ledger.length>XP_LEDGER_LIMIT)data.ledger=data.ledger.slice(-XP_LEDGER_LIMIT);
   data.updated_at=record.occurred_at;if(!saveExperienceData(data))return false;
   const nextLevel=calculateExperienceLevel(data.total_xp).level;renderExperienceWidget();
-  showExperienceToast(points,nextLevel>previousLevel,nextLevel,reason);return true;
+  if(!options.silent)showExperienceToast(points,nextLevel>previousLevel,nextLevel,reason);
+  return true;
 }
 function getExperienceSummary(){
   const data=loadExperienceData(),level=calculateExperienceLevel(data.total_xp);
   return {...level,awards:data.ledger,updated_at:data.updated_at};
 }
 renderExperienceWidget();
+ 
+/* -------------------- Conquistas, metas e desafios -------------------- */
+const ACHIEVEMENTS_STORAGE_KEY="radarLegislativo.achievements.v1";
+const DEFAULT_DAILY_STUDY_GOAL=10;
+const ACHIEVEMENT_DEFINITIONS=[
+  {id:"first-activity",name:"Primeiro passo",description:"Registre sua primeira atividade de estudo.",icon:"✦",title:"Iniciante dedicado",category:"Começo",test:m=>m.activities>=1},
+  {id:"ten-answers",name:"Ritmo de estudo",description:"Responda a 10 questões.",icon:"✓",title:"Estudante em ação",category:"Questões",test:m=>m.answers>=10},
+  {id:"hundred-answers",name:"Centena de questões",description:"Responda a 100 questões.",icon:"100",title:"Praticante constante",category:"Questões",test:m=>m.answers>=100},
+  {id:"five-hundred-answers",name:"Quinhentas questões",description:"Responda a 500 questões.",icon:"★",title:"Especialista em treino",category:"Questões",test:m=>m.answers>=500},
+  {id:"accuracy-ten",name:"Precisão de ouro",description:"Acerte 10 questões seguidas.",icon:"◎",title:"Precisão de ouro",category:"Desempenho",test:m=>m.bestCorrectStreak>=10},
+  {id:"review-ten",name:"Volta por cima",description:"Responda a 10 questões em modo de revisão.",icon:"↻",title:"Mestre da revisão",category:"Revisão",test:m=>m.reviewAnswers>=10},
+  {id:"review-fifty",name:"Revisão de ferro",description:"Responda a 50 questões em modo de revisão.",icon:"⟳",title:"Memória reforçada",category:"Revisão",test:m=>m.reviewAnswers>=50},
+  {id:"articles-ten",name:"Lei na ponta da língua",description:"Conclua o estudo de 10 artigos diferentes.",icon:"§",title:"Leitor da lei",category:"Lei Seca",test:m=>m.articles>=10},
+  {id:"streak-three",name:"Três dias em movimento",description:"Estude em 3 dias consecutivos.",icon:"3",title:"Constância crescente",category:"Constância",test:m=>m.currentStreak>=3},
+  {id:"streak-seven",name:"Uma semana de constância",description:"Estude em 7 dias consecutivos.",icon:"7",title:"Disciplina semanal",category:"Constância",test:m=>m.currentStreak>=7},
+  {id:"streak-thirty",name:"Um mês de dedicação",description:"Estude em 30 dias consecutivos.",icon:"30",title:"Disciplina exemplar",category:"Constância",test:m=>m.currentStreak>=30},
+  {id:"daily-goal-once",name:"Meta alcançada",description:"Complete sua meta diária em pelo menos um dia.",icon:"✓",title:"Meta cumprida",category:"Metas",test:m=>m.goalDays>=1},
+  {id:"daily-goal-seven",name:"Sete metas cumpridas",description:"Complete sua meta diária em 7 dias diferentes.",icon:"◆",title:"Compromisso com o estudo",category:"Metas",test:m=>m.goalDays>=7},
+  {id:"level-five",name:"Subindo de nível",description:"Alcance o nível 5 de experiência.",icon:"↑",title:"Em evolução",category:"Experiência",test:m=>m.level>=5},
+  {id:"subject-master",name:"Assunto dominado",description:"Consiga o status de domínio em pelo menos um assunto.",icon:"🏆",title:"Conhecimento consolidado",category:"Domínio",test:m=>m.masteredSubjects>=1}
+];
+const WEEKLY_STUDY_CHALLENGES=[
+  {id:"weekly-questions",name:"Maratona de questões",description:"Responda a 30 questões nesta semana.",icon:"⚡",target:30,unit:"questões",reward:20,metric:m=>m.weekAnswers},
+  {id:"weekly-reviews",name:"Revisão reforçada",description:"Responda a 10 questões em revisão nesta semana.",icon:"↻",target:10,unit:"revisões",reward:20,metric:m=>m.weekReviews},
+  {id:"weekly-articles",name:"Leitura da legislação",description:"Conclua 5 artigos diferentes nesta semana.",icon:"§",target:5,unit:"artigos",reward:20,metric:m=>m.weekArticles}
+];
+let achievementToastQueue=[];
+let achievementToastActive=false;
+let achievementToastTimer=null;
+function loadAchievementState(){
+  try{
+    const value=JSON.parse(localStorage.getItem(ACHIEVEMENTS_STORAGE_KEY)||"{}");
+    return value&&typeof value==="object"&&!Array.isArray(value)
+      ?{daily_goal:Math.max(1,Math.min(100,Math.floor(Number(value.daily_goal)||DEFAULT_DAILY_STUDY_GOAL))),
+        unlocked:Array.isArray(value.unlocked)?value.unlocked:[],
+        completed_challenges:Array.isArray(value.completed_challenges)?value.completed_challenges:[],
+        equipped_title:String(value.equipped_title||""),updated_at:value.updated_at||null}
+      :{daily_goal:DEFAULT_DAILY_STUDY_GOAL,unlocked:[],completed_challenges:[],equipped_title:"",updated_at:null};
+  }catch(_){return {daily_goal:DEFAULT_DAILY_STUDY_GOAL,unlocked:[],completed_challenges:[],equipped_title:"",updated_at:null};}
+}
+function saveAchievementState(state){
+  state.updated_at=new Date().toISOString();
+  try{localStorage.setItem(ACHIEVEMENTS_STORAGE_KEY,JSON.stringify(state));return true;}
+  catch(error){console.warn("Não foi possível salvar as conquistas:",error);return false;}
+}
+function achievementDateKey(value){
+  const date=value instanceof Date?value:new Date(value||0);
+  if(Number.isNaN(date.getTime()))return "";
+  return date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");
+}
+function achievementDateFromKey(key){
+  const parts=String(key||"").split("-").map(Number);
+  return parts.length===3?new Date(parts[0],parts[1]-1,parts[2]):new Date(NaN);
+}
+function achievementDayNumber(key){
+  const date=achievementDateFromKey(key);
+  return Number.isNaN(date.getTime())?NaN:Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())/86400000;
+}
+function achievementWeekStart(date=new Date()){
+  const start=new Date(date.getFullYear(),date.getMonth(),date.getDate());
+  const weekday=(start.getDay()+6)%7;
+  start.setDate(start.getDate()-weekday);
+  return start;
+}
+function achievementWeekKey(date=new Date()){
+  return achievementDateKey(achievementWeekStart(date));
+}
+function achievementEventIsStudy(event){
+  return event.event_type==="answer"||(event.event_type==="article_status"&&event.outcome==="studied");
+}
+function getAchievementMetrics(){
+  const events=loadActivityEvents().filter(event=>achievementEventIsStudy(event));
+  const answers=events.filter(event=>event.event_type==="answer");
+  const articleEvents=events.filter(event=>event.event_type==="article_status"&&event.outcome==="studied");
+  const days=new Map();
+  events.forEach(event=>{
+    const key=achievementDateKey(event.occurred_at);
+    if(key){if(!days.has(key))days.set(key,{answers:0,articles:new Set(),activities:0});days.get(key).activities++;}
+    if(event.event_type==="answer"&&key)days.get(key).answers++;
+    if(event.event_type==="article_status"&&key){
+      const articleKey=(event.law_id||"norma")+"::"+(event.article||event.question_id||"artigo");
+      days.get(key).articles.add(articleKey);
+    }
+  });
+  const dayKeys=[...days.keys()].sort();
+  const todayKey=achievementDateKey(new Date());
+  const yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);
+  const streakAnchor=days.has(todayKey)?todayKey:achievementDateKey(yesterday);
+  let currentStreak=0;
+  if(days.has(streakAnchor)){
+    let cursor=achievementDayNumber(streakAnchor);
+    const dayNumbers=new Set(dayKeys.map(achievementDayNumber));
+    while(dayNumbers.has(cursor)){currentStreak++;cursor--;}
+  }
+  let bestStreak=0,run=0,previousDay=null;
+  dayKeys.map(achievementDayNumber).forEach(day=>{
+    run=previousDay!==null&&day===previousDay+1?run+1:1;
+    bestStreak=Math.max(bestStreak,run);previousDay=day;
+  });
+  let correctRun=0,bestCorrectStreak=0;
+  [...answers].sort((a,b)=>new Date(a.occurred_at||0)-new Date(b.occurred_at||0)).forEach(event=>{
+    if(event.outcome==="correct"){correctRun++;bestCorrectStreak=Math.max(bestCorrectStreak,correctRun);}
+    else if(event.outcome==="incorrect")correctRun=0;
+  });
+  const state=loadAchievementState();
+  const goalDays=dayKeys.filter(key=>{
+    const day=days.get(key);
+    return day.answers+day.articles.size>=state.daily_goal;
+  }).length;
+  const weekStart=achievementWeekStart(new Date());
+  const weekStartKey=achievementDateKey(weekStart);
+  const weekEvents=events.filter(event=>achievementDateKey(event.occurred_at)>=weekStartKey&&achievementDateKey(event.occurred_at)<=todayKey);
+  const weekAnswers=weekEvents.filter(event=>event.event_type==="answer").length;
+  const weekReviews=weekEvents.filter(event=>event.event_type==="answer"&&(event.review_mode===true||event.mode==="memory")).length;
+  const weekArticles=new Set(weekEvents.filter(event=>event.event_type==="article_status").map(event=>(event.law_id||"norma")+"::"+(event.article||"artigo"))).size;
+  const today=days.get(todayKey)||{answers:0,articles:new Set(),activities:0};
+  const todayProgress=today.answers+today.articles.size;
+  const xp=calculateExperienceLevel(loadExperienceData().total_xp);
+  const masteredSubjects=typeof getSubjectDomainSummaries==="function"
+    ?getSubjectDomainSummaries().filter(item=>item.mastered).length:0;
+  return {
+    activities:events.length,answers:answers.length,articles:new Set(articleEvents.map(event=>(event.law_id||"norma")+"::"+(event.article||"artigo"))).size,
+    reviewAnswers:answers.filter(event=>event.review_mode===true||event.mode==="memory").length,
+    currentStreak,bestStreak,studyDays:dayKeys.length,bestCorrectStreak,goalDays,
+    todayProgress,dailyGoal:state.daily_goal,weekAnswers,weekReviews,weekArticles,
+    weekStartKey,masteredSubjects,level:xp.level
+  };
+}
+function showAchievementToast(item,kind="achievement"){
+  achievementToastQueue.push({item,kind});if(!achievementToastActive)showNextAchievementToast();
+}
+function showNextAchievementToast(){
+  if(!achievementToastQueue.length){achievementToastActive=false;return;}
+  achievementToastActive=true;
+  const {item,kind}=achievementToastQueue.shift();
+  let toast=document.getElementById("achievement-award-toast");if(toast)toast.remove();
+  toast=document.createElement("div");toast.id="achievement-award-toast";toast.className="achievement-award-toast";
+  toast.setAttribute("role","status");toast.setAttribute("aria-live","polite");
+  const icon=document.createElement("span");icon.className="achievement-award-icon";icon.textContent=item.icon||"★";
+  const copy=document.createElement("span");copy.className="achievement-award-copy";
+  const title=document.createElement("strong");title.textContent=kind==="challenge"?"Desafio concluído!":"Conquista desbloqueada!";
+  const note=document.createElement("small");note.textContent=item.name+(item.title?" · Título: "+item.title:"");
+  copy.append(title,note);toast.append(icon,copy);document.body.append(toast);toast.classList.add("is-visible");
+  clearTimeout(achievementToastTimer);
+  achievementToastTimer=setTimeout(()=>{
+    toast.classList.remove("is-visible");
+    setTimeout(()=>{toast.remove();achievementToastActive=false;showNextAchievementToast();},250);
+  },3200);
+}
+function unlockAchievement(definition,state,silent=false){
+  if(state.unlocked.some(item=>item.id===definition.id))return false;
+  const record={id:definition.id,name:definition.name,description:definition.description,
+    icon:definition.icon,title:definition.title,category:definition.category,unlocked_at:new Date().toISOString()};
+  state.unlocked.push(record);saveAchievementState(state);
+  if(!silent)showAchievementToast(record);
+  return true;
+}
+function evaluateWeeklyChallenges(metrics,state,silent=false){
+  const weekKey=metrics.weekStartKey;
+  WEEKLY_STUDY_CHALLENGES.forEach(challenge=>{
+    const key=weekKey+"::"+challenge.id;
+    if(state.completed_challenges.some(item=>item.key===key))return;
+    const progress=challenge.metric(metrics);
+    if(progress<challenge.target)return;
+    const record={key,challenge_id:challenge.id,name:challenge.name,description:challenge.description,
+      week_start:weekKey,completed_at:new Date().toISOString(),xp_reward:challenge.reward};
+    state.completed_challenges.push(record);saveAchievementState(state);
+    awardExperience(challenge.reward,"desafio-semanal::"+key,"Desafio concluído: "+challenge.name,
+      {challenge_id:challenge.id,week_start:weekKey},{silent});
+    if(!silent)showAchievementToast({name:challenge.name,title:"+"+challenge.reward+" XP",icon:challenge.icon},"challenge");
+  });
+}
+function refreshAchievementProgress(options={}){
+  const silent=Boolean(options.silent);
+  const state=loadAchievementState(),metrics=getAchievementMetrics();
+  ACHIEVEMENT_DEFINITIONS.forEach(definition=>{
+    if(definition.test(metrics))unlockAchievement(definition,state,silent);
+  });
+  evaluateWeeklyChallenges(metrics,state,silent);
+  const dailyNode=$("#achievement-daily-progress");
+  if(dailyNode){
+    const percent=Math.min(100,Math.round(metrics.todayProgress/metrics.dailyGoal*100));
+    dailyNode.textContent=metrics.todayProgress+" de "+metrics.dailyGoal+" atividades";
+    const fill=$("#achievement-daily-fill");
+    if(fill)fill.style.width=percent+"%";
+    const track=fill?.parentElement;
+    if(track)track.setAttribute("aria-valuenow",String(percent));
+  }
+  renderAchievementOverview(metrics,state);
+  return {metrics,state};
+}
+function renderAchievementOverview(metrics=getAchievementMetrics(),state=loadAchievementState()){
+  const current=$("#achievement-current-streak"),best=$("#achievement-best-streak"),days=$("#achievement-study-days");
+  if(current)current.textContent=String(metrics.currentStreak);
+  if(best)best.textContent=String(metrics.bestStreak);
+  if(days)days.textContent=String(metrics.studyDays);
+  const target=$("#achievement-daily-goal");if(target)target.value=String(state.daily_goal);
+  const equipped=$("#achievement-equipped-title");
+  if(equipped){
+    const found=state.unlocked.find(item=>item.id===state.equipped_title);
+    equipped.textContent=found?found.title:"Nenhum título equipado";
+  }
+  const unlockedList=$("#achievement-unlocked-list"),allList=$("#achievement-all-list"),challengesList=$("#achievement-challenges-list");
+  if(!unlockedList||!allList||!challengesList)return;
+  const unlockedById=new Map(state.unlocked.map(item=>[item.id,item]));
+  unlockedList.replaceChildren();allList.replaceChildren();challengesList.replaceChildren();
+  if(state.unlocked.length){
+    [...state.unlocked].sort((a,b)=>new Date(b.unlocked_at)-new Date(a.unlocked_at))
+      .forEach(item=>unlockedList.append(createAchievementCard(item,true,state)));
+  }else{
+    const empty=document.createElement("p");empty.className="empty-state";empty.textContent="Suas conquistas desbloqueadas aparecerão aqui conforme você estudar.";unlockedList.append(empty);
+  }
+  ACHIEVEMENT_DEFINITIONS.forEach(definition=>{
+    allList.append(createAchievementCard(unlockedById.get(definition.id)||definition,unlockedById.has(definition.id),state));
+  });
+  const challengeRows=getCurrentWeeklyChallengeRows(metrics,state);
+  challengeRows.forEach(item=>challengesList.append(createWeeklyChallengeCard(item,state)));
+}
+function createAchievementCard(item,unlocked,state){
+  const card=document.createElement("article");card.className="achievement-card"+(unlocked?" is-unlocked":" is-locked");
+  const badge=document.createElement("span");badge.className="achievement-badge";badge.textContent=item.icon||"★";
+  const copy=document.createElement("div");copy.className="achievement-card-copy";
+  const title=document.createElement("strong");title.textContent=item.name;
+  const description=document.createElement("p");description.textContent=item.description;
+  const label=document.createElement("small");label.textContent=unlocked
+    ?"Desbloqueada em "+formatDate(item.unlocked_at)
+    :"Bloqueada · "+(item.category||"Conquista");
+  copy.append(title,description,label);card.append(badge,copy);
+  if(unlocked){
+    const action=document.createElement("button");action.type="button";
+    const selected=state.equipped_title===item.id;
+    action.className=selected?"achievement-title-button is-equipped":"achievement-title-button";
+    action.textContent=selected?"Título equipado":"Usar título";
+    action.disabled=selected;
+    action.addEventListener("click",()=>{
+      const latest=loadAchievementState();latest.equipped_title=item.id;saveAchievementState(latest);
+      renderAchievementOverview(getAchievementMetrics(),latest);
+    });
+    card.append(action);
+  }else{
+    const lock=document.createElement("span");lock.className="achievement-lock";lock.textContent="🔒";card.append(lock);
+  }
+  return card;
+}
+function getCurrentWeeklyChallengeRows(metrics,state){
+  return WEEKLY_STUDY_CHALLENGES.map(challenge=>{
+    const progress=Math.min(challenge.target,challenge.metric(metrics));
+    const key=metrics.weekStartKey+"::"+challenge.id;
+    const complete=state.completed_challenges.some(item=>item.key===key);
+    return {...challenge,progress,complete,key};
+  });
+}
+function createWeeklyChallengeCard(item,state){
+  const card=document.createElement("article");card.className="challenge-card"+(item.complete?" is-complete":"");
+  const head=document.createElement("div");head.className="challenge-card-head";
+  const icon=document.createElement("span");icon.className="challenge-icon";icon.textContent=item.icon;
+  const copy=document.createElement("div");copy.className="challenge-card-copy";
+  const title=document.createElement("strong");title.textContent=item.name;
+  const description=document.createElement("p");description.textContent=item.description;
+  copy.append(title,description);
+  const status=document.createElement("span");status.className="challenge-status";status.textContent=item.complete?"Concluído":"Semanal";
+  head.append(icon,copy,status);
+  const progressLine=document.createElement("div");progressLine.className="challenge-progress-line";
+  const bar=document.createElement("div");bar.className="challenge-progress-track";
+  bar.setAttribute("role","progressbar");bar.setAttribute("aria-valuemin","0");bar.setAttribute("aria-valuemax",String(item.target));
+  bar.setAttribute("aria-valuenow",String(item.progress));const fill=document.createElement("span");fill.style.width=Math.min(100,item.progress/item.target*100)+"%";bar.append(fill);
+  const value=document.createElement("small");value.textContent=item.progress+" / "+item.target+" "+item.unit;
+  progressLine.append(bar,value);
+  const reward=document.createElement("small");reward.className="challenge-reward";reward.textContent="Recompensa: +"+item.reward+" XP";
+  card.append(head,progressLine,reward);return card;
+}
+function saveDailyStudyGoal(){
+  const input=$("#achievement-daily-goal");
+  if(!input)return;
+  const target=Math.max(1,Math.min(100,Math.floor(Number(input.value)||DEFAULT_DAILY_STUDY_GOAL)));
+  const state=loadAchievementState();state.daily_goal=target;saveAchievementState(state);
+  refreshAchievementProgress();
+  showAchievementToast({name:"Meta diária atualizada para "+target+" atividades",icon:"◎"},"challenge");
+}
+function initializeAchievements(){
+  refreshAchievementProgress({silent:true});
+}
+$("#achievement-daily-goal-save").addEventListener("click",saveDailyStudyGoal);
+$("#tab-achievements").addEventListener("click",()=>{showView("achievements");refreshAchievementProgress();});
+initializeAchievements();
+
