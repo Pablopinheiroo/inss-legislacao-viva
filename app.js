@@ -1,10 +1,16 @@
 const DATA_URL = "data/legislacao.json";
 const QUESTIONS_URL = "data/questoes.json";
+const LAWS_URL = "data/laws.json";
 const LAST_SEEN_KEY = "radarLegislativo.lastSeen";
 const STUDY_KEY = "radarLegislativo.studyStates";
 let dashboardData = null;
 let allChanges = [];
 let questionBank = [];
+let clozeLaws = [];
+let clozeSnapshot = null;
+let clozeCurrent = null;
+let clozeBlanks = [];
+let clozeAnswered = 0;
 let quizState = { questions: [], index: 0, selected: null, answers: [] };
 const $ = (selector) => document.querySelector(selector);
 const dateFormatter = new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" });
@@ -40,8 +46,8 @@ function renderStatus(data) {
   pill.querySelector("span:last-child").textContent = label;
   $("#stat-changes").textContent = data.changes ? data.changes.length : 0;
   $("#stat-laws").textContent = data.laws ? data.laws.length : 0;
-  $("#stat-check").textContent = formatDate(data.last_successful_check);
-  $("#stat-check-note").textContent = data.last_successful_check ? "última execução sem erros" : (data.summary || "A primeira execução ainda não ocorreu");
+  $("#stat-check").textContent = formatDate(data.last_check_attempt || data.last_successful_check);
+  $("#stat-check-note").textContent = data.summary || (data.last_successful_check ? "Última consulta concluída" : "A primeira execução ainda não ocorreu");
 }
 function updateBadge() {
   const lastSeen = localStorage.getItem(LAST_SEEN_KEY);
@@ -111,7 +117,7 @@ function renderLaws() {
     const title = document.createElement("span");
     title.textContent = law.short_title || law.title;
     const status = document.createElement("small");
-    status.textContent = law.error ? "falha na consulta" : law.parser_mode === "index" ? "histórico de alterações" : law.last_checked ? "texto consultado" : "aguardando";
+    status.textContent = law.error ? "falha na consulta" : law.source_revision ? law.source_revision : law.parser_mode === "index" ? "histórico oficial consultado" : law.last_checked ? (law.article_count + " artigos consultados") : "aguardando";
     link.append(title, status);
     list.append(link);
   });
@@ -165,6 +171,186 @@ async function loadDashboard() {
     $("#change-list").textContent = "Não foi possível carregar os dados do monitoramento. Confira a publicação pelo GitHub Pages.";
     console.error(error);
   }
+}
+
+
+// -------------------- Completar Lei Seca --------------------
+function normalizeAnswer(value) {
+  return String(value || "").trim().toLocaleLowerCase("pt-BR")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’']/g, "'").replace(/\s+/g, " ");
+}
+async function loadClozeLaws() {
+  try {
+    const response = await fetch(LAWS_URL + "?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    clozeLaws = (Array.isArray(data) ? data : []).filter(law => law.enabled !== false);
+    const select = $("#cloze-law");
+    select.replaceChildren();
+    clozeLaws.forEach(law => {
+      const option = document.createElement("option");
+      option.value = law.id;
+      option.textContent = law.short_title || law.title;
+      select.append(option);
+    });
+    if (!clozeLaws.length) throw new Error("Nenhuma norma está cadastrada.");
+    await loadClozeSnapshot();
+  } catch (error) {
+    $("#cloze-note").textContent = "Não foi possível carregar as normas salvas. Recarregue o site e tente novamente.";
+    console.error(error);
+  }
+}
+async function loadClozeSnapshot() {
+  const law = clozeLaws.find(item => item.id === $("#cloze-law").value) || clozeLaws[0];
+  if (!law) return;
+  $("#cloze-note").textContent = "Carregando artigos de " + (law.short_title || law.title) + "...";
+  $("#start-cloze").disabled = true;
+  clozeSnapshot = null;
+  try {
+    const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const snapshot = await response.json();
+    const articles = snapshot.articles && typeof snapshot.articles === "object" ? snapshot.articles : {};
+    const entries = Object.entries(articles).filter(([_, text]) => typeof text === "string" && text.trim().length >= 80);
+    clozeSnapshot = { law, entries, snapshot };
+    const articleSelect = $("#cloze-article");
+    articleSelect.replaceChildren();
+    const randomOption = document.createElement("option");
+    randomOption.value = "aleatorio";
+    randomOption.textContent = "Artigo aleatório";
+    articleSelect.append(randomOption);
+    entries.sort((a,b) => {
+      const na = Number((a[0].match(/\d+/) || [0])[0]);
+      const nb = Number((b[0].match(/\d+/) || [0])[0]);
+      return na - nb || a[0].localeCompare(b[0], "pt-BR");
+    }).forEach(([article]) => {
+      const option = document.createElement("option");
+      option.value = article;
+      option.textContent = article;
+      articleSelect.append(option);
+    });
+    articleSelect.disabled = entries.length === 0;
+    $("#start-cloze").disabled = entries.length === 0;
+    $("#cloze-note").textContent = entries.length
+      ? entries.length + " artigos disponíveis nesta norma. Fonte consultada em " + formatDate(snapshot.captured_at) + "."
+      : "Esta norma ainda não possui artigos separados com segurança para o exercício de lacunas. Escolha outra norma.";
+  } catch (error) {
+    $("#cloze-note").textContent = "Não foi possível carregar a captura dessa norma. A verificação pode não ter sido concluída.";
+    $("#cloze-article").disabled = true;
+    $("#start-cloze").disabled = true;
+    console.error(error);
+  }
+}
+function buildClozeForText(text, difficulty) {
+  const tokenRegex = /[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'][A-Za-zÀ-ÖØ-öø-ÿ]+)*|\d+(?:[.,]\d+)?/gu;
+  const common = new Set([
+    "para","pela","pelo","pelas","pelos","sobre","entre","desde","quando","onde","como","mais","menos",
+    "esta","este","essas","esses","isso","isto","aquele","aquela","tambem","ainda","assim","sendo",
+    "serao","seria","serao","foram","ser","sua","suas","seu","seus","que","com","sem","nos","nas",
+    "dos","das","dos","uma","umas","uns","por","sob","aos","aquelas","aqueles","cada","todo","toda",
+    "todos","todas","qual","quais","cujo","cuja","cujos","cujas","art","artigo"
+  ]);
+  const tokens = [];
+  let match;
+  while ((match = tokenRegex.exec(text)) !== null) {
+    const value = match[0];
+    const normalized = normalizeAnswer(value);
+    const numeric = /^\d/.test(value);
+    const initialHeaderToken = tokens.length < 2 && (normalized === "art" || /^\d/.test(value));
+    if (!initialHeaderToken && (numeric ? value.length >= 2 : value.length >= 5 && !common.has(normalized))) {
+      tokens.push({ start: match.index, end: match.index + value.length, value });
+    }
+  }
+  const requested = difficulty === "facil" ? 4 : difficulty === "dificil" ? 10 : 7;
+  const selected = shuffle(tokens).slice(0, Math.min(requested, tokens.length)).sort((a,b) => a.start - b.start);
+  return selected;
+}
+function renderClozeText(text, blanks) {
+  const container = $("#cloze-text");
+  container.replaceChildren();
+  const fragment = document.createDocumentFragment();
+  let cursor = 0;
+  blanks.forEach((blank, index) => {
+    fragment.append(document.createTextNode(text.slice(cursor, blank.start)));
+    const slot = document.createElement("span");
+    slot.className = "cloze-slot";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "cloze-input";
+    input.dataset.index = String(index);
+    input.autocomplete = "off";
+    input.autocapitalize = "none";
+    input.spellcheck = false;
+    input.setAttribute("aria-label", "Lacuna " + (index + 1));
+    input.placeholder = "____";
+    input.style.width = Math.max(4.5, Math.min(15, blank.value.length * 0.78)) + "ch";
+    const correction = document.createElement("span");
+    correction.className = "cloze-correction hidden";
+    slot.append(input, correction);
+    fragment.append(slot);
+    cursor = blank.end;
+  });
+  fragment.append(document.createTextNode(text.slice(cursor)));
+  container.append(fragment);
+}
+function startCloze() {
+  if (!clozeSnapshot || !clozeSnapshot.entries.length) return;
+  const selected = $("#cloze-article").value;
+  let entry;
+  if (selected === "aleatorio") {
+    entry = clozeSnapshot.entries[Math.floor(Math.random() * clozeSnapshot.entries.length)];
+  } else {
+    entry = clozeSnapshot.entries.find(([article]) => article === selected);
+  }
+  if (!entry) return;
+  const [article, text] = entry;
+  clozeCurrent = { article, text };
+  clozeBlanks = buildClozeForText(text, $("#cloze-difficulty").value);
+  clozeAnswered = 0;
+  $("#cloze-law-label").textContent = clozeSnapshot.law.short_title || clozeSnapshot.law.title;
+  $("#cloze-article-label").textContent = article;
+  $("#cloze-original-text").textContent = text;
+  $("#cloze-original").open = false;
+  $("#cloze-feedback").classList.add("hidden");
+  $("#check-cloze").classList.remove("hidden");
+  $("#next-cloze").classList.add("hidden");
+  $("#cloze-progress").textContent = clozeBlanks.length + " lacuna(s)";
+  if (!clozeBlanks.length) {
+    $("#cloze-note").textContent = "Este artigo é curto demais para gerar lacunas úteis. Escolha outro artigo ou outra norma.";
+    $("#cloze-card").classList.add("hidden");
+    $("#cloze-welcome").classList.remove("hidden");
+    return;
+  }
+  renderClozeText(text, clozeBlanks);
+  $("#cloze-welcome").classList.add("hidden");
+  $("#cloze-card").classList.remove("hidden");
+}
+function checkCloze() {
+  if (!clozeCurrent || !clozeBlanks.length) return;
+  const inputs = [...$("#cloze-text").querySelectorAll(".cloze-input")];
+  let correct = 0;
+  inputs.forEach(input => {
+    const index = Number(input.dataset.index);
+    const expected = clozeBlanks[index].value;
+    const isCorrect = normalizeAnswer(input.value) === normalizeAnswer(expected);
+    if (isCorrect) correct += 1;
+    input.disabled = true;
+    input.classList.toggle("correct", isCorrect);
+    input.classList.toggle("incorrect", !isCorrect);
+    const correction = input.nextElementSibling;
+    if (!isCorrect) {
+      correction.textContent = "→ " + expected;
+      correction.classList.remove("hidden");
+    }
+  });
+  clozeAnswered += correct;
+  $("#cloze-feedback").textContent = correct + " de " + clozeBlanks.length + " lacunas corretas.";
+  $("#cloze-feedback").className = "cloze-feedback " + (correct === clozeBlanks.length ? "all-correct" : "has-errors");
+  $("#cloze-feedback").classList.remove("hidden");
+  $("#check-cloze").classList.add("hidden");
+  $("#next-cloze").classList.remove("hidden");
+  $("#cloze-progress").textContent = "Acertos neste artigo: " + clozeAnswered;
 }
 
 // -------------------- Modo de treino Certo/Errado --------------------
@@ -302,18 +488,20 @@ function nextQuestion() {
 }
 function showView(view) {
   const quiz = view === "quiz";
-  $("#radar-view").classList.toggle("hidden", quiz);
+  const cloze = view === "cloze";
+  const radar = view === "radar";
+  $("#radar-view").classList.toggle("hidden", !radar);
   $("#quiz-view").classList.toggle("hidden", !quiz);
-  $("#tab-radar").classList.toggle("active", !quiz);
+  $("#cloze-view").classList.toggle("hidden", !cloze);
+  $("#tab-radar").classList.toggle("active", radar);
   $("#tab-quiz").classList.toggle("active", quiz);
-  if (quiz) {
-    $("#tab-radar").removeAttribute("aria-current");
-    $("#tab-quiz").setAttribute("aria-current", "page");
-  } else {
-    $("#tab-quiz").removeAttribute("aria-current");
-    $("#tab-radar").setAttribute("aria-current", "page");
-  }
+  $("#tab-cloze").classList.toggle("active", cloze);
+  [ ["tab-radar", radar], ["tab-quiz", quiz], ["tab-cloze", cloze] ].forEach(([id, active]) => {
+    if (active) $("#" + id).setAttribute("aria-current", "page");
+    else $("#" + id).removeAttribute("aria-current");
+  });
   if (quiz) $("#quiz-view").scrollIntoView({ behavior: "smooth", block: "start" });
+  else if (cloze) $("#cloze-view").scrollIntoView({ behavior: "smooth", block: "start" });
   else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -326,6 +514,11 @@ $("#type-filter").addEventListener("change", renderChanges);
 $("#study-filter").addEventListener("change", renderChanges);
 $("#tab-radar").addEventListener("click", () => showView("radar"));
 $("#tab-quiz").addEventListener("click", () => showView("quiz"));
+$("#tab-cloze").addEventListener("click", () => showView("cloze"));
+$("#cloze-law").addEventListener("change", loadClozeSnapshot);
+$("#start-cloze").addEventListener("click", startCloze);
+$("#check-cloze").addEventListener("click", checkCloze);
+$("#next-cloze").addEventListener("click", startCloze);
 $("#start-quiz").addEventListener("click", () => startQuiz());
 $("#answer-true").addEventListener("click", () => chooseAnswer(true));
 $("#answer-false").addEventListener("click", () => chooseAnswer(false));
@@ -343,3 +536,4 @@ $("#retry-mistakes").addEventListener("click", () => {
 document.addEventListener("keydown", event => { if (event.key === "Escape") closeDrawer(); });
 loadDashboard();
 loadQuestionBank();
+loadClozeLaws();
