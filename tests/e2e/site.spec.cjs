@@ -113,6 +113,13 @@ test("os sete modos de treinamento registram respostas e mantêm o progresso", a
   const ceQueue = await page.evaluate(() => JSON.parse(localStorage.getItem("radarLegislativo.ceReview.v1") || "{}"));
   expect(Object.keys(ceQueue).length).toBeGreaterThan(0);
 
+  // A centralização da revisão deve trazer o erro do jogo de origem e reabrir o modo correto.
+  await page.locator("#area-estudar").click();
+  await page.locator("#tab-review").click();
+  await expect(page.locator("#central-review-list .central-review-card")).toHaveCount(1);
+  await page.locator("#central-review-list .central-review-card .primary-button").click();
+  await expect(page.locator("#quiz-card")).toBeVisible();
+
   // 2. Completar Lei Seca: responder incorretamente deve criar um item de revisão.
   await page.locator("#tab-cloze").click();
   await expect(page.locator("#start-cloze")).toBeEnabled();
