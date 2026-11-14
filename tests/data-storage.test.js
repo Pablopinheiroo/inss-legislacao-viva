@@ -105,3 +105,37 @@ test("o HTML carrega o gerenciador antes do app, que não acessa localStorage di
   assert.equal((appSource.match(/localStorage\.(?:getItem|setItem|removeItem)\(/g) || []).length, 0);
   assert.match(appSource, /window\.RadarDataStorage/);
 });
+
+
+test("um backup exportado em um navegador pode ser restaurado em outro", () => {
+  const deviceA = loadStore({
+    "radarLegislativo.studyStates": JSON.stringify({ "Lei 8.213::Art. 15": "estudado" }),
+    "radarLegislativo.leiSeca.favorites.v1": JSON.stringify(["Lei 8.213::Art. 15"]),
+    "radarLegislativo.experience.v1": JSON.stringify({ total_xp: 125, awarded_ids: [], ledger: [] })
+  });
+  const backupFileContents = JSON.stringify(deviceA.store.createBackup());
+  const deviceB = loadStore({
+    "radarLegislativo.studyStates": JSON.stringify({ dado: "de outro navegador" })
+  });
+  const imported = JSON.parse(backupFileContents);
+  const result = deviceB.store.restoreBackup(imported);
+  assert.deepEqual(JSON.parse(deviceB.values.get("radarLegislativo.studyStates")), {
+    "Lei 8.213::Art. 15": "estudado"
+  });
+  assert.deepEqual(JSON.parse(deviceB.values.get("radarLegislativo.leiSeca.favorites.v1")), [
+    "Lei 8.213::Art. 15"
+  ]);
+  assert.equal(JSON.parse(deviceB.values.get("radarLegislativo.experience.v1")).total_xp, 125);
+  assert.ok(result.restored_keys > 0);
+});
+
+test("nenhuma chave de progresso do app fica fora da lista do backup sem exceção explícita", () => {
+  const { store } = loadStore();
+  const appKeys = new Set([...appSource.matchAll(/"radarLegislativo\\.[^"]+"/g)].map(match => match[0].slice(1, -1)));
+  const backupKeys = new Set(store.getBackupKeys());
+  const intentionallyExcluded = new Set(["radarLegislativo.activityActiveSession.v1"]);
+  for (const key of appKeys) {
+    assert.ok(backupKeys.has(key) || intentionallyExcluded.has(key), "Chave sem backup: " + key);
+  }
+  assert.equal(appSource.includes("localStorage.clear("), false);
+});
