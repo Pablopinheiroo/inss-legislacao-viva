@@ -92,3 +92,14 @@ O banco atual é inicial e não cobre integralmente as 27 normas. As questões d
 O botão **Verificar atualizações** abre a tela do workflow no GitHub Actions. Na página que abrir, clique em **Run workflow** e confirme em **Run workflow** novamente. Isso inicia uma consulta manual fora do horário da rotina diária. Quando a execução terminar e os dados forem publicados, use **Recarregar painel** para buscar os dados mais recentes no site.
 
 O site é estático e não guarda token de acesso do GitHub. Por segurança, o botão encaminha para a confirmação autenticada do próprio GitHub em vez de tentar disparar a execução diretamente pelo navegador.
+
+
+## Recorte da Constituição e modo Lei Seca
+
+A Constituição é obtida da página oficial da Câmara dos Deputados, identificada como atualizada até a Emenda Constitucional nº 141/2026. O projeto guarda somente os 31 artigos selecionados para o recorte do edital: arts. 5º a 17, 37 a 41, 149 e 193 a 204. A captura não guarda a Constituição inteira.
+
+O monitor compara o conteúdo dos dispositivos salvos, e não a página inteira. Alterações em menus, rodapés e em artigos que não fazem parte desse recorte não devem gerar alertas para a Constituição. Se a fonte não apresentar todos os 31 artigos, a captura é recusada e o snapshot anterior é preservado. Uma troca de fonte ou de formato gera uma nova linha de base, sem falsos alertas causados pela mudança técnica.
+
+A aba **Completar Lei Seca** carrega os artigos dos snapshots e oculta algumas palavras para treino. É possível escolher a norma, o artigo e o nível de dificuldade. O texto aparece em fonte serifada, maior e com espaçamento adequado para leitura.
+
+A atualização automática continua diária. A verificação manual abre o workflow do GitHub Actions; é necessário confirmar a execução no GitHub. O site estático não guarda token de acesso.
