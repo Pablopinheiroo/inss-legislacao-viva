@@ -1434,10 +1434,8 @@ function buildMemoryDeck() {
   $("#start-memory").disabled = memoryCards.length === 0;
   renderMemoryOverview();
 
-  const suspended = articleQuestions.length + multiCEGroups.length;
   $("#memory-note").textContent = memoryCards.length
-    + " cartões de artigos disponíveis, montados a partir dos bancos de estudo e conferidos com as capturas salvas. As perguntas podem variar a cada revisão."
-    + (suspended ? " O texto exibido é o artigo inteiro, não apenas a frase da pergunta." : "");
+    + " cartões de artigos disponíveis, montados a partir dos bancos de estudo e conferidos com as capturas salvas. As perguntas podem variar a cada revisão."; 
   if (!memoryCards.length) {
     $("#memory-note").textContent = "Nenhum cartão pôde ser montado. Confira se os modos Descubra o artigo e Várias afirmações conseguiram carregar os artigos.";
   }
@@ -1473,7 +1471,13 @@ function startMemorySession(onlyCards = null) {
   }
 
   const progress = loadMemoryProgress();
+  const now = Date.now();
   pool.sort((a, b) => {
+    const aEntry = progress[a.id];
+    const bEntry = progress[b.id];
+    const aPriority = aEntry ? (memoryDueAt(a, progress) <= now ? 0 : 2) : 1;
+    const bPriority = bEntry ? (memoryDueAt(b, progress) <= now ? 0 : 2) : 1;
+    if (aPriority !== bPriority) return aPriority - bPriority;
     const dueDifference = memoryDueAt(a, progress) - memoryDueAt(b, progress);
     if (dueDifference !== 0) return dueDifference;
     return a.law_title.localeCompare(b.law_title, "pt-BR");
@@ -1483,7 +1487,7 @@ function startMemorySession(onlyCards = null) {
   const amount = length === "todas" ? pool.length : Math.min(Number(length) || 5, pool.length);
   const selected = onlyCards ? pool : pool.slice(0, amount);
   memoryState = {
-    cards: shuffle(selected).map(card => ({
+    cards: selected.map(card => ({
       ...card,
       currentPrompt: card.prompts[Math.floor(Math.random() * card.prompts.length)]
     })),
