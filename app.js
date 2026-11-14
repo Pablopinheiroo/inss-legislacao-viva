@@ -5467,7 +5467,7 @@ function getAchievementMetrics(){
   let correctRun=0,bestCorrectStreak=0;
   [...answers].sort((a,b)=>new Date(a.occurred_at||0)-new Date(b.occurred_at||0)).forEach(event=>{
     if(event.outcome==="correct"){correctRun++;bestCorrectStreak=Math.max(bestCorrectStreak,correctRun);}
-    else if(event.outcome==="incorrect")correctRun=0;
+    else correctRun=0;
   });
   const state=loadAchievementState();
   const goalDays=dayKeys.filter(key=>{
@@ -5506,7 +5506,9 @@ function showNextAchievementToast(){
   const icon=document.createElement("span");icon.className="achievement-award-icon";icon.textContent=item.icon||"★";
   const copy=document.createElement("span");copy.className="achievement-award-copy";
   const title=document.createElement("strong");title.textContent=kind==="challenge"?"Desafio concluído!":kind==="notice"?"Meta atualizada":"Conquista desbloqueada!";
-  const note=document.createElement("small");note.textContent=item.name+(item.title?" · Título: "+item.title:"");
+  const note=document.createElement("small");note.textContent=kind==="challenge"
+    ?item.name+(item.title?" · Recompensa: "+item.title:"")
+    :item.name+(item.title?" · Título: "+item.title:"");
   copy.append(title,note);toast.append(icon,copy);document.body.append(toast);toast.classList.add("is-visible");
   clearTimeout(achievementToastTimer);
   achievementToastTimer=setTimeout(()=>{
