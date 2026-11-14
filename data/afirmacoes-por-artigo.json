@@ -32,7 +32,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-a1-2",
@@ -55,7 +57,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-a1-3",
@@ -77,7 +81,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -122,7 +128,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-a2-2",
@@ -145,7 +153,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-a2-3",
@@ -167,7 +177,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-a2-4",
@@ -190,7 +202,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -235,7 +249,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-a1-2",
@@ -258,7 +274,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-a1-3",
@@ -280,7 +298,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -325,7 +345,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-a3-2",
@@ -348,7 +370,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-a3-3",
@@ -370,7 +394,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -415,7 +441,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-a4-2",
@@ -438,7 +466,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -483,7 +513,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a1-2",
@@ -506,7 +538,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a1-3",
@@ -528,7 +562,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -573,7 +609,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a2-2",
@@ -595,7 +633,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a2-3",
@@ -618,7 +658,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -663,7 +705,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a4-2",
@@ -686,7 +730,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a4-3",
@@ -708,7 +754,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -753,7 +801,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a20-2",
@@ -776,7 +826,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-a20-3",
@@ -799,7 +851,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -844,7 +898,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-a2-2",
@@ -867,7 +923,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -912,7 +970,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-a3-2",
@@ -935,7 +995,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -980,7 +1042,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-a5-2",
@@ -1003,7 +1067,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-a5-3",
@@ -1025,7 +1091,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -1070,7 +1138,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-a2-2",
@@ -1093,7 +1163,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-a2-3",
@@ -1115,7 +1187,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -1160,7 +1234,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-a3-2",
@@ -1183,7 +1259,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-a3-3",
@@ -1205,7 +1283,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -1250,7 +1330,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         },
         {
           "id": "6029-a3-2",
@@ -1273,7 +1355,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         },
         {
           "id": "6029-a3-3",
@@ -1295,7 +1379,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         }
       ],
       "category": "Ética",
@@ -1340,7 +1426,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         },
         {
           "id": "6029-a12-2",
@@ -1363,7 +1451,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         },
         {
           "id": "6029-a12-3",
@@ -1385,7 +1475,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "decreto-6029-2007",
+          "law_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética"
         }
       ],
       "category": "Ética",
@@ -1430,7 +1522,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art3-2",
@@ -1453,7 +1547,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1498,7 +1594,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art11-2",
@@ -1521,7 +1619,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1566,7 +1666,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art15-2",
@@ -1589,7 +1691,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1634,7 +1738,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art25-2",
@@ -1657,7 +1763,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1702,7 +1810,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art26-2",
@@ -1725,7 +1835,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1770,7 +1882,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art74-2",
@@ -1793,7 +1907,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1838,7 +1954,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         },
         {
           "id": "8213-art86-2",
@@ -1861,7 +1979,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8213-1991",
+          "law_title": "Lei 8.213/1991 — Planos de Benefícios"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1906,7 +2026,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-art12-2",
@@ -1929,7 +2051,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -1974,7 +2098,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-art15-2",
@@ -1997,7 +2123,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2042,7 +2170,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-art22-2",
@@ -2065,7 +2195,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2110,7 +2242,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-art28-2",
@@ -2133,7 +2267,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2178,7 +2314,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         },
         {
           "id": "8212-art30-2",
@@ -2201,7 +2339,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8212-1991",
+          "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2246,7 +2386,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-art6-2",
@@ -2269,7 +2411,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2314,7 +2458,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-art21-2",
@@ -2337,7 +2483,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2382,7 +2530,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-art21a-2",
@@ -2405,7 +2555,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2450,7 +2602,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         },
         {
           "id": "loas-art21b-2",
@@ -2473,7 +2627,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8742-1993",
+          "law_title": "Lei 8.742/1993 — LOAS"
         }
       ],
       "category": "Direito Previdenciário",
@@ -2518,7 +2674,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-art13-2",
@@ -2541,7 +2699,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -2586,7 +2746,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-art15-2",
@@ -2609,7 +2771,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -2654,7 +2818,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-art19-2",
@@ -2677,7 +2843,9 @@
           "difficulty": "dificil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -2722,7 +2890,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-art116-2",
@@ -2745,7 +2915,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -2790,7 +2962,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         },
         {
           "id": "8112-art117-2",
@@ -2813,7 +2987,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-8112-1990",
+          "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores"
         }
       ],
       "category": "Direito Administrativo",
@@ -2858,7 +3034,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art18-2",
@@ -2881,7 +3059,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -2926,7 +3106,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art24-2",
@@ -2949,7 +3131,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -2994,7 +3178,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art26-2",
@@ -3017,7 +3203,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -3062,7 +3250,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art49-2",
@@ -3085,7 +3275,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -3130,7 +3322,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art50-2",
@@ -3153,7 +3347,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -3198,7 +3394,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         },
         {
           "id": "9784-art59-2",
@@ -3221,7 +3419,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "lei-9784-1999",
+          "law_title": "Lei 9.784/1999 — Processo Administrativo Federal"
         }
       ],
       "category": "Direito Administrativo",
@@ -3266,7 +3466,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         },
         {
           "id": "cf-art37-2",
@@ -3289,7 +3491,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         }
       ],
       "category": "Direito Constitucional",
@@ -3334,7 +3538,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         },
         {
           "id": "cf-art194-2",
@@ -3357,7 +3563,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         }
       ],
       "category": "Direito Constitucional",
@@ -3402,7 +3610,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         },
         {
           "id": "cf-art195-2",
@@ -3425,7 +3635,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         }
       ],
       "category": "Direito Constitucional",
@@ -3470,7 +3682,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         },
         {
           "id": "cf-art201-2",
@@ -3493,7 +3707,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         }
       ],
       "category": "Direito Constitucional",
@@ -3538,7 +3754,9 @@
           "difficulty": "facil",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         },
         {
           "id": "cf-art203-2",
@@ -3561,7 +3779,9 @@
           "difficulty": "media",
           "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
           "validation_status": "validated",
-          "validation_method": "frase_ancora_no_artigo_atual"
+          "validation_method": "frase_ancora_no_artigo_atual",
+          "law_id": "constituicao-1988",
+          "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204"
         }
       ],
       "category": "Direito Constitucional",
