@@ -87,12 +87,10 @@
     "source_sync_status": "captura_anterior_ainda_nao_substituida",
     "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
     "include_articles": [
-      "Art. 1",
-      "Art. 2",
-      "Art. 3"
+      "Anexo - Código de Ética"
     ],
     "article_filter_status": "recorte_do_edital_aplicado",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_note": "O art. 3º é cláusula de vigência e foi retirado. O Anexo do Código de Ética foi separado como entrada própria para não perder o conteúdo expresso no edital.",
     "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15"
   },
