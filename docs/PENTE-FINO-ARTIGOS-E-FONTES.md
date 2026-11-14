@@ -38,3 +38,11 @@ A seleção foi aplicada também aos quatro bancos de treinamento. Contagens dep
 - data/afirmacoes-por-artigo.json: 48 → 43 (5 removidos)
 
 **Ponto de atenção:** o leitor já aponta para as fontes oficiais preferenciais, mas os arquivos de captura continuam identificados com a fonte efetivamente usada na coleta anterior. A sincronização integral direta com o Planalto/Portal IN é necessária antes de afirmar que todo o conteúdo foi recapturado e conferido nessa fonte.
+
+## Inclusão de crimes contra a Seguridade Social
+Foi acrescentado o Código Penal, com recorte apenas nos arts. 168-A e 337-A, porque o item 14.2.3, tópico 7, inclui expressamente crimes contra a Seguridade Social. A fonte é o Código Penal compilado do Planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm.
+A leitura automatizada direta do Planalto foi bloqueada. Por isso, a captura atual contém apenas trechos indexados da fonte oficial e permanece bloqueada para estudo e geração de questões. O art. 168-A contém §§ 5º e 6º inseridos pela LC 225/2026, depois do edital; eles precisam ficar separados do conteúdo de corte 2022 na validação final.
+
+## Matérias além de Previdenciário
+Foram mantidos no recorte de Lei Seca os dispositivos de Constitucional (direitos fundamentais, direitos sociais, nacionalidade, cidadania, Administração Pública e Seguridade Social), Administrativo (Lei 8.112, Lei 8.429 e Lei 9.784) e Ética (Decretos 1.171 e 6.029).
+Português, Informática e Raciocínio Lógico, assim como tópicos teóricos de Direito Administrativo, Fundamentos Previdenciários, agente de desenvolvimento social e saúde/qualidade de vida no serviço público, foram cadastrados como módulos próprios, sem forçar vínculo com artigos de lei.
