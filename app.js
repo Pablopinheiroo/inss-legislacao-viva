@@ -272,6 +272,30 @@ function legalLawStatus(lawId) {
     ? dashboardData.laws.find(item => item.id === lawId) || null
     : null;
 }
+function legalLawRecentChanges(lawId, days = 30) {
+  const changes = dashboardData && Array.isArray(dashboardData.changes)
+    ? dashboardData.changes
+    : [];
+  const now = Date.now();
+  const cutoff = now - days * 24 * 60 * 60 * 1000;
+  return changes
+    .filter(change => {
+      if (change.law_id !== lawId || !change.detected_at) return false;
+      const detected = new Date(change.detected_at).getTime();
+      return Number.isFinite(detected) && detected >= cutoff && detected <= now;
+    })
+    .sort((a, b) => new Date(b.detected_at) - new Date(a.detected_at));
+}
+function legalLawSourceUrl(law, status = legalLawStatus(law.id)) {
+  return status && status.source_url_used ? status.source_url_used : law.url || "";
+}
+function legalLawLastCheckedText(status) {
+  if (status && status.last_checked) {
+    return "Última consulta bem-sucedida: " + formatDate(status.last_checked);
+  }
+  if (status && status.error) return "Última consulta: falhou; captura anterior preservada";
+  return "Última consulta: sem registro";
+}
 function legalLawMatter(law) {
   return law.matter || "Outras matérias";
 }
@@ -377,29 +401,65 @@ function renderLegalLibrary() {
       subjectList.className = "law-library-subject-list";
 
       subjectLaws.sort((a, b) => collator.compare(a.short_title || a.title, b.short_title || b.title)).forEach(law => {
+        const entry = document.createElement("article");
+        entry.className = "law-library-entry";
+
         const button = document.createElement("button");
         button.type = "button";
         button.className = "law-library-item";
         button.classList.toggle("active", Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id));
         button.setAttribute("aria-pressed", String(Boolean(legalSelectedLaw && legalSelectedLaw.id === law.id)));
+
         const name = document.createElement("strong");
         name.textContent = law.short_title || law.title;
+        const officialName = document.createElement("span");
+        officialName.className = "law-library-official-name";
+        officialName.textContent = law.title !== law.short_title ? law.title : "Nome oficial";
         const detail = document.createElement("span");
+        detail.className = "law-library-kind";
         detail.textContent = law.category || "Norma";
-        const status = legalLawStatus(law.id);
-        const meta = document.createElement("small");
-        meta.textContent = law.enabled === false
-          ? "monitoramento desativado · abrir legislação"
-          : status && status.error
-            ? "última consulta com falha"
-            : status && status.parser_mode === "index"
-              ? "índice de alterações"
-              : status && Number.isFinite(status.article_count)
-                ? status.article_count + " artigos capturados"
-                : "abrir legislação";
-        button.append(name, detail, meta);
+        button.append(name, officialName, detail);
         button.addEventListener("click", () => loadLegalLaw(law.id));
-        subjectList.append(button);
+
+        const status = legalLawStatus(law.id);
+        const metadata = document.createElement("div");
+        metadata.className = "law-library-entry-meta";
+        const checked = document.createElement("small");
+        checked.className = status && status.error ? "law-library-check-status is-error" : "law-library-check-status";
+        checked.textContent = legalLawLastCheckedText(status);
+        metadata.append(checked);
+
+        const recent = legalLawRecentChanges(law.id);
+        if (recent.length) {
+          const badge = document.createElement("span");
+          badge.className = "law-library-recent-badge";
+          badge.textContent = recent.length === 1 ? "Alteração recente" : recent.length + " alterações recentes";
+          const latest = recent[0];
+          badge.title = "Alteração(ões) detectada(s) pelo monitor nos últimos 30 dias. Mais recente: "
+            + formatDate(latest.detected_at)
+            + (latest.article ? " · " + latest.article : "");
+          metadata.append(badge);
+        }
+
+        const sourceUrl = legalLawSourceUrl(law, status);
+        if (sourceUrl) {
+          const source = document.createElement("a");
+          source.className = "law-library-source-link";
+          source.href = sourceUrl;
+          source.target = "_blank";
+          source.rel = "noopener noreferrer";
+          source.textContent = "Fonte oficial ↗";
+          source.title = "Abrir a fonte oficial utilizada pelo monitoramento";
+          metadata.append(source);
+        } else {
+          const noSource = document.createElement("small");
+          noSource.className = "law-library-no-source";
+          noSource.textContent = "Fonte oficial não cadastrada";
+          metadata.append(noSource);
+        }
+
+        entry.append(button, metadata);
+        subjectList.append(entry);
       });
 
       subjectSection.append(subjectTitle, subjectList);
