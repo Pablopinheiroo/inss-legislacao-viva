@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "basis": {
+    "notice": "Edital nº 1 — INSS, de 12/09/2022, com alteração do Edital nº 2, de 14/09/2022",
+    "organizer": "Cebraspe",
+    "official_pdf": "https://cdn.cebraspe.org.br/concursos/inss_22/arquivos/ED_1_INSS_22_ABERTURA.PDF",
+    "official_inss_index": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/edital/2022/",
+    "exam_format": "120 itens CERTO/ERRADO; 50 de conhecimentos básicos e 70 de conhecimentos específicos; 1 ponto por acerto, -1 por erro e 0 em branco; prova objetiva de 3h30.",
+    "scope_items": [
+      "14.2.2",
+      "14.2.3"
+    ],
+    "amendment_note": "O Edital nº 2 retificou o tópico 3 de Informática (LibreOffice para Microsoft Office), entre outros pontos. Não alterou o conteúdo programático previdenciário do item 14.2.3.",
+    "cutoff": "O edital estabeleceu regras temporais nos itens 13.32 e 13.33 para alterações legislativas."
+  },
+  "priority_method": {
+    "1": "Prioridade máxima: normas centrais ou diretamente ligadas aos blocos mais amplos do conteúdo programático.",
+    "2": "Alta prioridade: normas expressamente indicadas, mas de escopo temático mais delimitado ou de apoio a um núcleo maior.",
+    "3": "Complementar: leis especiais expressamente listadas, com objeto específico. Não são dispensáveis; devem ser estudadas depois do núcleo principal.",
+    "warning": "O edital não atribui pesos por lei nem determina quantas questões virão de cada norma. A prioridade é uma organização de estudo, não uma previsão oficial de incidência."
+  },
+  "study_rules": [
+    "O edital cobra assuntos, não necessariamente todos os artigos de cada norma cadastrada.",
+    "Não estudar automaticamente todos os artigos de uma lei só porque ela está na biblioteca.",
+    "Selecionar artigos que correspondam aos assuntos do item 14.2.2 ou 14.2.3; artigos meramente históricos, de vigência, revogação, disposições transitórias sem relação com o programa ou alterações formais devem ser avaliados antes de gerar questões.",
+    "Quando uma lei alteradora modifica outra norma (ex.: Lei 14.176/2021 e LOAS), priorizar a redação consolidada da norma principal e usar a lei alteradora para entender a mudança, evitando duplicar o estudo de todos os artigos da lei modificadora.",
+    "Para a Constituição, usar somente os temas e artigos correspondentes ao programa, não o texto constitucional inteiro.",
+    "Para a IN 128/2022, a prioridade é alta, mas o atual arquivo do projeto acompanha somente o índice de alterações e não oferece texto consolidado por artigo; não gerar questões por artigo até integrar uma versão consolidada confiável.",
+    "Direito Administrativo possui tópicos conceituais que não se esgotam nas três leis cadastradas (8.112, 8.429 e 9.784). Esses assuntos devem ser estudados no material teórico e não devem ser transformados artificialmente em artigos de lei."
+  ],
+  "syllabus_map": [
+    {
+      "item": "14.2.2",
+      "discipline": "Ética no Serviço Público",
+      "topics": [
+        "Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal"
+      ],
+      "norms": [
+        "decreto-1171-1994",
+        "decreto-6029-2007"
+      ],
+      "priority": 2
+    },
+    {
+      "item": "14.2.2",
+      "discipline": "Direito Constitucional",
+      "topics": [
+        "Direitos e garantias fundamentais; direitos individuais e coletivos; direitos sociais; nacionalidade; cidadania; Administração Pública, arts. 37 a 41"
+      ],
+      "norms": [
+        "constituicao-1988"
+      ],
+      "article_scope": "CF arts. 5º a 17 e 37 a 41; para o foco deste edital, os dispositivos de Seguridade Social (arts. 194 a 204) são centrais ao conteúdo específico; art. 149 é apoio ao financiamento.",
+      "priority": 1
+    },
+    {
+      "item": "14.2.2",
+      "discipline": "Direito Administrativo",
+      "topics": [
+        "Estado, governo e Administração Pública; conceito, fontes e princípios do Direito Administrativo; organização administrativa; agentes públicos; Lei 8.112; poderes administrativos; atos administrativos; serviços públicos; controle e responsabilização; Lei 8.429; Lei 9.784"
+      ],
+      "norms": [
+        "lei-8112-1990",
+        "lei-8429-1992",
+        "lei-9784-1999"
+      ],
+      "priority": 2,
+      "note": "Os tópicos conceituais de organização, poderes, atos, serviços e controles não correspondem a uma lei única; estudar também pela teoria."
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Seguridade Social e Legislação Previdenciária",
+      "topics": [
+        "Seguridade Social; legislação previdenciária; RGPS; segurados; filiação e inscrição; empresa e empregador doméstico; financiamento; salário de contribuição; arrecadação e recolhimento; decadência e prescrição; crimes; recursos administrativos; benefícios; qualidade de segurado; serviços previdenciários"
+      ],
+      "norms": [
+        "constituicao-1988",
+        "lei-8212-1991",
+        "lei-8213-1991",
+        "decreto-3048-1999",
+        "in-128-2022",
+        "ec-103-2019"
+      ],
+      "priority": 1
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Benefícios de legislação especial",
+      "topics": [
+        "Talidomida; seringueiros; ex-combatentes; vítimas de hemodiálise de Caruaru; Césio 137; anistiados políticos; hanseníase; síndrome congênita do Zika"
+      ],
+      "norms": [
+        "lei-7070-1982",
+        "lei-7986-1989",
+        "lei-8059-1990",
+        "lei-9422-1996",
+        "lei-9425-1996",
+        "lei-10559-2002",
+        "lei-11520-2007",
+        "lei-13985-2020"
+      ],
+      "priority": 3
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Seguro-defeso",
+      "topics": [
+        "Seguro-desemprego do pescador artesanal"
+      ],
+      "norms": [
+        "lei-10779-2003",
+        "decreto-8424-2015"
+      ],
+      "priority": 2
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Assistência Social",
+      "topics": [
+        "LOAS; BPC; auxílio-inclusão"
+      ],
+      "norms": [
+        "lei-8742-1993",
+        "lei-14176-2021",
+        "decreto-6214-2007"
+      ],
+      "priority": 1
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "RPPS e compensação previdenciária",
+      "topics": [
+        "Regimes próprios; CTC; contagem recíproca; compensação previdenciária"
+      ],
+      "norms": [
+        "lei-9796-1999",
+        "decreto-10188-2019"
+      ],
+      "priority": 2
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Reforma da Previdência",
+      "topics": [
+        "Emenda Constitucional nº 103/2019"
+      ],
+      "norms": [
+        "ec-103-2019"
+      ],
+      "priority": 1
+    },
+    {
+      "item": "14.2.3",
+      "discipline": "Aposentadoria da pessoa com deficiência",
+      "topics": [
+        "Lei Complementar nº 142/2013"
+      ],
+      "norms": [
+        "lc-142-2013"
+      ],
+      "priority": 2
+    }
+  ],
+  "excluded_from_law_question_bank": [
+    {
+      "name": "Português, Raciocínio Lógico e Informática",
+      "reason": "Constam do edital, mas não são matéria de Lei Seca; manter em módulos próprios."
+    },
+    {
+      "name": "Tópicos conceituais de Direito Administrativo e Previdenciário sem dispositivo específico indicado",
+      "reason": "São cobrados, mas precisam de material teórico e questões conceituais; não forçar vinculação a artigo aleatório."
+    },
+    {
+      "name": "Leis citadas apenas em regras de inscrição, reserva de vagas, posse, desempate ou organização do concurso",
+      "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
+    }
+  ],
+  "article_level_status": "Ainda não concluído. A prioridade por norma foi classificada com base no edital; a seleção artigo por artigo exige cruzamento do texto integral de cada captura com os tópicos do programa. Não marcar automaticamente todos os artigos como incluídos.",
+  "generated_at": "2026-11-14"
+}
