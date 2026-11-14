@@ -21,6 +21,7 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("Art. 193", result)
         self.assertIn("A administração pública", result["Art. 37"])
         self.assertIn("Compete à União", result["Art. 149"])
+        self.assertIn("A ordem social", result["Art. 193"])
 
     def test_article_with_letter_suffix(self):
         result = split_articles("Art. 1º-A Texto incluído.\nArt. 2º Outro.")
