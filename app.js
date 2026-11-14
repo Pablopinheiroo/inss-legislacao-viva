@@ -4313,6 +4313,7 @@ function renderSimuladoQuestion(){
   const index=simulatorState.index,response=simulatorState.responses[index];
   $("#simulado-progress-label").textContent="Questão "+(index+1)+" de 10";
   $("#simulado-progress-fill").style.width=((index+1)/10*100)+"%";
+  $("#simulado-progress-fill").parentElement.setAttribute("aria-valuenow",String(index+1));
   $("#simulado-category").textContent=item.category||"Questão";
   $("#simulado-law").textContent=item.law_title||"Norma não informada";
   $("#simulado-article").textContent=item.article||"";
@@ -4399,7 +4400,7 @@ function finishSimulado(){
   $("#simulado-stat-wrong").textContent=String(wrong);
   $("#simulado-stat-blank").textContent=String(blanks);
   $("#simulado-stat-percent").textContent=percentage+"%";
-  const bar=$("#simulado-result-fill");if(bar)bar.style.width=percentage+"%";
+  const bar=$("#simulado-result-fill");if(bar){bar.style.width=percentage+"%";bar.parentElement.setAttribute("aria-valuenow",String(percentage));}
   const list=$("#simulado-result-list");list.replaceChildren();
   simulatorState.questions.forEach((item,index)=>list.append(createSimuladoResultCard(item,simulatorState.responses[index],index)));
   $("#simulado-card").classList.add("hidden");
