@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "description": "Conjuntos autorais de afirmações C/E dentro de um único artigo. A resposta e a justificativa de cada item se vinculam ao mesmo dispositivo legal.",
-  "source_snapshot_date": "2026-11-14T00:52:03Z",
+  "source_snapshot_date": "2026-11-14T12:34:56Z",
   "article_sets": [
     {
       "id": "8213-art1",
@@ -518,8 +518,840 @@
           "explanation": "Certo. Essa regra está prevista no § 3º do art. 12."
         }
       ]
+    },
+    {
+      "id": "8213-art3",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 3",
+      "article_label": "Art. 3º",
+      "topic": "Conselho Nacional de Previdência Social",
+      "statements": [
+        {
+          "id": "8213-art3-1",
+          "prompt": "O CNPS é órgão superior de deliberação colegiada.",
+          "answer": true,
+          "validation_phrase": "órgão superior de deliberação colegiada",
+          "explanation": "Certo. O art. 3º define o CNPS como órgão superior de deliberação colegiada."
+        },
+        {
+          "id": "8213-art3-2",
+          "prompt": "O CNPS possui nove representantes do Governo Federal e seis representantes da sociedade civil.",
+          "answer": false,
+          "validation_phrase": "seis representantes do Governo Federal",
+          "explanation": "Errado. A composição é de seis representantes do Governo Federal e nove da sociedade civil.",
+          "correction": "São seis representantes do Governo Federal e nove da sociedade civil."
+        }
+      ]
+    },
+    {
+      "id": "8213-art11",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 11",
+      "article_label": "Art. 11º",
+      "topic": "Segurados obrigatórios do RGPS",
+      "statements": [
+        {
+          "id": "8213-art11-1",
+          "prompt": "O art. 11 enumera pessoas físicas que são seguradas obrigatórias da Previdência Social.",
+          "answer": true,
+          "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
+          "explanation": "Certo. O art. 11 apresenta as categorias de pessoas físicas enquadradas como seguradas obrigatórias."
+        },
+        {
+          "id": "8213-art11-2",
+          "prompt": "Para ser empregado na hipótese do art. 11, I, a, o serviço pode ser prestado em caráter eventual.",
+          "answer": false,
+          "validation_phrase": "em caráter não eventual",
+          "explanation": "Errado. A alínea exige serviço em caráter não eventual, além de subordinação e remuneração.",
+          "correction": "O serviço deve ser prestado em caráter não eventual, sob subordinação e mediante remuneração."
+        }
+      ]
+    },
+    {
+      "id": "8213-art15",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 15",
+      "article_label": "Art. 15º",
+      "topic": "Manutenção da qualidade de segurado",
+      "statements": [
+        {
+          "id": "8213-art15-1",
+          "prompt": "O segurado facultativo mantém a qualidade de segurado por até seis meses após a cessação das contribuições.",
+          "answer": true,
+          "validation_phrase": "até 6 (seis) meses após a cessação das contribuições, o segurado facultativo",
+          "explanation": "Certo. O inciso VI prevê até seis meses para o segurado facultativo."
+        },
+        {
+          "id": "8213-art15-2",
+          "prompt": "O segurado facultativo mantém a qualidade de segurado por até doze meses após cessar as contribuições.",
+          "answer": false,
+          "validation_phrase": "até 6 (seis) meses após a cessação das contribuições, o segurado facultativo",
+          "explanation": "Errado. Para o segurado facultativo, o prazo é de seis meses.",
+          "correction": "Para o segurado facultativo, o prazo é de até seis meses."
+        }
+      ]
+    },
+    {
+      "id": "8213-art25",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 25",
+      "article_label": "Art. 25º",
+      "topic": "Períodos de carência",
+      "statements": [
+        {
+          "id": "8213-art25-1",
+          "prompt": "O auxílio-reclusão exige carência de vinte e quatro contribuições mensais.",
+          "answer": true,
+          "validation_phrase": "auxílio-reclusão: 24 (vinte e quatro) contribuições mensais",
+          "explanation": "Certo. O inciso IV prevê vinte e quatro contribuições mensais para o auxílio-reclusão."
+        },
+        {
+          "id": "8213-art25-2",
+          "prompt": "O auxílio-reclusão exige carência de doze contribuições mensais.",
+          "answer": false,
+          "validation_phrase": "auxílio-reclusão: 24 (vinte e quatro) contribuições mensais",
+          "explanation": "Errado. A carência prevista no inciso IV é de vinte e quatro contribuições.",
+          "correction": "A carência do auxílio-reclusão é de vinte e quatro contribuições mensais."
+        }
+      ]
+    },
+    {
+      "id": "8213-art26",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 26",
+      "article_label": "Art. 26º",
+      "topic": "Prestações que independem de carência",
+      "statements": [
+        {
+          "id": "8213-art26-1",
+          "prompt": "A concessão da pensão por morte independe de carência.",
+          "answer": true,
+          "validation_phrase": "pensão por morte, salário-família e auxílio-acidente",
+          "explanation": "Certo. O inciso I inclui a pensão por morte entre as prestações que independem de carência."
+        },
+        {
+          "id": "8213-art26-2",
+          "prompt": "A concessão do auxílio-acidente depende do cumprimento de carência.",
+          "answer": false,
+          "validation_phrase": "pensão por morte, salário-família e auxílio-acidente",
+          "explanation": "Errado. O inciso I também inclui o auxílio-acidente entre as prestações que independem de carência.",
+          "correction": "O auxílio-acidente independe de carência."
+        }
+      ]
+    },
+    {
+      "id": "8213-art74",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 74",
+      "article_label": "Art. 74º",
+      "topic": "Termo inicial da pensão por morte",
+      "statements": [
+        {
+          "id": "8213-art74-1",
+          "prompt": "Para filho menor de dezesseis anos, a pensão por morte é devida desde o óbito quando requerida em até cento e oitenta dias após o falecimento.",
+          "answer": true,
+          "validation_phrase": "em até 180 (cento e oitenta) dias após o óbito, para os filhos menores de 16 (dezesseis) anos",
+          "explanation": "Certo. O inciso I prevê cento e oitenta dias para filhos menores de dezesseis anos."
+        },
+        {
+          "id": "8213-art74-2",
+          "prompt": "Para os demais dependentes, a pensão por morte é devida desde o óbito quando requerida em até cento e oitenta dias após o falecimento.",
+          "answer": false,
+          "validation_phrase": "em até 90 (noventa) dias após o óbito, para os demais dependentes",
+          "explanation": "Errado. Para os demais dependentes, o prazo é de noventa dias.",
+          "correction": "Para os demais dependentes, o prazo é de noventa dias após o óbito."
+        }
+      ]
+    },
+    {
+      "id": "8213-art86",
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei 8.213/1991 — Planos de Benefícios",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+      "article_key": "Art. 86",
+      "article_label": "Art. 86º",
+      "topic": "Auxílio-acidente",
+      "statements": [
+        {
+          "id": "8213-art86-1",
+          "prompt": "O auxílio-acidente mensal corresponde a cinquenta por cento do salário-de-benefício.",
+          "answer": true,
+          "validation_phrase": "corresponderá a cinquenta por cento do salário-de-benefício",
+          "explanation": "Certo. O § 1º fixa o auxílio-acidente em cinquenta por cento do salário-de-benefício."
+        },
+        {
+          "id": "8213-art86-2",
+          "prompt": "O auxílio-acidente mensal corresponde a cem por cento do salário-de-benefício.",
+          "answer": false,
+          "validation_phrase": "corresponderá a cinquenta por cento do salário-de-benefício",
+          "explanation": "Errado. O percentual do § 1º é cinquenta por cento.",
+          "correction": "O auxílio-acidente corresponde a cinquenta por cento do salário-de-benefício."
+        }
+      ]
+    },
+    {
+      "id": "8212-art12",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 12",
+      "article_label": "Art. 12º",
+      "topic": "Segurados obrigatórios no custeio",
+      "statements": [
+        {
+          "id": "8212-art12-1",
+          "prompt": "O art. 12 da Lei 8.212/1991 enumera pessoas físicas que são seguradas obrigatórias.",
+          "answer": true,
+          "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
+          "explanation": "Certo. O art. 12 apresenta as categorias de segurados obrigatórios."
+        },
+        {
+          "id": "8212-art12-2",
+          "prompt": "O segurado facultativo integra a lista de segurados obrigatórios do art. 12 da Lei 8.212/1991.",
+          "answer": false,
+          "validation_phrase": "São segurados obrigatórios da Previdência Social as seguintes pessoas físicas",
+          "explanation": "Errado. O segurado facultativo não é segurado obrigatório; sua filiação é facultativa.",
+          "correction": "O art. 12 trata dos segurados obrigatórios; o facultativo é tratado separadamente."
+        }
+      ]
+    },
+    {
+      "id": "8212-art15",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 15",
+      "article_label": "Art. 15º",
+      "topic": "Conceito de empresa e empregador doméstico",
+      "statements": [
+        {
+          "id": "8212-art15-1",
+          "prompt": "Para os efeitos da Lei 8.212/1991, empresa pode ter finalidade lucrativa ou não.",
+          "answer": true,
+          "validation_phrase": "com fins lucrativos ou não",
+          "explanation": "Certo. O inciso I inclui empresa com fins lucrativos ou não."
+        },
+        {
+          "id": "8212-art15-2",
+          "prompt": "O empregador doméstico é a pessoa ou família que admite empregado doméstico com finalidade lucrativa.",
+          "answer": false,
+          "validation_phrase": "sem finalidade lucrativa, empregado doméstico",
+          "explanation": "Errado. O inciso II exige ausência de finalidade lucrativa.",
+          "correction": "O empregador doméstico admite empregado doméstico sem finalidade lucrativa."
+        }
+      ]
+    },
+    {
+      "id": "8212-art22",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 22",
+      "article_label": "Art. 22º",
+      "topic": "Contribuição a cargo da empresa",
+      "statements": [
+        {
+          "id": "8212-art22-1",
+          "prompt": "A contribuição da empresa prevista no art. 22, I, corresponde a vinte por cento sobre o total das remunerações indicadas no dispositivo.",
+          "answer": true,
+          "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
+          "explanation": "Certo. O inciso I estabelece vinte por cento sobre as remunerações previstas no texto."
+        },
+        {
+          "id": "8212-art22-2",
+          "prompt": "A contribuição prevista no art. 22, I, corresponde a onze por cento sobre o total das remunerações.",
+          "answer": false,
+          "validation_phrase": "vinte por cento sobre o total das remunerações pagas",
+          "explanation": "Errado. O percentual do inciso I é vinte por cento.",
+          "correction": "O percentual previsto no art. 22, I, é vinte por cento."
+        }
+      ]
+    },
+    {
+      "id": "8212-art28",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 28",
+      "article_label": "Art. 28º",
+      "topic": "Salário-de-contribuição",
+      "statements": [
+        {
+          "id": "8212-art28-1",
+          "prompt": "Para o empregado e o trabalhador avulso, o salário-de-contribuição considera a totalidade dos rendimentos pagos, devidos ou creditados durante o mês.",
+          "answer": true,
+          "validation_phrase": "a totalidade dos rendimentos pagos, devidos ou creditados a qualquer título",
+          "explanation": "Certo. O inciso I utiliza a totalidade dos rendimentos indicados na lei."
+        },
+        {
+          "id": "8212-art28-2",
+          "prompt": "Para o empregado e o trabalhador avulso, os ganhos habituais sob a forma de utilidades ficam excluídos do salário-de-contribuição.",
+          "answer": false,
+          "validation_phrase": "os ganhos habituais sob a forma de utilidades",
+          "explanation": "Errado. O inciso I inclui esses ganhos habituais.",
+          "correction": "Os ganhos habituais sob a forma de utilidades integram o salário-de-contribuição."
+        }
+      ]
+    },
+    {
+      "id": "8212-art30",
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "article_key": "Art. 30",
+      "article_label": "Art. 30º",
+      "topic": "Arrecadação e recolhimento",
+      "statements": [
+        {
+          "id": "8212-art30-1",
+          "prompt": "A empresa deve arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço, descontando-as da remuneração.",
+          "answer": true,
+          "validation_phrase": "arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço, descontando-as da respectiva remuneração",
+          "explanation": "Certo. A alínea a do inciso I atribui essa obrigação à empresa."
+        },
+        {
+          "id": "8212-art30-2",
+          "prompt": "A empresa não tem responsabilidade de arrecadar as contribuições dos empregados; essa obrigação cabe exclusivamente ao próprio segurado.",
+          "answer": false,
+          "validation_phrase": "arrecadar as contribuições dos segurados empregados e trabalhadores avulsos a seu serviço",
+          "explanation": "Errado. A alínea a do inciso I atribui à empresa a arrecadação e o desconto.",
+          "correction": "A empresa arrecada e desconta as contribuições dos empregados e trabalhadores avulsos a seu serviço."
+        }
+      ]
+    },
+    {
+      "id": "loas-art6",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 6",
+      "article_label": "Art. 6º",
+      "topic": "Sistema Único de Assistência Social",
+      "statements": [
+        {
+          "id": "loas-art6-1",
+          "prompt": "A gestão das ações de assistência social fica organizada sob a forma de sistema descentralizado e participativo, denominado SUAS.",
+          "answer": true,
+          "validation_phrase": "sistema descentralizado e participativo, denominado Sistema Único de Assistência Social",
+          "explanation": "Certo. O caput organiza a gestão das ações de assistência social sob a forma do SUAS."
+        },
+        {
+          "id": "loas-art6-2",
+          "prompt": "O SUAS organiza a assistência social sob a forma de sistema centralizado e não participativo.",
+          "answer": false,
+          "validation_phrase": "sistema descentralizado e participativo",
+          "explanation": "Errado. O art. 6º define o SUAS como sistema descentralizado e participativo.",
+          "correction": "O SUAS é descentralizado e participativo."
+        }
+      ]
+    },
+    {
+      "id": "loas-art21",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 21",
+      "article_label": "Art. 21º",
+      "topic": "Revisão do BPC",
+      "statements": [
+        {
+          "id": "loas-art21-1",
+          "prompt": "O Benefício de Prestação Continuada deve ser revisto a cada dois anos para avaliar a continuidade das condições que lhe deram origem.",
+          "answer": true,
+          "validation_phrase": "deve ser revisto a cada 2 (dois) anos",
+          "explanation": "Certo. O caput do art. 21 prevê revisão a cada dois anos."
+        },
+        {
+          "id": "loas-art21-2",
+          "prompt": "O Benefício de Prestação Continuada deve ser revisto somente a cada cinco anos.",
+          "answer": false,
+          "validation_phrase": "deve ser revisto a cada 2 (dois) anos",
+          "explanation": "Errado. O prazo do art. 21 é de dois anos.",
+          "correction": "A revisão prevista no art. 21 ocorre a cada dois anos."
+        }
+      ]
+    },
+    {
+      "id": "loas-art21a",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 21-A",
+      "article_label": "Art. 21-A",
+      "topic": "Atividade remunerada e BPC",
+      "statements": [
+        {
+          "id": "loas-art21a-1",
+          "prompt": "O BPC será suspenso quando a pessoa com deficiência exercer atividade remunerada, inclusive como microempreendedor individual.",
+          "answer": true,
+          "validation_phrase": "será suspenso pelo órgão concedente quando a pessoa com deficiência exercer atividade remunerada",
+          "explanation": "Certo. O caput do art. 21-A prevê a suspensão nessa hipótese."
+        },
+        {
+          "id": "loas-art21a-2",
+          "prompt": "A contratação da pessoa com deficiência como aprendiz acarreta a suspensão do BPC desde o início da atividade.",
+          "answer": false,
+          "validation_phrase": "a contratação de pessoa com deficiência como aprendiz não acarreta a suspensão",
+          "explanation": "Errado. O § 2º determina que a contratação como aprendiz não acarreta a suspensão, respeitado o limite legal.",
+          "correction": "A contratação como aprendiz não suspende o BPC; o recebimento concomitante fica limitado a dois anos."
+        }
+      ]
+    },
+    {
+      "id": "loas-art21b",
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei 8.742/1993 — LOAS",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+      "article_key": "Art. 21-B",
+      "article_label": "Art. 21-B",
+      "topic": "Regularização do CadÚnico",
+      "statements": [
+        {
+          "id": "loas-art21b-1",
+          "prompt": "O beneficiário do BPC em município de pequeno porte tem prazo de quarenta e cinco dias para regularizar a situação após a efetiva notificação.",
+          "answer": true,
+          "validation_phrase": "45 (quarenta e cinco) dias para Municípios de pequeno porte",
+          "explanation": "Certo. O inciso I prevê quarenta e cinco dias para municípios de pequeno porte."
+        },
+        {
+          "id": "loas-art21b-2",
+          "prompt": "O prazo para regularização do CadÚnico em municípios de médio e grande porte ou metrópoles com mais de cinquenta mil habitantes é de quarenta e cinco dias.",
+          "answer": false,
+          "validation_phrase": "90 (noventa) dias para Municípios de médio e grande porte ou metrópole",
+          "explanation": "Errado. O inciso II prevê noventa dias para esses municípios.",
+          "correction": "Nessas localidades, o prazo é de noventa dias."
+        }
+      ]
+    },
+    {
+      "id": "8112-art13",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 13",
+      "article_label": "Art. 13º",
+      "topic": "Posse em cargo público",
+      "statements": [
+        {
+          "id": "8112-art13-1",
+          "prompt": "A posse ocorrerá, como regra, no prazo de trinta dias contados da publicação do ato de provimento.",
+          "answer": true,
+          "validation_phrase": "A posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
+          "explanation": "Certo. O § 1º fixa trinta dias, ressalvadas as regras de contagem em caso de impedimento legal."
+        },
+        {
+          "id": "8112-art13-2",
+          "prompt": "A posse ocorrerá, como regra, no prazo de quinze dias contados da publicação do ato de provimento.",
+          "answer": false,
+          "validation_phrase": "A posse ocorrerá no prazo de trinta dias contados da publicação do ato de provimento",
+          "explanation": "Errado. O prazo de quinze dias é ligado ao exercício; para a posse, o art. 13 prevê trinta dias.",
+          "correction": "O prazo geral para a posse é de trinta dias."
+        }
+      ]
+    },
+    {
+      "id": "8112-art15",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 15",
+      "article_label": "Art. 15º",
+      "topic": "Exercício no cargo público",
+      "statements": [
+        {
+          "id": "8112-art15-1",
+          "prompt": "O prazo para o servidor empossado entrar em exercício é de quinze dias, contados da data da posse.",
+          "answer": true,
+          "validation_phrase": "É de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício, contados da data da posse",
+          "explanation": "Certo. O § 1º estabelece quinze dias a partir da posse."
+        },
+        {
+          "id": "8112-art15-2",
+          "prompt": "O servidor empossado dispõe de trinta dias, contados da posse, para entrar em exercício.",
+          "answer": false,
+          "validation_phrase": "É de quinze dias o prazo para o servidor empossado em cargo público entrar em exercício",
+          "explanation": "Errado. O prazo previsto no § 1º é de quinze dias.",
+          "correction": "O prazo para entrar em exercício é de quinze dias, contados da posse."
+        }
+      ]
+    },
+    {
+      "id": "8112-art19",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 19",
+      "article_label": "Art. 19º",
+      "topic": "Jornada de trabalho",
+      "statements": [
+        {
+          "id": "8112-art19-1",
+          "prompt": "A jornada dos servidores está sujeita ao limite máximo de quarenta horas semanais, observados os limites diários de seis a oito horas.",
+          "answer": true,
+          "validation_phrase": "duração máxima do trabalho semanal de quarenta horas e observados os limites mínimo e máximo de seis horas e oito horas diárias",
+          "explanation": "Certo. O caput prevê quarenta horas semanais e os limites diários de seis a oito horas, ressalvadas as leis especiais."
+        },
+        {
+          "id": "8112-art19-2",
+          "prompt": "A Lei 8.112/1990 estabelece, como regra geral, o limite máximo de quarenta e quatro horas semanais para os servidores.",
+          "answer": false,
+          "validation_phrase": "duração máxima do trabalho semanal de quarenta horas",
+          "explanation": "Errado. O limite máximo geral é quarenta horas semanais.",
+          "correction": "O limite máximo geral é de quarenta horas semanais."
+        }
+      ]
+    },
+    {
+      "id": "8112-art116",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 116",
+      "article_label": "Art. 116º",
+      "topic": "Deveres do servidor",
+      "statements": [
+        {
+          "id": "8112-art116-1",
+          "prompt": "É dever do servidor cumprir as ordens superiores, exceto quando forem manifestamente ilegais.",
+          "answer": true,
+          "validation_phrase": "cumprir as ordens superiores, exceto quando manifestamente ilegais",
+          "explanation": "Certo. O inciso IV prevê o cumprimento das ordens superiores, com essa exceção."
+        },
+        {
+          "id": "8112-art116-2",
+          "prompt": "O servidor deve cumprir todas as ordens superiores, inclusive as manifestamente ilegais.",
+          "answer": false,
+          "validation_phrase": "exceto quando manifestamente ilegais",
+          "explanation": "Errado. O inciso IV excepciona expressamente as ordens manifestamente ilegais.",
+          "correction": "O servidor não deve cumprir ordens superiores manifestamente ilegais."
+        }
+      ]
+    },
+    {
+      "id": "8112-art117",
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+      "article_key": "Art. 117",
+      "article_label": "Art. 117º",
+      "topic": "Proibições ao servidor",
+      "statements": [
+        {
+          "id": "8112-art117-1",
+          "prompt": "É proibido ao servidor manter sob sua chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente até o segundo grau civil.",
+          "answer": true,
+          "validation_phrase": "parente até o segundo grau civil",
+          "explanation": "Certo. A proibição está no inciso VIII do art. 117."
+        },
+        {
+          "id": "8112-art117-2",
+          "prompt": "A proibição do art. 117, VIII, alcança somente parentes até o primeiro grau civil.",
+          "answer": false,
+          "validation_phrase": "parente até o segundo grau civil",
+          "explanation": "Errado. O texto alcança parentes até o segundo grau civil.",
+          "correction": "A redação do inciso VIII menciona parentes até o segundo grau civil."
+        }
+      ]
+    },
+    {
+      "id": "9784-art18",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 18",
+      "article_label": "Art. 18º",
+      "topic": "Impedimento no processo administrativo",
+      "statements": [
+        {
+          "id": "9784-art18-1",
+          "prompt": "O servidor ou autoridade que tenha interesse direto ou indireto na matéria fica impedido de atuar no processo administrativo.",
+          "answer": true,
+          "validation_phrase": "tenha interesse direto ou indireto na matéria",
+          "explanation": "Certo. Essa é a hipótese prevista no inciso I do art. 18."
+        },
+        {
+          "id": "9784-art18-2",
+          "prompt": "O art. 18 limita o impedimento por parentesco ao segundo grau, inclusive por afinidade.",
+          "answer": false,
+          "validation_phrase": "parente e afins até o terceiro grau",
+          "explanation": "Errado. O inciso II menciona cônjuge, companheiro ou parente e afins até o terceiro grau.",
+          "correction": "O inciso II menciona parentes e afins até o terceiro grau."
+        }
+      ]
+    },
+    {
+      "id": "9784-art24",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 24",
+      "article_label": "Art. 24º",
+      "topic": "Prazo geral para prática de atos",
+      "statements": [
+        {
+          "id": "9784-art24-1",
+          "prompt": "Na ausência de disposição específica, os atos no processo administrativo devem ser praticados no prazo de cinco dias.",
+          "answer": true,
+          "validation_phrase": "devem ser praticados no prazo de cinco dias",
+          "explanation": "Certo. O art. 24 fixa cinco dias como prazo geral, salvo motivo de força maior."
+        },
+        {
+          "id": "9784-art24-2",
+          "prompt": "Na ausência de disposição específica, o prazo geral para os atos no processo administrativo é de dez dias.",
+          "answer": false,
+          "validation_phrase": "prazo de cinco dias",
+          "explanation": "Errado. O prazo geral é de cinco dias e pode ser dilatado até o dobro mediante justificação comprovada.",
+          "correction": "O prazo geral é de cinco dias, podendo ser dilatado até o dobro mediante justificação comprovada."
+        }
+      ]
+    },
+    {
+      "id": "9784-art26",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 26",
+      "article_label": "Art. 26º",
+      "topic": "Intimação do interessado",
+      "statements": [
+        {
+          "id": "9784-art26-1",
+          "prompt": "A intimação para comparecimento deve observar antecedência mínima de três dias úteis.",
+          "answer": true,
+          "validation_phrase": "antecedência mínima de três dias úteis",
+          "explanation": "Certo. O § 2º prevê antecedência mínima de três dias úteis."
+        },
+        {
+          "id": "9784-art26-2",
+          "prompt": "A intimação para comparecimento deve observar antecedência mínima de três dias corridos.",
+          "answer": false,
+          "validation_phrase": "antecedência mínima de três dias úteis",
+          "explanation": "Errado. O art. 26 especifica dias úteis, e não corridos.",
+          "correction": "A antecedência mínima é de três dias úteis."
+        }
+      ]
+    },
+    {
+      "id": "9784-art49",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 49",
+      "article_label": "Art. 49º",
+      "topic": "Prazo para decisão administrativa",
+      "statements": [
+        {
+          "id": "9784-art49-1",
+          "prompt": "Concluída a instrução do processo administrativo, a Administração tem até trinta dias para decidir, salvo prorrogação por igual período expressamente motivada.",
+          "answer": true,
+          "validation_phrase": "prazo de até trinta dias para decidir",
+          "explanation": "Certo. O art. 49 prevê até trinta dias, com possibilidade de prorrogação expressamente motivada."
+        },
+        {
+          "id": "9784-art49-2",
+          "prompt": "Concluída a instrução, a Administração dispõe de sessenta dias para decidir, sem necessidade de motivar eventual prorrogação.",
+          "answer": false,
+          "validation_phrase": "prorrogação por igual período expressamente motivada",
+          "explanation": "Errado. O prazo é de até trinta dias e a prorrogação por igual período exige motivação expressa.",
+          "correction": "O prazo é de trinta dias, prorrogável por igual período com motivação expressa."
+        }
+      ]
+    },
+    {
+      "id": "9784-art50",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 50",
+      "article_label": "Art. 50º",
+      "topic": "Motivação dos atos administrativos",
+      "statements": [
+        {
+          "id": "9784-art50-1",
+          "prompt": "Os atos administrativos que neguem, limitem ou afetem direitos ou interesses devem ser motivados com indicação dos fatos e dos fundamentos jurídicos.",
+          "answer": true,
+          "validation_phrase": "neguem, limitem ou afetem direitos ou interesses",
+          "explanation": "Certo. O inciso I exige motivação nessa hipótese."
+        },
+        {
+          "id": "9784-art50-2",
+          "prompt": "As decisões de recursos administrativos estão dispensadas de motivação.",
+          "answer": false,
+          "validation_phrase": "decidam recursos administrativos",
+          "explanation": "Errado. O inciso V inclui as decisões de recursos administrativos entre os atos que devem ser motivados.",
+          "correction": "As decisões de recursos administrativos devem ser motivadas."
+        }
+      ]
+    },
+    {
+      "id": "9784-art59",
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+      "article_key": "Art. 59",
+      "article_label": "Art. 59º",
+      "topic": "Prazo de recurso administrativo",
+      "statements": [
+        {
+          "id": "9784-art59-1",
+          "prompt": "Salvo disposição legal específica, o prazo para interposição de recurso administrativo é de dez dias.",
+          "answer": true,
+          "validation_phrase": "é de dez dias o prazo para interposição de recurso administrativo",
+          "explanation": "Certo. O caput estabelece dez dias como regra geral."
+        },
+        {
+          "id": "9784-art59-2",
+          "prompt": "Salvo disposição legal específica, o prazo geral para interposição de recurso administrativo é de quinze dias.",
+          "answer": false,
+          "validation_phrase": "é de dez dias o prazo para interposição de recurso administrativo",
+          "explanation": "Errado. O prazo geral do art. 59 é de dez dias.",
+          "correction": "O prazo geral é de dez dias, salvo disposição legal específica."
+        }
+      ]
+    },
+    {
+      "id": "cf-art37",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "article_key": "Art. 37",
+      "article_label": "Art. 37º",
+      "topic": "Princípios da Administração Pública",
+      "statements": [
+        {
+          "id": "cf-art37-1",
+          "prompt": "A Administração Pública direta e indireta deve obedecer aos princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+          "answer": true,
+          "validation_phrase": "princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência",
+          "explanation": "Certo. O caput do art. 37 apresenta os cinco princípios expressos."
+        },
+        {
+          "id": "cf-art37-2",
+          "prompt": "A investidura em cargo ou emprego público dispensa concurso público em qualquer situação.",
+          "answer": false,
+          "validation_phrase": "depende de aprovação prévia em concurso público",
+          "explanation": "Errado. O inciso II exige concurso, ressalvadas as nomeações para cargos em comissão de livre nomeação e exoneração.",
+          "correction": "A regra é a aprovação prévia em concurso público, com a exceção constitucional dos cargos em comissão."
+        }
+      ]
+    },
+    {
+      "id": "cf-art194",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "article_key": "Art. 194",
+      "article_label": "Art. 194º",
+      "topic": "Conceito de Seguridade Social",
+      "statements": [
+        {
+          "id": "cf-art194-1",
+          "prompt": "A Seguridade Social reúne ações destinadas a assegurar direitos relativos à saúde, à Previdência Social e à assistência social.",
+          "answer": true,
+          "validation_phrase": "direitos relativos à saúde, à previdência e à assistência social",
+          "explanation": "Certo. O caput do art. 194 abrange essas três áreas."
+        },
+        {
+          "id": "cf-art194-2",
+          "prompt": "A Seguridade Social abrange apenas a Previdência Social e a assistência social, sem incluir a saúde.",
+          "answer": false,
+          "validation_phrase": "direitos relativos à saúde, à previdência e à assistência social",
+          "explanation": "Errado. A saúde também integra expressamente a Seguridade Social.",
+          "correction": "A Seguridade Social compreende saúde, Previdência Social e assistência social."
+        }
+      ]
+    },
+    {
+      "id": "cf-art195",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "article_key": "Art. 195",
+      "article_label": "Art. 195º",
+      "topic": "Financiamento da Seguridade Social",
+      "statements": [
+        {
+          "id": "cf-art195-1",
+          "prompt": "A Seguridade Social será financiada por toda a sociedade, de forma direta e indireta, nos termos da lei.",
+          "answer": true,
+          "validation_phrase": "financiada por toda a sociedade, de forma direta e indireta",
+          "explanation": "Certo. Essa é a regra inicial do caput do art. 195."
+        },
+        {
+          "id": "cf-art195-2",
+          "prompt": "A Seguridade Social é financiada exclusivamente pelas contribuições dos trabalhadores, sem participação de outras fontes.",
+          "answer": false,
+          "validation_phrase": "financiada por toda a sociedade, de forma direta e indireta",
+          "explanation": "Errado. O art. 195 prevê financiamento por toda a sociedade e enumera diversas fontes.",
+          "correction": "O financiamento é de toda a sociedade, direta e indiretamente, e conta com diversas fontes."
+        }
+      ]
+    },
+    {
+      "id": "cf-art201",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "article_key": "Art. 201",
+      "article_label": "Art. 201º",
+      "topic": "Organização do RGPS",
+      "statements": [
+        {
+          "id": "cf-art201-1",
+          "prompt": "A Previdência Social é organizada sob a forma do RGPS, de caráter contributivo e filiação obrigatória.",
+          "answer": true,
+          "validation_phrase": "de caráter contributivo e de filiação obrigatória",
+          "explanation": "Certo. O caput do art. 201 estabelece o caráter contributivo e a filiação obrigatória."
+        },
+        {
+          "id": "cf-art201-2",
+          "prompt": "A filiação ao Regime Geral de Previdência Social é facultativa para todas as pessoas que exercem atividade abrangida.",
+          "answer": false,
+          "validation_phrase": "de caráter contributivo e de filiação obrigatória",
+          "explanation": "Errado. O caput estabelece filiação obrigatória ao RGPS, observadas as regras legais de enquadramento.",
+          "correction": "O RGPS tem filiação obrigatória para quem se enquadra nas hipóteses legais."
+        }
+      ]
+    },
+    {
+      "id": "cf-art203",
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
+      "source_url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+      "article_key": "Art. 203",
+      "article_label": "Art. 203º",
+      "topic": "Objetivos da assistência social",
+      "statements": [
+        {
+          "id": "cf-art203-1",
+          "prompt": "A assistência social será prestada a quem dela necessitar, independentemente de contribuição à Seguridade Social.",
+          "answer": true,
+          "validation_phrase": "independentemente de contribuição à seguridade social",
+          "explanation": "Certo. O caput do art. 203 expressa o caráter não contributivo da assistência social."
+        },
+        {
+          "id": "cf-art203-2",
+          "prompt": "Para ter acesso às ações de assistência social previstas no art. 203, a pessoa precisa necessariamente ter contribuído para a Seguridade Social.",
+          "answer": false,
+          "validation_phrase": "independentemente de contribuição à seguridade social",
+          "explanation": "Errado. O art. 203 determina que a assistência social seja prestada independentemente de contribuição.",
+          "correction": "A assistência social independe de contribuição à Seguridade Social."
+        }
+      ]
     }
   ],
-  "total_articles": 16,
-  "total_statements": 46
+  "total_articles": 48,
+  "total_statements": 110
 }
