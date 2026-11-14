@@ -88,11 +88,13 @@ A aba **Treinar C/E** oferece um banco inicial de itens autorais no estilo Certo
 
 O banco atual é inicial e não cobre integralmente as 27 normas. As questões devem ser ampliadas e revisadas à medida que o catálogo de leis for auditado. A redação usada como referência deve sempre ser conferida na versão consolidada oficial.
 
-## Verificação manual pelo próprio site
+## Como a verificação da legislação funciona
 
-O botão **Verificar atualizações** abre a tela do workflow no GitHub Actions. Na página que abrir, clique em **Run workflow** e confirme em **Run workflow** novamente. Isso inicia uma consulta manual fora do horário da rotina diária. Quando a execução terminar e os dados forem publicados, use **Recarregar painel** para buscar os dados mais recentes no site.
+A rotina diária do GitHub Actions consulta as fontes oficiais cadastradas em `data/laws.json`. Para cada norma, o monitor compara o conteúdo obtido agora com o snapshot anterior salvo em `data/snapshots/`. Quando encontra diferença, registra o texto anterior e o atual em `data/legislacao.json`; quando a fonte falha ou retorna conteúdo incompleto, preserva a captura anterior e registra o erro. A rotina diária está programada para 06:17 no horário de Brasília.
 
-O site é estático e não guarda token de acesso do GitHub. Por segurança, o botão encaminha para a confirmação autenticada do próprio GitHub em vez de tentar disparar a execução diretamente pelo navegador.
+O painel do site não acessa diretamente cada portal legislativo. Ele lê os resultados que o monitor gravou no repositório e mostra o histórico. O botão **Abrir execução manual** leva ao GitHub Actions para iniciar uma verificação extra: no GitHub, clique em **Run workflow** e confirme. Quando a execução terminar, volte ao Radar e clique em **Recarregar painel**.
+
+O site é estático e não guarda token de acesso do GitHub. Por isso, não é seguro disparar uma execução autenticada diretamente do navegador. Para iniciar e acompanhar uma execução inteiramente dentro do site seria necessário um serviço intermediário autenticado; o projeto atual evita esse serviço e mantém a rotina automática gratuita do GitHub Actions.
 
 
 ## Recorte da Constituição e modo Lei Seca
