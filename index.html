@@ -7,7 +7,7 @@
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
   <link rel="stylesheet" href="styles.css?v=20261114-25">
-  <script defer src="app.js?v=20261114-39"></script>
+  <script defer src="app.js?v=20261114-40"></script>
 </head>
 <body>
   <header class="topbar">
@@ -431,13 +431,21 @@
         <article><span>Em branco</span><strong id="simulado-stat-blank">0</strong></article>
         <article><span>Pontuação líquida</span><strong id="simulado-stat-net-points">0 pts</strong></article>
         <article><span>Aproveitamento</span><strong id="simulado-stat-percent">0%</strong></article>
+        <article><span>Tempo utilizado</span><strong id="simulado-stat-time">00:00</strong></article>
       </div>
       <div class="simulado-result-bar" role="progressbar" aria-label="Aproveitamento do simulado" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <span id="simulado-result-fill"></span>
       </div>
+      <section class="simulado-report-section" aria-label="Diagnóstico do simulado">
+        <div class="section-heading simulado-result-heading"><div><h3>Matérias com maior dificuldade</h3><p>Classificação pelo percentual de questões erradas ou deixadas em branco em cada matéria.</p></div></div>
+        <div id="simulado-hardest-subjects" class="simulado-report-list" aria-live="polite"></div>
+        <div class="section-heading simulado-result-heading simulado-report-subheading"><div><h3>Artigos que precisam de revisão</h3><p>Dispositivos relacionados às questões erradas ou não respondidas.</p></div></div>
+        <div id="simulado-articles-to-review" class="simulado-report-list" aria-live="polite"></div>
+      </section>
       <div class="section-heading simulado-result-heading"><div><h3>Correção das questões</h3><p>Confira sua resposta, o gabarito e o comentário de cada item.</p></div></div>
       <div id="simulado-result-list" class="simulado-result-list"></div>
       <div class="summary-actions">
+        <button id="simulado-retry-wrong" class="secondary-button hidden" type="button">Refazer questões erradas</button>
         <button id="simulado-restart" class="primary-button" type="button">Fazer novo simulado</button>
       </div>
     </section>
