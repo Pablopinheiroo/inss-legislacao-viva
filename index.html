@@ -37,11 +37,11 @@
       <div><p class="eyebrow">PAINEL DE ACOMPANHAMENTO</p><h1>O que mudou na legislação?</h1><p class="subtitle">Diferenças detectadas nas normas acompanhadas para o estudo do INSS.</p></div>
       <div class="intro-actions">
         <div class="status-pill" id="system-status"><span class="status-dot"></span><span>Carregando dados</span></div>
-        <a id="manual-check-button" class="primary-button" href="https://github.com/Pablopinheiroo/inss-legislacao-viva/actions/workflows/monitorar-legislacao.yml" target="_blank" rel="noopener noreferrer">Verificar atualizações ↗</a>
+        <a id="manual-check-button" class="primary-button" href="https://github.com/Pablopinheiroo/inss-legislacao-viva/actions/workflows/monitorar-legislacao.yml" target="_blank" rel="noopener noreferrer">Abrir execução manual ↗</a>
       </div>
     </section>
 
-    <p class="manual-check-note">Para consultar agora, abra o GitHub e clique em <strong>Run workflow</strong>. A verificação diária continua ativa; esta opção permite iniciar outra execução quando quiser.</p>
+    <p class="manual-check-note"><strong>O monitor já faz a busca automaticamente todos os dias:</strong> consulta as fontes oficiais, compara os textos atuais com as capturas salvas no GitHub e registra as diferenças encontradas. O botão ao lado abre o GitHub apenas para iniciar uma verificação extra; depois, volte ao site e clique em <strong>Recarregar painel</strong> para ver o resultado.</p>
 
     <section class="stats-grid" aria-label="Resumo do monitoramento">
       <article class="stat-card"><span class="stat-label">Alterações registradas</span><strong id="stat-changes">—</strong><small>no histórico</small></article>
@@ -291,10 +291,10 @@
         <div class="quiz-law-line"><strong id="multi-ce-law"></strong><span id="multi-ce-article-label"></span></div>
         <h2 id="multi-ce-topic"></h2>
       </div>
-      <details class="law-excerpt multi-ce-law-text">
-        <summary>Ler o artigo antes de responder</summary>
+      <button id="multi-ce-article-toggle" class="multi-ce-article-toggle" type="button" aria-expanded="false" aria-controls="multi-ce-article-panel">Ler artigo antes de responder</button>
+      <section id="multi-ce-article-panel" class="multi-ce-article-panel hidden">
         <pre id="multi-ce-article-text"></pre>
-      </details>
+      </section>
       <p id="multi-ce-prompt" class="quiz-statement"></p>
       <div class="answer-buttons">
         <button id="multi-ce-true" class="answer-button" type="button" aria-pressed="false">Certo</button>
