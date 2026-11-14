@@ -22,13 +22,13 @@ DATA = ROOT / "data"
 SNAPSHOTS = DATA / "snapshots"
 LAWS_FILE = DATA / "laws.json"
 OUTPUT_FILE = DATA / "legislacao.json"
-SNAPSHOT_VERSION = 2
-MONITOR_VERSION = 2
+SNAPSHOT_VERSION = 3
+MONITOR_VERSION = 3
 
 # A inicial maiúscula é intencional: referências como "art. 6º da EC..." não
 # podem ser confundidas com o início de um dispositivo.
 ARTICLE_RE = re.compile(
-    r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:[º°o])?\.?\s*(?:[-–]\s*([A-Z]))?(?:\s+(.*))?$"
+    r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:[º°o])?\s*(?:[-–]\s*([A-Z]))?\.?\s*(?:\s+(.*))?$"
 )
 REFERENCE_STARTS = {
     "da", "das", "de", "do", "dos", "na", "nas", "no", "nos",
@@ -188,6 +188,227 @@ def split_articles(text: str) -> dict[str, str]:
     }
 
 
+
+def split_article_components(article_text: str) -> dict[str, dict[str, str]]:
+    """Separa caput, parágrafos, incisos, alíneas e itens em caminhos hierárquicos."""
+    raw_lines = article_text.splitlines()
+    lines: list[str] = []
+    index = 0
+
+    # Alguns extratores separam o símbolo § e o número em linhas distintas.
+    while index < len(raw_lines):
+        line = raw_lines[index].strip()
+        if line == "§" and index + 1 < len(raw_lines):
+            following = raw_lines[index + 1].strip()
+            if re.match(r"^(?:\d+\s*[º°o]?|único)\b", following, re.IGNORECASE):
+                lines.append("§ " + following)
+                index += 2
+                continue
+        if line.lower() == "parágrafo" and index + 1 < len(raw_lines):
+            following = raw_lines[index + 1].strip()
+            if following.lower().startswith("único"):
+                lines.append("Parágrafo " + following)
+                index += 2
+                continue
+        lines.append(line)
+        index += 1
+
+    # Retira apenas o cabeçalho do artigo. O texto que vier na mesma linha
+    # continua pertencendo ao caput.
+    if lines:
+        heading = ARTICLE_RE.match(lines[0])
+        if heading:
+            body = (heading.group(3) or "").strip()
+            if body:
+                lines[0] = body
+            else:
+                lines.pop(0)
+
+    paragraph_re = re.compile(
+        r"^(?:§\s*(?:(\d+)\s*[º°o]?|(único))|Parágrafo\s+único)\s*\.?\s*(.*)$",
+        re.IGNORECASE,
+    )
+    inciso_re = re.compile(r"^([IVXLCDM]{1,8})\s*[-–—]\s*(.*)$")
+    alinea_re = re.compile(r"^([a-z])\s*(?:\)|[-–—])\s*(.*)$")
+    item_re = re.compile(r"^(\d+)\s*[.)]\s*(.*)$")
+
+    active: dict[int, str] = {}
+    components: dict[str, dict[str, str]] = {}
+    current_key = "caput"
+    current_type = "caput"
+    current_label = "caput"
+    current_lines: list[str] = []
+
+    def save_current() -> None:
+        text = normalize("\n".join(current_lines))
+        if not text and current_key != "caput":
+            return
+        components[current_key] = {
+            "device_type": current_type,
+            "device_label": current_label,
+            "device_path": current_key,
+            "text": text,
+            "normalized_text": re.sub(r"\s+", " ", text).strip(),
+        }
+
+    def start_component(
+        depth: int,
+        device_type: str,
+        key_part: str,
+        label: str,
+        marker_line: str,
+    ) -> None:
+        nonlocal current_key, current_type, current_label, current_lines
+        save_current()
+
+        if depth == 1:
+            path = key_part
+        elif depth == 2:
+            path = active.get(1, "caput") + "/" + key_part
+        elif depth == 3:
+            parent = active.get(2) or active.get(1) or "caput"
+            path = parent + "/" + key_part
+        else:
+            parent = active.get(3) or active.get(2) or active.get(1) or "caput"
+            path = parent + "/" + key_part
+
+        for deeper in list(active):
+            if deeper >= depth:
+                active.pop(deeper, None)
+        active[depth] = path
+
+        current_key = path
+        current_type = device_type
+        current_label = label
+        current_lines = [marker_line] if marker_line else []
+
+    for line in lines:
+        if not line:
+            continue
+
+        paragraph = paragraph_re.match(line)
+        if paragraph:
+            number, unique, body = paragraph.groups()
+            if unique or line.lower().startswith("parágrafo"):
+                key = "paragrafo:unico"
+                label = "Parágrafo único"
+            else:
+                key = "paragrafo:" + str(int(number))
+                label = "§ " + str(int(number)) + "º"
+            start_component(1, "paragrafo", key, label, line)
+            if body:
+                current_lines.append(body)
+            continue
+
+        inciso = inciso_re.match(line)
+        if inciso:
+            roman, body = inciso.groups()
+            roman = roman.upper()
+            start_component(2, "inciso", "inciso:" + roman, "inciso " + roman, line)
+            if body:
+                current_lines.append(body)
+            continue
+
+        alinea = alinea_re.match(line)
+        if alinea:
+            letter, body = alinea.groups()
+            letter = letter.lower()
+            start_component(3, "alinea", "alinea:" + letter, "alínea " + letter, line)
+            if body:
+                current_lines.append(body)
+            continue
+
+        item = item_re.match(line)
+        if item:
+            number, body = item.groups()
+            number = str(int(number))
+            start_component(4, "item", "item:" + number, "item " + number, line)
+            if body:
+                current_lines.append(body)
+            continue
+
+        current_lines.append(line)
+
+    save_current()
+    if not components:
+        text = normalize(article_text)
+        components["caput"] = {
+            "device_type": "caput",
+            "device_label": "caput",
+            "device_path": "caput",
+            "text": text,
+            "normalized_text": re.sub(r"\s+", " ", text).strip(),
+        }
+    return components
+
+
+BR_DATE_RE = r"(\d{1,2})[./](\d{1,2})[./](\d{4})"
+
+
+def _iso_date(match: re.Match[str] | None) -> str | None:
+    if not match:
+        return None
+    try:
+        day, month, year = (int(part) for part in match.groups()[-3:])
+        return datetime(year, month, day).date().isoformat()
+    except (TypeError, ValueError):
+        return None
+
+
+def extract_event_dates(text: str) -> dict[str, str | None]:
+    """Extrai somente datas identificadas expressamente como publicação ou vigência."""
+    publication_re = re.compile(
+        r"\b(?:publicad[oa]|publicação)\b.{0,100}?\b(?:em|de)\s+" + BR_DATE_RE,
+        re.IGNORECASE | re.DOTALL,
+    )
+    effective_patterns = [
+        re.compile(
+            r"\b(?:entra(?:rá)?\s+em\s+vigor|passa(?:rá)?\s+a\s+vigorar|"
+            r"produz(?:irá)?\s+efeitos?)\s+(?:a\s+partir\s+de|em)\s+" + BR_DATE_RE,
+            re.IGNORECASE | re.DOTALL,
+        ),
+        re.compile(
+            r"\b(?:revogad[oa]|revogação)\b.{0,140}?"
+            r"(?:a\s+partir\s+de|com\s+efeitos\s+a\s+partir\s+de)\s+" + BR_DATE_RE,
+            re.IGNORECASE | re.DOTALL,
+        ),
+        re.compile(
+            r"\bcom\s+efeitos\s+a\s+partir\s+de\s+" + BR_DATE_RE,
+            re.IGNORECASE | re.DOTALL,
+        ),
+    ]
+
+    publication_match = publication_re.search(text)
+    publication_date = _iso_date(publication_match)
+    effective_match = next(
+        (match for pattern in effective_patterns if (match := pattern.search(text))),
+        None,
+    )
+    effective_date = _iso_date(effective_match)
+
+    # "Entra em vigor na data de sua publicação" só permite preencher a data
+    # de vigência se a publicação também estiver expressamente identificada.
+    if (
+        not effective_date
+        and publication_date
+        and re.search(
+            r"\b(?:entra(?:rá)?\s+em\s+vigor|passa(?:rá)?\s+a\s+vigorar)"
+            r"\s+na\s+data\s+(?:de\s+sua|da)\s+publicação",
+            text,
+            re.IGNORECASE,
+        )
+    ):
+        effective_date = publication_date
+
+    return {
+        "publication_date": publication_date,
+        "effective_date": effective_date,
+        "publication_evidence": publication_match.group(0) if publication_match else None,
+        "effective_evidence": effective_match.group(0) if effective_match else (
+            "na data de sua publicação" if effective_date and publication_date else None
+        ),
+    }
+
 def make_snapshot(
     text: str,
     law: dict[str, Any],
@@ -210,6 +431,8 @@ def make_snapshot(
         articles = all_articles
         scope = law.get("snapshot_scope", "all_detected_articles")
 
+    components = {article: split_article_components(body) for article, body in articles.items()}
+
     source = source_url_used or law["url"]
     if articles:
         content = json.dumps(articles, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -223,6 +446,7 @@ def make_snapshot(
             "article_count": len(articles),
             "content_hash": digest(content),
             "articles": articles,
+            "components": components,
         }
 
     # Fontes de histórico (como a página do INSS sobre a IN 128) ou atos
@@ -263,19 +487,86 @@ def article_order(value: str) -> tuple[int, str]:
     return (int(match.group(1)) if match else 10**9, match.group(2) if match and match.group(2) else "")
 
 
-def make_change(law: dict[str, Any], article: str, kind: str, old: str, new: str, detected: str) -> dict[str, Any]:
-    unique = digest("|".join([law["id"], article, kind, old, new, detected]))[:16]
-    labels = {
-        "alterado": "O texto do dispositivo está diferente da última captura válida.",
-        "incluido": "O dispositivo apareceu na captura atual e não constava na captura anterior.",
-        "nao_encontrado": "O dispositivo não foi localizado na captura atual. Isso não confirma revogação.",
-        "possivelmente_revogado": "A captura atual contém indicação de revogação. Confira o ato oficial e sua vigência.",
-        "texto_integral_alterado": "O conteúdo da fonte oficial mudou. Confira a alteração no ato oficial.",
+def make_change(
+    law: dict[str, Any],
+    article: str,
+    kind: str,
+    old: str,
+    new: str,
+    detected: str,
+    component: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    component = component or {
+        "device_type": "artigo",
+        "device_label": article,
+        "device_path": article,
     }
-    summary = labels[kind]
-    if law.get("monitor_mode") == "index" and kind == "texto_integral_alterado":
-        summary = "O histórico oficial de alterações da IN 128 mudou. Consulte a lista de atos modificadores e confira o texto consolidado no portal do INSS."
+    device_type = component.get("device_type", "artigo")
+    device_label = component.get("device_label", article)
+    evidence_text = new or old
+    dates = extract_event_dates(evidence_text)
+    explicitly_revoked = bool(re.search(r"\brevogad[oa]s?\b", new, re.IGNORECASE))
 
+    if explicitly_revoked:
+        legal_effect_status = (
+            "data_de_vigencia_expressa_transcorrida"
+            if dates["effective_date"] and dates["effective_date"] <= detected[:10]
+            else "revogacao_indicada_sem_data_de_efeito"
+        )
+        summary = (
+            "A fonte oficial identifica este dispositivo como revogado. "
+            "A data e os efeitos jurídicos precisam ser conferidos no ato modificador."
+        )
+        textual_status = "revogacao_indicada_na_fonte"
+    elif kind == "incluido":
+        legal_effect_status = (
+            "vigencia_futura_expressa"
+            if dates["effective_date"] and dates["effective_date"] > detected[:10]
+            else "vigencia_nao_confirmada"
+        )
+        summary = (
+            "Este dispositivo apareceu na captura atual e não constava na anterior. "
+            "A inclusão no texto capturado não confirma, sozinha, a vigência."
+        )
+        textual_status = "dispositivo_incluido_na_captura"
+    elif kind == "nao_encontrado":
+        legal_effect_status = "situacao_juridica_nao_confirmada"
+        summary = (
+            "Este dispositivo não foi localizado na captura atual. "
+            "Isso, isoladamente, não comprova revogação."
+        )
+        textual_status = "dispositivo_nao_localizado"
+    else:
+        if dates["effective_date"]:
+            legal_effect_status = (
+                "vigencia_futura_expressa"
+                if dates["effective_date"] > detected[:10]
+                else "data_de_vigencia_expressa_transcorrida"
+            )
+        else:
+            legal_effect_status = "vigencia_nao_confirmada"
+        summary = (
+            "Foi detectada uma diferença textual neste dispositivo. "
+            "A comparação não confirma, por si só, que a nova redação já esteja vigente."
+        )
+        textual_status = "alteracao_textual_detectada"
+
+    if device_type == "artigo":
+        change_scope = "artigo"
+    elif device_type == "caput":
+        change_scope = "caput"
+    else:
+        change_scope = "parte_do_dispositivo"
+
+    unique = digest("|".join([
+        law["id"], article, component.get("device_path", ""), kind, old, new, detected
+    ]))[:16]
+
+    date_note = (
+        "A data de detecção é do monitor. Publicação e início de vigência só são preenchidos "
+        "quando a fonte apresenta essas informações expressamente; datas de edição ou assinatura "
+        "do ato não são tratadas automaticamente como publicação ou vigência."
+    )
     return {
         "id": unique,
         "law_id": law["id"],
@@ -283,19 +574,26 @@ def make_change(law: dict[str, Any], article: str, kind: str, old: str, new: str
         "law_short_title": law.get("short_title", law["title"]),
         "category": law["category"],
         "article": article,
-        "change_type": kind,
+        "device_type": device_type,
+        "device_label": device_label,
+        "device_path": component.get("device_path", article),
+        "change_scope": change_scope,
+        "change_type": "possivelmente_revogado" if explicitly_revoked else kind,
+        "textual_change_status": textual_status,
+        "legal_effect_status": legal_effect_status,
         "detected_at": detected,
-        "publication_date": None,
-        "effective_date": None,
+        "publication_date": dates["publication_date"],
+        "effective_date": dates["effective_date"],
+        "publication_date_evidence": dates["publication_evidence"],
+        "effective_date_evidence": dates["effective_evidence"],
         "old_text": old,
         "new_text": new,
         "summary": summary,
         "source_url": law["url"],
         "evidence_url": law.get("source_url_used", law["url"]),
         "review_required": True,
-        "date_note": "Data de detecção pelo monitor. Publicação e vigência precisam ser conferidas no ato oficial.",
+        "date_note": date_note,
     }
-
 
 def baseline_must_be_rebuilt(previous: dict[str, Any] | None, current: dict[str, Any]) -> bool:
     if not previous:
@@ -325,19 +623,60 @@ def compare(
     old_articles = previous.get("articles") or {}
     new_articles = current.get("articles") or {}
     if previous.get("parser_mode") == "artigos" and current.get("parser_mode") == "artigos":
-        changes = []
+        old_components = previous.get("components") or {}
+        new_components = current.get("components") or {}
+        changes: list[dict[str, Any]] = []
+
         for article in sorted(set(old_articles) | set(new_articles), key=article_order):
-            old = old_articles.get(article, "")
-            new = new_articles.get(article, "")
-            if old == new:
+            old_article = old_articles.get(article, "")
+            new_article = new_articles.get(article, "")
+
+            if not old_article and new_article:
+                changes.append(make_change(
+                    law, article, "incluido", "", new_article, detected,
+                    {"device_type": "artigo", "device_label": article, "device_path": article},
+                ))
                 continue
-            kind = (
-                "incluido" if not old
-                else "nao_encontrado" if not new
-                else "possivelmente_revogado" if re.search(r"\brevogad[oa]\b", new, re.IGNORECASE)
-                else "alterado"
-            )
-            changes.append(make_change(law, article, kind, old, new, detected))
+            if old_article and not new_article:
+                changes.append(make_change(
+                    law, article, "nao_encontrado", old_article, "", detected,
+                    {"device_type": "artigo", "device_label": article, "device_path": article},
+                ))
+                continue
+
+            old_parts = old_components.get(article) or {}
+            new_parts = new_components.get(article) or {}
+            if not old_parts or not new_parts:
+                if old_article != new_article:
+                    changes.append(make_change(
+                        law, article, "alterado", old_article, new_article, detected,
+                        {"device_type": "artigo", "device_label": article, "device_path": article},
+                    ))
+                continue
+
+            for path in sorted(set(old_parts) | set(new_parts)):
+                old_part = old_parts.get(path) or {}
+                new_part = new_parts.get(path) or {}
+                old_text = old_part.get("text", "")
+                new_text = new_part.get("text", "")
+                old_normalized = old_part.get("normalized_text") or re.sub(r"\s+", " ", old_text).strip()
+                new_normalized = new_part.get("normalized_text") or re.sub(r"\s+", " ", new_text).strip()
+                if old_normalized == new_normalized:
+                    continue
+
+                if not old_text:
+                    kind = "incluido"
+                elif not new_text:
+                    kind = "nao_encontrado"
+                elif re.search(r"\brevogad[oa]s?\b", new_text, re.IGNORECASE):
+                    kind = "possivelmente_revogado"
+                else:
+                    kind = "alterado"
+
+                metadata = new_part or old_part
+                changes.append(make_change(
+                    law, article, kind, old_text, new_text, detected, metadata
+                ))
         return changes
 
     return [
@@ -348,21 +687,17 @@ def compare(
             previous.get("document_text", ""),
             current.get("document_text", ""),
             detected,
+            {"device_type": "texto_integral", "device_label": "Texto integral", "device_path": "documento"},
         )
     ]
-
 
 def run() -> int:
     laws = [law for law in load_json(LAWS_FILE, []) if law.get("enabled", True)]
     previous_data = load_json(OUTPUT_FILE, {})
     detected = now_utc()
 
-    # A mudança de formato invalida alertas antigos produzidos pelo parser anterior.
-    all_changes = (
-        list(previous_data.get("changes", []))
-        if previous_data.get("monitor_version") == MONITOR_VERSION
-        else []
-    )
+    # Preserva o histórico anterior, mesmo quando a estrutura interna do monitor muda.
+    all_changes = list(previous_data.get("changes", []))
     law_results = []
     errors = []
     success_count = 0
