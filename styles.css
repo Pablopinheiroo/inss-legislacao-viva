@@ -1362,3 +1362,10 @@
  .study-data-actions{display:grid;grid-template-columns:1fr}
  .study-data-actions button{width:100%}
 }
+
+
+.law-priority-badge{display:inline-flex;align-self:flex-start;margin-top:6px;padding:3px 8px;border-radius:999px;font-size:.72rem;font-weight:700;background:#e8eefc;color:#294b91}
+.law-priority-badge.priority-1{background:#e2f3e8;color:#17633a}
+.law-priority-badge.priority-2{background:#fff2d8;color:#81530b}
+.law-priority-badge.priority-3{background:#edf0f3;color:#566170}
+.law-priority-help{margin:8px 2px 12px;color:var(--muted,#667085);font-size:.78rem;line-height:1.45}
