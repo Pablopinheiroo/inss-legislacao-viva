@@ -146,7 +146,31 @@ function renderLaws() {
     const title = document.createElement("span");
     title.textContent = law.short_title || law.title;
     const status = document.createElement("small");
-    status.textContent = law.error ? "falha na consulta" : law.source_revision ? law.source_revision : law.parser_mode === "index" ? "histórico oficial consultado" : law.last_checked ? (law.article_count + " artigos consultados") : "aguardando";
+    const attempts = Array.isArray(law.source_attempts) ? law.source_attempts : [];
+    const lastAttempt = attempts.length ? attempts[attempts.length - 1] : null;
+    const attemptCount = attempts.length;
+    const httpLabel = lastAttempt && lastAttempt.http_status ? " · HTTP " + lastAttempt.http_status : "";
+    if (law.error) {
+      const messages = {
+        rate_limited: "limite de acesso atingido",
+        blocked: "acesso bloqueado pela fonte",
+        unavailable: "fonte temporariamente indisponível",
+        invalid_response: "resposta inválida da fonte"
+      };
+      status.textContent = (messages[law.source_status] || "falha na consulta") + httpLabel
+        + (attemptCount ? " · " + attemptCount + " tentativa(s)" : "");
+      status.title = law.error + (law.retry_after_seconds ? " Tente novamente após " + law.retry_after_seconds + " segundo(s)." : "");
+      status.classList.add("source-error");
+    } else if (law.source_status === "fallback_used") {
+      status.textContent = "fonte alternativa usada · " + law.article_count + " artigos";
+      status.title = attemptCount + " tentativa(s) registradas; a fonte principal falhou e uma alternativa respondeu.";
+    } else if (law.source_status === "recovered") {
+      status.textContent = "consulta concluída após nova tentativa · " + law.article_count + " artigos";
+      status.title = attemptCount + " tentativa(s) registradas.";
+    } else {
+      status.textContent = law.source_revision ? law.source_revision : law.parser_mode === "index" ? "histórico oficial consultado" : law.last_checked ? (law.article_count + " artigos consultados") : "aguardando";
+      status.title = attemptCount ? attemptCount + " tentativa(s) registradas." : "";
+    }
     link.append(title, status);
     list.append(link);
   });
