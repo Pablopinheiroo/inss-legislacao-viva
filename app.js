@@ -10,6 +10,7 @@ let dashboardData = null;
 let allChanges = [];
 let questionBank = [];
 let questionSuspendedCount = 0;
+let questionSuspendedItems = [];
 let clozeLaws = [];
 let clozeSnapshot = null;
 let clozeCurrent = null;
@@ -24,11 +25,15 @@ let findErrorItems = [];
 let findErrorState = { questions: [], index: 0, answers: [], tries: 0, resolved: false, reviewMode: false, reviewFailed: false };
 let findErrorCaptureNote = "";
 let findErrorSuspendedCount = 0;
+let findErrorSuspendedItems = [];
 let articleQuestions = [];
 let articleCaptureNote = "";
 let articleSuspendedCount = 0;
+let articleSuspendedItems = [];
 let articleGameState = { questions: [], index: 0, selected: null, answers: [], reviewMode: false, reviewFailed: false };
 let multiCEGroups = [];
+let multiCESuspendedCount = 0;
+let multiCESuspendedItems = [];
 let multiCEState = { groups: [], articleIndex: 0, statementIndex: 0, selected: null, answers: [] };
 let beforeAfterAvailable = [];
 let beforeAfterState = { questions: [], index: 0, selected: null, answers: [], answered: false, changeQuestion: null, changeSelected: null, changeAnswered: false, reviewMode: false };
@@ -64,6 +69,17 @@ function formatDate(value) {
   if (!value) return "Ainda não realizada";
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? "Data indisponível" : dateFormatter.format(date);
+}
+function describeSuspendedQuestionItems(items,limit=5){
+  if(!Array.isArray(items)||!items.length)return "";
+  const examples=items.slice(0,limit).map(item=>{
+    const law=item.law_title||item.law_short_title||item.law_id||"Norma não identificada";
+    const article=item.article||item.article_label||item.article_key||item.answer_article_key||"Artigo não identificado";
+    const id=item.id?" ["+item.id+"]":"";
+    return law+" · "+article+id;
+  });
+  return " Itens suspensos para conferência: "+examples.join("; ")+
+    (items.length>limit?"; e mais "+(items.length-limit)+".":".");
 }
 function loadStudyStates() {
   try { return JSON.parse(localStorage.getItem(STUDY_KEY) || "{}"); }
@@ -2242,7 +2258,7 @@ async function loadFindErrorBank() {
         return [id,await result.json()];
       } catch(error){console.warn("Snapshot indisponível para Encontre o erro:",id,error);return [id,null];}
     }));
-    const snapshots=Object.fromEntries(pairs);let newest=0;findErrorSuspendedCount=0;
+    const snapshots=Object.fromEntries(pairs);let newest=0;findErrorSuspendedCount=0;findErrorSuspendedItems=[];
     findErrorItems=bankItems.filter(item=>{
       const snapshot=snapshots[item.law_id],text=snapshot&&snapshot.articles&&snapshot.articles[item.article_key];
       const valid=Array.isArray(item.segments)&&item.segments.length>=3&&Number.isInteger(item.wrong_segment_index)
@@ -2251,10 +2267,10 @@ async function loadFindErrorBank() {
         &&["prazo","percentual","requisito","excecao"].includes(item.question_type)
         &&item.topic&&item.difficulty;
       if(!text||!valid||!questionMatchesCurrentArticle(item,snapshot,item.article_key,[item.correct_phrase])){
-        findErrorSuspendedCount++;return false;
+        findErrorSuspendedCount++;findErrorSuspendedItems.push(item);return false;
       }
       const expected=normalizeLegalForMatch(item.correct_phrase),current=normalizeLegalForMatch(text);
-      if(!expected||!current.includes(expected)){findErrorSuspendedCount++;return false;}
+      if(!expected||!current.includes(expected)){findErrorSuspendedCount++;findErrorSuspendedItems.push(item);return false;}
       item.literal_text=text;item.snapshot_captured_at=snapshot.captured_at||null;
       const time=snapshot.captured_at?new Date(snapshot.captured_at).getTime():0;
       if(Number.isFinite(time))newest=Math.max(newest,time);
@@ -2295,7 +2311,7 @@ function updateFindErrorFilters(){
   note.textContent=pool.length+" item(ns) nesta seleção. "+summary+"."
     +($("#error-topic").value!=="todas"?" Assunto: "+$("#error-topic").selectedOptions[0]?.textContent+".":"")
     +($("#error-difficulty").value!=="todas"?" Dificuldade: "+$("#error-difficulty").selectedOptions[0]?.textContent+".":"")+findErrorCaptureNote
-    +(findErrorSuspendedCount?" "+findErrorSuspendedCount+" item(ns) suspensos por incompatibilidade com o texto legal atual.":" Todos os itens disponíveis passaram pela conferência da redação correta.");
+    +(findErrorSuspendedCount?" "+findErrorSuspendedCount+" item(ns) suspensos por incompatibilidade com o texto legal atual."+describeSuspendedQuestionItems(findErrorSuspendedItems):" Todos os itens disponíveis passaram pela conferência da redação correta.");
   if(!findErrorItems.length)note.textContent+=" Faça uma nova verificação das normas e tente novamente.";
 }
 function loadFindErrorReviewQueue(){
@@ -2442,6 +2458,7 @@ async function loadArticleGameBank() {
     const snapshots = Object.fromEntries(snapshotPairs);
     let suspended = 0;
     let newestCapture = 0;
+    articleSuspendedItems=[];
 
     articleQuestions = bank.filter(item => {
       const snapshot = snapshots[item.law_id];
@@ -2452,19 +2469,23 @@ async function loadArticleGameBank() {
         || !item.topic || !item.difficulty
         || !questionMatchesCurrentArticle(item,snapshot,item.answer_article_key,[item.validation_phrase])) {
         suspended += 1;
+        articleSuspendedItems.push(item);
         return false;
       }
       if (!Array.isArray(item.options) || item.options.length !== 4) {
         suspended += 1;
+        articleSuspendedItems.push(item);
         return false;
       }
       const uniqueOptions = new Set(item.options.map(option => option.article_key));
       if (uniqueOptions.size !== 4 || !item.options.some(option => option.article_key === item.answer_article_key)) {
         suspended += 1;
+        articleSuspendedItems.push(item);
         return false;
       }
       if (item.options.some(option => !articles[option.article_key])) {
         suspended += 1;
+        articleSuspendedItems.push(item);
         return false;
       }
       item.literal_text = targetText;
@@ -2530,7 +2551,8 @@ function updateArticleGameFilters() {
   if($("#article-topic").value!=="todas")message+=" Assunto: "+$("#article-topic").selectedOptions[0]?.textContent+".";
   if($("#article-difficulty").value!=="todas")message+=" Dificuldade: "+$("#article-difficulty").selectedOptions[0]?.textContent+".";
   if (articleCaptureNote) message += articleCaptureNote;
-  if (articleSuspendedCount) message += " " + articleSuspendedCount + " questão(ões) suspensa(s) por incompatibilidade com a captura atual.";
+  if (articleSuspendedCount) message += " " + articleSuspendedCount + " questão(ões) suspensa(s) por incompatibilidade com a captura atual."
+    +describeSuspendedQuestionItems(articleSuspendedItems);
   if (!pool.length && onlyStudied) message += " Nenhuma questão corresponde aos artigos marcados como estudados. Na aba Lei Seca, abra a norma e marque os artigos estudados.";
   else if (!pool.length) message += " Não há questões para esses filtros.";
   $("#article-count-note").textContent = message;
@@ -2802,18 +2824,19 @@ async function loadQuestionBank() {
     }));
     const snapshots=Object.fromEntries(pairs);
     questionSuspendedCount=0;
+    questionSuspendedItems=[];
     questionBank=bank.filter(item=>{
       const snapshot=snapshots[item.law_id];
       const anchors=Array.isArray(item.supporting_excerpts)?item.supporting_excerpts:[];
       const valid=Boolean(item.id&&item.statement&&typeof item.answer==="boolean"&&
         item.category&&item.topic&&item.difficulty&&
         questionMatchesCurrentArticle(item,snapshot,item.article_key,anchors));
-      if(!valid)questionSuspendedCount++;
+      if(!valid){questionSuspendedCount++;questionSuspendedItems.push(item);}
       return valid;
     });
     updateQuizFilters();
     note.textContent = questionBank.length + " questões validadas disponíveis. Filtros: matéria, assunto, norma, artigo e dificuldade."
-      +(questionSuspendedCount?" "+questionSuspendedCount+" item(ns) suspensos por falta de fundamento, fonte ou divergência do artigo atual.":" Todos os itens passaram pela conferência automática.");
+      +(questionSuspendedCount?" "+questionSuspendedCount+" item(ns) suspensos por falta de fundamento, fonte ou divergência do artigo atual."+describeSuspendedQuestionItems(questionSuspendedItems):" Todos os itens passaram pela conferência automática.");
     const simulatorNote=$("#simulado-bank-note");
     if(simulatorNote)simulatorNote.textContent=questionBank.length>=60
       ?questionBank.length+" questões disponíveis. Os três formatos estão liberados: 10, 20 e 60 questões."
@@ -2889,7 +2912,7 @@ function updateQuizFilters() {
   if($("#quiz-difficulty").value!=="todas")chosen.push("Dificuldade: "+$("#quiz-difficulty").selectedOptions[0]?.textContent);
   $("#question-count-note").textContent=pool.length+" item(ns) nesta seleção."
     +(chosen.length?" Filtros: "+chosen.join(" · ")+".":"")
-    +(questionSuspendedCount?" "+questionSuspendedCount+" questão(ões) suspensa(s) até nova conferência jurídica.":"");
+    +(questionSuspendedCount?" "+questionSuspendedCount+" questão(ões) suspensa(s) até nova conferência jurídica."+describeSuspendedQuestionItems(questionSuspendedItems):"");
 }
 function selectedPool() {
   const category=$("#quiz-category").value;
@@ -3171,11 +3194,13 @@ async function loadMultiCEBank() {
     const snapshots=Object.fromEntries(pairs);
     let suspended=0;
     let newest=0;
+    multiCESuspendedItems=[];
     multiCEGroups=bank.filter(group=>{
       const snapshot=snapshots[group.law_id];
       const article=snapshot?.articles?.[group.article_key];
       if(!article||!Array.isArray(group.statements)||group.statements.length<2){
         suspended++;
+        multiCESuspendedItems.push(group);
         return false;
       }
       const normalizedArticle=normalizeLegalForMatch(article);
@@ -3189,6 +3214,7 @@ async function loadMultiCEBank() {
         ));
       if(!valid){
         suspended++;
+        multiCESuspendedItems.push(group);
         return false;
       }
       group.literal_text=article;
@@ -3224,6 +3250,8 @@ async function loadMultiCEBank() {
     const allStatements=multiCEGroups.reduce((sum,group)=>sum+group.statements.length,0);
     $("#multi-ce-count-note").textContent=multiCEGroups.length+" artigos disponíveis, com "+allStatements+" afirmações. "+capture+
       (suspended?" "+suspended+" conjunto(s) suspenso(s) por incompatibilidade com a captura.":" Todos os conjuntos passaram pela conferência.");
+    multiCESuspendedCount=suspended;
+    if(suspended)$("#multi-ce-count-note").textContent+=describeSuspendedQuestionItems(multiCESuspendedItems);
     if(!multiCEGroups.length)$("#multi-ce-count-note").textContent+=" Atualize as capturas legais e tente novamente.";
   }catch(error){
     multiCEGroups=[];
@@ -3252,6 +3280,7 @@ function updateMultiCEFilters(){
   const difficulty=$("#multi-ce-difficulty").value||"todas";
   $("#multi-ce-count-note").textContent=pool.length+" artigo(s) nesta seleção, com "+total+" afirmação(ões). "
     +(difficulty!=="todas"?"Dificuldade: "+$("#multi-ce-difficulty").selectedOptions[0]?.textContent+". ":"")+capture;
+  if(multiCESuspendedCount)$("#multi-ce-count-note").textContent+=" "+multiCESuspendedCount+" conjunto(s) suspenso(s)."+describeSuspendedQuestionItems(multiCESuspendedItems);
   if(!pool.length)$("#multi-ce-count-note").textContent+=" Não há artigos para esses filtros.";
 }
 function startMultiCEGame(onlyGroups=null,options={}){
