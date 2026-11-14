@@ -281,7 +281,7 @@ test("simulados tradicional, rápido e completo; cronômetros e relatório", asy
   await enterGames(page);
   await page.locator("#tab-simulado").click();
   await page.locator("#start-simulado-completo").click();
-  await expect(page.locator("#simulado-progress-label")).toContainText("60 questões");
+  await expect(page.locator("#simulado-type-label")).toContainText("60 QUESTÕES");
   await expect(page.locator("#simulado-timer-wrap")).toBeVisible();
   await expect(page.locator("#simulado-timer")).toHaveText(/^\d{2}:\d{2}$/);
   await page.locator("#simulado-answer-true").click();
