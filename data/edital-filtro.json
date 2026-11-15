@@ -457,10 +457,12 @@
         "Art. 22",
         "Art. 23",
         "Art. 23-A",
+        "Art. 23-B",
         "Art. 23-C"
       ],
-      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "filter": "dispositivos materiais da Lei de Improbidade, incluindo os arts. 23-A, 23-B e 23-C; excluídas as cláusulas finais de vigência e revogação",
+      "blocked": false,
+      "review_status": "escopo_comparado_com_o_item_14_2_2; recaptura_compilada_pendente"
     },
     "lei-9784-1999": {
       "include_articles": [
@@ -1337,6 +1339,10 @@
     {
       "norm": "Lei 8.112/1990",
       "action": "Reduzido o recorte de 182 para 136 dispositivos existentes na captura, mantendo os blocos vinculados aos assuntos expressos no edital e retirando os artigos introdutórios e os assuntos fora do programa. A captura Planalto ainda está pendente."
+    },
+    {
+      "norm": "Lei 8.429/1992",
+      "action": "Corrigida a lista para incluir o art. 23-B, que integra o texto material da lei. Os arts. 24 e 25 de vigência e revogação permanecem fora do recorte ativo. Fonte preferencial: texto compilado do Planalto; captura direta pendente."
     }
   ],
   "decreto6214_status": {
