@@ -726,15 +726,19 @@ def make_snapshot(
     # próprio decreto e, depois, um segundo conjunto de artigos dentro do
     # Regulamento da Previdência Social. Não podemos fundir dois "Art. 1º"
     # diferentes no mesmo registro do banco.
-    if law.get("id") == "decreto-3048-1999":
-        annex = re.search(
-            r"(?im)^\s*REGULAMENTO\s+DA\s+PREVIDÊNCIA\s+SOCIAL\s*$",
-            text,
-        )
+    if law.get("id") in {"decreto-3048-1999", "decreto-6214-2007"}:
+        if law.get("id") == "decreto-3048-1999":
+            annex_pattern = r"(?im)^\s*REGULAMENTO\s+DA\s+PREVIDÊNCIA\s+SOCIAL\s*$"
+            annex_name = "Regulamento da Previdência Social"
+        else:
+            annex_pattern = r"(?im)^\s*REGULAMENTO\s+DO\s+BENEFÍCIO\s+DE\s+PRESTAÇÃO\s+CONTINUADA\s*$"
+            annex_name = "Regulamento do Benefício de Prestação Continuada"
+        annex = re.search(annex_pattern, text)
         if not annex:
             raise ValueError(
-                "O texto compilado do Decreto 3.048/1999 não apresentou o cabeçalho "
-                "do anexo Regulamento da Previdência Social; captura recusada."
+                "O texto compilado de " + law.get("id", "norma") +
+                " não apresentou o cabeçalho do anexo " + annex_name +
+                "; captura recusada."
             )
         text = text[annex.end():].strip()
 
