@@ -6,15 +6,15 @@ async function openApp(page) {
   const pageErrors = [];
   page.on("pageerror", error => pageErrors.push(error.message));
   await page.goto("/");
-  await expect(page.locator("#system-status span:last-child")).toHaveText(/Verificação (concluída|parcial|erro)/, { timeout: 60_000 });
-  await expect(page.locator("#study-subject-grid .study-subject-card")).toHaveCount(13, { timeout: 60_000 });
-  await expect(page.locator("#question-count-note")).toContainText("questões validadas disponíveis", { timeout: 60_000 });
-  await expect(page.locator("#law-article-select")).toBeDisabled({ timeout: 60_000 });
-  await expect(page.locator("#start-quiz")).toBeDisabled({ timeout: 60_000 });
-  await expect(page.locator("#start-cloze")).toBeDisabled({ timeout: 60_000 });
-  await expect(page.locator("#start-error")).toBeDisabled({ timeout: 60_000 });
-  await expect(page.locator("#start-article")).toBeDisabled({ timeout: 60_000 });
-  await expect(page.locator("#start-multi-ce")).toBeDisabled({ timeout: 60_000 });
+  await expect(page.locator("#system-status span:last-child")).toHaveText(/Verificação (concluída|parcial|erro)|Falha na verificação/, { timeout: 60_000 });
+  await expect(page.locator("#study-subject-grid")).toHaveCount(0);
+  await expect(page.locator("#law-article-select")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#law-article-text")).not.toBeEmpty({ timeout: 60_000 });
+  await expect(page.locator("#start-quiz")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#start-cloze")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#start-error")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#start-article")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#start-multi-ce")).toBeEnabled({ timeout: 60_000 });
   return pageErrors;
 }
 
@@ -64,20 +64,22 @@ test("navegação entre as quatro áreas, submenus e Radar", async ({ page }) =>
   await expect(page.locator("#section-nav")).toBeHidden();
 });
 
-test("Biblioteca Lei Seca: capturas não sincronizadas ficam bloqueadas", async ({ page }) => {
+test("Biblioteca Lei Seca mantém o texto local e liga à fonte oficial", async ({ page }) => {
   await openApp(page);
   await page.locator("#area-lei-seca").click();
   await expect(page.locator("#law-reader")).toBeVisible();
-  await expect(page.locator("#law-reader-warning")).toContainText("Estudo bloqueado");
-  await expect(page.locator("#law-article-text")).toContainText("ainda não foi sincronizada");
-  await expect(page.locator("#law-article-select")).toBeDisabled();
-  await expect(page.locator("#law-mark-studied")).toBeDisabled();
-  await expect(page.locator("#law-favorite-article")).toBeDisabled();
+  await expect(page.locator("#law-article-select")).toBeEnabled();
+  await expect(page.locator("#law-article-text")).not.toBeEmpty();
+  await expect(page.locator("#law-reader-warning")).toContainText("captura salva");
+  await expect(page.locator("#law-mark-studied")).toBeEnabled();
+  await expect(page.locator("#law-favorite-article")).toBeEnabled();
   const source = new URL(await page.locator("#law-reader-source").getAttribute("href"));
   expect(source.hostname).toBe("www.planalto.gov.br");
+  const options = await page.locator("#law-article-select option").count();
+  expect(options).toBeGreaterThan(1);
 });
 
-test("treinamentos legislativos ficam suspensos até a sincronização da fonte oficial", async ({ page }) => {
+test("os modos legislativos e simulados voltam a ter banco local disponível", async ({ page }) => {
   const pageErrors = await openApp(page);
   await enterGames(page);
 
@@ -89,47 +91,30 @@ test("treinamentos legislativos ficam suspensos até a sincronização da fonte 
     ["tab-multi-ce", "start-multi-ce"]
   ]) {
     await page.locator("#" + tab).click();
-    await expect(page.locator("#" + button)).toBeDisabled();
+    await expect(page.locator("#" + button)).toBeEnabled({ timeout: 60_000 });
   }
 
   await page.locator("#tab-simulado").click();
-  await expect(page.locator("#start-simulado")).toBeDisabled();
-  await expect(page.locator("#start-simulado-rapido")).toBeDisabled();
-  await expect(page.locator("#start-simulado-completo")).toBeDisabled();
+  await expect(page.locator("#start-simulado")).toBeEnabled({ timeout: 60_000 });
+  await expect(page.locator("#simulado-bank-note")).not.toContainText("0 questão(ões)");
 
   await page.locator("#tab-before-after").click();
-  await expect(page.locator("#start-before-after")).toBeDisabled();
+  await expect(page.locator("#before-after-count-note")).toContainText(/alteração|comparação|registro/i);
 
   await page.locator("#tab-memory").click();
-  await expect(page.locator("#start-memory")).toBeDisabled({ timeout: 60_000 });
-
-  await expect(page.locator("#question-count-note")).toContainText("0 questões validadas disponíveis");
+  await expect(page.locator("#memory-note")).not.toContainText("Nenhum cartão pôde ser montado", { timeout: 60_000 });
   expect(pageErrors).toEqual([]);
 });
 
-test("artigo com fonte pendente não pode ser marcado nem gerar comparação/questão", async ({ page }) => {
+test("Lei Seca exibe apenas instrumentos normativos, sem matérias não legislativas", async ({ page }) => {
   await openApp(page);
   await page.locator("#area-lei-seca").click();
-  await expect(page.locator("#law-reader-warning")).toContainText("Estudo bloqueado");
-  await expect(page.locator("#law-mark-studied")).toBeDisabled();
-
-  await enterGames(page);
-  await page.locator("#tab-before-after").click();
-  await expect(page.locator("#start-before-after")).toBeDisabled();
-
-  await page.locator("#tab-quiz").click();
-  await expect(page.locator("#start-quiz")).toBeDisabled();
-  await expect(page.locator("#question-count-note")).toContainText("0 questões validadas disponíveis");
-});
-
-test("simulados ficam bloqueados quando não há questões de fonte validada", async ({ page }) => {
-  await openApp(page);
-  await enterGames(page);
-  await page.locator("#tab-simulado").click();
-  await expect(page.locator("#start-simulado")).toBeDisabled();
-  await expect(page.locator("#start-simulado-rapido")).toBeDisabled();
-  await expect(page.locator("#start-simulado-completo")).toBeDisabled();
-  await expect(page.locator("#simulado-bank-note")).toContainText("0 questão(ões)");
+  await expect(page.locator("#law-library-count")).toContainText("normas cadastradas");
+  await expect(page.locator("#law-library-list")).toContainText("Lei 8.213/1991");
+  await expect(page.locator("#law-library-list")).toContainText("Decreto 3.048/1999");
+  await expect(page.locator("#law-library-list")).not.toContainText("Português");
+  await expect(page.locator("#law-library-list")).not.toContainText("Informática");
+  await expect(page.locator("#law-library-list")).not.toContainText("Raciocínio Lógico");
 });
 
 test("cálculo de XP e domínio por assunto com dados controlados", async ({ page }) => {
