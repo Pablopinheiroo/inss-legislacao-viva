@@ -614,7 +614,7 @@ async function loadLegalLaw(lawId) {
   $("#law-reader-empty").classList.remove("hidden");
   $("#law-reader").classList.add("hidden");
   $("#law-reader-empty").querySelector("h3").textContent = "Carregando " + (law.short_title || law.title) + "...";
-  $("#law-reader-empty").querySelector("p").textContent = "Abrindo a captura mais recente disponível no projeto.";
+  $("#law-reader-empty").querySelector("p").textContent = "Abrindo a captura legislativa salva no projeto.";
   try {
     const response = await fetch("data/snapshots/" + encodeURIComponent(law.id) + ".json?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
@@ -645,6 +645,12 @@ async function loadLegalLaw(lawId) {
     }
     if (law.source_note) warningParts.push(law.source_note);
     if (law.monitor_note) warningParts.push(law.monitor_note);
+    if (law.snapshot_trust_status === "captura_historica_nao_revalidada" ||
+        (law.source_sync_status && law.source_sync_status !== "sincronizado_e_validado")) {
+      let snapshotHost = "fonte registrada na captura";
+      try { snapshotHost = new URL(snapshot.source_url_used).hostname; } catch (_) {}
+      warningParts.push("Acesso restaurado à captura salva (" + formatDate(snapshot.captured_at) + ", origem: " + snapshotHost + "). A consulta automática à fonte oficial está indisponível neste momento; confira o texto vigente no link oficial antes de usar este conteúdo como atualização legislativa.");
+    }
     if (law.source_sync_status === "captura_anterior_ainda_nao_substituida" && snapshot.source_url_used !== law.url) {
       let oldHost = "fonte anterior";
       try { oldHost = new URL(snapshot.source_url_used).hostname; } catch (_) {}
@@ -1879,7 +1885,6 @@ async function loadClozeLaws() {
     const data = await response.json();
     clozeLaws = (Array.isArray(data) ? data : []).filter(law =>
       law.enabled !== false && law.study_blocked !== true
-      && law.source_sync_status === "sincronizado_e_validado"
     );
     legalLaws=Array.isArray(data)?data:legalLaws;
     legalSourcePolicy=new Map(legalLaws.filter(law=>law&&law.id).map(law=>[law.id,law]));
@@ -1889,7 +1894,7 @@ async function loadClozeLaws() {
     if (!clozeLaws.length) {
       $("#cloze-law").replaceChildren();
       $("#start-cloze").disabled=true;
-      $("#cloze-note").textContent="Treino temporariamente bloqueado: as capturas ainda não foram validadas diretamente nas fontes oficiais preferenciais.";
+      $("#cloze-note").textContent="Nenhuma norma com texto por artigo está disponível. Confira se a captura local da norma foi carregada.";
       renderClozeReviewOverview();
       return;
     }
@@ -2902,10 +2907,11 @@ async function ensureLegalSourcePolicy(){
 }
 function isLawSourceReady(lawId,snapshot=null){
   const law=legalSourcePolicy.get(lawId)||legalLaws.find(item=>item.id===lawId);
-  if(!law||law.enabled===false||law.study_blocked===true
-    ||law.source_sync_status!=="sincronizado_e_validado")return false;
-  const preferred=law.preferred_source_url||law.url;
-  return !snapshot||snapshot.source_url_used===preferred;
+  // A falha do monitor remoto não pode apagar o acesso às capturas locais já existentes.
+  // A questão continua passando pela validação do hash, trecho-âncora e URL da própria captura.
+  if(!law||law.enabled===false||law.study_blocked===true)return false;
+  if(snapshot && (!snapshot.articles || typeof snapshot.articles!=="object"))return false;
+  return true;
 }
 function questionMatchesCurrentArticle(item,snapshot,articleKey,anchors=[]){
   const article=snapshot&&snapshot.articles&&snapshot.articles[articleKey];
@@ -4875,60 +4881,6 @@ function updatePrimaryNavigation(area){
   const sectionNav=$("#section-nav");
   if(sectionNav)sectionNav.classList.toggle("hidden",!area);
 }
-let studySubjectsData=[];
-let studySubjectsLoadState="loading";
-function studySubjectStatusLabel(status){
-  const value=String(status||"");
-  if(/pendente/i.test(value))return /fonte|captura|sincroniza/i.test(value)?"Fonte pendente":"Material pendente";
-  if(/cadastradas/i.test(value))return "Normas cadastradas";
-  if(/mapeado/i.test(value))return "Mapeado";
-  return "Em revisão";
-}
-function renderStudySubjectMap(){
-  const grid=$("#study-subject-grid");
-  if(!grid)return;
-  grid.replaceChildren();
-  if(!studySubjectsData.length){
-    const empty=document.createElement("p");empty.className="empty-state";
-    empty.textContent=studySubjectsLoadState==="error"
-      ?"Não foi possível carregar o mapa das matérias. Tente atualizar a página."
-      :"Carregando as matérias do edital...";
-    grid.append(empty);return;
-  }
-  studySubjectsData.forEach(subject=>{
-    const card=document.createElement("article");card.className="study-subject-card";
-    const head=document.createElement("div");head.className="study-subject-card-head";
-    const title=document.createElement("h3");title.textContent=subject.name||"Matéria";
-    const item=document.createElement("span");item.className="study-subject-item";item.textContent="Item "+(subject.item||"—");
-    head.append(title,item);
-    const status=document.createElement("span");status.className="study-subject-status";
-    const statusLabel=studySubjectStatusLabel(subject.status);status.textContent=statusLabel;
-    if(statusLabel==="Mapeado"||statusLabel==="Normas cadastradas")status.classList.add("is-mapped");
-    else status.classList.add("is-pending");
-    const list=document.createElement("ul");list.className="study-subject-topics";
-    (Array.isArray(subject.topics)?subject.topics:[]).slice(0,4).forEach(topic=>{
-      const li=document.createElement("li");li.textContent=topic;list.append(li);
-    });
-    const more=document.createElement("small");more.className="study-subject-more";
-    const total=Array.isArray(subject.topics)?subject.topics.length:0;
-    more.textContent=total>4?"+"+(total-4)+" tópicos no programa":total+" tópico(s) no programa";
-    const footer=document.createElement("p");footer.className="study-subject-progress";footer.textContent=subject.status||"Situação não informada";
-    card.append(head,status,list,more,footer);grid.append(card);
-  });
-}
-async function loadStudySubjectMap(){
-  try{
-    const response=await fetch("data/edital-materias.json?v="+Date.now(),{cache:"no-store"});
-    if(!response.ok)throw new Error("HTTP "+response.status);
-    const data=await response.json();
-    studySubjectsData=Array.isArray(data.subjects)?data.subjects:[];
-    studySubjectsLoadState=studySubjectsData.length?"loaded":"error";
-  }catch(error){
-    studySubjectsData=[];studySubjectsLoadState="error";
-    console.warn("Não foi possível carregar o mapa das matérias:",error);
-  }
-  renderStudySubjectMap();
-}
 function renderStudyHome(){
   renderStudySubjectMap();
   const review=collectCentralReviewData();
@@ -6453,7 +6405,6 @@ $("#simulado-restart").addEventListener("click",()=>{
 
 initializeAchievements();
 renderStudyHome();
-loadStudySubjectMap();
 renderPerformanceHome();
 showView("study");
 
