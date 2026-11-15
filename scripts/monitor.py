@@ -212,7 +212,31 @@ def fetch_text_with_diagnostics(url: str) -> tuple[str, list[dict[str, Any]]]:
 
         requested_host = (urlparse(url).hostname or "").lower().removeprefix("www.")
         final_url = getattr(response, "url", url) or url
-        final_host = (urlparse(final_url).hostname or "").lower().removeprefix("www.")
+        final_parts = urlparse(final_url)
+        final_host = (final_parts.hostname or "").lower().removeprefix("www.")
+
+        # O Planalto, quando bloqueia a requisição automatizada, às vezes redireciona
+        # qualquer lei para a página institucional genérica do gov.br. Não aceitar
+        # essa página como texto legal; registrar claramente como bloqueio da fonte.
+        official_planalto_landing = (
+            requested_host == "planalto.gov.br"
+            and final_host == "gov.br"
+            and final_parts.path.rstrip("/") == "/planalto/pt-br"
+        )
+        if official_planalto_landing:
+            attempts.append({
+                "url": url,
+                "attempt": attempt,
+                "outcome": "error",
+                "failure_type": "blocked_page",
+                "http_status": status,
+                "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+            })
+            raise SourceFetchError(
+                "A fonte oficial redirecionou para a página institucional genérica; texto legal não recebido.",
+                "blocked_page",
+                attempts,
+            )
         if requested_host and final_host and requested_host != final_host:
             attempts.append({
                 "url": url,
@@ -1035,7 +1059,7 @@ def compare(
 def source_status_for_failure(failure_type: str) -> str:
     if failure_type == "rate_limited":
         return "rate_limited"
-    if failure_type in {"access_denied", "blocked_page"}:
+    if failure_type in {"access_denied", "blocked_page", "redirected_domain"}:
         return "blocked"
     if failure_type in {"timeout", "network_error", "temporary_network_error", "server_error"}:
         return "unavailable"
