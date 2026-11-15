@@ -386,17 +386,21 @@
       "in128": {
         "law_id": "in-128-2022",
         "url": "https://portalin.inss.gov.br/in/540",
-        "status": "fonte_oficial_localizada_retorno_incompleto",
-        "snapshot_sync": "blocked"
+        "status": "texto_vigente_indexado_no_portal_oficial; acesso_direto_403",
+        "updated_through": "IN PRES/INSS nº 212/2026; página atualizada em 12/08/2026",
+        "snapshot_sync": "not_synced"
       },
       "direct_fetch_result": "O monitor automatizado não recebeu corpo legal íntegro em nenhuma das 28 normas; respostas de bloqueio não foram aceitas como texto e os snapshots anteriores foram preservados."
     }
   },
   "in128_status": {
-    "problem": "A captura anterior era só índice de alterações, com article_count 0.",
+    "problem": "A captura antiga continha somente o índice de alterações, sem texto integral por artigo.",
     "verified_source": "https://portalin.inss.gov.br/in/540",
-    "updated_through": "12/08/2026 — IN PRES/INSS nº 212/2026",
-    "status": "Fonte oficial encontrada; texto mostra conteúdo vigente e versões anteriores riscadas. Captura/limpeza ainda pendente; estudo e geração de questões bloqueados."
+    "updated_through": "IN PRES/INSS nº 212, de 6 de agosto de 2026; página oficial indexada como atualizada em 12/08/2026.",
+    "verification": "A busca no Portal IN oficial retornou texto vigente e trechos com redações anteriores riscadas, inclusive alterações da IN 212/2026. A abertura direta da página retorna HTTP 403 e o monitor automatizado não consegue extrair a íntegra.",
+    "status": "texto_integral_indexado_mas_nao_importado",
+    "study_blocked": true,
+    "next_step": "Obter o conteúdo integral por acesso institucional permitido ou exportação oficial, remover redações anteriores riscadas, separar artigos e componentes, confirmar todos os dispositivos do recorte e só então liberar questões."
   },
   "article_scope_by_law": {
     "constituicao-1988": {
