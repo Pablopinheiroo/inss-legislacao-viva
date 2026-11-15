@@ -1772,6 +1772,7 @@
     "source_sync_status": "recaptura_direta_planalto_bloqueada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
+      "Art. 1",
       "Art. 4",
       "Art. 5",
       "Art. 6",
@@ -1957,21 +1958,18 @@
       "Art. 246",
       "Art. 247",
       "Art. 256",
-      "Art. 303",
-      "Art. 304",
       "Art. 305",
       "Art. 307",
       "Art. 308",
-      "Art. 318",
-      "Art. 319",
       "Art. 337",
-      "Art. 341",
-      "Art. 342",
+      "Art. 345",
       "Art. 347",
-      "Art. 1"
+      "Art. 347-A",
+      "Art. 348",
+      "Art. 349"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_revisado_por_assunto_do_edital",
+    "article_filter_note": "O recorte mantém regras de segurados, filiação, benefícios, salário de benefício, qualidade de segurado, serviços, custeio, contribuições, salário de contribuição, arrecadação/recolhimento, prazos e CRPS. Para decadência/prescrição foram incluídos arts. 345, 347, 347-A, 348 e 349. Foram retirados arts. 303-304 (estrutura interna do CRPS sem conteúdo sobre julgamento dos recursos), arts. 318-319 (publicação/notificação geral de atos) e arts. 341-342 (ações regressivas e responsabilidade civil de empregadores/terceiros, fora do recorte expresso). O conteúdo permanece bloqueado até captura integral direta do Planalto.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
@@ -1979,7 +1977,15 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "segurados, dependentes, filiação, inscrição e manutenção da qualidade",
+      "benefícios, carência, salário de benefício, renda mensal e reajustamento",
+      "serviços previdenciários e reabilitação profissional",
+      "financiamento, receitas, contribuições, salário de contribuição, arrecadação e recolhimento",
+      "decisões e efeitos dos recursos administrativos no CRPS: arts. 305, 307 e 308",
+      "decadência e prescrição: arts. 345, 347, 347-A, 348 e 349"
+    ]
   },
   {
     "id": "in-128-2022",
