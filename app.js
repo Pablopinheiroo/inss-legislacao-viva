@@ -669,7 +669,7 @@ async function loadLegalLaw(lawId) {
       $("#law-next-article").disabled = true;
       $("#law-current-article-title").textContent = "Texto por artigos indisponível";
       $("#law-article-text").textContent = law.study_blocked
-        ? (law.source_note || "O estudo desta norma está bloqueado até a captura integral e a validação do texto vigente na fonte oficial.")
+        ? (law.study_block_reason || law.source_note || "O estudo desta norma está bloqueado até a captura integral e a validação do texto vigente na fonte oficial.")
         : law.id === "in-128-2022"
           ? "Esta norma está acompanhada pelo índice oficial de atos modificadores. A captura atual não contém o texto consolidado separado por artigos. Use o link da fonte oficial para consultar a legislação."
           : "A captura salva para esta norma não contém artigos que possam ser exibidos individualmente.";
@@ -3791,7 +3791,7 @@ function buildBeforeAfterChangeOptions(key) {
 }
 function prepareBeforeAfterBank() {
   beforeAfterAvailable=allChanges.filter(change=>
-    Boolean(change.article)&&
+    Boolean(change.article)&&isLawSourceReady(change.law_id)&&
     ((change.change_type==="alterado"&&change.old_text&&change.new_text)||
       (change.change_type==="incluido"&&change.new_text))
   );
