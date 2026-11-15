@@ -4826,7 +4826,62 @@ function updatePrimaryNavigation(area){
   const sectionNav=$("#section-nav");
   if(sectionNav)sectionNav.classList.toggle("hidden",!area);
 }
+let studySubjectsData=[];
+let studySubjectsLoadState="loading";
+function studySubjectStatusLabel(status){
+  const value=String(status||"");
+  if(/pendente/i.test(value))return /fonte|captura|sincroniza/i.test(value)?"Fonte pendente":"Material pendente";
+  if(/cadastradas/i.test(value))return "Normas cadastradas";
+  if(/mapeado/i.test(value))return "Mapeado";
+  return "Em revisão";
+}
+function renderStudySubjectMap(){
+  const grid=$("#study-subject-grid");
+  if(!grid)return;
+  grid.replaceChildren();
+  if(!studySubjectsData.length){
+    const empty=document.createElement("p");empty.className="empty-state";
+    empty.textContent=studySubjectsLoadState==="error"
+      ?"Não foi possível carregar o mapa das matérias. Tente atualizar a página."
+      :"Carregando as matérias do edital...";
+    grid.append(empty);return;
+  }
+  studySubjectsData.forEach(subject=>{
+    const card=document.createElement("article");card.className="study-subject-card";
+    const head=document.createElement("div");head.className="study-subject-card-head";
+    const title=document.createElement("h3");title.textContent=subject.name||"Matéria";
+    const item=document.createElement("span");item.className="study-subject-item";item.textContent="Item "+(subject.item||"—");
+    head.append(title,item);
+    const status=document.createElement("span");status.className="study-subject-status";
+    const statusLabel=studySubjectStatusLabel(subject.status);status.textContent=statusLabel;
+    if(statusLabel==="Mapeado"||statusLabel==="Normas cadastradas")status.classList.add("is-mapped");
+    else status.classList.add("is-pending");
+    const list=document.createElement("ul");list.className="study-subject-topics";
+    (Array.isArray(subject.topics)?subject.topics:[]).slice(0,4).forEach(topic=>{
+      const li=document.createElement("li");li.textContent=topic;list.append(li);
+    });
+    const more=document.createElement("small");more.className="study-subject-more";
+    const total=Array.isArray(subject.topics)?subject.topics.length:0;
+    more.textContent=total>4?"+"+(total-4)+" tópicos no programa":total+" tópico(s) no programa";
+    const footer=document.createElement("p");footer.className="study-subject-progress";footer.textContent=subject.status||"Situação não informada";
+    card.append(head,status,list,more,footer);grid.append(card);
+  });
+}
+async function loadStudySubjectMap(){
+  try{
+    const response=await fetch("data/edital-materias.json?v="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("HTTP "+response.status);
+    const data=await response.json();
+    studySubjectsData=Array.isArray(data.subjects)?data.subjects:[];
+    studySubjectsLoadState=studySubjectsData.length?"loaded":"error";
+  }catch(error){
+    studySubjectsData=[];studySubjectsLoadState="error";
+    console.warn("Não foi possível carregar o mapa das matérias:",error);
+  }
+  renderStudySubjectMap();
+}
 function renderStudyHome(){
+  renderStudySubjectMap();
   const review=collectCentralReviewData();
   const entries=Array.isArray(review?.entries)?review.entries:[];
   const due=entries.filter(entry=>entry.due).length;
@@ -6349,6 +6404,7 @@ $("#simulado-restart").addEventListener("click",()=>{
 
 initializeAchievements();
 renderStudyHome();
+loadStudySubjectMap();
 renderPerformanceHome();
 showView("study");
 
