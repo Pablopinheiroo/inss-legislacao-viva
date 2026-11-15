@@ -57,11 +57,13 @@
     "preferred_source": "Planalto/INSS oficial",
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "decreto-1171-1994",
@@ -83,16 +85,18 @@
     "priority_reason": "Código de Ética do servidor público, expressamente indicado no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Anexo - Código de Ética"
     ],
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "O art. 3º é cláusula de vigência e foi retirado. O Anexo do Código de Ética foi separado como entrada própria para não perder o conteúdo expresso no edital.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "decreto-6029-2007",
@@ -114,9 +118,9 @@
     "priority_reason": "Sistema de Gestão da Ética, expressamente indicado no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -146,7 +150,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-8112-1990",
@@ -168,14 +174,10 @@
     "priority_reason": "Regime jurídico dos servidores: conteúdo explícito de Direito Administrativo, com vários tópicos do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
-      "Art. 1",
-      "Art. 2",
-      "Art. 3",
-      "Art. 4",
       "Art. 5",
       "Art. 6",
       "Art. 7",
@@ -192,8 +194,6 @@
       "Art. 18",
       "Art. 19",
       "Art. 20",
-      "Art. 21",
-      "Art. 22",
       "Art. 24",
       "Art. 25",
       "Art. 27",
@@ -308,46 +308,6 @@
       "Art. 140",
       "Art. 141",
       "Art. 142",
-      "Art. 143",
-      "Art. 144",
-      "Art. 145",
-      "Art. 146",
-      "Art. 147",
-      "Art. 148",
-      "Art. 149",
-      "Art. 150",
-      "Art. 151",
-      "Art. 152",
-      "Art. 153",
-      "Art. 154",
-      "Art. 155",
-      "Art. 156",
-      "Art. 157",
-      "Art. 158",
-      "Art. 159",
-      "Art. 160",
-      "Art. 161",
-      "Art. 162",
-      "Art. 163",
-      "Art. 164",
-      "Art. 165",
-      "Art. 166",
-      "Art. 167",
-      "Art. 168",
-      "Art. 169",
-      "Art. 170",
-      "Art. 171",
-      "Art. 172",
-      "Art. 173",
-      "Art. 174",
-      "Art. 175",
-      "Art. 176",
-      "Art. 177",
-      "Art. 178",
-      "Art. 179",
-      "Art. 180",
-      "Art. 181",
-      "Art. 182",
       "Art. 60-A",
       "Art. 60-B",
       "Art. 60-D",
@@ -355,10 +315,22 @@
       "Art. 96-A",
       "Art. 126-A"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_status": "recorte_direto_dos_topicos_do_edital",
+    "article_filter_note": "Mantidos somente os dispositivos de provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar e responsabilidades. Excluídos os artigos introdutórios e os blocos finais fora desses assuntos. A captura oficial atual ainda precisa ser sincronizada.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "study_scope_topics": [
+      "nomeação e provimento",
+      "vacância",
+      "remoção",
+      "redistribuição",
+      "substituição",
+      "direitos e vantagens",
+      "regime disciplinar",
+      "responsabilidades civil, penal e administrativa"
+    ],
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "lei-8429-1992",
@@ -380,9 +352,9 @@
     "priority_reason": "Improbidade e responsabilização administrativa, expressamente indicada no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -413,7 +385,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-9784-1999",
@@ -435,9 +409,9 @@
     "priority_reason": "Processo administrativo federal, expressamente previsto como lei específica no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -512,7 +486,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-7070-1982",
@@ -534,9 +510,9 @@
     "priority_reason": "Pensão especial da Talidomida: tópico específico do edital, mas de alcance mais restrito que o núcleo do RGPS.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -546,7 +522,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-7986-1989",
@@ -568,9 +546,9 @@
     "priority_reason": "Pensão especial dos seringueiros: tópico específico do edital, com conteúdo delimitado.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -583,7 +561,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-8059-1990",
@@ -605,9 +585,9 @@
     "priority_reason": "Pensão especial de ex-combatente: tópico específico do edital, com conteúdo delimitado.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -636,7 +616,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-9422-1996",
@@ -658,9 +640,9 @@
     "priority_reason": "Pensão especial às vítimas de hemodiálise de Caruaru: tópico específico do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -671,7 +653,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-9425-1996",
@@ -693,9 +677,9 @@
     "priority_reason": "Pensão vitalícia às vítimas do Césio 137: tópico específico do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -705,7 +689,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-10559-2002",
@@ -727,9 +713,9 @@
     "priority_reason": "Aposentadoria e pensão excepcional ao anistiado político: tópico específico do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -755,7 +741,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-11520-2007",
@@ -777,9 +765,9 @@
     "priority_reason": "Pensão especial às pessoas atingidas pela hanseníase: tópico específico do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -790,7 +778,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-13985-2020",
@@ -812,9 +802,9 @@
     "priority_reason": "Pensão especial destinada a crianças com síndrome congênita do Zika: tópico específico do edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -823,19 +813,21 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-10779-2003",
     "title": "Lei nº 10.779, de 25 de novembro de 2003",
     "short_title": "Lei 10.779/2003 — Seguro-defeso",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
     "source_name": "Planalto — texto oficial",
     "edital_item": "14.2.3 — Seguro-defeso",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -845,9 +837,9 @@
     "priority_reason": "Seguro-defeso, tema e lei expressamente indicados no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -858,7 +850,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "decreto-8424-2015",
@@ -880,9 +874,9 @@
     "priority_reason": "Regulamento do seguro-defeso, expressamente indicado no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 1-A",
@@ -898,7 +892,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-8742-1993",
@@ -920,9 +916,9 @@
     "priority_reason": "LOAS, BPC e auxílio-inclusão, conteúdo expressamente previsto no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -947,7 +943,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-14176-2021",
@@ -969,9 +967,9 @@
     "priority_reason": "Alterações ligadas ao BPC e ao auxílio-inclusão. Estudar seus efeitos na LOAS consolidada; não tratar a lei alteradora como substituta da LOAS.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2"
@@ -979,19 +977,21 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "decreto-6214-2007",
     "title": "Decreto nº 6.214, de 26 de setembro de 2007",
     "short_title": "Decreto 6.214/2007 — Regulamento do BPC",
     "category": "Decreto",
-    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
     "source_name": "Planalto — texto compilado",
     "edital_item": "14.2.3 — LOAS, BPC e auxílio-inclusão",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
+      "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -1001,15 +1001,17 @@
     "priority_reason": "Regulamentação do BPC, expressamente indicada no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "texto_compilado_pendente_de_captura_limpa",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [],
     "article_filter_status": "bloqueado_por_captura_desatualizada",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
-    "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos."
+    "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "lei-9796-1999",
@@ -1031,9 +1033,9 @@
     "priority_reason": "Compensação previdenciária e contagem recíproca, expressamente indicadas no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -1045,7 +1047,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "decreto-10188-2019",
@@ -1067,9 +1071,9 @@
     "priority_reason": "Regulamenta a compensação previdenciária, expressamente indicado no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -1099,7 +1103,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "ec-103-2019",
@@ -1121,9 +1127,9 @@
     "priority_reason": "Reforma da Previdência, expressamente indicada e transversal às regras previdenciárias.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -1160,7 +1166,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lc-142-2013",
@@ -1182,9 +1190,9 @@
     "priority_reason": "Aposentadoria da pessoa com deficiência, expressamente indicada no edital.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "endereco_oficial_pendente_de_leitura",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço do domínio oficial indicado, mas o leitor automatizado encontrou bloqueio antirobô/limitação de acesso. Revalidar a resposta HTTP e o conteúdo antes de declarar sincronizado.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -1200,7 +1208,9 @@
     "article_filter_status": "recorte_revisado_com_base_no_edital",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+    "preferred_source_format": "texto_oficial_planalto"
   },
   {
     "id": "lei-8212-1991",
@@ -1222,9 +1232,9 @@
     "priority_reason": "Custeio e financiamento da Seguridade Social, com cobrança expressa no item 14.2.3.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 3",
@@ -1261,7 +1271,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "Inclui o art. 11, que especifica as receitas do orçamento da Seguridade Social (receitas da União, contribuições sociais e outras fontes). O conteúdo que estava mesclado ao art. 10 foi separado na captura.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "lei-8213-1991",
@@ -1283,9 +1295,9 @@
     "priority_reason": "Base expressa do RGPS e dos benefícios; alta densidade de conteúdo específico do cargo.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -1401,19 +1413,21 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "decreto-3048-1999",
     "title": "Decreto nº 3.048, de 6 de maio de 1999",
     "short_title": "Decreto 3.048/1999 — Regulamento da Previdência",
     "category": "Decreto",
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
     "source_name": "Planalto — texto compilado",
     "edital_item": "14.2.3 — Regulamento do RGPS",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm"
+      "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -1423,9 +1437,9 @@
     "priority_reason": "Regulamento amplo do RGPS, expressamente indicado no edital e relacionado aos principais assuntos previdenciários.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado",
-    "source_sync_status": "captura_anterior_ainda_nao_substituida",
-    "source_policy_note": "Endereço oficial localizado no Planalto. A captura do projeto ainda precisa ser refeita diretamente dessa fonte antes de ser considerada sincronizada.",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [
       "Art. 4",
       "Art. 5",
@@ -1628,7 +1642,9 @@
     "article_filter_status": "recorte_do_edital_aplicado",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": false,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "in-128-2022",
@@ -1654,14 +1670,16 @@
     "priority_reason": "Norma expressamente indicada no edital; estudar apenas dispositivos relacionados às rotinas e aos temas do programa, após obter texto consolidado confiável.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "confirmado_com_alerta_de_redacoes_riscadas",
-    "source_sync_status": "texto_integral_nao_importado",
-    "source_policy_note": "Fonte oficial localizada. A página mantém redações riscadas e marcas de alterações; só liberar texto depois de limpar e validar as redações vigentes.",
+    "source_verification_status": "fonte_oficial_inss_localizada_texto_integral_pendente",
+    "source_sync_status": "texto_integral_consolidado_pendente",
+    "source_policy_note": "Fonte oficial Portal IN localizada; texto apresenta redações anteriores riscadas e alterações até a IN 212/2026. A captura precisa separar texto vigente e dispositivos revogados antes de liberar estudo e questões.",
     "include_articles": [],
     "article_filter_status": "bloqueada_ate_texto_integral",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": true,
-    "edital_2022_cutoff": "2022-09-15"
+    "edital_2022_cutoff": "2022-09-15",
+    "preferred_source_url": "https://portalin.inss.gov.br/in/540",
+    "preferred_source_format": "texto_consolidado_portal_oficial_inss"
   },
   {
     "id": "decreto-lei-2848-1940",
@@ -1688,9 +1706,12 @@
     ],
     "snapshot_scope": "selected_articles",
     "require_all_articles": true,
-    "source_verification_status": "confirmado_por_indice_oficial",
-    "source_sync_status": "captura_direta_pendente",
+    "source_verification_status": "url_oficial_configurada_conteudo_pendente",
+    "source_sync_status": "recaptura_direta_planalto_pendente",
     "study_blocked": true,
-    "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta."
+    "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta.",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "preferred_source_format": "texto_compilado_planalto",
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo."
   }
 ]
