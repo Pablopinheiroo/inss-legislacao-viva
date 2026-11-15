@@ -115,9 +115,9 @@ class MonitorTests(unittest.TestCase):
 
     def test_article_starting_with_no_nas_or_na_is_not_misclassified_as_reference(self):
         result = split_articles(
-            "Art. 15º Texto anterior.\\n"
-            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras.\\n"
-            "Art. 17. Nas ações e nos acordos, não haverá adiantamento.\\n"
+            "Art. 15º Texto anterior.\n"
+            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras.\n"
+            "Art. 17. Nas ações e nos acordos, não haverá adiantamento.\n"
             "Art. 18. Na hipótese de falecimento, aplica-se a regra."
         )
         self.assertIn("Art. 16", result)
@@ -129,8 +129,8 @@ class MonitorTests(unittest.TestCase):
 
     def test_article_reference_to_another_act_is_not_misclassified_as_heading(self):
         result = split_articles(
-            "Art. 5º Texto do artigo.\\n"
-            "Art. 6º da Emenda Constitucional nº 103, de 2019, foi alterado.\\n"
+            "Art. 5º Texto do artigo.\n"
+            "Art. 6º da Emenda Constitucional nº 103, de 2019, foi alterado.\n"
             "Art. 7º Texto seguinte."
         )
         self.assertNotIn("Art. 6", result)
