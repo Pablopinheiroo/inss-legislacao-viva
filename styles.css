@@ -1369,3 +1369,20 @@
 .law-priority-badge.priority-2{background:#fff2d8;color:#81530b}
 .law-priority-badge.priority-3{background:#edf0f3;color:#566170}
 .law-priority-help{margin:8px 2px 12px;color:var(--muted,#667085);font-size:.78rem;line-height:1.45}
+
+/* Mapa de matérias e cobertura do edital */
+.study-subjects-section{margin:26px 0 4px}
+.study-subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.study-subject-card{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0;padding:14px 15px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.study-subject-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;width:100%}
+.study-subject-card-head h3{margin:0;color:#354967;font-size:11px;line-height:1.4}
+.study-subject-item{flex:0 0 auto;color:#8995a7;font-size:8px;font-weight:800}
+.study-subject-status{padding:4px 7px;border-radius:20px;font-size:8px;font-weight:850}
+.study-subject-status.is-mapped{background:#eaf5ee;color:#287449}
+.study-subject-status.is-pending{background:#fff4e4;color:#986323}
+.study-subject-topics{display:grid;gap:4px;margin:0;padding-left:15px;color:#718098;font-size:9px;line-height:1.45}
+.study-subject-more{color:#8b97a8;font-size:8px}
+.study-subject-progress{margin:0;color:#687992;font-size:8px;line-height:1.45}
+.study-subjects-note{margin:9px 0 0;color:#8995a7;font-size:9px;line-height:1.5}
+@media(max-width:900px){.study-subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.study-subject-grid{grid-template-columns:1fr}}
