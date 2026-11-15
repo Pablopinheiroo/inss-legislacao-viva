@@ -32,8 +32,7 @@ ARTICLE_RE = re.compile(
     r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:[º°o])?\s*(?:[-–]\s*([A-Z]))?\.?\s*(?:\s+(.*))?$"
 )
 REFERENCE_STARTS = {
-    "da", "das", "de", "do", "dos", "na", "nas", "no", "nos",
-    "conforme", "vide", "citado", "citada"
+    "da", "das", "de", "do", "dos", "conforme", "vide", "citado", "citada"
 }
 
 
@@ -478,8 +477,18 @@ def split_articles(text: str) -> dict[str, str]:
             body_start = (match.group(3) or "").strip()
             first_word_match = re.match(r"([A-Za-zÀ-ÿ]+)", body_start)
             first_word = first_word_match.group(1).lower() if first_word_match else ""
-            # "Art. 6º da Emenda..." é referência a outro ato, não cabeçalho.
-            if first_word in REFERENCE_STARTS:
+            # Evita confundir referências a artigos de outras normas com
+            # cabeçalhos. Não bloquear "No caso...", "Na hipótese..." ou
+            # "Nas ações...", que são começos legítimos de artigos (ex.: 8.059
+            # e 8.429) e antes eram descartados por coincidirem com preposições.
+            looks_like_other_act_reference = bool(re.match(
+                r"^(?:da|das|de|do|dos)\\s+(?:Lei|Leis|Constituição|Emenda|Decreto|Decretos|"
+                r"Medida Provisória|Portaria|Resolução|Código|Regulamento)\\b",
+                body_start,
+                re.IGNORECASE,
+            ))
+            looks_like_citation = first_word in {"conforme", "vide", "citado", "citada"}
+            if looks_like_other_act_reference or looks_like_citation:
                 match = None
 
         if match:
