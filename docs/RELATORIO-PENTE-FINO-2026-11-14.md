@@ -284,3 +284,8 @@ O recorte foi reduzido de arts. 1º–24 para **arts. 1º–17**. Os arts. 18–
 ### LOAS — Lei 8.742/1993
 
 O art. 35 foi incluído porque trata diretamente da operação do BPC e da regulamentação das formas de comprovação, suspensão e pagamento. O § 2º atual, sobre compartilhamento de bases de dados, foi incluído pela Lei 15.077/2024, depois do edital 2022; fica marcado como alteração posterior, sem misturar a redação de 2024 ao recorte histórico do concurso.
+
+
+### Complemento da Lei 9.796/1999 — art. 8º-A
+
+Incluído também o **art. 8º-A**, acrescentado pela Lei 13.846/2019, por disciplinar a compensação financeira entre regimes próprios de previdência social. O tema está expressamente no edital. O art. 8º-C, incluído pela Lei 15.265/2025, continua separado como alteração posterior e não entra no recorte histórico de 2022.
