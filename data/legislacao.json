@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-15T01:44:50Z",
-  "last_check_attempt": "2026-11-15T01:44:50Z",
+  "generated_at": "2026-11-15T01:46:15Z",
+  "last_check_attempt": "2026-11-15T01:46:15Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
   "status": "erro",
-  "summary": "Nenhuma fonte pôde ser consultada (0 com limite de acesso e 27 bloqueada(s)). As capturas anteriores foram preservadas.",
+  "summary": "Nenhuma fonte pôde ser consultada (0 com limite de acesso e 28 bloqueada(s)). As capturas anteriores foram preservadas.",
   "baseline_updated_count": 0,
   "laws": [
     {
@@ -855,22 +855,23 @@
       "snapshot_scope": "official_change_index",
       "baseline_updated": false,
       "source_url_used": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
-      "source_status": "invalid_response",
+      "source_status": "blocked",
       "source_attempts": [
         {
           "url": "https://portalin.inss.gov.br/in/540",
           "attempt": 1,
           "outcome": "error",
-          "failure_type": "incomplete_response",
-          "http_status": 200,
-          "detail": "A fonte retornou menos de 350 caracteres úteis."
+          "failure_type": "access_denied",
+          "http_status": 403,
+          "retry_after_seconds": null,
+          "detail": "<html>\r <head><title>403 Forbidden</title></head>\r <body>\r <center><h1>403 Forbidden</h1></center>\r </body>\r </html>\r <!-- a padding to disable MSIE and Chrome friendly error page -->\r <!-- a padding to disable MSIE and Chrome friendly erro"
         }
       ],
       "source_failure_count": 1,
-      "source_failure_type": "incomplete_response",
+      "source_failure_type": "access_denied",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> incomplete_response: A fonte retornou menos de 350 caracteres úteis."
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> access_denied: <html>\r <head><title>403 Forbidden</title></head>\r <body>\r <center><h1>403 Forbidden</h1></center>\r </body>\r </html>\r <!-- a padding to disable MSIE and Chrome friendly error page -->\r <!-- a padding to disable MSIE and Chrome friendly erro"
     },
     {
       "id": "decreto-lei-2848-1940",
@@ -1378,17 +1379,18 @@
     {
       "law_id": "in-128-2022",
       "law_title": "Instrução Normativa PRES/INSS nº 128, de 28 de março de 2022",
-      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> incomplete_response: A fonte retornou menos de 350 caracteres úteis.",
-      "source_status": "invalid_response",
-      "failure_type": "incomplete_response",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> access_denied: <html>\r <head><title>403 Forbidden</title></head>\r <body>\r <center><h1>403 Forbidden</h1></center>\r </body>\r </html>\r <!-- a padding to disable MSIE and Chrome friendly error page -->\r <!-- a padding to disable MSIE and Chrome friendly erro",
+      "source_status": "blocked",
+      "failure_type": "access_denied",
       "attempts": [
         {
           "url": "https://portalin.inss.gov.br/in/540",
           "attempt": 1,
           "outcome": "error",
-          "failure_type": "incomplete_response",
-          "http_status": 200,
-          "detail": "A fonte retornou menos de 350 caracteres úteis."
+          "failure_type": "access_denied",
+          "http_status": 403,
+          "retry_after_seconds": null,
+          "detail": "<html>\r <head><title>403 Forbidden</title></head>\r <body>\r <center><h1>403 Forbidden</h1></center>\r </body>\r </html>\r <!-- a padding to disable MSIE and Chrome friendly error page -->\r <!-- a padding to disable MSIE and Chrome friendly erro"
         }
       ],
       "retry_after_seconds": null
