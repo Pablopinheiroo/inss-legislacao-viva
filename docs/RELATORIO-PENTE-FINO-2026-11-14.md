@@ -198,3 +198,14 @@ A checagem das listas de artigos contra as capturas históricas identificou 12 d
 - Lei 10.559/2002: art. 13.
 
 Os exemplos foram conferidos no texto das capturas históricas e os respectivos inícios (“Na concessão”, “No prazo”, “Nas ações”, “No caso”, “Das decisões”, etc.) demonstram que são artigos autônomos. O código foi corrigido e a suíte recebeu testes específicos para esses casos. Os snapshots antigos não foram editados para simular uma nova captura; permanecem históricos, de fonte anterior. A regra `require_all_articles=true` obriga a próxima captura oficial a conter todas as chaves selecionadas, caso contrário ela será recusada.
+
+
+### Ajuste adicional do Decreto 3.048/1999 — 15/11/2026
+
+A leitura direta da versão compilada do Planalto permitiu refinar o recorte do Regulamento da Previdência Social:
+- **Mantidos** os arts. 305, 307 e 308, que tratam da competência do CRPS, da relação entre ação judicial e recurso administrativo e dos efeitos dos recursos. O art. 305 inclui recursos de decisões do INSS, inclusive assuntos de segurado especial, CNIS e compensação previdenciária.
+- **Retirados** os arts. 303 e 304, por tratarem da estrutura/composição e do regimento interno do CRPS, sem regra sobre o julgamento dos recursos; e os arts. 318 e 319, por tratarem da divulgação/notificação geral de atos, não do conteúdo das decisões recursais.
+- **Retirados** os arts. 341 e 342, que tratam de ação regressiva e responsabilidade civil de empregadores/terceiros, assuntos não previstos expressamente no conteúdo programático.
+- **Incluídos** os arts. 345, 347-A, 348 e 349, que tratam de prescrição e decadência relacionadas aos benefícios e aos créditos da Seguridade Social, expressamente previstas no edital.
+
+A lista ativa do Decreto 3.048 passou de 197 para 195 dispositivos selecionados. O texto consultado é o compilado oficial do Planalto, mas a captura integral ainda não foi incorporada ao snapshot do projeto; por isso, o Decreto continua bloqueado.
