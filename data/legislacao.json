@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-15T02:21:52Z",
-  "last_check_attempt": "2026-11-15T02:21:52Z",
+  "generated_at": "2026-11-15T09:49:29Z",
+  "last_check_attempt": "2026-11-15T09:49:29Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
   "status": "erro",
   "summary": "Nenhuma fonte pôde ser consultada (0 com limite de acesso, 28 bloqueada(s), 0 com resposta incompleta e 0 indisponível(is)). As capturas anteriores foram preservadas.",
