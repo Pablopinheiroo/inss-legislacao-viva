@@ -223,9 +223,9 @@
         },
         {
           "law_id": "lei-8212-1991",
-          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
           "status": "texto_compilado_confirmado",
-          "note": "Página oficial do Planalto identificada expressamente como Texto compilado.",
+          "note": "O Planalto confirma l8212cons.htm como Texto compilado; captura histórica ainda sem sincronização direta.",
           "snapshot_sync": "blocked"
         },
         {
