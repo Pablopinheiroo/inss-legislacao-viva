@@ -783,11 +783,10 @@
       "Art. 1",
       "Art. 2",
       "Art. 3",
-      "Art. 4",
-      "Art. 5"
+      "Art. 4"
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
-    "article_filter_note": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
+    "article_filter_note": "Mantidos os arts. 1º a 4º, que tratam da criação da pensão especial às vítimas do Césio 137, categorias e valores, prova médica e dedução/compensação com indenização judicial. Excluído o art. 5º, que trata apenas da alocação orçamentária da despesa, e arts. 6º e 7º, de vigência e revogação. A captura do Planalto ainda está pendente.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
@@ -798,7 +797,9 @@
     "require_all_articles": true,
     "study_scope_topics": [
       "pensão especial às vítimas do acidente nuclear com Césio 137",
-      "categorias de beneficiários, valores, prova médica, acumulação/compensação e custeio"
+      "categorias de beneficiários e valores",
+      "comprovação por junta médica oficial",
+      "compensação com indenização judicial"
     ]
   },
   {
