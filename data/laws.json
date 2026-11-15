@@ -112,7 +112,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "decreto-6029-2007",
@@ -171,7 +172,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8112-1990",
@@ -392,7 +394,8 @@
     "preferred_source_format": "texto_compilado_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8429-1992",
@@ -463,7 +466,8 @@
       "indisponibilidade de bens",
       "ação de improbidade e acordo de não persecução civil",
       "prescrição e responsabilização"
-    ]
+    ],
+    "require_all_articles": true
   },
   {
     "id": "lei-9784-1999",
@@ -567,7 +571,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-7070-1982",
@@ -606,7 +611,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-7986-1989",
@@ -648,7 +654,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8059-1990",
@@ -706,7 +713,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-9422-1996",
@@ -746,7 +754,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-9425-1996",
@@ -786,7 +795,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-10559-2002",
@@ -841,7 +851,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-11520-2007",
@@ -897,7 +908,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "lei-13985-2020",
@@ -935,7 +947,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-10779-2003",
@@ -985,7 +998,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "decreto-8424-2015",
@@ -1030,7 +1044,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8742-1993",
@@ -1100,7 +1115,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "lei-14176-2021",
@@ -1137,7 +1153,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "decreto-6214-2007",
@@ -1274,7 +1291,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "decreto-10188-2019",
@@ -1333,7 +1351,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "ec-103-2019",
@@ -1399,7 +1418,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lc-142-2013",
@@ -1444,7 +1464,8 @@
     "preferred_source_format": "texto_oficial_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8212-1991",
@@ -1466,9 +1487,9 @@
     "priority_reason": "Custeio e financiamento da Seguridade Social, com cobrança expressa no item 14.2.3.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "bloqueio_anti_robo_planalto",
+    "source_verification_status": "url_confirmada_no_indice_oficial_planalto",
     "source_sync_status": "recaptura_direta_planalto_bloqueada",
-    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
+    "source_policy_note": "URL oficial do Planalto confirmada como 'Texto compilado'. A captura direta permanece bloqueada pelo desafio antirobô; não considerar a captura antiga como sincronizada.",
     "include_articles": [
       "Art. 1",
       "Art. 3",
@@ -1538,7 +1559,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "lei-8213-1991",
@@ -1699,7 +1721,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "require_all_articles": true
   },
   {
     "id": "decreto-3048-1999",
@@ -1931,7 +1954,8 @@
     "preferred_source_format": "texto_compilado_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "require_all_articles": true
   },
   {
     "id": "in-128-2022",
