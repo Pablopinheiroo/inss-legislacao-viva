@@ -51,6 +51,8 @@ const LEGAL_STUDIED_AT_KEY = "radarLegislativo.leiSeca.studiedAt.v1";
 const LEGAL_STUDIED_KEY = "radarLegislativo.leiSeca.studied.v1";
 const LEGAL_FAVORITES_KEY = "radarLegislativo.leiSeca.favorites.v1";
 let legalLaws = [];
+let legalSourcePolicy = new Map();
+let legalSourcePolicyPromise = null;
 let legalSelectedLaw = null;
 let legalSnapshot = null;
 let legalEntries = [];
@@ -438,6 +440,7 @@ async function loadLegalLibrary() {
     const catalog = await response.json();
     // A biblioteca mostra o cadastro completo, inclusive normas com monitoramento pausado.
     legalLaws = Array.isArray(catalog) ? catalog : [];
+    legalSourcePolicy=new Map(legalLaws.filter(law=>law&&law.id).map(law=>[law.id,law]));
     if(typeof syncLegacyLegalStudyEvents==="function")syncLegacyLegalStudyEvents();
     const matters = [...new Set(legalLaws.map(legalLawMatter))]
       .sort((a, b) => a.localeCompare(b, "pt-BR"));
@@ -1874,11 +1877,22 @@ async function loadClozeLaws() {
     const response = await fetch(LAWS_URL + "?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const data = await response.json();
-    clozeLaws = (Array.isArray(data) ? data : []).filter(law => law.enabled !== false);
+    clozeLaws = (Array.isArray(data) ? data : []).filter(law =>
+      law.enabled !== false && law.study_blocked !== true
+      && law.source_sync_status === "sincronizado_e_validado"
+    );
+    legalLaws=Array.isArray(data)?data:legalLaws;
+    legalSourcePolicy=new Map(legalLaws.filter(law=>law&&law.id).map(law=>[law.id,law]));
     const select = $("#cloze-law");
     select.replaceChildren();
     clozeLaws.forEach(law => select.append(new Option(law.short_title || law.title, law.id)));
-    if (!clozeLaws.length) throw new Error("Nenhuma norma está cadastrada.");
+    if (!clozeLaws.length) {
+      $("#cloze-law").replaceChildren();
+      $("#start-cloze").disabled=true;
+      $("#cloze-note").textContent="Treino temporariamente bloqueado: as capturas ainda não foram validadas diretamente nas fontes oficiais preferenciais.";
+      renderClozeReviewOverview();
+      return;
+    }
     await loadClozeSnapshot();
     renderClozeReviewOverview();
   } catch (error) {
@@ -2320,6 +2334,7 @@ function renderFindErrorWrongHighlight(button, source) {
 async function loadFindErrorBank() {
   const note=$("#error-count-note");
   try {
+    await ensureLegalSourcePolicy();
     const response=await fetch(ERROR_BANK_URL+"?v="+Date.now(),{cache:"no-store"});
     if(!response.ok)throw new Error("HTTP "+response.status);
     const data=await response.json(),bankItems=Array.isArray(data.items)?data.items:[];
@@ -2513,6 +2528,7 @@ function showFindErrorSummary(){
 async function loadArticleGameBank() {
   const note = $("#article-count-note");
   try {
+    await ensureLegalSourcePolicy();
     const response = await fetch(ARTICLE_BANK_URL + "?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const data = await response.json();
@@ -2863,10 +2879,39 @@ function questionArticleFingerprint(value){
   }
   return hash.toString(16).padStart(8,"0");
 }
+async function ensureLegalSourcePolicy(){
+  if(legalSourcePolicy.size)return legalSourcePolicy;
+  if(!legalSourcePolicyPromise){
+    legalSourcePolicyPromise=(async()=>{
+      let laws=legalLaws;
+      if(!Array.isArray(laws)||!laws.length){
+        const response=await fetch(LAWS_URL+"?v="+Date.now(),{cache:"no-store"});
+        if(!response.ok)throw new Error("Não foi possível consultar a política de fontes das normas.");
+        const data=await response.json();
+        laws=Array.isArray(data)?data:[];
+        legalLaws=laws;
+      }
+      legalSourcePolicy=new Map(laws.filter(law=>law&&law.id).map(law=>[law.id,law]));
+      return legalSourcePolicy;
+    })().catch(error=>{
+      legalSourcePolicyPromise=null;
+      throw error;
+    });
+  }
+  return legalSourcePolicyPromise;
+}
+function isLawSourceReady(lawId,snapshot=null){
+  const law=legalSourcePolicy.get(lawId)||legalLaws.find(item=>item.id===lawId);
+  if(!law||law.enabled===false||law.study_blocked===true
+    ||law.source_sync_status!=="sincronizado_e_validado")return false;
+  const preferred=law.preferred_source_url||law.url;
+  return !snapshot||snapshot.source_url_used===preferred;
+}
 function questionMatchesCurrentArticle(item,snapshot,articleKey,anchors=[]){
   const article=snapshot&&snapshot.articles&&snapshot.articles[articleKey];
   if(!article||!item||!item.source_article_hash||!item.source_snapshot_hash
     ||!item.source_snapshot_date||!item.source_snapshot_captured_at||!item.source_revision)return false;
+  if(!isLawSourceReady(item.law_id,snapshot))return false;
   const reference=String(item.legal_reference||"").trim();
   const explanation=String(item.explanation||"");
   if(!reference||!explanation.includes("Fundamento legal: "+reference+"."))return false;
@@ -2880,6 +2925,7 @@ function questionMatchesCurrentArticle(item,snapshot,articleKey,anchors=[]){
 async function loadQuestionBank() {
   const note = $("#question-count-note");
   try {
+    await ensureLegalSourcePolicy();
     const response = await fetch(QUESTIONS_URL + "?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const data = await response.json();
@@ -3249,6 +3295,7 @@ function multiCECategoryForLaw(lawId) {
 async function loadMultiCEBank() {
   const note=$("#multi-ce-count-note");
   try {
+    await ensureLegalSourcePolicy();
     const response=await fetch(MULTI_CE_BANK_URL+"?v="+Date.now(),{cache:"no-store"});
     if(!response.ok)throw new Error("HTTP "+response.status);
     const data=await response.json();
@@ -3993,7 +4040,9 @@ async function ensureMemorySourceSnapshots() {
       if (!legalLaws.length) legalLaws = laws;
     }
 
-    const pending = laws.filter(law => law && law.id && !memorySourceSnapshots.has(law.id));
+    legalLaws=laws;
+    legalSourcePolicy=new Map(laws.filter(law=>law&&law.id).map(law=>[law.id,law]));
+    const pending = laws.filter(law => law && law.id && isLawSourceReady(law.id) && !memorySourceSnapshots.has(law.id));
     const results = [];
     let cursor = 0;
     async function worker() {
@@ -4169,7 +4218,7 @@ function buildMemoryDeck() {
   });
 
   memoryCards = [...cards.values()].filter(card =>
-    card.literal_text && card.prompts.length && card.article_key
+    card.literal_text && card.prompts.length && card.article_key && isLawSourceReady(card.law_id)
   );
 
   const select = $("#memory-category");
