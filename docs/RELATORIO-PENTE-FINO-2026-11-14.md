@@ -237,3 +237,14 @@ As referências oficiais que consegui abrir nesta rodada são o Planalto para a 
 ### Refinamento final da Lei 9.425/1996
 
 O art. 5º foi retirado do recorte ativo porque trata exclusivamente da alocação orçamentária da despesa, e não de requisitos, beneficiários, valor, comprovação ou compensação da pensão especial. Permanecem os arts. 1º a 4º. Os arts. 6º e 7º, de vigência e revogação, também ficam fora.
+
+
+### IN 128/2022 — conferência adicional no índice oficial do INSS
+
+O índice oficial do INSS confirma:
+- última modificação informada da IN 128: 12/08/2026;
+- última alteração listada: IN PRES/INSS nº 212, de 06/08/2026 (DOU de 11/08/2026);
+- arts. 654 a 657 revogados pela IN PRES/INSS nº 162/2024;
+- Anexo XXVI revogado pela IN PRES/INSS nº 174/2024.
+
+Essas informações foram registradas em `data/laws.json` e `data/edital-filtro.json`. Não substituem a captura integral: a IN continua bloqueada até obter o texto completo, remover as redações riscadas e validar o recorte do edital por artigo e subdivisão.
