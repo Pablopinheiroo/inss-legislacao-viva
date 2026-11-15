@@ -179,3 +179,10 @@ Essa classificação não libera automaticamente uma norma. A sincronização co
 - Mapa de 13 disciplinas do edital disponível na área Estudar; os módulos e bancos de Português, Informática e Raciocínio Lógico ainda não foram produzidos.
 
 A auditoria ainda não pode ser declarada concluída. O próximo avanço depende de conseguir obter o texto integral do Planalto/Portal IN sem desafio antirobô, ou de uma forma autorizada de acesso institucional ao mesmo documento oficial. Nenhuma fonte de terceiros será usada como substituta.
+
+
+### Retificação do diagnóstico da IN 128/2022
+
+A verificação mais recente no índice público oficial do Portal IN mostrou que a IN 128/2022 está indexada com conteúdo vigente e alterações até a IN PRES/INSS nº 212, de 6 de agosto de 2026; a página oficial indica atualização em 12/08/2026. A busca retorna trechos do texto vigente e marcações das redações anteriores riscadas. A abertura direta da página, porém, retorna HTTP 403, e o monitor automatizado não consegue importar o texto integral.
+
+Portanto, a situação correta não é “a fonte oficial não possui texto integral”; é “o texto está indexado no Portal IN, mas a íntegra ainda não foi importada para o projeto”. A IN continua bloqueada até conseguir importar o documento completo por meio autorizado e limpar as redações históricas.
