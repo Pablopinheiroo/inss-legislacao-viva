@@ -194,7 +194,8 @@
     "no_third_party": "Não usar sites privados ou agregadores como fonte do texto legal. A captura anterior da Câmara é identificada como histórica e não é apresentada como sincronizada com a nova fonte preferencial.",
     "revocations": "Artigos inteiramente revogados, textos históricos e redações substituídas não entram no banco ativo. Em dispositivos com redação vigente e parágrafos alterados, exigir comparação de componentes para não misturar redações.",
     "cutoff": "O recorte de assuntos segue os itens 14.2.2 e 14.2.3 do Edital INSS 2022. Alterações legislativas posteriores à publicação do edital devem ser identificadas separadamente, não tratadas como conteúdo originalmente cobrado.",
-    "capture_state": "Os links preferenciais foram trocados para os endereços oficiais. As capturas existentes ainda registram a fonte de origem anterior; a sincronização integral direta do Planalto/Portal IN permanece como etapa pendente."
+    "capture_state": "As URLs preferenciais foram ajustadas para fontes oficiais do Planalto, inclusive versões compiladas localizadas para o Decreto 3.048/1999, o Decreto 6.214/2007 e a Lei 10.779/2003. A recaptura direta ainda depende do monitoramento e da validação de cada resposta; capturas anteriores não são declaradas sincronizadas.",
+    "post_edital_updates": "Mudanças posteriores a 15/09/2022 devem ser identificadas separadamente. A existência de texto compilado atual não transforma automaticamente uma alteração posterior em conteúdo do edital de 2022."
   },
   "in128_status": {
     "problem": "A captura anterior era só índice de alterações, com article_count 0.",
@@ -278,10 +279,6 @@
     },
     "lei-8112-1990": {
       "include_articles": [
-        "Art. 1",
-        "Art. 2",
-        "Art. 3",
-        "Art. 4",
         "Art. 5",
         "Art. 6",
         "Art. 7",
@@ -298,8 +295,6 @@
         "Art. 18",
         "Art. 19",
         "Art. 20",
-        "Art. 21",
-        "Art. 22",
         "Art. 24",
         "Art. 25",
         "Art. 27",
@@ -414,46 +409,6 @@
         "Art. 140",
         "Art. 141",
         "Art. 142",
-        "Art. 143",
-        "Art. 144",
-        "Art. 145",
-        "Art. 146",
-        "Art. 147",
-        "Art. 148",
-        "Art. 149",
-        "Art. 150",
-        "Art. 151",
-        "Art. 152",
-        "Art. 153",
-        "Art. 154",
-        "Art. 155",
-        "Art. 156",
-        "Art. 157",
-        "Art. 158",
-        "Art. 159",
-        "Art. 160",
-        "Art. 161",
-        "Art. 162",
-        "Art. 163",
-        "Art. 164",
-        "Art. 165",
-        "Art. 166",
-        "Art. 167",
-        "Art. 168",
-        "Art. 169",
-        "Art. 170",
-        "Art. 171",
-        "Art. 172",
-        "Art. 173",
-        "Art. 174",
-        "Art. 175",
-        "Art. 176",
-        "Art. 177",
-        "Art. 178",
-        "Art. 179",
-        "Art. 180",
-        "Art. 181",
-        "Art. 182",
         "Art. 60-A",
         "Art. 60-B",
         "Art. 60-D",
@@ -461,8 +416,20 @@
         "Art. 96-A",
         "Art. 126-A"
       ],
-      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "filter": "somente os blocos do edital: provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar e responsabilidades",
+      "topics": [
+        "nomeação e provimento",
+        "vacância",
+        "remoção",
+        "redistribuição",
+        "substituição",
+        "direitos e vantagens",
+        "regime disciplinar",
+        "responsabilidades civil, penal e administrativa"
+      ],
+      "blocked": false,
+      "review_status": "recorte_tematizado; sincronizacao_oficial_pendente",
+      "excluded_scope": "artigos introdutórios, disposições finais e blocos estranhos aos assuntos expressos no item 14.2.2"
     },
     "lei-8429-1992": {
       "include_articles": [
@@ -1226,9 +1193,9 @@
       "data/descubra-artigo.json": 22,
       "data/afirmacoes-por-artigo.json": 5
     },
-    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial.",
+    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial. A questão 8212-art10-financiamento-01 está suspensa e arquivada por divergência entre o hash e o texto do dispositivo.",
     "active_counts": {
-      "data/questoes.json": 152,
+      "data/questoes.json": 151,
       "data/encontre-erro.json": 61,
       "data/descubra-artigo.json": 43,
       "data/afirmacoes-por-artigo.json": 43
@@ -1244,6 +1211,9 @@
       "data/encontre-erro.json": 5,
       "data/descubra-artigo.json": 0,
       "data/afirmacoes-por-artigo.json": 0
+    },
+    "suspended_counts": {
+      "data/questoes-arquivadas.json": 1
     }
   },
   "scope_items": [
@@ -1265,7 +1235,8 @@
         "Semântica",
         "Correspondência oficial"
       ],
-      "mode": "módulo teórico e questões; não é Lei Seca"
+      "mode": "módulo teórico e questões; não é Lei Seca",
+      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
     },
     {
       "item": "14.2.2",
@@ -1278,7 +1249,8 @@
         "Navegadores e correio eletrônico",
         "Segurança da informação, vírus e worms"
       ],
-      "mode": "módulo teórico e questões; não é Lei Seca"
+      "mode": "módulo teórico e questões; não é Lei Seca",
+      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
     },
     {
       "item": "14.2.2",
@@ -1292,7 +1264,8 @@
         "Conjuntos",
         "Porcentagens"
       ],
-      "mode": "módulo teórico e questões; não é Lei Seca"
+      "mode": "módulo teórico e questões; não é Lei Seca",
+      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
     },
     {
       "item": "14.2.2",
@@ -1307,7 +1280,8 @@
         "Serviços públicos",
         "Controle e responsabilidade civil do Estado"
       ],
-      "mode": "material teórico vinculado ao edital; não criar artigos artificiais"
+      "mode": "material teórico vinculado ao edital; não criar artigos artificiais",
+      "status": "mapeado_no_edital; material_teorico_pendente"
     },
     {
       "item": "14.2.3",
@@ -1319,17 +1293,14 @@
         "O servidor público como agente de desenvolvimento social",
         "Saúde e qualidade de vida no serviço público"
       ],
-      "mode": "módulo teórico, integrado às matérias correspondentes"
+      "mode": "módulo teórico, integrado às matérias correspondentes",
+      "status": "mapeado_no_edital; material_teorico_pendente"
     }
   ],
   "review_findings": [
     {
       "norm": "Decreto 6.029/2007",
       "action": "Art.25 removido por conter revogações formais; mantidos arts.1–24."
-    },
-    {
-      "norm": "Lei 8.112/1990",
-      "action": "Recorte ampliado para arts.1–182 e sufixos pertinentes; artigos integralmente revogados excluídos. Alguns dispositivos não aparecem na captura antiga e aguardam recaptura oficial."
     },
     {
       "norm": "Lei 13.985/2020",
@@ -1362,6 +1333,10 @@
     {
       "norm": "Lei 8.212/1991",
       "action": "Separado o art. 11 do art. 10, pois a captura antiga havia mesclado os dois. O art. 11 foi mantido por enumerar as receitas da Seguridade Social e as contribuições sociais."
+    },
+    {
+      "norm": "Lei 8.112/1990",
+      "action": "Reduzido o recorte de 182 para 136 dispositivos existentes na captura, mantendo os blocos vinculados aos assuntos expressos no edital e retirando os artigos introdutórios e os assuntos fora do programa. A captura Planalto ainda está pendente."
     }
   ],
   "decreto6214_status": {
