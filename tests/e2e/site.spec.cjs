@@ -129,7 +129,7 @@ test("simulados ficam bloqueados quando não há questões de fonte validada", a
   await expect(page.locator("#start-simulado")).toBeDisabled();
   await expect(page.locator("#start-simulado-rapido")).toBeDisabled();
   await expect(page.locator("#start-simulado-completo")).toBeDisabled();
-  await expect(page.locator("#simulado-bank-note")).toContainText("0 questões");
+  await expect(page.locator("#simulado-bank-note")).toContainText("0 questão(ões)");
 });
 
 test("cálculo de XP e domínio por assunto com dados controlados", async ({ page }) => {
