@@ -87,15 +87,15 @@ class MonitorTests(unittest.TestCase):
 
     def test_decree_6214_snapshot_uses_only_bpc_regulation_annex(self):
         source = (
-            "DECRETO Nº 6.214, DE 26 DE SETEMBRO DE 2007.\\n"
-            "Art. 1º Fica aprovado, na forma do Anexo, o Regulamento do BPC.\\n"
-            "Art. 3º Este Decreto entra em vigor na data de sua publicação.\\n"
-            "Art. 4º Ficam revogados os decretos anteriores.\\n"
-            "ANEXO\\n"
-            "REGULAMENTO DO BENEFÍCIO DE PRESTAÇÃO CONTINUADA\\n"
-            "CAPÍTULO I\\n"
-            "Art. 1º O BPC é a garantia de um salário mínimo mensal.\\n"
-            "Art. 3º O INSS é responsável pela operacionalização do BPC.\\n"
+            "DECRETO Nº 6.214, DE 26 DE SETEMBRO DE 2007.\n"
+            "Art. 1º Fica aprovado, na forma do Anexo, o Regulamento do BPC.\n"
+            "Art. 3º Este Decreto entra em vigor na data de sua publicação.\n"
+            "Art. 4º Ficam revogados os decretos anteriores.\n"
+            "ANEXO\n"
+            "REGULAMENTO DO BENEFÍCIO DE PRESTAÇÃO CONTINUADA\n"
+            "CAPÍTULO I\n"
+            "Art. 1º O BPC é a garantia de um salário mínimo mensal.\n"
+            "Art. 3º O INSS é responsável pela operacionalização do BPC.\n"
             "Art. 4º Para fins de reconhecimento do direito, considera-se idoso quem tem 65 anos ou mais."
         )
         law = {
@@ -175,19 +175,19 @@ class MonitorTests(unittest.TestCase):
 
     def test_real_article_headings_starting_with_prepositions_are_split(self):
         source = (
-            "Art. 69. Texto do adicional.\\n"
-            "Art. 70. Na concessão dos adicionais, serão observadas as situações legais.\\n"
-            "Art. 127. São penalidades disciplinares.\\n"
-            "Art. 128. Na aplicação das penalidades serão consideradas a natureza e a gravidade.\\n"
-            "Art. 139. É abandono de cargo.\\n"
-            "Art. 140. Na apuração de abandono de cargo será adotado procedimento sumário.\\n"
-            "Art. 144. A denúncia será arquivada.\\n"
-            "Art. 145. Da sindicância poderá resultar arquivamento ou processo disciplinar.\\n"
-            "Art. 154. O processo será encaminhado.\\n"
-            "Art. 155. Na fase do inquérito, a comissão promoverá diligências.\\n"
-            "Art. 166. O relatório será encaminhado.\\n"
-            "Art. 167. No prazo de vinte dias, a autoridade julgadora decidirá.\\n"
-            "Art. 174. A revisão será requerida.\\n"
+            "Art. 69. Texto do adicional.\n"
+            "Art. 70. Na concessão dos adicionais, serão observadas as situações legais.\n"
+            "Art. 127. São penalidades disciplinares.\n"
+            "Art. 128. Na aplicação das penalidades serão consideradas a natureza e a gravidade.\n"
+            "Art. 139. É abandono de cargo.\n"
+            "Art. 140. Na apuração de abandono de cargo será adotado procedimento sumário.\n"
+            "Art. 144. A denúncia será arquivada.\n"
+            "Art. 145. Da sindicância poderá resultar arquivamento ou processo disciplinar.\n"
+            "Art. 154. O processo será encaminhado.\n"
+            "Art. 155. Na fase do inquérito, a comissão promoverá diligências.\n"
+            "Art. 166. O relatório será encaminhado.\n"
+            "Art. 167. No prazo de vinte dias, a autoridade julgadora decidirá.\n"
+            "Art. 174. A revisão será requerida.\n"
             "Art. 175. No processo revisional, o ônus da prova cabe ao requerente."
         )
         result = split_articles(source)
@@ -200,9 +200,9 @@ class MonitorTests(unittest.TestCase):
 
     def test_articles_8059_16_and_8429_23b_are_separated(self):
         source = (
-            "Art. 15. A pensão especial não está sujeita a penhora.\\n"
-            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras do Código Civil.\\n"
-            "Art. 23-A. É dever do poder público oferecer capacitação.\\n"
+            "Art. 15. A pensão especial não está sujeita a penhora.\n"
+            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras do Código Civil.\n"
+            "Art. 23-A. É dever do poder público oferecer capacitação.\n"
             "Art. 23-B. Nas ações e nos acordos regidos por esta Lei, não haverá adiantamento de custas."
         )
         result = split_articles(source)
