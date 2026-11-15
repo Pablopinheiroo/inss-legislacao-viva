@@ -52,6 +52,39 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("Art. 2", result)
         self.assertIn("Um parágrafo", result["Art. 1"])
 
+    def test_decree_3048_snapshot_uses_only_regulamento_annex(self):
+        source = (
+            "DECRETO Nº 3.048, DE 6 DE MAIO DE 1999.\\n"
+            "Art. 1º O Regulamento da Previdência Social passa a vigorar na forma do anexo.\\n"
+            "Art. 2º Este Decreto entra em vigor na data de sua publicação.\\n"
+            "Art. 3º Ficam revogados os decretos anteriores.\\n"
+            "REGULAMENTO DA PREVIDÊNCIA SOCIAL\\n"
+            "LIVRO I\\n"
+            "Art. 1º A seguridade social compreende ações integradas.\\n"
+            "Art. 2º A saúde é direito de todos e dever do Estado."
+        )
+        law = {
+            "id": "decreto-3048-1999",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+            "include_articles": ["Art. 1", "Art. 2"],
+            "require_all_articles": True,
+            "snapshot_scope": "selected_articles",
+        }
+        snapshot = make_snapshot(source, law)
+        self.assertEqual(snapshot["article_count"], 2)
+        self.assertIn("A seguridade social compreende ações integradas", snapshot["articles"]["Art. 1"])
+        self.assertNotIn("passa a vigorar", snapshot["articles"]["Art. 1"])
+        self.assertNotIn("entra em vigor", snapshot["articles"]["Art. 2"])
+        self.assertNotIn("ficam revogados", " ".join(snapshot["articles"].values()))
+
+    def test_decree_3048_snapshot_rejects_missing_regulamento_annex(self):
+        law = {
+            "id": "decreto-3048-1999",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+        }
+        with self.assertRaises(ValueError):
+            make_snapshot("DECRETO 3.048 Art. 1º Página incompleta.", law)
+
     def test_article_heading_split_across_lines(self):
         result = split_articles(
             "CAPÍTULO\nSeção I\nArt.\n37\n.\nA administração pública seguirá os princípios.\n"
