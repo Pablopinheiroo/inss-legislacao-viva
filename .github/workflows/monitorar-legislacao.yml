@@ -40,8 +40,19 @@ jobs:
       - name: Testar o comparador
         run: python -m unittest discover -s tests -v
       - name: Consultar fontes oficiais e comparar textos
-        run: python scripts/monitor.py
-      - name: Salvar o resultado no repositório
+        id: monitor
+        shell: bash
+        run: |
+          set +e
+          python scripts/monitor.py
+          monitor_exit_code=$?
+          set -e
+          echo "exit_code=$monitor_exit_code" >> "$GITHUB_OUTPUT"
+          if [ "$monitor_exit_code" -ne 0 ]; then
+            echo "::warning::Uma ou mais fontes oficiais não entregaram texto legal íntegro. O monitor registrou o diagnóstico e preservou as capturas anteriores."
+          fi
+      - name: Salvar o resultado e os diagnósticos
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,7 +60,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nenhuma mudança nos dados para salvar."
           else
-            git commit -m "Atualiza monitoramento da legislação"
+            git commit -m "Atualiza diagnóstico das fontes oficiais"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
