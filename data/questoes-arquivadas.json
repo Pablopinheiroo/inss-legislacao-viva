@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "description": "Questões suspensas por divergência de fonte, dispositivo ou redação vigente. Não entram nos modos ativos até nova validação.",
+  "updated_at": "2026-11-14",
+  "items": [
+    {
+      "id": "8212-art10-financiamento-01",
+      "category": "Direito Previdenciário",
+      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
+      "article": "Art. 10",
+      "statement": "A Seguridade Social é financiada por toda a sociedade, de forma direta e indireta, mediante recursos públicos e contribuições sociais, nos termos da lei.",
+      "answer": true,
+      "explanation": "Certo. O art. 10 prevê o financiamento por toda a sociedade, de forma direta e indireta, com recursos da União, dos Estados, do Distrito Federal, dos Municípios e contribuições sociais. Fundamento legal: Art. 10º da Lei nº 8.212/1991.",
+      "literal_text": "Art. 10. A Seguridade Social será financiada por toda sociedade, de forma direta e indireta, nos termos do art. 195 da Constituição Federal e desta Lei, mediante recursos provenientes da União, dos Estados, do Distrito Federal, dos Municípios e de contribuições sociais.",
+      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+      "law_id": "lei-8212-1991",
+      "article_key": "Art. 10",
+      "topic": "Financiamento da Seguridade Social",
+      "supporting_excerpts": [
+        "financiada por toda sociedade, de forma direta e indireta"
+      ],
+      "source_snapshot_date": "2026-11-14",
+      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
+      "source_revision": "Captura da fonte oficial em 2026-11-14",
+      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
+      "source_article_hash": "fbd33e3c",
+      "legal_reference": "Art. 10º da Lei nº 8.212/1991",
+      "difficulty": "media",
+      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
+      "validation_status": "validated",
+      "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
+      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+      "archive_status": "suspensa",
+      "archive_reason": "O hash do artigo na captura atual não confere com o texto usado na questão. A questão não pode permanecer ativa até a recaptura direta do Planalto e nova validação do dispositivo.",
+      "archive_date": "2026-11-14"
+    }
+  ]
+}
