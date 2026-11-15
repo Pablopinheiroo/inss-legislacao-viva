@@ -1611,34 +1611,6 @@
       "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
     },
     {
-      "id": "8212-art10-financiamento-01",
-      "category": "Direito Previdenciário",
-      "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
-      "article": "Art. 10",
-      "statement": "A Seguridade Social é financiada por toda a sociedade, de forma direta e indireta, mediante recursos públicos e contribuições sociais, nos termos da lei.",
-      "answer": true,
-      "explanation": "Certo. O art. 10 prevê o financiamento por toda a sociedade, de forma direta e indireta, com recursos da União, dos Estados, do Distrito Federal, dos Municípios e contribuições sociais. Fundamento legal: Art. 10º da Lei nº 8.212/1991.",
-      "literal_text": "Art. 10. A Seguridade Social será financiada por toda sociedade, de forma direta e indireta, nos termos do art. 195 da Constituição Federal e desta Lei, mediante recursos provenientes da União, dos Estados, do Distrito Federal, dos Municípios e de contribuições sociais.",
-      "source_url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
-      "law_id": "lei-8212-1991",
-      "article_key": "Art. 10",
-      "topic": "Financiamento da Seguridade Social",
-      "supporting_excerpts": [
-        "financiada por toda sociedade, de forma direta e indireta"
-      ],
-      "source_snapshot_date": "2026-11-14",
-      "source_snapshot_captured_at": "2026-11-14T15:50:18Z",
-      "source_revision": "Captura da fonte oficial em 2026-11-14",
-      "source_snapshot_hash": "a10ed072d48656418914a9d71a101ad28c4c7dfb0ea126fd8065a2c346531f1e",
-      "source_article_hash": "fbd33e3c",
-      "legal_reference": "Art. 10º da Lei nº 8.212/1991",
-      "difficulty": "media",
-      "difficulty_basis": "Estimativa editorial inicial; calibrar com o desempenho real dos estudantes.",
-      "validation_status": "validated",
-      "validation_method": "artigo_atual+trecho_literal+fonte_oficial",
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
-    },
-    {
       "id": "multi-derived-8212-art12-1",
       "category": "Direito Previdenciário",
       "law_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
@@ -4317,5 +4289,6 @@
   "filtered_by_edital_2022": true,
   "edital_filter_note": "Itens vinculados a artigos fora do conteúdo programático foram removidos do banco ativo. A fonte de consulta foi direcionada ao Planalto/Portal IN oficial; a recaptura direta da fonte preferencial ainda está pendente.",
   "source_sync_status": "capturas_anteriores; artigos que dependem de recaptura oficial não são liberados",
-  "source_provenance_note": "source_url é a origem real da captura usada quando o item foi criado; preferred_source_url indica a fonte oficial preferencial. Capturas ainda não sincronizadas ficam identificadas separadamente."
+  "source_provenance_note": "source_url é a origem real da captura usada quando o item foi criado; preferred_source_url indica a fonte oficial preferencial. Capturas ainda não sincronizadas ficam identificadas separadamente.",
+  "question_bank_filter_note": " A questão 8212-art10-financiamento-01 foi retirada do banco ativo por divergência do hash do dispositivo e arquivada para nova validação."
 }
