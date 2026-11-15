@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-15T01:53:48Z",
-  "last_check_attempt": "2026-11-15T01:53:48Z",
+  "generated_at": "2026-11-15T02:06:46Z",
+  "last_check_attempt": "2026-11-15T02:06:46Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
   "status": "erro",
   "summary": "Nenhuma fonte pôde ser consultada (0 com limite de acesso e 28 bloqueada(s)). As capturas anteriores foram preservadas.",
@@ -462,7 +462,7 @@
       "short_title": "Lei 10.779/2003 — Seguro-defeso",
       "category": "Lei",
       "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
-      "source_name": "Planalto — texto oficial",
+      "source_name": "Planalto — endereço oficial cadastrado; formato compilado a confirmar",
       "source_revision": null,
       "source_note": null,
       "last_checked": null,
@@ -589,7 +589,7 @@
       "title": "Decreto nº 6.214, de 26 de setembro de 2007",
       "short_title": "Decreto 6.214/2007 — Regulamento do BPC",
       "category": "Decreto",
-      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
       "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
@@ -602,7 +602,7 @@
       "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
           "attempt": 1,
           "outcome": "error",
           "failure_type": "blocked_page",
@@ -614,7 +614,7 @@
       "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-9796-1999",
@@ -749,7 +749,7 @@
       "title": "Lei nº 8.212, de 24 de julho de 1991",
       "short_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
       "category": "Lei",
-      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
       "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
@@ -762,7 +762,7 @@
       "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
           "attempt": 1,
           "outcome": "error",
           "failure_type": "blocked_page",
@@ -774,7 +774,7 @@
       "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8213-1991",
@@ -1235,12 +1235,12 @@
     {
       "law_id": "decreto-6214-2007",
       "law_title": "Decreto nº 6.214, de 26 de setembro de 2007",
-      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
       "source_status": "blocked",
       "failure_type": "blocked_page",
       "attempts": [
         {
-          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
           "attempt": 1,
           "outcome": "error",
           "failure_type": "blocked_page",
@@ -1325,12 +1325,12 @@
     {
       "law_id": "lei-8212-1991",
       "law_title": "Lei nº 8.212, de 24 de julho de 1991",
-      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
       "source_status": "blocked",
       "failure_type": "blocked_page",
       "attempts": [
         {
-          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
           "attempt": 1,
           "outcome": "error",
           "failure_type": "blocked_page",
