@@ -107,3 +107,75 @@ A suíte E2E foi ajustada para testar o estado correto enquanto as fontes estão
 6. Confirmar o resultado dos testes E2E, validação de dados e publicação da versão mais recente.
 
 **Não declarar a auditoria completa enquanto a recaptura oficial não for concluída.**
+
+
+## Continuação adicional — 15/11/2026 (revisão das fontes e do parser)
+
+### Fontes oficiais que foram confirmadas no índice do Planalto
+
+A verificação por busca no domínio oficial confirmou páginas com texto compilado para:
+- Constituição Federal;
+- Lei 8.112/1990;
+- Lei 8.212/1991 — endereço oficial confirmado: `l8212compilado.htm`;
+- Lei 8.429/1992;
+- LOAS — Lei 8.742/1993;
+- Decreto 6.214/2007 — o endereço correto confirmado é `d6214.htm`, apresentado pelo Planalto como “Texto compilado”.
+
+Também foram localizadas páginas oficiais com texto da Lei 9.784/1999, Lei 9.425/1996 e Lei 7.986/1989. Nem todas são anunciadas como texto compilado; quando não houver compilação confirmada, o projeto usa o texto oficial sem declarar que é compilado.
+
+**Correção importante:** o Decreto 6.214/2007 não usa o endereço presumido `d6214compilado.htm`. O endereço confirmado pelo Planalto é `https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm`, cuja página indica “Texto compilado”. Ele contém o ato de aprovação e, em seguida, o Anexo do Regulamento do BPC.
+
+### Decreto 6.214/2007 — recorte corrigido
+
+O banco ativo de artigos agora seleciona 33 dispositivos do regulamento do BPC: conceito/beneficiários, requisitos, renda, CadÚnico, requerimento, avaliação, concessão, pagamento, manutenção, recurso, revisão e cessação. Artigos de vigência, revogação, gestão genérica e transição expirada foram deixados fora. O art. 47, revogado pelo Decreto 12.534/2025, não entra.
+
+O texto oficial compilado mostra alterações posteriores ao edital de 2022, em especial pelo Decreto 12.534/2025. Essas alterações foram separadas como conteúdo posterior, não misturadas com a redação-base do edital.
+
+O parser agora corta o texto depois de “REGULAMENTO DO BENEFÍCIO DE PRESTAÇÃO CONTINUADA” antes de separar artigos. Isso evita misturar o art. 1º do decreto que aprova o regulamento com o art. 1º do próprio regulamento. Foi incluído teste para garantir essa separação e recusar texto sem o Anexo.
+
+O mesmo tratamento foi implementado para o Decreto 3.048/1999: o parser começa a captura depois de “REGULAMENTO DA PREVIDÊNCIA SOCIAL”.
+
+### Artigos iniciados por “No”, “Na”, “Nas” e “Da”
+
+Foi identificado e corrigido um erro no separador de artigos. A regra antiga confundia o começo legítimo de um artigo (“No prazo…”, “Nas ações…”, “Na aplicação…”) com uma citação de outro dispositivo. Isso podia fazer o sistema anexar o artigo seguinte ao anterior.
+
+A correção distingue referências reais a outras normas (“Art. 6º da Emenda Constitucional…”) de textos válidos que começam por preposição. Foram adicionados testes com exemplos reais dos recortes da Lei 8.112/1990, Lei 8.059/1990 e Lei 8.429/1992. Na próxima captura oficial, a exigência `require_all_articles=true` fará o monitor recusar qualquer snapshot que não consiga separar todos os artigos selecionados.
+
+### Lei 8.429/1992
+
+O recorte atual exclui os arts. 4º a 6º e 10-A, revogados, e o art. 17-A, vetado. Inclui os dispositivos materiais atuais, como arts. 8º-A, 17-B, 17-C, 17-D, 18-A e 23-B. O texto compilado do Planalto confirma as redações atuais, mas a captura do repositório ainda está bloqueada.
+
+### Mudanças legais depois do edital 2022
+
+Foram acrescentados alertas adicionais:
+- LOAS: alterações de 2024 e 2025 nos critérios de renda, avaliação, compartilhamento de dados e dispensa de reavaliação do BPC.
+- Lei 10.779/2003: a MP 1.323/2025, a Lei 15.265/2025 e a Lei 15.399/2026 alteraram a gestão do Seguro-Defeso, procedimentos e controles; a gestão operacional foi transferida do INSS para o MTE.
+- Decreto 6.214/2007: mudanças do Decreto 12.534/2025 nos requisitos e manutenção do BPC.
+
+Esses alertas não alteram o recorte histórico do edital 2022. Servem para evitar que uma redação de 2025/2026 seja apresentada como se fosse a redação cobrada em 2022, e para preparar eventual atualização quando houver novo edital.
+
+### Regra de captura completa
+
+Todas as 27 normas com lista explícita de artigos agora exigem `require_all_articles=true`. Se um artigo do recorte estiver ausente, a captura deve falhar, o snapshot antigo deve ser preservado e a falha precisa aparecer no diagnóstico. A IN 128 continua sem lista de artigos, pois precisa de importação própria do texto consolidado.
+
+### Auditoria de fontes
+
+Foi criada no arquivo `data/edital-filtro.json` uma auditoria que separa:
+- endereço oficial localizado e texto compilado confirmado;
+- texto oficial localizado, mas sem indicação de compilação;
+- endereço oficial cadastrado, ainda sem confirmação independente de leitura;
+- fonte especial da IN 128, cujo retorno integral segue pendente.
+
+Essa classificação não libera automaticamente uma norma. A sincronização continua pendente enquanto o snapshot não for capturado diretamente da URL oficial e validado.
+
+## Situação atual
+
+- Normas no catálogo: 28.
+- Normas liberadas para estudo: 0.
+- Normas temporariamente bloqueadas: 28.
+- Capturas oficiais íntegras na última execução automatizada: 0/28.
+- Bancos históricos preservados, porém suspensos para treinamento até validação da fonte.
+- Questão `8212-art10-financiamento-01` arquivada por divergência de hash.
+- Mapa de 13 disciplinas do edital disponível na área Estudar; os módulos e bancos de Português, Informática e Raciocínio Lógico ainda não foram produzidos.
+
+A auditoria ainda não pode ser declarada concluída. O próximo avanço depende de conseguir obter o texto integral do Planalto/Portal IN sem desafio antirobô, ou de uma forma autorizada de acesso institucional ao mesmo documento oficial. Nenhuma fonte de terceiros será usada como substituta.
