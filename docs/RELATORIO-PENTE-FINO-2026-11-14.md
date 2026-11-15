@@ -216,3 +216,19 @@ A lista ativa do Decreto 3.048 passou de 197 para 195 dispositivos selecionados.
 A lista foi reduzida de 176 para 160 dispositivos. Foram retirados os arts. 13 a 20 (posse, exercício, estágio probatório e movimentações não citadas nominalmente no edital) e os arts. 24 a 32 (outras formas de provimento não mencionadas expressamente). Permaneceram os arts. 5º a 12 como base de requisitos/provimento e nomeação, 33 a 39 para vacância/remoção/redistribuição/substituição, 40 a 115 para direitos e vantagens, 116 a 142 para deveres/proibições/responsabilidades e 143 a 182 para regime disciplinar e processo administrativo disciplinar.
 
 A norma continua bloqueada até nova captura íntegra diretamente do texto compilado do Planalto.
+
+
+## Continuação — recorte das leis de benefícios especiais (15/11/2026)
+
+Foram refinadas as listas de artigos das leis especiais citadas no item 14.2.3 do edital:
+
+- **Lei 7.070/1982 (Talidomida):** incluído o art. 4º-A, que disciplina isenção vinculada à pensão; arts. 5º e 6º excluídos por vigência/revogação.
+- **Lei 7.986/1989 (seringueiros):** mantidos arts. 1º a 5º, ligados à pensão, dependentes, prova, carência e prazo de concessão/pagamento. Excluídos arts. 6º e 7º (instruções e convênios administrativos) e 8º/9º (vigência/revogação).
+- **Lei 8.059/1990 (ex-combatentes):** mantidos arts. 1º a 22, sobre concessão, dependentes, valor, acumulação, transferência e revisão. Excluídos art. 23 (dotação orçamentária), art. 24 (vigência) e art. 25 (revogações).
+- **Lei 9.422/1996 (Caruaru):** mantidos arts. 1º a 5º, que regulam os beneficiários, os critérios da pensão e sua extinção/cessação. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência).
+- **Lei 9.425/1996 (Césio 137):** mantidos arts. 1º a 5º, sobre concessão, categorias/valores, prova médica, compensação com indenização judicial e custeio. Excluídos arts. 6º/7º (vigência/revogação).
+- **Lei 10.559/2002 (anistiados):** mantidos arts. 1º a 20, inclusive regras de transição diretamente ligadas a pagamentos anteriores e litígios sobre a reparação. Excluídos arts. 21/22 (vigência/revogação).
+- **Lei 11.520/2007 (hanseníase):** mantidos arts. 1º a 4º, relativos à pensão, requisitos, requerimento, acumulação e assistência à saúde. Excluídos art. 5º (convênios), art. 6º (despesa) e art. 7º (vigência). O art. 1º-A, incluído pela Lei 14.736/2023, foi registrado como posterior ao edital 2022.
+- **Lei 13.985/2020 (Zika):** mantidos arts. 1º, 2º e 4º, diretamente ligados à pensão especial; excluídos art. 3º (despesa orçamentária), art. 5º (licença e salário-maternidade das mães, assunto diverso da pensão especial listada), art. 6º (revogação) e art. 7º (vigência).
+
+As referências oficiais que consegui abrir nesta rodada são o Planalto para a Lei 7.986/1989, Lei 9.425/1996 e Lei 11.520/2007. A página da Lei 11.520 mostra a redação atual do art. 1º, alterada pela Lei 14.736/2023, e o art. 1º-A posterior ao edital. Para as demais normas, o acesso automatizado ao Planalto continua bloqueado; portanto, os recortes são uma organização temática preliminar, não uma certificação de que os snapshots antigos estejam atualizados. Todos permanecem bloqueados até captura direta e validação oficial.
