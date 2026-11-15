@@ -187,15 +187,16 @@
       "reason": "Não integram, por esse motivo isolado, os objetos de avaliação do item 14; não adicionar à biblioteca de treino legislativo apenas por aparecerem no corpo do edital."
     }
   ],
-  "article_level_status": "Filtro aplicado por artigo às normas cadastradas. Decreto 6.214, IN 128/2022 e Código Penal permanecem bloqueados até que as capturas oficiais sejam completas e limpas.",
+  "article_level_status": "Recorte de artigos mapeado em todas as normas do catálogo. Exibição e treinamento legislativo bloqueados enquanto as capturas armazenadas não forem sincronizadas e validadas diretamente nas fontes oficiais preferenciais.",
   "generated_at": "2026-11-14",
   "source_policy": {
     "primary": "Usar exclusivamente fonte oficial. Preferir texto compilado/consolidado do Planalto. Quando a norma não tiver consolidação disponível, usar o texto oficial do Planalto. Para a IN 128/2022, usar o Portal IN oficial do INSS.",
     "no_third_party": "Não usar sites privados ou agregadores como fonte do texto legal. A captura anterior da Câmara é identificada como histórica e não é apresentada como sincronizada com a nova fonte preferencial.",
     "revocations": "Artigos inteiramente revogados, textos históricos e redações substituídas não entram no banco ativo. Em dispositivos com redação vigente e parágrafos alterados, exigir comparação de componentes para não misturar redações.",
     "cutoff": "O recorte de assuntos segue os itens 14.2.2 e 14.2.3 do Edital INSS 2022. Alterações legislativas posteriores à publicação do edital devem ser identificadas separadamente, não tratadas como conteúdo originalmente cobrado.",
-    "capture_state": "As URLs preferenciais foram ajustadas para fontes oficiais do Planalto, inclusive versões compiladas localizadas para o Decreto 3.048/1999, o Decreto 6.214/2007 e a Lei 10.779/2003. A recaptura direta ainda depende do monitoramento e da validação de cada resposta; capturas anteriores não são declaradas sincronizadas.",
-    "post_edital_updates": "Mudanças posteriores a 15/09/2022 devem ser identificadas separadamente. A existência de texto compilado atual não transforma automaticamente uma alteração posterior em conteúdo do edital de 2022."
+    "capture_state": "Tentativa automática de recaptura feita em 15/11/2026: 0/28 fontes entregaram texto legal íntegro. O Planalto redirecionou o monitor para a página institucional genérica do gov.br/planalto e o Portal IN retornou resposta com menos de 350 caracteres úteis. Nenhuma captura antiga foi substituída; as 28 normas estão bloqueadas para estudo e geração de questões até sincronização direta.",
+    "post_edital_updates": "Mudanças posteriores a 15/09/2022 devem ser identificadas separadamente. A existência de texto compilado atual não transforma automaticamente uma alteração posterior em conteúdo do edital de 2022.",
+    "runtime_rule": "A biblioteca, o banco C/E, Encontre o Erro, Descubra o Artigo, Várias Afirmações, Completar Lei Seca, Antes e Depois e Memorização Ativa só podem usar norma com study_blocked=false, source_sync_status=sincronizado_e_validado e snapshot.source_url_used idêntica à preferred_source_url."
   },
   "in128_status": {
     "problem": "A captura anterior era só índice de alterações, com article_count 0.",
@@ -238,14 +239,16 @@
         "Art. 204"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-1171-1994": {
       "include_articles": [
         "Anexo - Código de Ética"
       ],
       "filter": "somente o Anexo do Código de Ética; arts. 1º a 3º do decreto principal não são conteúdo de estudo",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-6029-2007": {
       "include_articles": [
@@ -275,7 +278,8 @@
         "Art. 24"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-8112-1990": {
       "include_articles": [
@@ -469,7 +473,8 @@
       ],
       "blocked": true,
       "review_status": "recorte_tematico_corrigido; captura_planalto_pendente",
-      "excluded_scope": "dispositivos sem relação com o programa do item 14.2.2 e disposições finais"
+      "excluded_scope": "dispositivos sem relação com o programa do item 14.2.2 e disposições finais",
+      "source_blocked": true
     },
     "lei-8429-1992": {
       "include_articles": [
@@ -502,7 +507,8 @@
       ],
       "filter": "dispositivos materiais da Lei de Improbidade, incluindo os arts. 23-A, 23-B e 23-C; excluídas as cláusulas finais de vigência e revogação",
       "blocked": false,
-      "review_status": "escopo_comparado_com_o_item_14_2_2; recaptura_compilada_pendente"
+      "review_status": "escopo_comparado_com_o_item_14_2_2; recaptura_compilada_pendente",
+      "source_blocked": true
     },
     "lei-9784-1999": {
       "include_articles": [
@@ -577,7 +583,8 @@
         "Art. 69"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-7070-1982": {
       "include_articles": [
@@ -587,7 +594,8 @@
         "Art. 4"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-7986-1989": {
       "include_articles": [
@@ -600,7 +608,8 @@
         "Art. 7"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-8059-1990": {
       "include_articles": [
@@ -629,7 +638,8 @@
         "Art. 23"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-9422-1996": {
       "include_articles": [
@@ -640,7 +650,8 @@
         "Art. 5"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-9425-1996": {
       "include_articles": [
@@ -650,7 +661,8 @@
         "Art. 4"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-10559-2002": {
       "include_articles": [
@@ -676,7 +688,8 @@
         "Art. 20"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-11520-2007": {
       "include_articles": [
@@ -687,7 +700,8 @@
         "Art. 5"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-13985-2020": {
       "include_articles": [
@@ -696,7 +710,8 @@
         "Art. 4"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-10779-2003": {
       "include_articles": [
@@ -707,7 +722,8 @@
         "Art. 5"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-8424-2015": {
       "include_articles": [
@@ -724,7 +740,8 @@
       ],
       "filter": "seguro-defeso, requisitos, operacionalização e regras do pescador artesanal; excluídos dispositivo revogado e transição expirada",
       "blocked": false,
-      "review_status": "recorte_comparado_com_o_item_14_2_3; recaptura_direta_pendente"
+      "review_status": "recorte_comparado_com_o_item_14_2_3; recaptura_direta_pendente",
+      "source_blocked": true
     },
     "lei-8742-1993": {
       "include_articles": [
@@ -749,7 +766,8 @@
         "Art. 40-C"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-14176-2021": {
       "include_articles": [
@@ -757,12 +775,14 @@
         "Art. 2"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-6214-2007": {
       "include_articles": [],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": true
+      "blocked": true,
+      "source_blocked": true
     },
     "lei-9796-1999": {
       "include_articles": [
@@ -774,7 +794,8 @@
         "Art. 7"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-10188-2019": {
       "include_articles": [
@@ -804,7 +825,8 @@
         "Art. 24"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "ec-103-2019": {
       "include_articles": [
@@ -841,7 +863,8 @@
         "Art. 31"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lc-142-2013": {
       "include_articles": [
@@ -857,7 +880,8 @@
         "Art. 10"
       ],
       "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "lei-8212-1991": {
       "include_articles": [
@@ -893,7 +917,8 @@
         "Art. 45-A",
         "Art. 88"
       ],
-      "filter": "Seguridade Social, segurados, empresa/empregador doméstico, financiamento, salário de contribuição, arrecadação/recolhimento, débitos e prescrição"
+      "filter": "Seguridade Social, segurados, empresa/empregador doméstico, financiamento, salário de contribuição, arrecadação/recolhimento, débitos e prescrição",
+      "source_blocked": true
     },
     "lei-8213-1991": {
       "include_articles": [
@@ -1009,7 +1034,8 @@
         "Art. 151"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "decreto-3048-1999": {
       "include_articles": [
@@ -1212,12 +1238,14 @@
         "Art. 1"
       ],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "blocked": false,
+      "source_blocked": true
     },
     "in-128-2022": {
       "include_articles": [],
       "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": true
+      "blocked": true,
+      "source_blocked": true
     },
     "decreto-lei-2848-1940": {
       "include_articles": [
@@ -1225,7 +1253,8 @@
         "Art. 337-A"
       ],
       "filter": "apenas os crimes previdenciários expressamente ligados ao tópico 7 do item 14.2.3",
-      "blocked": true
+      "blocked": true,
+      "source_blocked": true
     }
   },
   "question_bank_filter": {
@@ -1236,12 +1265,12 @@
       "data/descubra-artigo.json": 22,
       "data/afirmacoes-por-artigo.json": 5
     },
-    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial. A questão 8212-art10-financiamento-01 está suspensa e arquivada por divergência entre o hash e o texto do dispositivo.",
+    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial. A questão 8212-art10-financiamento-01 está suspensa e arquivada por divergência entre o hash e o texto do dispositivo. Os contadores anteriores eram o conteúdo gravado nos arquivos JSON. A política de execução agora suspende todos esses registros porque nenhuma captura atual foi confirmada no Planalto/Portal IN.",
     "active_counts": {
-      "data/questoes.json": 151,
-      "data/encontre-erro.json": 61,
-      "data/descubra-artigo.json": 43,
-      "data/afirmacoes-por-artigo.json": 43
+      "data/questoes.json": 0,
+      "data/encontre-erro.json": 0,
+      "data/descubra-artigo.json": 0,
+      "data/afirmacoes-por-artigo.json": 0
     },
     "removed_counts_from_original_baseline": {
       "data/questoes.json": 17,
@@ -1257,6 +1286,49 @@
     },
     "suspended_counts": {
       "data/questoes-arquivadas.json": 1
+    },
+    "stored_counts": {
+      "data/questoes.json": 151,
+      "data/encontre-erro.json": 61,
+      "data/descubra-artigo.json": 43,
+      "data/afirmacoes-por-artigo.json": 43
+    },
+    "blocked_law_ids": [
+      "constituicao-1988",
+      "decreto-1171-1994",
+      "decreto-6029-2007",
+      "lei-8112-1990",
+      "lei-8429-1992",
+      "lei-9784-1999",
+      "lei-7070-1982",
+      "lei-7986-1989",
+      "lei-8059-1990",
+      "lei-9422-1996",
+      "lei-9425-1996",
+      "lei-10559-2002",
+      "lei-11520-2007",
+      "lei-13985-2020",
+      "lei-10779-2003",
+      "decreto-8424-2015",
+      "lei-8742-1993",
+      "lei-14176-2021",
+      "decreto-6214-2007",
+      "lei-9796-1999",
+      "decreto-10188-2019",
+      "ec-103-2019",
+      "lc-142-2013",
+      "lei-8212-1991",
+      "lei-8213-1991",
+      "decreto-3048-1999",
+      "in-128-2022",
+      "decreto-lei-2848-1940"
+    ],
+    "runtime_status": "Bancos armazenados preservados para auditoria, mas nenhum item é exibido ou jogável enquanto a fonte de sua norma não estiver sincronizada e validada.",
+    "suspended_for_source": {
+      "data/questoes.json": 151,
+      "data/encontre-erro.json": 61,
+      "data/descubra-artigo.json": 43,
+      "data/afirmacoes-por-artigo.json": 43
     }
   },
   "scope_items": [
