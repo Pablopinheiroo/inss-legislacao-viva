@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "monitor_version": 4,
-  "generated_at": "2026-11-14T12:00:00Z",
-  "last_check_attempt": "2026-11-14T20:08:49Z",
+  "generated_at": "2026-11-15T01:44:50Z",
+  "last_check_attempt": "2026-11-15T01:44:50Z",
   "last_successful_check": "2026-11-14T20:08:49Z",
-  "status": "parcial",
-  "summary": "Fontes preferenciais oficiais definidas; capturas anteriores ainda aguardam sincronização integral. Código Penal incluído com captura parcial bloqueada.",
+  "status": "erro",
+  "summary": "Nenhuma fonte pôde ser consultada (0 com limite de acesso e 27 bloqueada(s)). As capturas anteriores foram preservadas.",
   "baseline_updated_count": 0,
   "laws": [
     {
@@ -13,974 +13,864 @@
       "title": "Constituição da República Federativa do Brasil de 1988",
       "short_title": "Constituição Federal — arts. 5º a 17, 37 a 41, 149 e 193 a 204",
       "category": "Constituição",
-      "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
-      "source_name": "Câmara dos Deputados — Constituição atualizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "source_name": "Planalto — Constituição compilada",
       "source_revision": "Texto atualizado até a Emenda Constitucional nº 141/2026",
       "source_note": "A captura guarda somente os arts. 5º a 17, 37 a 41, 149 e 193 a 204, usados como recorte do edital.",
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 31,
       "parser_mode": "artigos",
       "snapshot_scope": "selected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988/arquivos/ConstituicaoTextoAtualizado_EC%20141.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
-      "preferred_source_name": "Planalto — Constituição compilada",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-1171-1994",
       "title": "Decreto nº 1.171, de 22 de junho de 1994",
       "short_title": "Decreto 1.171/1994 — Código de Ética",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
-      "article_count": 3,
+      "last_checked": null,
+      "article_count": 4,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/1994/decreto-1171-22-junho-1994-449441-normaatualizada-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-6029-2007",
       "title": "Decreto nº 6.029, de 1º de fevereiro de 2007",
       "short_title": "Decreto 6.029/2007 — Sistema de Gestão da Ética",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 26,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6029-1-fevereiro-2007-550363-publicacaooriginal-66313-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8112-1990",
       "title": "Lei nº 8.112, de 11 de dezembro de 1990",
       "short_title": "Lei 8.112/1990 — Regime Jurídico dos Servidores",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 254,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8429-1992",
       "title": "Lei nº 8.429, de 2 de junho de 1992",
       "short_title": "Lei 8.429/1992 — Improbidade Administrativa",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 30,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1992/lei-8429-2-junho-1992-357452-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8429.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-9784-1999",
       "title": "Lei nº 9.784, de 29 de janeiro de 1999",
       "short_title": "Lei 9.784/1999 — Processo Administrativo Federal",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 69,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9784.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-7070-1982",
       "title": "Lei nº 7.070, de 20 de dezembro de 1982",
       "short_title": "Lei 7.070/1982 — Pensão especial da Talidomida",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7070-20-dezembro-1982-356744-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l7070.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-7986-1989",
       "title": "Lei nº 7.986, de 28 de dezembro de 1989",
       "short_title": "Lei 7.986/1989 — Pensão especial dos seringueiros",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 9,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1989/lei-7986-28-dezembro-1989-365582-normaatualizada-pl.pdf",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l7986.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8059-1990",
       "title": "Lei nº 8.059, de 4 de julho de 1990",
       "short_title": "Lei 8.059/1990 — Pensão especial de ex-combatente",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 24,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8059-4-julho-1990-366030-publicacaooriginal-1-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8059.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-9422-1996",
       "title": "Lei nº 9.422, de 24 de dezembro de 1996",
       "short_title": "Lei 9.422/1996 — Pensão especial de Caruaru",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9422-24-dezembro-1996-349439-publicacaooriginal-1-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9422-24-dezembro-1996-349439-publicacaooriginal-1-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9422-24-dezembro-1996-349439-publicacaooriginal-1-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9422.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-9425-1996",
       "title": "Lei nº 9.425, de 24 de dezembro de 1996",
       "short_title": "Lei 9.425/1996 — Pensão especial do Césio 137",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1996/lei-9425-24-dezembro-1996-372351-publicacaooriginal-1-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9425.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-10559-2002",
       "title": "Lei nº 10.559, de 13 de novembro de 2002",
       "short_title": "Lei 10.559/2002 — Anistiado político",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 21,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10559-13-novembro-2002-487268-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-11520-2007",
       "title": "Lei nº 11.520, de 18 de setembro de 2007",
       "short_title": "Lei 11.520/2007 — Pensão especial por hanseníase",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/2007/lei-11520-18-setembro-2007-559759-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-13985-2020",
       "title": "Lei nº 13.985, de 7 de abril de 2020",
       "short_title": "Lei 13.985/2020 — Pensão especial por síndrome congênita do Zika",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-norma-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 6,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/2020/lei-13985-7-abril-2020-789954-publicacaooriginal-160288-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-10779-2003",
       "title": "Lei nº 10.779, de 25 de novembro de 2003",
       "short_title": "Lei 10.779/2003 — Seguro-defeso",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 7,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/2003/lei-10779-25-novembro-2003-470909-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-8424-2015",
       "title": "Decreto nº 8.424, de 31 de março de 2015",
       "short_title": "Decreto 8.424/2015 — Regulamento do seguro-defeso",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 15,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/2015/decreto-8424-31-marco-2015-780438-normaatualizada-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8742-1993",
       "title": "Lei nº 8.742, de 7 de dezembro de 1993",
       "short_title": "Lei 8.742/1993 — LOAS",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
-      "article_count": 69,
+      "last_checked": null,
+      "article_count": 70,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8742.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-14176-2021",
       "title": "Lei nº 14.176, de 22 de junho de 2021",
       "short_title": "Lei 14.176/2021 — BPC e auxílio-inclusão",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 13,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14176-22-junho-2021-791500-publicacaooriginal-163067-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-6214-2007",
       "title": "Decreto nº 6.214, de 26 de setembro de 2007",
       "short_title": "Decreto 6.214/2007 — Regulamento do BPC",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
-      "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
+      "last_checked": null,
       "article_count": 47,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/2007/decreto-6214-26-setembro-2007-560259-normaatualizada-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "texto_compilado_pendente_de_captura_limpa",
-      "study_blocked": true
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-9796-1999",
       "title": "Lei nº 9.796, de 5 de maio de 1999",
       "short_title": "Lei 9.796/1999 — Compensação previdenciária",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 9,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1999/lei-9796-5-maio-1999-359952-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9796.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-10188-2019",
       "title": "Decreto nº 10.188, de 20 de dezembro de 2019",
       "short_title": "Decreto 10.188/2019 — Compensação previdenciária",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-norma-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 28,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/2019/decreto-10188-20-dezembro-2019-789633-publicacaooriginal-159745-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "ec-103-2019",
       "title": "Emenda Constitucional nº 103, de 12 de novembro de 2019",
       "short_title": "EC 103/2019 — Reforma da Previdência",
       "category": "Emenda Constitucional",
-      "url": "https://www2.camara.leg.br/legin/fed/emecon/2019/emendaconstitucional-103-12-novembro-2019-789412-publicacaooriginal-159409-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 35,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/emecon/2019/emendaconstitucional-103-12-novembro-2019-789412-publicacaooriginal-159409-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/emecon/2019/emendaconstitucional-103-12-novembro-2019-789412-publicacaooriginal-159409-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lc-142-2013",
       "title": "Lei Complementar nº 142, de 8 de maio de 2013",
       "short_title": "LC 142/2013 — Previdência da pessoa com deficiência",
       "category": "Lei Complementar",
-      "url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-norma-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+      "source_name": "Planalto — texto oficial",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 11,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/leicom/2013/leicomplementar-142-8-maio-2013-775948-publicacaooriginal-139758-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
-      "preferred_source_name": "Planalto — texto oficial",
-      "preferred_source_status": "endereco_oficial_pendente_de_leitura",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8212-1991",
       "title": "Lei nº 8.212, de 24 de julho de 1991",
       "short_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
-      "article_count": 110,
+      "last_checked": null,
+      "article_count": 111,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8212-24-julho-1991-363647-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "lei-8213-1991",
       "title": "Lei nº 8.213, de 24 de julho de 1991",
       "short_title": "Lei 8.213/1991 — Planos de Benefícios",
       "category": "Lei",
-      "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 185,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "decreto-3048-1999",
       "title": "Decreto nº 3.048, de 6 de maio de 1999",
       "short_title": "Decreto 3.048/1999 — Regulamento da Previdência",
       "category": "Decreto",
-      "url": "https://www2.camara.leg.br/legin/fed/decret/1999/decreto-3048-6-maio-1999-368532-normaatualizada-pe.html",
-      "source_name": "Câmara dos Deputados — Legislação Informatizada",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+      "source_name": "Planalto — texto compilado",
       "source_revision": null,
       "source_note": null,
-      "last_checked": "2026-11-14T20:08:49Z",
+      "last_checked": null,
       "article_count": 373,
       "parser_mode": "artigos",
       "snapshot_scope": "all_detected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www2.camara.leg.br/legin/fed/decret/1999/decreto-3048-6-maio-1999-368532-normaatualizada-pe.html",
-      "source_status": "ok",
+      "source_status": "blocked",
       "source_attempts": [
         {
-          "url": "https://www2.camara.leg.br/legin/fed/decret/1999/decreto-3048-6-maio-1999-368532-normaatualizada-pe.html",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "blocked_page",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm",
-      "preferred_source_name": "Planalto — texto compilado",
-      "preferred_source_status": "confirmado",
-      "source_sync_status": "captura_anterior_ainda_nao_substituida"
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     },
     {
       "id": "in-128-2022",
       "title": "Instrução Normativa PRES/INSS nº 128, de 28 de março de 2022",
       "short_title": "IN 128/2022 — Normas e rotinas do INSS",
       "category": "Instrução Normativa",
-      "url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
-      "source_name": "INSS — histórico oficial de alterações",
+      "url": "https://portalin.inss.gov.br/in/540",
+      "source_name": "Portal IN oficial do INSS — texto com histórico de alterações",
       "source_revision": "Histórico oficial atualizado em 12/08/2026; última alteração listada: IN PRES/INSS nº 212/2026",
-      "source_note": "Acompanhamento pelo histórico oficial de atos modificadores, sem extração artigo por artigo.",
-      "last_checked": "2026-11-14T20:08:49Z",
+      "source_note": "A página atual do Portal IN contém histórico com trechos riscados e redações substitutas. A captura antiga é somente o índice de alterações e não pode ser usada como texto de estudo.",
+      "last_checked": null,
       "article_count": 0,
       "parser_mode": "index",
       "snapshot_scope": "official_change_index",
       "baseline_updated": false,
       "source_url_used": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
-      "source_status": "ok",
+      "source_status": "invalid_response",
       "source_attempts": [
         {
-          "url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+          "url": "https://portalin.inss.gov.br/in/540",
           "attempt": 1,
-          "outcome": "success",
-          "failure_type": null,
+          "outcome": "error",
+          "failure_type": "incomplete_response",
           "http_status": 200,
-          "detail": "Conteúdo recebido e interpretado."
+          "detail": "A fonte retornou menos de 350 caracteres úteis."
         }
       ],
-      "source_failure_count": 0,
-      "source_failure_type": null,
+      "source_failure_count": 1,
+      "source_failure_type": "incomplete_response",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://portalin.inss.gov.br/in/540",
-      "preferred_source_name": "Portal IN oficial do INSS — texto com histórico de alterações",
-      "preferred_source_status": "confirmado_com_alerta_de_redacoes_riscadas",
-      "source_sync_status": "texto_integral_nao_importado",
-      "study_blocked": true
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> incomplete_response: A fonte retornou menos de 350 caracteres úteis."
     },
     {
       "id": "decreto-lei-2848-1940",
@@ -989,36 +879,537 @@
       "category": "Decreto-Lei",
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
       "source_name": "Planalto — Código Penal compilado",
-      "source_revision": "Texto compilado do Código Penal; trechos indexados pelo Planalto em 14/11/2026",
-      "last_checked": "2026-11-14T12:00:00Z",
+      "source_revision": null,
+      "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta.",
+      "last_checked": null,
       "article_count": 2,
       "parser_mode": "artigos",
       "snapshot_scope": "selected_articles",
       "baseline_updated": false,
       "source_url_used": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
-      "source_status": "partial",
+      "source_status": "blocked",
       "source_attempts": [
         {
           "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
           "attempt": 1,
-          "outcome": "partial",
-          "failure_type": "anti_bot",
-          "http_status": 403,
-          "detail": "Fonte oficial identificada, mas o acesso automatizado direto apresentou bloqueio; texto parcial verificado por trechos indexados."
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
         }
       ],
       "source_failure_count": 1,
-      "source_failure_type": "anti_bot",
+      "source_failure_type": "blocked_page",
       "retry_after_seconds": null,
       "new_changes_detected": 0,
-      "error": null,
-      "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
-      "preferred_source_name": "Planalto — Código Penal compilado",
-      "preferred_source_status": "confirmado_por_indice_oficial",
-      "source_sync_status": "captura_direta_pendente",
-      "study_blocked": true
+      "error": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
     }
   ],
   "changes": [],
-  "errors": []
+  "errors": [
+    {
+      "law_id": "constituicao-1988",
+      "law_title": "Constituição da República Federativa do Brasil de 1988",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-1171-1994",
+      "law_title": "Decreto nº 1.171, de 22 de junho de 1994",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-6029-2007",
+      "law_title": "Decreto nº 6.029, de 1º de fevereiro de 2007",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8112-1990",
+      "law_title": "Lei nº 8.112, de 11 de dezembro de 1990",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8429-1992",
+      "law_title": "Lei nº 8.429, de 2 de junho de 1992",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8429.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-9784-1999",
+      "law_title": "Lei nº 9.784, de 29 de janeiro de 1999",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9784.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-7070-1982",
+      "law_title": "Lei nº 7.070, de 20 de dezembro de 1982",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l7070.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-7986-1989",
+      "law_title": "Lei nº 7.986, de 28 de dezembro de 1989",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l7986.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8059-1990",
+      "law_title": "Lei nº 8.059, de 4 de julho de 1990",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8059.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-9422-1996",
+      "law_title": "Lei nº 9.422, de 24 de dezembro de 1996",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9422.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-9425-1996",
+      "law_title": "Lei nº 9.425, de 24 de dezembro de 1996",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9425.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-10559-2002",
+      "law_title": "Lei nº 10.559, de 13 de novembro de 2002",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-11520-2007",
+      "law_title": "Lei nº 11.520, de 18 de setembro de 2007",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-13985-2020",
+      "law_title": "Lei nº 13.985, de 7 de abril de 2020",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-10779-2003",
+      "law_title": "Lei nº 10.779, de 25 de novembro de 2003",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-8424-2015",
+      "law_title": "Decreto nº 8.424, de 31 de março de 2015",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8742-1993",
+      "law_title": "Lei nº 8.742, de 7 de dezembro de 1993",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8742.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-14176-2021",
+      "law_title": "Lei nº 14.176, de 22 de junho de 2021",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-6214-2007",
+      "law_title": "Decreto nº 6.214, de 26 de setembro de 2007",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-9796-1999",
+      "law_title": "Lei nº 9.796, de 5 de maio de 1999",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l9796.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-10188-2019",
+      "law_title": "Decreto nº 10.188, de 20 de dezembro de 2019",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "ec-103-2019",
+      "law_title": "Emenda Constitucional nº 103, de 12 de novembro de 2019",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lc-142-2013",
+      "law_title": "Lei Complementar nº 142, de 8 de maio de 2013",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8212-1991",
+      "law_title": "Lei nº 8.212, de 24 de julho de 1991",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "lei-8213-1991",
+      "law_title": "Lei nº 8.213, de 24 de julho de 1991",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-3048-1999",
+      "law_title": "Decreto nº 3.048, de 6 de maio de 1999",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "in-128-2022",
+      "law_title": "Instrução Normativa PRES/INSS nº 128, de 28 de março de 2022",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://portalin.inss.gov.br/in/540 -> incomplete_response: A fonte retornou menos de 350 caracteres úteis.",
+      "source_status": "invalid_response",
+      "failure_type": "incomplete_response",
+      "attempts": [
+        {
+          "url": "https://portalin.inss.gov.br/in/540",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "incomplete_response",
+          "http_status": 200,
+          "detail": "A fonte retornou menos de 350 caracteres úteis."
+        }
+      ],
+      "retry_after_seconds": null
+    },
+    {
+      "law_id": "decreto-lei-2848-1940",
+      "law_title": "Decreto-Lei nº 2.848, de 7 de dezembro de 1940",
+      "message": "SourceFetchError: Nenhuma fonte configurada respondeu de forma válida: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm -> blocked_page: O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma.",
+      "source_status": "blocked",
+      "failure_type": "blocked_page",
+      "attempts": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "attempt": 1,
+          "outcome": "error",
+          "failure_type": "blocked_page",
+          "http_status": 200,
+          "detail": "O Planalto redirecionou para a página institucional genérica do gov.br, sem entregar o texto da norma."
+        }
+      ],
+      "retry_after_seconds": null
+    }
+  ]
 }
