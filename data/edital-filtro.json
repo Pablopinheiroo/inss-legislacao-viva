@@ -330,6 +330,9 @@
         "Art. 58",
         "Art. 59",
         "Art. 60",
+        "Art. 60-A",
+        "Art. 60-B",
+        "Art. 60-D",
         "Art. 61",
         "Art. 62",
         "Art. 63",
@@ -345,6 +348,7 @@
         "Art. 74",
         "Art. 75",
         "Art. 76",
+        "Art. 76-A",
         "Art. 77",
         "Art. 78",
         "Art. 79",
@@ -363,6 +367,7 @@
         "Art. 94",
         "Art. 95",
         "Art. 96",
+        "Art. 96-A",
         "Art. 97",
         "Art. 98",
         "Art. 99",
@@ -393,6 +398,7 @@
         "Art. 124",
         "Art. 125",
         "Art. 126",
+        "Art. 126-A",
         "Art. 127",
         "Art. 128",
         "Art. 129",
@@ -409,14 +415,48 @@
         "Art. 140",
         "Art. 141",
         "Art. 142",
-        "Art. 60-A",
-        "Art. 60-B",
-        "Art. 60-D",
-        "Art. 76-A",
-        "Art. 96-A",
-        "Art. 126-A"
+        "Art. 143",
+        "Art. 144",
+        "Art. 145",
+        "Art. 146",
+        "Art. 147",
+        "Art. 148",
+        "Art. 149",
+        "Art. 150",
+        "Art. 151",
+        "Art. 152",
+        "Art. 153",
+        "Art. 154",
+        "Art. 155",
+        "Art. 156",
+        "Art. 157",
+        "Art. 158",
+        "Art. 159",
+        "Art. 160",
+        "Art. 161",
+        "Art. 162",
+        "Art. 163",
+        "Art. 164",
+        "Art. 165",
+        "Art. 166",
+        "Art. 167",
+        "Art. 168",
+        "Art. 169",
+        "Art. 170",
+        "Art. 171",
+        "Art. 172",
+        "Art. 173",
+        "Art. 174",
+        "Art. 175",
+        "Art. 176",
+        "Art. 177",
+        "Art. 178",
+        "Art. 179",
+        "Art. 180",
+        "Art. 181",
+        "Art. 182"
       ],
-      "filter": "somente os blocos do edital: provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar e responsabilidades",
+      "filter": "provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, deveres/proibições, responsabilidades e processo administrativo disciplinar",
       "topics": [
         "nomeação e provimento",
         "vacância",
@@ -427,9 +467,9 @@
         "regime disciplinar",
         "responsabilidades civil, penal e administrativa"
       ],
-      "blocked": false,
-      "review_status": "recorte_tematizado; sincronizacao_oficial_pendente",
-      "excluded_scope": "artigos introdutórios, disposições finais e blocos estranhos aos assuntos expressos no item 14.2.2"
+      "blocked": true,
+      "review_status": "recorte_tematico_corrigido; captura_planalto_pendente",
+      "excluded_scope": "dispositivos sem relação com o programa do item 14.2.2 e disposições finais"
     },
     "lei-8429-1992": {
       "include_articles": [
@@ -1338,16 +1378,16 @@
       "action": "Separado o art. 11 do art. 10, pois a captura antiga havia mesclado os dois. O art. 11 foi mantido por enumerar as receitas da Seguridade Social e as contribuições sociais."
     },
     {
-      "norm": "Lei 8.112/1990",
-      "action": "Reduzido o recorte de 182 para 136 dispositivos existentes na captura, mantendo os blocos vinculados aos assuntos expressos no edital e retirando os artigos introdutórios e os assuntos fora do programa. A captura Planalto ainda está pendente."
-    },
-    {
       "norm": "Lei 8.429/1992",
       "action": "Corrigida a lista para incluir o art. 23-B, que integra o texto material da lei. Os arts. 24 e 25 de vigência e revogação permanecem fora do recorte ativo. Fonte preferencial: texto compilado do Planalto; captura direta pendente."
     },
     {
       "norm": "Decreto 8.424/2015",
       "action": "Incluído o art. 9º, que altera o Regulamento da Previdência Social em matéria ligada ao enquadramento do pescador artesanal; retirado o art. 12, regra transitória para períodos iniciados até 31/03/2015; o art. 10, revogado, continua excluído."
+    },
+    {
+      "norm": "Lei 8.112/1990",
+      "action": "Corrigido o recorte: acrescentados os arts. 143 a 182, que disciplinam apuração, sindicância e processo administrativo disciplinar, expressamente cobertos pelo tópico regime disciplinar do edital. A lista agora inclui 176 dispositivos, mas segue bloqueada até sincronização com a fonte compilada do Planalto."
     }
   ],
   "decreto6214_status": {
