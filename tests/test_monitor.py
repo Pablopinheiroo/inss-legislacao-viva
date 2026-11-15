@@ -211,6 +211,19 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("No que se refere", result["Art. 16"])
         self.assertIn("Nas ações", result["Art. 23-B"])
 
+    def test_articles_10559_13_and_9784_56_are_not_merged_into_previous_article(self):
+        source = (
+            "Art. 12. A Comissão de Anistia poderá solicitar documentos.\\n"
+            "Art. 13. No caso de falecimento do anistiado político, o direito à reparação econômica transfere-se aos seus dependentes.\\n"
+            "Art. 55. Os atos com defeitos sanáveis poderão ser convalidados.\\n"
+            "Art. 56. Das decisões administrativas cabe recurso, em face de razões de legalidade e de mérito."
+        )
+        result = split_articles(source)
+        self.assertIn("Art. 13", result)
+        self.assertIn("Art. 56", result)
+        self.assertIn("No caso de falecimento", result["Art. 13"])
+        self.assertIn("Das decisões administrativas", result["Art. 56"])
+
     def test_only_selected_articles_are_saved(self):
         law = {
             "id": "cf",
