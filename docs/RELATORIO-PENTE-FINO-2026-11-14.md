@@ -58,3 +58,52 @@ Uma norma só poderá receber estado “sincronizada/liberada” quando:
 6. questões vinculadas aos dispositivos forem novamente validadas por hash e trecho-âncora.
 
 **Estado geral:** avanço realizado e mudanças salvas, mas o pente-fino completo e a sincronização de todas as fontes ainda não podem ser declarados concluídos.
+
+
+## Continuação do trabalho — 15/11/2026
+
+### Recaptura automática das fontes oficiais
+
+A recaptura das 28 normas foi executada. O resultado foi **0/28 fontes com texto íntegro**:
+- As URLs do Planalto redirecionaram o monitor para a página institucional genérica `https://www.gov.br/planalto/pt-br`, sem entregar o conteúdo da lei/decreto.
+- O Portal IN da IN 128/2022 retornou resposta com menos de 350 caracteres úteis.
+- O monitor rejeitou essas respostas e preservou os snapshots anteriores. Nenhum texto de bloqueio foi aceito como lei.
+
+O código do monitor foi ajustado para reconhecer o redirecionamento genérico do Planalto como bloqueio, e o workflow foi alterado para salvar `data/legislacao.json` com os diagnósticos mesmo quando todas as fontes falham. Assim, o painel pode exibir o estado real, sem substituir as capturas por páginas vazias ou desafios.
+
+### Proteção dos estudos
+
+Como nenhuma captura antiga foi confirmada diretamente nas fontes preferenciais:
+- As 28 normas receberam `study_blocked: true`.
+- A biblioteca não exibe os artigos das capturas antigas para estudo.
+- Os bancos armazenados continuam preservados para auditoria, mas o aplicativo suspende a execução deles até a norma ficar sincronizada.
+- Os modos C/E, Completar Lei Seca, Encontre o Erro, Descubra o Artigo, Várias Afirmações, Antes e Depois e Memorização Ativa passaram a exigir uma captura cujo endereço de origem corresponda exatamente à fonte preferencial e cuja norma esteja marcada como sincronizada e validada.
+- Contagem gravada nos bancos: 151 C/E, 61 Encontre o Erro, 43 Descubra o Artigo e 43 grupos de afirmações. Contagem liberada para treino neste momento: zero, por segurança da fonte.
+
+Essa suspensão é temporária e conservadora. Os arquivos JSON não foram apagados; os textos antigos permanecem apenas para comparação e auditoria.
+
+### Ajustes no recorte do edital
+
+- Lei 8.112/1990: o recorte foi corrigido para incluir também os arts. 143 a 182, que tratam de sindicância, apuração e processo administrativo disciplinar. A lista passou a 176 dispositivos, mantendo os blocos de provimento, vacância, movimentação, direitos e vantagens, deveres, responsabilidades e regime disciplinar.
+- Lei 8.429/1992: incluído o art. 23-B junto aos arts. 23-A e 23-C, mantendo fora os dispositivos finais de vigência/revogação.
+- Decreto 8.424/2015: incluído o art. 9º, que altera o RPS em matéria relacionada ao pescador artesanal; excluído o art. 12, regra transitória para períodos de defeso iniciados até 31/03/2015; art. 10 revogado permanece fora.
+- Questão `8212-art10-financiamento-01`: arquivada por divergência entre o hash e a redação armazenada.
+
+### Matérias não previdenciárias
+
+O arquivo `data/edital-materias.json` contém 13 blocos de matéria, e a área **Estudar** agora mostra o mapa das 13 áreas/disciplinas do edital. Português, Informática e Raciocínio Lógico aparecem separadamente, assim como Constitucional, Administrativo e Ética. O mapa mostra o status real: conteúdo teórico/bancos dessas disciplinas ainda não foram produzidos integralmente.
+
+### Testes
+
+A suíte E2E foi ajustada para testar o estado correto enquanto as fontes estão bloqueadas: a biblioteca e os modos legislativos devem impedir o estudo de capturas antigas. O validador de bancos já passou depois da suspensão da questão da Lei 8.212. A publicação do Pages e os testes da última revisão ainda precisam ser conferidos no commit mais recente.
+
+## O que ainda depende de acesso oficial
+
+1. Obter resposta íntegra do Planalto para as 27 normas legais/constitucionais e do Portal IN para a IN 128. Enquanto houver bloqueio antirobô, não marcar como sincronizada.
+2. Importar as versões compiladas, retirar visualmente as redações riscadas/revogados e salvar snapshots completos apenas quando validados.
+3. Depois da importação, revisar a correspondência de artigos e subdispositivos, principalmente Lei 8.213/1991, Lei 8.212/1991 e Decreto 3.048/1999.
+4. Revalidar ou recriar cada questão pela redação oficial. Só então reabrir os bancos.
+5. Criar o conteúdo teórico e os bancos de questões de Português, Informática, Raciocínio Lógico e demais blocos teóricos não legislativos.
+6. Confirmar o resultado dos testes E2E, validação de dados e publicação da versão mais recente.
+
+**Não declarar a auditoria completa enquanto a recaptura oficial não for concluída.**
