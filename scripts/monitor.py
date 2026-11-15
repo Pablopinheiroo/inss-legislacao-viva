@@ -716,6 +716,23 @@ def make_snapshot(
     source_url_used: str | None = None,
     captured_at: str | None = None,
 ) -> dict[str, Any]:
+    # O Decreto 3.048/1999 é um ato que aprova um regulamento em anexo.
+    # O texto compilado do Planalto contém primeiro os arts. 1º a 3º do
+    # próprio decreto e, depois, um segundo conjunto de artigos dentro do
+    # Regulamento da Previdência Social. Não podemos fundir dois "Art. 1º"
+    # diferentes no mesmo registro do banco.
+    if law.get("id") == "decreto-3048-1999":
+        annex = re.search(
+            r"(?im)^\\s*REGULAMENTO\\s+DA\\s+PREVIDÊNCIA\\s+SOCIAL\\s*$",
+            text,
+        )
+        if not annex:
+            raise ValueError(
+                "O texto compilado do Decreto 3.048/1999 não apresentou o cabeçalho "
+                "do anexo Regulamento da Previdência Social; captura recusada."
+            )
+        text = text[annex.end():].strip()
+
     all_articles = split_articles(text)
     include = law.get("include_articles")
     if include:
