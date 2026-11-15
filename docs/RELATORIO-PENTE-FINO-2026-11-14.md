@@ -258,3 +258,29 @@ A consulta ao texto compilado oficial do Planalto confirmou que:
 - o **art. 27-A do Decreto 3.048/1999** define quando contribuições anteriores à perda da qualidade podem voltar a ser computadas depois da nova filiação.
 
 Esses dispositivos foram incluídos nos respectivos recortes porque o edital cobra carência e manutenção/perda/restabelecimento da qualidade de segurado. A página oficial do Planalto também exibe redações antigas riscadas para o art. 27-A; a captura do projeto segue bloqueada até a importação limpa da redação vigente.
+
+
+## Continuação — revisão de RPPS, LOAS e BPC (15/11/2026)
+
+### Lei 9.796/1999 — compensação previdenciária
+
+- Mantidos os arts. 1º a 4º e 6º a 8º.
+- **Art. 5º excluído:** trata de estoque transitório de benefícios em manutenção na data de início da lei, com prazo de cadastramento de 36 meses já expirado.
+- **Art. 8º incluído:** contém regras de atualização quando há atraso nos desembolsos/prazos e responsabilidade solidária do ente federativo. Tema diretamente ligado à compensação.
+- Arts. 9º (regulamentação) e 10 (vigência) excluídos.
+- A Lei 15.265/2025 incluiu o art. 8º-C, sobre limite de despesa federal anual. Foi separado como mudança posterior ao edital 2022.
+
+### Decreto 10.188/2019 — compensação entre regimes
+
+O recorte foi reduzido de arts. 1º–24 para **arts. 1º–17**. Os arts. 18–24 disciplinam o Conselho Nacional dos RPPS (composição, reuniões, secretaria, atas e grupos de trabalho), assunto não listado expressamente no edital. Os arts. 25 e 26 contêm providências transitórias com prazos em 2021, já encerrados; art. 27 é revogação e art. 28 é vigência. Permaneceram as disposições sobre conceitos, requerimentos, análise, cálculo, estoque, fluxo mensal, limites, pagamentos, responsabilidades e operacionalização.
+
+### Decreto 6.214/2007 — Regulamento do BPC
+
+- **Art. 47-A incluído:** trata da suspensão especial do BPC quando a pessoa com deficiência exerce atividade remunerada. É diretamente relacionado às regras de manutenção do benefício e ao retorno ao trabalho.
+- **Art. 49 retirado:** trata de restituição e cobrança de valores pagos indevidamente, assunto que não consta do conteúdo programático do edital.
+- O art. 47, expressamente revogado pelo Decreto 12.534/2025, permanece excluído.
+- Os demais dispositivos mantidos tratam de beneficiários, requisitos, renda, inscrição, avaliação, concessão, pagamento, manutenção, recursos, revisão e cessação.
+
+### LOAS — Lei 8.742/1993
+
+O art. 35 foi incluído porque trata diretamente da operação do BPC e da regulamentação das formas de comprovação, suspensão e pagamento. O § 2º atual, sobre compartilhamento de bases de dados, foi incluído pela Lei 15.077/2024, depois do edital 2022; fica marcado como alteração posterior, sem misturar a redação de 2024 ao recorte histórico do concurso.
