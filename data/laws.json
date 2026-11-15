@@ -55,15 +55,16 @@
     "priority_reason": "Abrange direitos fundamentais, Administração Pública e Seguridade Social. A prioridade máxima é por recortes temáticos do edital, não pela Constituição inteira.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "source_verification_status": "url_oficial_configurada_conteudo_pendente",
     "source_sync_status": "recaptura_direta_planalto_pendente",
     "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-1171-1994",
@@ -91,12 +92,13 @@
     "include_articles": [
       "Anexo - Código de Ética"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "O art. 3º é cláusula de vigência e foi retirado. O Anexo do Código de Ética foi separado como entrada própria para não perder o conteúdo expresso no edital.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-6029-2007",
@@ -147,12 +149,13 @@
       "Art. 23",
       "Art. 24"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8112-1990",
@@ -315,9 +318,9 @@
       "Art. 96-A",
       "Art. 126-A"
     ],
-    "article_filter_status": "recorte_direto_dos_topicos_do_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Mantidos somente os dispositivos de provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar e responsabilidades. Excluídos os artigos introdutórios e os blocos finais fora desses assuntos. A captura oficial atual ainda precisa ser sincronizada.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "study_scope_topics": [
       "nomeação e provimento",
@@ -330,7 +333,8 @@
       "responsabilidades civil, penal e administrativa"
     ],
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8429-1992",
@@ -383,12 +387,13 @@
       "Art. 23-B",
       "Art. 23-C"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Mantidos os dispositivos materiais da Lei de Improbidade, inclusive os arts. 23-A, 23-B e 23-C; excluídos os arts. 24 e 25, que tratam de vigência e revogação. O texto compilado oficial deve ser recapturado e limpo de redações riscadas.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-9784-1999",
@@ -484,12 +489,13 @@
       "Art. 68",
       "Art. 69"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-7070-1982",
@@ -520,12 +526,13 @@
       "Art. 3",
       "Art. 4"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-7986-1989",
@@ -559,12 +566,13 @@
       "Art. 6",
       "Art. 7"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8059-1990",
@@ -614,12 +622,13 @@
       "Art. 22",
       "Art. 23"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-9422-1996",
@@ -651,12 +660,13 @@
       "Art. 4",
       "Art. 5"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-9425-1996",
@@ -687,12 +697,13 @@
       "Art. 3",
       "Art. 4"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-10559-2002",
@@ -739,12 +750,13 @@
       "Art. 19",
       "Art. 20"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-11520-2007",
@@ -776,12 +788,13 @@
       "Art. 4",
       "Art. 5"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-13985-2020",
@@ -811,12 +824,13 @@
       "Art. 2",
       "Art. 4"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-10779-2003",
@@ -848,12 +862,13 @@
       "Art. 4",
       "Art. 5"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-8424-2015",
@@ -890,12 +905,13 @@
       "Art. 9",
       "Art. 11"
     ],
-    "article_filter_status": "recorte_revisado_por_assunto_e_vigencia",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Mantidos os dispositivos sobre seguro-defeso, requisitos, operacionalização e regras do pescador artesanal, inclusive o art. 9º que altera o Regulamento da Previdência Social. Excluídos o art. 10 (revogado) e o art. 12 (regra transitória para períodos de defeso iniciados até 31/03/2015).",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8742-1993",
@@ -941,12 +957,13 @@
       "Art. 40-B",
       "Art. 40-C"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-14176-2021",
@@ -975,12 +992,13 @@
       "Art. 1",
       "Art. 2"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-6214-2007",
@@ -1006,13 +1024,14 @@
     "source_sync_status": "recaptura_direta_planalto_pendente",
     "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
     "include_articles": [],
-    "article_filter_status": "bloqueado_por_captura_desatualizada",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214compilado.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-9796-1999",
@@ -1045,12 +1064,13 @@
       "Art. 6",
       "Art. 7"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-10188-2019",
@@ -1101,12 +1121,13 @@
       "Art. 23",
       "Art. 24"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "ec-103-2019",
@@ -1164,12 +1185,13 @@
       "Art. 30",
       "Art. 31"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lc-142-2013",
@@ -1206,12 +1228,13 @@
       "Art. 9",
       "Art. 10"
     ],
-    "article_filter_status": "recorte_revisado_com_base_no_edital",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_oficial_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8212-1991",
@@ -1269,12 +1292,13 @@
       "Art. 45-A",
       "Art. 88"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Inclui o art. 11, que especifica as receitas do orçamento da Seguridade Social (receitas da União, contribuições sociais e outras fontes). O conteúdo que estava mesclado ao art. 10 foi separado na captura.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "lei-8213-1991",
@@ -1411,12 +1435,13 @@
       "Art. 149",
       "Art. 151"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-3048-1999",
@@ -1640,12 +1665,13 @@
       "Art. 347",
       "Art. 1"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": false,
+    "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
-    "preferred_source_format": "texto_compilado_planalto"
+    "preferred_source_format": "texto_compilado_planalto",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "in-128-2022",
@@ -1675,12 +1701,13 @@
     "source_sync_status": "texto_integral_consolidado_pendente",
     "source_policy_note": "Fonte oficial Portal IN localizada; texto apresenta redações anteriores riscadas e alterações até a IN 212/2026. A captura precisa separar texto vigente e dispositivos revogados antes de liberar estudo e questões.",
     "include_articles": [],
-    "article_filter_status": "bloqueada_ate_texto_integral",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://portalin.inss.gov.br/in/540",
-    "preferred_source_format": "texto_consolidado_portal_oficial_inss"
+    "preferred_source_format": "texto_consolidado_portal_oficial_inss",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente."
   },
   {
     "id": "decreto-lei-2848-1940",
@@ -1713,6 +1740,8 @@
     "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta.",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo."
+    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
+    "study_block_reason": "A captura armazenada ainda não foi sincronizada e validada diretamente na fonte oficial preferencial do Planalto/Portal IN. Não usar redações de capturas anteriores como texto vigente.",
+    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente"
   }
 ]
