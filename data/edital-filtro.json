@@ -1285,6 +1285,7 @@
     },
     "decreto-3048-1999": {
       "include_articles": [
+        "Art. 1",
         "Art. 4",
         "Art. 5",
         "Art. 6",
@@ -1470,22 +1471,29 @@
         "Art. 246",
         "Art. 247",
         "Art. 256",
-        "Art. 303",
-        "Art. 304",
         "Art. 305",
         "Art. 307",
         "Art. 308",
-        "Art. 318",
-        "Art. 319",
         "Art. 337",
-        "Art. 341",
-        "Art. 342",
+        "Art. 345",
         "Art. 347",
-        "Art. 1"
+        "Art. 347-A",
+        "Art. 348",
+        "Art. 349"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "benefícios, segurados, qualidade de segurado, serviços, custeio, contribuições, salário de contribuição, arrecadação/recolhimento, CRPS e decadência/prescrição",
+      "topics": [
+        "segurados, dependentes, filiação, inscrição e manutenção da qualidade",
+        "benefícios, carência, salário de benefício, renda mensal e reajustamento",
+        "serviços previdenciários e reabilitação profissional",
+        "financiamento, receitas, contribuições, salário de contribuição, arrecadação e recolhimento",
+        "decisões e efeitos dos recursos administrativos no CRPS: arts. 305, 307 e 308",
+        "decadência e prescrição: arts. 345, 347, 347-A, 348 e 349"
+      ],
+      "blocked": true,
+      "source_blocked": true,
+      "review_status": "recorte temático refinado; captura direta do Planalto pendente",
+      "excluded_scope": "arts. 303-304 (organização interna do CRPS); arts. 318-319 (publicação/notificação geral); arts. 341-342 (ação regressiva e responsabilidade civil de empregadores/terceiros)"
     },
     "in-128-2022": {
       "include_articles": [],
@@ -1718,6 +1726,10 @@
     {
       "norm": "Parser de artigos — conferência das capturas anteriores",
       "action": "Na comparação dos 27 snapshots com as listas selecionadas, foram identificados 12 artigos cuja cabeça havia sido mesclada ao artigo anterior por começar com preposições: Lei 8.112 (arts. 70, 128, 140, 145, 155, 167 e 175); Lei 8.429 (arts. 16 e 23-B); Lei 9.784 (art. 56); Lei 8.059 (art. 16); Lei 10.559 (art. 13). O parser foi corrigido para distinguir início de artigo de referência a outra norma, e testes específicos foram adicionados. Os snapshots antigos não foram reescritos; a correção só será aplicada em nova captura oficial."
+    },
+    {
+      "norm": "Decreto 3.048/1999",
+      "action": "Refinado o recorte pelo item 14.2.3. Foram retirados arts. 303-304 (estrutura interna do CRPS sem regra decisória), 318-319 (divulgação/notificação geral) e 341-342 (responsabilidade civil/ação regressiva de empregadores e terceiros, fora do programa expresso). Foram incluídos arts. 345, 347-A, 348 e 349, que tratam de prescrição e decadência. Mantidos 305, 307 e 308 sobre recursos administrativos. O total selecionado agora é 195 artigos/subdispositivos. A norma continua bloqueada até captura integral direta do texto compilado do Planalto."
     }
   ],
   "decreto6214_status": {
