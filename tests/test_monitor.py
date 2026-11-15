@@ -137,6 +137,44 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("Art. 6º da Emenda Constitucional", result["Art. 5"])
         self.assertIn("Art. 7", result)
 
+    def test_real_article_headings_starting_with_prepositions_are_split(self):
+        source = (
+            "Art. 69. Texto do adicional.\\n"
+            "Art. 70. Na concessão dos adicionais, serão observadas as situações legais.\\n"
+            "Art. 127. São penalidades disciplinares.\\n"
+            "Art. 128. Na aplicação das penalidades serão consideradas a natureza e a gravidade.\\n"
+            "Art. 139. É abandono de cargo.\\n"
+            "Art. 140. Na apuração de abandono de cargo será adotado procedimento sumário.\\n"
+            "Art. 144. A denúncia será arquivada.\\n"
+            "Art. 145. Da sindicância poderá resultar arquivamento ou processo disciplinar.\\n"
+            "Art. 154. O processo será encaminhado.\\n"
+            "Art. 155. Na fase do inquérito, a comissão promoverá diligências.\\n"
+            "Art. 166. O relatório será encaminhado.\\n"
+            "Art. 167. No prazo de vinte dias, a autoridade julgadora decidirá.\\n"
+            "Art. 174. A revisão será requerida.\\n"
+            "Art. 175. No processo revisional, o ônus da prova cabe ao requerente."
+        )
+        result = split_articles(source)
+        for number in [70, 128, 140, 145, 155, 167, 175]:
+            self.assertIn("Art. " + str(number), result)
+        self.assertIn("Na concessão", result["Art. 70"])
+        self.assertIn("Na aplicação", result["Art. 128"])
+        self.assertIn("No prazo", result["Art. 167"])
+        self.assertIn("No processo revisional", result["Art. 175"])
+
+    def test_articles_8059_16_and_8429_23b_are_separated(self):
+        source = (
+            "Art. 15. A pensão especial não está sujeita a penhora.\\n"
+            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras do Código Civil.\\n"
+            "Art. 23-A. É dever do poder público oferecer capacitação.\\n"
+            "Art. 23-B. Nas ações e nos acordos regidos por esta Lei, não haverá adiantamento de custas."
+        )
+        result = split_articles(source)
+        self.assertIn("Art. 16", result)
+        self.assertIn("Art. 23-B", result)
+        self.assertIn("No que se refere", result["Art. 16"])
+        self.assertIn("Nas ações", result["Art. 23-B"])
+
     def test_only_selected_articles_are_saved(self):
         law = {
             "id": "cf",
