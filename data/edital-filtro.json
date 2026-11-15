@@ -1472,6 +1472,10 @@
     {
       "norm": "Lei 9.425/1996",
       "action": "Recorte ajustado para manter arts. 1º a 5º, inclusive o art. 5º sobre o custeio da pensão, e excluir arts. 6º e 7º, de vigência e revogação. Fonte oficial Planalto localizada, mas a captura automatizada continua bloqueada."
+    },
+    {
+      "norm": "Alterações posteriores ao edital 2022",
+      "action": "Criado registro separado de alterações posteriores identificadas em normas constitucionais e previdenciárias. Não entram automaticamente no recorte do edital 2022; ficam sinalizadas para atualização de edital futuro e para comparação de redações."
     }
   ],
   "decreto6214_status": {
@@ -1479,5 +1483,104 @@
     "source_status": "Planalto texto compilado localizado; apresenta versões antigas riscadas e alterações recentes",
     "snapshot_status": "Captura antiga proveniente da Câmara, com atos iniciais e anexo misturados",
     "action": "Estudo e questões bloqueados até recaptura direta e limpeza dos trechos revogados e históricos."
+  },
+  "post_edital_change_audit": {
+    "basis_cutoff": "2022-09-15",
+    "rule": "Mudanças posteriores ao edital de 2022 ficam registradas separadamente. Não devem ser misturadas à redação-base do edital 2022, nem descartadas do monitoramento para um edital futuro.",
+    "status": "levantamento inicial; não exaustivo",
+    "findings": [
+      {
+        "law_id": "constituicao-1988",
+        "device": "Art. 195, inciso V",
+        "act": "EC 132/2023",
+        "description": "Incluiu contribuição sobre bens e serviços. Alteração posterior à publicação do Edital INSS 2022.",
+        "status": "fora_do_corte_do_edital_2022; revisar em edital futuro"
+      },
+      {
+        "law_id": "lei-8212-1991",
+        "device": "Art. 12, §§ 9º e 10",
+        "act": "Lei 15.072/2024",
+        "description": "A redação compilada registra alteração dos critérios do segurado especial.",
+        "status": "posterior_ao_edital_2022; separar da redação-base"
+      },
+      {
+        "law_id": "lei-8212-1991",
+        "device": "Art. 22, § 17",
+        "act": "Lei 14.973/2024",
+        "description": "A redação compilada registra novas regras e escalonamento para contribuições de municípios.",
+        "status": "posterior_ao_edital_2022; separar da redação-base"
+      },
+      {
+        "law_id": "lei-8212-1991",
+        "device": "Art. 45-A, § 4º",
+        "act": "Lei 15.363/2026",
+        "description": "A redação compilada registra regra de multa para indenização de tempo rural.",
+        "status": "posterior_ao_edital_2022; separar da redação-base"
+      },
+      {
+        "law_id": "lei-8212-1991",
+        "device": "Alterações adicionais identificadas no texto compilado",
+        "act": "Lei 15.371/2026",
+        "description": "A página compilada do Planalto apresenta referência expressa à Lei 15.371/2026; o dispositivo e os efeitos precisam de comparação antes de liberar.",
+        "status": "posterior_ao_edital_2022; análise por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-8213-1991",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.157/2025",
+        "description": "A relação oficial de leis de 2025 informa alteração da Lei 8.213/1991.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-8213-1991",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.265/2025",
+        "description": "A relação oficial de leis de 2025 informa alteração da Lei 8.213/1991.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-8742-1993",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.156/2025",
+        "description": "A relação oficial de leis de 2025 informa alterações na LOAS.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-8742-1993",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.157/2025",
+        "description": "A relação oficial de leis de 2025 informa alteração da LOAS.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-9796-1999",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.265/2025",
+        "description": "A relação oficial de leis de 2025 informa alteração da Lei 9.796/1999.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-10779-2003",
+        "device": "Dispositivos alterados a identificar",
+        "act": "Lei 15.265/2025",
+        "description": "A relação oficial de leis de 2025 informa alteração da Lei 10.779/2003.",
+        "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "law_id": "lei-11520-2007",
+        "device": "Art. 1º",
+        "act": "Lei 14.736/2023",
+        "description": "Alterou os beneficiários e a descrição do isolamento/internação compulsórios e o valor mínimo da pensão.",
+        "status": "posterior_ao_edital_2022; redação-base e atual devem ser diferenciadas"
+      },
+      {
+        "law_id": "lei-11520-2007",
+        "device": "Art. 1º-A",
+        "act": "Lei 14.736/2023",
+        "description": "Incluiu pensão especial para filhos separados dos genitores em razão do isolamento ou internação.",
+        "status": "posterior_ao_edital_2022; não pertence à redação do edital 2022"
+      }
+    ],
+    "pending": "Comparar integralmente cada dispositivo alterado com a redação anterior quando a captura oficial completa estiver disponível."
   }
 }
