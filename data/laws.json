@@ -354,7 +354,7 @@
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "url_oficial_configurada_conteudo_pendente",
     "source_sync_status": "recaptura_direta_planalto_pendente",
-    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
+    "source_policy_note": "O Planalto apresenta esta lei como texto compilado. A captura atualmente armazenada ainda precisa ser substituída por captura direta e validada do Planalto.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -380,14 +380,15 @@
       "Art. 22",
       "Art. 23",
       "Art. 23-A",
+      "Art. 23-B",
       "Art. 23-C"
     ],
     "article_filter_status": "recorte_revisado_com_base_no_edital",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_note": "Mantidos os dispositivos materiais da Lei de Improbidade, inclusive os arts. 23-A, 23-B e 23-C; excluídos os arts. 24 e 25, que tratam de vigência e revogação. O texto compilado oficial deve ser recapturado e limpo de redações riscadas.",
     "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "lei-9784-1999",
@@ -918,7 +919,7 @@
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "url_oficial_configurada_conteudo_pendente",
     "source_sync_status": "recaptura_direta_planalto_pendente",
-    "source_policy_note": "O endereço preferencial é de domínio oficial. A captura atualmente armazenada ainda não foi confirmada como obtida diretamente deste endereço; até a sincronização, não declarar a norma atualizada nem gerar novas questões com base em texto antigo.",
+    "source_policy_note": "O Planalto apresenta esta lei como texto compilado. A captura atualmente armazenada ainda precisa ser substituída por captura direta e validada do Planalto.",
     "include_articles": [
       "Art. 1",
       "Art. 2",
@@ -945,7 +946,7 @@
     "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
-    "preferred_source_format": "texto_oficial_planalto"
+    "preferred_source_format": "texto_compilado_planalto"
   },
   {
     "id": "lei-14176-2021",
