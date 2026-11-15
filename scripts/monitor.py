@@ -478,9 +478,8 @@ def split_articles(text: str) -> dict[str, str]:
             first_word_match = re.match(r"([A-Za-zÀ-ÿ]+)", body_start)
             first_word = first_word_match.group(1).lower() if first_word_match else ""
             # Evita confundir referências a artigos de outras normas com
-            # cabeçalhos. Não bloquear "No caso...", "Na hipótese..." ou
-            # "Nas ações...", que são começos legítimos de artigos (ex.: 8.059
-            # e 8.429) e antes eram descartados por coincidirem com preposições.
+            # cabeçalhos. "No caso...", "Na hipótese..." e "Nas ações..."
+            # são começos legítimos de artigos e não devem ser descartados.
             looks_like_other_act_reference = bool(re.match(
                 r"^(?:da|das|de|do|dos)\\s+(?:Lei|Leis|Constituição|Emenda|Decreto|Decretos|"
                 r"Medida Provisória|Portaria|Resolução|Código|Regulamento)\\b",
