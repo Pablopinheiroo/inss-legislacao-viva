@@ -248,3 +248,13 @@ O índice oficial do INSS confirma:
 - Anexo XXVI revogado pela IN PRES/INSS nº 174/2024.
 
 Essas informações foram registradas em `data/laws.json` e `data/edital-filtro.json`. Não substituem a captura integral: a IN continua bloqueada até obter o texto completo, remover as redações riscadas e validar o recorte do edital por artigo e subdivisão.
+
+
+### Lei 8.213/1991 e Decreto 3.048/1999 — complemento de carência
+
+A consulta ao texto compilado oficial do Planalto confirmou que:
+- o **art. 27-A da Lei 8.213/1991** trata da carência exigida após a perda da qualidade de segurado;
+- o **art. 27 do Decreto 3.048/1999** reúne situações em que a concessão de determinados benefícios independe de carência;
+- o **art. 27-A do Decreto 3.048/1999** define quando contribuições anteriores à perda da qualidade podem voltar a ser computadas depois da nova filiação.
+
+Esses dispositivos foram incluídos nos respectivos recortes porque o edital cobra carência e manutenção/perda/restabelecimento da qualidade de segurado. A página oficial do Planalto também exibe redações antigas riscadas para o art. 27-A; a captura do projeto segue bloqueada até a importação limpa da redação vigente.
