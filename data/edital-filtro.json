@@ -781,11 +781,18 @@
         "Art. 1",
         "Art. 2",
         "Art. 3",
-        "Art. 4"
+        "Art. 4",
+        "Art. 4-A"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os dispositivos que instituem a pensão especial da Síndrome da Talidomida, definem beneficiários e condições, regulam comprovação/manutenção/pagamento e tratam da isenção vinculada à pensão (art. 4-A). Excluídos arts. 5º e 6º, de vigência e revogação.",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão especial para pessoas com deficiência decorrente da Síndrome da Talidomida",
+        "requisitos, comprovação, valor, manutenção e pagamento",
+        "isenção de imposto de renda vinculada à pensão especial"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-7986-1989": {
       "include_articles": [
@@ -793,13 +800,18 @@
         "Art. 2",
         "Art. 3",
         "Art. 4",
-        "Art. 5",
-        "Art. 6",
-        "Art. 7"
+        "Art. 5"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os dispositivos sobre concessão da pensão vitalícia a seringueiros, transferência a dependentes, comprovação de atividade e carência, prazo de análise e início do pagamento. Excluídos arts. 6º e 7º, de instruções administrativas e convênios de pagamento, e arts. 8º e 9º, de vigência e revogação.",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão mensal vitalícia dos seringueiros recrutados durante a Segunda Guerra Mundial",
+        "transferência a dependentes em estado de carência",
+        "prova material da prestação de serviços e comprovação da carência",
+        "prazo de análise do pedido e início do pagamento"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-8059-1990": {
       "include_articles": [
@@ -824,12 +836,16 @@
         "Art. 19",
         "Art. 20",
         "Art. 21",
-        "Art. 22",
-        "Art. 23"
+        "Art. 22"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os arts. 1º a 22, que disciplinam a pensão especial de ex-combatente e dependentes, os requisitos, as hipóteses, a ordem de dependência, o valor, a acumulação, a transferência e a revisão. Excluídos art. 23 (dotação orçamentária), art. 24 (vigência) e art. 25 (revogações).",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão especial devida aos ex-combatentes da Segunda Guerra Mundial e dependentes",
+        "condições de concessão, dependentes, valor, acumulação, transferência e revisão"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-9422-1996": {
       "include_articles": [
@@ -839,9 +855,14 @@
         "Art. 4",
         "Art. 5"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os arts. 1º a 5º, que definem os dependentes beneficiários da pensão especial por hemodiálise em Caruaru, critérios de concessão, natureza intransferível, extinção e condição de cessação dos efeitos. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência).",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão especial aos dependentes das vítimas de hemodiálise de Caruaru",
+        "condições para concessão, natureza personalíssima/intransferível e hipóteses de cessação"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-9425-1996": {
       "include_articles": [
@@ -851,10 +872,14 @@
         "Art. 4",
         "Art. 5"
       ],
-      "filter": "pensão especial às vítimas do Césio 137: concessão, critérios, comprovação e custeio; excluídos dispositivos finais",
+      "filter": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação.",
       "blocked": true,
       "source_blocked": true,
-      "review_status": "recorte_material_corrigido; sincronizacao_Planalto_pendente"
+      "review_status": "recorte material revisado; captura oficial direta pendente",
+      "topics": [
+        "pensão especial às vítimas do acidente nuclear com Césio 137",
+        "categorias de beneficiários, valores, prova médica, acumulação/compensação e custeio"
+      ]
     },
     "lei-10559-2002": {
       "include_articles": [
@@ -879,21 +904,33 @@
         "Art. 19",
         "Art. 20"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os arts. 1º a 20, relativos ao regime do anistiado político, declaração da condição, reparação econômica, contagem de tempo, readmissão/reintegração, revisão e regras de transição para pagamentos e litígios. Excluídos arts. 21 e 22, de vigência e revogação.",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "regime jurídico do anistiado político",
+        "declaração da condição de anistiado e reparação econômica",
+        "contagem de tempo, readmissão/reintegração e revisão",
+        "regras de transição e situações de pagamentos anteriores"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-11520-2007": {
       "include_articles": [
         "Art. 1",
         "Art. 2",
         "Art. 3",
-        "Art. 4",
-        "Art. 5"
+        "Art. 4"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os arts. 1º a 4º, que tratam da pensão especial por hanseníase, beneficiários, requerimento e comprovação, acumulação e assistência de saúde aos beneficiários. Excluído art. 5º (convênios de cooperação), art. 6º (despesa orçamentária) e art. 7º (vigência). A inclusão posterior do art. 1º-A pela Lei 14.736/2023 não integra o recorte histórico do edital de 2022 e fica identificada separadamente.",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão especial para pessoas atingidas pela hanseníase submetidas a isolamento/internação compulsórios",
+        "beneficiários, requisitos e requerimento",
+        "intransferibilidade, acumulação e assistência de saúde"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-13985-2020": {
       "include_articles": [
@@ -901,9 +938,14 @@
         "Art. 2",
         "Art. 4"
       ],
-      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "Mantidos os arts. 1º, 2º e 4º, diretamente ligados à pensão especial para crianças com síndrome congênita do Zika: instituição, valor, requerimento/perícia e operacionalização pelo INSS/Dataprev. Excluídos art. 3º (despesa orçamentária), art. 5º (licença-maternidade/salário-maternidade das mães, assunto diverso do benefício especial listado), art. 6º (revogação) e art. 7º (vigência).",
+      "blocked": true,
+      "source_blocked": true,
+      "topics": [
+        "pensão especial para crianças com síndrome congênita do Zika beneficiárias do BPC",
+        "valor, requerimento, avaliação médica e operacionalização"
+      ],
+      "review_status": "recorte material revisado; captura oficial direta pendente"
     },
     "lei-10779-2003": {
       "include_articles": [
@@ -1712,6 +1754,38 @@
     {
       "norm": "Lei 8.112/1990",
       "action": "Recorte reduzido de 176 para 160 dispositivos. Saíram os arts. 13 a 20 (posse, exercício, estágio probatório e movimentações não citadas nominalmente) e 24 a 32 (outras formas de provimento não mencionadas). Permaneceram os blocos explicitamente indicados: arts. 5º a 12 como contexto de nomeação, 33 a 39, 40 a 115, 116 a 142 e 143 a 182. Captura do Planalto ainda pendente."
+    },
+    {
+      "norm": "Lei 7.070/1982 — Pensão especial da Talidomida",
+      "action": "Mantidos os dispositivos que instituem a pensão especial da Síndrome da Talidomida, definem beneficiários e condições, regulam comprovação/manutenção/pagamento e tratam da isenção vinculada à pensão (art. 4-A). Excluídos arts. 5º e 6º, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 7.986/1989 — Pensão especial dos seringueiros",
+      "action": "Mantidos os dispositivos sobre concessão da pensão vitalícia a seringueiros, transferência a dependentes, comprovação de atividade e carência, prazo de análise e início do pagamento. Excluídos arts. 6º e 7º, de instruções administrativas e convênios de pagamento, e arts. 8º e 9º, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 8.059/1990 — Pensão especial de ex-combatente",
+      "action": "Mantidos os arts. 1º a 22, que disciplinam a pensão especial de ex-combatente e dependentes, os requisitos, as hipóteses, a ordem de dependência, o valor, a acumulação, a transferência e a revisão. Excluídos art. 23 (dotação orçamentária), art. 24 (vigência) e art. 25 (revogações). Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 9.422/1996 — Pensão especial de Caruaru",
+      "action": "Mantidos os arts. 1º a 5º, que definem os dependentes beneficiários da pensão especial por hemodiálise em Caruaru, critérios de concessão, natureza intransferível, extinção e condição de cessação dos efeitos. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência). Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 9.425/1996 — Pensão especial do Césio 137",
+      "action": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 10.559/2002 — Anistiado político",
+      "action": "Mantidos os arts. 1º a 20, relativos ao regime do anistiado político, declaração da condição, reparação econômica, contagem de tempo, readmissão/reintegração, revisão e regras de transição para pagamentos e litígios. Excluídos arts. 21 e 22, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 11.520/2007 — Pensão especial por hanseníase",
+      "action": "Mantidos os arts. 1º a 4º, que tratam da pensão especial por hanseníase, beneficiários, requerimento e comprovação, acumulação e assistência de saúde aos beneficiários. Excluído art. 5º (convênios de cooperação), art. 6º (despesa orçamentária) e art. 7º (vigência). A inclusão posterior do art. 1º-A pela Lei 14.736/2023 não integra o recorte histórico do edital de 2022 e fica identificada separadamente. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 13.985/2020 — Pensão especial por síndrome congênita do Zika",
+      "action": "Mantidos os arts. 1º, 2º e 4º, diretamente ligados à pensão especial para crianças com síndrome congênita do Zika: instituição, valor, requerimento/perícia e operacionalização pelo INSS/Dataprev. Excluídos art. 3º (despesa orçamentária), art. 5º (licença-maternidade/salário-maternidade das mães, assunto diverso do benefício especial listado), art. 6º (revogação) e art. 7º (vigência). Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
     }
   ],
   "decreto6214_status": {
