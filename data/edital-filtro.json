@@ -489,22 +489,6 @@
         "Art. 10",
         "Art. 11",
         "Art. 12",
-        "Art. 13",
-        "Art. 14",
-        "Art. 15",
-        "Art. 16",
-        "Art. 17",
-        "Art. 18",
-        "Art. 19",
-        "Art. 20",
-        "Art. 24",
-        "Art. 25",
-        "Art. 27",
-        "Art. 28",
-        "Art. 29",
-        "Art. 30",
-        "Art. 31",
-        "Art. 32",
         "Art. 33",
         "Art. 34",
         "Art. 35",
@@ -658,21 +642,19 @@
         "Art. 181",
         "Art. 182"
       ],
-      "filter": "provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, deveres/proibições, responsabilidades e processo administrativo disciplinar",
+      "filter": "somente requisitos/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, deveres, responsabilidades e regime disciplinar",
       "topics": [
-        "nomeação e provimento",
-        "vacância",
-        "remoção",
-        "redistribuição",
-        "substituição",
-        "direitos e vantagens",
-        "regime disciplinar",
-        "responsabilidades civil, penal e administrativa"
+        "requisitos e provimento apenas como contexto da nomeação (arts. 5º a 12)",
+        "vacância (arts. 33 a 35)",
+        "remoção, redistribuição e substituição (arts. 36 a 39)",
+        "direitos e vantagens (arts. 40 a 115)",
+        "deveres, proibições e responsabilidades civil, penal e administrativa (arts. 116 a 142)",
+        "regime disciplinar e processo administrativo disciplinar (arts. 143 a 182)"
       ],
       "blocked": true,
-      "review_status": "recorte_tematico_corrigido; captura_planalto_pendente",
-      "excluded_scope": "dispositivos sem relação com o programa do item 14.2.2 e disposições finais",
-      "source_blocked": true
+      "source_blocked": true,
+      "review_status": "recorte_restrito_ao_edital; captura compilada direta do Planalto pendente",
+      "excluded_scope": "arts. 13-20 (posse/exercício/estágio probatório e movimentações não citadas) e arts. 24-32 (outras formas de provimento não citadas)"
     },
     "lei-8429-1992": {
       "include_articles": [
@@ -1704,10 +1686,6 @@
       "action": "Incluído o art. 9º, que altera o Regulamento da Previdência Social em matéria ligada ao enquadramento do pescador artesanal; retirado o art. 12, regra transitória para períodos iniciados até 31/03/2015; o art. 10, revogado, continua excluído."
     },
     {
-      "norm": "Lei 8.112/1990",
-      "action": "Corrigido o recorte: acrescentados os arts. 143 a 182, que disciplinam apuração, sindicância e processo administrativo disciplinar, expressamente cobertos pelo tópico regime disciplinar do edital. A lista agora inclui 176 dispositivos, mas segue bloqueada até sincronização com a fonte compilada do Planalto."
-    },
-    {
       "norm": "Lei 9.425/1996",
       "action": "Recorte ajustado para manter arts. 1º a 5º, inclusive o art. 5º sobre o custeio da pensão, e excluir arts. 6º e 7º, de vigência e revogação. Fonte oficial Planalto localizada, mas a captura automatizada continua bloqueada."
     },
@@ -1730,6 +1708,10 @@
     {
       "norm": "Decreto 3.048/1999",
       "action": "Refinado o recorte pelo item 14.2.3. Foram retirados arts. 303-304 (estrutura interna do CRPS sem regra decisória), 318-319 (divulgação/notificação geral) e 341-342 (responsabilidade civil/ação regressiva de empregadores e terceiros, fora do programa expresso). Foram incluídos arts. 345, 347-A, 348 e 349, que tratam de prescrição e decadência. Mantidos 305, 307 e 308 sobre recursos administrativos. O total selecionado agora é 195 artigos/subdispositivos. A norma continua bloqueada até captura integral direta do texto compilado do Planalto."
+    },
+    {
+      "norm": "Lei 8.112/1990",
+      "action": "Recorte reduzido de 176 para 160 dispositivos. Saíram os arts. 13 a 20 (posse, exercício, estágio probatório e movimentações não citadas nominalmente) e 24 a 32 (outras formas de provimento não mencionadas). Permaneceram os blocos explicitamente indicados: arts. 5º a 12 como contexto de nomeação, 33 a 39, 40 a 115, 116 a 142 e 143 a 182. Captura do Planalto ainda pendente."
     }
   ],
   "decreto6214_status": {
