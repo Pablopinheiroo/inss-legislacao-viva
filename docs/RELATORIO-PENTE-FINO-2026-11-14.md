@@ -209,3 +209,10 @@ A leitura direta da versão compilada do Planalto permitiu refinar o recorte do 
 - **Incluídos** os arts. 345, 347-A, 348 e 349, que tratam de prescrição e decadência relacionadas aos benefícios e aos créditos da Seguridade Social, expressamente previstas no edital.
 
 A lista ativa do Decreto 3.048 passou de 197 para 195 dispositivos selecionados. O texto consultado é o compilado oficial do Planalto, mas a captura integral ainda não foi incorporada ao snapshot do projeto; por isso, o Decreto continua bloqueado.
+
+
+### Ajuste adicional da Lei 8.112/1990 — recorte mais restrito
+
+A lista foi reduzida de 176 para 160 dispositivos. Foram retirados os arts. 13 a 20 (posse, exercício, estágio probatório e movimentações não citadas nominalmente no edital) e os arts. 24 a 32 (outras formas de provimento não mencionadas expressamente). Permaneceram os arts. 5º a 12 como base de requisitos/provimento e nomeação, 33 a 39 para vacância/remoção/redistribuição/substituição, 40 a 115 para direitos e vantagens, 116 a 142 para deveres/proibições/responsabilidades e 143 a 182 para regime disciplinar e processo administrativo disciplinar.
+
+A norma continua bloqueada até nova captura íntegra diretamente do texto compilado do Planalto.
