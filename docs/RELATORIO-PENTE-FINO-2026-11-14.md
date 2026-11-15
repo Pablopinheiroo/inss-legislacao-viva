@@ -232,3 +232,8 @@ Foram refinadas as listas de artigos das leis especiais citadas no item 14.2.3 d
 - **Lei 13.985/2020 (Zika):** mantidos arts. 1º, 2º e 4º, diretamente ligados à pensão especial; excluídos art. 3º (despesa orçamentária), art. 5º (licença e salário-maternidade das mães, assunto diverso da pensão especial listada), art. 6º (revogação) e art. 7º (vigência).
 
 As referências oficiais que consegui abrir nesta rodada são o Planalto para a Lei 7.986/1989, Lei 9.425/1996 e Lei 11.520/2007. A página da Lei 11.520 mostra a redação atual do art. 1º, alterada pela Lei 14.736/2023, e o art. 1º-A posterior ao edital. Para as demais normas, o acesso automatizado ao Planalto continua bloqueado; portanto, os recortes são uma organização temática preliminar, não uma certificação de que os snapshots antigos estejam atualizados. Todos permanecem bloqueados até captura direta e validação oficial.
+
+
+### Refinamento final da Lei 9.425/1996
+
+O art. 5º foi retirado do recorte ativo porque trata exclusivamente da alocação orçamentária da despesa, e não de requisitos, beneficiários, valor, comprovação ou compensação da pensão especial. Permanecem os arts. 1º a 4º. Os arts. 6º e 7º, de vigência e revogação, também ficam fora.
