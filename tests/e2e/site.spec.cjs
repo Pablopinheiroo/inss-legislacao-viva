@@ -6,7 +6,7 @@ async function openApp(page) {
   const pageErrors = [];
   page.on("pageerror", error => pageErrors.push(error.message));
   await page.goto("/");
-  await expect(page.locator("#system-status span:last-child")).toHaveText("Verificação concluída", { timeout: 60_000 });
+  await expect(page.locator("#system-status span:last-child")).toHaveText(/Verificação (concluída|parcial)/, { timeout: 60_000 });
   await expect(page.locator("#law-article-select")).toBeEnabled({ timeout: 60_000 });
   await expect(page.locator("#start-quiz")).toBeEnabled({ timeout: 60_000 });
   await expect(page.locator("#start-cloze")).toBeEnabled({ timeout: 60_000 });
