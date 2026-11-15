@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#f5f7fb">
   <meta name="description" content="Acompanhe a legislação do INSS e treine Certo ou Errado, Lei Seca, encontre erros, descubra artigos, pratique afirmações e compare alterações.">
   <title>Radar Legislativo INSS</title>
-  <link rel="stylesheet" href="styles.css?v=20261114-30">
+  <link rel="stylesheet" href="styles.css?v=20261115-31">
   <script defer src="data-storage.js?v=20261114-1"></script>
-  <script defer src="app.js?v=20261114-52"></script>
+  <script defer src="app.js?v=20261115-53"></script>
 </head>
 <body>
   <header class="topbar">
@@ -78,6 +78,14 @@
         <button id="study-start-due" class="primary-button" type="button">Começar revisão vencida</button>
         <button id="study-open-review" class="secondary-button" type="button">Abrir fila completa</button>
       </div>
+    </section>
+    <section class="study-subjects-section" aria-labelledby="study-subjects-title">
+      <div class="section-heading"><div><h2 id="study-subjects-title">Mapa do edital INSS 2022</h2>
+        <p>As matérias estão separadas conforme o conteúdo programático. O status mostra o que já tem norma cadastrada e o que ainda precisa de material.</p></div></div>
+      <div id="study-subject-grid" class="study-subject-grid" aria-live="polite">
+        <p class="empty-state">Carregando as matérias do edital...</p>
+      </div>
+      <p class="study-subjects-note">O mapa é um controle de cobertura: matéria mapeada não significa que todas as aulas e questões já estejam prontas.</p>
     </section>
     <section class="study-sessions-section">
       <div class="section-heading"><div><h2>Sessões recentes</h2><p>Seus últimos treinamentos e atividades de estudo.</p></div>
