@@ -386,8 +386,21 @@
       "in128": {
         "law_id": "in-128-2022",
         "url": "https://portalin.inss.gov.br/in/540",
-        "status": "texto_vigente_indexado_no_portal_oficial; acesso_direto_403",
-        "updated_through": "IN PRES/INSS nº 212/2026; página atualizada em 12/08/2026",
+        "index_url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+        "status": "texto_vigente_indexado_no_indice_oficial; acesso_direto_403",
+        "updated_through": "IN PRES/INSS nº 212/2026; index last modified 12/08/2026",
+        "known_revoked_devices": [
+          {
+            "device": "Arts. 654 a 657",
+            "act": "IN PRES/INSS nº 162, de 14/03/2024",
+            "status": "revogados"
+          },
+          {
+            "device": "Anexo XXVI",
+            "act": "IN PRES/INSS nº 174, de 07/10/2024",
+            "status": "revogado"
+          }
+        ],
         "snapshot_sync": "not_synced"
       },
       "direct_fetch_result": "O monitor automatizado não recebeu corpo legal íntegro em nenhuma das 28 normas; respostas de bloqueio não foram aceitas como texto e os snapshots anteriores foram preservados."
@@ -398,9 +411,26 @@
     "verified_source": "https://portalin.inss.gov.br/in/540",
     "updated_through": "IN PRES/INSS nº 212, de 6 de agosto de 2026; página oficial indexada como atualizada em 12/08/2026.",
     "verification": "A busca no Portal IN oficial retornou texto vigente e trechos com redações anteriores riscadas, inclusive alterações da IN 212/2026. A abertura direta da página retorna HTTP 403 e o monitor automatizado não consegue extrair a íntegra.",
-    "status": "texto_integral_indexado_mas_nao_importado",
+    "status": "texto_indexado_no_indice_oficial; íntegra_e_componentes_nao_importados",
     "study_blocked": true,
-    "next_step": "Obter o conteúdo integral por acesso institucional permitido ou exportação oficial, remover redações anteriores riscadas, separar artigos e componentes, confirmar todos os dispositivos do recorte e só então liberar questões."
+    "next_step": "Obter o conteúdo integral por acesso institucional permitido ou exportação oficial, remover redações anteriores riscadas, separar artigos e componentes, confirmar todos os dispositivos do recorte e só então liberar questões.",
+    "source_index_url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+    "source_index_last_modified": "12/08/2026",
+    "source_index_page_last_updated": "10/06/2026",
+    "latest_amendment": "IN PRES/INSS nº 212, de 06/08/2026 (publicada no DOU de 11/08/2026)",
+    "known_revoked_devices": [
+      {
+        "device": "Arts. 654 a 657",
+        "act": "IN PRES/INSS nº 162, de 14/03/2024",
+        "status": "revogados"
+      },
+      {
+        "device": "Anexo XXVI",
+        "act": "IN PRES/INSS nº 174, de 07/10/2024",
+        "status": "revogado"
+      }
+    ],
+    "note": "O índice oficial identifica as revogações dos arts. 654 a 657 pela IN 162/2024 e do Anexo XXVI pela IN 174/2024. Esses dispositivos não podem ser tratados como vigentes ao preparar a captura consolidada."
   },
   "article_scope_by_law": {
     "constituicao-1988": {
