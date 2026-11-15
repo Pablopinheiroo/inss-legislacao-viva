@@ -679,11 +679,12 @@
         "Art. 5",
         "Art. 6",
         "Art. 8",
-        "Art. 11",
-        "Art. 12"
+        "Art. 9",
+        "Art. 11"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false
+      "filter": "seguro-defeso, requisitos, operacionalização e regras do pescador artesanal; excluídos dispositivo revogado e transição expirada",
+      "blocked": false,
+      "review_status": "recorte_comparado_com_o_item_14_2_3; recaptura_direta_pendente"
     },
     "lei-8742-1993": {
       "include_articles": [
@@ -1343,6 +1344,10 @@
     {
       "norm": "Lei 8.429/1992",
       "action": "Corrigida a lista para incluir o art. 23-B, que integra o texto material da lei. Os arts. 24 e 25 de vigência e revogação permanecem fora do recorte ativo. Fonte preferencial: texto compilado do Planalto; captura direta pendente."
+    },
+    {
+      "norm": "Decreto 8.424/2015",
+      "action": "Incluído o art. 9º, que altera o Regulamento da Previdência Social em matéria ligada ao enquadramento do pescador artesanal; retirado o art. 12, regra transitória para períodos iniciados até 31/03/2015; o art. 10, revogado, continua excluído."
     }
   ],
   "decreto6214_status": {
