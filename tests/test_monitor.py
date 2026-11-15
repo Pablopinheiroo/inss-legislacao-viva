@@ -113,6 +113,30 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("art. 37", result["Art. 5"])
         self.assertIn("Art. 6", result)
 
+    def test_article_starting_with_no_nas_or_na_is_not_misclassified_as_reference(self):
+        result = split_articles(
+            "Art. 15º Texto anterior.\\n"
+            "Art. 16. No que se refere ao pagamento da pensão, aplicam-se as regras.\\n"
+            "Art. 17. Nas ações e nos acordos, não haverá adiantamento.\\n"
+            "Art. 18. Na hipótese de falecimento, aplica-se a regra."
+        )
+        self.assertIn("Art. 16", result)
+        self.assertIn("Art. 17", result)
+        self.assertIn("Art. 18", result)
+        self.assertIn("No que se refere", result["Art. 16"])
+        self.assertIn("Nas ações", result["Art. 17"])
+        self.assertIn("Na hipótese", result["Art. 18"])
+
+    def test_article_reference_to_another_act_is_not_misclassified_as_heading(self):
+        result = split_articles(
+            "Art. 5º Texto do artigo.\\n"
+            "Art. 6º da Emenda Constitucional nº 103, de 2019, foi alterado.\\n"
+            "Art. 7º Texto seguinte."
+        )
+        self.assertNotIn("Art. 6", result)
+        self.assertIn("Art. 6º da Emenda Constitucional", result["Art. 5"])
+        self.assertIn("Art. 7", result)
+
     def test_only_selected_articles_are_saved(self):
         law = {
             "id": "cf",
