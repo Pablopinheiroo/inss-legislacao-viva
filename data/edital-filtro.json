@@ -797,10 +797,46 @@
       "source_blocked": true
     },
     "decreto-6214-2007": {
-      "include_articles": [],
-      "filter": "apenas dispositivos relacionados ao conteúdo programático do edital 2022",
+      "include_articles": [
+        "Art. 1",
+        "Art. 3",
+        "Art. 4",
+        "Art. 5",
+        "Art. 6",
+        "Art. 7",
+        "Art. 8",
+        "Art. 9",
+        "Art. 10",
+        "Art. 12",
+        "Art. 13",
+        "Art. 14",
+        "Art. 15",
+        "Art. 16",
+        "Art. 18",
+        "Art. 19",
+        "Art. 20",
+        "Art. 21",
+        "Art. 22",
+        "Art. 23",
+        "Art. 24",
+        "Art. 25",
+        "Art. 26",
+        "Art. 27",
+        "Art. 28",
+        "Art. 30",
+        "Art. 31",
+        "Art. 35",
+        "Art. 36",
+        "Art. 39",
+        "Art. 42",
+        "Art. 48",
+        "Art. 49"
+      ],
+      "filter": "somente os artigos ligados a BPC: beneficiários, requisitos, renda, inscrição, requerimento, avaliação, concessão, pagamento, manutenção, recurso, revisão e cessação",
       "blocked": true,
-      "source_blocked": true
+      "source_blocked": true,
+      "review_status": "escopo_mapeado; texto_compilado_Planalto_identificado; recaptura_pendente",
+      "excluded_scope": "arts. 2º de organização administrativa, 4º do ato principal (revogação), 3º do ato principal (vigência), 11º (documentos específicos de naturalizado), 32º a 34º e 37º a 45º de gestão/monitoramento genérico, 47º revogado, 50º transitório expirado"
     },
     "lei-9796-1999": {
       "include_articles": [
@@ -1444,10 +1480,6 @@
       "action": "Recorte centrado em princípios gerais da assistência, BPC e auxílio-inclusão; arts.40-B e 40-C incluídos por conexão direta com BPC e débitos do benefício; Art.26-G orçamentário removido."
     },
     {
-      "norm": "Decreto 6.214/2007",
-      "action": "Leitura e bancos bloqueados até recaptura limpa do texto compilado do Planalto, porque captura anterior mistura ato principal e Anexo, contém redações revogadas e atualizações posteriores a 2022."
-    },
-    {
       "norm": "Decreto 10.188/2019",
       "action": "Recorte ampliado para arts.1–24; retirados os dispositivos transitórios com prazo encerrado, revogação formal e vigência."
     },
@@ -1486,6 +1518,10 @@
     {
       "norm": "Lei 8.429/1992",
       "action": "Atualizado o recorte com base no texto compilado oficial do Planalto: excluídos arts. 4º a 6º e 10-A (revogados) e 17-A (vetado); incluídos arts. 8-A, 17-B, 17-C, 17-D e 18-A; mantidos arts. 16 e 23-B. A captura anterior ainda não substitui o snapshot oficial, por isso o estudo segue bloqueado."
+    },
+    {
+      "norm": "Decreto 6.214/2007",
+      "action": "Confirmado no Planalto que d6214.htm é apresentado como Texto compilado. O Anexo foi separado do ato que o aprova; mapeados 33 artigos do BPC para o edital e excluídos o art. 47 revogado e dispositivos de vigência, revogação, gestão genérica ou transição expirada. O Decreto 12.534/2025 alterou diversos dispositivos após o edital 2022; as diferenças estão separadas. A captura e a validação dos textos ainda estão pendentes."
     }
   ],
   "decreto6214_status": {
