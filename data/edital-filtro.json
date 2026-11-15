@@ -869,16 +869,17 @@
         "Art. 1",
         "Art. 2",
         "Art. 3",
-        "Art. 4",
-        "Art. 5"
+        "Art. 4"
       ],
-      "filter": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação.",
+      "filter": "Mantidos os arts. 1º a 4º, que tratam da criação da pensão especial às vítimas do Césio 137, categorias e valores, prova médica e dedução/compensação com indenização judicial. Excluído o art. 5º, que trata apenas da alocação orçamentária da despesa, e arts. 6º e 7º, de vigência e revogação. A captura do Planalto ainda está pendente.",
       "blocked": true,
       "source_blocked": true,
-      "review_status": "recorte material revisado; captura oficial direta pendente",
+      "review_status": "recorte material refinado; captura direta do Planalto pendente",
       "topics": [
         "pensão especial às vítimas do acidente nuclear com Césio 137",
-        "categorias de beneficiários, valores, prova médica, acumulação/compensação e custeio"
+        "categorias de beneficiários e valores",
+        "comprovação por junta médica oficial",
+        "compensação com indenização judicial"
       ]
     },
     "lei-10559-2002": {
@@ -1728,10 +1729,6 @@
       "action": "Incluído o art. 9º, que altera o Regulamento da Previdência Social em matéria ligada ao enquadramento do pescador artesanal; retirado o art. 12, regra transitória para períodos iniciados até 31/03/2015; o art. 10, revogado, continua excluído."
     },
     {
-      "norm": "Lei 9.425/1996",
-      "action": "Recorte ajustado para manter arts. 1º a 5º, inclusive o art. 5º sobre o custeio da pensão, e excluir arts. 6º e 7º, de vigência e revogação. Fonte oficial Planalto localizada, mas a captura automatizada continua bloqueada."
-    },
-    {
       "norm": "Alterações posteriores ao edital 2022",
       "action": "Criado registro separado de alterações posteriores identificadas em normas constitucionais e previdenciárias. Não entram automaticamente no recorte do edital 2022; ficam sinalizadas para atualização de edital futuro e para comparação de redações."
     },
@@ -1772,10 +1769,6 @@
       "action": "Mantidos os arts. 1º a 5º, que definem os dependentes beneficiários da pensão especial por hemodiálise em Caruaru, critérios de concessão, natureza intransferível, extinção e condição de cessação dos efeitos. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência). Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
     },
     {
-      "norm": "Lei 9.425/1996 — Pensão especial do Césio 137",
-      "action": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
-    },
-    {
       "norm": "Lei 10.559/2002 — Anistiado político",
       "action": "Mantidos os arts. 1º a 20, relativos ao regime do anistiado político, declaração da condição, reparação econômica, contagem de tempo, readmissão/reintegração, revisão e regras de transição para pagamentos e litígios. Excluídos arts. 21 e 22, de vigência e revogação. Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
     },
@@ -1786,6 +1779,10 @@
     {
       "norm": "Lei 13.985/2020 — Pensão especial por síndrome congênita do Zika",
       "action": "Mantidos os arts. 1º, 2º e 4º, diretamente ligados à pensão especial para crianças com síndrome congênita do Zika: instituição, valor, requerimento/perícia e operacionalização pelo INSS/Dataprev. Excluídos art. 3º (despesa orçamentária), art. 5º (licença-maternidade/salário-maternidade das mães, assunto diverso do benefício especial listado), art. 6º (revogação) e art. 7º (vigência). Captura oficial do Planalto ainda não sincronizada; estudo e questões permanecem bloqueados."
+    },
+    {
+      "norm": "Lei 9.425/1996",
+      "action": "Retirado o art. 5º, que é mera alocação orçamentária, mantendo arts. 1º a 4º sobre pensão, beneficiários, valor, prova médica e compensação de indenização. Arts. 6º/7º (vigência/revogação) permanecem fora."
     }
   ],
   "decreto6214_status": {
