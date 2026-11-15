@@ -1202,9 +1202,12 @@ def run() -> int:
         last_success = previous_data.get("last_successful_check")
         limited = sum(1 for item in errors if item.get("source_status") == "rate_limited")
         blocked = sum(1 for item in errors if item.get("source_status") == "blocked")
+        incomplete = sum(1 for item in errors if item.get("source_failure_type") == "incomplete_response")
+        unavailable = sum(1 for item in errors if item.get("source_status") == "unavailable")
         summary = (
             f"{success_count} fonte(s) consultada(s); {len(errors)} fonte(s) apresentaram erro "
-            f"({limited} com limite de acesso e {blocked} bloqueada(s)). "
+            f"({limited} com limite de acesso, {blocked} bloqueada(s), "
+            f"{incomplete} com resposta incompleta e {unavailable} indisponível(is)). "
             "As capturas anteriores dessas fontes foram preservadas."
         )
     else:
@@ -1212,9 +1215,12 @@ def run() -> int:
         last_success = previous_data.get("last_successful_check")
         limited = sum(1 for item in errors if item.get("source_status") == "rate_limited")
         blocked = sum(1 for item in errors if item.get("source_status") == "blocked")
+        incomplete = sum(1 for item in errors if item.get("source_failure_type") == "incomplete_response")
+        unavailable = sum(1 for item in errors if item.get("source_status") == "unavailable")
         summary = (
-            f"Nenhuma fonte pôde ser consultada ({limited} com limite de acesso e "
-            f"{blocked} bloqueada(s)). As capturas anteriores foram preservadas."
+            f"Nenhuma fonte pôde ser consultada ({limited} com limite de acesso, "
+            f"{blocked} bloqueada(s), {incomplete} com resposta incompleta e "
+            f"{unavailable} indisponível(is)). As capturas anteriores foram preservadas."
         )
 
     output = {
