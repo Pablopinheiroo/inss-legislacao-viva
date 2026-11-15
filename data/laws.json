@@ -583,10 +583,11 @@
       "Art. 1",
       "Art. 2",
       "Art. 3",
-      "Art. 4"
+      "Art. 4",
+      "Art. 4-A"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os dispositivos que instituem a pensão especial da Síndrome da Talidomida, definem beneficiários e condições, regulam comprovação/manutenção/pagamento e tratam da isenção vinculada à pensão (art. 4-A). Excluídos arts. 5º e 6º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
@@ -594,7 +595,12 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial para pessoas com deficiência decorrente da Síndrome da Talidomida",
+      "requisitos, comprovação, valor, manutenção e pagamento",
+      "isenção de imposto de renda vinculada à pensão especial"
+    ]
   },
   {
     "id": "lei-7986-1989",
@@ -624,12 +630,10 @@
       "Art. 2",
       "Art. 3",
       "Art. 4",
-      "Art. 5",
-      "Art. 6",
-      "Art. 7"
+      "Art. 5"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os dispositivos sobre concessão da pensão vitalícia a seringueiros, transferência a dependentes, comprovação de atividade e carência, prazo de análise e início do pagamento. Excluídos arts. 6º e 7º, de instruções administrativas e convênios de pagamento, e arts. 8º e 9º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
@@ -637,7 +641,13 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão mensal vitalícia dos seringueiros recrutados durante a Segunda Guerra Mundial",
+      "transferência a dependentes em estado de carência",
+      "prova material da prestação de serviços e comprovação da carência",
+      "prazo de análise do pedido e início do pagamento"
+    ]
   },
   {
     "id": "lei-8059-1990",
@@ -684,11 +694,10 @@
       "Art. 19",
       "Art. 20",
       "Art. 21",
-      "Art. 22",
-      "Art. 23"
+      "Art. 22"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º a 22, que disciplinam a pensão especial de ex-combatente e dependentes, os requisitos, as hipóteses, a ordem de dependência, o valor, a acumulação, a transferência e a revisão. Excluídos art. 23 (dotação orçamentária), art. 24 (vigência) e art. 25 (revogações). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
@@ -696,7 +705,11 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial devida aos ex-combatentes da Segunda Guerra Mundial e dependentes",
+      "condições de concessão, dependentes, valor, acumulação, transferência e revisão"
+    ]
   },
   {
     "id": "lei-9422-1996",
@@ -728,8 +741,8 @@
       "Art. 4",
       "Art. 5"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º a 5º, que definem os dependentes beneficiários da pensão especial por hemodiálise em Caruaru, critérios de concessão, natureza intransferível, extinção e condição de cessação dos efeitos. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
@@ -737,7 +750,11 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial aos dependentes das vítimas de hemodiálise de Caruaru",
+      "condições para concessão, natureza personalíssima/intransferível e hipóteses de cessação"
+    ]
   },
   {
     "id": "lei-9425-1996",
@@ -769,8 +786,8 @@
       "Art. 4",
       "Art. 5"
     ],
-    "article_filter_status": "recorte_material_corrigido_fonte_pendente",
-    "article_filter_note": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do Césio 137, seus critérios, comprovação e custeio; excluídos os arts. 6º e 7º, de vigência e revogação. A captura atual ainda não foi sincronizada diretamente no Planalto.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º a 5º, que tratam da pensão especial às vítimas do acidente com Césio 137, categorias e valores, comprovação médica, dedução de indenização judicial e custeio. Excluídos arts. 6º e 7º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
@@ -778,7 +795,11 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial às vítimas do acidente nuclear com Césio 137",
+      "categorias de beneficiários, valores, prova médica, acumulação/compensação e custeio"
+    ]
   },
   {
     "id": "lei-10559-2002",
@@ -825,8 +846,8 @@
       "Art. 19",
       "Art. 20"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º a 20, relativos ao regime do anistiado político, declaração da condição, reparação econômica, contagem de tempo, readmissão/reintegração, revisão e regras de transição para pagamentos e litígios. Excluídos arts. 21 e 22, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
@@ -834,7 +855,13 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "regime jurídico do anistiado político",
+      "declaração da condição de anistiado e reparação econômica",
+      "contagem de tempo, readmissão/reintegração e revisão",
+      "regras de transição e situações de pagamentos anteriores"
+    ]
   },
   {
     "id": "lei-11520-2007",
@@ -863,11 +890,10 @@
       "Art. 1",
       "Art. 2",
       "Art. 3",
-      "Art. 4",
-      "Art. 5"
+      "Art. 4"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º a 4º, que tratam da pensão especial por hanseníase, beneficiários, requerimento e comprovação, acumulação e assistência de saúde aos beneficiários. Excluído art. 5º (convênios de cooperação), art. 6º (despesa orçamentária) e art. 7º (vigência). A inclusão posterior do art. 1º-A pela Lei 14.736/2023 não integra o recorte histórico do edital de 2022 e fica identificada separadamente. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
@@ -891,7 +917,12 @@
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial para pessoas atingidas pela hanseníase submetidas a isolamento/internação compulsórios",
+      "beneficiários, requisitos e requerimento",
+      "intransferibilidade, acumulação e assistência de saúde"
+    ]
   },
   {
     "id": "lei-13985-2020",
@@ -921,8 +952,8 @@
       "Art. 2",
       "Art. 4"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_status": "recorte_material_revisado_com_base_no_edital",
+    "article_filter_note": "Mantidos os arts. 1º, 2º e 4º, diretamente ligados à pensão especial para crianças com síndrome congênita do Zika: instituição, valor, requerimento/perícia e operacionalização pelo INSS/Dataprev. Excluídos art. 3º (despesa orçamentária), art. 5º (licença-maternidade/salário-maternidade das mães, assunto diverso do benefício especial listado), art. 6º (revogação) e art. 7º (vigência). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
@@ -930,7 +961,11 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "pensão especial para crianças com síndrome congênita do Zika beneficiárias do BPC",
+      "valor, requerimento, avaliação médica e operacionalização"
+    ]
   },
   {
     "id": "lei-10779-2003",
