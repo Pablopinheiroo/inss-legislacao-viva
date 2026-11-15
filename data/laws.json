@@ -2005,9 +2005,9 @@
     "priority_reason": "Norma expressamente indicada no edital; estudar apenas dispositivos relacionados às rotinas e aos temas do programa, após obter texto consolidado confiável.",
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
-    "source_verification_status": "fonte_oficial_portal_in_localizada_conteudo_incompleto",
-    "source_sync_status": "texto_integral_consolidado_pendente",
-    "source_policy_note": "Portal IN oficial localizado; retorno automatizado incompleto e texto integral não capturado.",
+    "source_verification_status": "texto_integral_indexado_portal_in_acesso_direto_403",
+    "source_sync_status": "texto_integral_nao_importado",
+    "source_policy_note": "O Portal IN oficial indexa o texto e trechos atuais da IN 128, inclusive alterações da IN 212/2026. A captura completa por artigo ainda não foi importada. O texto apresenta redações anteriores riscadas; o material deve ser limpo antes de liberar estudo.",
     "include_articles": [],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
@@ -2017,7 +2017,7 @@
     "preferred_source_format": "texto_consolidado_portal_oficial_inss",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Portal IN oficial retornou menos de 350 caracteres úteis; o texto integral não foi importado."
+    "source_last_error": "A página oficial do Portal IN está indexada com conteúdo vigente e alterações até a IN PRES/INSS 212/2026 (12/08/2026), mas a abertura direta retorna HTTP 403 e o monitor não conseguiu extrair o texto integral."
   },
   {
     "id": "decreto-lei-2848-1940",
