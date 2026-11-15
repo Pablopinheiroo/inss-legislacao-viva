@@ -54,13 +54,13 @@ class MonitorTests(unittest.TestCase):
 
     def test_decree_3048_snapshot_uses_only_regulamento_annex(self):
         source = (
-            "DECRETO Nº 3.048, DE 6 DE MAIO DE 1999.\\n"
-            "Art. 1º O Regulamento da Previdência Social passa a vigorar na forma do anexo.\\n"
-            "Art. 2º Este Decreto entra em vigor na data de sua publicação.\\n"
-            "Art. 3º Ficam revogados os decretos anteriores.\\n"
-            "REGULAMENTO DA PREVIDÊNCIA SOCIAL\\n"
-            "LIVRO I\\n"
-            "Art. 1º A seguridade social compreende ações integradas.\\n"
+            "DECRETO Nº 3.048, DE 6 DE MAIO DE 1999.\n"
+            "Art. 1º O Regulamento da Previdência Social passa a vigorar na forma do anexo.\n"
+            "Art. 2º Este Decreto entra em vigor na data de sua publicação.\n"
+            "Art. 3º Ficam revogados os decretos anteriores.\n"
+            "REGULAMENTO DA PREVIDÊNCIA SOCIAL\n"
+            "LIVRO I\n"
+            "Art. 1º A seguridade social compreende ações integradas.\n"
             "Art. 2º A saúde é direito de todos e dever do Estado."
         )
         law = {
