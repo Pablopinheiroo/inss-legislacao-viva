@@ -1934,7 +1934,7 @@ function updateClozeArticleOptions() {
     const label=type==="inciso"?"incisos":"parágrafos";
     $("#cloze-note").textContent=available.length+" artigos possuem "+label+" identificados. Escolha um artigo e, opcionalmente, um dispositivo específico.";
   } else {
-    $("#cloze-note").textContent=available.length+" artigos disponíveis nesta norma. Fonte consultada em "+formatDate(clozeSnapshot.snapshot.captured_at)+".";
+    $("#cloze-note").textContent=available.length+" artigos disponíveis nesta captura salva em "+formatDate(clozeSnapshot.snapshot.captured_at)+". Revalidação oficial pendente.";
   }
 }
 function updateClozeDeviceOptions() {
@@ -2960,8 +2960,9 @@ async function loadQuestionBank() {
       return valid;
     });
     updateQuizFilters();
-    note.textContent = questionBank.length + " questões validadas disponíveis. Filtros: matéria, assunto, norma, artigo e dificuldade."
-      +(questionSuspendedCount?" "+questionSuspendedCount+" item(ns) suspensos por falta de fundamento, fonte ou divergência do artigo atual."+describeSuspendedQuestionItems(questionSuspendedItems):" Todos os itens passaram pela conferência automática.");
+    note.textContent = questionBank.length + " questões validadas pela captura local disponível. Filtros: matéria, assunto, norma, artigo e dificuldade."
+      +(questionSuspendedCount?" "+questionSuspendedCount+" item(ns) suspensos por falta de fundamento, fonte ou divergência do artigo salvo."+describeSuspendedQuestionItems(questionSuspendedItems):" Todos os itens passaram pela conferência automática.")
+      +" Atenção: as capturas locais ainda aguardam revalidação direta nas fontes oficiais.";
     const simulatorNote=$("#simulado-bank-note");
     if(simulatorNote)simulatorNote.textContent=questionBank.length>=60
       ?questionBank.length+" questões disponíveis. Os três formatos estão liberados: 10, 20 e 60 questões."
@@ -4245,7 +4246,7 @@ function buildMemoryDeck() {
       + " cartões iniciais disponíveis. Ao abrir este modo, o sistema também carregará as capturas das normas para ampliar o baralho.";
   } else {
     $("#memory-note").textContent = memoryCards.length
-      + " cartões disponíveis, montados com artigos das capturas atuais, questões validadas, alterações confirmadas e cartões pessoais.";
+      + " cartões disponíveis, montados com artigos das capturas salvas, questões conferidas contra esses textos, alterações registradas e cartões pessoais. Revalidação oficial pendente.";
   }
   if (!memoryCards.length) {
     $("#memory-note").textContent = "Nenhum cartão pôde ser montado. Confira se a Biblioteca Lei Seca e os bancos de estudo conseguiram carregar os artigos.";
