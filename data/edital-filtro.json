@@ -196,7 +196,13 @@
     "cutoff": "O recorte de assuntos segue os itens 14.2.2 e 14.2.3 do Edital INSS 2022. Alterações legislativas posteriores à publicação do edital devem ser identificadas separadamente, não tratadas como conteúdo originalmente cobrado.",
     "capture_state": "Tentativa automática de recaptura feita em 15/11/2026: 0/28 fontes entregaram texto legal íntegro. O Planalto redirecionou o monitor para a página institucional genérica do gov.br/planalto e o Portal IN retornou resposta com menos de 350 caracteres úteis. Nenhuma captura antiga foi substituída; as 28 normas estão bloqueadas para estudo e geração de questões até sincronização direta.",
     "post_edital_updates": "Mudanças posteriores a 15/09/2022 devem ser identificadas separadamente. A existência de texto compilado atual não transforma automaticamente uma alteração posterior em conteúdo do edital de 2022.",
-    "runtime_rule": "A biblioteca, o banco C/E, Encontre o Erro, Descubra o Artigo, Várias Afirmações, Completar Lei Seca, Antes e Depois e Memorização Ativa só podem usar norma com study_blocked=false, source_sync_status=sincronizado_e_validado e snapshot.source_url_used idêntica à preferred_source_url."
+    "runtime_rule": "A biblioteca, o banco C/E, Encontre o Erro, Descubra o Artigo, Várias Afirmações, Completar Lei Seca, Antes e Depois e Memorização Ativa só podem usar norma com study_blocked=false, source_sync_status=sincronizado_e_validado e snapshot.source_url_used idêntica à preferred_source_url.",
+    "last_check": {
+      "attempted_at": "2026-11-15T01:44:50Z",
+      "result": "Nenhuma fonte retornou texto legal íntegro: 27 URLs do Planalto classificadas como bloqueadas por redirecionamento antirobô; IN 128/2022 retornou resposta incompleta (menos de 350 caracteres úteis).",
+      "preserved_snapshots": true,
+      "study_release_rule": "Nenhuma norma deve ser liberada até que o snapshot seja diretamente capturado da URL oficial preferencial, esteja completo e tenha as redações anteriores riscadas e os dispositivos revogados limpos."
+    }
   },
   "in128_status": {
     "problem": "A captura anterior era só índice de alterações, com article_count 0.",
@@ -658,11 +664,13 @@
         "Art. 1",
         "Art. 2",
         "Art. 3",
-        "Art. 4"
+        "Art. 4",
+        "Art. 5"
       ],
-      "filter": "apenas dispositivos correspondentes ao edital",
-      "blocked": false,
-      "source_blocked": true
+      "filter": "pensão especial às vítimas do Césio 137: concessão, critérios, comprovação e custeio; excluídos dispositivos finais",
+      "blocked": true,
+      "source_blocked": true,
+      "review_status": "recorte_material_corrigido; sincronizacao_Planalto_pendente"
     },
     "lei-10559-2002": {
       "include_articles": [
@@ -1460,6 +1468,10 @@
     {
       "norm": "Lei 8.112/1990",
       "action": "Corrigido o recorte: acrescentados os arts. 143 a 182, que disciplinam apuração, sindicância e processo administrativo disciplinar, expressamente cobertos pelo tópico regime disciplinar do edital. A lista agora inclui 176 dispositivos, mas segue bloqueada até sincronização com a fonte compilada do Planalto."
+    },
+    {
+      "norm": "Lei 9.425/1996",
+      "action": "Recorte ajustado para manter arts. 1º a 5º, inclusive o art. 5º sobre o custeio da pensão, e excluir arts. 6º e 7º, de vigência e revogação. Fonte oficial Planalto localizada, mas a captura automatizada continua bloqueada."
     }
   ],
   "decreto6214_status": {
