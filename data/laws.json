@@ -2031,7 +2031,7 @@
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_integral_indexado_portal_in_acesso_direto_403",
     "source_sync_status": "texto_integral_nao_importado",
-    "source_policy_note": "O Portal IN oficial indexa o texto e trechos atuais da IN 128, inclusive alterações da IN 212/2026. A captura completa por artigo ainda não foi importada. O texto apresenta redações anteriores riscadas; o material deve ser limpo antes de liberar estudo.",
+    "source_policy_note": "A página oficial do INSS indexa a IN 128 como alterada, com última modificação em 12/08/2026 e última alteração listada pela IN 212/2026. O índice oficial também identifica os arts. 654 a 657 como revogados pela IN 162/2024 e o Anexo XXVI como revogado pela IN 174/2024. A íntegra não foi importada para o banco; manter bloqueada até captura integral e limpeza das redações riscadas.",
     "include_articles": [],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
@@ -2041,7 +2041,23 @@
     "preferred_source_format": "texto_consolidado_portal_oficial_inss",
     "study_block_reason": "Texto oficial indexado, mas não importado integralmente. Depois da captura, será necessário mapear apenas os artigos e subdivisões relacionados ao item 14.2.3 antes de liberar a leitura.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "A página oficial do Portal IN está indexada com conteúdo vigente e alterações até a IN PRES/INSS 212/2026 (12/08/2026), mas a abertura direta retorna HTTP 403 e o monitor não conseguiu extrair o texto integral."
+    "source_last_error": "A página oficial do Portal IN está indexada com conteúdo vigente e alterações até a IN PRES/INSS 212/2026 (12/08/2026), mas a abertura direta retorna HTTP 403 e o monitor não conseguiu extrair o texto integral.",
+    "source_index_url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
+    "source_index_last_checked": "2026-11-15",
+    "source_index_last_updated": "2026-06-10",
+    "source_last_amendment": "IN PRES/INSS nº 212, de 6 de agosto de 2026",
+    "known_revoked_devices": [
+      {
+        "device": "Arts. 654 a 657",
+        "act": "IN PRES/INSS nº 162, de 14/03/2024",
+        "status": "revogados"
+      },
+      {
+        "device": "Anexo XXVI",
+        "act": "IN PRES/INSS nº 174, de 07/10/2024",
+        "status": "revogado"
+      }
+    ]
   },
   {
     "id": "decreto-lei-2848-1940",
