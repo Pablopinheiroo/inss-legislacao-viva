@@ -194,7 +194,7 @@
     "no_third_party": "Não usar sites privados ou agregadores como fonte do texto legal. A captura anterior da Câmara é identificada como histórica e não é apresentada como sincronizada com a nova fonte preferencial.",
     "revocations": "Artigos inteiramente revogados, textos históricos e redações substituídas não entram no banco ativo. Em dispositivos com redação vigente e parágrafos alterados, exigir comparação de componentes para não misturar redações.",
     "cutoff": "O recorte de assuntos segue os itens 14.2.2 e 14.2.3 do Edital INSS 2022. Alterações legislativas posteriores à publicação do edital devem ser identificadas separadamente, não tratadas como conteúdo originalmente cobrado.",
-    "capture_state": "As URLs preferenciais são diretas e oficiais; a Lei 8.212 usa o arquivo Planalto l8212compilado.htm (Texto compilado) e o Decreto 6.214 usa d6214.htm (Texto compilado). A captura automatizada de 15/11/2026 ainda encontrou bloqueio, portanto a validação de origem do catálogo não equivale a snapshot sincronizado.",
+    "capture_state": "A consulta automatizada do Planalto/Portal IN falhou por bloqueio/403. Os snapshots locais anteriores foram preservados e voltaram a ficar acessíveis com aviso de captura histórica não revalidada. Não declarar sincronização atual.",
     "post_edital_updates": "Mudanças posteriores a 15/09/2022 devem ser identificadas separadamente. A existência de texto compilado atual não transforma automaticamente uma alteração posterior em conteúdo do edital de 2022.",
     "runtime_rule": "A biblioteca, o banco C/E, Encontre o Erro, Descubra o Artigo, Várias Afirmações, Completar Lei Seca, Antes e Depois e Memorização Ativa só podem usar norma com study_blocked=false, source_sync_status=sincronizado_e_validado e snapshot.source_url_used idêntica à preferred_source_url.",
     "last_check": {
@@ -1607,7 +1607,7 @@
       "data/descubra-artigo.json": 22,
       "data/afirmacoes-por-artigo.json": 5
     },
-    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial. A questão 8212-art10-financiamento-01 está suspensa e arquivada por divergência entre o hash e o texto do dispositivo. Os contadores anteriores eram o conteúdo gravado nos arquivos JSON. A política de execução agora suspende todos esses registros porque nenhuma captura atual foi confirmada no Planalto/Portal IN.",
+    "note": "Comparação desde o banco original: removidos 17 itens de Certo/Errado, 13 de Encontre o Erro (8 no primeiro corte e 5 por referirem a norma bloqueada), 22 de Descubra o Artigo (incluindo alternativas fora do edital) e 5 grupos de afirmações. source_url preserva a fonte real da captura; preferred_source_url indica a fonte oficial preferencial. A questão 8212-art10-financiamento-01 está suspensa e arquivada por divergência entre o hash e o texto do dispositivo. Os contadores anteriores eram o conteúdo gravado nos arquivos JSON. A política de execução agora suspende todos esses registros porque nenhuma captura atual foi confirmada no Planalto/Portal IN. O bloqueio global de estudo foi desfeito: capturas locais anteriores voltaram a ficar acessíveis, com aviso de que ainda precisam de revalidação oficial. A IN 128 segue bloqueada por não ter texto integral por artigo.",
     "active_counts": {
       "data/questoes.json": 0,
       "data/encontre-erro.json": 0,
@@ -1665,7 +1665,7 @@
       "in-128-2022",
       "decreto-lei-2848-1940"
     ],
-    "runtime_status": "Bancos armazenados preservados para auditoria, mas nenhum item é exibido ou jogável enquanto a fonte de sua norma não estiver sincronizada e validada.",
+    "runtime_status": "Questões voltam a ser filtradas contra os hashes, trechos-âncora e URLs das capturas locais que acompanham cada item. Capturas antigas permanecem sinalizadas para conferência da redação vigente.",
     "suspended_for_source": {
       "data/questoes.json": 151,
       "data/encontre-erro.json": 61,
@@ -1675,84 +1675,6 @@
   },
   "scope_items": [
     "14.2.3"
-  ],
-  "non_legislative_study_blocks": [
-    {
-      "item": "14.2.2",
-      "discipline": "Língua Portuguesa",
-      "topics": [
-        "Compreensão e interpretação de textos",
-        "Tipologia textual",
-        "Ortografia e acentuação",
-        "Classes de palavras",
-        "Crase",
-        "Sintaxe",
-        "Pontuação",
-        "Concordância e regência",
-        "Semântica",
-        "Correspondência oficial"
-      ],
-      "mode": "módulo teórico e questões; não é Lei Seca",
-      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
-    },
-    {
-      "item": "14.2.2",
-      "discipline": "Informática",
-      "topics": [
-        "Internet e intranet",
-        "Tecnologias, ferramentas, aplicativos e procedimentos",
-        "Microsoft Office (conforme Edital nº 2)",
-        "Windows 7 e 10",
-        "Navegadores e correio eletrônico",
-        "Segurança da informação, vírus e worms"
-      ],
-      "mode": "módulo teórico e questões; não é Lei Seca",
-      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
-    },
-    {
-      "item": "14.2.2",
-      "discipline": "Raciocínio Lógico",
-      "topics": [
-        "Proposições e valores lógicos",
-        "Sentenças abertas",
-        "Tabelas-verdade",
-        "Conectivos",
-        "Tautologia",
-        "Conjuntos",
-        "Porcentagens"
-      ],
-      "mode": "módulo teórico e questões; não é Lei Seca",
-      "status": "mapeado_no_edital; conteudo_e_banco_proprio_pendentes"
-    },
-    {
-      "item": "14.2.2",
-      "discipline": "Direito Administrativo — teoria",
-      "topics": [
-        "Estado, governo e Administração Pública",
-        "Fontes e princípios do Direito Administrativo",
-        "Organização administrativa direta e indireta",
-        "Agentes públicos",
-        "Poderes administrativos",
-        "Atos administrativos",
-        "Serviços públicos",
-        "Controle e responsabilidade civil do Estado"
-      ],
-      "mode": "material teórico vinculado ao edital; não criar artigos artificiais",
-      "status": "mapeado_no_edital; material_teorico_pendente"
-    },
-    {
-      "item": "14.2.3",
-      "discipline": "Fundamentos previdenciários sem artigo isolado",
-      "topics": [
-        "Origem e evolução legislativa no Brasil",
-        "Conceito, conteúdo, fontes e autonomia da legislação previdenciária",
-        "Aplicação das normas: vigência, hierarquia, interpretação e integração",
-        "O servidor público como agente de desenvolvimento social",
-        "Saúde e qualidade de vida no serviço público"
-      ],
-      "mode": "módulo teórico, integrado às matérias correspondentes",
-      "status": "mapeado_no_edital; material_teorico_pendente"
-    }
   ],
   "review_findings": [
     {
@@ -1989,5 +1911,6 @@
     ],
     "pending": "Comparar integralmente cada dispositivo alterado com a redação anterior quando a captura oficial completa estiver disponível."
   },
-  "article_capture_rule": "require_all_articles=true para todas as normas com lista include_articles. O monitor deve recusar uma captura se algum dispositivo selecionado não for identificado, preservando o snapshot anterior e registrando a falha. A comparação do acervo antigo encontrou 12 artigos selecionados que haviam sido mesclados em artigo anterior; o parser foi corrigido e os testes passaram a cobrir esses casos."
+  "article_capture_rule": "require_all_articles=true para todas as normas com lista include_articles. O monitor deve recusar uma captura se algum dispositivo selecionado não for identificado, preservando o snapshot anterior e registrando a falha. A comparação do acervo antigo encontrou 12 artigos selecionados que haviam sido mesclados em artigo anterior; o parser foi corrigido e os testes passaram a cobrir esses casos.",
+  "site_scope": "Somente instrumentos normativos: Constituição, emenda constitucional, lei, lei complementar, decreto, decreto-lei e instrução normativa. Não exibir matérias sem norma própria, como Português, Informática e Raciocínio Lógico."
 }
