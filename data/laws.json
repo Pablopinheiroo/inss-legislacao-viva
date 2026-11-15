@@ -887,11 +887,11 @@
       "Art. 5",
       "Art. 6",
       "Art. 8",
-      "Art. 11",
-      "Art. 12"
+      "Art. 9",
+      "Art. 11"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado",
-    "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
+    "article_filter_status": "recorte_revisado_por_assunto_e_vigencia",
+    "article_filter_note": "Mantidos os dispositivos sobre seguro-defeso, requisitos, operacionalização e regras do pescador artesanal, inclusive o art. 9º que altera o Regulamento da Previdência Social. Excluídos o art. 10 (revogado) e o art. 12 (regra transitória para períodos de defeso iniciados até 31/03/2015).",
     "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
