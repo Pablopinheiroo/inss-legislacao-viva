@@ -1111,9 +1111,10 @@
         "Art. 4",
         "Art. 6",
         "Art. 7",
-        "Art. 8"
+        "Art. 8",
+        "Art. 8-A"
       ],
-      "filter": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência.",
+      "filter": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada. Incluído também o art. 8º-A, que trata da compensação financeira entre RPPS, tema expressamente listado no edital.",
       "blocked": true,
       "source_blocked": true,
       "topics": [
@@ -1839,10 +1840,6 @@
       "action": "Incluídos os arts. 27 e 27-A, relativos a hipóteses de dispensa de carência e à contagem de carência após perda da qualidade de segurado. O texto atual do Planalto confirma o art. 27-A com redação dada pelo Decreto 10.410/2020."
     },
     {
-      "norm": "Lei 9.796/1999",
-      "action": "Incluído o art. 8º por disciplinar atualização de valores em atraso e solidariedade entre entes federativos. Mantido fora o art. 5º porque é estoque transitório de benefícios antigos com prazo expirado; arts. 9º e 10 são regulamentação/vigência."
-    },
-    {
       "norm": "Decreto 10.188/2019",
       "action": "Recorte reduzido de arts. 1º–24 para arts. 1º–17. Arts. 18–24 tratam do Conselho Nacional dos RPPS e não são objeto explícito do edital; arts. 25–26 eram transições com prazo em 2021; arts. 27–28 são revogação e vigência."
     },
@@ -1853,6 +1850,10 @@
     {
       "norm": "LOAS — Lei 8.742/1993",
       "action": "Incluído o art. 35, que disciplina a operação do BPC e a definição regulamentar da comprovação, suspensão, pagamento e compartilhamento de dados. O § 2º foi incluído depois do edital 2022 e será tratado como atualização posterior, não como texto cobrado na data do edital."
+    },
+    {
+      "norm": "Lei 9.796/1999",
+      "action": "Incluído também o art. 8º-A, acrescentado pela Lei 13.846/2019, que regula a compensação financeira entre RPPS. Mantidos arts. 1º a 4º e 6º a 8º; art. 5º é transição antiga com prazo expirado; arts. 9º e 10 são regulamentação e vigência. Art. 8º-C, incluído em 2025, permanece fora do recorte histórico do edital."
     }
   ],
   "decreto6214_status": {
