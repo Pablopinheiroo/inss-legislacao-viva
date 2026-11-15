@@ -723,7 +723,7 @@ def make_snapshot(
     # diferentes no mesmo registro do banco.
     if law.get("id") == "decreto-3048-1999":
         annex = re.search(
-            r"(?im)^\\s*REGULAMENTO\\s+DA\\s+PREVIDÊNCIA\\s+SOCIAL\\s*$",
+            r"(?im)^\s*REGULAMENTO\s+DA\s+PREVIDÊNCIA\s+SOCIAL\s*$",
             text,
         )
         if not annex:
