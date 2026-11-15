@@ -1111,12 +1111,13 @@
       "Art. 26-D",
       "Art. 26-E",
       "Art. 26-F",
+      "Art. 35",
       "Art. 37",
       "Art. 40-B",
       "Art. 40-C"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
+    "article_filter_note": "Mantidos os dispositivos sobre organização da assistência e BPC/auxílio-inclusão: princípios e objetivos, definição de beneficiários, requisitos, renda, avaliação, revisão, suspensão, CadÚnico, operacionalização, pagamento e recurso. Incluído o art. 35, pois trata diretamente da operação do BPC e dos procedimentos de comprovação, suspensão, pagamento e compartilhamento de dados. O § 2º do art. 35 foi incluído após o edital 2022 e fica sinalizado separadamente como atualização posterior. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
@@ -1158,7 +1159,14 @@
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "conceito, princípios e objetivos da assistência social",
+      "BPC: idoso, pessoa com deficiência, renda, avaliação e requisitos",
+      "revisão, suspensão, cessação e retorno ao trabalho",
+      "auxílio-inclusão",
+      "operação do BPC, comprovação, suspensão, pagamento e dados (art. 35)"
+    ]
   },
   {
     "id": "lei-14176-2021",
@@ -1253,11 +1261,11 @@
       "Art. 36",
       "Art. 39",
       "Art. 42",
-      "Art. 48",
-      "Art. 49"
+      "Art. 47-A",
+      "Art. 48"
     ],
-    "article_filter_status": "recorte_bpc_mapeado_fonte_pendente",
-    "article_filter_note": "Recorte voltado a BPC: conceito e beneficiários, definição de idoso e pessoa com deficiência, requisitos, renda familiar, inscrição e requerimento, avaliação, concessão, pagamento, manutenção, recursos, revisão e cessação. Artigos de vigência, revogação, atribuições genéricas de gestão e disposições não ligadas aos tópicos do edital ficam fora. Alterações de 2025 estão registradas separadamente e não devem ser confundidas com o corte temporal do edital 2022.",
+    "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
+    "article_filter_note": "Mantidos os dispositivos diretamente ligados ao BPC: beneficiários, requisitos, acumulação, avaliação, cálculo da renda, inscrição, requerimento, concessão, pagamento, manutenção, recurso, suspensão, retorno ao trabalho, revisão e cessação. Incluído o art. 47-A sobre suspensão especial quando a pessoa com deficiência exerce atividade remunerada. Excluído o art. 49, que trata de restituição/ cobrança de valores indevidos, não indicada no conteúdo programático; art. 47 revogado permanece excluído. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
@@ -1282,7 +1290,15 @@
         "status": "revogado; excluir do banco ativo"
       }
     ],
-    "post_edital_change_status": "alteracoes_posteriores_identificadas; recaptura_integral_pendente"
+    "post_edital_change_status": "alteracoes_posteriores_identificadas; recaptura_integral_pendente",
+    "study_scope_topics": [
+      "conceito e beneficiários do BPC",
+      "requisitos, renda familiar e acumulação",
+      "inscrição, requerimento, avaliação e concessão",
+      "pagamento, manutenção, recursos e competências do INSS",
+      "suspensão especial do BPC quando a pessoa com deficiência trabalha (art. 47-A)",
+      "revisão e cessação do benefício"
+    ]
   },
   {
     "id": "lei-9796-1999",
@@ -1313,10 +1329,11 @@
       "Art. 3",
       "Art. 4",
       "Art. 6",
-      "Art. 7"
+      "Art. 7",
+      "Art. 8"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
+    "article_filter_note": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
@@ -1330,11 +1347,25 @@
         "act": "Lei 15.265/2025",
         "description": "A relação oficial de leis de 2025 informa alteração da Lei 9.796/1999.",
         "status": "posterior_ao_edital_2022; diff por dispositivo pendente"
+      },
+      {
+        "device": "Art. 8º-C",
+        "act": "Lei nº 15.265/2025",
+        "description": "Estabeleceu limite anual de despesa federal com compensação financeira dentro da dotação da lei orçamentária.",
+        "status": "posterior_ao_edital_2022; não inserir no recorte histórico; acompanhar para edital futuro"
       }
     ],
-    "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
+    "post_edital_change_status": "alteracao_posterior_identificada_art_8C_2025; outras mudancas devem ser rechecadas na recaptura compilada",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "regime de origem e regime instituidor",
+      "contagem recíproca e direito à compensação",
+      "cálculo e fluxo financeiro da compensação",
+      "cadastro e desembolso pelo INSS",
+      "comunicação de revisão ou extinção do benefício",
+      "atualização por atraso e compensação entre RPPS"
+    ]
   },
   {
     "id": "decreto-10188-2019",
@@ -1376,17 +1407,10 @@
       "Art. 14",
       "Art. 15",
       "Art. 16",
-      "Art. 17",
-      "Art. 18",
-      "Art. 19",
-      "Art. 20",
-      "Art. 21",
-      "Art. 22",
-      "Art. 23",
-      "Art. 24"
+      "Art. 17"
     ],
-    "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
-    "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
+    "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
+    "article_filter_note": "Mantidos os arts. 1º a 17, que regulam a compensação financeira entre RGPS e RPPS e entre RPPS: conceitos, requerimentos, análise, cálculo, estoque, fluxo mensal, limites, pagamento, responsabilidades e aspectos operacionais. Retirados arts. 18 a 24, que tratam da organização e funcionamento do Conselho Nacional dos RPPS (composição, reuniões, secretaria e atas), tema não indicado no conteúdo programático; arts. 25 e 26 são disposições transitórias com prazos de 2021 já encerrados; art. 27 é revogação e art. 28 é vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
@@ -1394,7 +1418,12 @@
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "study_scope_topics": [
+      "compensação financeira entre RGPS e RPPS e entre RPPS",
+      "requerimento, análise, cálculo, estoque e fluxo mensal",
+      "limites, pagamento, responsabilidades e operacionalização da compensação"
+    ]
   },
   {
     "id": "ec-103-2019",
