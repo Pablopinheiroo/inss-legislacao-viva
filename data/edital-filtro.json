@@ -487,11 +487,9 @@
         "Art. 1",
         "Art. 2",
         "Art. 3",
-        "Art. 4",
-        "Art. 5",
-        "Art. 6",
         "Art. 7",
         "Art. 8",
+        "Art. 8-A",
         "Art. 9",
         "Art. 10",
         "Art. 11",
@@ -501,7 +499,11 @@
         "Art. 15",
         "Art. 16",
         "Art. 17",
+        "Art. 17-B",
+        "Art. 17-C",
+        "Art. 17-D",
         "Art. 18",
+        "Art. 18-A",
         "Art. 19",
         "Art. 20",
         "Art. 21",
@@ -511,10 +513,18 @@
         "Art. 23-B",
         "Art. 23-C"
       ],
-      "filter": "dispositivos materiais da Lei de Improbidade, incluindo os arts. 23-A, 23-B e 23-C; excluídas as cláusulas finais de vigência e revogação",
-      "blocked": false,
-      "review_status": "escopo_comparado_com_o_item_14_2_2; recaptura_compilada_pendente",
-      "source_blocked": true
+      "filter": "dispositivos vigentes que tratam de improbidade administrativa e responsabilização; removidos arts. 4–6 e 10-A revogados e 17-A vetado",
+      "topics": [
+        "atos de improbidade e requisitos",
+        "agentes públicos e terceiros",
+        "ressarcimento e sanções",
+        "indisponibilidade de bens",
+        "ação de improbidade e acordo de não persecução civil",
+        "prescrição e responsabilização"
+      ],
+      "blocked": true,
+      "source_blocked": true,
+      "review_status": "conteudo_compilado_oficial_comparado; snapshot_direto_planalto_pendente"
     },
     "lei-9784-1999": {
       "include_articles": [
@@ -1458,10 +1468,6 @@
       "action": "Separado o art. 11 do art. 10, pois a captura antiga havia mesclado os dois. O art. 11 foi mantido por enumerar as receitas da Seguridade Social e as contribuições sociais."
     },
     {
-      "norm": "Lei 8.429/1992",
-      "action": "Corrigida a lista para incluir o art. 23-B, que integra o texto material da lei. Os arts. 24 e 25 de vigência e revogação permanecem fora do recorte ativo. Fonte preferencial: texto compilado do Planalto; captura direta pendente."
-    },
-    {
       "norm": "Decreto 8.424/2015",
       "action": "Incluído o art. 9º, que altera o Regulamento da Previdência Social em matéria ligada ao enquadramento do pescador artesanal; retirado o art. 12, regra transitória para períodos iniciados até 31/03/2015; o art. 10, revogado, continua excluído."
     },
@@ -1476,6 +1482,10 @@
     {
       "norm": "Alterações posteriores ao edital 2022",
       "action": "Criado registro separado de alterações posteriores identificadas em normas constitucionais e previdenciárias. Não entram automaticamente no recorte do edital 2022; ficam sinalizadas para atualização de edital futuro e para comparação de redações."
+    },
+    {
+      "norm": "Lei 8.429/1992",
+      "action": "Atualizado o recorte com base no texto compilado oficial do Planalto: excluídos arts. 4º a 6º e 10-A (revogados) e 17-A (vetado); incluídos arts. 8-A, 17-B, 17-C, 17-D e 18-A; mantidos arts. 16 e 23-B. A captura anterior ainda não substitui o snapshot oficial, por isso o estudo segue bloqueado."
     }
   ],
   "decreto6214_status": {
