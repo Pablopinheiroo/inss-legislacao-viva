@@ -31,9 +31,6 @@ MONITOR_VERSION = 4
 ARTICLE_RE = re.compile(
     r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:[º°o])?\s*(?:[-–]\s*([A-Z]))?\.?\s*(?:\s+(.*))?$"
 )
-REFERENCE_STARTS = {
-    "da", "das", "de", "do", "dos", "conforme", "vide", "citado", "citada"
-}
 
 
 def now_utc() -> str:
