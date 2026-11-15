@@ -1496,12 +1496,12 @@
     "title": "Lei nº 8.212, de 24 de julho de 1991",
     "short_title": "Lei 8.212/1991 — Custeio da Seguridade Social",
     "category": "Lei",
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
     "source_name": "Planalto — texto compilado",
     "edital_item": "14.2.3 — Custeio e financiamento da Seguridade",
     "enabled": true,
     "fetch_urls": [
-      "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm"
+      "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
     ],
     "monitor_mode": "texto",
     "matter": "Direito Previdenciário",
@@ -1513,7 +1513,7 @@
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
     "source_sync_status": "recaptura_direta_planalto_bloqueada",
-    "source_policy_note": "Página oficial do Planalto identificada expressamente como Texto compilado. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
+    "source_policy_note": "O Planalto confirma a página l8212cons.htm como Texto compilado. A captura atual do projeto continua originária de fonte anterior e não está sincronizada; não liberar até nova captura direta e validação.",
     "include_articles": [
       "Art. 1",
       "Art. 3",
@@ -1551,7 +1551,7 @@
     "article_filter_note": "Inclui o art. 11, que especifica as receitas do orçamento da Seguridade Social (receitas da União, contribuições sociais e outras fontes). O conteúdo que estava mesclado ao art. 10 foi separado na captura.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
-    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+    "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
     "preferred_source_format": "texto_compilado_planalto",
     "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
