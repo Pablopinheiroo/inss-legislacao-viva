@@ -85,6 +85,42 @@ class MonitorTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             make_snapshot("DECRETO 3.048 Art. 1º Página incompleta.", law)
 
+    def test_decree_6214_snapshot_uses_only_bpc_regulation_annex(self):
+        source = (
+            "DECRETO Nº 6.214, DE 26 DE SETEMBRO DE 2007.\\n"
+            "Art. 1º Fica aprovado, na forma do Anexo, o Regulamento do BPC.\\n"
+            "Art. 3º Este Decreto entra em vigor na data de sua publicação.\\n"
+            "Art. 4º Ficam revogados os decretos anteriores.\\n"
+            "ANEXO\\n"
+            "REGULAMENTO DO BENEFÍCIO DE PRESTAÇÃO CONTINUADA\\n"
+            "CAPÍTULO I\\n"
+            "Art. 1º O BPC é a garantia de um salário mínimo mensal.\\n"
+            "Art. 3º O INSS é responsável pela operacionalização do BPC.\\n"
+            "Art. 4º Para fins de reconhecimento do direito, considera-se idoso quem tem 65 anos ou mais."
+        )
+        law = {
+            "id": "decreto-6214-2007",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+            "include_articles": ["Art. 1", "Art. 3", "Art. 4"],
+            "require_all_articles": True,
+            "snapshot_scope": "selected_articles",
+        }
+        snapshot = make_snapshot(source, law)
+        self.assertEqual(snapshot["article_count"], 3)
+        self.assertIn("O BPC é a garantia", snapshot["articles"]["Art. 1"])
+        self.assertIn("O INSS é responsável", snapshot["articles"]["Art. 3"])
+        self.assertNotIn("Fica aprovado", " ".join(snapshot["articles"].values()))
+        self.assertNotIn("entra em vigor", " ".join(snapshot["articles"].values()))
+        self.assertNotIn("ficam revogados", " ".join(snapshot["articles"].values()))
+
+    def test_decree_6214_snapshot_rejects_missing_bpc_annex(self):
+        law = {
+            "id": "decreto-6214-2007",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+        }
+        with self.assertRaises(ValueError):
+            make_snapshot("DECRETO 6.214 Art. 1º Página incompleta.", law)
+
     def test_article_heading_split_across_lines(self):
         result = split_articles(
             "CAPÍTULO\nSeção I\nArt.\n37\n.\nA administração pública seguirá os princípios.\n"
