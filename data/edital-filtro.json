@@ -202,6 +202,194 @@
       "result": "Nenhuma fonte retornou texto legal íntegro: 27 URLs do Planalto classificadas como bloqueadas por redirecionamento antirobô; IN 128/2022 retornou resposta incompleta (menos de 350 caracteres úteis).",
       "preserved_snapshots": true,
       "study_release_rule": "Nenhuma norma deve ser liberada até que o snapshot seja diretamente capturado da URL oficial preferencial, esteja completo e tenha as redações anteriores riscadas e os dispositivos revogados limpos."
+    },
+    "source_audit": {
+      "checked_at": "2026-11-15",
+      "standard": "Somente Planalto ou Portal IN oficial. 'Fonte compilada confirmada' descreve a página oficial; não significa que o snapshot do repositório esteja sincronizado.",
+      "confirmed_compiled": [
+        {
+          "law_id": "constituicao-1988",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Planalto apresenta a Constituição como Texto compilado.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8112-1990",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Página oficial do Planalto identificada expressamente como Texto compilado/publicação consolidada.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8212-1991",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212compilado.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Página oficial do Planalto identificada expressamente como Texto compilado.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8429-1992",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Página oficial do Planalto identificada expressamente como Texto compilado; a redação atual incorpora a Lei 14.230/2021.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8742-1993",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Página oficial do Planalto identificada expressamente como Texto compilado.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-6214-2007",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
+          "status": "texto_compilado_confirmado",
+          "note": "Página oficial do Planalto em d6214.htm identificada expressamente como Texto compilado; contém Anexo do Regulamento do BPC e marcações de redações anteriores.",
+          "snapshot_sync": "blocked"
+        }
+      ],
+      "confirmed_official": [
+        {
+          "law_id": "lei-9784-1999",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "status": "texto_oficial_confirmado",
+          "note": "Página do Planalto localizada com o texto da lei; não foi identificada como consolidada/compilada no resultado consultado.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-9425-1996",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
+          "status": "texto_oficial_confirmado",
+          "note": "Página do Planalto localizada com a lei completa; arts. 1º a 5º têm conteúdo material e arts. 6º e 7º são disposições finais.",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-7986-1989",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
+          "status": "texto_oficial_confirmado",
+          "note": "Página do Planalto localizada com o texto e redações riscadas substituídas; o parser precisa remover os trechos riscados.",
+          "snapshot_sync": "blocked"
+        }
+      ],
+      "configured_pending": [
+        {
+          "law_id": "decreto-1171-1994",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-6029-2007",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-7070-1982",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8059-1990",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-9422-1996",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-10559-2002",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-11520-2007",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-13985-2020",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-10779-2003",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-8424-2015",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-14176-2021",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-9796-1999",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-10188-2019",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "ec-103-2019",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lc-142-2013",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "lei-8213-1991",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-3048-1999",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        },
+        {
+          "law_id": "decreto-lei-2848-1940",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "status": "endereco_oficial_configurado_leitura_pendente",
+          "snapshot_sync": "blocked"
+        }
+      ],
+      "in128": {
+        "law_id": "in-128-2022",
+        "url": "https://portalin.inss.gov.br/in/540",
+        "status": "fonte_oficial_localizada_retorno_incompleto",
+        "snapshot_sync": "blocked"
+      },
+      "direct_fetch_result": "O monitor automatizado não recebeu corpo legal íntegro em nenhuma das 28 normas; respostas de bloqueio não foram aceitas como texto e os snapshots anteriores foram preservados."
     }
   },
   "in128_status": {
@@ -1625,6 +1813,27 @@
         "act": "Lei 14.736/2023",
         "description": "Incluiu pensão especial para filhos separados dos genitores em razão do isolamento ou internação.",
         "status": "posterior_ao_edital_2022; não pertence à redação do edital 2022"
+      },
+      {
+        "law_id": "decreto-6214-2007",
+        "device": "Arts. 4º, 5º, 8º, 9º, 12, 15, 20, 25, 42 e 48",
+        "act": "Decreto 12.534/2025",
+        "description": "Mudanças em requisitos, renda, acumulação, CadÚnico, biometria, requerimento, revisão e cessação do BPC.",
+        "status": "posterior_ao_edital_2022"
+      },
+      {
+        "law_id": "lei-10779-2003",
+        "device": "Arts. 1º a 5º e 5º-A",
+        "act": "MP 1.323/2025, Lei 15.265/2025 e Lei 15.399/2026",
+        "description": "Transferência de gestão do Seguro-Defeso para MTE e novas regras de controle/limite orçamentário/atendimento.",
+        "status": "posterior_ao_edital_2022"
+      },
+      {
+        "law_id": "lei-8742-1993",
+        "device": "Art. 20, §§ 2º-A, 2º-B e 3º-A; art. 35; art. 20, § 9º; art. 21, §§ 5º e 6º",
+        "act": "Leis 15.077/2024, 14.809/2024, 15.157/2025 e 15.156/2025",
+        "description": "Atualizações nos critérios de avaliação, renda familiar, acesso e dispensa de reavaliação periódica do BPC.",
+        "status": "posterior_ao_edital_2022"
       }
     ],
     "pending": "Comparar integralmente cada dispositivo alterado com a redação anterior quando a captura oficial completa estiver disponível."
