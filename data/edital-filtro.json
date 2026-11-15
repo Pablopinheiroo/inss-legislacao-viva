@@ -1714,6 +1714,10 @@
     {
       "norm": "Decreto 6.214/2007",
       "action": "Confirmado no Planalto que d6214.htm é apresentado como Texto compilado. O Anexo foi separado do ato que o aprova; mapeados 33 artigos do BPC para o edital e excluídos o art. 47 revogado e dispositivos de vigência, revogação, gestão genérica ou transição expirada. O Decreto 12.534/2025 alterou diversos dispositivos após o edital 2022; as diferenças estão separadas. A captura e a validação dos textos ainda estão pendentes."
+    },
+    {
+      "norm": "Parser de artigos — conferência das capturas anteriores",
+      "action": "Na comparação dos 27 snapshots com as listas selecionadas, foram identificados 12 artigos cuja cabeça havia sido mesclada ao artigo anterior por começar com preposições: Lei 8.112 (arts. 70, 128, 140, 145, 155, 167 e 175); Lei 8.429 (arts. 16 e 23-B); Lei 9.784 (art. 56); Lei 8.059 (art. 16); Lei 10.559 (art. 13). O parser foi corrigido para distinguir início de artigo de referência a outra norma, e testes específicos foram adicionados. Os snapshots antigos não foram reescritos; a correção só será aplicada em nova captura oficial."
     }
   ],
   "decreto6214_status": {
@@ -1842,5 +1846,5 @@
     ],
     "pending": "Comparar integralmente cada dispositivo alterado com a redação anterior quando a captura oficial completa estiver disponível."
   },
-  "article_capture_rule": "require_all_articles=true para todas as normas com lista include_articles. O monitor deve recusar uma captura se algum dispositivo selecionado não for identificado, preservando o snapshot anterior e registrando a falha."
+  "article_capture_rule": "require_all_articles=true para todas as normas com lista include_articles. O monitor deve recusar uma captura se algum dispositivo selecionado não for identificado, preservando o snapshot anterior e registrando a falha. A comparação do acervo antigo encontrou 12 artigos selecionados que haviam sido mesclados em artigo anterior; o parser foi corrigido e os testes passaram a cobrir esses casos."
 }
