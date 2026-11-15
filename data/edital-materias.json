@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "basis": {
+    "edital": "Edital nº 1 INSS, de 12/09/2022, com alterações do Edital nº 2, de 14/09/2022",
+    "official_program_items": [
+      "14.2.2",
+      "14.2.3"
+    ],
+    "note": "Mapa de cobertura. A classificação não significa que todos os conteúdos já tenham material, aulas ou banco de questões completo."
+  },
+  "subjects": [
+    {
+      "name": "Língua Portuguesa",
+      "item": "14.2.2",
+      "kind": "teoria_e_questoes",
+      "topics": [
+        "Compreensão e interpretação de textos",
+        "Tipologia textual",
+        "Ortografia oficial",
+        "Acentuação gráfica",
+        "Classes de palavras",
+        "Crase",
+        "Sintaxe da oração e do período",
+        "Pontuação",
+        "Concordância nominal e verbal",
+        "Regência nominal e verbal",
+        "Significação das palavras",
+        "Redação oficial e correspondência oficial"
+      ],
+      "status": "mapeado; material e banco próprios pendentes"
+    },
+    {
+      "name": "Ética no Serviço Público",
+      "item": "14.2.2",
+      "kind": "legislacao_e_questoes",
+      "norms": [
+        "decreto-1171-1994",
+        "decreto-6029-2007"
+      ],
+      "topics": [
+        "Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal",
+        "Sistema de Gestão da Ética do Poder Executivo Federal"
+      ],
+      "status": "normas cadastradas; sincronização direta do Planalto pendente"
+    },
+    {
+      "name": "Direito Constitucional",
+      "item": "14.2.2",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "constituicao-1988"
+      ],
+      "topics": [
+        "Direitos e garantias fundamentais",
+        "Direitos e deveres individuais e coletivos",
+        "Direitos sociais",
+        "Nacionalidade",
+        "Cidadania",
+        "Garantias constitucionais individuais, coletivas, sociais e políticas",
+        "Administração Pública: arts. 37 a 41"
+      ],
+      "status": "recorte constitucional inicial aplicado; captura Planalto pendente"
+    },
+    {
+      "name": "Direito Administrativo",
+      "item": "14.2.2",
+      "kind": "teoria_lei_seca_e_questoes",
+      "norms": [
+        "lei-8112-1990",
+        "lei-8429-1992",
+        "lei-9784-1999"
+      ],
+      "topics": [
+        "Estado, governo e Administração Pública",
+        "Conceito, elementos, poderes, organização, natureza e fins da Administração",
+        "Princípios e fontes do Direito Administrativo",
+        "Administração direta e indireta",
+        "Agentes públicos",
+        "Lei 8.112: provimento/nomeação, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar e responsabilidades",
+        "Poderes hierárquico, disciplinar, regulamentar e de polícia; abuso de poder",
+        "Atos administrativos: validade, eficácia, atributos, extinção, anulação, revogação, convalidação, classificação, espécies, exteriorização, vinculação e discricionariedade",
+        "Serviços públicos",
+        "Controle administrativo, judicial e legislativo",
+        "Responsabilidade civil do Estado",
+        "Lei 8.429/1992",
+        "Lei 9.784/1999"
+      ],
+      "status": "normas cadastradas e recorte da Lei 8.112 reduzido; teoria e captura oficial pendentes"
+    },
+    {
+      "name": "Informática",
+      "item": "14.2.2",
+      "kind": "teoria_e_questoes",
+      "topics": [
+        "Internet e intranet",
+        "Ferramentas, aplicativos e procedimentos de informática",
+        "Microsoft Office, conforme Edital nº 2",
+        "Windows 7 e Windows 10",
+        "Navegadores",
+        "Correio eletrônico",
+        "Segurança da informação",
+        "Vírus e worms"
+      ],
+      "status": "mapeado; material e banco próprios pendentes"
+    },
+    {
+      "name": "Raciocínio Lógico",
+      "item": "14.2.2",
+      "kind": "teoria_e_questoes",
+      "topics": [
+        "Proposições e valores lógicos",
+        "Sentenças abertas",
+        "Tabelas-verdade",
+        "Conectivos lógicos",
+        "Proposições simples e compostas",
+        "Tautologia",
+        "Conjuntos",
+        "Porcentagens"
+      ],
+      "status": "mapeado; material e banco próprios pendentes"
+    },
+    {
+      "name": "Seguridade Social e legislação previdenciária",
+      "item": "14.2.3",
+      "kind": "lei_seca_teoria_e_questoes",
+      "norms": [
+        "constituicao-1988",
+        "lei-8212-1991",
+        "lei-8213-1991",
+        "decreto-3048-1999",
+        "in-128-2022",
+        "ec-103-2019"
+      ],
+      "topics": [
+        "Origem e evolução da Seguridade Social no Brasil",
+        "Conceito, organização e princípios constitucionais",
+        "Conteúdo, fontes e autonomia da legislação previdenciária",
+        "Aplicação das normas: vigência, hierarquia, interpretação e integração",
+        "RGPS e segurados obrigatórios e facultativos",
+        "Filiação, inscrição e trabalhadores excluídos",
+        "Empresa e empregador doméstico",
+        "Financiamento e contribuições sociais",
+        "Salário de contribuição: conceito, inclusão, exclusões, limites e complementação",
+        "Arrecadação, recolhimento, prazos, juros, multas e competências",
+        "Decadência e prescrição",
+        "Crimes contra a Seguridade Social",
+        "Recursos administrativos",
+        "Plano de benefícios, carência, salário de benefício, renda mensal e reajustamento",
+        "Manutenção, perda e restabelecimento da qualidade de segurado",
+        "Serviço social e reabilitação profissional"
+      ],
+      "status": "normas cadastradas; IN 128 e captura direta das fontes ainda bloqueadas"
+    },
+    {
+      "name": "Benefícios de legislação especial",
+      "item": "14.2.3",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "lei-7070-1982",
+        "lei-7986-1989",
+        "lei-8059-1990",
+        "lei-9422-1996",
+        "lei-9425-1996",
+        "lei-10559-2002",
+        "lei-11520-2007",
+        "lei-13985-2020"
+      ],
+      "topics": [
+        "Talidomida",
+        "Seringueiros",
+        "Ex-combatentes",
+        "Vítimas de hemodiálise de Caruaru",
+        "Vítimas do Césio 137",
+        "Anistiados políticos",
+        "Pessoas atingidas pela hanseníase",
+        "Síndrome congênita do Zika"
+      ],
+      "status": "normas cadastradas; recortes de dispositivos finais removidos; capturas Planalto pendentes"
+    },
+    {
+      "name": "Seguro-defeso",
+      "item": "14.2.3",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "lei-10779-2003",
+        "decreto-8424-2015"
+      ],
+      "topics": [
+        "Seguro-desemprego do pescador artesanal durante o período de defeso"
+      ],
+      "status": "normas cadastradas; versão compilada da Lei 10.779 priorizada; captura oficial pendente"
+    },
+    {
+      "name": "Assistência Social — LOAS, BPC e auxílio-inclusão",
+      "item": "14.2.3",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "lei-8742-1993",
+        "lei-14176-2021",
+        "decreto-6214-2007"
+      ],
+      "topics": [
+        "LOAS",
+        "Benefício de Prestação Continuada",
+        "Auxílio-inclusão"
+      ],
+      "status": "LOAS compilada priorizada; Decreto 6.214 e captura limpa pendentes"
+    },
+    {
+      "name": "RPPS e compensação previdenciária",
+      "item": "14.2.3",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "lei-9796-1999",
+        "decreto-10188-2019"
+      ],
+      "topics": [
+        "Regimes próprios da União, Estados, Distrito Federal e Municípios",
+        "Certidão de Tempo de Contribuição",
+        "Contagem recíproca",
+        "Compensação previdenciária"
+      ],
+      "status": "normas cadastradas; captura oficial pendente"
+    },
+    {
+      "name": "Aposentadoria da pessoa com deficiência",
+      "item": "14.2.3",
+      "kind": "lei_seca_e_questoes",
+      "norms": [
+        "lc-142-2013"
+      ],
+      "topics": [
+        "Regras específicas da aposentadoria da pessoa com deficiência segurada do RGPS"
+      ],
+      "status": "norma cadastrada; captura oficial pendente"
+    },
+    {
+      "name": "Servidor público e qualidade de vida",
+      "item": "14.2.3",
+      "kind": "teoria_e_questoes",
+      "topics": [
+        "O servidor público como agente de desenvolvimento social",
+        "Saúde e qualidade de vida no serviço público"
+      ],
+      "status": "mapeado; material teórico e questões pendentes"
+    }
+  ]
+}
