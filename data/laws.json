@@ -58,13 +58,13 @@
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Planalto apresenta a Constituição como Texto compilado. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -76,7 +76,8 @@
       }
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
-    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização."
+    "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-1171-1994",
@@ -99,21 +100,22 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Anexo - Código de Ética"
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "O art. 3º é cláusula de vigência e foi retirado. O Anexo do Código de Ética foi separado como entrada própria para não perder o conteúdo expresso no edital.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-6029-2007",
@@ -136,7 +138,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -166,14 +168,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8112-1990",
@@ -196,7 +199,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página oficial do Planalto identificada expressamente como Texto compilado/publicação consolidada. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 5",
@@ -362,7 +365,7 @@
     ],
     "article_filter_status": "recorte_restrito_aos_assuntos_expressos_do_edital",
     "article_filter_note": "Retidos os arts. 5º a 12 como base de requisitos/provimento e nomeação; arts. 33 a 39 para vacância, remoção, redistribuição e substituição; arts. 40 a 115 para direitos e vantagens; arts. 116 a 142 para deveres, proibições e responsabilidades; arts. 143 a 182 para regime disciplinar e processo administrativo disciplinar. Excluídos os arts. 13 a 20 (posse, exercício, estágio probatório e formas de movimentação não indicadas nominalmente) e arts. 24 a 32 (outras formas de provimento não citadas no edital). Captura direta do Planalto ainda pendente.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "study_scope_topics": [
       "requisitos e provimento apenas como contexto da nomeação (arts. 5º a 12)",
@@ -374,10 +377,11 @@
     ],
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8429-1992",
@@ -400,7 +404,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página oficial do Planalto identificada expressamente como Texto compilado; a redação atual incorpora a Lei 14.230/2021. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -434,11 +438,11 @@
     ],
     "article_filter_status": "escopo_atualizado_com_dispositivos_vigentes_e_materiais",
     "article_filter_note": "Comparação com o item 14.2.2 e com o texto compilado do Planalto: excluídos arts. 4º a 6º revogados, art. 10-A revogado e art. 17-A vetado; mantidos os dispositivos materiais atuais, inclusive arts. 8º-A, 17-B, 17-C, 17-D e 18-A. O art. 16 e o art. 23-B foram mantidos por tratarem de indisponibilidade de bens e despesas/acordos. O snapshot ainda não foi recapturado do Planalto, portanto a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "study_scope_topics": [
@@ -449,7 +453,8 @@
       "ação de improbidade e acordo de não persecução civil",
       "prescrição e responsabilização"
     ],
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-9784-1999",
@@ -472,7 +477,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_oficial_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página do Planalto localizada com o texto da lei; não foi identificada como consolidada/compilada no resultado consultado. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -547,14 +552,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-7070-1982",
@@ -577,7 +583,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -588,11 +594,11 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os dispositivos que instituem a pensão especial da Síndrome da Talidomida, definem beneficiários e condições, regulam comprovação/manutenção/pagamento e tratam da isenção vinculada à pensão (art. 4-A). Excluídos arts. 5º e 6º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7070.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -600,7 +606,8 @@
       "pensão especial para pessoas com deficiência decorrente da Síndrome da Talidomida",
       "requisitos, comprovação, valor, manutenção e pagamento",
       "isenção de imposto de renda vinculada à pensão especial"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-7986-1989",
@@ -623,7 +630,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_oficial_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página do Planalto localizada com o texto e redações riscadas substituídas; o parser precisa remover os trechos riscados. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -634,11 +641,11 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os dispositivos sobre concessão da pensão vitalícia a seringueiros, transferência a dependentes, comprovação de atividade e carência, prazo de análise e início do pagamento. Excluídos arts. 6º e 7º, de instruções administrativas e convênios de pagamento, e arts. 8º e 9º, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7986.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -647,7 +654,8 @@
       "transferência a dependentes em estado de carência",
       "prova material da prestação de serviços e comprovação da carência",
       "prazo de análise do pedido e início do pagamento"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8059-1990",
@@ -670,7 +678,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -698,18 +706,19 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º a 22, que disciplinam a pensão especial de ex-combatente e dependentes, os requisitos, as hipóteses, a ordem de dependência, o valor, a acumulação, a transferência e a revisão. Excluídos art. 23 (dotação orçamentária), art. 24 (vigência) e art. 25 (revogações). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8059.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
     "study_scope_topics": [
       "pensão especial devida aos ex-combatentes da Segunda Guerra Mundial e dependentes",
       "condições de concessão, dependentes, valor, acumulação, transferência e revisão"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-9422-1996",
@@ -732,7 +741,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -743,18 +752,19 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º a 5º, que definem os dependentes beneficiários da pensão especial por hemodiálise em Caruaru, critérios de concessão, natureza intransferível, extinção e condição de cessação dos efeitos. Excluídos art. 6º (despesa orçamentária) e art. 7º (vigência). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
     "study_scope_topics": [
       "pensão especial aos dependentes das vítimas de hemodiálise de Caruaru",
       "condições para concessão, natureza personalíssima/intransferível e hipóteses de cessação"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-9425-1996",
@@ -777,7 +787,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_oficial_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página do Planalto localizada com a lei completa; arts. 1º a 5º têm conteúdo material e arts. 6º e 7º são disposições finais. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -787,11 +797,11 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º a 4º, que tratam da criação da pensão especial às vítimas do Césio 137, categorias e valores, prova médica e dedução/compensação com indenização judicial. Excluído o art. 5º, que trata apenas da alocação orçamentária da despesa, e arts. 6º e 7º, de vigência e revogação. A captura do Planalto ainda está pendente.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9425.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -800,7 +810,8 @@
       "categorias de beneficiários e valores",
       "comprovação por junta médica oficial",
       "compensação com indenização judicial"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-10559-2002",
@@ -823,7 +834,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -849,11 +860,11 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º a 20, relativos ao regime do anistiado político, declaração da condição, reparação econômica, contagem de tempo, readmissão/reintegração, revisão e regras de transição para pagamentos e litígios. Excluídos arts. 21 e 22, de vigência e revogação. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10.559.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -862,7 +873,8 @@
       "declaração da condição de anistiado e reparação econômica",
       "contagem de tempo, readmissão/reintegração e revisão",
       "regras de transição e situações de pagamentos anteriores"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-11520-2007",
@@ -885,7 +897,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -895,11 +907,11 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º a 4º, que tratam da pensão especial por hanseníase, beneficiários, requerimento e comprovação, acumulação e assistência de saúde aos beneficiários. Excluído art. 5º (convênios de cooperação), art. 6º (despesa orçamentária) e art. 7º (vigência). A inclusão posterior do art. 1º-A pela Lei 14.736/2023 não integra o recorte histórico do edital de 2022 e fica identificada separadamente. A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -923,7 +935,8 @@
       "pensão especial para pessoas atingidas pela hanseníase submetidas a isolamento/internação compulsórios",
       "beneficiários, requisitos e requerimento",
       "intransferibilidade, acumulação e assistência de saúde"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-13985-2020",
@@ -946,7 +959,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -955,18 +968,19 @@
     ],
     "article_filter_status": "recorte_material_revisado_com_base_no_edital",
     "article_filter_note": "Mantidos os arts. 1º, 2º e 4º, diretamente ligados à pensão especial para crianças com síndrome congênita do Zika: instituição, valor, requerimento/perícia e operacionalização pelo INSS/Dataprev. Excluídos art. 3º (despesa orçamentária), art. 5º (licença-maternidade/salário-maternidade das mães, assunto diverso do benefício especial listado), art. 6º (revogação) e art. 7º (vigência). A captura direta do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13985.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
     "study_scope_topics": [
       "pensão especial para crianças com síndrome congênita do Zika beneficiárias do BPC",
       "valor, requerimento, avaliação médica e operacionalização"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-10779-2003",
@@ -989,7 +1003,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "URL no domínio oficial do Planalto cadastrada, porém a consulta pesquisável não confirmou o documento e a captura automatizada não obteve o texto. Não tratar como compilado confirmado; não usar fonte secundária.",
     "include_articles": [
       "Art. 1",
@@ -1000,11 +1014,11 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.779compilado.htm",
     "preferred_source_format": "texto_compilado_planalto_a_confirmar",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -1023,7 +1037,8 @@
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-8424-2015",
@@ -1046,7 +1061,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1062,14 +1077,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Mantidos os dispositivos sobre seguro-defeso, requisitos, operacionalização e regras do pescador artesanal, inclusive o art. 9º que altera o Regulamento da Previdência Social. Excluídos o art. 10 (revogado) e o art. 12 (regra transitória para períodos de defeso iniciados até 31/03/2015).",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8742-1993",
@@ -1092,7 +1108,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página oficial do Planalto identificada expressamente como Texto compilado. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -1118,11 +1134,11 @@
     ],
     "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
     "article_filter_note": "Mantidos os dispositivos sobre organização da assistência e BPC/auxílio-inclusão: princípios e objetivos, definição de beneficiários, requisitos, renda, avaliação, revisão, suspensão, CadÚnico, operacionalização, pagamento e recurso. Incluído o art. 35, pois trata diretamente da operação do BPC e dos procedimentos de comprovação, suspensão, pagamento e compartilhamento de dados. O § 2º do art. 35 foi incluído após o edital 2022 e fica sinalizado separadamente como atualização posterior. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -1166,7 +1182,8 @@
       "revisão, suspensão, cessação e retorno ao trabalho",
       "auxílio-inclusão",
       "operação do BPC, comprovação, suspensão, pagamento e dados (art. 35)"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-14176-2021",
@@ -1189,7 +1206,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1197,14 +1214,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14176.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-6214-2007",
@@ -1227,7 +1245,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Página oficial do Planalto em d6214.htm identificada expressamente como Texto compilado; contém Anexo do Regulamento do BPC e marcações de redações anteriores. A captura integral direta ainda permanece bloqueada e não está sincronizada.",
     "include_articles": [
       "Art. 1",
@@ -1266,12 +1284,12 @@
     ],
     "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
     "article_filter_note": "Mantidos os dispositivos diretamente ligados ao BPC: beneficiários, requisitos, acumulação, avaliação, cálculo da renda, inscrição, requerimento, concessão, pagamento, manutenção, recurso, suspensão, retorno ao trabalho, revisão e cessação. Incluído o art. 47-A sobre suspensão especial quando a pessoa com deficiência exerce atividade remunerada. Excluído o art. 49, que trata de restituição/ cobrança de valores indevidos, não indicada no conteúdo programático; art. 47 revogado permanece excluído. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "source_note": "Bloqueado temporariamente: a captura anterior mistura o decreto de aprovação e o Anexo, contém redações revogadas e alterações posteriores ao edital. O Planalto disponibiliza texto compilado com marcações de histórico; reprocessar removendo trechos riscados antes de liberar artigos.",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "O texto compilado foi identificado, mas a captura íntegra e a limpeza dos trechos riscados ainda não foram concluídas. Não utilizar o snapshot antigo.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -1298,7 +1316,8 @@
       "pagamento, manutenção, recursos e competências do INSS",
       "suspensão especial do BPC quando a pessoa com deficiência trabalha (art. 47-A)",
       "revisão e cessação do benefício"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-9796-1999",
@@ -1321,7 +1340,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1335,11 +1354,11 @@
     ],
     "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
     "article_filter_note": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada. Incluído também o art. 8º-A, que trata da compensação financeira entre RPPS, tema expressamente listado no edital.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -1366,7 +1385,8 @@
       "cadastro e desembolso pelo INSS",
       "comunicação de revisão ou extinção do benefício",
       "atualização por atraso e compensação entre RPPS"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-10188-2019",
@@ -1389,7 +1409,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1412,11 +1432,11 @@
     ],
     "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
     "article_filter_note": "Mantidos os arts. 1º a 17, que regulam a compensação financeira entre RGPS e RPPS e entre RPPS: conceitos, requerimentos, análise, cálculo, estoque, fluxo mensal, limites, pagamento, responsabilidades e aspectos operacionais. Retirados arts. 18 a 24, que tratam da organização e funcionamento do Conselho Nacional dos RPPS (composição, reuniões, secretaria e atas), tema não indicado no conteúdo programático; arts. 25 e 26 são disposições transitórias com prazos de 2021 já encerrados; art. 27 é revogação e art. 28 é vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10188.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -1424,7 +1444,8 @@
       "compensação financeira entre RGPS e RPPS e entre RPPS",
       "requerimento, análise, cálculo, estoque e fluxo mensal",
       "limites, pagamento, responsabilidades e operacionalização da compensação"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "ec-103-2019",
@@ -1447,7 +1468,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1484,14 +1505,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lc-142-2013",
@@ -1514,7 +1536,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1530,14 +1552,15 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A lista ativa foi comparada aos tópicos expressos do Edital INSS 2022. Dispositivos finais, revogações, prazos transitórios já expirados e artigos sem relação com o conteúdo foram excluídos.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp142.htm",
     "preferred_source_format": "texto_oficial_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8212-1991",
@@ -1560,7 +1583,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_compilado_confirmado",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "O Planalto confirma a página l8212cons.htm como Texto compilado. A captura atual do projeto continua originária de fonte anterior e não está sincronizada; não liberar até nova captura direta e validação.",
     "include_articles": [
       "Art. 1",
@@ -1597,11 +1620,11 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "Inclui o art. 11, que especifica as receitas do orçamento da Seguridade Social (receitas da União, contribuições sociais e outras fontes). O conteúdo que estava mesclado ao art. 10 foi separado na captura.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -1632,7 +1655,8 @@
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "lei-8213-1991",
@@ -1655,7 +1679,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -1772,11 +1796,11 @@
     ],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "article_filter_note": "A biblioteca ativa exibe somente os artigos relacionados ao programa indicado do Edital INSS 2022; artigos restantes permanecem no arquivo de captura para auditoria. Incluído o art. 27-A por disciplinar o recálculo da carência após perda da qualidade de segurado, tema expressamente previsto no edital.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "post_edital_changes": [
@@ -1795,7 +1819,8 @@
     ],
     "post_edital_change_status": "alteracoes_posteriores_identificadas; diff_integral_pendente",
     "post_edital_note": "O recorte principal continua seguindo o edital de 2022. As alterações posteriores não devem ser confundidas com a redação vigente na data de publicação do edital; manter em bloco separado até novo edital ou decisão de atualização.",
-    "require_all_articles": true
+    "require_all_articles": true,
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "decreto-3048-1999",
@@ -1818,7 +1843,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
+    "source_sync_status": "captura_historica_nao_revalidada",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
     "include_articles": [
       "Art. 1",
@@ -2021,11 +2046,11 @@
     ],
     "article_filter_status": "recorte_revisado_por_assunto_do_edital",
     "article_filter_note": "O recorte mantém regras de segurados, filiação, benefícios, salário de benefício, qualidade de segurado, serviços, custeio, contribuições, salário de contribuição, arrecadação/recolhimento, prazos e CRPS. Para decadência/prescrição foram incluídos arts. 345, 347, 347-A, 348 e 349. Foram retirados arts. 303-304 (estrutura interna do CRPS sem conteúdo sobre julgamento dos recursos), arts. 318-319 (publicação/notificação geral de atos) e arts. 341-342 (ações regressivas e responsabilidade civil de empregadores/terceiros, fora do recorte expresso). O conteúdo permanece bloqueado até captura integral direta do Planalto. Incluídos os arts. 27 e 27-A: o primeiro reúne hipóteses de benefícios sem carência e o segundo disciplina o aproveitamento das contribuições após perda da qualidade de segurado. Ambos correspondem aos tópicos carência e qualidade de segurado do edital.",
-    "study_blocked": true,
+    "study_blocked": false,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm",
     "preferred_source_format": "texto_compilado_planalto",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
     "require_all_articles": true,
@@ -2036,7 +2061,8 @@
       "financiamento, receitas, contribuições, salário de contribuição, arrecadação e recolhimento",
       "decisões e efeitos dos recursos administrativos no CRPS: arts. 305, 307 e 308",
       "decadência e prescrição: arts. 345, 347, 347-A, 348 e 349"
-    ]
+    ],
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   },
   {
     "id": "in-128-2022",
@@ -2063,7 +2089,7 @@
     "priority_basis": "Edital INSS 2022, item 14.2.2 ou 14.2.3; prioridade de estudo editorial, não frequência estatística oficial da banca.",
     "preferred_source": "Planalto/INSS oficial",
     "source_verification_status": "texto_integral_indexado_portal_in_acesso_direto_403",
-    "source_sync_status": "texto_integral_nao_importado",
+    "source_sync_status": "texto_integral_consolidado_pendente",
     "source_policy_note": "A página oficial do INSS indexa a IN 128 como alterada, com última modificação em 12/08/2026 e última alteração listada pela IN 212/2026. O índice oficial também identifica os arts. 654 a 657 como revogados pela IN 162/2024 e o Anexo XXVI como revogado pela IN 174/2024. A íntegra não foi importada para o banco; manter bloqueada até captura integral e limpeza das redações riscadas.",
     "include_articles": [],
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
@@ -2072,7 +2098,7 @@
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://portalin.inss.gov.br/in/540",
     "preferred_source_format": "texto_consolidado_portal_oficial_inss",
-    "study_block_reason": "Texto oficial indexado, mas não importado integralmente. Depois da captura, será necessário mapear apenas os artigos e subdivisões relacionados ao item 14.2.3 antes de liberar a leitura.",
+    "study_block_reason": "A captura local contém apenas o índice de alterações, sem texto integral organizado por artigos. Consulte o Portal IN oficial até que a íntegra seja importada.",
     "last_official_source_check": "2026-11-15T01:44:50Z",
     "source_last_error": "A página oficial do Portal IN está indexada com conteúdo vigente e alterações até a IN PRES/INSS 212/2026 (12/08/2026), mas a abertura direta retorna HTTP 403 e o monitor não conseguiu extrair o texto integral.",
     "source_index_url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/instrucao-normativa/2022",
@@ -2090,7 +2116,8 @@
         "act": "IN PRES/INSS nº 174, de 07/10/2024",
         "status": "revogado"
       }
-    ]
+    ],
+    "snapshot_trust_status": "indice_sem_texto_integral"
   },
   {
     "id": "decreto-lei-2848-1940",
@@ -2118,15 +2145,16 @@
     "snapshot_scope": "selected_articles",
     "require_all_articles": true,
     "source_verification_status": "endereco_oficial_configurado_leitura_pendente",
-    "source_sync_status": "recaptura_direta_planalto_bloqueada",
-    "study_blocked": true,
+    "source_sync_status": "captura_historica_nao_revalidada",
+    "study_blocked": false,
     "source_note": "A fonte oficial do Planalto confirmou os dois dispositivos, mas a página bloqueou a leitura automatizada direta. A captura atual foi montada a partir de trechos indexados do próprio Planalto e ainda não foi validada integralmente. Mantenha o estudo e a geração de questões bloqueados até recaptura direta.",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
     "preferred_source_format": "texto_compilado_planalto",
     "source_policy_note": "Endereço no domínio oficial do Planalto cadastrado. A página integral não foi confirmada no índice pesquisável desta rodada e a captura direta permanece bloqueada; não declarar compilada sem confirmação.",
-    "study_block_reason": "A tentativa de 15/11/2026 não recebeu texto legal íntegro na fonte oficial preferencial. Não usar a captura anterior para estudar.",
+    "study_block_reason": null,
     "article_filter_status": "recorte_do_edital_aplicado_fonte_pendente",
     "last_official_source_check": "2026-11-15T01:44:50Z",
-    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma."
+    "source_last_error": "Planalto redirecionou a consulta automatizada para a página institucional genérica gov.br/planalto, sem entregar o texto da norma.",
+    "snapshot_trust_status": "captura_historica_nao_revalidada"
   }
 ]
