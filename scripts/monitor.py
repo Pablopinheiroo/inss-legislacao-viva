@@ -481,7 +481,7 @@ def split_articles(text: str) -> dict[str, str]:
             # cabeçalhos. "No caso...", "Na hipótese..." e "Nas ações..."
             # são começos legítimos de artigos e não devem ser descartados.
             looks_like_other_act_reference = bool(re.match(
-                r"^(?:da|das|de|do|dos)\\s+(?:Lei|Leis|Constituição|Emenda|Decreto|Decretos|"
+                r"^(?:da|das|de|do|dos)\s+(?:Lei|Leis|Constituição|Emenda|Decreto|Decretos|"
                 r"Medida Provisória|Portaria|Resolução|Código|Regulamento)\\b",
                 body_start,
                 re.IGNORECASE,
