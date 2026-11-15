@@ -1330,10 +1330,11 @@
       "Art. 4",
       "Art. 6",
       "Art. 7",
-      "Art. 8"
+      "Art. 8",
+      "Art. 8-A"
     ],
     "article_filter_status": "recorte_tematico_revisado_fonte_oficial_pendente",
-    "article_filter_note": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada.",
+    "article_filter_note": "Mantidos os arts. 1º a 4º, 6º a 8º: conceito de regime de origem/instituidor, cálculo da compensação, procedimentos, cadastro e desembolso, comunicação de revisão/extinção, atualização por atraso e regras de compensação entre RPPS. Excluído o art. 5º por tratar de estoque transitório de benefícios em manutenção na data de vigência, com prazo de apresentação vencido; arts. 9º e 10 são regulamentação e vigência. A captura integral diretamente do Planalto ainda está pendente; a norma continua bloqueada. Incluído também o art. 8º-A, que trata da compensação financeira entre RPPS, tema expressamente listado no edital.",
     "study_blocked": true,
     "edital_2022_cutoff": "2022-09-15",
     "preferred_source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9796.htm",
