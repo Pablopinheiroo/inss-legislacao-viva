@@ -1,35 +1,208 @@
 {
-  "snapshot_version": 1,
-  "captured_at": "2026-11-14T12:00:00Z",
+  "snapshot_version": 4,
+  "captured_at": "2026-11-19T18:19:03Z",
   "source_url_used": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
-  "source_revision": "Texto compilado do Decreto-Lei nº 2.848/1940 indexado pelo Planalto; texto parcial montado em 14/11/2026.",
+  "source_revision": null,
   "parser_mode": "artigos",
   "snapshot_scope": "selected_articles",
   "article_count": 2,
-  "capture_method": "indexed_official_excerpt",
-  "direct_capture_verified": false,
-  "source_note": "Captura parcial reconstruída a partir de trechos indexados da própria fonte Planalto. Não tratar como texto integral validado. Inclui §§ 5º e 6º do art. 168-A inseridos pela LC 225/2026, posteriores ao edital de 2022. Estudo e questões bloqueados até obter captura direta e classificar os parágrafos posteriores ao edital.",
+  "content_hash": "404c78088ca576f5fd102833f8e4928d7cf2eccbb8bf36efcdc63b057e3facf6",
   "articles": {
-    "Art. 168-A": "Art. 168-A. Deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional:\nPena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa.\n§ 1º Nas mesmas penas incorre quem deixar de:\nI – recolher, no prazo legal, contribuição ou outra importância destinada à previdência social que tenha sido descontada de pagamento efetuado a segurados, a terceiros ou arrecadada do público;\nII – recolher contribuições devidas à previdência social que tenham integrado despesas contábeis ou custos relativos à venda de produtos ou à prestação de serviços;\nIII – pagar benefício devido a segurado, quando as respectivas cotas ou valores já tiverem sido reembolsados à empresa pela previdência social.\n§ 2º É extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal.\n§ 3º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que:\nI – tenha promovido, após o início da ação fiscal e antes de oferecida a denúncia, o pagamento da contribuição social previdenciária, inclusive acessórios; ou\nII – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 4º A faculdade prevista no § 3º deste artigo não se aplica aos casos de parcelamento de contribuições cujo valor, inclusive dos acessórios, seja superior àquele estabelecido, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 5º A extinção da punibilidade de que trata o § 2º deste artigo não se aplica ao agente declarado devedor contumaz em decisão administrativa definitiva e inscrito no Cadastro Informativo dos créditos não quitados do setor público federal (Cadin), previsto na Lei nº 10.522, de 19 de julho de 2002.\n§ 6º O fato de o agente deixar de ser considerado devedor contumaz não afasta o disposto no § 5º deste artigo em relação aos atos praticados no período em que era assim considerado.",
-    "Art. 337-A": "Art. 337-A. Suprimir ou reduzir contribuição social previdenciária e qualquer acessório, mediante as seguintes condutas:\nI – omitir de folha de pagamento da empresa ou de documento de informações previsto pela legislação previdenciária segurados empregado, empresário, trabalhador avulso ou trabalhador autônomo ou a este equiparado que lhe prestem serviços;\nII – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa as quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de serviços;\nIII – omitir, total ou parcialmente, receitas ou lucros auferidos, remunerações pagas ou creditadas e demais fatos geradores de contribuições sociais previdenciárias.\nPena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa.\n§ 1º É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal.\n§ 2º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que:\nI – (VETADO);\nII – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 3º Se o empregador não é pessoa jurídica e sua folha de pagamento mensal não ultrapassa R$ 1.510,00 (um mil quinhentos e dez reais), o juiz poderá reduzir a pena de um terço até a metade ou aplicar apenas a de multa.\n§ 4º O valor a que se refere o parágrafo anterior será reajustado nas mesmas datas e nos mesmos índices do reajuste dos benefícios da previdência social."
+    "Art. 168-A": "Art. 168-A. Deixar de repassar ŕ previdęncia social as\ncontribuiçőes recolhidas dos contribuintes, no prazo e forma legal ou convencional:\n(Incluído pela Lei nş 9.983, de 2000)\nPena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 1\no\nNas mesmas penas incorre quem deixar de:\n(Incluído pela Lei nş 9.983, de 2000)\nI – recolher, no prazo legal, contribuiçăo ou outra importância destinada ŕ\nprevidęncia social que tenha sido descontada de pagamento efetuado a segurados, a\nterceiros ou arrecadada do público;\n(Incluído pela Lei nş 9.983, de 2000)\nII – recolher contribuiçőes devidas ŕ previdęncia social que tenham integrado\ndespesas contábeis ou custos relativos ŕ venda de produtos ou ŕ prestaçăo de\nserviços;\n(Incluído pela Lei nş 9.983, de 2000)\nIII - pagar benefício devido a segurado, quando as respectivas cotas ou valores já\ntiverem sido reembolsados ŕ empresa pela previdęncia social.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 2\no\nÉ extinta a punibilidade se o agente, espontaneamente, declara,\nconfessa e efetua o pagamento das contribuiçőes, importâncias ou valores e presta as\ninformaçőes devidas ŕ previdęncia social, na forma definida em lei ou regulamento,\nantes do início da açăo fiscal.\n(Incluído\npela Lei nş 9.983, de 2000)\n§ 3\no\nÉ facultado ao juiz deixar de aplicar a pena ou aplicar somente a\nde multa se o agente for primário e de bons antecedentes, desde que:\n(Incluído pela Lei nş 9.983, de 2000)\nI – tenha promovido, após o início da açăo fiscal e antes de oferecida a\ndenúncia, o pagamento da contribuiçăo social previdenciária, inclusive acessórios;\nou\n(Incluído pela Lei nş 9.983, de 2000)\nII – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou\ninferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o\nmínimo para o ajuizamento de suas execuçőes fiscais.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 4\no\nA faculdade prevista no § 3\no\ndeste artigo năo se aplica aos casos de parcelamento de contribuiçőes cujo\nvalor, inclusive dos acessórios, seja superior ŕquele estabelecido,\nadministrativamente, como sendo o mínimo para o ajuizamento de suas execuçőes\nfiscais.\n(Incluído pela Lei nş 13.606, de 2018)\n§ 5ş A\nextinçăo de punibilidade de que trata o § 2ş deste artigo năo se\naplica ao agente declarado devedor contumaz em decisăo\nadministrativa definitiva e inscrito no Cadastro Informativo dos\ncréditos năo quitados do setor público federal (Cadin), previsto na\nLei nş 10.522, de 19 de julho de 2002.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\n§ 6ş O\nfato de o agente deixar de ser considerado devedor contumaz năo\nafasta o disposto no § 5ş deste artigo em relaçăo aos atos\npraticados no período em que era assim considerado.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\nApropriaçăo de coisa havida por erro, caso fortuito ou força da natureza",
+    "Art. 337-A": "Art. 337-A. Suprimir ou reduzir contribuiçăo social\nprevidenciária e qualquer acessório, mediante as seguintes condutas:\n(Incluído pela Lei nş 9.983, de 2000)\nI – omitir de folha de pagamento da empresa ou de documento de informaçőes previsto\npela legislaçăo previdenciária segurados empregado, empresário, trabalhador avulso ou\ntrabalhador autônomo ou a este equiparado que lhe prestem serviços;\n(Incluído pela Lei nş 9.983, de 2000)\nII – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa\nas quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de\nserviços;\n(Incluído pela Lei nş 9.983, de 2000)\nIII – omitir, total ou parcialmente, receitas ou lucros auferidos, remuneraçőes\npagas ou creditadas e demais fatos geradores de contribuiçőes sociais previdenciárias:\n(Incluído pela Lei nş 9.983, de 2000)\nPena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 1\no\nÉ extinta a punibilidade se o agente, espontaneamente, declara e\nconfessa as contribuiçőes, importâncias ou valores e presta as informaçőes devidas ŕ\nprevidęncia social, na forma definida em lei ou regulamento, antes do início da açăo\nfiscal.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 2\no\nÉ facultado ao juiz deixar de aplicar a pena ou aplicar somente a\nde multa se o agente for primário e de bons antecedentes, desde que:\n(Incluído pela Lei nş 9.983, de 2000)\nI –\n(VETADO)\n(Incluído pela Lei nş 9.983, de 2000)\nII – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou\ninferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o\nmínimo para o ajuizamento de suas execuçőes fiscais.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 3\no\nSe o empregador năo é pessoa jurídica e sua folha de pagamento\nmensal năo ultrapassa R$ 1.510,00 (um mil, quinhentos e dez reais), o juiz poderá\nreduzir a pena de um terço até a metade ou aplicar apenas a de multa.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 4\no\nO valor a que se refere o parágrafo anterior será reajustado nas\nmesmas datas e nos mesmos índices do reajuste dos benefícios da previdęncia social.\n(Incluído pela Lei nş 9.983, de 2000)\n§ 5ş A\nextinçăo de punibilidade de que trata o § 1ş deste artigo năo se\naplica ao agente declarado devedor contumaz em decisăo\nadministrativa definitiva e inscrito no Cadastro Informativo dos\ncréditos năo quitados do setor público federal (Cadin), previsto na\nLei nş 10.522, de 19 de julho de 2002.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\n§ 6ş O\nfato de o agente deixar de ser considerado devedor contumaz năo\nafasta o disposto no § 5ş deste artigo em relaçăo aos atos\npraticados no período em que era assim considerado.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\nCAPÍTULO\nII-A\n(Incluído pela Lei nş 10.467, de 11.6.2002)\nDOS CRIMES PRATICADOS POR PARTICULAR\nCONTRA A ADMINISTRAÇĂO PÚBLICA ESTRANGEIRA\nCorrupçăo ativa em transaçăo comercial internacional\nArt.\n337-B. Prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a\nfuncionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar,\nomitir ou retardar ato de ofício relacionado ŕ transaçăo comercial\ninternacional:\n(Incluído pela Lei nş\n10.467, de 11.6.2002)\nPena –\nreclusăo, de 1 (um) a 8 (oito) anos, e multa.\n(Incluído\npela Lei nş 10.467, de 11.6.2002)\nParágrafo único. A pena é aumentada de 1/3 (um terço), se, em razăo da vantagem ou\npromessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o\npratica infringindo dever funcional.\n(Incluído\npela Lei nş 10467, de 11.6.2002)\nTráfico de influęncia em transaçăo comercial internacional\n(Incluído pela Lei nş 10.467, de 11.6.2002)"
   },
   "components": {
     "Art. 168-A": {
       "caput": {
         "device_type": "caput",
-        "device_label": "caput e parágrafos",
+        "device_label": "caput",
         "device_path": "caput",
-        "text": "Art. 168-A. Deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional:\nPena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa.\n§ 1º Nas mesmas penas incorre quem deixar de:\nI – recolher, no prazo legal, contribuição ou outra importância destinada à previdência social que tenha sido descontada de pagamento efetuado a segurados, a terceiros ou arrecadada do público;\nII – recolher contribuições devidas à previdência social que tenham integrado despesas contábeis ou custos relativos à venda de produtos ou à prestação de serviços;\nIII – pagar benefício devido a segurado, quando as respectivas cotas ou valores já tiverem sido reembolsados à empresa pela previdência social.\n§ 2º É extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal.\n§ 3º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que:\nI – tenha promovido, após o início da ação fiscal e antes de oferecida a denúncia, o pagamento da contribuição social previdenciária, inclusive acessórios; ou\nII – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 4º A faculdade prevista no § 3º deste artigo não se aplica aos casos de parcelamento de contribuições cujo valor, inclusive dos acessórios, seja superior àquele estabelecido, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 5º A extinção da punibilidade de que trata o § 2º deste artigo não se aplica ao agente declarado devedor contumaz em decisão administrativa definitiva e inscrito no Cadastro Informativo dos créditos não quitados do setor público federal (Cadin), previsto na Lei nº 10.522, de 19 de julho de 2002.\n§ 6º O fato de o agente deixar de ser considerado devedor contumaz não afasta o disposto no § 5º deste artigo em relação aos atos praticados no período em que era assim considerado.",
-        "normalized_text": "Art. 168-A. Deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional: Pena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa. § 1º Nas mesmas penas incorre quem deixar de: I – recolher, no prazo legal, contribuição ou outra importância destinada à previdência social que tenha sido descontada de pagamento efetuado a segurados, a terceiros ou arrecadada do público; II – recolher contribuições devidas à previdência social que tenham integrado despesas contábeis ou custos relativos à venda de produtos ou à prestação de serviços; III – pagar benefício devido a segurado, quando as respectivas cotas ou valores já tiverem sido reembolsados à empresa pela previdência social. § 2º É extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal. § 3º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que: I – tenha promovido, após o início da ação fiscal e antes de oferecida a denúncia, o pagamento da contribuição social previdenciária, inclusive acessórios; ou II – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais. § 4º A faculdade prevista no § 3º deste artigo não se aplica aos casos de parcelamento de contribuições cujo valor, inclusive dos acessórios, seja superior àquele estabelecido, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais. § 5º A extinção da punibilidade de que trata o § 2º deste artigo não se aplica ao agente declarado devedor contumaz em decisão administrativa definitiva e inscrito no Cadastro Informativo dos créditos não quitados do setor público federal (Cadin), previsto na Lei nº 10.522, de 19 de julho de 2002. § 6º O fato de o agente deixar de ser considerado devedor contumaz não afasta o disposto no § 5º deste artigo em relação aos atos praticados no período em que era assim considerado."
+        "text": "Deixar de repassar ŕ previdęncia social as\ncontribuiçőes recolhidas dos contribuintes, no prazo e forma legal ou convencional:\n(Incluído pela Lei nş 9.983, de 2000)\nPena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "Deixar de repassar ŕ previdęncia social as contribuiçőes recolhidas dos contribuintes, no prazo e forma legal ou convencional: (Incluído pela Lei nş 9.983, de 2000) Pena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1\no\nNas mesmas penas incorre quem deixar de:\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 1 o Nas mesmas penas incorre quem deixar de: (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:1/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:1/inciso:I",
+        "text": "I – recolher, no prazo legal, contribuiçăo ou outra importância destinada ŕ\nprevidęncia social que tenha sido descontada de pagamento efetuado a segurados, a\nterceiros ou arrecadada do público;\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "I – recolher, no prazo legal, contribuiçăo ou outra importância destinada ŕ previdęncia social que tenha sido descontada de pagamento efetuado a segurados, a terceiros ou arrecadada do público; (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:1/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:1/inciso:II",
+        "text": "II – recolher contribuiçőes devidas ŕ previdęncia social que tenham integrado\ndespesas contábeis ou custos relativos ŕ venda de produtos ou ŕ prestaçăo de\nserviços;\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "II – recolher contribuiçőes devidas ŕ previdęncia social que tenham integrado despesas contábeis ou custos relativos ŕ venda de produtos ou ŕ prestaçăo de serviços; (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:1/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "paragrafo:1/inciso:III",
+        "text": "III - pagar benefício devido a segurado, quando as respectivas cotas ou valores já\ntiverem sido reembolsados ŕ empresa pela previdęncia social.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "III - pagar benefício devido a segurado, quando as respectivas cotas ou valores já tiverem sido reembolsados ŕ empresa pela previdęncia social. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2\no\nÉ extinta a punibilidade se o agente, espontaneamente, declara,\nconfessa e efetua o pagamento das contribuiçőes, importâncias ou valores e presta as\ninformaçőes devidas ŕ previdęncia social, na forma definida em lei ou regulamento,\nantes do início da açăo fiscal.\n(Incluído\npela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 2 o É extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuiçőes, importâncias ou valores e presta as informaçőes devidas ŕ previdęncia social, na forma definida em lei ou regulamento, antes do início da açăo fiscal. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3\no\nÉ facultado ao juiz deixar de aplicar a pena ou aplicar somente a\nde multa se o agente for primário e de bons antecedentes, desde que:\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 3 o É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que: (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:3/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:3/inciso:I",
+        "text": "I – tenha promovido, após o início da açăo fiscal e antes de oferecida a\ndenúncia, o pagamento da contribuiçăo social previdenciária, inclusive acessórios;\nou\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "I – tenha promovido, após o início da açăo fiscal e antes de oferecida a denúncia, o pagamento da contribuiçăo social previdenciária, inclusive acessórios; ou (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:3/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:3/inciso:II",
+        "text": "II – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou\ninferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o\nmínimo para o ajuizamento de suas execuçőes fiscais.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "II – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou inferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuçőes fiscais. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4\no\nA faculdade prevista no § 3\no\ndeste artigo năo se aplica aos casos de parcelamento de contribuiçőes cujo\nvalor, inclusive dos acessórios, seja superior ŕquele estabelecido,\nadministrativamente, como sendo o mínimo para o ajuizamento de suas execuçőes\nfiscais.\n(Incluído pela Lei nş 13.606, de 2018)",
+        "normalized_text": "§ 4 o A faculdade prevista no § 3 o deste artigo năo se aplica aos casos de parcelamento de contribuiçőes cujo valor, inclusive dos acessórios, seja superior ŕquele estabelecido, administrativamente, como sendo o mínimo para o ajuizamento de suas execuçőes fiscais. (Incluído pela Lei nş 13.606, de 2018)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5ş A\nextinçăo de punibilidade de que trata o § 2ş deste artigo năo se\naplica ao agente declarado devedor contumaz em decisăo\nadministrativa definitiva e inscrito no Cadastro Informativo dos\ncréditos năo quitados do setor público federal (Cadin), previsto na\nLei nş 10.522, de 19 de julho de 2002.\n(Incluído pela Lei\nComplementar nş 225, de 2026)",
+        "normalized_text": "§ 5ş A extinçăo de punibilidade de que trata o § 2ş deste artigo năo se aplica ao agente declarado devedor contumaz em decisăo administrativa definitiva e inscrito no Cadastro Informativo dos créditos năo quitados do setor público federal (Cadin), previsto na Lei nş 10.522, de 19 de julho de 2002. (Incluído pela Lei Complementar nş 225, de 2026)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6ş O\nfato de o agente deixar de ser considerado devedor contumaz năo\nafasta o disposto no § 5ş deste artigo em relaçăo aos atos\npraticados no período em que era assim considerado.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\nApropriaçăo de coisa havida por erro, caso fortuito ou força da natureza",
+        "normalized_text": "§ 6ş O fato de o agente deixar de ser considerado devedor contumaz năo afasta o disposto no § 5ş deste artigo em relaçăo aos atos praticados no período em que era assim considerado. (Incluído pela Lei Complementar nş 225, de 2026) Apropriaçăo de coisa havida por erro, caso fortuito ou força da natureza"
       }
     },
     "Art. 337-A": {
       "caput": {
         "device_type": "caput",
-        "device_label": "caput e parágrafos",
+        "device_label": "caput",
         "device_path": "caput",
-        "text": "Art. 337-A. Suprimir ou reduzir contribuição social previdenciária e qualquer acessório, mediante as seguintes condutas:\nI – omitir de folha de pagamento da empresa ou de documento de informações previsto pela legislação previdenciária segurados empregado, empresário, trabalhador avulso ou trabalhador autônomo ou a este equiparado que lhe prestem serviços;\nII – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa as quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de serviços;\nIII – omitir, total ou parcialmente, receitas ou lucros auferidos, remunerações pagas ou creditadas e demais fatos geradores de contribuições sociais previdenciárias.\nPena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa.\n§ 1º É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal.\n§ 2º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que:\nI – (VETADO);\nII – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais.\n§ 3º Se o empregador não é pessoa jurídica e sua folha de pagamento mensal não ultrapassa R$ 1.510,00 (um mil quinhentos e dez reais), o juiz poderá reduzir a pena de um terço até a metade ou aplicar apenas a de multa.\n§ 4º O valor a que se refere o parágrafo anterior será reajustado nas mesmas datas e nos mesmos índices do reajuste dos benefícios da previdência social.",
-        "normalized_text": "Art. 337-A. Suprimir ou reduzir contribuição social previdenciária e qualquer acessório, mediante as seguintes condutas: I – omitir de folha de pagamento da empresa ou de documento de informações previsto pela legislação previdenciária segurados empregado, empresário, trabalhador avulso ou trabalhador autônomo ou a este equiparado que lhe prestem serviços; II – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa as quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de serviços; III – omitir, total ou parcialmente, receitas ou lucros auferidos, remunerações pagas ou creditadas e demais fatos geradores de contribuições sociais previdenciárias. Pena – reclusão, de 2 (dois) a 5 (cinco) anos, e multa. § 1º É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal. § 2º É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que: I – (VETADO); II – o valor das contribuições devidas, inclusive acessórios, seja igual ou inferior àquele estabelecido pela previdência social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuções fiscais. § 3º Se o empregador não é pessoa jurídica e sua folha de pagamento mensal não ultrapassa R$ 1.510,00 (um mil quinhentos e dez reais), o juiz poderá reduzir a pena de um terço até a metade ou aplicar apenas a de multa. § 4º O valor a que se refere o parágrafo anterior será reajustado nas mesmas datas e nos mesmos índices do reajuste dos benefícios da previdência social."
+        "text": "Suprimir ou reduzir contribuiçăo social\nprevidenciária e qualquer acessório, mediante as seguintes condutas:\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "Suprimir ou reduzir contribuiçăo social previdenciária e qualquer acessório, mediante as seguintes condutas: (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "caput/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "caput/inciso:I",
+        "text": "I – omitir de folha de pagamento da empresa ou de documento de informaçőes previsto\npela legislaçăo previdenciária segurados empregado, empresário, trabalhador avulso ou\ntrabalhador autônomo ou a este equiparado que lhe prestem serviços;\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "I – omitir de folha de pagamento da empresa ou de documento de informaçőes previsto pela legislaçăo previdenciária segurados empregado, empresário, trabalhador avulso ou trabalhador autônomo ou a este equiparado que lhe prestem serviços; (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "caput/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "caput/inciso:II",
+        "text": "II – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa\nas quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de\nserviços;\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "II – deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa as quantias descontadas dos segurados ou as devidas pelo empregador ou pelo tomador de serviços; (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "caput/inciso:III": {
+        "device_type": "inciso",
+        "device_label": "inciso III",
+        "device_path": "caput/inciso:III",
+        "text": "III – omitir, total ou parcialmente, receitas ou lucros auferidos, remuneraçőes\npagas ou creditadas e demais fatos geradores de contribuiçőes sociais previdenciárias:\n(Incluído pela Lei nş 9.983, de 2000)\nPena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "III – omitir, total ou parcialmente, receitas ou lucros auferidos, remuneraçőes pagas ou creditadas e demais fatos geradores de contribuiçőes sociais previdenciárias: (Incluído pela Lei nş 9.983, de 2000) Pena – reclusăo, de 2 (dois) a 5 (cinco) anos, e multa. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:1": {
+        "device_type": "paragrafo",
+        "device_label": "§ 1º",
+        "device_path": "paragrafo:1",
+        "text": "§ 1\no\nÉ extinta a punibilidade se o agente, espontaneamente, declara e\nconfessa as contribuiçőes, importâncias ou valores e presta as informaçőes devidas ŕ\nprevidęncia social, na forma definida em lei ou regulamento, antes do início da açăo\nfiscal.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 1 o É extinta a punibilidade se o agente, espontaneamente, declara e confessa as contribuiçőes, importâncias ou valores e presta as informaçőes devidas ŕ previdęncia social, na forma definida em lei ou regulamento, antes do início da açăo fiscal. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:2": {
+        "device_type": "paragrafo",
+        "device_label": "§ 2º",
+        "device_path": "paragrafo:2",
+        "text": "§ 2\no\nÉ facultado ao juiz deixar de aplicar a pena ou aplicar somente a\nde multa se o agente for primário e de bons antecedentes, desde que:\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 2 o É facultado ao juiz deixar de aplicar a pena ou aplicar somente a de multa se o agente for primário e de bons antecedentes, desde que: (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:2/inciso:I": {
+        "device_type": "inciso",
+        "device_label": "inciso I",
+        "device_path": "paragrafo:2/inciso:I",
+        "text": "I –\n(VETADO)\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "I – (VETADO) (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:2/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:2/inciso:II",
+        "text": "II – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou\ninferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o\nmínimo para o ajuizamento de suas execuçőes fiscais.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "II – o valor das contribuiçőes devidas, inclusive acessórios, seja igual ou inferior ŕquele estabelecido pela previdęncia social, administrativamente, como sendo o mínimo para o ajuizamento de suas execuçőes fiscais. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:3": {
+        "device_type": "paragrafo",
+        "device_label": "§ 3º",
+        "device_path": "paragrafo:3",
+        "text": "§ 3\no\nSe o empregador năo é pessoa jurídica e sua folha de pagamento\nmensal năo ultrapassa R$ 1.510,00 (um mil, quinhentos e dez reais), o juiz poderá\nreduzir a pena de um terço até a metade ou aplicar apenas a de multa.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 3 o Se o empregador năo é pessoa jurídica e sua folha de pagamento mensal năo ultrapassa R$ 1.510,00 (um mil, quinhentos e dez reais), o juiz poderá reduzir a pena de um terço até a metade ou aplicar apenas a de multa. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:4": {
+        "device_type": "paragrafo",
+        "device_label": "§ 4º",
+        "device_path": "paragrafo:4",
+        "text": "§ 4\no\nO valor a que se refere o parágrafo anterior será reajustado nas\nmesmas datas e nos mesmos índices do reajuste dos benefícios da previdęncia social.\n(Incluído pela Lei nş 9.983, de 2000)",
+        "normalized_text": "§ 4 o O valor a que se refere o parágrafo anterior será reajustado nas mesmas datas e nos mesmos índices do reajuste dos benefícios da previdęncia social. (Incluído pela Lei nş 9.983, de 2000)"
+      },
+      "paragrafo:5": {
+        "device_type": "paragrafo",
+        "device_label": "§ 5º",
+        "device_path": "paragrafo:5",
+        "text": "§ 5ş A\nextinçăo de punibilidade de que trata o § 1ş deste artigo năo se\naplica ao agente declarado devedor contumaz em decisăo\nadministrativa definitiva e inscrito no Cadastro Informativo dos\ncréditos năo quitados do setor público federal (Cadin), previsto na\nLei nş 10.522, de 19 de julho de 2002.\n(Incluído pela Lei\nComplementar nş 225, de 2026)",
+        "normalized_text": "§ 5ş A extinçăo de punibilidade de que trata o § 1ş deste artigo năo se aplica ao agente declarado devedor contumaz em decisăo administrativa definitiva e inscrito no Cadastro Informativo dos créditos năo quitados do setor público federal (Cadin), previsto na Lei nş 10.522, de 19 de julho de 2002. (Incluído pela Lei Complementar nş 225, de 2026)"
+      },
+      "paragrafo:6": {
+        "device_type": "paragrafo",
+        "device_label": "§ 6º",
+        "device_path": "paragrafo:6",
+        "text": "§ 6ş O\nfato de o agente deixar de ser considerado devedor contumaz năo\nafasta o disposto no § 5ş deste artigo em relaçăo aos atos\npraticados no período em que era assim considerado.\n(Incluído pela Lei\nComplementar nş 225, de 2026)\nCAPÍTULO",
+        "normalized_text": "§ 6ş O fato de o agente deixar de ser considerado devedor contumaz năo afasta o disposto no § 5ş deste artigo em relaçăo aos atos praticados no período em que era assim considerado. (Incluído pela Lei Complementar nş 225, de 2026) CAPÍTULO"
+      },
+      "paragrafo:6/inciso:II": {
+        "device_type": "inciso",
+        "device_label": "inciso II",
+        "device_path": "paragrafo:6/inciso:II",
+        "text": "II-A\n(Incluído pela Lei nş 10.467, de 11.6.2002)\nDOS CRIMES PRATICADOS POR PARTICULAR\nCONTRA A ADMINISTRAÇĂO PÚBLICA ESTRANGEIRA\nCorrupçăo ativa em transaçăo comercial internacional\nArt.\n337-B. Prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a\nfuncionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar,\nomitir ou retardar ato de ofício relacionado ŕ transaçăo comercial\ninternacional:\n(Incluído pela Lei nş",
+        "normalized_text": "II-A (Incluído pela Lei nş 10.467, de 11.6.2002) DOS CRIMES PRATICADOS POR PARTICULAR CONTRA A ADMINISTRAÇĂO PÚBLICA ESTRANGEIRA Corrupçăo ativa em transaçăo comercial internacional Art. 337-B. Prometer, oferecer ou dar, direta ou indiretamente, vantagem indevida a funcionário público estrangeiro, ou a terceira pessoa, para determiná-lo a praticar, omitir ou retardar ato de ofício relacionado ŕ transaçăo comercial internacional: (Incluído pela Lei nş"
+      },
+      "paragrafo:6/inciso:II/item:10": {
+        "device_type": "item",
+        "device_label": "item 10",
+        "device_path": "paragrafo:6/inciso:II/item:10",
+        "text": "10.467, de 11.6.2002)\nPena –\nreclusăo, de 1 (um) a 8 (oito) anos, e multa.\n(Incluído\npela Lei nş 10.467, de 11.6.2002)",
+        "normalized_text": "10.467, de 11.6.2002) Pena – reclusăo, de 1 (um) a 8 (oito) anos, e multa. (Incluído pela Lei nş 10.467, de 11.6.2002)"
+      },
+      "paragrafo:unico": {
+        "device_type": "paragrafo",
+        "device_label": "Parágrafo único",
+        "device_path": "paragrafo:unico",
+        "text": "Parágrafo único. A pena é aumentada de 1/3 (um terço), se, em razăo da vantagem ou\npromessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o\npratica infringindo dever funcional.\n(Incluído\npela Lei nş 10467, de 11.6.2002)\nTráfico de influęncia em transaçăo comercial internacional\n(Incluído pela Lei nş 10.467, de 11.6.2002)",
+        "normalized_text": "Parágrafo único. A pena é aumentada de 1/3 (um terço), se, em razăo da vantagem ou promessa, o funcionário público estrangeiro retarda ou omite o ato de ofício, ou o pratica infringindo dever funcional. (Incluído pela Lei nş 10467, de 11.6.2002) Tráfico de influęncia em transaçăo comercial internacional (Incluído pela Lei nş 10.467, de 11.6.2002)"
       }
     }
   }
